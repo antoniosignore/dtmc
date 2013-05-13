@@ -1,0 +1,27 @@
+package com.netnumeri.server.finance.ta
+
+import com.netnumeri.server.finance.beans.TimeSeries
+
+public class GeometricMAIndicator extends Indicator {
+
+    int smoothing;
+
+    public GeometricMAIndicator() {
+    }
+
+    public GeometricMAIndicator(TimeSeries series, String name, Integer param1) {
+        super(series, name);
+        smoothing = param1;
+        title = "Geometric moving average";
+        build();
+    }
+
+    public void build() {
+        double[] closes = instrument.getCloseSeries().convertToArray();
+        double[] ar = MovingAverage.geometricMovingAverage(closes, smoothing);
+        copyBackwords(ar);
+    }
+
+}
+
+
