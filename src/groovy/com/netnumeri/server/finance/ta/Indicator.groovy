@@ -30,7 +30,6 @@ public abstract class Indicator extends TimeSeries {
         this.instrument = instrument;
     }
 
-
     protected void copyBackwords(double[] ad) {
         Date date = series.getLastDate();
         for (int i = 0; i < ad.length; i++) {
@@ -57,7 +56,6 @@ public abstract class Indicator extends TimeSeries {
             add(date, value);
         }
     }
-
 
 }
 

@@ -1,7 +1,7 @@
 package com.netnumeri.server.finance.finpojo.asset
 
-import com.netnumeri.server.utils.OptionsChain
 import com.netnumeri.server.finance.utils.YahooInstantSnapshot
+import com.netnumeri.server.utils.OptionsChain
 
 class Stock extends Asset implements Serializable {
 

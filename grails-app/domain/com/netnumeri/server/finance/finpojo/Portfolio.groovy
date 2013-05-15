@@ -4,8 +4,10 @@ import Jama.Matrix
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.math.PortfolioService
 
-
 class Portfolio extends Asset implements Serializable {
+
+    static constraints = {
+    }
 
     boolean isTesting = false
 
@@ -13,11 +15,9 @@ class Portfolio extends Asset implements Serializable {
         init("Unnamed");
     }
 
-    public List<PortfolioItem> items;
+//    public List<PortfolioItem> items;
 
-    public List<Transaction> transactions;
-
-    Forecast forecast;
+    static hasMany = [items: PortfolioItem, transactions: Transaction]
 
     int assetsToHold = 0;
     double wealth = 0;

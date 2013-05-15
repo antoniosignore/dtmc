@@ -12,6 +12,7 @@ public class TimeSeries extends Persistable implements Serializable {
     private FinConstants option;
     private int size = 0;
     protected int[] lengthsArray = null;
+//    private String name;
 
     GenericMatrix<Double> matrix = new GenericMatrix<Double>();
 
@@ -22,7 +23,7 @@ public class TimeSeries extends Persistable implements Serializable {
     }
 
     public TimeSeries(String name) {
-        setName(name);
+        this.name = name
         init();
     }
 

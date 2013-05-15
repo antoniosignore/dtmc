@@ -5,6 +5,9 @@ import com.netnumeri.server.finance.finpojo.derivative.Derivative
 
 public class PortfolioItem extends Persistable implements Serializable {
 
+    static constraints = {
+    }
+
     Instrument instrument;
 
     Integer amount = 0;

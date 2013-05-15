@@ -109,45 +109,12 @@ public class Transaction extends Persistable implements Serializable {
         this.cost = cost;
     }
 
-    public TransactionCost getTransactionCost() {
-        return cost;
-    }
-
-    public void setTransactionCost(TransactionCost cost) {
-        this.cost = cost;
-    }
-
     public double getCost() {
         if (cost != null) {
             return cost.getCost(amount * price);
         } else {
             return 0;
         }
-    }
-
-    public void set(Instrument instrument, FinConstants action, int amount, double price, Date date) {
-        this.instrument = instrument;
-        this.action = action;
-        this.amount = amount;
-        this.price = price;
-    }
-
-    public void set(Instrument instrument,
-                    FinConstants Action,
-                    int amount, double price) {
-        this.instrument = instrument;
-        this.action = Action;
-        this.amount = amount;
-        this.price = price;
-    }
-
-    public void set(Transaction t) {
-        date = t.getDate();
-        action = t.getAction();
-        instrument = t.getInstrument();
-        amount = t.getAmount();
-        price = t.getPrice();
-        cost = t.cost;
     }
 
     public String print() {
