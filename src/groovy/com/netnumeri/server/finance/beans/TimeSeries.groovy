@@ -1,18 +1,24 @@
 package com.netnumeri.server.finance.beans
 
-import com.netnumeri.server.finance.finpojo.Persistable
 import com.netnumeri.server.finance.math.NumericalRecipes
 import com.netnumeri.server.finance.utils.DateUtils
 
 import java.text.DecimalFormat
-import java.text.SimpleDateFormat;
+import java.text.SimpleDateFormat
 
-public class TimeSeries extends Persistable implements Serializable {
+public class TimeSeries implements Serializable {
+
+    Long id
+
+    String username;
+    String name;
+    def description;
+    def active = true;
+    def created = new Date();
 
     private FinConstants option;
     private int size = 0;
     protected int[] lengthsArray = null;
-//    private String name;
 
     GenericMatrix<Double> matrix = new GenericMatrix<Double>();
 

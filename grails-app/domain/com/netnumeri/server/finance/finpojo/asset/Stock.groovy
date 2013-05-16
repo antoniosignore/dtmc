@@ -5,8 +5,12 @@ import com.netnumeri.server.utils.OptionsChain
 
 class Stock extends Asset implements Serializable {
 
-    OptionsChain chain;
+    static transients = [
+            "chain",
+            "snapshot"
+    ]
 
+    OptionsChain chain;
     YahooInstantSnapshot snapshot;
 
     Stock() {

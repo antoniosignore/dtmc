@@ -91,3 +91,8 @@ log4j = {
             'org.hibernate',
             'net.sf.ehcache.hibernate'
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.grails.twitter.auth.Person'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.grails.twitter.auth.PersonAuthority'
+grails.plugins.springsecurity.authority.className = 'org.grails.twitter.auth.Authority'

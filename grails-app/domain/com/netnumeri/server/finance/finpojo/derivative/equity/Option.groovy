@@ -17,6 +17,8 @@ class Option extends Derivative implements Serializable {
     public OptionType type;
     def contractSize;
     def openInterest;
+    public Double bid;
+    public Double ask;
 
     public Option() {
     }

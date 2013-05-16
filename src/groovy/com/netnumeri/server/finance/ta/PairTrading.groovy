@@ -88,7 +88,7 @@ from SP1500 index.
 
             Iterator it = DataManager.getStockList().entrySet().iterator();
             while (it.hasNext()) {
-                TimeSeriesFractal volume = stock.volumeSeries();
+                TimeSeriesFractal volume = stock.buildVolumeSeries();
                 if (volume.count > 0)
                     if (volume.firstDateTime <= Date.Parse("01/03/1995") && Volume.LastDateTime >= Date.Parse("08/01/2002"))
                         if (Volume.GetMean("01/01/2000", "01/01/2002") > 1000000) {
@@ -145,8 +145,8 @@ from SP1500 index.
                                 Instrument Stock1 = port.instrument(i1);
                                 Instrument Stock2 = port.instrument(i2);
 
-                                TimeSeriesFractal CloseSeries1 = Stock1.closeSeries();
-                                TimeSeriesFractal CloseSeries2 = Stock2.closeSeries();
+                                TimeSeriesFractal CloseSeries1 = Stock1.buildCloseSeries();
+                                TimeSeriesFractal CloseSeries2 = Stock2.buildCloseSeries();
 
                                 CloseSeries1.setSetDataRange(Date1, Date2);
                                 CloseSeries2.SetDataRange(Date1, Date2);
@@ -198,8 +198,8 @@ from SP1500 index.
                                 Instrument Stock1 = port.instrument(i1);
                                 Instrument Stock2 = port.instrument(i2);
 
-                                TimeSeriesFractal CloseSeries1 = Stock1.closeSeries();
-                                TimeSeriesFractal CloseSeries2 = Stock2.closeSeries();
+                                TimeSeriesFractal CloseSeries1 = Stock1.buildCloseSeries();
+                                TimeSeriesFractal CloseSeries2 = Stock2.buildCloseSeries();
 
                                 CloseSeries1.setOperationwindows(Date1, Date2);
                                 CloseSeries2.setOperationwindows(Date1, Date2);
@@ -218,8 +218,8 @@ from SP1500 index.
 
                     Console.WriteLine("{0} - {1} : {2}", PairStock1.Name, PairStock2.Name, MaxCorr);
 
-                    TimeSeriesFractal Series1 = PairStock1.closeSeries();
-                    TimeSeriesFractal Series2 = PairStock2.closeSeries();
+                    TimeSeriesFractal Series1 = PairStock1.buildCloseSeries();
+                    TimeSeriesFractal Series2 = PairStock2.buildCloseSeries();
 
                     Regression Regression = new Regression(Series1, Series2);
 

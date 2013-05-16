@@ -9,49 +9,62 @@ import com.netnumeri.server.finance.utils.DateUtils
 
 class Instrument extends Persistable implements Serializable {
 
-    def delta = 1D;
+    static transients = [
+            "indicators",
+            "priceSeries",
+            "returnSeries",
+            "logReturnSeries",
+            "highSeries",
+            "lowSeries",
+            "openSeries",
+            "closeSeries",
+            "volumeSeries",
+            "volumeReturnSeries",
+            "priceSeries",
+            "volumeLogReturnSeries",
+            "dailyarray",
+            "lastQuote",
+            "marketSpotShift",
+            "marketVolatilityShift",
+            "delta",
+            "spot",
+            "volatility",
+            "isSpotFixed",
+            "isVolatilityFixed",
+            "tempToday",
+            "tempSpot",
+            "tempVolatility",
+            "isTempSpotFixed",
+            "isTempVolatilityFixed"
+    ]
 
+    Map<String, Indicator> indicators = new HashMap<>();
+    TimeSeries priceSeries = null;
+    TimeSeries returnSeries = null;
+    TimeSeries logReturnSeries = null;
+    TimeSeries highSeries = null;
+    TimeSeries lowSeries = null;
+    TimeSeries openSeries = null;
+    TimeSeries closeSeries = null;
+    TimeSeries volumeSeries = null;
+    TimeSeries volumeReturnSeries = null;
+    TimeSeries volumeLogReturnSeries = null;
+    GenericTimeSeries<Daily> dailyarray = new GenericTimeSeries<Daily>();
+
+    Double lastQuote;
+    double marketSpotShift = 1.0;
+    double marketVolatilityShift = 1.0;
+    def delta = 1D;
     double spot;
     double volatility;
     boolean isSpotFixed;
     boolean isVolatilityFixed = false;
-
     def tempToday = new Date();
     double tempSpot;
     double tempVolatility;
     def isTempSpotFixed = false
     def isTempVolatilityFixed = false;
 
-    Map<String, Indicator> indicators = new HashMap<>();
-
-    TimeSeries priceSeries = null;
-
-    TimeSeries returnSeries = null;
-
-    TimeSeries logReturnSeries = null;
-
-    TimeSeries highSeries = null;
-
-    TimeSeries lowSeries = null;
-
-    TimeSeries openSeries = null;
-
-    TimeSeries closeSeries = null;
-
-    TimeSeries volumeSeries = null;
-
-    TimeSeries volumeReturnSeries = null;
-
-    TimeSeries volumeLogReturnSeries = null;
-
-    GenericTimeSeries<Daily> dailyarray = new GenericTimeSeries<Daily>();
-
-    public Double bid;
-    public Double ask;
-    public Double lastQuote;
-
-    double marketSpotShift = 1.0;
-    double marketVolatilityShift = 1.0;
 
     def lowerRangeDate;
     def upperRangeDate;
@@ -109,73 +122,12 @@ class Instrument extends Persistable implements Serializable {
         volumeLogReturnSeries = new TimeSeries("VolumeLogReturnSeries");
     }
 
-    public Date tempToday() {
-        return tempToday;
-    }
-
-    public void setTempToday(Date tempToday) {
-        this.tempToday = tempToday;
-    }
-
-    public double getTempSpot() {
-        return tempSpot;
-    }
-
-    public void setTempSpot(double tempSpot) {
-        this.tempSpot = tempSpot;
-    }
-
-    public double getTempVolatility() {
-        return tempVolatility;
-    }
-
-    public void setTempVolatility(double tempVolatility) {
-        this.tempVolatility = tempVolatility;
-    }
-
-    public boolean isTempSpotFixed() {
-        return isTempSpotFixed;
-    }
-
-    public void setTempSpotFixed(boolean tempSpotFixed) {
-        this.isTempSpotFixed = tempSpotFixed;
-    }
-
-    public boolean isTempVolatilityFixed() {
-        return isTempVolatilityFixed;
-    }
-
-    public void setTempVolatilityFixed(boolean tempVolatilityFixed) {
-        this.isTempVolatilityFixed = tempVolatilityFixed;
-    }
-
-
-    public boolean isVolatilityFixed() {
-        return isVolatilityFixed;
-    }
-
-    public double getFixedSpot() {
-        return spot;
-    }
-
-    public double getFixedVolatility() {
-        return volatility;
-    }
-
     public double S() {
         return spot();
     }
 
     public double s() {
         return volatility();
-    }
-
-    public void setFixedSpot(double Spot) {
-        spot = Spot;
-    }
-
-    public void setFixedVolatility(double Volatility) {
-        volatility = Volatility;
     }
 
     public double historicalSpot() {
@@ -190,10 +142,6 @@ class Instrument extends Persistable implements Serializable {
 
     public double historicalVolatility() {
         return getStandardDeviation(FinConstants.LOGRETURN) * Math.sqrt(365.0);
-    }
-
-    public boolean isSpotFixed() {
-        return isSpotFixed;
     }
 
     /**
@@ -279,45 +227,11 @@ class Instrument extends Persistable implements Serializable {
         setUpperRangeDate(DateUtils.max(date, getUpperRangeDate()));
     }
 
-//    public boolean dataAvailable() {
-//        return isDataAvailable(-1);
-//    }
-
-//    public boolean isDataAvailable(int index) {
-//        if (index == -1) {
-//            index = getLastIndex();
-//        }
-//        return dataAvailable(index);
-//    }
-
     public boolean isDataAvailable(Date date) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
         return dataAvailable(date);
     }
 
-//    public int getFirstIndex() {
-//        return dailyarray.index(firstDate());
-//    }
-//
-//    public int getLastIndex() {
-//        return dailyarray.index(lastDate());
-//    }
-
-    /**
-     * Return historical data, if Index == -1, return last historical data Index Note that data must be copied,
-     * otherwise they will be overwritten at any further operation with fDaily
-     */
-//    public Daily getDaily() {
-//        return getDaily(-1, false);
-//    }
-
-//    public Daily getDaily(int index) {
-//        return getDaily(index, false);
-//    }
-//
-//    public Daily getDaily(int index, boolean neww) {
-//        return daily(index, neww);
-//    }
 
     public Daily getDaily(Date date) {
         if (date == null) {
@@ -326,88 +240,9 @@ class Instrument extends Persistable implements Serializable {
         return daily(date);
     }
 
-//    public int getPrevIndex(int index) {
-//        return prevIndex(index);
-//    }
-//
-//    public int getNextIndex(int index) {
-//        return nextIndex(index);
-//    }
-//
-//    public int getIndex(Date date) {
-//        if (date == null) throw new IllegalArgumentException("date cannot be null");
-//        return dailyarray.index(date);
-//    }
-
-//    public Date getDate(int index) {
-//        return date(index);
-//    }
-
     public double premium() {
         return getPrice(-1, FinConstants.TYPICALPRICE);
     }
-
-//    public double getPrice(int index) {
-//        return price(index, FinConstants.TYPICALPRICE);
-//    }
-//
-//    public double getPrice(int index, int option) {
-//        return price(index, option);
-//    }
-//
-//    public double getLow() {
-//        return getLow(-1);
-//    }
-//
-//    public double getLow(int index) {
-//        // Return low, if Index == -1, return low from last Index
-//        return low(index);
-//    }
-//
-//    public double getHigh() {
-//        return getHigh(-1);
-//    }
-//
-//    public double getHigh(int index) {
-//        // Return high, if Index == -1, return high from last Index
-//        return high(index);
-//    }
-//
-//    public double getOpen() {
-//        return getOpen(-1);
-//    }
-//
-//    public double getOpen(int index) {
-//        // Return open premium, if Index == -1, return close from last Index
-//        return open(index);
-//    }
-//
-//    public double getClose() {
-//        return getClose(-1);
-//    }
-//
-//    public double getClose(int index) {
-//        // Return close premium, if Index == -1, return close from last Index
-//        return close(index);
-//    }
-//
-//
-//    public double getReturn() {
-//        return getReturn(-1);
-//    }
-//
-//    public double getReturn(int index) {
-//        return fReturn(index);
-//    }
-//
-//    public double getLogReturn() {
-//        return getLogReturn(-1);
-//    }
-//
-//    public double getLogReturn(int index) {
-//        // getAndRemove log return, if Index == -1, getAndRemove return from last Index
-//        return logReturn(index);
-//    }
 
     public double getPrice(Date date) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
@@ -506,7 +341,7 @@ class Instrument extends Persistable implements Serializable {
         return getLast(date, pattern);
     }
 
-    public TimeSeries getPriceSeries() {
+    public TimeSeries priceSeries() {
 //        if (priceSeriesChanged)
         priceSeries.clear();
         int firstIndex = getFirstIndex();
@@ -537,7 +372,7 @@ class Instrument extends Persistable implements Serializable {
         }
         switch (what) {
             case FinConstants.HIGH:
-                return getHighSeries(firstDate, lastDate);
+                return highSeries(firstDate, lastDate);
             case FinConstants.LOW:
                 return getLowSeries(firstDate, lastDate);
             case FinConstants.OPEN:
@@ -551,93 +386,80 @@ class Instrument extends Persistable implements Serializable {
     }
 
 
-    public TimeSeries getHighSeries() {
-        return getHighSeries(null, null);
+    public TimeSeries highSeries() {
+        return highSeries(null, null);
     }
 
     // Return high time series
-    public TimeSeries getHighSeries(Date firstDate, Date lastDate) {
+    public TimeSeries highSeries(Date firstDate, Date lastDate) {
         if (firstDate != null) {
             if (lastDate == null) {
                 lastDate = lastDay();
             }
-            return highSeries(firstDate, lastDate);
+            return buildHighSeries(firstDate, lastDate);
         }
         firstDate = firstDate();
         lastDate = lastDate();
         //   if (highSeriesChanged)
-        highSeries = highSeries(firstDate, lastDate);
+        highSeries = buildHighSeries(firstDate, lastDate);
         //       highSeriesChanged = false;
         return highSeries;
     }
 
 
-    public TimeSeries getLowSeries() {
-        return getLowSeries(null, null);
+    public TimeSeries lowSeries() {
+        return lowSeries(null, null);
     }
 
-    public TimeSeries getLowSeries(Date firstDate, Date lastDate) {
+    public TimeSeries lowSeries(Date firstDate, Date lastDate) {
         if (firstDate != null) {
             if (lastDate == null) {
                 lastDate = lastDay();
             }
-            return lowSeries(firstDate, lastDate);
+            return buildLowSeries(firstDate, lastDate);
         }
         firstDate = firstDate();
         lastDate = lastDate();
         //    if (lowSeriesChanged)
-        lowSeries = lowSeries(firstDate, lastDate);
+        lowSeries = buildLowSeries(firstDate, lastDate);
         //        lowSeriesChanged = false;
         return lowSeries;
     }
 
 
-    public TimeSeries getOpenSeries() {
+    public TimeSeries openSeries() {
         return getOpenSeries(null, null);
     }
 
-    public TimeSeries getOpenSeries(Date firstDate, Date lastDate) {
+    public TimeSeries openSeries(Date firstDate, Date lastDate) {
         if (firstDate != null) {
             if (lastDate == null) {
                 lastDate = lastDay();
             }
-            return openSeries(firstDate, lastDate);
+            return buildOpenSeries(firstDate, lastDate);
         }
         firstDate = firstDate();
         lastDate = lastDate();
         //  if (openSeriesChanged)
-        openSeries = openSeries(firstDate, lastDate);
+        openSeries = buildOpenSeries(firstDate, lastDate);
         //      openSeriesChanged = false;
         return openSeries;
     }
 
-
-    public TimeSeries getCloseSeries() {
-        return getCloseSeries(null, null);
+    public TimeSeries volumeSeries() {
+        return volumeSeries(null, null);
     }
 
-    public TimeSeries getCloseSeries(Date firstDate, Date lastDate) {
-        if (firstDate == null) firstDate = firstDailyDate();
-        if (lastDate == null) lastDate = lastDay();
-        closeSeries = closeSeries(firstDate, lastDate);
-        return closeSeries;
-    }
-
-
-    public TimeSeries getVolumeSeries() {
-        return getVolumeSeries(null, null);
-    }
-
-    public TimeSeries getVolumeSeries(Date firstDate, Date lastDate) {
+    public TimeSeries volumeSeries(Date firstDate, Date lastDate) {
         if (firstDate != null) {
             if (lastDate == null) {
                 lastDate = lastDay();
             }
-            return volumeSeries(firstDate, lastDate);
+            return buildVolumeSeries(firstDate, lastDate);
         }
         firstDate = firstDate();
         lastDate = lastDate();
-        volumeSeries = volumeSeries(firstDate, lastDate);
+        volumeSeries = buildVolumeSeries(firstDate, lastDate);
         return volumeSeries;
     }
 
@@ -696,7 +518,7 @@ class Instrument extends Persistable implements Serializable {
     }
 
 
-    public TimeSeries getVolumeReturnSeries() {
+    public TimeSeries volumeReturnSeries() {
         //    if (volumeReturnSeriesChanged)
         volumeReturnSeries.clear();
         Date date = null;
@@ -722,7 +544,7 @@ class Instrument extends Persistable implements Serializable {
         return volumeReturnSeries;
     }
 
-    public TimeSeries getVolumeLogReturnSeries() {
+    public TimeSeries volumeLogReturnSeries() {
         //     if (volumeLogReturnSeriesChanged)
         volumeLogReturnSeries.clear();
         Date date = null;
@@ -861,14 +683,6 @@ class Instrument extends Persistable implements Serializable {
         return length();
     }
 
-//    public int getPrevIndex(Date date) {
-//        return getPrevIndex(getIndex(date));
-//    }
-//
-//    public int getNextIndex(Date date) {
-//        return getNextIndex(getIndex(date));
-//    }
-
     public Date getPrevDate(Date date) {
         return prevDate(date);
     }
@@ -877,108 +691,8 @@ class Instrument extends Persistable implements Serializable {
         return nextDate(date);
     }
 
-//    public Daily getPrevDaily(int Index) {
-//        return getPrevDaily(Index, false);
-//    }
-//
-//    public Daily getPrevDaily(int Index, boolean New) {
-//        return prevDaily(Index, New);
-//    }
-
-//    public Daily getPrevDaily(Date date) {
-//        return getPrevDaily(date, false);
-//    }
-
     public Daily getPrevDaily(Date date) {
         return prevDaily(date);
-    }
-
-//    public Daily getPrevDaily(Daily daily) {
-//        return dailyarray.getPrevValue(daily.getDailydate())
-//    }
-
-//    public Daily getNextDaily(int Index) {
-//        return getNextDaily(Index, false);
-//    }
-//
-//    public Daily getNextDaily(int Index, boolean New) {
-//        return nextDaily(Index, New);
-//    }
-
-//    public Daily getNextDaily(Date date) {
-//        return getNextDaily(date, false);
-//    }
-
-    public Daily getNextDaily(Date date) {
-        return nextDaily(date);
-    }
-
-    public void setMarketSpotShift(double Shift) {
-        marketSpotShift = Shift;
-    }
-
-    public void setMarketVolatilitySpotShift(double Shift) {
-        marketVolatilityShift = Shift;
-    }
-
-    public double getMarketSpotShift() {
-        return marketSpotShift;
-    }
-
-    public double getMarketVolatilityShift() {
-        return marketVolatilityShift;
-    }
-
-    public void setSpotFixed(boolean spotFixed) {
-        isSpotFixed = spotFixed;
-    }
-
-    public void setVolatilityFixed(boolean volatilityFixed) {
-        isVolatilityFixed = volatilityFixed;
-    }
-
-    public void setPriceSeries(TimeSeries priceSeries) {
-        this.priceSeries = priceSeries;
-    }
-
-    public void setReturnSeries(TimeSeries returnSeries) {
-        this.returnSeries = returnSeries;
-    }
-
-    public void setLogReturnSeries(TimeSeries logReturnSeries) {
-        this.logReturnSeries = logReturnSeries;
-    }
-
-    public void setHighSeries(TimeSeries highSeries) {
-        this.highSeries = highSeries;
-    }
-
-    public void setLowSeries(TimeSeries lowSeries) {
-        this.lowSeries = lowSeries;
-    }
-
-    public void setOpenSeries(TimeSeries openSeries) {
-        this.openSeries = openSeries;
-    }
-
-    public void setCloseSeries(TimeSeries closeSeries) {
-        this.closeSeries = closeSeries;
-    }
-
-    public void setVolumeSeries(TimeSeries volumeSeries) {
-        this.volumeSeries = volumeSeries;
-    }
-
-    public void setVolumeReturnSeries(TimeSeries volumeReturnSeries) {
-        this.volumeReturnSeries = volumeReturnSeries;
-    }
-
-    public void setVolumeLogReturnSeries(TimeSeries volumeLogReturnSeries) {
-        this.volumeLogReturnSeries = volumeLogReturnSeries;
-    }
-
-    public void setMarketVolatilityShift(double marketVolatilityShift) {
-        this.marketVolatilityShift = marketVolatilityShift;
     }
 
     public Date firstDate() {
@@ -989,33 +703,9 @@ class Instrument extends Persistable implements Serializable {
         return lastDailyDate();
     }
 
-//    public Daily daily() {
-//        return daily(-1, false);
-//    }
-//
-//    public Daily daily(int index) {
-//        if (index == -1) {
-//            Daily daily = daily(this.lastIndex(), false);
-//            if (daily != null) {
-//                return daily;
-//            }
-//        } else {
-//            return daily(index, false);
-//        }
-//        return null;
-//    }
-
     public Daily daily(Date date) {
         return dailyarray.get(date);
     }
-
-//    public boolean dataAvailable(int index) {
-//        if (index == -1) {
-//            index = lastIndex();
-//        }
-//        Daily daily = daily(index);
-//        return (daily.getState() != FinConstants.NOTAVAILABLE);
-//    }
 
     public boolean dataAvailable(Date date) {
         Daily daily = dailyarray.get(date);
@@ -1023,43 +713,6 @@ class Instrument extends Persistable implements Serializable {
         return daily.getState() != FinConstants.NOTAVAILABLE;
     }
 
-//    public int prevIndex(int index) {
-//        int FirstIndex = firstIndex();
-//        int PrevIndex = index - 1;
-//        while (PrevIndex >= FirstIndex) {
-//            if (daily(PrevIndex).valid()) {
-//                break;
-//            } else {
-//                PrevIndex--;
-//            }
-//        }
-//        if (PrevIndex >= FirstIndex) {
-//            return PrevIndex;
-//        } else {
-//            return -1;
-//        }
-//    }
-
-    /**
-     * Return next Index with available historical data Return -1 if there is no such Index fDaily points to the next
-     * Index data
-     */
-//    public int nextIndex(int Index) {
-//        int LastIndex = lastIndex();
-//        int NextIndex = Index + 1;
-//        while (NextIndex <= LastIndex) {
-//            if (daily(NextIndex).valid()) {
-//                break;
-//            } else {
-//                NextIndex++;
-//            }
-//        }
-//        if (NextIndex <= LastIndex) {
-//            return NextIndex;
-//        } else {
-//            return -1;
-//        }
-//    }
 
     public Date prevDate(Date date) {
         return dailyarray.getPrevDate(date);
@@ -1069,23 +722,6 @@ class Instrument extends Persistable implements Serializable {
         return dailyarray.getNextDate(date);
     }
 
-//    public Daily prevDaily(int Index) {
-//        return prevDaily(Index, false);
-//    }
-//
-//    public Daily prevDaily(int Index, boolean New) {
-//        int PrevIndex = prevIndex(Index);
-//        if (PrevIndex == -1) {
-//            return null;
-//        } else {
-//            return daily(PrevIndex, New);
-//        }
-//    }
-
-//    public Daily prevDaily(Date date) {
-//        return prevDaily(date, false);
-//    }
-
     public Daily prevDaily(Date date) {
         Date prevDate = prevDate(date);
         if (prevDate == null)
@@ -1093,14 +729,6 @@ class Instrument extends Persistable implements Serializable {
         else
             return daily(prevDate);
     }
-
-//    public Daily nextDaily(int Index) {
-//        return nextDaily(Index, false);
-//    }
-
-//    public Daily nextDaily(Date date) {
-//        return nextDaily(date, false);
-//    }
 
     public Daily nextDaily(Date date) {
         Date nextDate = nextDate(date);
@@ -1110,129 +738,9 @@ class Instrument extends Persistable implements Serializable {
             return daily(nextDate);
     }
 
-    /**
-     * Return date, if Index == -1, return date of last Index
-     */
-//    public Date date() {
-//        return date(-1);
-//    }
-//
-//    public Date date(int Index) {
-//        Daily daily = daily(Index);
-//        if (daily != null)
-//            return daily.getDailydate();
-//        return null;
-//    }
-
-    /**
-     * Return premium, if Index == -1, return premium from last Index
-     */
-//    public double price() {
-//        return price(-1, FinConstants.TYPICALPRICE);
-//    }
-//
-//    public double price(int Index) {
-//        return price(Index, FinConstants.TYPICALPRICE);
-//    }
-//
-//    public double price(int Index, int Option) {
-//        Daily daily = daily(Index);
-//        if (daily != null) return daily.getPrice(Option);
-//        return -1;
-//    }
-
-    /**
-     * Return low, if Index == -1, return low from last Index
-     */
-//    public double low() {
-//        return low(-1);
-//    }
-//
-//    public double low(int Index) {
-//        Daily daily = daily(Index);
-//        if (daily != null) return daily.getLow();
-//        return -1;
-//    }
-
-//    public double high() {
-//        return high(-1);
-//    }
-
-//    public double high(int Index) {
-//        Daily daily = daily(Index);
-//        if (daily != null) return daily.getHigh();
-//        return -1;
-//    }
-
-    /**
-     * Return open premium, if Index == -1, return close from last Index
-     */
-//    public double open() {
-//        return open(-1);
-//    }
-//
-//    public double open(int Index) {
-//        Daily daily = daily(Index);
-//        if (daily != null) return daily.getOpenprice();
-//        else
-//            throw new IllegalArgumentException("getOpenprice No Index " + Index);
-//    }
-
-    /**
-     * Return close premium, if Index == -1, return close from last Index
-     *
-     * @return
-     */
-//    public double close() {
-//        return close(-1);
-//    }
-//
-//    public double close(int Index) {
-//        Daily daily = daily(Index);
-//        if (daily != null)
-//            return daily.getCloseprice();
-//        else
-//            throw new IllegalStateException("getCloseprice No Index " + Index);
-//    }
-
-    /**
-     * Return volume, if Index == -1, return volume from last enter
-     */
-//    public int volume() {
-//        return getVolume(-1);
-//    }
-//
-//    public int getVolume(int Index) {
-//        Daily daily = daily(Index);
-//        if (daily != null)
-//            return daily.getVolume();
-//        else
-//            throw new IllegalArgumentException("getVolume No Index " + Index);
-//    }
-
-    /**
-     * getAndRemove return, if Index == -1, getAndRemove return from last Index
-     */
     public double freturn() {
         return fReturn(null);
     }
-
-//    public double fReturn(int Index) {
-//        if (Index == firstIndex())
-//            return 1;
-//        if (Index == -1)
-//            Index = lastIndex();
-//        Daily daily = daily(Index);
-//        if (!daily.valid())
-//            return 1;
-//        double Price = daily.getPrice();
-//        int PrevIndex = prevIndex(Index);
-//        if (PrevIndex != -1)
-//            return Price / price(PrevIndex);
-//        else
-//            return 1;
-//    }
-
 
     public double fReturn(Date date) {
         if (date == firstDate()) return 1;
@@ -1321,47 +829,49 @@ class Instrument extends Persistable implements Serializable {
         return series;
     }
 
-    public TimeSeries highSeries(Date firstDate, Date lastDate) {
+    public TimeSeries buildHighSeries(Date firstDate, Date lastDate) {
         return timeSeries(FinConstants.HIGH, firstDate, lastDate);
     }
 
-    public TimeSeries lowSeries(Date firstDate, Date lastDate) {
+    public TimeSeries buildLowSeries(Date firstDate, Date lastDate) {
         return timeSeries(FinConstants.LOW, firstDate, lastDate);
     }
 
-    public TimeSeries openSeries(Date firstDate, Date lastDate) {
+    public TimeSeries buildOpenSeries(Date firstDate, Date lastDate) {
         return timeSeries(FinConstants.OPEN, firstDate, lastDate);
     }
 
-    public TimeSeries closeSeries(Date firstDate, Date lastDate) {
+    public TimeSeries buildCloseSeries(Date firstDate, Date lastDate) {
+        if (firstDate == null) firstDate = firstDailyDate();
+        if (lastDate == null) lastDate = lastDay();
         return timeSeries(FinConstants.CLOSE, firstDate, lastDate);
     }
 
-    public TimeSeries volumeSeries(Date firstDate, Date lastDate) {
+    public TimeSeries buildVolumeSeries(Date firstDate, Date lastDate) {
         return timeSeries(FinConstants.VOLUME, firstDate, lastDate);
     }
 
-    public TimeSeries highSeries() {
+    public TimeSeries buildHighSeries() {
         return timeSeries(FinConstants.HIGH, null, null);
     }
 
-    public TimeSeries lowSeries() {
+    public TimeSeries buildLowSeries() {
         return timeSeries(FinConstants.LOW, null, null);
     }
 
-    public TimeSeries openSeries() {
+    public TimeSeries buildOpenSeries() {
         return timeSeries(FinConstants.OPEN, null, null);
     }
 
-    public TimeSeries closeSeries() {
+    public TimeSeries buildCloseSeries() {
         return timeSeries(FinConstants.CLOSE, null, null);
     }
 
-    public TimeSeries logAverageSeries() {
+    public TimeSeries buildLogAverageSeries() {
         return timeSeries(FinConstants.LOGAVERAGEPRICE, null, null);
     }
 
-    public TimeSeries volumeSeries() {
+    public TimeSeries buildVolumeSeries() {
         return timeSeries(FinConstants.VOLUME, null, null);
     }
 
@@ -1377,22 +887,14 @@ class Instrument extends Persistable implements Serializable {
         return dataAvailable(date);
     }
 
-//    public int firstIndex() {
-//        return 0;
-//    }
-//
-//    public int lastIndex() {
-//        return dailyarray.size() - 1;
-//    }
-
     public int length() {
         return dailyarray.size();
     }
 
     public Date firstDailyDate() {
         if (dailyarray == null || dailyarray.isEmpty())
-            throw new IllegalStateException("no daily values present for instrument: " + getName());
-        Daily daily = (Daily) dailyarray.getFirstValue();
+            return null
+        Daily daily = (Daily) dailyarray.HiFirstValue();
         if (daily != null)
             return daily.getDailydate();
         else
@@ -1402,14 +904,6 @@ class Instrument extends Persistable implements Serializable {
     public Date lastDailyDate() {
         return dailyarray.getLastDate();
     }
-
-//    public int index(Date date) {
-//        if (date == null) throw new IllegalArgumentException("date cannot be null");
-//        Daily daily = dailyarray.get(date);
-//        if (daily == null) throw new RuntimeException("no price associated to this date");
-//        final Date firstKey = dailyarray.firstDate();
-//        return dailyarray().subMap(firstKey, date).size();
-//    }
 
     public void add(Daily daily) {
         dailyarray.put(daily.getDailydate(), daily);
@@ -1429,52 +923,5 @@ class Instrument extends Persistable implements Serializable {
         add(daily);
     }
 
-    // Return pointer to daily data for index
-    // If New flag is set, newInstance and return new daily object.
-//    public Daily daily(int index, boolean isNew) {
-//        if (index == -1) index = lastIndex();
-//        Daily daily = (Daily) dailyarray.get(index);
-//        if (daily == null) {
-//            daily = new Daily();
-//            daily.setState(FinConstants.NOTAVAILABLE);
-//            return daily;
-//        }
-//        if (isNew)
-//            return (Daily) daily.clone();
-//        else
-//            return daily;
-//    }
 
-//    public Daily daily(Date date) {
-//        Daily newdaily;
-//        newdaily = dailyarray.get(date);
-//    }
-
-    public double getSpot() {
-        return spot;
-    }
-
-    public double getVolatility() {
-        return volatility;
-    }
-
-    public Date getTempToday() {
-        return tempToday;
-    }
-
-    public TimeSeries getReturnSeries() {
-        return returnSeries;
-    }
-
-    public TimeSeries getLogReturnSeries() {
-        return logReturnSeries;
-    }
-
-    public double getDelta() {
-        return delta;
-    }
-
-    public void setDelta(double delta) {
-        this.delta = delta;
-    }
 }

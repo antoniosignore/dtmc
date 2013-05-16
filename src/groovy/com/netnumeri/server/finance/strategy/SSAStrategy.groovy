@@ -230,7 +230,7 @@ public class SSAStrategy extends Strategy {
                 PortfolioItem portfolioItem = portfolioItems.get(i);
                 Instrument instrument = portfolioItem.getInstrument();
 
-                TimeSeries logserie = instrument.logAverageSeries();
+                TimeSeries logserie = instrument.buldLlogAverageSeries();
                 NumericalRecipesSeries lserie = logserie.asRecipes();
                 int size = Util.size(lserie.getData());
                 double[] vals = Util.vector(1, snapshot);
