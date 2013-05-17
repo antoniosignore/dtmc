@@ -7,7 +7,8 @@ class Persistable implements Serializable {
 
     String username;
     String name;
-    def description;
+    String description;
+
     def active = true;
     def created = new Date();
 
