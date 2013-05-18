@@ -1,5 +1,6 @@
 package com.netnumeri.server.finance.finpojo
 
+import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.finpojo.derivative.Derivative
 
@@ -8,7 +9,13 @@ public class PortfolioItem extends Persistable implements Serializable {
     static constraints = {
     }
 
-    Instrument instrument;
+    Instrument instrument
+    Portfolio portfolio
+
+    static mapping = {
+        id composite: ['instrument', 'portfolio']
+        version false
+    }
 
     Integer amount = 0;
     Double weight;
@@ -31,29 +38,29 @@ public class PortfolioItem extends Persistable implements Serializable {
         modelPrice = 0D;
     }
 
-    public PortfolioItem(Instrument instrument) {
+    public PortfolioItem(Instrument instrument, Portfolio portfolio) {
         init();
         this.instrument = instrument;
-//        this.portfolio = portfolio;
+        this.portfolio = portfolio;
     }
 
     // amount < 0 means taking short position in instrument
-    public PortfolioItem(Instrument instrument, Integer amount) {
+    public PortfolioItem(Instrument instrument, Integer amount, Portfolio portfolio) {
         init();
         this.instrument = instrument;
         this.amount = amount;
-//        this.portfolio = portfolio;
+        this.portfolio = portfolio;
 
     }
 
-    public int getPosition() {
-        if (amount >= 0) return LONG;
-        else return SHORT;
+    public FinConstants position() {
+        if (amount >= 0)
+            return FinConstants.LONG;
+        else
+            return FinConstants.SHORT;
     }
 
-    public double getPrice() {
-//        InstrumentDao portfolioDao = new InstrumentDao();
-//        Instrument instrument = portfolioDao.get(instrument_id)
+    public double price() {
         if (instrument instanceof Asset) {
             return instrument.getLast();
         } else if (instrument instanceof Derivative) {
@@ -62,13 +69,9 @@ public class PortfolioItem extends Persistable implements Serializable {
         return 0;
     }
 
-    public double getValue() {
-        return getPrice() * amount;
+    public double value() {
+        return price() * amount;
     }
 
-//    public Instrument getInstrument() {
-//        InstrumentDao portfolioDao = new InstrumentDao();
-//        return portfolioDao.get(instrument_id)
-//    }
 
 }

@@ -11,11 +11,7 @@ class Portfolio extends Asset implements Serializable {
 
     boolean isTesting = false
 
-    Portfolio() {
-        init("Unnamed");
-    }
-
-//    public List<PortfolioItem> items;
+    Portfolio() {}
 
     static hasMany = [items: PortfolioItem, transactions: Transaction]
 
@@ -23,39 +19,24 @@ class Portfolio extends Asset implements Serializable {
     double wealth = 0;
     double[] tempWeights;
 
-    Matrix covarianceMatrix;
+    static transients = [
+            "covarianceMatrix",
+            "correlationMatrix",
+            "tempWeights"]
 
-    Matrix correlationMatrix;
+    Matrix covarianceMatrix
+    Matrix correlationMatrix
 
     Date firstDailyDate;
-
     Date lastDailyDate;
 
-    double modelPrice(int model) {
-        return 0;
-    }
-
     Portfolio(String name) {
-        init(name);
+        setName(name);
     }
 
     Portfolio(String name, double wealth) {
-        init(name);
-        this.wealth = wealth;
-    }
-
-
-    void init(String name) {
         setName(name);
-        assetsToHold = 0;
-        tempWeights = null;
-        firstDailyDate = null;
-        lastDailyDate = null;
-//        MersenneTwister engine = new MersenneTwister();
-//        dist = new Uniform(engine);
-        //    items = new ArrayList<PortfolioItem>();
-        transactions = new ArrayList<Transaction>();
-        items = new ArrayList<PortfolioItem>();
+        this.wealth = wealth;
     }
 
     PortfolioItem portfolioItemByName(String name) {
@@ -93,6 +74,5 @@ class Portfolio extends Asset implements Serializable {
         p.lastDailyDate = lastDailyDate;
         return p;
     }
-
 
 }

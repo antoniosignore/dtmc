@@ -1,15 +1,16 @@
 package com.netnumeri.server.finance.finpojo
 
-
 class Persistable implements Serializable {
 
-    Long id
+    static constraints = {
+        username blank: false, unique: true
+    }
 
     String username;
     String name;
     String description;
 
     def active = true;
-    def created = new Date();
+    def dateCreated
 
 }
