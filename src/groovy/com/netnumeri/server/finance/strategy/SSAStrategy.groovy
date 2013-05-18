@@ -1,6 +1,5 @@
 package com.netnumeri.server.finance.strategy
 
-import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.NRError
 import com.netnumeri.server.finance.beans.NumericalRecipesSeries
 import com.netnumeri.server.finance.beans.TimeSeries
@@ -291,8 +290,8 @@ public class SSAStrategy extends Strategy {
                     if (instrument.isDataAvailable(date)) {
                         int signal = getLastValidSignal(derivative1, derivative2);
 
-                        if (signal == FinConstants.BUY) {
-                            Transaction transaction = new Transaction(instrument, FinConstants.BUY, amount, instrument.getClose(date), date);
+                        if (signal == TradeEnum.BUY) {
+                            Transaction transaction = new Transaction(instrument, TradeEnum.BUY, amount, instrument.getClose(date), date);
                             add(transaction);
                             foundABUY = true;
                         }
@@ -361,11 +360,11 @@ public class SSAStrategy extends Strategy {
         for (int i = 0; i < 20; i++) {
             if (derivative1[today - i - 1] < 0 && derivative1[today - i] >= 0) {
                 if (derivative2[today - i] > 0)
-                    return FinConstants.BUY;
+                    return TradeEnum.BUY;
             }
             if (derivative1[today - i - 1] > 0 && derivative1[today - i] <= 0) {
                 if (derivative2[today - i] < 0)
-                    return FinConstants.SELL;
+                    return TradeEnum.SELL;
             }
         }
         throw new IllegalStateException("no signal found");

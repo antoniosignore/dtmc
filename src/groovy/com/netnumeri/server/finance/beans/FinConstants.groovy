@@ -5,6 +5,8 @@ public enum FinConstants {
     asset,
     derivative,
 
+    INTERPOLATED,
+
     FUNDAMENTAL,
     QUANTITATIVE,
     TECHNICAL,
@@ -12,11 +14,6 @@ public enum FinConstants {
     LONG,
 
     // ETradeTransaction
-    SELLSHORT,
-    SELL,
-    HOLD,
-    BUY,
-    BUYSHORT,
 
     // EOrderOption
     MARKET,

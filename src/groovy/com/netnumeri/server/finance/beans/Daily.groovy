@@ -8,7 +8,7 @@ class Daily implements Serializable {
     private Instrument instrument;
 
     private int arrayindex;
-    private Date dailydate = null;
+    public Date dailydate = null;
     private int volume = 0;
     private double high = 0;
     private double low = 0;

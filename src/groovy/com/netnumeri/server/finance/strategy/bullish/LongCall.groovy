@@ -1,18 +1,14 @@
 package com.netnumeri.server.finance.strategy.bullish
 
-import com.netnumeri.server.finance.finpojo.Forecast
-import com.netnumeri.server.finance.finpojo.Bet
-import com.netnumeri.server.finance.strategy.OptionStrategy
-
-import com.netnumeri.server.finance.finpojo.asset.Stock
-
-import com.netnumeri.server.finance.strategy.StrategyHelper
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
 import com.netnumeri.server.entity.OptionType
+import com.netnumeri.server.finance.finpojo.Bet
+import com.netnumeri.server.finance.finpojo.Forecast
 import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.finpojo.asset.Stock
+import com.netnumeri.server.finance.finpojo.derivative.equity.Option
 import com.netnumeri.server.finance.strategy.ForecastType
-import com.netnumeri.server.finance.beans.FinConstants
-
+import com.netnumeri.server.finance.strategy.OptionStrategy
+import com.netnumeri.server.finance.strategy.StrategyHelper
 
 class LongCall implements OptionStrategy {
 
@@ -35,7 +31,7 @@ class LongCall implements OptionStrategy {
     }
 
     Transaction convertOptionToTransaction(Option option, Stock instrument) {
-        return new Transaction(option, FinConstants.BUY, 100, new Date());
+        return new Transaction(option, TradeEnum.BUY, 100, new Date());
     }
 
     @Override

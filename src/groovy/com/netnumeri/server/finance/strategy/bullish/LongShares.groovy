@@ -2,14 +2,11 @@ package com.netnumeri.server.finance.strategy.bullish
 
 import com.netnumeri.server.finance.finpojo.Bet
 import com.netnumeri.server.finance.finpojo.Forecast
-import com.netnumeri.server.finance.finpojo.asset.Stock
-
-import com.netnumeri.server.finance.strategy.OptionStrategy
-
 import com.netnumeri.server.finance.finpojo.Transaction
-import com.netnumeri.server.finance.beans.FinConstants
-import com.netnumeri.server.finance.utils.DateUtils
+import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.strategy.ForecastType
+import com.netnumeri.server.finance.strategy.OptionStrategy
+import com.netnumeri.server.finance.utils.DateUtils
 
 class LongShares implements OptionStrategy {
 
@@ -20,7 +17,7 @@ class LongShares implements OptionStrategy {
 
         Date date = DateUtils.today();
 
-        Transaction transaction = new Transaction(instrument, FinConstants.BUY, 100, instrument.getPrice(instrument.getLastDate()), date);
+        Transaction transaction = new Transaction(instrument, TradeEnum.BUY, 100, instrument.getPrice(instrument.getLastDate()), date);
         Bet bet = new Bet();
         bet.transactions.add(transaction)
         bet.name = "Long Shares"

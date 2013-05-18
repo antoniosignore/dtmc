@@ -8,8 +8,6 @@ import java.text.SimpleDateFormat
 
 public class TimeSeries implements Serializable {
 
-    Long id
-
     String username;
     String name;
     def description;

@@ -1,9 +1,10 @@
 package com.netnumeri.server.finance.math
 
-import Jama.Matrix;
+import Jama.Matrix
 import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
@@ -84,7 +85,7 @@ public class PortfolioService {
     }
 
     public static void add(Portfolio portfolio, Instrument instrument, int Amount) {
-        PortfolioItem item = new PortfolioItem(instrument, Amount);
+        PortfolioItem item = new PortfolioItem(instrument, Amount, portfolio);
         item.instrument = instrument;
 
         if (!portfolio.isTesting)
@@ -102,42 +103,41 @@ public class PortfolioService {
         PortfolioItem entry = getEntry(portfolio, instrument);
 
         if (entry == null) {
-            entry = new PortfolioItem(instrument);
-            if (transaction.getAction() == FinConstants.BUY) {
+            entry = new PortfolioItem(instrument, portfolio);
+            if (transaction.getAction() == TradeEnum.BUY) {
                 entry.setAmount(transaction.getAmount());
-            } else if (transaction.getAction() == FinConstants.SELL) {
+            } else if (transaction.getAction() == TradeEnum.SELL) {
                 System.out.println("addTransaction. No long position on sell for " + transaction.instrument.name + " in " + portfolio.getName());
                 return;
-            } else if (transaction.getAction() == FinConstants.SELLSHORT) {
+            } else if (transaction.getAction() == TradeEnum.SELLSHORT) {
                 entry.setAmount(-transaction.getAmount());
-            } else if (transaction.getAction() == FinConstants.BUYSHORT) {
+            } else if (transaction.getAction() == TradeEnum.BUYSHORT) {
                 System.out.println("addTransaction. No short position on buy short for " + transaction.instrument.name + " in " + portfolio.getName());
                 return;
             }
             portfolio.transactions.add(transaction);
-            add(portfolio, entry);
-            return;
+            add(portfolio, entry); ;
         } else {
             int amount = 0;
-            if (transaction.getAction() == FinConstants.BUY) {
+            if (transaction.getAction() == TradeEnum.BUY) {
                 if (entry.getAmount() < 0) {
                     System.out.println("addTransaction. Short position on buy for " + transaction.instrument.name + " in " + portfolio.getName());
                     return;
                 }
                 amount = entry.getAmount() + transaction.getAmount();
-            } else if (transaction.getAction() == FinConstants.SELL) {
+            } else if (transaction.getAction() == TradeEnum.SELL) {
                 amount = entry.getAmount() - transaction.getAmount();
                 if (amount < 0) {
                     System.out.println("addTransaction. Sell amount larger than long position for" + transaction.instrument.name + " in " + portfolio.getName());
                     return;
                 }
-            } else if (transaction.getAction() == FinConstants.SELLSHORT) {
+            } else if (transaction.getAction() == TradeEnum.SELLSHORT) {
                 if (entry.getAmount() > 0) {
                     System.out.println("addTransaction. Long position in instrument on sell short: " + portfolio.getName());
                     return;
                 }
                 amount = entry.getAmount() - transaction.getAmount();
-            } else if (transaction.getAction() == FinConstants.BUYSHORT) {
+            } else if (transaction.getAction() == TradeEnum.BUYSHORT) {
                 if (entry.getAmount() > 0) {
                     System.out.println("addTransaction. Long position on buy short for " + transaction.instrument.name + " in " + portfolio.getName());
                     return;
@@ -228,7 +228,7 @@ public class PortfolioService {
 
     public static Transaction buy(Portfolio portfolio, Instrument instrument, int amount, Date date) {
         if (date == null) date = new Date();
-        Transaction transaction = new Transaction(instrument, FinConstants.BUY, amount, instrument.getPrice(date), date);
+        Transaction transaction = new Transaction(instrument, TradeEnum.BUY, amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
         return transaction;
     }
@@ -239,7 +239,7 @@ public class PortfolioService {
 
     public static Transaction sell(Portfolio portfolio, Instrument instrument, int amount, Date date) {
         if (date == null) date = new Date();
-        Transaction transaction = new Transaction(instrument, FinConstants.SELL, amount, instrument.getPrice(date), date);
+        Transaction transaction = new Transaction(instrument, TradeEnum.SELL, amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
         return transaction;
     }
@@ -250,7 +250,7 @@ public class PortfolioService {
 
     public static Transaction sellShort(Portfolio portfolio, Instrument instrument, int Amount, Date date) {
         if (date == null) date = new Date();
-        Transaction transaction = new Transaction(instrument, FinConstants.SELLSHORT, Amount, instrument.getPrice(date), date);
+        Transaction transaction = new Transaction(instrument, TradeEnum.SELLSHORT, Amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
         return transaction;
     }
@@ -281,7 +281,7 @@ public class PortfolioService {
             return null;
         }
         if (date == null) date = new Date();
-        Transaction transaction = new Transaction(instrument, FinConstants.SELL, amount, instrument.getPrice(date), date);
+        Transaction transaction = new Transaction(instrument, TradeEnum.SELL, amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
         return transaction;
     }
@@ -446,10 +446,6 @@ public class PortfolioService {
                 }
             }
         }
-    }
-
-    public static void normalize(Portfolio portfolio) {
-        normalize(portfolio, FinConstants.kFixedWeight);
     }
 
     public static void normalize(Portfolio portfolio, int Option) {

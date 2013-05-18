@@ -1,6 +1,7 @@
 package com.netnumeri.server.finance.utils
 
 import com.netnumeri.server.finance.beans.FinConstants
+import com.netnumeri.server.finance.beans.TradeEnum
 
 import javax.servlet.http.HttpServletRequest
 import java.text.DecimalFormat
@@ -53,22 +54,8 @@ public class FormatUtils {
         return "";
     }
 
-    public static String actionToSting(int action) {
-        switch (action) {
-            case FinConstants.BUY:
-                return "Buy";
-            case FinConstants.SELL:
-                return "Sell";
-            case FinConstants.BUYSHORT:
-                return "Buy short";
-            case FinConstants.SELLSHORT:
-                return "Sell short";
-            case FinConstants.HOLD:
-                return "Hold";
-            default:
-                System.out.println("actionToString. Unknown transactions type");
-                return "";
-        }
+    public static String actionToSting(TradeEnum action) {
+        return action.toString()
     }
 
     public static String escape(String s) {

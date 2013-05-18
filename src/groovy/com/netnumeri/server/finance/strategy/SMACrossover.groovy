@@ -1,10 +1,9 @@
 package com.netnumeri.server.finance.strategy
 
-import com.netnumeri.server.finance.beans.FinConstants
+import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.Transaction
-import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.ta.Indicator
 import com.netnumeri.server.finance.utils.DateUtils
 
@@ -26,7 +25,7 @@ public class SMACrossover extends Strategy {
     public void evaluateInstrumentOnDate(Date date, Instrument asset) {
         int amount = 1000;
 
-        FinConstants signal = null;
+        TradeEnum signal = null;
         Indicator lower = asset.indicators.get("lower");
         Indicator upper = asset.indicators.get("upper");
 
@@ -43,21 +42,21 @@ public class SMACrossover extends Strategy {
         double yesterdayUpper = upper.getData(ud)
 
         if (todayUpper < todayLower && yesterdayUpper > yesterdayLower)
-            signal = FinConstants.BUY
+            signal = TradeEnum.BUY
 
         if (todayUpper > todayLower && yesterdayUpper < yesterdayLower)
-            signal = FinConstants.SELL
+            signal = TradeEnum.SELL
 
-        if (signal == FinConstants.SELL) {
+        if (signal == TradeEnum.SELL) {
             if (foundABUY) {
                 System.out.println("SELL on date: " + date.toGMTString());
-                Transaction transaction = new Transaction(asset, FinConstants.SELL, amount, asset.getClose(date), date);
+                Transaction transaction = new Transaction(asset, TradeEnum.SELL, amount, asset.getClose(date), date);
                 add(transaction);
                 foundABUY = false;
             }
-        } else if (signal == FinConstants.BUY) {
+        } else if (signal == TradeEnum.BUY) {
             System.out.println("BUY on date: " + date.toGMTString());
-            Transaction transaction = new Transaction(asset, FinConstants.BUY, amount, asset.getClose(date), date);
+            Transaction transaction = new Transaction(asset, TradeEnum.BUY, amount, asset.getClose(date), date);
             add(transaction);
             foundABUY = true;
         }

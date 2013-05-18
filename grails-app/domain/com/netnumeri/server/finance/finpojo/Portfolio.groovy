@@ -3,30 +3,37 @@ package com.netnumeri.server.finance.finpojo
 import Jama.Matrix
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.math.PortfolioService
+import org.grails.twitter.auth.Person
 
 class Portfolio extends Asset implements Serializable {
 
     static constraints = {
     }
 
-    boolean isTesting = false
+    Person author
 
     Portfolio() {}
 
+    List items = []
+    List transactions = []
     static hasMany = [items: PortfolioItem, transactions: Transaction]
 
+    static transients = [
+            "isTesting",
+            "assetsToHold",
+            "tempWeights",
+            "wealth",
+            "correlationMatrix",
+            "covarianceMatrix",
+            "firstDailyDate",
+            "lastDailyDate"]
+
+    boolean isTesting = false
     int assetsToHold = 0;
     double wealth = 0;
     double[] tempWeights;
-
-    static transients = [
-            "covarianceMatrix",
-            "correlationMatrix",
-            "tempWeights"]
-
     Matrix covarianceMatrix
     Matrix correlationMatrix
-
     Date firstDailyDate;
     Date lastDailyDate;
 

@@ -12,18 +12,7 @@ public class PortfolioItem extends Persistable implements Serializable {
     Instrument instrument
     Portfolio portfolio
 
-    static mapping = {
-        id composite: ['instrument', 'portfolio']
-        version false
-    }
-
     Integer amount = 0;
-    Double weight;
-    Double tempWeight;
-    Double assetWeightLowerBound = -1;
-    Double assetWeightUpperBound = -1;
-    Date modelDate = new Date();
-    Double modelPrice;
 
     public PortfolioItem() {
         init();
@@ -31,11 +20,6 @@ public class PortfolioItem extends Persistable implements Serializable {
 
     private void init() {
         this.amount = 0;
-        this.weight = 1.0;
-        this.tempWeight = 1.0;
-        this.assetWeightLowerBound = 0.0;
-        this.assetWeightUpperBound = 1.0;
-        modelPrice = 0D;
     }
 
     public PortfolioItem(Instrument instrument, Portfolio portfolio) {
@@ -50,7 +34,6 @@ public class PortfolioItem extends Persistable implements Serializable {
         this.instrument = instrument;
         this.amount = amount;
         this.portfolio = portfolio;
-
     }
 
     public FinConstants position() {
@@ -72,6 +55,5 @@ public class PortfolioItem extends Persistable implements Serializable {
     public double value() {
         return price() * amount;
     }
-
 
 }

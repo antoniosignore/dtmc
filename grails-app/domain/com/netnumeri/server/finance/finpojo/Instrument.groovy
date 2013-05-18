@@ -35,7 +35,9 @@ class Instrument extends Persistable implements Serializable {
             "tempSpot",
             "tempVolatility",
             "isTempSpotFixed",
-            "isTempVolatilityFixed"
+            "isTempVolatilityFixed",
+            "lowerRangeDate",
+            "upperRangeDate"
     ]
 
     Map<String, Indicator> indicators = new HashMap<>();
@@ -64,7 +66,6 @@ class Instrument extends Persistable implements Serializable {
     double tempVolatility;
     def isTempSpotFixed = false
     def isTempVolatilityFixed = false;
-
 
     def lowerRangeDate;
     def upperRangeDate;
@@ -96,20 +97,8 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public Instrument() {
-        init();
-    }
-
-    void init() {
-        initFields();
-        initSeries();
-    }
-
-    void initFields() {
         isSpotFixed = false;
         isVolatilityFixed = false;
-    }
-
-    void initSeries() {
         priceSeries = new TimeSeries("PriceSeries");
         returnSeries = new TimeSeries("ReturnSeries");
         logReturnSeries = new TimeSeries("LogReturnSeries");
@@ -240,9 +229,9 @@ class Instrument extends Persistable implements Serializable {
         return daily(date);
     }
 
-    public double premium() {
-        return getPrice(-1, FinConstants.TYPICALPRICE);
-    }
+//    public double premium() {
+//        return getPrice(-1, FinConstants.TYPICALPRICE);
+//    }
 
     public double getPrice(Date date) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
@@ -252,7 +241,7 @@ class Instrument extends Persistable implements Serializable {
     /**
      *  Option TYPICALPRICE, MEDIANPRICE , WEIGHTEDPRICE ,AVERAGEPRICE, LOGAVERAGEPRICE;
      */
-    public double getPrice(Date date, int Option) {
+    public double getPrice(Date date, FinConstants Option) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
         return get(date, Option);
     }
@@ -278,12 +267,12 @@ class Instrument extends Persistable implements Serializable {
 
     public double getReturn(Date date) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
-        return getReturn(date);
+        return re(date);
     }
 
     public double getLogReturn(Date date) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
-        return getLogReturn(date);
+        return logReturn(date);
     }
 
     public int getVolume(Date date) {
@@ -291,7 +280,7 @@ class Instrument extends Persistable implements Serializable {
         return dailyarray.get(date).volume;
     }
 
-    public double get(Date index, int option) {
+    public double get(Date index, FinConstants option) {
         switch (option) {
             case FinConstants.HIGH:
                 return getHigh(index);
@@ -337,10 +326,6 @@ class Instrument extends Persistable implements Serializable {
         return getLast(lastDailyDate);
     }
 
-    public double getLast(String date, String pattern) {
-        return getLast(date, pattern);
-    }
-
     public TimeSeries priceSeries() {
 //        if (priceSeriesChanged)
         priceSeries.clear();
@@ -359,28 +344,28 @@ class Instrument extends Persistable implements Serializable {
         return priceSeries;
     }
 
-    public TimeSeries getSeries(int what) {
+    public TimeSeries getSeries(FinConstants what) {
         return getSeries(what, null, null);
     }
 
-    public TimeSeries getSeries(int what, Date firstDate, Date lastDate) {
-        if (firstDate == null) {
-            firstDate = firstDate();
+    public TimeSeries getSeries(FinConstants what, Date firstD, Date lastD) {
+        if (firstD == null) {
+            firstD = firstDate();
         }
-        if (lastDate == null) {
-            lastDate = lastDate();
+        if (lastD == null) {
+            lastD = lastDate();
         }
         switch (what) {
             case FinConstants.HIGH:
-                return highSeries(firstDate, lastDate);
+                return highSeries(firstD, lastD);
             case FinConstants.LOW:
-                return getLowSeries(firstDate, lastDate);
+                return lowSeries(firstD, lastD);
             case FinConstants.OPEN:
-                return getOpenSeries(firstDate, lastDate);
+                return openSeries(firstD, lastD);
             case FinConstants.CLOSE:
-                return getCloseSeries(firstDate, lastDate);
+                return closeSeries(firstD, lastD);
             case FinConstants.VOLUME:
-                return getVolumeSeries(firstDate, lastDate);
+                return volumeSeries(firstD, lastD);
         }
         return null;
     }
@@ -420,12 +405,27 @@ class Instrument extends Persistable implements Serializable {
         }
         firstDate = firstDate();
         lastDate = lastDate();
-        //    if (lowSeriesChanged)
         lowSeries = buildLowSeries(firstDate, lastDate);
-        //        lowSeriesChanged = false;
         return lowSeries;
     }
 
+
+    public TimeSeries closeSeries() {
+        return closeSeries(null, null);
+    }
+
+    public TimeSeries closeSeries(Date firstD, Date lastD) {
+        if (firstD != null) {
+            if (lastD == null) {
+                lastD = lastDay();
+            }
+            return buildCloseSeries(firstD, lastD);
+        }
+        firstD = firstDate();
+        lastD = lastDate();
+        closeSeries = buildCloseSeries(firstD, lastD);
+        return closeSeries;
+    }
 
     public TimeSeries openSeries() {
         return getOpenSeries(null, null);
@@ -574,7 +574,7 @@ class Instrument extends Persistable implements Serializable {
         return getExpectedReturn(FinConstants.RETURN);
     }
 
-    public double getExpectedReturn(int option) {
+    public double getExpectedReturn(FinConstants option) {
         double Return = 0;
         switch (option) {
             case FinConstants.RETURN:
@@ -592,7 +592,7 @@ class Instrument extends Persistable implements Serializable {
         return getVariance(FinConstants.RETURN);
     }
 
-    public double getVariance(int option) {
+    public double getVariance(FinConstants option) {
         double Variance = 0;
         switch (option) {
             case FinConstants.RETURN:
@@ -609,7 +609,7 @@ class Instrument extends Persistable implements Serializable {
         return getStandardDeviation(FinConstants.RETURN);
     }
 
-    public double getStandardDeviation(int option) {
+    public double getStandardDeviation(FinConstants option) {
         return Math.sqrt(getVariance(option));
     }
 
@@ -629,7 +629,7 @@ class Instrument extends Persistable implements Serializable {
         return getCovariance(instrument, FinConstants.RETURN);
     }
 
-    public double getCovariance(Instrument instrument, int option) {
+    public double getCovariance(Instrument instrument, FinConstants option) {
         double Covariance = 0;
         switch (option) {
             case FinConstants.RETURN:
@@ -767,7 +767,7 @@ class Instrument extends Persistable implements Serializable {
         return price(date, FinConstants.TYPICALPRICE);
     }
 
-    public double price(Date date, int Option) {
+    public double price(Date date, FinConstants Option) {
         return get(date, Option)
     }
 
@@ -830,14 +830,20 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public TimeSeries buildHighSeries(Date firstDate, Date lastDate) {
+        if (firstDate == null) firstDate = firstDailyDate();
+        if (lastDate == null) lastDate = lastDay();
         return timeSeries(FinConstants.HIGH, firstDate, lastDate);
     }
 
     public TimeSeries buildLowSeries(Date firstDate, Date lastDate) {
+        if (firstDate == null) firstDate = firstDailyDate();
+        if (lastDate == null) lastDate = lastDay();
         return timeSeries(FinConstants.LOW, firstDate, lastDate);
     }
 
     public TimeSeries buildOpenSeries(Date firstDate, Date lastDate) {
+        if (firstDate == null) firstDate = firstDailyDate();
+        if (lastDate == null) lastDate = lastDay();
         return timeSeries(FinConstants.OPEN, firstDate, lastDate);
     }
 
@@ -880,9 +886,7 @@ class Instrument extends Persistable implements Serializable {
             return false;
         }
         if (date == null) {
-            if (dailyarray.size() == 0) {
-                return false;
-            } else return true;
+            return dailyarray.size() != 0;
         }
         return dataAvailable(date);
     }
@@ -894,7 +898,7 @@ class Instrument extends Persistable implements Serializable {
     public Date firstDailyDate() {
         if (dailyarray == null || dailyarray.isEmpty())
             return null
-        Daily daily = (Daily) dailyarray.HiFirstValue();
+        Daily daily = (Daily) dailyarray.getFirstValue();
         if (daily != null)
             return daily.getDailydate();
         else

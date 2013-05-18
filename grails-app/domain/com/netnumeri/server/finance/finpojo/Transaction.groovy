@@ -3,24 +3,25 @@ package com.netnumeri.server.finance.finpojo;
 
 import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
+import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.utils.FormatUtils
 
 public class Transaction extends Persistable implements Serializable {
 
-    FinConstants action;
+    TradeEnum action;
 
     Instrument instrument;
 
     def amount = 0;
     def price = 0.0;
-    private TransactionCost cost;
+    TransactionCost cost;
     Date date;
 
     public Transaction() {
     }
 
     public Transaction(Instrument instrument,
-                       FinConstants action,
+                       TradeEnum action,
                        int amount,
                        double price,
                        Date date) {
@@ -34,7 +35,7 @@ public class Transaction extends Persistable implements Serializable {
     }
 
     public Transaction(Instrument instrument,
-                       FinConstants action,
+                       TradeEnum action,
                        int amount,
                        double price,
                        Date date,
@@ -49,7 +50,7 @@ public class Transaction extends Persistable implements Serializable {
     }
 
     public Transaction(Instrument instrument,
-                       FinConstants action,
+                       TradeEnum action,
                        int amount,
                        double price,
                        Date d,
@@ -66,7 +67,7 @@ public class Transaction extends Persistable implements Serializable {
     }
 
     public Transaction(Instrument instrument,
-                       FinConstants action,
+                       TradeEnum action,
                        int amount,
                        Date date) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
@@ -88,7 +89,7 @@ public class Transaction extends Persistable implements Serializable {
     }
 
     public Transaction(Instrument instrument,
-                       FinConstants Action,
+                       TradeEnum Action,
                        int Amount,
                        Date date,
                        TransactionCost cost,

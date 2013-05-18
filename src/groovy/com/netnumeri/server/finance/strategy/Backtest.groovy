@@ -2,6 +2,7 @@ package com.netnumeri.server.finance.strategy
 
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
@@ -239,7 +240,7 @@ public class Backtest implements Serializable {
                 println "transactionDate = $transactionDate"
                 println "transaction = $transaction.action"
 
-                if (transaction.getAction() == FinConstants.BUY) {
+                if (transaction.getAction() == TradeEnum.BUY) {
                     currentAccount -= (transaction.getValue() + transaction.getCost());
                     Instrument instrument = transaction.getInstrument();
                     transactionPair = transactionSerie.getPair(date, transaction.getAction());
@@ -251,7 +252,7 @@ public class Backtest implements Serializable {
                         openPositionLong += ((operationLastPrice - operationEntryPrice) * operationAmount) - transaction.getCost();
                         numberOpenPositionsLong++;
                     }
-                } else if (transaction.getAction() == FinConstants.SELL) {
+                } else if (transaction.getAction() == TradeEnum.SELL) {
                     currentAccount += (transaction.getValue() - transaction.getCost());
 
                     transactionPair = transactionSerie.getPair(date, transaction.getAction());
@@ -272,7 +273,7 @@ public class Backtest implements Serializable {
                         tradeDistributionLong.add(date, wealthDiff);
                         addToTradeList(transaction, transactionPair, wealthDiff, FinConstants.LONG);
                     }
-                } else if (transaction.getAction() == FinConstants.SELLSHORT) {
+                } else if (transaction.getAction() == TradeEnum.SELLSHORT) {
                     currentAccount += (transaction.getValue() - transaction.getCost());
 
                     Instrument instrument = transaction.getInstrument();
@@ -285,7 +286,7 @@ public class Backtest implements Serializable {
                         openPositionShort += ((operationLastPrice - entryPrice) * operationAmount) - transaction.getCost();
                         numberOpenPositionsShort++;
                     }
-                } else if (transaction.getAction() == FinConstants.BUYSHORT) {
+                } else if (transaction.getAction() == TradeEnum.BUYSHORT) {
                     currentAccount -= (transaction.getValue() + transaction.getCost());
 
                     transactionPair = transactionSerie.getPair(date, transaction.getAction());
@@ -392,7 +393,7 @@ public class Backtest implements Serializable {
 
             // todo
             //   Date dateBefore = entryDate.prevDay();
-            TimeSeries series = instrument.getCloseSeries(entryDate, closeDate);
+            TimeSeries series = instrument.getSeries(FinConstants.CLOSE, entryDate, closeDate);
             high = series.getMax();
             low = series.getMin();
             tradeDuration = series.getNNonZero();

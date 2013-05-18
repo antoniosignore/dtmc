@@ -4,7 +4,7 @@ import com.netnumeri.server.finance.beans.FinConstants
 
 public class TransactionCost extends Persistable implements Serializable {
 
-    int option;
+    FinConstants option;
 
     double costPerContract;
     double costPerTicket;
