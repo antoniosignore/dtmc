@@ -73,9 +73,9 @@ environments {
 log4j = {
     // Example of changing the log pattern for the default console appender:
     //
-    //appenders {
-    //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-    //}
+    appenders {
+        console name: 'stdout', layout: pattern(conversionPattern: '%c{2} %m%n')
+    }
 
     debug 'org.codehaus.groovy.grails.orm.hibernate'
 
@@ -96,3 +96,31 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.grails.twitter.auth.Person'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.grails.twitter.auth.PersonAuthority'
 grails.plugins.springsecurity.authority.className = 'org.grails.twitter.auth.Authority'
+grails.plugins.springsecurity.password.algorithm = 'SHA-512'
+grails.plugins.springsecurity.securityConfigType = 'InterceptUrlMap'
+grails.plugins.springsecurity.interceptUrlMap = [
+//        '/stock/index':     ['ROLE_USER, ROLE_ADMIN, IS_AUTHENTICATED_FULLY'],
+//        '/stock/**':        ['ROLE_ADMIN'],
+//        '/portfolio/**':    ['ROLE_ADMIN'],
+        '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/logout/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
+]
+
+
+grails.resources.modules = {
+
+    bootstrap {
+        resource url: 'less/custom-bootstrap.less', attrs: [rel: "stylesheet/less", type: 'css']
+        dependsOn 'jquery'
+    }
+
+}
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.example.SecUser'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.example.SecUserSecRole'
+grails.plugins.springsecurity.authority.className = 'org.example.SecRole'

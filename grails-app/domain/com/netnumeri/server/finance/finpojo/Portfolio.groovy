@@ -3,14 +3,13 @@ package com.netnumeri.server.finance.finpojo
 import Jama.Matrix
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.math.PortfolioService
-import org.grails.twitter.auth.Person
 
 class Portfolio extends Asset implements Serializable {
 
     static constraints = {
     }
 
-    Person author
+//    Person author
 
     Portfolio() {}
 

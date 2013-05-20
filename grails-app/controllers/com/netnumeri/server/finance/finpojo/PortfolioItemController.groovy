@@ -63,8 +63,8 @@ class PortfolioItemController {
         if (version != null) {
             if (portfolioItemInstance.version > version) {
                 portfolioItemInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                        [message(code: 'portfolioItem.label', default: 'PortfolioItem')] as Object[],
-                        "Another user has updated this PortfolioItem while you were editing")
+                          [message(code: 'portfolioItem.label', default: 'PortfolioItem')] as Object[],
+                          "Another user has updated this PortfolioItem while you were editing")
                 render(view: "edit", model: [portfolioItemInstance: portfolioItemInstance])
                 return
             }

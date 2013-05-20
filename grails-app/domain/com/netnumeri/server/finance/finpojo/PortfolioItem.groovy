@@ -4,7 +4,7 @@ import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.finpojo.derivative.Derivative
 
-public class PortfolioItem extends Persistable implements Serializable {
+public class PortfolioItem implements Serializable {
 
     static constraints = {
     }
