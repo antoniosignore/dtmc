@@ -1,5 +1,6 @@
 package com.netnumeri.server.finance.ssa
 
+import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.ta.Indicator
@@ -14,7 +15,7 @@ class SSAStudy {
 
         println "pippo 98"
 
-        TimeSeries closes = stock.getCloseSeries()
+        TimeSeries closes = stock.getSeries(FinConstants.CLOSE);
 
         println "pippo 99"
 

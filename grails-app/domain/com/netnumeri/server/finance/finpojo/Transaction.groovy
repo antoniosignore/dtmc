@@ -1,6 +1,5 @@
 package com.netnumeri.server.finance.finpojo;
 
-
 import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TradeEnum
@@ -9,12 +8,11 @@ import com.netnumeri.server.finance.utils.FormatUtils
 public class Transaction extends Persistable implements Serializable {
 
     TradeEnum action;
-
     Instrument instrument;
 
-    def amount = 0;
-    def price = 0.0;
-    TransactionCost cost;
+    Integer amount = 0;
+    Double price = 0.0;
+    Double cost;
     Date date;
 
     public Transaction() {
@@ -31,7 +29,7 @@ public class Transaction extends Persistable implements Serializable {
         this.action = action;
         this.amount = amount;
         this.price = price;
-        this.cost = new TransactionCost();
+        this.cost = 0
     }
 
     public Transaction(Instrument instrument,
@@ -39,7 +37,7 @@ public class Transaction extends Persistable implements Serializable {
                        int amount,
                        double price,
                        Date date,
-                       TransactionCost cost) {
+                       Double cost) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
         this.instrument = instrument;
         this.date = date;
@@ -55,7 +53,7 @@ public class Transaction extends Persistable implements Serializable {
                        double price,
                        Date d,
                        int t,
-                       TransactionCost cost) {
+                       Double cost) {
         if (d == null) throw new IllegalArgumentException("d cannot be null");
         if (cost == null) throw new IllegalArgumentException("cost cannot be null");
         this.date = d;
@@ -85,15 +83,15 @@ public class Transaction extends Persistable implements Serializable {
         this.action = action;
         this.amount = amount;
         this.price = 0;
-        this.cost = new TransactionCost();
+        this.cost = 0
     }
 
     public Transaction(Instrument instrument,
                        TradeEnum Action,
                        int Amount,
                        Date date,
-                       TransactionCost cost,
-                       int Option) {
+                       Double cost,
+                       FinConstants Option) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
         if (cost == null) throw new IllegalArgumentException("cost cannot be null");
         this.instrument = instrument;

@@ -1,5 +1,6 @@
 package com.netnumeri.server.finance.ta
 
+import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.ssa.SSAStudy
@@ -14,7 +15,6 @@ import java.text.ParseException
 
 public class SSATest extends TestCase {
 
-    public static final String TICKER = "BUD"
     String dir = "/home/antonio/timeplot/"
     Instrument stock
     TimeSeries closes
@@ -22,10 +22,7 @@ public class SSATest extends TestCase {
     @Test
     public void setUp() throws IOException, ParseException {
 
-
     }
-
-
 
     @Test
     public void testSSAIndicators() throws IOException, ParseException {
@@ -34,33 +31,35 @@ public class SSATest extends TestCase {
         process "MMM"
         process "AA"
         process "AXP"
-        process("T")
-        process("BAC")
-        process("BA")
-        process("CAT")
-        process("CVX")
-        process("KO")
-        process("CSCO")
-        process("DIS")
-        process("DD")
-        process("XOM")
-        process("GE")
-        process("HPQ")
-        process("HD")
-        process("IBM")
-        process("INTC")
-        process("JNJ")
-        process("JPM")
-        process("KFT")
-        process("MCD")
-        process("MRK")
-        process("MSFT")
-        process("PFE")
-        process("PG")
-        process("RV")
-        process("UTX")
-        process("VZ")
-        process("WMT")
+        process "T"
+        process "BAC"
+        process "BA"
+        process "CAT"
+        process "CVX"
+        process "KO"
+        process "CSCO"
+        process "DIS"
+        process "DD"
+        process "XOM"
+        process "GE"
+        process "HPQ"
+        process "HD"
+        process "IBM"
+        process "INTC"
+        process "JNJ"
+        process "JPM"
+        process "KFT"
+        process "MCD"
+        process "MRK"
+        process "MSFT"
+        process "PFE"
+        process "PG"
+        process "TRV"
+        process "UTX"
+        process "VZ"
+        process "WMT"
+        process "BUD"
+        process "UNH"
 
     }
 
@@ -70,7 +69,7 @@ public class SSATest extends TestCase {
 
         stock = YahooUtils.downloadYahooData(ticker, da, a);
 
-        closes = stock.getCloseSeries();
+        closes = stock.getSeries(FinConstants.CLOSE);
 //        stock.indicators.put("SMA-" + 50, new SMAIndicator(closes, "SMA-" + 50, 50, -1, -1, -1, -1))
 
         String dir = "/home/antonio/timeplot/" + stock.name + "/"
@@ -85,6 +84,28 @@ public class SSATest extends TestCase {
     }
 
     void copyAllHtml(String s) {
-        //To change body of created methods use File | Settings | File Templates.
+
+
+        List<File> files = getHtmlFiles()
+
+        for (int i = 0; i < files.size(); i++) {
+            File o = files.get(i);
+
+
+        }
+
+
     }
+
+    private List<File> getHtmlFiles() {
+        List<File> list = Arrays.asList(new File(dir).listFiles(new FilenameFilter() {
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith(".html");
+            }
+        }));
+        return list;
+    }
+
+
 }

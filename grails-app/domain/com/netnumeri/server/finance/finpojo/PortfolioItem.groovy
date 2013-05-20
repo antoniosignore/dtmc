@@ -15,7 +15,6 @@ public class PortfolioItem implements Serializable {
     Integer amount = 0;
 
     public PortfolioItem() {
-        init();
     }
 
     private void init() {
@@ -23,14 +22,12 @@ public class PortfolioItem implements Serializable {
     }
 
     public PortfolioItem(Instrument instrument, Portfolio portfolio) {
-        init();
         this.instrument = instrument;
         this.portfolio = portfolio;
     }
 
     // amount < 0 means taking short position in instrument
     public PortfolioItem(Instrument instrument, Integer amount, Portfolio portfolio) {
-        init();
         this.instrument = instrument;
         this.amount = amount;
         this.portfolio = portfolio;

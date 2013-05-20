@@ -63,8 +63,8 @@ class TransactionController {
         if (version != null) {
             if (transactionInstance.version > version) {
                 transactionInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                        [message(code: 'transaction.label', default: 'Transaction')] as Object[],
-                        "Another user has updated this Transaction while you were editing")
+                          [message(code: 'transaction.label', default: 'Transaction')] as Object[],
+                          "Another user has updated this Transaction while you were editing")
                 render(view: "edit", model: [transactionInstance: transactionInstance])
                 return
             }
