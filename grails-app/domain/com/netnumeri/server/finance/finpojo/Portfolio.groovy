@@ -13,8 +13,8 @@ class Portfolio extends Asset implements Serializable {
 
     Portfolio() {}
 
-    List items = []
-    List transactions = []
+    List<PortfolioItem> items = []
+    List<Transaction> transactions = []
     static hasMany = [items: PortfolioItem, transactions: Transaction]
 
     static transients = [
@@ -50,17 +50,17 @@ class Portfolio extends Asset implements Serializable {
         if (items != null)
             for (int i = 0; i < items.size(); i++) {
                 PortfolioItem portfolioItem = items.get(i);
-                if (portfolioItem.name.equalsIgnoreCase(name))
+                if (portfolioItem.instrument.name.equalsIgnoreCase(name))
                     item = portfolioItem;
             }
         return item;
     }
 
+    // todo - remove dependency from PortfolioService
     Portfolio clone() {
         Portfolio p = new Portfolio(getName());
         for (int i = 0; i < items.size(); i++) {
             PortfolioItem portfolioItem = items.get(i);
-            assert p != null;
             PortfolioService.add(p, portfolioItem);
         }
 

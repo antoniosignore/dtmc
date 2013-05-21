@@ -108,14 +108,6 @@ public class Transaction extends Persistable implements Serializable {
         this.cost = cost;
     }
 
-    public double getCost() {
-        if (cost != null) {
-            return cost.getCost(amount * price);
-        } else {
-            return 0;
-        }
-    }
-
     public String print() {
         StringBuffer sb = new StringBuffer();
         sb.append(getDate().toString() + ": " + FormatUtils.actionToSting(action));

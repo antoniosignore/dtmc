@@ -22,7 +22,7 @@ public class PortfolioService {
         portfolio.transactions.clear();
     }
 
-    boolean isEmpty(Portfolio portfolio) {
+    static boolean isEmpty(Portfolio portfolio) {
         if (portfolio.items.size() == 0) {
             return true;
         } else {
@@ -206,17 +206,9 @@ public class PortfolioService {
             Instrument asset = PortfolioService.getInstrument(portfolio, i);
             double price = 0;
             if (asset.isDataAvailable(date)) {
-                price = asset.premium();
+                price = asset.getLast();
             } else {
                 price = YahooUtils.getLastTradedValue(asset.name)
-
-//                int PrevIndex = asset.getPrevIndex(date);
-//                if (PrevIndex == -1) {
-//                    System.out.println("Invest. No data for " + date.toString());
-//                    return;
-//                } else {
-//                    price = asset.getPrice(PrevIndex);
-//                }
             }
             setAmount(portfolio, i, (int) (getItemAmount(portfolio, i) + wealth * getWeight(portfolio, i) / price));
         }
@@ -260,10 +252,9 @@ public class PortfolioService {
     }
 
     // Buy short
-
     public static Transaction buyShort(Portfolio portfolio, Instrument instrument, int Amount, Date date) {
         if (date == null) date = new Date();
-        Transaction transaction = new Transaction(instrument, FinConstants.BUYSHORT, Amount, instrument.getPrice(date), date);
+        Transaction transaction = new Transaction(instrument, TradeEnum.BUYSHORT, Amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
         return transaction;
     }
@@ -1207,10 +1198,6 @@ public class PortfolioService {
     public static int nHoldAsset(Portfolio portfolio) {
         return portfolio.assetsToHold;
     }
-
-//    public static Long getInstrumentId(Portfolio portfolio, int i) {
-//        return item(portfolio, i).instrument_id;
-//    }
 
     public static Instrument getInstrument(Portfolio portfolio, int i) {
         return portfolio.items.get(i).instrument
