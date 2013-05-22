@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="antonio-ThinkPad-SL500" name="com.netnumeri.server.finance.ta.SSATest"
+           tests="1" time="5023.536" timestamp="2013-05-20T12:55:30">
+    <properties/>
+    <testcase classname="com.netnumeri.server.finance.ta.SSATest" name="testSSAIndicators" time="5023.447">
+        <error message="cannot newInstance InputStream" type="java.lang.RuntimeException">java.lang.RuntimeException:
+            cannot newInstance InputStream
+            at com.netnumeri.server.finance.utils.YahooUtils.downloadData(YahooUtils.groovy:172)
+            at com.netnumeri.server.finance.utils.YahooUtils.downloadYahooData(YahooUtils.groovy:129)
+            at com.netnumeri.server.finance.utils.YahooUtils.downloadYahooData(YahooUtils.groovy:87)
+            at com.netnumeri.server.finance.ta.SSATest.process(SSATest.groovy:69)
+            at com.netnumeri.server.finance.ta.SSATest.testSSAIndicators(SSATest.groovy:57)
+        </error>
+    </testcase>
+    <system-out><![CDATA[]]></system-out>
+    <system-err><![CDATA[]]></system-err>
+</testsuite>
