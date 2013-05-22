@@ -6,8 +6,6 @@ import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.Transaction
-import com.netnumeri.server.finance.finpojo.asset.Stock
-import com.netnumeri.server.finance.math.PortfolioService
 import com.netnumeri.server.finance.utils.DateUtils
 
 public abstract class Strategy {

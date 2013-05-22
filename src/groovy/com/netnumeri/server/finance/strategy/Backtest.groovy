@@ -7,9 +7,7 @@ import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.Transaction
-import com.netnumeri.server.finance.finpojo.TransactionCost
 import com.netnumeri.server.finance.finpojo.asset.Asset
-import com.netnumeri.server.finance.math.PortfolioService
 import com.netnumeri.server.finance.ta.TradeInfo
 import com.netnumeri.server.finance.ta.TradeListEntry
 import com.netnumeri.server.finance.utils.DateUtils
@@ -34,7 +32,7 @@ public class Backtest implements Serializable {
     public Portfolio portfolio;
 
     TransactionSeries transactionSerie;  // trade transaction series
-    TransactionCost transactionCost;    // transaction cost
+    Double transactionCost;    // transaction cost
     Portfolio benchmarkPortfolio;
 
     double totalCost;

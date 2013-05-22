@@ -2,7 +2,6 @@ package com.netnumeri.server.finance.finpojo
 
 import Jama.Matrix
 import com.netnumeri.server.finance.finpojo.asset.Asset
-import com.netnumeri.server.finance.math.PortfolioService
 
 class Portfolio extends Asset implements Serializable {
 
@@ -61,7 +60,7 @@ class Portfolio extends Asset implements Serializable {
         Portfolio p = new Portfolio(getName());
         for (int i = 0; i < items.size(); i++) {
             PortfolioItem portfolioItem = items.get(i);
-            PortfolioService.add(p, portfolioItem);
+            //     TradeService.add(p, portfolioItem);
         }
 
         this.transactions

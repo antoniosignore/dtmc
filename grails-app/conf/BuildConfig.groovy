@@ -31,11 +31,12 @@ grails.project.dependency.resolution = {
         mavenLocal()
         mavenCentral()
 
-        // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
-        //mavenRepo "http://snapshots.repository.codehaus.org"
-        //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
-        //mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "http://snapshots.repository.codehaus.org"
+        mavenRepo "http://repository.codehaus.org"
+        mavenRepo "http://download.java.net/maven/2/"
+        mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "http://maven.springframework.org/milestone/"
+
     }
 
     dependencies {
@@ -59,9 +60,12 @@ grails.project.dependency.resolution = {
         //runtime ":cached-resources:1.0"
         //runtime ":yui-minify-resources:0.1.5"
 
+        runtime ":twitter-bootstrap:2.3.0"
+
         build ":tomcat:$grailsVersion"
 
         runtime ":database-migration:1.3.2"
+        runtime ":fields:1.3"
 
         compile ':cache:1.0.1'
     }

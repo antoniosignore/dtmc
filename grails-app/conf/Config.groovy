@@ -110,17 +110,30 @@ grails.plugins.springsecurity.interceptUrlMap = [
         '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
-
-grails.resources.modules = {
-
-    bootstrap {
-        resource url: 'less/custom-bootstrap.less', attrs: [rel: "stylesheet/less", type: 'css']
-        dependsOn 'jquery'
-    }
-
-}
-
 // Added by the Spring Security Core plugin:
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.example.SecUser'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.example.SecUserSecRole'
 grails.plugins.springsecurity.authority.className = 'org.example.SecRole'
+
+//grails.resources.modules = {
+//
+//    bootstrap {
+//        resource url:'less/custom-bootstrap.less',attrs:[rel: "stylesheet/less", type:'css']
+//        dependsOn 'jquery'
+//    }
+//
+//}
+
+grails.resources.modules = {
+
+    'custom-bootstrap' {
+        dependsOn 'bootstrap'
+        resource url: [dir: 'less', file: 'custom-bootstrap.less'], attrs: [rel: "stylesheet/less", type: 'css']
+    }
+
+}
+
+grails.plugins.twitterbootstrap.fixtaglib = true
+
+grails.plugin.cloudfoundry.appname = 'grails-twitter-bootstrap'
+

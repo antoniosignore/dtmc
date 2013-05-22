@@ -63,8 +63,8 @@ class StockController {
         if (version != null) {
             if (stockInstance.version > version) {
                 stockInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                        [message(code: 'stock.label', default: 'Stock')] as Object[],
-                        "Another user has updated this Stock while you were editing")
+                          [message(code: 'stock.label', default: 'Stock')] as Object[],
+                          "Another user has updated this Stock while you were editing")
                 render(view: "edit", model: [stockInstance: stockInstance])
                 return
             }
