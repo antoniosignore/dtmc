@@ -34,7 +34,7 @@ public class TransactionSeries implements Serializable {
     }
 
     public FinConstants getAction(Date date) {
-        return getTransaction(date).getAction();
+        return getTransaction(date).getTradeAction();
     }
 
     public double getAmount(Date date) {
@@ -87,7 +87,7 @@ public class TransactionSeries implements Serializable {
             Transaction transaction = transactionArray.getNextValue(date)
             if (transaction == null)
                 return null
-            else if (transaction.action == TradeEnum.SELL)
+            else if (transaction.tradeAction == TradeEnum.SELL)
                 return transaction
             else
                 return getPair(transaction.date, action)
@@ -97,7 +97,7 @@ public class TransactionSeries implements Serializable {
             Transaction transaction = transactionArray.getPrevValue(date)
             if (transaction == null)
                 return null
-            else if (transaction.action == TradeEnum.BUY)
+            else if (transaction.tradeAction == TradeEnum.BUY)
                 return transaction
             else
                 return getPair(transaction.date, action)
@@ -107,7 +107,7 @@ public class TransactionSeries implements Serializable {
             Transaction transaction = transactionArray.getNextValue(date)
             if (transaction == null)
                 return null
-            else if (transaction.action == TradeEnum.BUYSHORT)
+            else if (transaction.tradeAction == TradeEnum.BUYSHORT)
                 return transaction
             else
                 return getPair(transaction.date, action)
@@ -117,7 +117,7 @@ public class TransactionSeries implements Serializable {
             Transaction transaction = transactionArray.getPrevValue(date)
             if (transaction == null)
                 return null
-            else if (transaction.action == TradeEnum.BUYSHORT)
+            else if (transaction.tradeAction == TradeEnum.BUYSHORT)
                 return transaction
             else
                 return getPair(transaction.date, action)

@@ -5,35 +5,35 @@ import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.utils.FormatUtils
 
-public class Transaction extends Persistable implements Serializable {
+public class Transaction implements Serializable {
 
-    TradeEnum action;
+    TradeEnum tradeAction;
     Instrument instrument;
 
     Integer amount = 0;
     Double price = 0.0;
-    Double cost;
+    Double cost = 0;
     Date date;
 
     public Transaction() {
     }
 
     public Transaction(Instrument instrument,
-                       TradeEnum action,
+                       TradeEnum tradeAction,
                        int amount,
                        double price,
                        Date date) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
         this.date = date;
         this.instrument = instrument;
-        this.action = action;
+        this.tradeAction = tradeAction;
         this.amount = amount;
         this.price = price;
         this.cost = 0
     }
 
     public Transaction(Instrument instrument,
-                       TradeEnum action,
+                       TradeEnum tradeAction,
                        int amount,
                        double price,
                        Date date,
@@ -41,14 +41,14 @@ public class Transaction extends Persistable implements Serializable {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
         this.instrument = instrument;
         this.date = date;
-        this.action = action;
+        this.tradeAction = tradeAction;
         this.amount = amount;
         this.price = price;
         this.cost = cost;
     }
 
     public Transaction(Instrument instrument,
-                       TradeEnum action,
+                       TradeEnum tradeAction,
                        int amount,
                        double price,
                        Date d,
@@ -58,14 +58,14 @@ public class Transaction extends Persistable implements Serializable {
         if (cost == null) throw new IllegalArgumentException("cost cannot be null");
         this.date = d;
         this.instrument = instrument;
-        this.action = action;
+        this.tradeAction = tradeAction;
         this.amount = amount;
         this.price = price;
         this.cost = cost;
     }
 
     public Transaction(Instrument instrument,
-                       TradeEnum action,
+                       TradeEnum tradeAction,
                        int amount,
                        Date date) {
         if (date == null) throw new IllegalArgumentException("date cannot be null");
@@ -80,14 +80,14 @@ public class Transaction extends Persistable implements Serializable {
             this.price = 0;
         }
         this.date = date;
-        this.action = action;
+        this.tradeAction = tradeAction;
         this.amount = amount;
         this.price = 0;
         this.cost = 0
     }
 
     public Transaction(Instrument instrument,
-                       TradeEnum Action,
+                       TradeEnum tradeAction,
                        int Amount,
                        Date date,
                        Double cost,
@@ -103,14 +103,14 @@ public class Transaction extends Persistable implements Serializable {
             this.price = 0;
         }
         this.date = date;
-        this.action = Action;
+        this.tradeAction = tradeAction;
         this.amount = Amount;
         this.cost = cost;
     }
 
     public String print() {
         StringBuffer sb = new StringBuffer();
-        sb.append(getDate().toString() + ": " + FormatUtils.actionToSting(action));
+        sb.append(getDate().toString() + ": " + FormatUtils.actionToSting(tradeAction));
         sb.append(" # " + amount);
         sb.append(" of " + instrument.getName());
         sb.append(" @ " + price);

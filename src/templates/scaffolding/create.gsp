@@ -3,8 +3,6 @@
 <html>
 <head>
     <meta name="layout" content="main">
-    <r:require modules="bootstrap"/>
-
     <g:set var="entityName" value="\${message(code: '${domainClass.propertyName}.label', default: '${className}')}"/>
     <title><g:message code="default.create.label" args="[entityName]"/></title>
 </head>
@@ -12,6 +10,7 @@
 <body>
 
 <div class="container">
+
     <div class="navbar">
         <div class="navbar-inner">
             <ul class="nav">
@@ -22,9 +21,6 @@
             </ul>
         </div>
     </div>
-
-    %{--<a href="#create-${domainClass.propertyName}" class="skip" tabindex="-1"><g:message code="default.link.skip.label"--}%
-    %{--default="Skip to content&hellip;"/></a>--}%
 
     <div id="create-${domainClass.propertyName}" class="content scaffold-create" role="main">
         <h1><g:message code="default.create.label" args="[entityName]"/></h1>

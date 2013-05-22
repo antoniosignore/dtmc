@@ -15,30 +15,41 @@
 </head>
 
 <body>
-<div class="navbar navbar-static-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <g:link class="brand" uri="/">Don't touch my cheese</g:link>
-            <div class="nav-collapse">
-                <ul class="nav pull-right">
-                    <sec:ifLoggedIn>
-                        <li>
-                            <g:link controller="logout" action="index">Logout</g:link>
-                        </li>
-                    </sec:ifLoggedIn>
-                </ul>
+
+<div class="container-fluid">
+
+    <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <g:link class="brand" uri="/">Don't touch my cheese</g:link>
+                <div class="nav-collapse">
+                    <ul class="nav pull-right">
+                        <sec:ifLoggedIn>
+                            <li>
+                                <g:link controller="logout" action="index">Logout</g:link>
+                            </li>
+                        </sec:ifLoggedIn>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+
+    <g:layoutBody/>
+    <hr>
+
+    <footer>
+        <p>&copy; Dont;Touch my cheese 2013</p>
+    </footer>
+
 </div>
-<g:layoutBody/>
-<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-<g:javascript library="application"/>
+
 <r:layoutResources/>
+
 </body>
 </html>

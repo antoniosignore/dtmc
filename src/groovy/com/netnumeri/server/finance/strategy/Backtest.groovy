@@ -236,12 +236,12 @@ public class Backtest implements Serializable {
 
                 println "date = $date"
                 println "transactionDate = $transactionDate"
-                println "transaction = $transaction.action"
+                println "transaction = $transaction.tradeAction"
 
-                if (transaction.getAction() == TradeEnum.BUY) {
+                if (transaction.getTradeAction() == TradeEnum.BUY) {
                     currentAccount -= (transaction.getValue() + transaction.getCost());
                     Instrument instrument = transaction.getInstrument();
-                    transactionPair = transactionSerie.getPair(date, transaction.getAction());
+                    transactionPair = transactionSerie.getPair(date, transaction.getTradeAction());
                     if (transactionPair == null) {
                         Date operationDate = instrument.getLastDate();
                         double operationLastPrice = instrument.getClose(operationDate);
@@ -250,10 +250,10 @@ public class Backtest implements Serializable {
                         openPositionLong += ((operationLastPrice - operationEntryPrice) * operationAmount) - transaction.getCost();
                         numberOpenPositionsLong++;
                     }
-                } else if (transaction.getAction() == TradeEnum.SELL) {
+                } else if (transaction.getTradeAction() == TradeEnum.SELL) {
                     currentAccount += (transaction.getValue() - transaction.getCost());
 
-                    transactionPair = transactionSerie.getPair(date, transaction.getAction());
+                    transactionPair = transactionSerie.getPair(date, transaction.getTradeAction());
                     if (transactionPair != null) {
                         double tradeBuyWealth = (transactionPair.getValue() + transactionPair.getCost());
                         double tradeSellWealth = (transaction.getValue() - transaction.getCost());
@@ -271,11 +271,11 @@ public class Backtest implements Serializable {
                         tradeDistributionLong.add(date, wealthDiff);
                         addToTradeList(transaction, transactionPair, wealthDiff, FinConstants.LONG);
                     }
-                } else if (transaction.getAction() == TradeEnum.SELLSHORT) {
+                } else if (transaction.getTradeAction() == TradeEnum.SELLSHORT) {
                     currentAccount += (transaction.getValue() - transaction.getCost());
 
                     Instrument instrument = transaction.getInstrument();
-                    transactionPair = transactionSerie.getPair(date, transaction.getAction());
+                    transactionPair = transactionSerie.getPair(date, transaction.getTradeAction());
                     if (transactionPair == null) {
                         Date operationDate = instrument.getLastDate();
                         double operationLastPrice = instrument.getClose(operationDate);
@@ -284,10 +284,10 @@ public class Backtest implements Serializable {
                         openPositionShort += ((operationLastPrice - entryPrice) * operationAmount) - transaction.getCost();
                         numberOpenPositionsShort++;
                     }
-                } else if (transaction.getAction() == TradeEnum.BUYSHORT) {
+                } else if (transaction.getTradeAction() == TradeEnum.BUYSHORT) {
                     currentAccount -= (transaction.getValue() + transaction.getCost());
 
-                    transactionPair = transactionSerie.getPair(date, transaction.getAction());
+                    transactionPair = transactionSerie.getPair(date, transaction.getTradeAction());
                     if (transactionPair != null) {
                         double TradeSellShortWealth = (transactionPair.getValue() - transactionPair.getCost());
                         double TradeBuyShortWealth = (transaction.getValue() + transaction.getCost());

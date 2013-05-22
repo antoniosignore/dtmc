@@ -1,11 +1,10 @@
-< %= packageName ? "  package   $  { packageName } \n\n  ": '' % >
+< %= packageName ? " package  $ { packageName } \n\n ": '' % >
 
 
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 
-@TestFor($ { className } Controller
-)
+@TestFor($ { className } Controller )
 @Mock($ { className })
 class $ {
     className
