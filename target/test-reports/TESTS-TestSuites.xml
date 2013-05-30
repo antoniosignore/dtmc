@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites/>
+<testsuites>
+    <testsuite errors="1" failures="0" hostname="antonio-ThinkPad-SL500" id="0" name="TradeServiceTests" package="dtmc"
+               tests="1" time="3.72" timestamp="2013-05-30T22:22:23">
+        <properties/>
+
+        <testcase classname="dtmc.TradeServiceTests" name="testSomething" time="3.496">
+            <error message="No signature of method: com.netnumeri.server.finance.finpojo.Portfolio.save() is applicable for argument types: () values: []&#xa;Possible solutions: save(), save(), save(), save(), save(boolean), save(java.util.Map)"
+                   type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method:
+                com.netnumeri.server.finance.finpojo.Portfolio.save() is applicable for argument types: () values: []
+                Possible solutions: save(), save(), save(), save(), save(boolean), save(java.util.Map)
+                at dtmc.TradeServiceTests.testSomething(TradeServiceTests.groovy:19)
+            </error>
+
+        </testcase>
+
+        <system-out><![CDATA[]]></system-out>
+
+        <system-err><![CDATA[]]></system-err>
+
+    </testsuite>
+</testsuites>

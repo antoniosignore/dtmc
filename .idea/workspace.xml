@@ -2,32 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioTest.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/portfolio/_entry.gsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/TEST-unit-unit-com.netnumeri.server.finance.ta.SSATest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/html/com/netnumeri/server/finance/ta/0_SSATest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-com.netnumeri.server.finance.ta.SSATest-err.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-com.netnumeri.server.finance.ta.SSATest-out.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-com.netnumeri.server.finance.ta.SSATest.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Asset.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Asset.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SSAStrategyTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SSAStrategyTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy" afterPath="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/dtmc/TradeServiceTests.groovy" afterPath="$PROJECT_DIR$/test/unit/dtmc/TradeServiceTests.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/all.html" afterPath="$PROJECT_DIR$/target/test-reports/html/all.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/antonio.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/antonio.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/failed.html" afterPath="$PROJECT_DIR$/target/test-reports/html/failed.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/index.html" afterPath="$PROJECT_DIR$/target/test-reports/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/portfolio/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/stylesheet.css" afterPath="$PROJECT_DIR$/target/test-reports/html/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -35,7 +15,7 @@
     <ignored path="dtmc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369950750361" ignored="false" />
+    <file path="/Dummy.txt" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369951813981" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-discover-vmbae/blueprint_home/discover-vmbe.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368449697446" ignored="false" />
     <file path="/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368445506751" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-core/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368514741746" ignored="false" />
@@ -254,7 +234,22 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" line="67" class="BootStrap" package="">
+      <breakpoint url="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" line="62" class="BootStrap" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy" line="28" class="com.netnumeri.server.finance.finpojo.asset.StockTests" package="com.netnumeri.server.finance.finpojo.asset">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -319,16 +314,16 @@
       <file leaf-file-name="Portfolio.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="12" selection-start="134" selection-end="134" vertical-scroll-proportion="-3.0">
+            <state line="5" column="12" selection-start="134" selection-end="134" vertical-scroll-proportion="2.2">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stock.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
+      <file leaf-file-name="PortfolioItem.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="9" selection-start="172" selection-end="172" vertical-scroll-proportion="-1.3888888">
+            <state line="9" column="77" selection-start="334" selection-end="334" vertical-scroll-proportion="-1.962963">
               <folding />
             </state>
           </provider>
@@ -337,10 +332,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockTests.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Stock.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="21" selection-start="184" selection-end="184" vertical-scroll-proportion="-1.3888888">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StockTests.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="32" selection-start="437" selection-end="437" vertical-scroll-proportion="0.37254903">
+            <state line="26" column="16" selection-start="647" selection-end="647" vertical-scroll-proportion="-15.6">
               <folding />
             </state>
           </provider>
@@ -349,8 +356,10 @@
       <file leaf-file-name="PortfolioTest.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="37" selection-start="363" selection-end="363" vertical-scroll-proportion="-9.0">
-              <folding />
+            <state line="14" column="0" selection-start="331" selection-end="331" vertical-scroll-proportion="-7.2">
+              <folding>
+                <marker date="1369951834975" expanded="true" signature="46:78" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -359,6 +368,24 @@
         <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SSAStrategyTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state line="21" column="41" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TradeService.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="11" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TradeServiceTests.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/unit/dtmc/TradeServiceTests.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="6" selection-start="265" selection-end="265" vertical-scroll-proportion="0.15189873">
               <folding />
             </state>
           </provider>
@@ -373,37 +400,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstrumentControllerTests.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/InstrumentControllerTests.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="46" selection-end="108" vertical-scroll-proportion="-1.2">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PortfolioControllerTests.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioControllerTests.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="16" selection-start="109" selection-end="109" vertical-scroll-proportion="-2.4">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransactionControllerTests.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/TransactionControllerTests.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="110" selection-end="141" vertical-scroll-proportion="-3.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="59" selection-start="2111" selection-end="2361" vertical-scroll-proportion="0.0">
+            <state line="12" column="23" selection-start="394" selection-end="410" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -432,7 +432,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/portfolio/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/portfolio/_entry.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Asset.groovy" />
@@ -442,12 +441,13 @@
         <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy" />
         <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioTest.groovy" />
         <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" />
         <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SSAStrategyTest.groovy" />
         <option value="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/dtmc/TradeServiceTests.groovy" />
       </list>
     </option>
   </component>
@@ -602,7 +602,7 @@
     <configuration default="false" name="testSomething()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
       <module name="dtmc" />
       <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app integration: com.netnumeri.server.finance.finpojo.asset.Stock.testSomething -echoOut" />
+      <setting name="cmdLine" value="test-app unit: dtmc.TradeService.testSomething -echoOut" />
       <setting name="depsClasspath" value="true" />
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -774,10 +774,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Grails.testSomething()" />
-        <item index="1" class="java.lang.String" itemvalue="Grails.PortfolioTest" />
-        <item index="2" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
-        <item index="3" class="java.lang.String" itemvalue="Grails.testStrategy()" />
-        <item index="4" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
+        <item index="1" class="java.lang.String" itemvalue="Grails.testSomething()" />
+        <item index="2" class="java.lang.String" itemvalue="Grails.PortfolioTest" />
+        <item index="3" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
+        <item index="4" class="java.lang.String" itemvalue="Grails.testStrategy()" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -872,7 +872,11 @@
       <created>1369229816084</created>
       <updated>1369229816084</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="initial commit">
+      <created>1369951837873</created>
+      <updated>1369951837873</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -889,9 +893,10 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5216426" sideWeight="0.5003195" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1904762" sideWeight="0.4189349" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24279007" sideWeight="0.4189349" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -907,7 +912,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38068813" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1007,30 +1011,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/dtmc/TradeServiceTests.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="42" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="41" selection-start="3134" selection-end="3134" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="47" selection-start="663" selection-end="663" vertical-scroll-proportion="-6.6">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/TransactionControllerTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="110" selection-end="141" vertical-scroll-proportion="-3.0">
@@ -1061,8 +1041,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="37" selection-start="363" selection-end="363" vertical-scroll-proportion="-9.0">
-          <folding />
+        <state line="14" column="0" selection-start="331" selection-end="331" vertical-scroll-proportion="-7.2">
+          <folding>
+            <marker date="1369951834975" expanded="true" signature="46:78" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,16 +1055,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="59" selection-start="2111" selection-end="2361" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="134" selection-end="134" vertical-scroll-proportion="-3.0">
+        <state line="5" column="12" selection-start="134" selection-end="134" vertical-scroll-proportion="2.2">
           <folding />
         </state>
       </provider>
@@ -1092,7 +1067,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="172" selection-end="172" vertical-scroll-proportion="-1.3888888">
+        <state line="5" column="21" selection-start="184" selection-end="184" vertical-scroll-proportion="-1.3888888">
           <folding />
         </state>
       </provider>
@@ -1102,7 +1077,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="32" selection-start="437" selection-end="437" vertical-scroll-proportion="0.37254903">
+        <state line="26" column="16" selection-start="647" selection-end="647" vertical-scroll-proportion="-15.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="77" selection-start="334" selection-end="334" vertical-scroll-proportion="-1.962963">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="11" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="394" selection-end="410" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/dtmc/TradeServiceTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="265" selection-end="265" vertical-scroll-proportion="0.15189873">
           <folding />
         </state>
       </provider>

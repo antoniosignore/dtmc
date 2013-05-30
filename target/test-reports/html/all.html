@@ -16,7 +16,11 @@
             - All tests </h1>
 
         <p class="intro">
-            No tests executed.
+            A single test executed
+
+            with
+            one error
+            .
         </p>
     </div>
     <div class="grid_2 omega">
@@ -41,6 +45,53 @@
         </nav>
     </div>
     <div class="clear"></div>
+    <div class="testsuite error">
+        <div class="header">
+            <h2>TradeServiceTests</h2>
+
+            <h3>
+                A single test executed
+
+                with
+                one error
+                .
+            </h3>
+        </div>
+        <div class="testcase clearfix error grid_8 alpha omega" data-name="testSomething">
+            <div class="grid_3 alpha">
+                <p>
+                    <span class="icon error"></span><b class="testname message error">testSomething</b>
+                </p>
+
+                <p class="summary">Executed in 3.496 seconds.</p>
+            </div>
+            <div class="grid_5 omega outputinfo">
+                <div class="details">
+                    <p>
+                        <b class="message">No signature of method: com.netnumeri.server.finance.finpojo.Portfolio.save()
+                            is applicable for argument types: () values: []
+                            Possible solutions: save(), save(), save(), save(), save(boolean), save(java.util.Map)</b>
+                    </p>
+<pre>groovy.lang.MissingMethodException: No signature of method: com.netnumeri.server.finance.finpojo.Portfolio.save() is applicable for argument types: () values: []
+Possible solutions: save(), save(), save(), save(), save(boolean), save(java.util.Map)
+	at dtmc.TradeServiceTests.testSomething(TradeServiceTests.groovy:19)
+</pre>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clearfix output footer">
+            <div class="sysout">
+                <h2>Standard output</h2>
+                <pre class="stdout"></pre>
+            </div>
+            <div class="syserr">
+                <h2>System error</h2>
+                <pre class="syserr"></pre>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
     <div class="clear"></div>
 </div>
 <!--
