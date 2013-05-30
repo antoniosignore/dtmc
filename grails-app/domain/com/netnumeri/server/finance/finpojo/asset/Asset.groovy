@@ -5,6 +5,10 @@ import com.netnumeri.server.finance.finpojo.Instrument
 
 class Asset extends Instrument implements Serializable {
 
+    static mapping = {
+        tablePerHierarchy false
+    }
+
     public Asset() {
     }
 

@@ -85,13 +85,7 @@ class TradeService {
 
     public void add(Portfolio portfolio, Instrument instrument, int Amount) {
         PortfolioItem item = new PortfolioItem(instrument, Amount, portfolio);
-        item.instrument = instrument;
-
-        if (!portfolio.isTesting)
-            if (item.instrument.getId() != null) {
-//                PortfolioItemDao dao = new PortfolioItemDao();
-//                dao.put(item);
-            }
+        item.save(failOnError: true, insert: true, flush: true)
         add(portfolio, item);
     }
 

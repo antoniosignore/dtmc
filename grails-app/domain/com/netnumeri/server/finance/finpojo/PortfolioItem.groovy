@@ -6,11 +6,18 @@ import com.netnumeri.server.finance.finpojo.derivative.Derivative
 
 public class PortfolioItem implements Serializable {
 
+//    static mapping = {
+//        id generator: 'hilo',
+//                params: [table: 'hi_value', column: 'next_value', max_lo: 100]
+//    }
+
     static constraints = {
     }
 
     Instrument instrument
     Portfolio portfolio
+
+    static belongsTo = [Portfolio, Instrument]
 
     Integer amount = 0;
 

@@ -8,7 +8,10 @@ class Portfolio extends Asset implements Serializable {
     static constraints = {
     }
 
-//    Person author
+    static mapping = {
+        id generator: 'hilo',
+                params: [table: 'hi_value', column: 'next_value', max_lo: 100]
+    }
 
     Portfolio() {}
 
@@ -17,7 +20,6 @@ class Portfolio extends Asset implements Serializable {
     static hasMany = [items: PortfolioItem, transactions: Transaction]
 
     static transients = [
-            "isTesting",
             "assetsToHold",
             "tempWeights",
             "wealth",
@@ -26,7 +28,6 @@ class Portfolio extends Asset implements Serializable {
             "firstDailyDate",
             "lastDailyDate"]
 
-    boolean isTesting = false
     int assetsToHold = 0;
     double wealth = 0;
     double[] tempWeights;
@@ -69,7 +70,6 @@ class Portfolio extends Asset implements Serializable {
             p.transactions.add(t)
         }
 
-        p.isTesting = true;
         p.assetsToHold = assetsToHold;
         p.wealth = wealth;
         p.tempWeights = tempWeights;

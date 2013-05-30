@@ -9,6 +9,10 @@ import com.netnumeri.server.finance.utils.DateUtils
 
 class Instrument extends Persistable implements Serializable {
 
+    static mapping = {
+        tablePerHierarchy false
+    }
+
     static transients = [
             "indicators",
             "priceSeries",

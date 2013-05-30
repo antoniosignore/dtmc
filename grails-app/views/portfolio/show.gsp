@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
 <a href="#show-portfolio" class="skip" tabindex="-1"><g:message code="default.link.skip.label"
                                                                 default="Skip to content&hellip;"/></a>
 
@@ -22,15 +23,17 @@
 
 <div id="show-portfolio" class="content scaffold-show" role="main">
     <h1><g:message code="default.show.label" args="[entityName]"/></h1>
+
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>
+
     <ol class="property-list portfolio">
 
         <g:if test="${portfolioInstance?.description}">
             <li class="fieldcontain">
-                <span id="description-label" class="property-label"><g:message code="portfolio.description.label"
-                                                                               default="Description"/></span>
+                <span id="description-label" class="property-label">
+                    <g:message code="portfolio.description.label" default="Description"/></span>
 
                 <span class="property-value" aria-labelledby="description-label"><g:fieldValue
                         bean="${portfolioInstance}" field="description"/></span>
@@ -78,6 +81,7 @@
         </g:if>
 
     </ol>
+
     <g:form>
         <fieldset class="buttons">
             <g:hiddenField name="id" value="${portfolioInstance?.id}"/>
@@ -88,6 +92,15 @@
                             onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
         </fieldset>
     </g:form>
+
+
+
+    <div id="pentries">
+
+        <g:render template="entry" collection="${portfolioInstance.items}" var="item"/>
+
+    </div>
+
 </div>
 </body>
 </html>

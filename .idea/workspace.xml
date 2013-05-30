@@ -2,51 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/TransactionController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/transaction/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/transaction/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/transaction/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/transaction/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/transaction/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/templates/scaffolding/Controller.groovy" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Backtest.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Backtest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/Controller.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/Controller.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/testing/Controller.groovy" afterPath="$PROJECT_DIR$/src/templates/testing/Controller.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/DomainClass.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/DomainClass.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/testing/DomainClass.groovy" afterPath="$PROJECT_DIR$/src/templates/testing/DomainClass.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/Filters.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/Filters.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/testing/Filters.groovy" afterPath="$PROJECT_DIR$/src/templates/testing/Filters.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/testing/Generic.groovy" afterPath="$PROJECT_DIR$/src/templates/testing/Generic.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/ScaffoldingController.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/ScaffoldingController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/Service.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/Service.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/testing/Service.groovy" afterPath="$PROJECT_DIR$/src/templates/testing/Service.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/TagLib.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/TagLib.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/testing/TagLib.groovy" afterPath="$PROJECT_DIR$/src/templates/testing/TagLib.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/Test.groovy" afterPath="$PROJECT_DIR$/src/templates/scaffolding/Test.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/Tests.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/Tests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TradeEnum.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TradeEnum.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioTest.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/portfolio/_entry.gsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/TEST-unit-unit-com.netnumeri.server.finance.ta.SSATest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/html/com/netnumeri/server/finance/ta/0_SSATest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-com.netnumeri.server.finance.ta.SSATest-err.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-com.netnumeri.server.finance.ta.SSATest-out.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-com.netnumeri.server.finance.ta.SSATest.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Asset.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Asset.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SSAStrategyTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SSAStrategyTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy" afterPath="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Transaction.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Transaction.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/TransactionControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/TransactionControllerTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/data/TransactionSeries.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/data/TransactionSeries.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/testing/UnitTest.groovy" afterPath="$PROJECT_DIR$/src/templates/testing/UnitTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/WebTest.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/WebTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/_form.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/all.html" afterPath="$PROJECT_DIR$/target/test-reports/html/all.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/antonio.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/antonio.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/create.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/edit.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/templates/artifacts/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/list.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/list.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/failed.html" afterPath="$PROJECT_DIR$/target/test-reports/html/failed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/index.html" afterPath="$PROJECT_DIR$/target/test-reports/html/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/renderEditor.template" afterPath="$PROJECT_DIR$/src/templates/scaffolding/renderEditor.template" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/show.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/portfolio/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/stylesheet.css" afterPath="$PROJECT_DIR$/target/test-reports/html/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369227519420" ignored="false" />
+    <file path="/Dummy.txt" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369950750361" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-discover-vmbae/blueprint_home/discover-vmbe.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368449697446" ignored="false" />
     <file path="/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368445506751" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-core/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368514741746" ignored="false" />
@@ -62,7 +51,7 @@
     <file path="$USER_HOME$/vodafone/blueprint-discover-vmbae/blueprint_home/discover-vmbae.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368451501862" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-platform/blueprint_home/platform.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368513736063" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-discover/run.sh" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368452190037" ignored="false" />
-    <file path="/a.dummy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369227296526" ignored="false" />
+    <file path="/a.dummy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369317846809" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-discover-vmbae/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368513705804" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-platform/src/main/java/com/vodafone/global/blueprint/platform/controller/AuthenticationController.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368513736063" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-platform/src/main/java/com/vodafone/global/blueprint/platform/PlatformProperties.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368513736063" ignored="false" />
@@ -87,30 +76,30 @@
     <file path="$USER_HOME$/vodafone/blueprint-core/src/main/java/com/vodafone/global/blueprint/backend/dao/HibernateBaseDao.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368514741746" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-core/src/main/java/com/vodafone/global/blueprint/backend/command/user/CommandSaveUsers.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368514741746" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-core/src/main/java/com/vodafone/global/blueprint/backend/utils/AuditLogUtils.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368514741746" ignored="false" />
-    <file path="/fragment.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368778510448" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/smapi/PollerTask.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606987019" ignored="false" />
+    <file path="/fragment.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369951069475" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/smapi/PollerTask.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369394167320" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/smapi/HttpSMAPIWriter.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606883771" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/resources/META-INF/spring/businesslogic-events-osgi-context.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/resources/META-INF/spring/businesslogic-events-osgi-context.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api/src/main/java/com/vodafone/global/smhs/api/v30/cache/SmhsCacheService.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/EventsFunctions.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368607044002" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/config/platform/log4j.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/EventField.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/EventLine.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/beans/EventGson.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/beans/EventsGson.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api.properties/src/main/java/com/vodafone/global/smhs/api/v30/properties/utils/DiscoverPropertyUtils.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/test/java/com/vodafone/global/smhs/businesslogic/events/utils/PollerTaskTest.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/smapi/EventSMAPIGson.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/EventsFunctions.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/config/platform/log4j.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392106786" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/EventField.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/EventLine.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/beans/EventGson.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392106786" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/beans/EventsGson.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api.properties/src/main/java/com/vodafone/global/smhs/api/v30/properties/utils/DiscoverPropertyUtils.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/test/java/com/vodafone/global/smhs/businesslogic/events/utils/PollerTaskTest.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/smapi/EventSMAPIGson.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/smapi/HttpCallerResponse.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606840152" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/smapi/ParsedLineImmutable.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/smapi/ParsedLineImmutable.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/test/resources/events/SMHSEVENTS_02_20130214_01.csv" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/utils/DateReaderFromSystemDate.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/utils/DateReaderFromSystemDate.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.common.businesslogic/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497879" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/service/EventsService.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606817987" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-support/platform.common/src/main/java/com/vodafone/global/osgi/http/RestHttpConstants.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368606497880" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/service/EventsService.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-support/platform.common/src/main/java/com/vodafone/global/osgi/http/RestHttpConstants.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
     <file path="/Book.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368618588741" ignored="false" />
     <file path="/hibernate.cfg.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368614501874" ignored="false" />
     <file path="/PortfolioController.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368613630138" ignored="false" />
@@ -122,7 +111,7 @@
     <file path="/MyTest.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368614993245" ignored="false" />
     <file path="/SSATest.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369067834455" ignored="false" />
     <file path="/Author.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368618597186" ignored="false" />
-    <file path="/show.gsp" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369222209144" ignored="false" />
+    <file path="/show.gsp" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369646842964" ignored="false" />
     <file path="/TimeSeries.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368623527799" ignored="false" />
     <file path="/Groovy Console" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368687549443" ignored="false" />
     <file path="/Person.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368690230455" ignored="false" />
@@ -133,31 +122,73 @@
     <file path="/StatusController.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368816405617" ignored="false" />
     <file path="$PROJECT_DIR$/../grails-mongodb-demo/application.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368860373703" ignored="false" />
     <file path="$PROJECT_DIR$/../grails-mongodb-demo/web-app/WEB-INF/applicationContext.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368860373703" ignored="false" />
-    <file path="/PortfolioItem.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369073561944" ignored="false" />
+    <file path="/PortfolioItem.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369950923186" ignored="false" />
     <file path="/Transaction.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369225505020" ignored="false" />
     <file path="/FinConstants.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368905844328" ignored="false" />
     <file path="/FormatUtils.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368905900238" ignored="false" />
     <file path="/TransactionCost.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368906541130" ignored="false" />
-    <file path="/SMACrossoverTest.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368908558420" ignored="false" />
+    <file path="/SMACrossoverTest.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369647331828" ignored="false" />
     <file path="/PortfolioService.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369136692374" ignored="false" />
     <file path="/TransactionSeries.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1368910627229" ignored="false" />
     <file path="/Backtest.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369212880503" ignored="false" />
     <file path="/Config.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369000482353" ignored="false" />
-    <file path="/BootStrap.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369050184731" ignored="false" />
+    <file path="/BootStrap.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369661351137" ignored="false" />
     <file path="/SSAStudy.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369054387427" ignored="false" />
-    <file path="/TradeService.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369137192138" ignored="false" />
-    <file path="/main.gsp" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369222706548" ignored="false" />
+    <file path="/TradeService.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369648279786" ignored="false" />
+    <file path="/main.gsp" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369303671628" ignored="false" />
     <file path="$PROJECT_DIR$/../grails-mongodb-demo/grails-app/conf/UrlMappings.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369174228358" ignored="false" />
     <file path="$PROJECT_DIR$/../grails-mongodb-demo/grails-app/views/layouts/main.gsp" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369174421877" ignored="false" />
     <file path="$PROJECT_DIR$/../grails-mongodb-demo/grails-app/conf/ApplicationResources.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369175365989" ignored="false" />
     <file path="/create.gsp" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369175962764" ignored="false" />
     <file path="$PROJECT_DIR$/../twitter-bootstrap-scaffolding/grails-app/conf/BuildConfig.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369217499291" ignored="false" />
     <file path="$PROJECT_DIR$/../twitter-bootstrap-scaffolding/target/resources/web.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369215462245" ignored="false" />
-    <file path="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/asset/StockControllerTests.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369220771401" ignored="false" />
     <file path="/renderEditor.template" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369224102395" ignored="false" />
     <file path="/Controller.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369225836524" ignored="false" />
     <file path="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Pattern.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369227269107" ignored="false" />
     <file path="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Candlestick.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369227269309" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/application-resources/smhs_xsl/inlines.xsl" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369320477745" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/application-resources/smhs_xsl/valuewithdate.xsl" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369320490621" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/application-resources/smhs_xsl/threemessages.xsl" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369320490621" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/src/main/java/com/vodafone/global/iproxy/IprxEngine.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369320490621" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/application-resources/smhs_xsl/valuewithdesc.xsl" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369320490621" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/application-resources/smhs_xsl/twoprogrammes.xsl" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369320490621" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/application-resources/smhs_xsl/imagedescription.xsl" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369320490621" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/config/platform/ehcache.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369320490621" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/application-resources/smhs_xsl/imageheaddescription.xsl" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369320490621" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.1.0/target/classes/META-INF/MANIFEST.MF" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369321227657" ignored="false" />
+    <file path="/PollerTaskTest.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369384948154" ignored="false" />
+    <file path="/smhs.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369393677756" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/config/platform/smhs.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369393677756" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/files/events/events-24-05-2013.journal" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369396322371" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/files/events/incident.txt" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369389656474" ignored="false" />
+    <file path="/PollerTask.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369387180012" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/files/events/SMHSEVENTS_01_20130523_75.csv" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369394620688" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/test/resources/defect/SMHSEVENTS_01_20130523_75.csv" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369385393297" ignored="false" />
+    <file path="/ParsedLineImmutable.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369390265656" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/utils/PollerUtils.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="/PollerUtils.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369384152312" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/test/resources/defect/events-24-05-2013.journal" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369386256043" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/test/resources/defect/incident.txt" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369388678109" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/test/resources/events2/events-24-05-2013.journal" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369388678110" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/test/resources/events/incident.txt" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369388678109" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/test/resources/events/events-24-05-2013.journal" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369388678109" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/files/events/SMHSEVENTS_01_20130522_01.csv" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369389305687" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392106786" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392106786" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/pom.xml" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392106786" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/config/platform/config.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392106786" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/config/platform/timeout.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392106786" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/config/platform/system.properties" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392106786" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api/src/main/java/com/vodafone/global/smhs/api/v30/datastore/FileFetcher.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api/src/main/java/com/vodafone/global/smhs/api/v30/datastore/HttpCallerFetcher.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api/src/main/java/com/vodafone/global/smhs/api/v30/datastore/MetadataStoreEntityMap.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api/src/main/java/com/vodafone/global/smhs/api/v30/datastore/XmlFetcher.java" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369392507674" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/files/events/SMHSEVENTS_01_20130506_01.csv" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369394620688" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/files/events/SMHSEVENTS_01_20130514_01.csv" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369394620688" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/files/events/SMHSEVENTS_01_20130523_01.csv" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369394620688" ignored="false" />
+    <file path="$PROJECT_DIR$/../grailstwitter/grails-app/conf/BuildConfig.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369641382786" ignored="false" />
+    <file path="/_entry.gsp" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369647039103" ignored="false" />
+    <file path="/PortfolioTest.groovy" changelist="86a6a5d9-82c2-44e7-bf3a-6c35fcbc8c3c" time="1369951369165" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +208,68 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" line="1048" class="com.netnumeri.server.finance.beans.TimeSeries" package="com.netnumeri.server.finance.beans">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" line="34" class="com.netnumeri.server.finance.strategy.SMACrossoverTest" package="com.netnumeri.server.finance.strategy">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy" line="87" class="dtmc.TradeService" package="dtmc">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" line="67" class="BootStrap" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -213,53 +306,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" line="1048" class="com.netnumeri.server.finance.beans.TimeSeries" package="com.netnumeri.server.finance.beans">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" line="34" class="com.netnumeri.server.finance.strategy.SMACrossoverTest" package="com.netnumeri.server.finance.strategy">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="jar://$USER_HOME$/tools/grails-2.2.2/src/grails-datastore-core-1.1.7.RELEASE-sources.jar!/org/grails/datastore/mapping/engine/event/AbstractPersistenceEventListener.java" line="45" class="org.grails.datastore.mapping.engine.event.AbstractPersistenceEventListener" package="org.grails.datastore.mapping.engine.event">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -270,67 +316,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/show.gsp">
+      <file leaf-file-name="Portfolio.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="69" selection-start="735" selection-end="735" vertical-scroll-proportion="-11.25">
+            <state line="5" column="12" selection-start="134" selection-end="134" vertical-scroll-proportion="-3.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="renderEditor.template" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/renderEditor.template">
+      <file leaf-file-name="Stock.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="50" selection-start="2256" selection-end="2256" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/create.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="-14.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/edit.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1017" selection-end="1641" vertical-scroll-proportion="-20.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transaction.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Transaction.groovy">
-          <provider editor-type-id="text-editor">
-            <state line="30" column="54" selection-start="929" selection-end="929" vertical-scroll-proportion="-15.0">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransactionController.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/TransactionController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="22" selection-start="257" selection-end="257" vertical-scroll-proportion="0.2631579">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Persistable.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="52" selection-end="52" vertical-scroll-proportion="-0.5555556">
+            <state line="5" column="9" selection-start="172" selection-end="172" vertical-scroll-proportion="-1.3888888">
               <folding />
             </state>
           </provider>
@@ -339,28 +337,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TradeEnum.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TradeEnum.groovy">
+      <file leaf-file-name="StockTests.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="38" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0">
+            <state line="19" column="32" selection-start="437" selection-end="437" vertical-scroll-proportion="0.37254903">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/list.gsp">
+      <file leaf-file-name="PortfolioTest.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="1189" selection-end="1189" vertical-scroll-proportion="-15.583333">
+            <state line="15" column="37" selection-start="363" selection-end="363" vertical-scroll-proportion="-9.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/artifacts/Controller.groovy">
+      <file leaf-file-name="SSAStrategyTest.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SSAStrategyTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="15" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+            <state line="21" column="41" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SMACrossoverTest.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="33" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InstrumentControllerTests.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/InstrumentControllerTests.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="46" selection-end="108" vertical-scroll-proportion="-1.2">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PortfolioControllerTests.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioControllerTests.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="16" selection-start="109" selection-end="109" vertical-scroll-proportion="-2.4">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionControllerTests.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/TransactionControllerTests.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="110" selection-end="141" vertical-scroll-proportion="-3.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="59" selection-start="2111" selection-end="2361" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -389,30 +432,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/create.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
-        <option value="$PROJECT_DIR$/target/stacktrace.log" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TradeEnum.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-        <option value="$PROJECT_DIR$/src/templates/scaffolding/Controller.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/transaction/_form.gsp" />
-        <option value="$PROJECT_DIR$/src/templates/scaffolding/renderEditor.template" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Transaction.groovy" />
-        <option value="$PROJECT_DIR$/src/templates/scaffolding/create.gsp" />
-        <option value="$PROJECT_DIR$/src/templates/scaffolding/edit.gsp" />
-        <option value="$PROJECT_DIR$/src/templates/scaffolding/list.gsp" />
-        <option value="$PROJECT_DIR$/src/templates/scaffolding/show.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/TransactionController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/portfolio/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/portfolio/_entry.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Asset.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioTest.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SSAStrategyTest.groovy" />
+        <option value="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-4" />
-    <option name="width" value="1617" />
-    <option name="height" value="1055" />
+    <option name="x" value="107" />
+    <option name="y" value="40" />
+    <option name="width" value="1543" />
+    <option name="height" value="999" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -467,7 +510,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/test/unit" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
@@ -483,11 +526,12 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.netnumeri.server.finance.finpojo" />
+      <recent name="com.netnumeri.server.finance.ssa" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.netnumeri.server.finance.ssa" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.netnumeri.server.finance.finpojo" />
@@ -506,7 +550,7 @@
       <recent name="com.netnumeri.server.finance.finpojo" />
     </key>
   </component>
-  <component name="RunManager" selected="Grails.Grails:dtmc">
+  <component name="RunManager" selected="Grails.testSomething()">
     <configuration default="false" name="testStrategy()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
       <module name="dtmc" />
       <setting name="vmparams" value="" />
@@ -535,6 +579,36 @@
       <setting name="launchBrowser" value="false" />
       <RunnerSettings RunnerId="Profile ">
         <option name="myExternalizedOptions" value="&#10;additional-options2=onexit\=snapshot&#10;" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PortfolioTest" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
+      <module name="dtmc" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.finpojo.Portfolio -echoOut" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <RunnerSettings RunnerId="Profile ">
+        <option name="myExternalizedOptions" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="testSomething()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
+      <module name="dtmc" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="test-app integration: com.netnumeri.server.finance.finpojo.asset.Stock.testSomething -echoOut" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <RunnerSettings RunnerId="Profile ">
+        <option name="myExternalizedOptions" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -689,18 +763,21 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Grails.Grails:dtmc" />
       <item index="1" class="java.lang.String" itemvalue="Grails.generate transaction controller" />
       <item index="2" class="java.lang.String" itemvalue="Grails.testStrategy()" />
       <item index="3" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
+      <item index="4" class="java.lang.String" itemvalue="Grails.PortfolioTest" />
+      <item index="5" class="java.lang.String" itemvalue="Grails.testSomething()" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
-        <item index="1" class="java.lang.String" itemvalue="Grails.testStrategy()" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Grails.testSomething()" />
+        <item index="1" class="java.lang.String" itemvalue="Grails.PortfolioTest" />
         <item index="2" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
-        <item index="3" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
+        <item index="3" class="java.lang.String" itemvalue="Grails.testStrategy()" />
+        <item index="4" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -791,37 +868,41 @@
       <created>1369221009266</created>
       <updated>1369221009266</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="initial commit">
+      <created>1369229816084</created>
+      <updated>1369229816084</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1617" height="1055" extended-state="6" />
-    <editor active="false" />
+    <frame x="107" y="40" width="1543" height="999" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32741398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32741398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4861265" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.60591716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5216426" sideWeight="0.5003195" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4428413" sideWeight="0.49968052" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3060703" sideWeight="0.672586" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1904762" sideWeight="0.4189349" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971245" sideWeight="0.6415094" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27859426" sideWeight="0.47835737" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5216426" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27859426" sideWeight="0.86348504" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5810651" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4428413" sideWeight="0.49968052" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971245" sideWeight="0.6415094" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -896,72 +977,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/stacktrace.log">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/org/example/SecRole.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23904" column="14" selection-start="2194931" selection-end="2194931" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="43" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/artifacts/DomainClass.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/InstrumentController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="15" selection-start="379" selection-end="379" vertical-scroll-proportion="-8.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/PortfolioItemController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="34" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/artifacts/ScaffoldingController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/artifacts/Controller.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="15" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TradeEnum.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="38" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/renderEditor.template">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="50" selection-start="2256" selection-end="2256" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="52" selection-end="52" vertical-scroll-proportion="-0.5555556">
+        <state line="2" column="6" selection-start="27" selection-end="27" vertical-scroll-proportion="-0.5555556">
           <folding />
         </state>
       </provider>
@@ -969,47 +987,122 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Transaction.groovy">
-      <provider editor-type-id="text-editor">
-        <state line="30" column="54" selection-start="929" selection-end="929" vertical-scroll-proportion="-15.0">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/dtmc/Author.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="20" selection-end="20" vertical-scroll-proportion="-0.5555556">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/create.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/dtmc/Book.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="-14.375">
+        <state line="12" column="25" selection-start="136" selection-end="136" vertical-scroll-proportion="-3.3333333">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/dtmc/TradeServiceTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="42" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/edit.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/services/dtmc/TradeService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1017" selection-end="1641" vertical-scroll-proportion="-20.625">
+        <state line="86" column="41" selection-start="3134" selection-end="3134" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/list.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1189" selection-end="1189" vertical-scroll-proportion="-15.583333">
+        <state line="27" column="47" selection-start="663" selection-end="663" vertical-scroll-proportion="-6.6">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/TransactionControllerTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="110" selection-end="141" vertical-scroll-proportion="-3.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/show.gsp">
+    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioControllerTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="69" selection-start="735" selection-end="735" vertical-scroll-proportion="-11.25">
+        <state line="4" column="16" selection-start="109" selection-end="109" vertical-scroll-proportion="-2.4">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/TransactionController.groovy">
+    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/InstrumentControllerTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="257" selection-end="257" vertical-scroll-proportion="0.2631579">
+        <state line="2" column="0" selection-start="46" selection-end="108" vertical-scroll-proportion="-1.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="33" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="37" selection-start="363" selection-end="363" vertical-scroll-proportion="-9.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SSAStrategyTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="41" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="59" selection-start="2111" selection-end="2361" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="12" selection-start="134" selection-end="134" vertical-scroll-proportion="-3.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="9" selection-start="172" selection-end="172" vertical-scroll-proportion="-1.3888888">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="32" selection-start="437" selection-end="437" vertical-scroll-proportion="0.37254903">
           <folding />
         </state>
       </provider>

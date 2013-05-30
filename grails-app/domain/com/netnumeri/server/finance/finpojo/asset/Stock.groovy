@@ -5,6 +5,11 @@ import com.netnumeri.server.utils.OptionsChain
 
 class Stock extends Asset implements Serializable {
 
+    static mapping = {
+        id generator: 'hilo',
+                params: [table: 'hi_value', column: 'next_value', max_lo: 100]
+    }
+
     static transients = [
             "chain",
             "snapshot"
