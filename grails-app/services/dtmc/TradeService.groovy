@@ -9,7 +9,7 @@ import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.PortfolioItem
-import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.finpojo.derivative.Derivative
 import com.netnumeri.server.finance.utils.DateUtils
@@ -75,6 +75,8 @@ class TradeService {
             portfolio.setRangeBounds(entry.instrument.lowerRangeDate, entry.instrument.getUpperRangeDate());
 
         portfolio.items.add(entry);
+
+        portfolio.save(failOnError: true, insert: true, flush: true);
     }
 
 
@@ -85,11 +87,12 @@ class TradeService {
 
     public void add(Portfolio portfolio, Instrument instrument, int Amount) {
         PortfolioItem item = new PortfolioItem(instrument, Amount, portfolio);
-        item.save(failOnError: true, insert: true, flush: true)
+
+//        item.save(failOnError: true, insert: true, flush: true)
         add(portfolio, item);
     }
 
-    public void add(Portfolio portfolio, Transaction transaction) {
+    public void add(Portfolio portfolio, Trade transaction) {
         if (transaction == null) throw new IllegalArgumentException("transactions cannot be null");
 
         Instrument instrument = transaction.instrument;
@@ -207,57 +210,57 @@ class TradeService {
         }
     }
 
-    public Transaction buy(Portfolio portfolio, Instrument instrument, int amount) {
+    public Trade buy(Portfolio portfolio, Instrument instrument, int amount) {
         return buy(portfolio, instrument, amount, null);
     }
 
-    public Transaction buy(Portfolio portfolio, Instrument instrument, int amount, Date date) {
+    public Trade buy(Portfolio portfolio, Instrument instrument, int amount, Date date) {
         if (date == null) date = new Date();
-        Transaction transaction = new Transaction(instrument, TradeEnum.BUY, amount, instrument.getPrice(date), date);
+        Trade transaction = new Trade(instrument, TradeEnum.BUY, amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
         return transaction;
     }
 
-    public Transaction sell(Portfolio portfolio, Instrument instrument, int amount) {
+    public Trade sell(Portfolio portfolio, Instrument instrument, int amount) {
         return sell(portfolio, instrument, amount, new Date());
     }
 
-    public Transaction sell(Portfolio portfolio, Instrument instrument, int amount, Date date) {
+    public Trade sell(Portfolio portfolio, Instrument instrument, int amount, Date date) {
         if (date == null) date = new Date();
-        Transaction transaction = new Transaction(instrument, TradeEnum.SELL, amount, instrument.getPrice(date), date);
+        Trade transaction = new Trade(instrument, TradeEnum.SELL, amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
         return transaction;
     }
 
-    public Transaction sellShort(Portfolio portfolio, Instrument instrument, int amount) {
+    public Trade sellShort(Portfolio portfolio, Instrument instrument, int amount) {
         return sellShort(portfolio, instrument, amount, null);
     }
 
-    public Transaction sellShort(Portfolio portfolio, Instrument instrument, int Amount, Date date) {
+    public Trade sellShort(Portfolio portfolio, Instrument instrument, int Amount, Date date) {
         if (date == null) date = new Date();
-        Transaction transaction = new Transaction(instrument, TradeEnum.SELLSHORT, Amount, instrument.getPrice(date), date);
+        Trade transaction = new Trade(instrument, TradeEnum.SELLSHORT, Amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
         return transaction;
     }
 
-    public Transaction buyShort(Portfolio portfolio, Instrument instrument, int Amount) {
+    public Trade buyShort(Portfolio portfolio, Instrument instrument, int Amount) {
         return buyShort(portfolio, instrument, Amount, new Date());
     }
 
     // Buy short
-    public Transaction buyShort(Portfolio portfolio, Instrument instrument, int Amount, Date date) {
+    public Trade buyShort(Portfolio portfolio, Instrument instrument, int Amount, Date date) {
         if (date == null) date = new Date();
-        Transaction transaction = new Transaction(instrument, TradeEnum.BUYSHORT, Amount, instrument.getPrice(date), date);
+        Trade transaction = new Trade(instrument, TradeEnum.BUYSHORT, Amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
         return transaction;
     }
 
-    public Transaction sell(Portfolio portfolio, Instrument instrument) {
+    public Trade sell(Portfolio portfolio, Instrument instrument) {
         return sell(portfolio, instrument, new Date());
     }
 
     // Sell everything
-    public Transaction sell(Portfolio portfolio, Instrument instrument, Date date) {
+    public Trade sell(Portfolio portfolio, Instrument instrument, Date date) {
         int amount;
         if (getEntry(portfolio, instrument) != null) {
             amount = getAmount(portfolio, instrument);
@@ -265,7 +268,7 @@ class TradeService {
             return null;
         }
         if (date == null) date = new Date();
-        Transaction transaction = new Transaction(instrument, TradeEnum.SELL, amount, instrument.getPrice(date), date);
+        Trade transaction = new Trade(instrument, TradeEnum.SELL, amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
         return transaction;
     }
@@ -492,7 +495,7 @@ class TradeService {
      */
     public double getValue(Portfolio portfolio, Date date) {
         if (date == null) {
-            throw new IllegalArgumentException("date cannot be null");
+            throw new IllegalArgumentException("transactionDate cannot be null");
         }
         Instrument instrument;
         Daily daily;
@@ -765,7 +768,7 @@ class TradeService {
         return portfolio.transactions.size();
     }
 
-    public Transaction getTransaction(Portfolio portfolio, int i) {
+    public Trade getTransaction(Portfolio portfolio, int i) {
         return portfolio.transactions.get(i);
     }
 

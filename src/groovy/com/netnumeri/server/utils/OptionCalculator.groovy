@@ -4,16 +4,16 @@ package com.netnumeri.server.utils;
 import com.netnumeri.server.entity.OptionType
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 import com.netnumeri.server.finance.math.FinMath
 import com.netnumeri.server.finance.math.FinRecipes
 
 public class OptionCalculator {
 
-    Option option;
+    Vanilla option;
     public boolean debug = true;
 
-    public OptionCalculator(Option option) {
+    public OptionCalculator(Vanilla option) {
         this.option = option;
     }
 

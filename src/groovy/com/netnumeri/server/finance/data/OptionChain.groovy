@@ -2,7 +2,7 @@ package com.netnumeri.server.finance.data;
 
 
 import com.netnumeri.server.finance.finpojo.asset.Stock
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 
 public class OptionChain {
     private Vector options;
@@ -20,7 +20,7 @@ public class OptionChain {
         this.options = options;
     }
 
-    public void addOption(Option option) {
+    public void addOption(Vanilla option) {
         options.add(option);
     }
 

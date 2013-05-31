@@ -98,8 +98,8 @@ public abstract class Derivative extends Instrument implements Serializable {
     }
 
     /**
-     * Returns number of days between Date and expiration date If Date == 0, return number of days betwen current
-     * date and expiration date
+     * Returns number of days between Date and expiration transactionDate If Date == 0, return number of days betwen current
+     * transactionDate and expiration transactionDate
      */
     public long expirationDays(Date date) {
         if (date == null)

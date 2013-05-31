@@ -1,12 +1,10 @@
 package com.netnumeri.server.finance.finpojo.derivative.equity
 
-
-
-import org.junit.*
-import grails.test.mixin.*
+import grails.test.mixin.Mock
+import grails.test.mixin.TestFor
 
 @TestFor(OptionController)
-@Mock(Option)
+@Mock(Vanilla)
 class OptionControllerTests {
 
     def populateValidParams(params) {
@@ -47,7 +45,7 @@ class OptionControllerTests {
 
         assert response.redirectedUrl == '/option/show/1'
         assert controller.flash.message != null
-        assert Option.count() == 1
+        assert Vanilla.count() == 1
     }
 
     void testShow() {
@@ -57,7 +55,7 @@ class OptionControllerTests {
         assert response.redirectedUrl == '/option/list'
 
         populateValidParams(params)
-        def option = new Option(params)
+        def option = new Vanilla(params)
 
         assert option.save() != null
 
@@ -75,7 +73,7 @@ class OptionControllerTests {
         assert response.redirectedUrl == '/option/list'
 
         populateValidParams(params)
-        def option = new Option(params)
+        def option = new Vanilla(params)
 
         assert option.save() != null
 
@@ -95,7 +93,7 @@ class OptionControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def option = new Option(params)
+        def option = new Vanilla(params)
 
         assert option.save() != null
 
@@ -139,17 +137,17 @@ class OptionControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def option = new Option(params)
+        def option = new Vanilla(params)
 
         assert option.save() != null
-        assert Option.count() == 1
+        assert Vanilla.count() == 1
 
         params.id = option.id
 
         controller.delete()
 
-        assert Option.count() == 0
-        assert Option.get(option.id) == null
+        assert Vanilla.count() == 0
+        assert Vanilla.get(option.id) == null
         assert response.redirectedUrl == '/option/list'
     }
 }

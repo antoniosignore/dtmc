@@ -4,7 +4,7 @@ import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 
 @TestFor(TransactionController)
-@Mock(Transaction)
+@Mock(Trade)
 class TransactionControllerTests {
 
     def populateValidParams(params) {
@@ -45,7 +45,7 @@ class TransactionControllerTests {
 
         assert response.redirectedUrl == '/transaction/show/1'
         assert controller.flash.message != null
-        assert Transaction.count() == 1
+        assert Trade.count() == 1
     }
 
     void testShow() {
@@ -55,7 +55,7 @@ class TransactionControllerTests {
         assert response.redirectedUrl == '/transaction/list'
 
         populateValidParams(params)
-        def transaction = new Transaction(params)
+        def transaction = new Trade(params)
 
         assert transaction.save() != null
 
@@ -73,7 +73,7 @@ class TransactionControllerTests {
         assert response.redirectedUrl == '/transaction/list'
 
         populateValidParams(params)
-        def transaction = new Transaction(params)
+        def transaction = new Trade(params)
 
         assert transaction.save() != null
 
@@ -93,7 +93,7 @@ class TransactionControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def transaction = new Transaction(params)
+        def transaction = new Trade(params)
 
         assert transaction.save() != null
 
@@ -137,17 +137,17 @@ class TransactionControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def transaction = new Transaction(params)
+        def transaction = new Trade(params)
 
         assert transaction.save() != null
-        assert Transaction.count() == 1
+        assert Trade.count() == 1
 
         params.id = transaction.id
 
         controller.delete()
 
-        assert Transaction.count() == 0
-        assert Transaction.get(transaction.id) == null
+        assert Trade.count() == 0
+        assert Trade.get(transaction.id) == null
         assert response.redirectedUrl == '/transaction/list'
     }
 }

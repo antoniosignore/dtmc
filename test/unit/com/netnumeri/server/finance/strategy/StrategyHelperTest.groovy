@@ -2,7 +2,7 @@ package com.netnumeri.server.finance.strategy
 
 import com.netnumeri.server.entity.OptionType
 import com.netnumeri.server.finance.finpojo.asset.Stock
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
@@ -20,15 +20,15 @@ public class StrategyHelperTest extends GroovyTestCase {
         Stock stock = YahooUtils.downloadYahooData("GOOG", da, a);
         StockUtils.refreshData(stock);
 
-        List<Option> atTheMoneyCall = helper.getAtTheMoneyList(stock, OptionType.CALL);
+        List<Vanilla> atTheMoneyCall = helper.getAtTheMoneyList(stock, OptionType.CALL);
         for (int i = 0; i < atTheMoneyCall.size(); i++) {
-            Option option = atTheMoneyCall.get(i);
+            Vanilla option = atTheMoneyCall.get(i);
             System.out.println("atTheMoneyCall = " + option.toString());
         }
 
-        List<Option> atTheMoneyPut = helper.getAtTheMoneyList(stock, OptionType.PUT);
+        List<Vanilla> atTheMoneyPut = helper.getAtTheMoneyList(stock, OptionType.PUT);
         for (int i = 0; i < atTheMoneyPut.size(); i++) {
-            Option option = atTheMoneyPut.get(i);
+            Vanilla option = atTheMoneyPut.get(i);
             System.out.println("atTheMoneyPut = " + option.toString());
         }
 

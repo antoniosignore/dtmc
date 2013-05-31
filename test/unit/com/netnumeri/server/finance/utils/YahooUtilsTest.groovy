@@ -16,7 +16,7 @@ class YahooUtilsTest extends GroovyTestCase {
         String key = YahooUtils.mapKey(date);
         assertEquals("2007-3", key)
         Date s = YahooUtils.fromKey(key);
-        println "date = $s"
+        println "transactionDate = $s"
 
         assertEquals("Thu Mar 01 00:00:00 CET 2007", s.toString())
     }

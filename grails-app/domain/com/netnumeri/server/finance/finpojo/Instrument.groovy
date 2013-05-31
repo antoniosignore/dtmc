@@ -221,14 +221,14 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public boolean isDataAvailable(Date date) {
-        if (date == null) throw new IllegalArgumentException("date cannot be null");
+        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
         return dataAvailable(date);
     }
 
 
     public Daily getDaily(Date date) {
         if (date == null) {
-            throw new IllegalArgumentException("date cannot be null");
+            throw new IllegalArgumentException("transactionDate cannot be null");
         }
         return daily(date);
     }
@@ -238,7 +238,7 @@ class Instrument extends Persistable implements Serializable {
 //    }
 
     public double getPrice(Date date) {
-        if (date == null) throw new IllegalArgumentException("date cannot be null");
+        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
         return getPrice(date, FinConstants.TYPICALPRICE);
     }
 
@@ -246,22 +246,22 @@ class Instrument extends Persistable implements Serializable {
      *  Option TYPICALPRICE, MEDIANPRICE , WEIGHTEDPRICE ,AVERAGEPRICE, LOGAVERAGEPRICE;
      */
     public double getPrice(Date date, FinConstants Option) {
-        if (date == null) throw new IllegalArgumentException("date cannot be null");
+        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
         return get(date, Option);
     }
 
     public double getLow(Date date) {
-        if (date == null) throw new IllegalArgumentException("date cannot be null");
+        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
         return dailyarray.get(date).low;
     }
 
     public double getHigh(Date date) {
-        if (date == null) throw new IllegalArgumentException("date cannot be null");
+        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
         return dailyarray.get(date).high;
     }
 
     public double getOpen(Date date) {
-        if (date == null) throw new IllegalArgumentException("date cannot be null");
+        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
         return dailyarray.get(date).openprice;
     }
 
@@ -270,17 +270,17 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public double getReturn(Date date) {
-        if (date == null) throw new IllegalArgumentException("date cannot be null");
+        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
         return re(date);
     }
 
     public double getLogReturn(Date date) {
-        if (date == null) throw new IllegalArgumentException("date cannot be null");
+        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
         return logReturn(date);
     }
 
     public int getVolume(Date date) {
-        if (date == null) throw new IllegalArgumentException("date cannot be null");
+        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
         return dailyarray.get(date).volume;
     }
 
@@ -313,7 +313,7 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public double getLast(Date date) {
-        if (date == null) throw new IllegalArgumentException("date cannot be null");
+        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
         Daily daily = getDaily(date);
         while (!daily.valid()) {
             daily = getPrevDaily(date);
@@ -776,17 +776,17 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public double low(Date date) {
-//        return low(index(date));
+//        return low(index(transactionDate));
         return dailyarray.get(date).getLow();
     }
 
     public double high(Date date) {
-//        return high(index(date));
+//        return high(index(transactionDate));
         return dailyarray.get(date).getHigh();
     }
 
     public double open(Date date) {
-//        return open(index(date));
+//        return open(index(transactionDate));
         return dailyarray.get(date).getOpenprice();
     }
 
@@ -794,8 +794,8 @@ class Instrument extends Persistable implements Serializable {
         return dailyarray.get(date).getCloseprice();
     }
 
-//    public double fReturn(Date date) {
-//        return fReturn(index(date));
+//    public double fReturn(Date transactionDate) {
+//        return fReturn(index(transactionDate));
 //    }
 
     public int volume(Date date) {
@@ -806,8 +806,8 @@ class Instrument extends Persistable implements Serializable {
         return dailyarray.get(date).getOpenInterest();
     }
 
-//    public double get(Date date, int Option) {
-//        return get(index(date), Option);
+//    public double get(Date transactionDate, int Option) {
+//        return get(index(transactionDate), Option);
 //    }
 
     public TimeSeries timeSeries(FinConstants What, Date firstDate, Date lastDate) {

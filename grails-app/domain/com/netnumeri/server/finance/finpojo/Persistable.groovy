@@ -7,7 +7,7 @@ class Persistable {
     }
 
     String name;
-    String description = "";
+    String description = "xx";
 
 
 }

@@ -1,7 +1,6 @@
-package com.netnumeri.server.utils;
+package com.netnumeri.server.utils
 
-
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 
 public class OptionsSelectionTest extends GroovyTestCase {
 
@@ -33,13 +32,13 @@ public class OptionsSelectionTest extends GroovyTestCase {
 
         OptionsChain chain = YahooOptions.loadOptionChain("GOOG");
         System.out.println("chain.calls.size() = " + chain.calls.size());
-        Map<Date, List<Option>> calls = chain.calls;
+        Map<Date, List<Vanilla>> calls = chain.calls;
         Set<Date> strings = calls.keySet();
         for (Iterator<Date> iterator = strings.iterator(); iterator.hasNext();) {
             Date next = iterator.next();
-            List<Option> options = calls.get(next);
+            List<Vanilla> options = calls.get(next);
             for (int i = 0; i < options.size(); i++) {
-                Option option = options.get(i);
+                Vanilla option = options.get(i);
                 System.out.println("expiration = " + option.toString());
             }
         }

@@ -1,8 +1,7 @@
-package com.netnumeri.server.finance.math;
+package com.netnumeri.server.finance.math
 
-
-import com.netnumeri.server.finance.beans.FinConstants
 import Jama.Matrix
+import com.netnumeri.server.finance.beans.FinConstants
 
 public class FinRecipes extends FinMath {
 
@@ -295,8 +294,8 @@ public class FinRecipes extends FinMath {
                                                                           double[] dividend_times,
                                                                           double[] dividend_amounts)
     // given an amount of dividend, the binomial grid does not recombine, have to
-    // start a new grid at each ex-dividend date.
-    // do this recursively, at each ex dividend date, at each step, call the
+    // start a new grid at each ex-dividend transactionDate.
+    // do this recursively, at each ex dividend transactionDate, at each step, call the
     // binomial formula starting at that point to calculate the value of the live
     // option, and compare that to the value of exercising now.
     {
@@ -357,8 +356,8 @@ public class FinRecipes extends FinMath {
                                                                          double[] dividend_times,
                                                                          double[] dividend_amounts)
     // given an amount of dividend, the binomial grid does not recombine, have to
-    // start a new grid at each ex-dividend date.
-    // do this recursively, at each ex dividend date, at each step, put the
+    // start a new grid at each ex-dividend transactionDate.
+    // do this recursively, at each ex dividend transactionDate, at each step, put the
     // binomial formula starting at that point to calculate the value of the live
     // option, and compare that to the value of exercising now.
     {
@@ -457,7 +456,7 @@ public class FinRecipes extends FinMath {
 
         prices[0] = d * prices[1];
         call_values[0] = (pDown * call_values[0] + pUp * call_values[1]) * Rinv;
-        call_values[0] = Math.max(call_values[0], S - X);        // check for exercise on first date
+        call_values[0] = Math.max(call_values[0], S - X);        // check for exercise on first transactionDate
 
         double f00 = call_values[0];
         opt.delta = (f11 - f10) / (S * u - S * d);
@@ -2258,7 +2257,7 @@ public class FinRecipes extends FinMath {
     public static void simulate_price_sequence(double S, // current value of underlying
                                                double r, // interest rate
                                                double sigma, // volatitily
-                                               double time, // time to final date
+                                               double time, // time to final transactionDate
                                                int no_steps, // number of steps
                                                double[] prices) {
         if (prices.length < no_steps) {
@@ -2279,7 +2278,7 @@ public class FinRecipes extends FinMath {
      * @param S current value of underlying
      * @param r interest rate
      * @param sigma volatitily
-     * @param time time to final date
+     * @param time time to final transactionDate
      */
     public static double simulate_terminal_price(double S,
                                                  double r,

@@ -5,7 +5,7 @@ import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
-import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.utils.DateUtils
 
 public abstract class Strategy {
@@ -34,13 +34,13 @@ public abstract class Strategy {
         this.lastDate = lastDate
     }
 
-    public void add(Transaction transaction) {
+    public void add(Trade transaction) {
         transactionSeries.add(transaction);
         PortfolioService.add(strategyPortfolio, transaction);
     }
 
     public void add(Instrument instrument, FinConstants action, int amount, double price, Date date) {
-        add(new Transaction(instrument, action, amount, price, date));
+        add(new Trade(instrument, action, amount, price, date));
     }
 
     public void test(Date firsDate, Date lasDate) {

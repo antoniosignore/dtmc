@@ -2,7 +2,7 @@ package com.netnumeri.server.utils;
 
 
 import com.netnumeri.server.entity.OptionType
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 import com.netnumeri.server.finance.utils.NetUtils
 import com.netnumeri.server.finance.utils.YahooInstantSnapshot
 import com.netnumeri.server.finance.utils.YahooUtils
@@ -27,18 +27,18 @@ public class YahooOptions {
         return lastPrice;
     }
 
-    public static List<Option> getChain(OptionsDocuments callsNode, OptionType direction) {
+    public static List<Vanilla> getChain(OptionsDocuments callsNode, OptionType direction) {
 
         XPath xpathSelector = DocumentHelper.createXPath("/table/tr/td/table/tr");
         List nodes = xpathSelector.selectNodes(callsNode.callsDocument);
 
-        List<Option> list = new ArrayList<Option>();
+        List<Vanilla> list = new ArrayList<Vanilla>();
 
         for (int i = 1; i < nodes.size(); i++) {
 
             Element node = (Element) nodes.get(i);
 
-            Option option = new Option(callsNode.ticker);
+            Vanilla option = new Vanilla(callsNode.ticker);
 
             if (direction == OptionType.CALL)
                 option.type = (OptionType.CALL);
@@ -201,8 +201,8 @@ public class YahooOptions {
         String s = YahooOptions.getOptionsDocuments(ticker, date);
         OptionsDocuments optionsDocuments = scrape(ticker, s);
         optionsDocuments.setExpirationDate(date)
-        List<Option> callsOptions = YahooOptions.getChain(optionsDocuments, OptionType.CALL);
-        List<Option> putsOptions = YahooOptions.getChain(optionsDocuments, OptionType.PUT);
+        List<Vanilla> callsOptions = YahooOptions.getChain(optionsDocuments, OptionType.CALL);
+        List<Vanilla> putsOptions = YahooOptions.getChain(optionsDocuments, OptionType.PUT);
         optionChain.calls.put(date, callsOptions);
         optionChain.puts.put(date, putsOptions);
     }

@@ -16,8 +16,8 @@ class Portfolio extends Asset implements Serializable {
     Portfolio() {}
 
     List<PortfolioItem> items = []
-    List<Transaction> transactions = []
-    static hasMany = [items: PortfolioItem, transactions: Transaction]
+    List<Trade> transactions = []
+    static hasMany = [items: PortfolioItem, transactions: Trade]
 
     static transients = [
             "assetsToHold",
@@ -66,7 +66,7 @@ class Portfolio extends Asset implements Serializable {
 
         this.transactions
         for (int i = 0; i < transactions.size(); i++) {
-            Transaction t = transactions.get(i);
+            Trade t = transactions.get(i);
             p.transactions.add(t)
         }
 

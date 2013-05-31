@@ -8,7 +8,7 @@ import com.netnumeri.server.finance.beans.TimeSeries
  *
  * The RSI calculation appears in its original and derived form. Average Up and
  * Average Down are calculated using a simple average method for the initial
- * observation. NOTE: The initial observation is the first date shown on the
+ * observation. NOTE: The initial observation is the first transactionDate shown on the
  * scrolling graph, which may or may not be seen. Subsequent values are computed
  * using these initial values in conjunction with a damping factor to smooth out
  * extreme points. The RSI equation and two averaging methods are presented

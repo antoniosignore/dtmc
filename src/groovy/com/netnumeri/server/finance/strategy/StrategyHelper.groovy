@@ -2,11 +2,11 @@ package com.netnumeri.server.finance.strategy
 
 import com.netnumeri.server.entity.OptionType
 import com.netnumeri.server.finance.finpojo.asset.Stock
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 
 class StrategyHelper {
 
-    public static boolean isInTheMoney(Option option) {
+    public static boolean isInTheMoney(Vanilla option) {
         if (option.type == OptionType.CALL)
             if (option.strike < option.underlying().last) return true
         if (option.type == OptionType.PUT)
@@ -14,7 +14,7 @@ class StrategyHelper {
         return false
     }
 
-    public static boolean isOutOfTheMoney(Option option) {
+    public static boolean isOutOfTheMoney(Vanilla option) {
         if (option.type == OptionType.CALL)
             if (option.strike > option.underlying().last) return true
         if (option.type == OptionType.PUT)
@@ -23,7 +23,7 @@ class StrategyHelper {
 
     }
 
-    public static boolean isAtTheMoney(Option option) {
+    public static boolean isAtTheMoney(Vanilla option) {
         if (option.type == OptionType.CALL)
             if (option.strike == option.underlying().last) return true
         if (option.type == OptionType.PUT)
@@ -31,13 +31,13 @@ class StrategyHelper {
         return false
     }
 
-    public static List<Option> getAtTheMoneyList(Stock stock, OptionType type) {
+    public static List<Vanilla> getAtTheMoneyList(Stock stock, OptionType type) {
 
-        List<Option> atmList = new ArrayList<Option>();
+        List<Vanilla> atmList = new ArrayList<Vanilla>();
 
         def lastValue = stock.getLast();
 
-        Map<Date, List<Option>> optionsMap;
+        Map<Date, List<Vanilla>> optionsMap;
 
         if (type == OptionType.CALL)
             optionsMap = stock.chain.calls;
@@ -46,14 +46,14 @@ class StrategyHelper {
 
         Set<Date> strings = optionsMap.keySet();
 
-        Option atTheMoneyOption = null
+        Vanilla atTheMoneyOption = null
         Double minDistance = Double.MAX_VALUE
 
         for (Iterator<Date> iterator = strings.iterator(); iterator.hasNext();) {
             Date next = iterator.next();
-            List<Option> options = optionsMap.get(next);
+            List<Vanilla> options = optionsMap.get(next);
             for (int i = 0; i < options.size(); i++) {
-                Option option = options.get(i);
+                Vanilla option = options.get(i);
                 def strike = option.strike();
                 if (Math.abs(strike - lastValue) < minDistance) {
                     atTheMoneyOption = option;

@@ -48,7 +48,7 @@
         </g:each>
         <li class="add">
             <g:link controller="transaction" action="create"
-                    params="['portfolio.id': portfolioInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'transaction.label', default: 'Transaction')])}</g:link>
+                    params="['portfolio.id': portfolioInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'transaction.label', default: 'Trade')])}</g:link>
         </li>
     </ul>
 

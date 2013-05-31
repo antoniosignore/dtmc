@@ -133,7 +133,7 @@ class IndicatorUtils {
         if (daily == null) {
             return 0;
         } else {
-//            daily.set(instrument.getDaily(date));
+//            daily.set(instrument.getDaily(transactionDate));
             switch (option) {
                 case FinConstants.HIGH:
                     MOM -= daily.getHigh();

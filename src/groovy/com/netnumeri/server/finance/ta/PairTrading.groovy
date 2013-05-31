@@ -293,8 +293,8 @@ from SP1500 index.
 
                     Console.WriteLine("Spread : {0}", PrevSpread);
 
-                    Transaction Transaction1;
-                    Transaction Transaction2;
+                    Trade Transaction1;
+                    Trade Transaction2;
 
                     for(Date TradingDate=Date2;TradingDate<=Date3;TradingDate=TradingDate.AddDays(1))
                         if (!TestSpreadSeries.IsEmpty(TradingDate)) {
@@ -306,8 +306,8 @@ from SP1500 index.
                             if (PrevSpread > UpperLevel && Spread < UpperLevel) {
                                 Console.WriteLine("Open upper on {0}", TradingDate.ToShortDateString());
 
-                                Transaction1 = new Transaction(PairStock1, ETransactionType.BUY, 100, EDataOption.CLOSE, TradingDate);
-                                Transaction2 = new Transaction(PairStock2, ETransactionType.SELLSHORT, Math.Round(Close1/Close2 * 100), EDataOption.CLOSE, TradingDate);
+                                Transaction1 = new Trade(PairStock1, ETransactionType.BUY, 100, EDataOption.CLOSE, TradingDate);
+                                Transaction2 = new Trade(PairStock2, ETransactionType.SELLSHORT, Math.Round(Close1/Close2 * 100), EDataOption.CLOSE, TradingDate);
 
                                 port.add(Transaction1);
                                 port.add(Transaction2);
@@ -323,8 +323,8 @@ from SP1500 index.
                             if (PrevSpread < LowerLevel && Spread > LowerLevel) {
                                 Console.WriteLine("Open lower on {0}", TradingDate.ToShortDateString());
 
-                                Transaction1 = new Transaction(PairStock1, ETransactionType.SELLSHORT, 100, EDataOption.CLOSE, TradingDate);
-                                Transaction2 = new Transaction(PairStock2, ETransactionType.BUY, Math.Round(Close1/Close2 * 100), EDataOption.CLOSE, TradingDate);
+                                Transaction1 = new Trade(PairStock1, ETransactionType.SELLSHORT, 100, EDataOption.CLOSE, TradingDate);
+                                Transaction2 = new Trade(PairStock2, ETransactionType.BUY, Math.Round(Close1/Close2 * 100), EDataOption.CLOSE, TradingDate);
 
                                 port.add(Transaction1);
                                 port.add(Transaction2);

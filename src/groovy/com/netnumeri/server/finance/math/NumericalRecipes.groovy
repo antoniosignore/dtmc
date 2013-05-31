@@ -176,10 +176,10 @@ public class NumericalRecipes {
         return ar;
     }
 
-//    public static Date toYYmmDD(String date, String format) {
+//    public static Date toYYmmDD(String transactionDate, String format) {
 //        try {
 //            SimpleDateFormat sdf = new SimpleDateFormat(format);
-//            Date da = sdf.parse(date);
+//            Date da = sdf.parse(transactionDate);
 //            SimpleDateFormat sdf2 = new SimpleDateFormat("MM/dd/yyyy");
 //            return new Date(sdf2.format(da));
 //        } catch (ParseException e) {

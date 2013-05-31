@@ -2,14 +2,14 @@ package com.netnumeri.server.finance;
 
 
 import com.netnumeri.server.finance.beans.FinConstants
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 
 public class VanillaTest extends GroovyTestCase {
 
 
     public void testVanilla() {
 
-        Option v = new Option();
+        Vanilla v = new Vanilla();
         v.setPremium(100);
         v.setInterestRate(0.5);
         v.setStrike(110);

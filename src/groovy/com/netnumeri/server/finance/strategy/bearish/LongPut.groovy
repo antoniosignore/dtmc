@@ -1,16 +1,14 @@
 package com.netnumeri.server.finance.strategy.bearish
 
+import com.netnumeri.server.entity.OptionType
 import com.netnumeri.server.finance.finpojo.Bet
 import com.netnumeri.server.finance.finpojo.Forecast
-import com.netnumeri.server.finance.strategy.OptionStrategy
-
+import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.finpojo.asset.Stock
-
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
-import com.netnumeri.server.finance.strategy.StrategyHelper
-import com.netnumeri.server.entity.OptionType
-import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 import com.netnumeri.server.finance.strategy.ForecastType
+import com.netnumeri.server.finance.strategy.OptionStrategy
+import com.netnumeri.server.finance.strategy.StrategyHelper
 
 class LongPut implements OptionStrategy {
 
@@ -18,11 +16,11 @@ class LongPut implements OptionStrategy {
     List<Bet> analyze(Forecast forecast, Stock instrument) {
         List<Bet> bets = new ArrayList<Bet>()
 
-        List<Option> options = StrategyHelper.getAtTheMoneyList(instrument, OptionType.PUT);
+        List<Vanilla> options = StrategyHelper.getAtTheMoneyList(instrument, OptionType.PUT);
 
         for (int i = 0; i < options.size(); i++) {
-            Option option = options.get(i);
-            Transaction transaction = convertOptionToTransaction(option);
+            Vanilla option = options.get(i);
+            Trade transaction = convertOptionToTransaction(option);
             Bet bet = new Bet();
             bet.name = "Long Put"
             bet.description = "Long Put"
@@ -32,7 +30,7 @@ class LongPut implements OptionStrategy {
         return bets
     }
 
-    Transaction convertOptionToTransaction(Option option) {
+    Trade convertOptionToTransaction(Vanilla option) {
 
     }
 

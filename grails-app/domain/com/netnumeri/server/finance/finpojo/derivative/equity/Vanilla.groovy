@@ -5,7 +5,7 @@ import com.netnumeri.server.entity.OptionType
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.derivative.Derivative
 
-class Option extends Derivative implements Serializable {
+class Vanilla extends Derivative implements Serializable {
 
     public Instrument underlying;
     double interestRate;
@@ -20,7 +20,7 @@ class Option extends Derivative implements Serializable {
     public Double bid;
     public Double ask;
 
-    public Option() {
+    public Vanilla() {
     }
 
     @Override
@@ -83,12 +83,12 @@ class Option extends Derivative implements Serializable {
         return vega;
     }
 
-    public Option(String id,
-                  String optionName,
-                  String stockTicket,
-                  OptionType type,
-                  Double strike,
-                  Date expiration) {
+    public Vanilla(String id,
+                   String optionName,
+                   String stockTicket,
+                   OptionType type,
+                   Double strike,
+                   Date expiration) {
 
         this.id = id;
         this.name = optionName;
@@ -103,7 +103,7 @@ class Option extends Derivative implements Serializable {
         return 0;
     }
 
-    public Option(String Name) {
+    public Vanilla(String Name) {
         name = Name;
     }
 

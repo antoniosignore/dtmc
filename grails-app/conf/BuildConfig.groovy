@@ -46,6 +46,8 @@ grails.project.dependency.resolution = {
 
         build "gov.nist.math:jama:1.0.2"
 
+        runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
+
     }
 
     plugins {

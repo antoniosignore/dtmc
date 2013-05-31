@@ -1,13 +1,12 @@
-package com.netnumeri.server.entity;
+package com.netnumeri.server.entity
 
-
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 import com.netnumeri.server.finance.utils.DateUtils
 
 import static org.hamcrest.CoreMatchers.not
 import static org.junit.Assert.assertThat
 
-public class OptionTest extends GroovyTestCase {
+public class VanillaTest extends GroovyTestCase {
 
     Date d = DateUtils.Date("3/27/2007");
 
@@ -26,7 +25,7 @@ public class OptionTest extends GroovyTestCase {
 
 
     public void representCompletelyAsString() throws Exception {
-        Option option = new Option("1", "name", "ticket", OptionType.PUT, 1.1, d);
+        Vanilla option = new Vanilla("1", "name", "ticket", OptionType.PUT, 1.1, d);
         assertThat(option.toString(), is("Option{, {name:name}, {underlying:ticket}, {type:PUT}, {strike:1.1}, {expiration:2/21/2007}}"));
     }
 
@@ -47,9 +46,9 @@ public class OptionTest extends GroovyTestCase {
 
 
     public void checkEquals() throws Exception {
-        Option option = new Option("1", "name", "ticket", OptionType.PUT, 1.1, d);
-        Option optionDiff = new Option("1", "name2", "ticket", OptionType.PUT, 1.1, d);
-        Option optionEqual = new Option("1", "name", "ticket", OptionType.PUT, 1.1, d);
+        Vanilla option = new Vanilla("1", "name", "ticket", OptionType.PUT, 1.1, d);
+        Vanilla optionDiff = new Vanilla("1", "name2", "ticket", OptionType.PUT, 1.1, d);
+        Vanilla optionEqual = new Vanilla("1", "name", "ticket", OptionType.PUT, 1.1, d);
 
         assertThat(option, is(optionEqual));
         assertThat(option, not(optionDiff));

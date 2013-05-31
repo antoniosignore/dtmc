@@ -1,3 +1,7 @@
+import com.netnumeri.server.finance.finpojo.Instrument
+import com.netnumeri.server.finance.finpojo.Portfolio
+import com.netnumeri.server.finance.utils.DateUtils
+import com.netnumeri.server.finance.utils.YahooUtils
 import org.example.SecRole
 import org.example.SecUser
 import org.example.SecUserSecRole
@@ -44,25 +48,24 @@ class BootStrap {
             SecUserSecRole.create basicUser, userRole
         }
 
-//        Portfolio portfolio = new Portfolio("SMA crossing", 10000)
-//        portfolio.save(failOnError: true, insert: true, flush: true)
-//
-//        println "portfolio.id = $portfolio.id"
-//
-//        Date da = DateUtils.Date("1/1/2007");
-//        Date a = DateUtils.today();
-//        Instrument stock = YahooUtils.downloadYahooData("AAPL", da, a);
-//        stock.save(failOnError: true, insert: true, flush: true)
-//
-//        println "stock.id = $stock.id"
-//
-//        tradeService.add(portfolio, stock);
+        Portfolio portfolio = new Portfolio("SMA crossing", 10000)
+        portfolio.save(failOnError: true, insert: true, flush: true)
 
-//        String password = springSecurityService.encodePassword('password')
-//
+        println "portfolio.id = $portfolio.id"
+
+        Date da = DateUtils.Date("1/1/2007");
+        Date a = DateUtils.today();
+        Instrument stock = YahooUtils.downloadYahooData("AAPL", da, a);
+        stock.save(failOnError: true, insert: true, flush: true)
+
+        println "stock.id = $stock.id"
+
+        tradeService.add(portfolio, stock);
+
+        //String password = springSecurityService.encodePassword('password')
+
 //        [jeff: 'Jeff Brown', graeme: 'Graeme Rocher', burt: 'Burt Beckwith', peter: 'Peter Ledbrook'].each { userName, realName ->
 //            def user = new Person(username: userName, realName: realName, password: password, enabled: true).save()
 //            PersonAuthority.create user, userRole, true
-//        }
     }
 }

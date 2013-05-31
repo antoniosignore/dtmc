@@ -4,17 +4,17 @@ import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.finpojo.Trade
 
 public class TransactionSeries implements Serializable {
 
-    protected GenericTimeSeries<Transaction> transactionArray = new GenericTimeSeries<Transaction>();
+    protected GenericTimeSeries<Trade> transactionArray = new GenericTimeSeries<Trade>();
 
     public TransactionSeries() {
     }
 
-    public void add(Transaction transaction) {
-        transactionArray.put(transaction.getDate(), transaction);
+    public void add(Trade transaction) {
+        transactionArray.put(transaction.getTransactionDate(), transaction);
     }
 
     public int getN() {
@@ -25,7 +25,7 @@ public class TransactionSeries implements Serializable {
         return transactionArray.size();
     }
 
-    public Transaction getTransaction(Date date) {
+    public Trade getTransaction(Date date) {
         return transactionArray.get(date);
     }
 
@@ -46,11 +46,11 @@ public class TransactionSeries implements Serializable {
     }
 
     public Date getDateTime(Date date) {
-        return getTransaction(date).getDate();
+        return getTransaction(date).getTransactionDate();
     }
 
     public Date getDate(Date date) {
-        return getTransaction(date).getDate();
+        return getTransaction(date).getTransactionDate();
     }
 
     public void clear() {
@@ -61,11 +61,11 @@ public class TransactionSeries implements Serializable {
         transactionArray.clear()
     }
 
-    public Transaction getFirstTransaction() {
+    public Trade getFirstTransaction() {
         return transactionArray.getFirstValue()
     }
 
-    public Transaction getLastTransaction() {
+    public Trade getLastTransaction() {
         return transactionArray.getLastValue()
     }
 
@@ -81,55 +81,55 @@ public class TransactionSeries implements Serializable {
     // Return next sell transactions for the same Instrument of buy transactions
     // Return previous buy transactions for the same Instrument of sell transactions
     // Return null if there is no pair transactions
-    public Transaction getPair(Date date, TradeEnum action) {
+    public Trade getPair(Date date, TradeEnum action) {
 
         if (action == TradeEnum.BUY) {
-            Transaction transaction = transactionArray.getNextValue(date)
+            Trade transaction = transactionArray.getNextValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.SELL)
                 return transaction
             else
-                return getPair(transaction.date, action)
+                return getPair(transaction.transactionDate, action)
         }
 
         if (action == TradeEnum.SELL) {
-            Transaction transaction = transactionArray.getPrevValue(date)
+            Trade transaction = transactionArray.getPrevValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.BUY)
                 return transaction
             else
-                return getPair(transaction.date, action)
+                return getPair(transaction.transactionDate, action)
         }
 
         if (action == TradeEnum.SELLSHORT) {
-            Transaction transaction = transactionArray.getNextValue(date)
+            Trade transaction = transactionArray.getNextValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.BUYSHORT)
                 return transaction
             else
-                return getPair(transaction.date, action)
+                return getPair(transaction.transactionDate, action)
         }
 
         if (action == TradeEnum.SELLSHORT) {
-            Transaction transaction = transactionArray.getPrevValue(date)
+            Trade transaction = transactionArray.getPrevValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.BUYSHORT)
                 return transaction
             else
-                return getPair(transaction.date, action)
+                return getPair(transaction.transactionDate, action)
         }
     }
 
     public Object clone() {
         TransactionSeries ts = new TransactionSeries();
         transactionArray.iterator();
-        for (Iterator<Transaction> iterator = transactionArray.iterator(); iterator.hasNext();) {
-            Transaction transaction = iterator.next();
-            ts.transactionArray.put(transaction.getDate(), transaction);
+        for (Iterator<Trade> iterator = transactionArray.iterator(); iterator.hasNext();) {
+            Trade transaction = iterator.next();
+            ts.transactionArray.put(transaction.getTransactionDate(), transaction);
         }
         return ts;
     }

@@ -3,7 +3,7 @@ package com.netnumeri.server.utils;
 
 import com.netnumeri.server.entity.OptionType
 import com.netnumeri.server.finance.data.MaximumPainBean
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 
 public class MaximumPainCalculator {
 
@@ -12,14 +12,14 @@ public class MaximumPainCalculator {
         OptionsDocuments optionsDocuments = YahooOptions.scrape(ticker, YahooOptions.getOptionsDocuments(ticker, date));
         optionsDocuments.setExpirationDate(date)
 
-        List<Option> callsOptions = YahooOptions.getChain(optionsDocuments, OptionType.CALL);
-        List<Option> putsOptions = YahooOptions.getChain(optionsDocuments, OptionType.PUT);
+        List<Vanilla> callsOptions = YahooOptions.getChain(optionsDocuments, OptionType.CALL);
+        List<Vanilla> putsOptions = YahooOptions.getChain(optionsDocuments, OptionType.PUT);
 
         double lastPrice = YahooOptions.getLastPrice(ticker);
 
         List<MaximumPainBean> callBeans = new ArrayList<MaximumPainBean>();
         for (int i = 0; i < callsOptions.size(); i++) {
-            Option option = callsOptions.get(i);
+            Vanilla option = callsOptions.get(i);
             MaximumPainBean bean = new MaximumPainBean();
             double cumul = computeCumulativeValue(option.strike, callsOptions);
             bean.setStrike(option.strike);
@@ -35,7 +35,7 @@ public class MaximumPainCalculator {
 
         List<MaximumPainBean> putsBeans = new ArrayList<MaximumPainBean>();
         for (int i = 0; i < putsOptions.size(); i++) {
-            Option option = putsOptions.get(i);
+            Vanilla option = putsOptions.get(i);
             MaximumPainBean bean = new MaximumPainBean();
             double cumul = computeCumulativeValue(option.strike, putsOptions);
             bean.setStrike(option.strike);
@@ -63,11 +63,11 @@ public class MaximumPainCalculator {
         return maxPainStrike;
     }
 
-    private static double computeCumulativeValue(double underSpotPrice, List<Option> options) {
+    private static double computeCumulativeValue(double underSpotPrice, List<Vanilla> options) {
         double cumulativeValue = 0;
         if (options != null)
             for (int i = 0; i < options.size(); i++) {
-                Option option = options.get(i);
+                Vanilla option = options.get(i);
                 int openInt = option.openInterest;
                 if (option.type == (OptionType.CALL)) {
                     if (underSpotPrice > option.strike()) {

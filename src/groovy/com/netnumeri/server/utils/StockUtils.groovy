@@ -65,14 +65,14 @@ class StockUtils {
         FileUtils.writeStringToFile(new File(name + ".txt"), sb.toString())
     }
 
-//    public static void printTransactionsOnFile(GenericTimeSeries<Transaction> transactions, String dir, String filename) {
+//    public static void printTransactionsOnFile(GenericTimeSeries<Trade> transactions, String dir, String filename) {
 //        StringBuffer sb = new StringBuffer("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<data>");
 //        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd")
 //        Set<Date> set = transactions.map().keySet()
 //        for (Iterator it = set.iterator(); it.hasNext();) {
-//            Date date = (Date) it.next();
-//            Transaction transaction = transactions.treeMap.get(date)
-//            sb.append("<event start=\"" + sdf.format(transaction.date) + "\" title=\"" + transaction.action.toString() + "\"/>\n");
+//            Date transactionDate = (Date) it.next();
+//            Trade transaction = transactions.treeMap.get(transactionDate)
+//            sb.append("<event start=\"" + sdf.format(transaction.transactionDate) + "\" title=\"" + transaction.action.toString() + "\"/>\n");
 //        }
 //        sb.append("</data>")
 //        FileUtils.writeStringToFile(new File(dir + filename), sb.toString())

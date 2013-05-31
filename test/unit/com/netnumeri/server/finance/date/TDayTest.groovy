@@ -16,7 +16,7 @@ public class TDayTest extends GroovyTestCase {
 
         Date date = DateUtils.Date("1/7/2008");
         Date lowerBoundTDay = DateUtils.Date("1/2/2008");
-        System.out.println("date = " + date);
+        System.out.println("transactionDate = " + date);
         System.out.println("lowerBoundDate = " + lowerBoundTDay);
 
         assertTrue(DateUtils.isGreaterEqual(date, lowerBoundTDay));

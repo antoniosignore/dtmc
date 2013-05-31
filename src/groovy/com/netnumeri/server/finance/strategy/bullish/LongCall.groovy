@@ -3,9 +3,9 @@ package com.netnumeri.server.finance.strategy.bullish
 import com.netnumeri.server.entity.OptionType
 import com.netnumeri.server.finance.finpojo.Bet
 import com.netnumeri.server.finance.finpojo.Forecast
-import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.finpojo.asset.Stock
-import com.netnumeri.server.finance.finpojo.derivative.equity.Option
+import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 import com.netnumeri.server.finance.strategy.ForecastType
 import com.netnumeri.server.finance.strategy.OptionStrategy
 import com.netnumeri.server.finance.strategy.StrategyHelper
@@ -16,11 +16,11 @@ class LongCall implements OptionStrategy {
     List<Bet> analyze(Forecast forecast, Stock instrument) {
         List<Bet> bets = new ArrayList<Bet>()
 
-        List<Option> options = StrategyHelper.getAtTheMoneyList(instrument, OptionType.CALL);
+        List<Vanilla> options = StrategyHelper.getAtTheMoneyList(instrument, OptionType.CALL);
 
         for (int i = 0; i < options.size(); i++) {
-            Option option = options.get(i);
-            Transaction transaction = convertOptionToTransaction(option, instrument);
+            Vanilla option = options.get(i);
+            Trade transaction = convertOptionToTransaction(option, instrument);
             Bet bet = new Bet();
             bet.name = "LongCall"
             bet.description = "Long Call"
@@ -30,8 +30,8 @@ class LongCall implements OptionStrategy {
         return bets
     }
 
-    Transaction convertOptionToTransaction(Option option, Stock instrument) {
-        return new Transaction(option, TradeEnum.BUY, 100, new Date());
+    Trade convertOptionToTransaction(Vanilla option, Stock instrument) {
+        return new Trade(option, TradeEnum.BUY, 100, new Date());
     }
 
     @Override
