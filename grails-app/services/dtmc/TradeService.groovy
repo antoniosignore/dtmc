@@ -76,7 +76,7 @@ class TradeService {
 
         portfolio.items.add(entry);
 
-        //  portfolio.save(failOnError: true, insert: true, flush: true);
+        //portfolio.save(failOnError: true, insert: true, flush: true);
     }
 
 
@@ -153,7 +153,7 @@ class TradeService {
             }
         }
 
-        portfolio.save(failOnError: true, insert: true, flush: true);
+        // portfolio.save(failOnError: true, insert: true, flush: true);
 
     }
 

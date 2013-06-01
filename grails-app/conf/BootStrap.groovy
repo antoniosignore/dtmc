@@ -62,6 +62,8 @@ class BootStrap {
 
         tradeService.buy(portfolio, stock, 100);
 
+        portfolio.save(failOnError: true, insert: true, flush: true);
+
         //String password = springSecurityService.encodePassword('password')
 
 //        [jeff: 'Jeff Brown', graeme: 'Graeme Rocher', burt: 'Burt Beckwith', peter: 'Peter Ledbrook'].each { userName, realName ->

@@ -11,8 +11,11 @@ import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.ta.TradeInfo
 import com.netnumeri.server.finance.ta.TradeListEntry
 import com.netnumeri.server.finance.utils.DateUtils
+import dtmc.TradeService
 
 public class Backtest implements Serializable {
+
+    TradeService tradeService = new TradeService();
 
     double initialWealth;          // initial wealth
     double accountWealth;          // wealth on bank account
@@ -151,7 +154,7 @@ public class Backtest implements Serializable {
 
     public void setBenchmarkPortfolio(Asset benchmarkAsset) {
         benchmarkPortfolio = new Portfolio("Benchmark");
-        PortfolioService.add(benchmarkPortfolio, benchmarkAsset);
+        tradeService.add(benchmarkPortfolio, benchmarkAsset);
     }
 
     public double test() {
@@ -307,12 +310,12 @@ public class Backtest implements Serializable {
                     }
                 }
 
-                PortfolioService.add(portfolio, transaction);
+                tradeService.add(portfolio, transaction);
                 cost += transaction.getCost();
             }
 
             double mark2market = 0;
-            mark2market = PortfolioService.getValue(portfolio, date);
+            mark2market = tradeService.getValue(portfolio, date);
             CurrentWealth = currentAccount + mark2market;
             wealthSeries.add(date, CurrentWealth);
             PnL = CurrentWealth - previousWealth;

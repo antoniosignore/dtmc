@@ -10,6 +10,7 @@ import com.netnumeri.server.finance.ta.TradeListEntry
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
+import dtmc.TradeService
 import org.apache.commons.io.FileUtils
 import org.junit.Test
 
@@ -24,6 +25,7 @@ public class SSAStrategyTest {
     @Test
     public void testStrategy() throws IOException, ParseException {
 
+        TradeService tradeService = new TradeService();
         Portfolio portfolio = new Portfolio("SSA strategy", 10000);
         Date da = DateUtils.Date("1/1/2007");
         Date a = DateUtils.today();
@@ -34,7 +36,7 @@ public class SSAStrategyTest {
 
         FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
 
-        PortfolioService.add(portfolio, stock);
+        tradeService.add(portfolio, stock);
 
         Strategy strategy = new SSAStrategy("test", portfolio, da, a, 10000);
         strategy.run();
