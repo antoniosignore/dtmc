@@ -93,36 +93,30 @@ class IndicatorUtils {
         double MOM = 0;
         int Count = 0;
         Daily daily = instrument.getDaily(date);
-        if (daily.getState() == FinConstants.NOTAVAILABLE) {
+        if (daily.state == FinConstants.NOTAVAILABLE) {
             return 0;
         } else {
             switch (option) {
                 case FinConstants.HIGH:
-                    MOM = daily.getHigh();
+                    MOM = daily.high;
                     break;
                 case FinConstants.LOW:
-                    MOM = daily.getLow();
+                    MOM = daily.low;
                     break;
                 case FinConstants.CLOSE:
-                    MOM = daily.getCloseprice();
+                    MOM = daily.closeprice;
                     break;
                 case FinConstants.PRICE:
-                    MOM = daily.getPrice();
-                    break;
                 case FinConstants.MEDIANPRICE:
-                    MOM = daily.getPrice(FinConstants.MEDIANPRICE);
-                    break;
                 case FinConstants.WEIGHTEDPRICE:
-                    MOM = daily.getPrice(FinConstants.WEIGHTEDPRICE);
-                    break;
                 case FinConstants.AVERAGEPRICE:
-                    MOM = daily.getPrice(FinConstants.AVERAGEPRICE);
+                    MOM = daily.price(option);
                     break;
                 case FinConstants.VOLUME:
-                    MOM = daily.getVolume();
+                    MOM = daily.volume;
                     break;
                 case RETURN:
-                    MOM = instrument.getReturn(date);
+                    MOM = instrument.re(date);
                     break;
             }
         }

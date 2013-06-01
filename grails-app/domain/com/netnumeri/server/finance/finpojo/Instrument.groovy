@@ -247,22 +247,7 @@ class Instrument extends Persistable implements Serializable {
      */
     public double getPrice(Date date, FinConstants Option) {
         if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
-        return get(date, Option);
-    }
-
-    public double getLow(Date date) {
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
-        return dailyarray.get(date).low;
-    }
-
-    public double getHigh(Date date) {
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
-        return dailyarray.get(date).high;
-    }
-
-    public double getOpen(Date date) {
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
-        return dailyarray.get(date).openprice;
+        return value(date, Option);
     }
 
     public double getClose(Date date) {
@@ -284,26 +269,24 @@ class Instrument extends Persistable implements Serializable {
         return dailyarray.get(date).volume;
     }
 
-    public double get(Date index, FinConstants option) {
+    public double value(Date index, FinConstants option) {
         switch (option) {
             case FinConstants.HIGH:
-                return getHigh(index);
+                return high(index);
             case FinConstants.LOW:
-                return getLow(index);
+                return low(index);
             case FinConstants.OPEN:
-                return getOpen(index);
+                return open(index);
             case FinConstants.CLOSE:
-                return getClose(index);
+                return close(index);
             case FinConstants.VOLUME:
-                return getVolume(index);
+                return volume(index);
             case FinConstants.PRICE:
-                return getPrice(index);
+                return price(index);
             case FinConstants.MEDIANPRICE:
-                return getPrice(index, option);
-            case FinConstants.TYPICALPRICE:
-                return getPrice(index, option);
             case FinConstants.WEIGHTEDPRICE:
-                return getPrice(index, option);
+            case FinConstants.TYPICALPRICE:
+                return dailyarray.get(index).price(option);
             case FinConstants.RETURN:
                 return getReturn(index);
             case FinConstants.LOGRETURN:
@@ -714,7 +697,7 @@ class Instrument extends Persistable implements Serializable {
     public boolean dataAvailable(Date date) {
         Daily daily = dailyarray.get(date);
         if (daily == null) return false;
-        return daily.getState() != FinConstants.NOTAVAILABLE;
+        return daily.state != FinConstants.NOTAVAILABLE;
     }
 
 
@@ -742,19 +725,15 @@ class Instrument extends Persistable implements Serializable {
             return daily(nextDate);
     }
 
-    public double freturn() {
-        return fReturn(null);
-    }
-
-    public double fReturn(Date date) {
+    public double calculateReturn(Date date) {
         if (date == firstDate()) return 1;
         if (date == null) date = lastDate();
         Daily daily = daily(date);
         if (!daily.valid()) return 1;
-        double Price = daily.getPrice();
+        double Price = daily.price();
         Daily prevDaily = this.prevDaily(date);
         if (prevDaily != null)
-            return Price / prevDaily.price;
+            return Price / prevDaily.price();
         else
             return 1;
     }
@@ -764,7 +743,11 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public double logReturn(Date date) {
-        return Math.log(fReturn(date));
+        return Math.log(calculateReturn(date));
+    }
+
+    public double re(Date date) {
+        return calculateReturn(date);
     }
 
     public double price(Date date) {
@@ -772,26 +755,24 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public double price(Date date, FinConstants Option) {
-        return get(date, Option)
+        return value(date, Option)
     }
 
     public double low(Date date) {
-//        return low(index(transactionDate));
-        return dailyarray.get(date).getLow();
+        return dailyarray.get(date).low;
     }
 
     public double high(Date date) {
-//        return high(index(transactionDate));
-        return dailyarray.get(date).getHigh();
+        return dailyarray.get(date).high;
     }
 
     public double open(Date date) {
 //        return open(index(transactionDate));
-        return dailyarray.get(date).getOpenprice();
+        return dailyarray.get(date).openprice;
     }
 
     public double close(Date date) {
-        return dailyarray.get(date).getCloseprice();
+        return dailyarray.get(date).closeprice;
     }
 
 //    public double fReturn(Date transactionDate) {
@@ -799,11 +780,11 @@ class Instrument extends Persistable implements Serializable {
 //    }
 
     public int volume(Date date) {
-        return dailyarray.get(date).getVolume();
+        return dailyarray.get(date).volume;
     }
 
     public int openInterest(Date date) {
-        return dailyarray.get(date).getOpenInterest();
+        return dailyarray.get(date).openInterest;
     }
 
 //    public double get(Date transactionDate, int Option) {
@@ -824,9 +805,9 @@ class Instrument extends Persistable implements Serializable {
         date = DateUtils.addDays(date, 1)) {
             Daily daily = daily(date);
             if ((daily != null) && daily.valid()) {
-                value = daily.get(What);
+                value = daily.price(What);
                 if (value != 0) {
-                    series.add(daily.getDailydate(), value);
+                    series.add(daily.dailydate, value);
                 }
             }
         }
@@ -914,7 +895,7 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public void add(Daily daily) {
-        dailyarray.put(daily.getDailydate(), daily);
+        dailyarray.put(daily.dailydate, daily);
     }
 
     public void add(Instrument instrument,

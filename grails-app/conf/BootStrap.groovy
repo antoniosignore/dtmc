@@ -60,7 +60,7 @@ class BootStrap {
 
         println "stock.id = $stock.id"
 
-        tradeService.add(portfolio, stock);
+        tradeService.buy(portfolio, stock, 100);
 
         //String password = springSecurityService.encodePassword('password')
 

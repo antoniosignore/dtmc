@@ -50,13 +50,13 @@ public class SMACrossover extends Strategy {
         if (signal == TradeEnum.SELL) {
             if (foundABUY) {
                 System.out.println("SELL on transactionDate: " + date.toGMTString());
-                Trade transaction = new Trade(asset, TradeEnum.SELL, amount, asset.getClose(date), date);
+                Trade transaction = new Trade(asset, TradeEnum.SELL, amount, asset.close(date), date);
                 add(transaction);
                 foundABUY = false;
             }
         } else if (signal == TradeEnum.BUY) {
             System.out.println("BUY on transactionDate: " + date.toGMTString());
-            Trade transaction = new Trade(asset, TradeEnum.BUY, amount, asset.getClose(date), date);
+            Trade transaction = new Trade(asset, TradeEnum.BUY, amount, asset.close(date), date);
             add(transaction);
             foundABUY = true;
         }

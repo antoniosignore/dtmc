@@ -7,20 +7,20 @@ class Daily implements Serializable {
 
     private Instrument instrument;
 
-    private int arrayindex;
-    public Date dailydate = null;
-    private int volume = 0;
-    private double high = 0;
-    private double low = 0;
-    private double openprice = 0;
-    private double closeprice = 0;
-    private FinConstants state = FinConstants.NOTAVAILABLE;
+    int arrayindex;
+    Date dailydate = null;
+    int volume = 0;
+    double high = 0;
+    double low = 0;
+    double openprice = 0;
+    double closeprice = 0;
+    FinConstants state = FinConstants.NOTAVAILABLE;
 
-    private double bid = 0;
-    private double ask = 0;
-    private int bidSize = 0;
-    private int askSize = 0;
-    private int openInterest;
+    double bid = 0;
+    double ask = 0;
+    int bidSize = 0;
+    int askSize = 0;
+    int openInterest;
 
     public Daily() {
         this.state = FinConstants.VALID;
@@ -70,70 +70,6 @@ class Daily implements Serializable {
         this.state = state;
     }
 
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-    public double getHigh() {
-        return high;
-    }
-
-    public void setHigh(double high) {
-        this.high = high;
-    }
-
-    public double getLow() {
-        return low;
-    }
-
-    public void setLow(double low) {
-        this.low = low;
-    }
-
-    public double getOpenprice() {
-        return openprice;
-    }
-
-    public void setOpenprice(double openprice) {
-        this.openprice = openprice;
-    }
-
-    public double getCloseprice() {
-        return closeprice;
-    }
-
-    public void setCloseprice(double closeprice) {
-        this.closeprice = closeprice;
-    }
-
-    public int getOpenInterest() {
-        return openInterest;
-    }
-
-    public void setOpenInterest(int openInterest) {
-        this.openInterest = openInterest;
-    }
-
-    public FinConstants getState() {
-        return state;
-    }
-
-    public void setState(FinConstants state) {
-        this.state = state;
-    }
-
-    public getDailydate = {->
-        return dailydate;
-    }
-
-    public void setDailydate(Date date) {
-        this.dailydate = date;
-    }
-
     public boolean valid() {
         if (state == FinConstants.VALID)
             return true;
@@ -141,52 +77,22 @@ class Daily implements Serializable {
             return false;
     }
 
-    public int getArrayindex() {
-        return arrayindex;
+    public double price() {
+        return price(FinConstants.TYPICALPRICE);
     }
 
-    public void setArrayindex(int arrayindex) {
-        this.arrayindex = arrayindex;
-    }
-
-    public double getBid() {
-        return bid;
-    }
-
-    public void setBid(double bid) {
-        this.bid = bid;
-    }
-
-    public double getAsk() {
-        return ask;
-    }
-
-    public void setAsk(double ask) {
-        this.ask = ask;
-    }
-
-    public int getBidSize() {
-        return bidSize;
-    }
-
-    public void setBidSize(int bidSize) {
-        this.bidSize = bidSize;
-    }
-
-    public int getAskSize() {
-        return askSize;
-    }
-
-    public void setAskSize(int askSize) {
-        this.askSize = askSize;
-    }
-
-    public double getPrice() {
-        return getPrice(FinConstants.TYPICALPRICE);
-    }
-
-    public double getPrice(FinConstants Option) {
+    public double price(FinConstants Option) {
         switch (Option) {
+            case FinConstants.HIGH:
+                return high;
+            case FinConstants.LOW:
+                return low;
+            case FinConstants.OPEN:
+                return openprice;
+            case FinConstants.CLOSE:
+                return closeprice;
+            case FinConstants.VOLUME:
+                return volume;
             case FinConstants.MEDIANPRICE:
                 return (high + low) / 2.0;
             case FinConstants.TYPICALPRICE:
@@ -201,52 +107,18 @@ class Daily implements Serializable {
         return 0;
     }
 
-    /**
-     * Return value of a data field HIGH LOW OPEN CLOSE VOLUME
-     */
-    public double get(FinConstants option) {
-        switch (option) {
-            case FinConstants.HIGH:
-                return high;
-            case FinConstants.LOW:
-                return low;
-            case FinConstants.OPEN:
-                return openprice;
-            case FinConstants.CLOSE:
-                return closeprice;
-            case FinConstants.VOLUME:
-                return volume;
-            case FinConstants.AVERAGEPRICE:
-                return (high + low + closeprice + openprice) / 4D;
-            case FinConstants.LOGAVERAGEPRICE:
-                return Math.log((high + low + closeprice + openprice) / 4D);
-            default:
-                throw new IllegalStateException("Get: Invalid state: " + option);
-        }
-
-    }
-
-    /* Set daily data
-     *
-     */
-
     public void set(Daily daily) {
         if (daily == null) {
             throw new IllegalArgumentException("Daily: set() " + "Argument is null");
         }
-        arrayindex = daily.getArrayindex();
+        arrayindex = daily.arrayindex;
         dailydate = daily.dailydate;
-        volume = daily.getVolume();
-        high = daily.getHigh();
-        low = daily.getLow();
-        openprice = daily.getOpenprice();
-        closeprice = daily.getCloseprice();
-        state = daily.getState();
-    }
-
-
-    public void setKey(Object key) {
-        key = dailydate;
+        volume = daily.volume;
+        high = daily.high;
+        low = daily.low;
+        openprice = daily.openprice;
+        closeprice = daily.closeprice;
+        state = daily.state;
     }
 
     public Object clone() {

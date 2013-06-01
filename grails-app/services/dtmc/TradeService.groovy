@@ -76,7 +76,7 @@ class TradeService {
 
         portfolio.items.add(entry);
 
-        portfolio.save(failOnError: true, insert: true, flush: true);
+        //  portfolio.save(failOnError: true, insert: true, flush: true);
     }
 
 
@@ -152,6 +152,9 @@ class TradeService {
                 entry.setAmount(amount);
             }
         }
+
+        portfolio.save(failOnError: true, insert: true, flush: true);
+
     }
 
     // add series of trade transactions
@@ -410,28 +413,28 @@ class TradeService {
         }
     }
 
-    // Check boundary conditions. Return true if feasible
-    public boolean checkBounds(Portfolio portfolio) {
-        double lowsum = 0;
-        double upsum = 0;
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            lowsum += lowerBound(portfolio, i);
-            upsum += upperBound(portfolio, i);
-            if (lowerBound(portfolio, i) >= upperBound(portfolio, i)) {
-                System.out.println("CheckBounds LowerBound >= UpperBound for parameter " + i);
-                return false;
-            }
-        }
-        if (lowsum >= 1) {
-            System.out.println("CheckBounds LowerBoundSum >= 1");
-            return false;
-        }
-        if (upsum <= 1) {
-            System.out.println("CheckBounds UpperBoundSum <= 1");
-            return false;
-        }
-        return true;
-    }
+//    // Check boundary conditions. Return true if feasible
+//    public boolean checkBounds(Portfolio portfolio) {
+//        double lowsum = 0;
+//        double upsum = 0;
+//        for (int i = 0; i < portfolio.items.size(); i++) {
+//            lowsum += lowerBound(portfolio, i);
+//            upsum += upperBound(portfolio, i);
+//            if (lowerBound(portfolio, i) >= upperBound(portfolio, i)) {
+//                System.out.println("CheckBounds LowerBound >= UpperBound for parameter " + i);
+//                return false;
+//            }
+//        }
+//        if (lowsum >= 1) {
+//            System.out.println("CheckBounds LowerBoundSum >= 1");
+//            return false;
+//        }
+//        if (upsum <= 1) {
+//            System.out.println("CheckBounds UpperBoundSum <= 1");
+//            return false;
+//        }
+//        return true;
+//    }
 
     // Calculate models premium of portfolio
 
@@ -447,7 +450,6 @@ class TradeService {
     // If we consider a portfolio as one
     // financial instrument, its premium is
     // equal to its value
-
     public double getPrice(Portfolio portfolio, int Entry) {
         return getValue(portfolio, Entry);
     }
@@ -465,7 +467,6 @@ class TradeService {
     }
 
     // Return marked to market portfolio value
-
     public double getValue(Portfolio portfolio, int index) {
         Instrument instrument;
         Daily daily;
@@ -474,7 +475,7 @@ class TradeService {
         for (int i = 0; i < portfolio.items.size(); i++) {
             amount = getItemAmount(portfolio, i);
             instrument = getInstrument(portfolio, i);
-            daily = instrument.getDaily(index);
+            daily = instrument.getDaily();
             if (!daily.valid()) {
                 daily = instrument.getPrevDaily(index);
             }
@@ -510,7 +511,7 @@ class TradeService {
                     daily = instrument.getPrevDaily(date);
                 }
                 if (daily != null) {
-                    value += daily.getCloseprice() * amount;
+                    value += daily.closeprice * amount;
                 } else {
                     System.out.println("getValue. Out of data range");
                     return 0;

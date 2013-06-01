@@ -3,6 +3,7 @@ package com.netnumeri.server.finance.strategy
 import com.netnumeri.server.finance.beans.NRError
 import com.netnumeri.server.finance.beans.NumericalRecipesSeries
 import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
@@ -291,7 +292,7 @@ public class SSAStrategy extends Strategy {
                         int signal = getLastValidSignal(derivative1, derivative2);
 
                         if (signal == TradeEnum.BUY) {
-                            Trade transaction = new Trade(instrument, TradeEnum.BUY, amount, instrument.getClose(date), date);
+                            Trade transaction = new Trade(instrument, TradeEnum.BUY, amount, instrument.close(date), date);
                             add(transaction);
                             foundABUY = true;
                         }

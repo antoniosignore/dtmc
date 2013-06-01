@@ -244,7 +244,7 @@ public class Backtest implements Serializable {
                     transactionPair = transactionSerie.getPair(date, transaction.getTradeAction());
                     if (transactionPair == null) {
                         Date operationDate = instrument.getLastDate();
-                        double operationLastPrice = instrument.getClose(operationDate);
+                        double operationLastPrice = instrument.close(operationDate);
                         double operationEntryPrice = transaction.getPrice();
                         int operationAmount = transaction.getAmount();
                         openPositionLong += ((operationLastPrice - operationEntryPrice) * operationAmount) - transaction.getCost();
@@ -278,7 +278,7 @@ public class Backtest implements Serializable {
                     transactionPair = transactionSerie.getPair(date, transaction.getTradeAction());
                     if (transactionPair == null) {
                         Date operationDate = instrument.getLastDate();
-                        double operationLastPrice = instrument.getClose(operationDate);
+                        double operationLastPrice = instrument.close(operationDate);
                         double entryPrice = transaction.getPrice();
                         int operationAmount = transaction.getAmount();
                         openPositionShort += ((operationLastPrice - entryPrice) * operationAmount) - transaction.getCost();
@@ -342,7 +342,7 @@ public class Backtest implements Serializable {
         wealth = CurrentWealth;
         System.out.println("Wealth      : " + CurrentWealth);
         System.out.println("Account     : " + currentAccount);
-        System.out.println("Portfolio   : " + PortfolioService.getPrice(portfolio, lastDate));
+        System.out.println("Portfolio   : " + TradeService.getPrice(portfolio, lastDate));
         println "numberWinTradesTotal = $numberWinTradesTotal"
         println "numberLossTradesTotal = $numberLossTradesTotal"
 

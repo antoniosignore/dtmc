@@ -1,12 +1,13 @@
 package com.netnumeri.server.finance.strategy
 
 import com.netnumeri.server.finance.beans.FinConstants
-import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.utils.DateUtils
+import dtmc.TradeService
 
 public abstract class Strategy {
 
@@ -15,6 +16,7 @@ public abstract class Strategy {
     protected Portfolio strategyPortfolio;
     double wealth = 0;
     public TransactionSeries transactionSeries = null;
+    TradeService tradeService = new TradeService()
 
     def final Date firstDate;
     def final Date lastDate;
@@ -36,10 +38,10 @@ public abstract class Strategy {
 
     public void add(Trade transaction) {
         transactionSeries.add(transaction);
-        PortfolioService.add(strategyPortfolio, transaction);
+        tradeService.add(strategyPortfolio, transaction);
     }
 
-    public void add(Instrument instrument, FinConstants action, int amount, double price, Date date) {
+    public void add(Instrument instrument, TradeEnum action, int amount, double price, Date date) {
         add(new Trade(instrument, action, amount, price, date));
     }
 
@@ -47,23 +49,15 @@ public abstract class Strategy {
         tester.test(firsDate, lasDate, FinConstants.kInvestOnDate);
     }
 
-    public TimeSeries getProfitLossSeries() {
-        return tester.getPnLSeries();
-    }
-
-    public TimeSeries getWealthSeries() {
-        return tester.getWealthSeries();
-    }
-
     public void run() {
 
-        Date day = PortfolioService.getFirstDay(portfolio)
-        Date lastDay = PortfolioService.getLastDay(portfolio)
+        Date day = tradeService.getFirstDay(portfolio)
+        Date lastDay = tradeService.getLastDay(portfolio)
 
         while (DateUtils.isLessEqual(day, lastDay)) {
 
             for (int i = 0; i < portfolio.items.size(); i++) {
-                Instrument asset = PortfolioService.getInstrument(portfolio, i);
+                Instrument asset = tradeService.getInstrument(portfolio, i);
                 if (asset.isDataAvailable(day)) {
                     evaluateInstrumentOnDate(day, asset);
                 }
