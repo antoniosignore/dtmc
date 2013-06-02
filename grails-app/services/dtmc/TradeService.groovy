@@ -30,7 +30,7 @@ class TradeService {
         }
     }
 
-    public Date getFirstDay(Portfolio portfolio) {
+    public Date firstDay(Portfolio portfolio) {
         if (portfolio.firstDailyDate != null) {
             return portfolio.firstDailyDate;
         }
@@ -47,7 +47,7 @@ class TradeService {
         return portfolio.firstDailyDate;
     }
 
-    public Date getLastDay(Portfolio portfolio) {
+    public Date latestDay(Portfolio portfolio) {
         Instrument instrument;
         if (portfolio.lastDailyDate != null) {
             return portfolio.lastDailyDate;
@@ -64,17 +64,17 @@ class TradeService {
         return portfolio.lastDailyDate;
     }
 
-    public void add(Portfolio portfolio, PortfolioItem entry) {
+    public void add(Portfolio portfolio, PortfolioItem item) {
 
-        if (getEntry(portfolio, entry.instrument) != null) {
-            System.out.println("addEntry. Instrument: " + entry.instrument.name + " already exists in portfolio " + portfolio.getName());
+        if (entry(portfolio, item.instrument) != null) {
+            System.out.println("addEntry. Instrument: " + item.instrument.name + " already exists in portfolio " + portfolio.getName());
             return;
         }
 
-        if (entry.instrument instanceof Asset)
-            portfolio.setRangeBounds(entry.instrument.lowerRangeDate, entry.instrument.getUpperRangeDate());
+        if (item.instrument instanceof Asset)
+            portfolio.setRangeBounds(item.instrument.lowerRangeDate, item.instrument.getUpperRangeDate());
 
-        portfolio.items.add(entry);
+        portfolio.items.add(item);
 
         //portfolio.save(failOnError: true, insert: true, flush: true);
     }
@@ -96,7 +96,7 @@ class TradeService {
         if (transaction == null) throw new IllegalArgumentException("transactions cannot be null");
 
         Instrument instrument = transaction.instrument;
-        PortfolioItem entry = getEntry(portfolio, instrument);
+        PortfolioItem entry = entry(portfolio, instrument);
 
         if (entry == null) {
             entry = new PortfolioItem(instrument, portfolio);
@@ -152,9 +152,7 @@ class TradeService {
                 entry.setAmount(amount);
             }
         }
-
         // portfolio.save(failOnError: true, insert: true, flush: true);
-
     }
 
     // add series of trade transactions
@@ -168,7 +166,7 @@ class TradeService {
 
     // Return pointer to portfolio entry holding instrument
     // Return null if there is no such entry in portfolio
-    public PortfolioItem getEntry(Portfolio portfolio, Instrument instrument) {
+    public PortfolioItem entry(Portfolio portfolio, Instrument instrument) {
         if (instrument == null) throw new IllegalArgumentException("instrument cannot be null");
         PortfolioItem entry;
         if (portfolio.items != null)
@@ -181,7 +179,7 @@ class TradeService {
         return null;
     }
 
-    public PortfolioItem getEntry(Portfolio portfolio, String Name) {
+    public PortfolioItem entry(Portfolio portfolio, String Name) {
         PortfolioItem entry;
         for (int i = 0; i < portfolio.items.size(); i++) {
             entry = item(portfolio, i);
@@ -265,8 +263,8 @@ class TradeService {
     // Sell everything
     public Trade sell(Portfolio portfolio, Instrument instrument, Date date) {
         int amount;
-        if (getEntry(portfolio, instrument) != null) {
-            amount = getAmount(portfolio, instrument);
+        if (entry(portfolio, instrument) != null) {
+            amount = amount(portfolio, instrument);
         } else {
             return null;
         }
@@ -293,7 +291,7 @@ class TradeService {
     // Return 0 if instrument is not in the portfolio
 
     public double getWeight(Portfolio portfolio, Instrument instrument) {
-        PortfolioItem entry = getEntry(portfolio, instrument);
+        PortfolioItem entry = entry(portfolio, instrument);
         if (entry != null) {
             return entry.getWeight();
         } else {
@@ -304,8 +302,8 @@ class TradeService {
     // Return position of this instrument in the portfolio
     // Return 0 if instrument is not in the portfolio
 
-    public int getPosition(Portfolio portfolio, Instrument instrument) {
-        PortfolioItem entry = getEntry(portfolio, instrument);
+    public int position(Portfolio portfolio, Instrument instrument) {
+        PortfolioItem entry = entry(portfolio, instrument);
         if (entry != null) {
             return entry.getPosition();
         } else {
@@ -315,8 +313,8 @@ class TradeService {
 
     // Return amount of this instrument in the portfolio
     // Return 0 if instrument is not in the portfolio
-    public int getAmount(Portfolio portfolio, Instrument instrument) {
-        PortfolioItem entry = getEntry(portfolio, instrument);
+    public int amount(Portfolio portfolio, Instrument instrument) {
+        PortfolioItem entry = entry(portfolio, instrument);
         if (entry != null) {
             return entry.getAmount();
         } else {
@@ -325,7 +323,7 @@ class TradeService {
     }
 
 
-    public double getAmount(Portfolio portfolio) {
+    public double amount(Portfolio portfolio) {
         // Return amount of all items in portfolio
         int Amount = 0;
         for (int i = 0; i < portfolio.items.size(); i++) {
@@ -334,12 +332,12 @@ class TradeService {
         return Amount;
     }
 
-    public double getWealth(Portfolio portfolio, int i) {
-        return getWealth(portfolio, i, null);
+    public double wealth(Portfolio portfolio, int i) {
+        return wealth(portfolio, i, null);
     }
 
     // Return wealth for i-th asset in portfolio
-    public double getWealth(Portfolio portfolio, int i, Date date) {
+    public double wealth(Portfolio portfolio, int i, Date date) {
         Instrument asset = getInstrument(portfolio, i);
         double price = 0;
         if (asset.isDataAvailable(date)) {
@@ -359,7 +357,7 @@ class TradeService {
     public double getWealth(Portfolio portfolio, Date date) {
         double Wealth = 0;
         for (int i = 0; i < portfolio.items.size(); i++) {
-            Wealth += getWealth(portfolio, i, date);
+            Wealth += wealth(portfolio, i, date);
         }
         return Wealth;
     }
@@ -408,7 +406,7 @@ class TradeService {
         } else {
             double Wealth = getWealth(portfolio);
             for (int i = 0; i < portfolio.items.size(); i++) {
-                setWeight(portfolio, i, getWealth(portfolio, i) / Wealth);
+                setWeight(portfolio, i, wealth(portfolio, i) / Wealth);
             }
         }
     }

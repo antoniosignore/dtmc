@@ -51,8 +51,8 @@ public abstract class Strategy {
 
     public void run() {
 
-        Date day = tradeService.getFirstDay(portfolio)
-        Date lastDay = tradeService.getLastDay(portfolio)
+        Date day = tradeService.firstDay(portfolio)
+        Date lastDay = tradeService.latestDay(portfolio)
 
         while (DateUtils.isLessEqual(day, lastDay)) {
 
