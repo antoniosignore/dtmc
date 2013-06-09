@@ -9,7 +9,7 @@
                    type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method:
                 com.netnumeri.server.finance.finpojo.Portfolio.save() is applicable for argument types: () values: []
                 Possible solutions: save(), save(), save(), save(), save(boolean), save(java.util.Map)
-                at dtmc.TradeService.add(TradeService.groovy:156)
+                at dtmc.PortfolioService.add(TradeService.groovy:156)
                 at com.netnumeri.server.finance.strategy.Strategy.add(Strategy.groovy:42)
                 at com.netnumeri.server.finance.strategy.SMACrossover.evaluateInstrumentOnDate(SMACrossover.groovy:60)
                 at com.netnumeri.server.finance.strategy.Strategy.run(Strategy.groovy:63)

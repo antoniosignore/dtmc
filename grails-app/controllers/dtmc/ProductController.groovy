@@ -1,6 +1,5 @@
 package dtmc
 
-import com.mrhaki.layout.domain.Product
 
 class ProductController {
 
@@ -8,13 +7,13 @@ class ProductController {
 
     def list = {
         def productList = Product.list()
-        render view: '/templates/productlist', model: [productList: productList]
+        render view: '/templates/portfoliolist', model: [productList: productList]
     }
 
     def view = {
         def productId = params.id
         def product = Product.read(productId)
         def productList = Product.list()
-        render view: '/templates/productview', model: [product: product, productList: productList]
+        render view: '/templates/portfolioview', model: [product: product, productList: productList]
     }
 }

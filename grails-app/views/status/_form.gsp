@@ -1,7 +1,5 @@
 <%@ page import="org.grails.twitter.Status" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: statusInstance, field: 'author', 'error')} required">
     <label for="author">
         <g:message code="status.author.label" default="Author"/>

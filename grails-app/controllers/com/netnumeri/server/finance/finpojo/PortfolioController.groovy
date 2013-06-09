@@ -99,4 +99,20 @@ class PortfolioController {
             redirect(action: "show", id: id)
         }
     }
+
+
+    def portfolioService
+
+    def mylist = {
+        def portfolioList = portfolioService.list()
+        render view: '/templates/portfoliolist', model: [portfolioList: portfolioList]
+    }
+
+    def myview = {
+        def portfolioId = params.id
+        def portfolio = Portfolio.read(portfolioId)
+        def portfolioList = Portfolio.list()
+        render view: '/templates/portfolioview', model: [portfolio: portfolio, portfolioList: portfolioList]
+    }
+
 }

@@ -14,10 +14,51 @@ import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.finpojo.derivative.Derivative
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
+import org.example.SecUser
 
-class TradeService {
 
-    public void clear(Portfolio portfolio) {
+class PortfolioService {
+
+    def springSecurityService
+
+    def list(Object username) {
+
+        def user = springSecurityService.currentUser
+
+        def per = SecUser.get(springSecurityService.currentUsr)
+        def query = Portfolio.whereAny {
+            author { username == per.username }
+        }.order 'dateCreated', 'desc'
+        def portfolios = query.list()
+        portfolios
+    }
+
+//    void onMessage(newMessageUserName) {
+//        log.debug "Message received. New status message posted by user <${newMessageUserName}>."
+//        def following = SecUser.where {
+//            followed.username == newMessageUserName
+//        }.property('username').list()
+//        following.each {uname ->
+////            timelineService.clearTimelineCacheForUser(uname)
+//        }
+//    }
+
+    void createPortfolio(String name, String description) {
+        def status = new Portfolio(name: name, description: description)
+        status.author = SecUser.get(springSecurityService.currentUser.id)
+        status.save()
+    }
+
+    void follow(long personId) {
+        def person = SecUser.get(personId)
+        if (person) {
+            def currentUser = SecUser.get(springSecurityService.principal.id)
+            currentUser.addToFollowed(person)
+//            timelineService.clearTimelineCacheForUser(currentUser.username)
+        }
+    }
+
+    void clear(Portfolio portfolio) {
         portfolio.items.clear();
         portfolio.transactions.clear();
     }
@@ -727,7 +768,6 @@ class TradeService {
         return getCovariance(portfolio, index) / index.variance();
     }
 
-
     private double modelPrice(Portfolio portfolio) {
         return 0;
     }
@@ -787,29 +827,17 @@ class TradeService {
         return portfolio.items.get(i).instrument
     }
 
-    public int getPosition(Portfolio portfolio, int i) {
-        return item(portfolio, i).getPosition();
+    public FinConstants getPosition(Portfolio portfolio, int i) {
+        return item(portfolio, i).position();
     }
 
     public int getItemAmount(Portfolio portfolio, int i) {
         return item(portfolio, i).getAmount();
     }
 
-    public double getWeight(Portfolio portfolio, int i) {
-        return item(portfolio, i).getWeight();
-    }
-
     public double getModelPrice(Portfolio portfolio, int i) {
-        return item(portfolio, i).getModelPrice();
+        return item(portfolio, i).price()
     }
-
-    public Date getModelDate(Portfolio portfolio, int i) {
-        return item(portfolio, i).getModelDate();
-    }
-
-//    public  void randomize() {
-//        randomizeWeights();
-//    }
 
     public double getCovariance(Portfolio portfolio, int Row, int Col) {
         return portfolio.covarianceMatrix.get(Row, Col);

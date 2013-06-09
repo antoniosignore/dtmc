@@ -7,7 +7,7 @@ import grails.test.mixin.TestFor
 @TestFor(PortfolioItem)
 class PortfolioItemTest {
 
-    def tradeService
+    def portfolioService
 
     void testSomething() {
         Portfolio portfolio = new Portfolio("SMA crossing", 10000)

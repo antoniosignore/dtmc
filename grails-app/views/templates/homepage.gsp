@@ -30,9 +30,9 @@
     <div id="list-products">
         <h2><g:message code="products.list.newest"/></h2>
         <ul>
-            <g:each in="${productList}" var="product">
+            <g:each in="${portfolioList}" var="product">
                 <li>
-                    <g:link controller="product" action="view" id="${product.id}">${product.title}</g:link>
+                    <g:link controller="portfolio" action="myview" id="${product.id}">${product.name}</g:link>
                 </li>
             </g:each>
         </ul>

@@ -12,7 +12,7 @@ import com.netnumeri.server.finance.ta.TradeListEntry
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
-import dtmc.TradeService
+import dtmc.PortfolioService
 import org.apache.commons.io.FileUtils
 import org.junit.Test
 
@@ -38,7 +38,7 @@ public class SMACrossoverTest {
         stock.indicators.put("upper", new SMAIndicator(closes, "SMA-" + 50, 50))
         stock.indicators.put("lower", new SMAIndicator(closes, "SMA-" + 10, 10))
 
-        TradeService tradeService = new TradeService();
+        PortfolioService tradeService = new PortfolioService();
         tradeService.add(portfolio, stock);
 
         Strategy strategy = new SMACrossover("test", portfolio, da, a, 10000);

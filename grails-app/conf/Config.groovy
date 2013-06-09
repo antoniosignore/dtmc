@@ -95,36 +95,23 @@ log4j = {
 }
 
 // Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.grails.twitter.auth.Person'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.grails.twitter.auth.PersonAuthority'
-grails.plugins.springsecurity.authority.className = 'org.grails.twitter.auth.Authority'
 grails.plugins.springsecurity.password.algorithm = 'SHA-512'
 grails.plugins.springsecurity.securityConfigType = 'InterceptUrlMap'
 grails.plugins.springsecurity.interceptUrlMap = [
-//        '/stock/index':     ['ROLE_USER, ROLE_ADMIN, IS_AUTHENTICATED_FULLY'],
-//        '/stock/**':        ['ROLE_ADMIN'],
-//        '/portfolio/**':    ['ROLE_ADMIN'],
+        '/stock/*': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
+        '/portfolio/*': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
         '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/logout/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
+        '/page': ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
 // Added by the Spring Security Core plugin:
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.example.SecUser'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.example.SecUserSecRole'
 grails.plugins.springsecurity.authority.className = 'org.example.SecRole'
-
-//grails.resources.modules = {
-//
-//    bootstrap {
-//        resource url:'less/custom-bootstrap.less',attrs:[rel: "stylesheet/less", type:'css']
-//        dependsOn 'jquery'
-//    }
-//
-//}
 
 grails.resources.modules = {
 

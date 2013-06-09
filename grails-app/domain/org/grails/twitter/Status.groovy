@@ -1,11 +1,12 @@
 package org.grails.twitter
 
-import org.grails.twitter.auth.Person
+import org.example.SecUser
+
 
 class Status {
 
     String message
-    Person author
+    SecUser author
     Date dateCreated
 
     static constraints = {

@@ -1,4 +1,3 @@
-<%-- File: grails-app/views/layout/page.gsp --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,10 +11,19 @@
 
 <body>
 <div id="header" class="clearfix">
+
     <div id="logo">
         <g:link uri="/"><g:message code="nav.home"/></g:link>
         <p><g:message code="title.website"/></p>
     </div>
+
+    <div id="spinner" class="spinner" style="display:none;">
+        <img src="${resource(dir: 'images', file: 'spinner.gif')}" alt="code:'spinner.alt',default:'Loading...')}"/>
+    </div>
+
+    <sec:ifLoggedIn>
+        <strong>Welcome <sec:username/></strong> (<g:link controller="logout">logout</g:link>)<br/><br/>
+    </sec:ifLoggedIn>
 
     <div id="searchform">
         <g:form controller="search">
@@ -30,7 +38,7 @@
     <div id="navmenu">
         <ul>
             <li><g:link uri="/"><g:message code="nav.home"/></g:link></li>
-            <li><g:link controller="product" action="list"><g:message code="nav.products"/></g:link></li>
+            <li><g:link controller="portfolio" action="mylist"><g:message code="nav.products"/></g:link></li>
         </ul>
     </div>
 </div>
@@ -38,7 +46,7 @@
 <g:layoutBody/>
 
 <div id="footer">
-    <p>Copyright &copy; 2011 Hubert A. Klein Ikkink - <a href="http://www.mrhaki.com">mrhaki</a></p>
+    <p>Copyright &copy; 2013 DTMC Central LTd - <a href="http://www.pippo.com">website</a></p>
 </div>
 </body>
 </html>

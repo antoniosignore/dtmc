@@ -7,7 +7,7 @@ import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.utils.DateUtils
-import dtmc.TradeService
+import dtmc.PortfolioService
 
 public abstract class Strategy {
 
@@ -16,7 +16,7 @@ public abstract class Strategy {
     protected Portfolio strategyPortfolio;
     double wealth = 0;
     public TransactionSeries transactionSeries = null;
-    TradeService tradeService = new TradeService()
+    PortfolioService tradeService = new PortfolioService()
 
     def final Date firstDate;
     def final Date lastDate;

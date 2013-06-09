@@ -11,11 +11,11 @@ import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.ta.TradeInfo
 import com.netnumeri.server.finance.ta.TradeListEntry
 import com.netnumeri.server.finance.utils.DateUtils
-import dtmc.TradeService
+import dtmc.PortfolioService
 
 public class Backtest implements Serializable {
 
-    TradeService tradeService = new TradeService();
+    PortfolioService tradeService = new PortfolioService();
 
     double initialWealth;          // initial wealth
     double accountWealth;          // wealth on bank account
@@ -345,7 +345,7 @@ public class Backtest implements Serializable {
         wealth = CurrentWealth;
         System.out.println("Wealth      : " + CurrentWealth);
         System.out.println("Account     : " + currentAccount);
-        System.out.println("Portfolio   : " + TradeService.getPrice(portfolio, lastDate));
+        System.out.println("Portfolio   : " + PortfolioService.getPrice(portfolio, lastDate));
         println "numberWinTradesTotal = $numberWinTradesTotal"
         println "numberLossTradesTotal = $numberLossTradesTotal"
 

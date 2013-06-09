@@ -1,11 +1,16 @@
 package dtmc
 
-import com.mrhaki.layout.domain.Product
 
 class PageController {
 
+    def springSecurityService
+    def portfolioService
+
     def index = {
-        def productList = Product.list()
-        render view: '/templates/homepage', model: [productList: productList]
+        def blah = springSecurityService.currentUser
+
+        def portfolioList = portfolioService.list(springSecurityService.currentUser)
+
+        render view: '/templates/homepage', model: [portfolioList: portfolioList]
     }
 }
