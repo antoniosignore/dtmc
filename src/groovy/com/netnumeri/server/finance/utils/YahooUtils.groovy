@@ -81,10 +81,10 @@ public class YahooUtils {
      * @param firstyear
      * @param frequency d = daily  w= weekly y=yearly
      */
-    public static Stock downloadYahooData(String ticker,
+    public static Stock downloadYahooData(String ticker, String description,
                                           Date from,
                                           Date to) throws IOException, ParseException {
-        return (downloadYahooData(ticker, from, to, "d"));
+        return (downloadYahooData(ticker, description, from, to, "d"));
     }
 
     public static Stock refreshDailyData(Stock stock,
@@ -94,6 +94,7 @@ public class YahooUtils {
     }
 
     public static Asset downloadYahooData(String ticker,
+                                          String description,
                                           int lastmonth,
                                           int lastday,
                                           int lastyear,
@@ -101,7 +102,7 @@ public class YahooUtils {
                                           int firstday,
                                           int firstyear,
                                           String frequency) throws IOException, ParseException {
-        Stock stock = new Stock(ticker);
+        Stock stock = new Stock(ticker, description);
         String url = "http://ichart.yahoo.com/table.csv?s=" +
                 ticker.trim() + "&d=" + lastmonth + "&e=" + lastday + "&f=" + lastyear + "&g=" + frequency + "&a=" + firstmonth + "&b=" + firstday + "&c=" + firstyear + "&ignore=.csv";
         downloadData(stock, url);
@@ -109,6 +110,7 @@ public class YahooUtils {
     }
 
     public static Stock downloadYahooData(String ticker,
+                                          String description,
                                           Date from,
                                           Date to,
                                           String frequency) throws IOException, ParseException {
@@ -121,7 +123,7 @@ public class YahooUtils {
         int lastyear = DateUtils.getYear(to);
 
         //    http://ichart.finance.yahoo.com/table.csv?s=SSRI&a=07&b=1&c=2007&d=03&e=10&f=2009&g=d&ignore=.csv
-        Stock stock = new Stock(ticker);
+        Stock stock = new Stock(ticker, description);
 
         String url = "http://ichart.yahoo.com/table.csv?s=" +
                 ticker.trim() + "&d=" + lastmonth + "&e=" + lastday + "&f=" + lastyear + "&g=" + frequency + "&a=" + firstmonth + "&b=" + firstday + "&c=" + firstyear + "&ignore=.csv";

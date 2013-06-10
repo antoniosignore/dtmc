@@ -15,11 +15,14 @@ class Stock extends Asset implements Serializable {
             "snapshot"
     ]
 
+    String description
+
     OptionsChain chain;
     YahooInstantSnapshot snapshot;
 
-    public Stock(String name) {
+    public Stock(String name, String description) {
         this.name = name;
+        this.description = description
     }
 
     public double modelPrice(int model) {

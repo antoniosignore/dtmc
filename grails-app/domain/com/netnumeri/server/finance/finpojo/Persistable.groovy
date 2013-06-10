@@ -8,7 +8,7 @@ class Persistable {
     }
 
     String name;
-    String description = "xx";
+
     Date dateCreated
 
 //    SecUser author

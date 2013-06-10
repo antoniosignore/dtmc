@@ -13,7 +13,7 @@ class Portfolio extends Asset implements Serializable {
                 params: [table: 'hi_value', column: 'next_value', max_lo: 100]
     }
 
-    Portfolio() {}
+    String description
 
     List<PortfolioItem> items = []
     List<Trade> transactions = []
@@ -36,13 +36,15 @@ class Portfolio extends Asset implements Serializable {
     Date firstDailyDate;
     Date lastDailyDate;
 
-    Portfolio(String name) {
+    Portfolio(String name, String description) {
         setName(name);
+        this.description = description
     }
 
-    Portfolio(String name, double wealth) {
+    Portfolio(String name, String description, double wealth) {
         setName(name);
         this.wealth = wealth;
+        this.description = description
     }
 
     PortfolioItem portfolioItemByName(String name) {
