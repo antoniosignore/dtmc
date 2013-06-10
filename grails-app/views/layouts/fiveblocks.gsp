@@ -31,6 +31,7 @@
         <g:pageProperty name="page.right2"/>
         <g:pageProperty name="page.right3"/>
     </div>
+
     </body>
     </html>
 </g:applyLayout>
