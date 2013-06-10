@@ -95,34 +95,34 @@ log4j = {
 }
 
 // Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.password.algorithm = 'SHA-512'
-grails.plugins.springsecurity.securityConfigType = 'InterceptUrlMap'
-grails.plugins.springsecurity.interceptUrlMap = [
-        '/stock/*': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
-        '/portfolio/*': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
-        '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/logout/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/page': ['IS_AUTHENTICATED_ANONYMOUSLY']
-]
-
-// Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.example.SecUser'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.example.SecUserSecRole'
-grails.plugins.springsecurity.authority.className = 'org.example.SecRole'
-
-grails.resources.modules = {
-
-    'custom-bootstrap' {
-        dependsOn 'bootstrap'
-        resource url: [dir: 'less', file: 'custom-bootstrap.less'], attrs: [rel: "stylesheet/less", type: 'css']
-    }
-
-}
-
-grails.plugins.twitterbootstrap.fixtaglib = true
-
-grails.plugin.cloudfoundry.appname = 'grails-twitter-bootstrap'
+//grails.plugins.springsecurity.password.algorithm = 'SHA-512'
+//grails.plugins.springsecurity.securityConfigType = 'InterceptUrlMap'
+//grails.plugins.springsecurity.interceptUrlMap = [
+//        '/stock/*': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
+//        '/portfolio/*': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
+//        '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/logout/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/page': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY']
+//]
+//
+//// Added by the Spring Security Core plugin:
+//grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.example.SecUser'
+//grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.example.SecUserSecRole'
+//grails.plugins.springsecurity.authority.className = 'org.example.SecRole'
+//
+//grails.resources.modules = {
+//
+//    'custom-bootstrap' {
+//        dependsOn 'bootstrap'
+//        resource url: [dir: 'less', file: 'custom-bootstrap.less'], attrs: [rel: "stylesheet/less", type: 'css']
+//    }
+//
+//}
+//
+//grails.plugins.twitterbootstrap.fixtaglib = true
+//
+//grails.plugin.cloudfoundry.appname = 'grails-twitter-bootstrap'
 

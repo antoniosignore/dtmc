@@ -1,123 +1,353 @@
+html * {
+    margin: 0; /*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
+}
+
+/* GENERAL */
+
 .spinner {
-    background: url(../images/spinner.gif) 50% 50% no-repeat transparent;
-    height: 16px;
-    width: 16px;
-    padding: 0.5em;
+    padding: 5px;
     position: absolute;
     right: 0;
-    top: 0;
-    text-indent: -9999px;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+#grailsLogo {
+    padding: 20px;
+}
+
+a:link, a:visited, a:hover {
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h1 {
+    margin: .8em 0 .3em 0;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+fieldset {
+    border: none;
+}
+
+input, select, textarea {
+    margin: 2px 0;
+    padding: 2px 4px;
+}
+
+select {
+    padding: 2px 2px 2px 0;
+}
+
+textarea {
+    width: 250px;
+    height: 150px;
+    vertical-align: top;
+}
+
+.body {
+    float: left;
+    margin: 0 15px 10px 15px;
+}
+
+.product-list li {
+    float: left;
+    width: 100%;
+    margin: 12px 0 12px 0;
+}
+
+.product-image {
+    border: 1px solid #ccc;
+    margin: 0 12px 0 0;
+    float: left;
+}
+
+.product-details {
+    width: 820px;
+    float: left;
+    display: block;
+}
+
+.product-details h2 {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    float: left;
+    margin: 6px 0 0 0;
+    padding: 0;
+    width: 100%;
+}
+
+.product-body {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+.product-description {
+    float: left;
+}
+
+/* NAVIGATION MENU */
+
+.nav {
+    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    border-style: solid none solid none;
+    margin-top: 5px;
+    padding: 7px 12px;
+}
+
+.menuButton {
+    font-size: 10px;
+    padding: 0 5px;
+}
+
+.menuButton a {
+    color: #333;
+    padding: 4px 6px;
+}
+
+.menuButton a.home {
+    background: url(../images/skin/house.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+
+.menuButton a.list {
+    background: url(../images/skin/database_table.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+
+.menuButton a.create {
+    background: url(../images/skin/database_add.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
 }
 
 /* MESSAGES AND ERRORS */
 
-.errors,
 .message {
-    font-size: 0.8em;
-    line-height: 2;
-    margin: 1em 2em;
-    padding: 0.25em;
-}
-
-.message {
-    background: #f3f3ff;
+    background: #f3f8fc url(../images/skin/information.png) 8px 50% no-repeat;
     border: 1px solid #b2d1ff;
     color: #006dba;
-    -moz-box-shadow: 0 0 0.25em #b2d1ff;
-    -webkit-box-shadow: 0 0 0.25em #b2d1ff;
-    box-shadow: 0 0 0.25em #b2d1ff;
+    margin: 10px 0 5px 0;
+    padding: 5px 5px 5px 30px
 }
 
-.errors {
+div.errors {
     background: #fff3f3;
-    border: 1px solid #ffaaaa;
+    border: 1px solid red;
     color: #cc0000;
-    -moz-box-shadow: 0 0 0.25em #ff8888;
-    -webkit-box-shadow: 0 0 0.25em #ff8888;
-    box-shadow: 0 0 0.25em #ff8888;
+    margin: 10px 0 5px 0;
+    padding: 5px 0 5px 0;
 }
 
-.errors ul,
-.message {
+div.errors ul {
+    list-style: none;
     padding: 0;
 }
 
-.errors li {
-    list-style: none;
-    background: transparent url(../images/skin/exclamation.png) 0.5em 50% no-repeat;
-    text-indent: 2.2em;
+div.errors li {
+    background: url(../images/skin/exclamation.png) 8px 0% no-repeat;
+    line-height: 16px;
+    padding-left: 30px;
 }
 
-.message {
-    background: transparent url(../images/skin/information.png) 0.5em 50% no-repeat;
-    text-indent: 2.2em;
+td.errors select {
+    border: 1px solid red;
 }
 
-/* form fields with errors */
-
-.error input, .error select, .error textarea {
-    background: #fff3f3;
-    border-color: #ffaaaa;
-    color: #cc0000;
+td.errors input {
+    border: 1px solid red;
 }
 
-.error input:focus, .error select:focus, .error textarea:focus {
-    -moz-box-shadow: 0 0 0.5em #ffaaaa;
-    -webkit-box-shadow: 0 0 0.5em #ffaaaa;
-    box-shadow: 0 0 0.5em #ffaaaa;
+td.errors textarea {
+    border: 1px solid red;
 }
 
-/* same effects for browsers that support HTML5 client-side validation (these have to be specified separately or IE will ignore the entire rule) */
+/* TABLES */
 
-input:invalid, select:invalid, textarea:invalid {
-    background: #fff3f3;
-    border-color: #ffaaaa;
-    color: #cc0000;
+table {
+    border: 1px solid #ccc;
+    width: 100%
 }
 
-input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
-    -moz-box-shadow: 0 0 0.5em #ffaaaa;
-    -webkit-box-shadow: 0 0 0.5em #ffaaaa;
-    box-shadow: 0 0 0.5em #ffaaaa;
+tr {
+    border: 0;
+}
+
+td, th {
+    line-height: 12px;
+    padding: 5px 6px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #fff url(../images/skin/shadow.jpg);
+    color: #666;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 2px 6px;
+}
+
+th a:link, th a:visited, th a:hover {
+    color: #333;
+    display: block;
+    font-size: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+
+th.asc a, th.desc a {
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+th.asc a {
+    background-image: url(../images/skin/sorted_asc.gif);
+}
+
+th.desc a {
+    background-image: url(../images/skin/sorted_desc.gif);
+}
+
+.odd {
+    background: #f7f7f7;
+}
+
+.even {
+    background: #fff;
+}
+
+/* LIST */
+
+.list table {
+    border-collapse: collapse;
+}
+
+.list th, .list td {
+    border-left: 1px solid #ddd;
+}
+
+.list th:hover, .list tr:hover {
+    background: #b2d1ff;
 }
 
 /* PAGINATION */
 
-.pagination {
+.paginateButtons {
+    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
     border-top: 0;
-    margin: 0;
-    padding: 0.3em 0.2em;
-    text-align: center;
-    -moz-box-shadow: 0 0 3px 1px #AAAAAA;
-    -webkit-box-shadow: 0 0 3px 1px #AAAAAA;
-    box-shadow: 0 0 3px 1px #AAAAAA;
-    background-color: #EFEFEF;
+    color: #666;
+    font-size: 10px;
+    overflow: hidden;
+    padding: 10px 3px;
 }
 
-.pagination a,
-.pagination .currentStep {
-    color: #666666;
+.paginateButtons a {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #ccc #aaa #aaa #ccc;
+    color: #666;
+    margin: 0 3px;
+    padding: 2px 6px;
+}
+
+.paginateButtons span {
+    padding: 2px 3px;
+}
+
+/* DIALOG */
+
+.dialog table {
+    padding: 5px 0;
+}
+
+.prop {
+    padding: 5px;
+}
+
+.prop .name {
+    text-align: left;
+    width: 15%;
+    white-space: nowrap;
+}
+
+.prop .value {
+    text-align: left;
+    width: 85%;
+}
+
+/* ACTION BUTTONS */
+
+.buttons {
+    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.buttons input {
+    background: #fff;
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 3px;
+    overflow: visible;
+    padding: 2px 6px;
+}
+
+.buttons input.delete {
+    background: transparent url(../images/skin/database_delete.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+
+.buttons input.edit {
+    background: transparent url(../images/skin/database_edit.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+
+.buttons input.save {
+    background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
     display: inline-block;
-    margin: 0 0.1em;
-    padding: 0.25em 0.7em;
-    text-decoration: none;
-    -moz-border-radius: 0.3em;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
 }
 
-.pagination a:hover, .pagination a:focus,
-.pagination .currentStep {
-    background-color: #999999;
-    color: #ffffff;
-    outline: none;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+html[xmlns] .clearfix {
+    display: block;
 }
 
-.no-borderradius .pagination a:hover, .no-borderradius .pagination a:focus,
-.no-borderradius .pagination .currentStep {
-    background-color: transparent;
-    color: #444444;
-    text-decoration: underline;
+* html .clearfix {
+    height: 1%;
 }
-

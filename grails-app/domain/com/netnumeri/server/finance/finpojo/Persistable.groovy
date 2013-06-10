@@ -1,6 +1,5 @@
 package com.netnumeri.server.finance.finpojo
 
-import org.example.SecUser
 
 class Persistable {
 
@@ -12,7 +11,7 @@ class Persistable {
     String description = "xx";
     Date dateCreated
 
-    SecUser author
+//    SecUser author
 //    transient jmsService
 //    transient afterInsert = {
 //        jmsService.send 'grailstwitter.status', author.username

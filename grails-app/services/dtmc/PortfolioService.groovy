@@ -14,23 +14,32 @@ import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.finpojo.derivative.Derivative
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
-import org.example.SecUser
 
 
 class PortfolioService {
 
     def springSecurityService
 
-    def list(Object username) {
+    /*
+     def list(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        [portfolioInstanceList: Portfolio.list(params), portfolioInstanceTotal: Portfolio.count()]
+    }
+     */
+//    def list(Object username) {
 
-        def user = springSecurityService.currentUser
+    List<Portfolio> listPortfolio() {
+//            params.max = Math.min(max ?: 10, 100)
+        return Portfolio.list()
 
-        def per = SecUser.get(springSecurityService.currentUsr)
-        def query = Portfolio.whereAny {
-            author { username == per.username }
-        }.order 'dateCreated', 'desc'
-        def portfolios = query.list()
-        portfolios
+//            def user = springSecurityService.currentUser
+//
+//        //def per = SecUser.get(user)
+//       def query = Portfolio.whereAny {
+//            author { username == per.username }
+//        }.order 'dateCreated', 'desc'
+//        def portfolios = query.list()
+//        portfolios
     }
 
 //    void onMessage(newMessageUserName) {
@@ -45,17 +54,7 @@ class PortfolioService {
 
     void createPortfolio(String name, String description) {
         def status = new Portfolio(name: name, description: description)
-        status.author = SecUser.get(springSecurityService.currentUser.id)
         status.save()
-    }
-
-    void follow(long personId) {
-        def person = SecUser.get(personId)
-        if (person) {
-            def currentUser = SecUser.get(springSecurityService.principal.id)
-            currentUser.addToFollowed(person)
-//            timelineService.clearTimelineCacheForUser(currentUser.username)
-        }
     }
 
     void clear(Portfolio portfolio) {

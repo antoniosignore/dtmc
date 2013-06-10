@@ -7,9 +7,8 @@ class PageController {
     def portfolioService
 
     def index = {
-        def blah = springSecurityService.currentUser
 
-        def portfolioList = portfolioService.list(springSecurityService.currentUser)
+        def portfolioList = portfolioService.listPortfolio()
 
         render view: '/templates/homepage', model: [portfolioList: portfolioList]
     }

@@ -7,6 +7,7 @@
     </head>
 
     <body>
+
     <div id="banner">
         <g:pageProperty name="page.banner"/>
     </div>
