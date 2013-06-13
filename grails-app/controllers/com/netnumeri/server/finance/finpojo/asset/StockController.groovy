@@ -2,6 +2,10 @@ package com.netnumeri.server.finance.finpojo.asset
 
 import org.springframework.dao.DataIntegrityViolationException
 
+/**
+ * StockController
+ * A controller class handles incoming web requests and performs actions such as redirects, rendering views and so on.
+ */
 class StockController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -10,8 +14,8 @@ class StockController {
         redirect(action: "list", params: params)
     }
 
-    def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+    def list() {
+        params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [stockInstanceList: Stock.list(params), stockInstanceTotal: Stock.count()]
     }
 
@@ -26,14 +30,14 @@ class StockController {
             return
         }
 
-        flash.message = message(code: 'default.created.message', args: [message(code: 'stock.label', default: 'Stock'), stockInstance.id])
+		flash.message = message(code: 'default.created.message', args: [message(code: 'stock.label', default: 'Stock'), stockInstance.id])
         redirect(action: "show", id: stockInstance.id)
     }
 
-    def show(Long id) {
-        def stockInstance = Stock.get(id)
+    def show() {
+        def stockInstance = Stock.get(params.id)
         if (!stockInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), id])
+			flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
             redirect(action: "list")
             return
         }
@@ -41,10 +45,10 @@ class StockController {
         [stockInstance: stockInstance]
     }
 
-    def edit(Long id) {
-        def stockInstance = Stock.get(id)
+    def edit() {
+        def stockInstance = Stock.get(params.id)
         if (!stockInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
             redirect(action: "list")
             return
         }
@@ -52,19 +56,20 @@ class StockController {
         [stockInstance: stockInstance]
     }
 
-    def update(Long id, Long version) {
-        def stockInstance = Stock.get(id)
+    def update() {
+        def stockInstance = Stock.get(params.id)
         if (!stockInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
             redirect(action: "list")
             return
         }
 
-        if (version != null) {
+        if (params.version) {
+            def version = params.version.toLong()
             if (stockInstance.version > version) {
                 stockInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                        [message(code: 'stock.label', default: 'Stock')] as Object[],
-                        "Another user has updated this Stock while you were editing")
+                          [message(code: 'stock.label', default: 'Stock')] as Object[],
+                          "Another user has updated this Stock while you were editing")
                 render(view: "edit", model: [stockInstance: stockInstance])
                 return
             }
@@ -77,26 +82,26 @@ class StockController {
             return
         }
 
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'stock.label', default: 'Stock'), stockInstance.id])
+		flash.message = message(code: 'default.updated.message', args: [message(code: 'stock.label', default: 'Stock'), stockInstance.id])
         redirect(action: "show", id: stockInstance.id)
     }
 
-    def delete(Long id) {
-        def stockInstance = Stock.get(id)
+    def delete() {
+        def stockInstance = Stock.get(params.id)
         if (!stockInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), id])
+			flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
             redirect(action: "list")
             return
         }
 
         try {
             stockInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'stock.label', default: 'Stock'), id])
+			flash.message = message(code: 'default.deleted.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
             redirect(action: "list")
         }
         catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'stock.label', default: 'Stock'), id])
-            redirect(action: "show", id: id)
+			flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
+            redirect(action: "show", id: params.id)
         }
     }
 }

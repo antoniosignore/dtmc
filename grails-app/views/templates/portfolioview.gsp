@@ -23,7 +23,8 @@
             <g:each in="${portfolioList}" var="product">
                 <li>
                     <p>
-                        <g:link controller="portfolio" action="myview" id="${portfolio.id}">${portfolio.name}</g:link>
+                        <g:link controller="portfolioList" action="myview"
+                                id="${portfolio.id}">${portfolio.name}</g:link>
                     </p>
                 </li>
             </g:each>

@@ -3,7 +3,7 @@ package dtmc
 import com.netnumeri.server.finance.finpojo.Portfolio
 
 
-class PortfolioController {
+class PortfolioListController {
 
     def myview = {
         def productId = params.id

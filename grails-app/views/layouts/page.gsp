@@ -38,7 +38,7 @@
     <div id="navmenu">
         <ul>
             <li><g:link uri="/"><g:message code="nav.home"/></g:link></li>
-            <li><g:link controller="portfolio" action="mylist"><g:message code="nav.products"/></g:link></li>
+            <li><g:link controller="portfolioList" action="mylist"><g:message code="nav.products"/></g:link></li>
         </ul>
     </div>
 </div>

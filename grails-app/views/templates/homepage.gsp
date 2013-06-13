@@ -33,7 +33,7 @@
         <ul>
             <g:each in="${portfolioList}" var="product">
                 <li>
-                    <g:link controller="portfolio" action="myview" id="${product.id}">${product.name}</g:link>
+                    <g:link controller="portfolioList" action="myview" id="${product.id}">${product.name}</g:link>
                 </li>
             </g:each>
         </ul>

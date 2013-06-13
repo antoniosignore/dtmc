@@ -3,9 +3,14 @@ package com.netnumeri.server.finance.finpojo.asset
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 
+/**
+ * StockControllerTests
+ * A unit test class is used to test individual methods or blocks of code without considering the surrounding infrastructure
+ */
 @TestFor(StockController)
 @Mock(Stock)
 class StockControllerTests {
+
 
     def populateValidParams(params) {
         assert params != null
@@ -54,6 +59,7 @@ class StockControllerTests {
         assert flash.message != null
         assert response.redirectedUrl == '/stock/list'
 
+
         populateValidParams(params)
         def stock = new Stock(params)
 
@@ -71,6 +77,7 @@ class StockControllerTests {
 
         assert flash.message != null
         assert response.redirectedUrl == '/stock/list'
+
 
         populateValidParams(params)
         def stock = new Stock(params)
@@ -91,6 +98,7 @@ class StockControllerTests {
         assert response.redirectedUrl == '/stock/list'
 
         response.reset()
+
 
         populateValidParams(params)
         def stock = new Stock(params)

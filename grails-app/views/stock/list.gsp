@@ -1,30 +1,18 @@
 <%@ page import="com.netnumeri.server.finance.finpojo.asset.Stock" %>
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta name="layout" content="main">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="layout" content="kickstart"/>
     <g:set var="entityName" value="${message(code: 'stock.label', default: 'Stock')}"/>
     <title><g:message code="default.list.label" args="[entityName]"/></title>
 </head>
 
 <body>
-<a href="#list-stock" class="skip" tabindex="-1"><g:message code="default.link.skip.label"
-                                                            default="Skip to content&hellip;"/></a>
 
-<div class="nav" role="navigation">
-    <ul>
-        <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-        <li><g:link class="create" action="create"><g:message code="default.new.label"
-                                                              args="[entityName]"/></g:link></li>
-    </ul>
-</div>
+<section id="list-stock" class="first">
 
-<div id="list-stock" class="content scaffold-list" role="main">
-    <h1><g:message code="default.list.label" args="[entityName]"/></h1>
-    <g:if test="${flash.message}">
-        <div class="message" role="status">${flash.message}</div>
-    </g:if>
-    <table>
+    <table class="table table-bordered">
         <thead>
         <tr>
 
@@ -40,7 +28,7 @@
         </thead>
         <tbody>
         <g:each in="${stockInstanceList}" status="i" var="stockInstance">
-            <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+            <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
 
                 <td><g:link action="show"
                             id="${stockInstance.id}">${fieldValue(bean: stockInstance, field: "dateCreated")}</g:link></td>
@@ -55,8 +43,10 @@
     </table>
 
     <div class="pagination">
-        <g:paginate total="${stockInstanceTotal}"/>
+        <bs:paginate total="${stockInstanceTotal}"/>
     </div>
-</div>
+</section>
+
 </body>
+
 </html>

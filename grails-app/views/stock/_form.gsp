@@ -2,19 +2,22 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: stockInstance, field: 'description', 'error')} ">
-    <label for="description">
-        <g:message code="stock.description.label" default="Description"/>
+<div class="control-group fieldcontain ${hasErrors(bean: stockInstance, field: 'description', 'error')} ">
+    <label for="description" class="control-label"><g:message code="stock.description.label"
+                                                              default="Description"/></label>
 
-    </label>
-    <g:textField name="description" value="${stockInstance?.description}"/>
+    <div class="controls">
+        <g:textField name="description" value="${stockInstance?.description}"/>
+        <span class="help-inline">${hasErrors(bean: stockInstance, field: 'description', 'error')}</span>
+    </div>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: stockInstance, field: 'name', 'error')} ">
-    <label for="name">
-        <g:message code="stock.name.label" default="Name"/>
+<div class="control-group fieldcontain ${hasErrors(bean: stockInstance, field: 'name', 'error')} ">
+    <label for="name" class="control-label"><g:message code="stock.name.label" default="Name"/></label>
 
-    </label>
-    <g:textField name="name" value="${stockInstance?.name}"/>
+    <div class="controls">
+        <g:textField name="name" value="${stockInstance?.name}"/>
+        <span class="help-inline">${hasErrors(bean: stockInstance, field: 'name', 'error')}</span>
+    </div>
 </div>
 

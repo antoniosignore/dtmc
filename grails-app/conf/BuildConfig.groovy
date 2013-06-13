@@ -48,6 +48,7 @@ grails.project.dependency.resolution = {
 
         runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
 
+
     }
 
     plugins {
@@ -59,5 +60,10 @@ grails.project.dependency.resolution = {
         runtime ":fields:1.3"
 
         compile ':cache:1.0.1'
+
+//        compile ":kickstart-with-bootstrap:0.9.6"
+//        runtime ':jquery:1.8.3'
+//        compile ':lesscss-resources:1.3.0.3'
+
     }
 }

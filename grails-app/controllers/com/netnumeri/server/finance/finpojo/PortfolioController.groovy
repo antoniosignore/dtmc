@@ -2,6 +2,10 @@ package com.netnumeri.server.finance.finpojo
 
 import org.springframework.dao.DataIntegrityViolationException
 
+/**
+ * PortfolioController
+ * A controller class handles incoming web requests and performs actions such as redirects, rendering views and so on.
+ */
 class PortfolioController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -10,8 +14,8 @@ class PortfolioController {
         redirect(action: "list", params: params)
     }
 
-    def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+    def list() {
+        params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [portfolioInstanceList: Portfolio.list(params), portfolioInstanceTotal: Portfolio.count()]
     }
 
@@ -26,14 +30,14 @@ class PortfolioController {
             return
         }
 
-        flash.message = message(code: 'default.created.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), portfolioInstance.id])
+		flash.message = message(code: 'default.created.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), portfolioInstance.id])
         redirect(action: "show", id: portfolioInstance.id)
     }
 
-    def show(Long id) {
-        def portfolioInstance = Portfolio.get(id)
+    def show() {
+        def portfolioInstance = Portfolio.get(params.id)
         if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
+			flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
             redirect(action: "list")
             return
         }
@@ -41,10 +45,10 @@ class PortfolioController {
         [portfolioInstance: portfolioInstance]
     }
 
-    def edit(Long id) {
-        def portfolioInstance = Portfolio.get(id)
+    def edit() {
+        def portfolioInstance = Portfolio.get(params.id)
         if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
             redirect(action: "list")
             return
         }
@@ -52,19 +56,20 @@ class PortfolioController {
         [portfolioInstance: portfolioInstance]
     }
 
-    def update(Long id, Long version) {
-        def portfolioInstance = Portfolio.get(id)
+    def update() {
+        def portfolioInstance = Portfolio.get(params.id)
         if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
             redirect(action: "list")
             return
         }
 
-        if (version != null) {
+        if (params.version) {
+            def version = params.version.toLong()
             if (portfolioInstance.version > version) {
                 portfolioInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                        [message(code: 'portfolio.label', default: 'Portfolio')] as Object[],
-                        "Another user has updated this Portfolio while you were editing")
+                          [message(code: 'portfolio.label', default: 'Portfolio')] as Object[],
+                          "Another user has updated this Portfolio while you were editing")
                 render(view: "edit", model: [portfolioInstance: portfolioInstance])
                 return
             }
@@ -77,26 +82,26 @@ class PortfolioController {
             return
         }
 
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), portfolioInstance.id])
+		flash.message = message(code: 'default.updated.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), portfolioInstance.id])
         redirect(action: "show", id: portfolioInstance.id)
     }
 
-    def delete(Long id) {
-        def portfolioInstance = Portfolio.get(id)
+    def delete() {
+        def portfolioInstance = Portfolio.get(params.id)
         if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
+			flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
             redirect(action: "list")
             return
         }
 
         try {
             portfolioInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
+			flash.message = message(code: 'default.deleted.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
             redirect(action: "list")
         }
         catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
-            redirect(action: "show", id: id)
+			flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
+            redirect(action: "show", id: params.id)
         }
     }
 }
