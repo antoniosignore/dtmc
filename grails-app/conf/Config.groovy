@@ -96,3 +96,25 @@ log4j = {
 
 
 grails.config.defaults.locations = [KickstartResources]
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.dtmc.security.UserBean'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.dtmc.security.UserRole'
+grails.plugins.springsecurity.authority.className = 'com.dtmc.security.Role'
+
+grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
+
+// Pessimistic Lockdown
+grails.plugins.springsecurity.rejectIfNoRule = true
+
+grails.plugins.springsecurity.interceptUrlMap = [
+        '/secure/**': ['ROLE_ADMIN'],
+        '/portfolio/**': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
+        '/stock/**': ['ROLE_USER', 'IS_AUTHENTICATED_FULLY'],
+        '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/*': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/logout/**': ['IS_AUTHENTICATED_FULLY', 'IS_AUTHENTICATED_REMEMBERED']
+]
