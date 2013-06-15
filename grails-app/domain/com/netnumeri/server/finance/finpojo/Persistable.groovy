@@ -10,6 +10,7 @@ class Persistable {
     String name;
 
     Date dateCreated
+    Date lastUpdated
 
 //    SecUser author
 //    transient jmsService

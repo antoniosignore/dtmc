@@ -1,7 +1,3 @@
-import com.dtmc.security.Role
-import com.dtmc.security.UserBean
-import com.dtmc.security.UserRole
-
 class BootStrap {
 
     def portfolioService
@@ -31,26 +27,25 @@ class BootStrap {
 //
 //        portfolio.save(failOnError: true, insert: true, flush: true);
 
+//        def superuserRole = new Role(authority: 'ROLE_SUPERUSER').save(flush: true)
+//        def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
+//        def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
+//
+//        def superUser = new UserBean(username: 'superuser', enabled: true, password: 'cheese')
+//        superUser.save(flush: true,failOnError: true)
+//        UserRole.create superUser, superuserRole, true
+//
+//        def adminUser = new UserBean(username: 'admin', enabled: true, password: 'cheese')
+//        adminUser.save(flush: true,failOnError: true)
+//        UserRole.create adminUser, adminRole, true
+//
+//        def user = new UserBean(username: 'user', enabled: true, password: 'cheese')
+//        user.save(flush: true,failOnError: true)
+//        UserRole.create user, userRole, true
 
-        def superuserRole = new Role(authority: 'ROLE_SUPERUSER').save(flush: true)
-        def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
-        def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
-
-        def superUser = new UserBean(username: 'superuser', enabled: true, password: 'dtmc')
-        superUser.save(flush: true)
-        UserRole.create superUser, superuserRole, true
-
-        def adminUser = new UserBean(username: 'admin', enabled: true, password: 'dtmc')
-        adminUser.save(flush: true)
-        UserRole.create adminUser, adminRole, true
-
-        def user = new UserBean(username: 'user', enabled: true, password: 'dtmc')
-        user.save(flush: true)
-        UserRole.create user, userRole, true
-
-        assert UserBean.count() == 3
-        assert Role.count() == 3
-        assert UserRole.count() == 3
+//        assert UserBean.count() == 3
+//        assert Role.count() == 3
+//        assert UserRole.count() == 3
 
     }
 }

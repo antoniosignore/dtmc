@@ -2933,3 +2933,1794 @@ Caused by: java.lang.IllegalArgumentException: Module [bootstrap] depends on res
 	at org.grails.plugin.resource.ResourceTagLib$_closure9.doCall(ResourceTagLib.groovy:489)
 	at org.grails.plugin.resource.ResourceTagLib$_closure6.doCall(ResourceTagLib.groovy:410)
 	... 5 more
+2013-06-15 11:04:31,642 [http-bio-8080-exec-9] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.netnumeri.server.finance.finpojo.asset.Stock. Expected: class java.lang.Long, got class java.lang.String
+	at org.hibernate.event.def.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:135)
+	at org.hibernate.impl.SessionImpl.fireLoad(SessionImpl.java:1090)
+	at org.hibernate.impl.SessionImpl.get(SessionImpl.java:1005)
+	at org.hibernate.impl.SessionImpl.get(SessionImpl.java:998)
+	at org.springframework.orm.hibernate3.HibernateTemplate$1.doInHibernate(HibernateTemplate.java:519)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	at org.springframework.orm.hibernate3.HibernateTemplate.executeWithNativeSession(HibernateTemplate.java:374)
+	at org.springframework.orm.hibernate3.HibernateTemplate.get(HibernateTemplate.java:512)
+	at org.springframework.orm.hibernate3.HibernateTemplate.get(HibernateTemplate.java:506)
+	at org.springframework.orm.hibernate3.HibernateOperations$get.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.springframework.orm.hibernate3.HibernateOperations$get.call(Unknown Source)
+	at org.codehaus.groovy.grails.orm.hibernate.HibernateGormStaticApi.get(HibernateGormEnhancer.groovy:182)
+	at com.netnumeri.server.finance.finpojo.asset.Stock.get(Stock.groovy)
+	at com.netnumeri.server.finance.finpojo.asset.Stock$get.call(Unknown Source)
+	at com.netnumeri.server.finance.finpojo.asset.StockController.show(StockController.groovy:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.grails.web.servlet.mvc.MixedGrailsControllerHelper.invoke(MixedGrailsControllerHelper.java:69)
+	at grails.plugin.cache.web.ProxyAwareMixedGrailsControllerHelper.invoke(ProxyAwareMixedGrailsControllerHelper.java)
+	at org.codehaus.groovy.grails.web.servlet.mvc.AbstractGrailsControllerHelper.handleAction(AbstractGrailsControllerHelper.java:340)
+	at grails.plugin.cache.web.ProxyAwareMixedGrailsControllerHelper.handleAction(ProxyAwareMixedGrailsControllerHelper.java)
+	at org.codehaus.groovy.grails.web.servlet.mvc.AbstractGrailsControllerHelper.executeAction(AbstractGrailsControllerHelper.java:223)
+	at grails.plugin.cache.web.ProxyAwareMixedGrailsControllerHelper.executeAction(ProxyAwareMixedGrailsControllerHelper.java)
+	at org.codehaus.groovy.grails.web.servlet.mvc.AbstractGrailsControllerHelper.handleURI(AbstractGrailsControllerHelper.java:189)
+	at grails.plugin.cache.web.ProxyAwareMixedGrailsControllerHelper.handleURI(ProxyAwareMixedGrailsControllerHelper.java)
+	at org.codehaus.groovy.grails.web.servlet.mvc.AbstractGrailsControllerHelper.handleURI(AbstractGrailsControllerHelper.java:116)
+	at grails.plugin.cache.web.ProxyAwareMixedGrailsControllerHelper.handleURI(ProxyAwareMixedGrailsControllerHelper.java)
+	at org.codehaus.groovy.grails.web.servlet.mvc.SimpleGrailsController.handleRequest(SimpleGrailsController.java:72)
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:48)
+	at org.codehaus.groovy.grails.web.servlet.GrailsDispatcherServlet.doDispatch(GrailsDispatcherServlet.java:328)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:852)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:882)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:789)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:195)
+	at grails.plugin.cache.web.filter.simple.MemoryPageFragmentCachingFilter.doFilter(MemoryPageFragmentCachingFilter.java)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:70)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:749)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:487)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:412)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:339)
+	at org.codehaus.groovy.grails.web.util.WebUtils.forwardRequestForUrlMappingInfo(WebUtils.java:314)
+	at org.codehaus.groovy.grails.web.util.WebUtils.forwardRequestForUrlMappingInfo(WebUtils.java:279)
+	at org.codehaus.groovy.grails.web.util.WebUtils.forwardRequestForUrlMappingInfo(WebUtils.java:270)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:222)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.obtainContent(GrailsPageFilter.java:206)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.doFilter(GrailsPageFilter.java:152)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at javax.servlet.FilterChain$doFilter.call(Unknown Source)
+	at org.grails.plugin.resource.DevModeSanityFilter.doFilter(DevModeSanityFilter.groovy:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:369)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:109)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:83)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:97)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:78)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:187)
+	at org.codehaus.groovy.grails.plugins.springsecurity.RequestHolderAuthenticationFilter.doFilter(RequestHolderAuthenticationFilter.java:40)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.codehaus.groovy.grails.plugins.springsecurity.MutableLogoutFilter.doFilter(MutableLogoutFilter.java:79)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:79)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:168)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 11:04:31,648 [http-bio-8080-exec-9] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.netnumeri.server.finance.finpojo.asset.Stock. Expected: class java.lang.Long, got class java.lang.String
+	at com.netnumeri.server.finance.finpojo.asset.StockController.show(StockController.groovy:38)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:195)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 11:04:31,654 [http-bio-8080-exec-9] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.netnumeri.server.finance.finpojo.asset.Stock. Expected: class java.lang.Long, got class java.lang.String
+	at com.netnumeri.server.finance.finpojo.asset.StockController.show(StockController.groovy:38)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:195)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 11:04:31,654 [http-bio-8080-exec-9] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.netnumeri.server.finance.finpojo.asset.Stock. Expected: class java.lang.Long, got class java.lang.String
+	at com.netnumeri.server.finance.finpojo.asset.StockController.show(StockController.groovy:38)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:195)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 14:58:00,652 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at org.hibernate.type.descriptor.java.AbstractTypeDescriptor.extractHashCode(AbstractTypeDescriptor.java:88)
+	at org.hibernate.type.AbstractStandardBasicType.getHashCode(AbstractStandardBasicType.java:197)
+	at org.hibernate.type.AbstractStandardBasicType.getHashCode(AbstractStandardBasicType.java:192)
+	at org.hibernate.type.EntityType.getHashCode(EntityType.java:325)
+	at org.hibernate.type.ComponentType.getHashCode(ComponentType.java:222)
+	at org.hibernate.engine.EntityKey.generateHashCode(EntityKey.java:126)
+	at org.hibernate.engine.EntityKey.<init>(EntityKey.java:70)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:183)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:143)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.saveWithGeneratedOrRequestedId(DefaultSaveOrUpdateEventListener.java:210)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.entityIsTransient(DefaultSaveOrUpdateEventListener.java:195)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:117)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:93)
+	at org.codehaus.groovy.grails.orm.hibernate.support.ClosureEventTriggeringInterceptor.onSaveOrUpdate(ClosureEventTriggeringInterceptor.java:108)
+	at org.hibernate.impl.SessionImpl.fireSave(SessionImpl.java:713)
+	at org.hibernate.impl.SessionImpl.save(SessionImpl.java:701)
+	at org.hibernate.impl.SessionImpl.save(SessionImpl.java:697)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod$2.doInHibernate(SavePersistentMethod.java:73)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.performInsert(SavePersistentMethod.java:69)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:212)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSite.invoke(PojoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+	at org.codehaus.groovy.grails.orm.hibernate.HibernateGormInstanceApi.save(HibernateGormEnhancer.groovy:911)
+	at com.dtmc.security.UserRole.save(UserRole.groovy)
+	at com.dtmc.security.UserRole$save.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at com.dtmc.security.UserRole.create(UserRole.groovy:32)
+	at com.dtmc.security.UserRole$create.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+	at BootStrap.createData(BootStrap.groovy:41)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 14:58:00,667 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at com.dtmc.security.UserRole.create(UserRole.groovy:32)
+	at BootStrap.createData(BootStrap.groovy:41)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 14:58:00,667 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at com.dtmc.security.UserRole.create(UserRole.groovy:32)
+	at BootStrap.createData(BootStrap.groovy:41)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 14:58:00,672 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at com.dtmc.security.UserRole.create(UserRole.groovy:32)
+	at BootStrap.createData(BootStrap.groovy:41)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 15:00:48,179 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:97)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:399)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:655)
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	... 26 more
+2013-06-15 15:00:48,182 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:399)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:655)
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 15:00:48,183 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	... 8 more
+2013-06-15 15:00:48,183 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	... 8 more
+2013-06-15 15:00:48,184 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 15:00:48,184 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	... 8 more
+2013-06-15 18:23:50,243 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:124)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:184)
+	at org.codehaus.groovy.grails.orm.hibernate.events.PatchedDefaultFlushEventListener.performExecutions(PatchedDefaultFlushEventListener.java:46)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.flushSession(SavePersistentMethod.java:87)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod$1.doInHibernate(SavePersistentMethod.java:60)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.performSave(SavePersistentMethod.java:56)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:215)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSite.invoke(PojoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+	at org.codehaus.groovy.grails.orm.hibernate.HibernateGormInstanceApi.save(HibernateGormEnhancer.groovy:911)
+	at com.dtmc.security.UserBean.save(UserBean.groovy)
+	at com.dtmc.security.UserBean$save.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 80 more
+2013-06-15 18:23:50,247 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:184)
+	at org.codehaus.groovy.grails.orm.hibernate.events.PatchedDefaultFlushEventListener.performExecutions(PatchedDefaultFlushEventListener.java:46)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.flushSession(SavePersistentMethod.java:87)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod$1.doInHibernate(SavePersistentMethod.java:60)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.performSave(SavePersistentMethod.java:56)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:215)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSite.invoke(PojoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+	at org.codehaus.groovy.grails.orm.hibernate.HibernateGormInstanceApi.save(HibernateGormEnhancer.groovy:911)
+	at com.dtmc.security.UserBean.save(UserBean.groovy)
+	at com.dtmc.security.UserBean$save.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:23:50,248 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	... 10 more
+2013-06-15 18:23:50,255 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.orm.hibernate3.HibernateJdbcException: JDBC exception on Hibernate data access: SQLException for SQL [insert into user_bean (version, account_expired, account_locked, enabled, "password", password_expired, username, id) values (?, ?, ?, ?, ?, ?, ?, ?)]; SQL state [72000]; error code [12899]; Could not execute JDBC batch update; nested exception is org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	at org.springframework.orm.hibernate3.SessionFactoryUtils.convertHibernateAccessException(SessionFactoryUtils.java:651)
+	at org.springframework.orm.hibernate3.HibernateAccessor.convertHibernateAccessException(HibernateAccessor.java:412)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:411)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.performSave(SavePersistentMethod.java:56)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:215)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSite.invoke(PojoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+	at org.codehaus.groovy.grails.orm.hibernate.HibernateGormInstanceApi.save(HibernateGormEnhancer.groovy:911)
+	at com.dtmc.security.UserBean.save(UserBean.groovy)
+	at com.dtmc.security.UserBean$save.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	... 5 more
+Caused by: java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	... 10 more
+2013-06-15 18:23:50,256 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	... 10 more
+2013-06-15 18:23:50,256 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:23:50,256 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.orm.hibernate3.HibernateJdbcException: JDBC exception on Hibernate data access: SQLException for SQL [insert into user_bean (version, account_expired, account_locked, enabled, "password", password_expired, username, id) values (?, ?, ?, ?, ?, ?, ?, ?)]; SQL state [72000]; error code [12899]; Could not execute JDBC batch update; nested exception is org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	... 10 more
+Caused by: java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	... 10 more
+2013-06-15 18:23:50,257 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.orm.hibernate3.HibernateJdbcException: JDBC exception on Hibernate data access: SQLException for SQL [insert into user_bean (version, account_expired, account_locked, enabled, "password", password_expired, username, id) values (?, ?, ?, ?, ?, ?, ?, ?)]; SQL state [72000]; error code [12899]; Could not execute JDBC batch update; nested exception is org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	... 10 more
+Caused by: java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	... 10 more
+2013-06-15 18:23:50,257 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	... 10 more
+2013-06-15 18:23:50,257 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:23:50,258 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.orm.hibernate3.HibernateJdbcException: JDBC exception on Hibernate data access: SQLException for SQL [insert into user_bean (version, account_expired, account_locked, enabled, "password", password_expired, username, id) values (?, ?, ?, ?, ?, ?, ?, ?)]; SQL state [72000]; error code [12899]; Could not execute JDBC batch update; nested exception is org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.hibernate.QueryTimeoutException: Could not execute JDBC batch update
+	... 10 more
+Caused by: java.sql.BatchUpdateException: ORA-12899: value too large for column "DTMC_DEV"."USER_BEAN"."password" (actual: 64, maximum: 10)
+
+	at oracle.jdbc.driver.DatabaseError.throwBatchUpdateException(DatabaseError.java:343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10720)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	... 10 more
+2013-06-15 18:28:16,406 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:97)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:399)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:655)
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	... 26 more
+2013-06-15 18:28:16,410 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:399)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:655)
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:28:16,411 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	... 8 more
+2013-06-15 18:28:16,413 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	... 8 more
+2013-06-15 18:28:16,413 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:28:16,413 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	... 8 more
+2013-06-15 18:31:50,643 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:97)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:399)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:655)
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	... 26 more
+2013-06-15 18:31:50,647 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:399)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:655)
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:31:50,648 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	... 8 more
+2013-06-15 18:31:50,648 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	... 8 more
+2013-06-15 18:31:50,649 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:31:50,649 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: Assertion failed: 
+
+assert UserBean.count() == 3
+                |       |
+                0       false
+
+	at BootStrap.createData(BootStrap.groovy:51)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	... 8 more
+2013-06-15 18:36:31,896 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at org.hibernate.type.descriptor.java.AbstractTypeDescriptor.extractHashCode(AbstractTypeDescriptor.java:88)
+	at org.hibernate.type.AbstractStandardBasicType.getHashCode(AbstractStandardBasicType.java:197)
+	at org.hibernate.type.AbstractStandardBasicType.getHashCode(AbstractStandardBasicType.java:192)
+	at org.hibernate.type.EntityType.getHashCode(EntityType.java:325)
+	at org.hibernate.type.ComponentType.getHashCode(ComponentType.java:222)
+	at org.hibernate.engine.EntityKey.generateHashCode(EntityKey.java:126)
+	at org.hibernate.engine.EntityKey.<init>(EntityKey.java:70)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:183)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:143)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.saveWithGeneratedOrRequestedId(DefaultSaveOrUpdateEventListener.java:210)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.entityIsTransient(DefaultSaveOrUpdateEventListener.java:195)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.performSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:117)
+	at org.hibernate.event.def.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:93)
+	at org.codehaus.groovy.grails.orm.hibernate.support.ClosureEventTriggeringInterceptor.onSaveOrUpdate(ClosureEventTriggeringInterceptor.java:108)
+	at org.hibernate.impl.SessionImpl.fireSave(SessionImpl.java:713)
+	at org.hibernate.impl.SessionImpl.save(SessionImpl.java:701)
+	at org.hibernate.impl.SessionImpl.save(SessionImpl.java:697)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod$2.doInHibernate(SavePersistentMethod.java:73)
+	at org.springframework.orm.hibernate3.HibernateTemplate.doExecute(HibernateTemplate.java:406)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:339)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.SavePersistentMethod.performInsert(SavePersistentMethod.java:69)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:212)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSite.invoke(PojoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+	at org.codehaus.groovy.grails.orm.hibernate.HibernateGormInstanceApi.save(HibernateGormEnhancer.groovy:911)
+	at com.dtmc.security.UserRole.save(UserRole.groovy)
+	at com.dtmc.security.UserRole$save.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at com.dtmc.security.UserRole.create(UserRole.groovy:32)
+	at com.dtmc.security.UserRole$create.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+	at BootStrap.createData(BootStrap.groovy:41)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:36:31,899 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at com.dtmc.security.UserRole.create(UserRole.groovy:32)
+	at BootStrap.createData(BootStrap.groovy:41)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:36:31,899 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at com.dtmc.security.UserRole.create(UserRole.groovy:32)
+	at BootStrap.createData(BootStrap.groovy:41)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:36:31,900 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at com.dtmc.security.UserRole.create(UserRole.groovy:32)
+	at BootStrap.createData(BootStrap.groovy:41)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:41:02,244 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.dtmc.security.UserBean' on field 'fname': rejected value [null]; codes [com.dtmc.security.UserBean.fname.nullable.error.com.dtmc.security.UserBean.fname,com.dtmc.security.UserBean.fname.nullable.error.fname,com.dtmc.security.UserBean.fname.nullable.error.java.lang.String,com.dtmc.security.UserBean.fname.nullable.error,userBean.fname.nullable.error.com.dtmc.security.UserBean.fname,userBean.fname.nullable.error.fname,userBean.fname.nullable.error.java.lang.String,userBean.fname.nullable.error,com.dtmc.security.UserBean.fname.nullable.com.dtmc.security.UserBean.fname,com.dtmc.security.UserBean.fname.nullable.fname,com.dtmc.security.UserBean.fname.nullable.java.lang.String,com.dtmc.security.UserBean.fname.nullable,userBean.fname.nullable.com.dtmc.security.UserBean.fname,userBean.fname.nullable.fname,userBean.fname.nullable.java.lang.String,userBean.fname.nullable,nullable.com.dtmc.security.UserBean.fname,nullable.fname,nullable.java.lang.String,nullable]; arguments [fname,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'lname': rejected value [null]; codes [com.dtmc.security.UserBean.lname.nullable.error.com.dtmc.security.UserBean.lname,com.dtmc.security.UserBean.lname.nullable.error.lname,com.dtmc.security.UserBean.lname.nullable.error.java.lang.String,com.dtmc.security.UserBean.lname.nullable.error,userBean.lname.nullable.error.com.dtmc.security.UserBean.lname,userBean.lname.nullable.error.lname,userBean.lname.nullable.error.java.lang.String,userBean.lname.nullable.error,com.dtmc.security.UserBean.lname.nullable.com.dtmc.security.UserBean.lname,com.dtmc.security.UserBean.lname.nullable.lname,com.dtmc.security.UserBean.lname.nullable.java.lang.String,com.dtmc.security.UserBean.lname.nullable,userBean.lname.nullable.com.dtmc.security.UserBean.lname,userBean.lname.nullable.lname,userBean.lname.nullable.java.lang.String,userBean.lname.nullable,nullable.com.dtmc.security.UserBean.lname,nullable.lname,nullable.java.lang.String,nullable]; arguments [lname,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'email': rejected value [null]; codes [com.dtmc.security.UserBean.email.nullable.error.com.dtmc.security.UserBean.email,com.dtmc.security.UserBean.email.nullable.error.email,com.dtmc.security.UserBean.email.nullable.error.java.lang.String,com.dtmc.security.UserBean.email.nullable.error,userBean.email.nullable.error.com.dtmc.security.UserBean.email,userBean.email.nullable.error.email,userBean.email.nullable.error.java.lang.String,userBean.email.nullable.error,com.dtmc.security.UserBean.email.nullable.com.dtmc.security.UserBean.email,com.dtmc.security.UserBean.email.nullable.email,com.dtmc.security.UserBean.email.nullable.java.lang.String,com.dtmc.security.UserBean.email.nullable,userBean.email.nullable.com.dtmc.security.UserBean.email,userBean.email.nullable.email,userBean.email.nullable.java.lang.String,userBean.email.nullable,nullable.com.dtmc.security.UserBean.email,nullable.email,nullable.java.lang.String,nullable]; arguments [email,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'phone': rejected value [null]; codes [com.dtmc.security.UserBean.phone.nullable.error.com.dtmc.security.UserBean.phone,com.dtmc.security.UserBean.phone.nullable.error.phone,com.dtmc.security.UserBean.phone.nullable.error.java.lang.String,com.dtmc.security.UserBean.phone.nullable.error,userBean.phone.nullable.error.com.dtmc.security.UserBean.phone,userBean.phone.nullable.error.phone,userBean.phone.nullable.error.java.lang.String,userBean.phone.nullable.error,com.dtmc.security.UserBean.phone.nullable.com.dtmc.security.UserBean.phone,com.dtmc.security.UserBean.phone.nullable.phone,com.dtmc.security.UserBean.phone.nullable.java.lang.String,com.dtmc.security.UserBean.phone.nullable,userBean.phone.nullable.com.dtmc.security.UserBean.phone,userBean.phone.nullable.phone,userBean.phone.nullable.java.lang.String,userBean.phone.nullable,nullable.com.dtmc.security.UserBean.phone,nullable.phone,nullable.java.lang.String,nullable]; arguments [phone,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'mobile': rejected value [null]; codes [com.dtmc.security.UserBean.mobile.nullable.error.com.dtmc.security.UserBean.mobile,com.dtmc.security.UserBean.mobile.nullable.error.mobile,com.dtmc.security.UserBean.mobile.nullable.error.java.lang.String,com.dtmc.security.UserBean.mobile.nullable.error,userBean.mobile.nullable.error.com.dtmc.security.UserBean.mobile,userBean.mobile.nullable.error.mobile,userBean.mobile.nullable.error.java.lang.String,userBean.mobile.nullable.error,com.dtmc.security.UserBean.mobile.nullable.com.dtmc.security.UserBean.mobile,com.dtmc.security.UserBean.mobile.nullable.mobile,com.dtmc.security.UserBean.mobile.nullable.java.lang.String,com.dtmc.security.UserBean.mobile.nullable,userBean.mobile.nullable.com.dtmc.security.UserBean.mobile,userBean.mobile.nullable.mobile,userBean.mobile.nullable.java.lang.String,userBean.mobile.nullable,nullable.com.dtmc.security.UserBean.mobile,nullable.mobile,nullable.java.lang.String,nullable]; arguments [mobile,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'city': rejected value [null]; codes [com.dtmc.security.UserBean.city.nullable.error.com.dtmc.security.UserBean.city,com.dtmc.security.UserBean.city.nullable.error.city,com.dtmc.security.UserBean.city.nullable.error.java.lang.String,com.dtmc.security.UserBean.city.nullable.error,userBean.city.nullable.error.com.dtmc.security.UserBean.city,userBean.city.nullable.error.city,userBean.city.nullable.error.java.lang.String,userBean.city.nullable.error,com.dtmc.security.UserBean.city.nullable.com.dtmc.security.UserBean.city,com.dtmc.security.UserBean.city.nullable.city,com.dtmc.security.UserBean.city.nullable.java.lang.String,com.dtmc.security.UserBean.city.nullable,userBean.city.nullable.com.dtmc.security.UserBean.city,userBean.city.nullable.city,userBean.city.nullable.java.lang.String,userBean.city.nullable,nullable.com.dtmc.security.UserBean.city,nullable.city,nullable.java.lang.String,nullable]; arguments [city,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'state': rejected value [null]; codes [com.dtmc.security.UserBean.state.nullable.error.com.dtmc.security.UserBean.state,com.dtmc.security.UserBean.state.nullable.error.state,com.dtmc.security.UserBean.state.nullable.error.java.lang.String,com.dtmc.security.UserBean.state.nullable.error,userBean.state.nullable.error.com.dtmc.security.UserBean.state,userBean.state.nullable.error.state,userBean.state.nullable.error.java.lang.String,userBean.state.nullable.error,com.dtmc.security.UserBean.state.nullable.com.dtmc.security.UserBean.state,com.dtmc.security.UserBean.state.nullable.state,com.dtmc.security.UserBean.state.nullable.java.lang.String,com.dtmc.security.UserBean.state.nullable,userBean.state.nullable.com.dtmc.security.UserBean.state,userBean.state.nullable.state,userBean.state.nullable.java.lang.String,userBean.state.nullable,nullable.com.dtmc.security.UserBean.state,nullable.state,nullable.java.lang.String,nullable]; arguments [state,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'country': rejected value [null]; codes [com.dtmc.security.UserBean.country.nullable.error.com.dtmc.security.UserBean.country,com.dtmc.security.UserBean.country.nullable.error.country,com.dtmc.security.UserBean.country.nullable.error.java.lang.String,com.dtmc.security.UserBean.country.nullable.error,userBean.country.nullable.error.com.dtmc.security.UserBean.country,userBean.country.nullable.error.country,userBean.country.nullable.error.java.lang.String,userBean.country.nullable.error,com.dtmc.security.UserBean.country.nullable.com.dtmc.security.UserBean.country,com.dtmc.security.UserBean.country.nullable.country,com.dtmc.security.UserBean.country.nullable.java.lang.String,com.dtmc.security.UserBean.country.nullable,userBean.country.nullable.com.dtmc.security.UserBean.country,userBean.country.nullable.country,userBean.country.nullable.java.lang.String,userBean.country.nullable,nullable.com.dtmc.security.UserBean.country,nullable.country,nullable.java.lang.String,nullable]; arguments [country,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'address1': rejected value [null]; codes [com.dtmc.security.UserBean.address1.nullable.error.com.dtmc.security.UserBean.address1,com.dtmc.security.UserBean.address1.nullable.error.address1,com.dtmc.security.UserBean.address1.nullable.error.java.lang.String,com.dtmc.security.UserBean.address1.nullable.error,userBean.address1.nullable.error.com.dtmc.security.UserBean.address1,userBean.address1.nullable.error.address1,userBean.address1.nullable.error.java.lang.String,userBean.address1.nullable.error,com.dtmc.security.UserBean.address1.nullable.com.dtmc.security.UserBean.address1,com.dtmc.security.UserBean.address1.nullable.address1,com.dtmc.security.UserBean.address1.nullable.java.lang.String,com.dtmc.security.UserBean.address1.nullable,userBean.address1.nullable.com.dtmc.security.UserBean.address1,userBean.address1.nullable.address1,userBean.address1.nullable.java.lang.String,userBean.address1.nullable,nullable.com.dtmc.security.UserBean.address1,nullable.address1,nullable.java.lang.String,nullable]; arguments [address1,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'address2': rejected value [null]; codes [com.dtmc.security.UserBean.address2.nullable.error.com.dtmc.security.UserBean.address2,com.dtmc.security.UserBean.address2.nullable.error.address2,com.dtmc.security.UserBean.address2.nullable.error.java.lang.String,com.dtmc.security.UserBean.address2.nullable.error,userBean.address2.nullable.error.com.dtmc.security.UserBean.address2,userBean.address2.nullable.error.address2,userBean.address2.nullable.error.java.lang.String,userBean.address2.nullable.error,com.dtmc.security.UserBean.address2.nullable.com.dtmc.security.UserBean.address2,com.dtmc.security.UserBean.address2.nullable.address2,com.dtmc.security.UserBean.address2.nullable.java.lang.String,com.dtmc.security.UserBean.address2.nullable,userBean.address2.nullable.com.dtmc.security.UserBean.address2,userBean.address2.nullable.address2,userBean.address2.nullable.java.lang.String,userBean.address2.nullable,nullable.com.dtmc.security.UserBean.address2,nullable.address2,nullable.java.lang.String,nullable]; arguments [address2,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'company': rejected value [null]; codes [com.dtmc.security.UserBean.company.nullable.error.com.dtmc.security.UserBean.company,com.dtmc.security.UserBean.company.nullable.error.company,com.dtmc.security.UserBean.company.nullable.error.java.lang.String,com.dtmc.security.UserBean.company.nullable.error,userBean.company.nullable.error.com.dtmc.security.UserBean.company,userBean.company.nullable.error.company,userBean.company.nullable.error.java.lang.String,userBean.company.nullable.error,com.dtmc.security.UserBean.company.nullable.com.dtmc.security.UserBean.company,com.dtmc.security.UserBean.company.nullable.company,com.dtmc.security.UserBean.company.nullable.java.lang.String,com.dtmc.security.UserBean.company.nullable,userBean.company.nullable.com.dtmc.security.UserBean.company,userBean.company.nullable.company,userBean.company.nullable.java.lang.String,userBean.company.nullable,nullable.com.dtmc.security.UserBean.company,nullable.company,nullable.java.lang.String,nullable]; arguments [company,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'lastLoginDate': rejected value [null]; codes [com.dtmc.security.UserBean.lastLoginDate.nullable.error.com.dtmc.security.UserBean.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.error.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.error.java.util.Date,com.dtmc.security.UserBean.lastLoginDate.nullable.error,userBean.lastLoginDate.nullable.error.com.dtmc.security.UserBean.lastLoginDate,userBean.lastLoginDate.nullable.error.lastLoginDate,userBean.lastLoginDate.nullable.error.java.util.Date,userBean.lastLoginDate.nullable.error,com.dtmc.security.UserBean.lastLoginDate.nullable.com.dtmc.security.UserBean.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.java.util.Date,com.dtmc.security.UserBean.lastLoginDate.nullable,userBean.lastLoginDate.nullable.com.dtmc.security.UserBean.lastLoginDate,userBean.lastLoginDate.nullable.lastLoginDate,userBean.lastLoginDate.nullable.java.util.Date,userBean.lastLoginDate.nullable,nullable.com.dtmc.security.UserBean.lastLoginDate,nullable.lastLoginDate,nullable.java.util.Date,nullable]; arguments [lastLoginDate,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'registerDate': rejected value [null]; codes [com.dtmc.security.UserBean.registerDate.nullable.error.com.dtmc.security.UserBean.registerDate,com.dtmc.security.UserBean.registerDate.nullable.error.registerDate,com.dtmc.security.UserBean.registerDate.nullable.error.java.util.Date,com.dtmc.security.UserBean.registerDate.nullable.error,userBean.registerDate.nullable.error.com.dtmc.security.UserBean.registerDate,userBean.registerDate.nullable.error.registerDate,userBean.registerDate.nullable.error.java.util.Date,userBean.registerDate.nullable.error,com.dtmc.security.UserBean.registerDate.nullable.com.dtmc.security.UserBean.registerDate,com.dtmc.security.UserBean.registerDate.nullable.registerDate,com.dtmc.security.UserBean.registerDate.nullable.java.util.Date,com.dtmc.security.UserBean.registerDate.nullable,userBean.registerDate.nullable.com.dtmc.security.UserBean.registerDate,userBean.registerDate.nullable.registerDate,userBean.registerDate.nullable.java.util.Date,userBean.registerDate.nullable,nullable.com.dtmc.security.UserBean.registerDate,nullable.registerDate,nullable.java.util.Date,nullable]; arguments [registerDate,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:190)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSite.invoke(PojoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+	at org.codehaus.groovy.grails.orm.hibernate.HibernateGormInstanceApi.save(HibernateGormEnhancer.groovy:911)
+	at com.dtmc.security.UserBean.save(UserBean.groovy)
+	at com.dtmc.security.UserBean$save.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:41:02,247 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.dtmc.security.UserBean' on field 'fname': rejected value [null]; codes [com.dtmc.security.UserBean.fname.nullable.error.com.dtmc.security.UserBean.fname,com.dtmc.security.UserBean.fname.nullable.error.fname,com.dtmc.security.UserBean.fname.nullable.error.java.lang.String,com.dtmc.security.UserBean.fname.nullable.error,userBean.fname.nullable.error.com.dtmc.security.UserBean.fname,userBean.fname.nullable.error.fname,userBean.fname.nullable.error.java.lang.String,userBean.fname.nullable.error,com.dtmc.security.UserBean.fname.nullable.com.dtmc.security.UserBean.fname,com.dtmc.security.UserBean.fname.nullable.fname,com.dtmc.security.UserBean.fname.nullable.java.lang.String,com.dtmc.security.UserBean.fname.nullable,userBean.fname.nullable.com.dtmc.security.UserBean.fname,userBean.fname.nullable.fname,userBean.fname.nullable.java.lang.String,userBean.fname.nullable,nullable.com.dtmc.security.UserBean.fname,nullable.fname,nullable.java.lang.String,nullable]; arguments [fname,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'lname': rejected value [null]; codes [com.dtmc.security.UserBean.lname.nullable.error.com.dtmc.security.UserBean.lname,com.dtmc.security.UserBean.lname.nullable.error.lname,com.dtmc.security.UserBean.lname.nullable.error.java.lang.String,com.dtmc.security.UserBean.lname.nullable.error,userBean.lname.nullable.error.com.dtmc.security.UserBean.lname,userBean.lname.nullable.error.lname,userBean.lname.nullable.error.java.lang.String,userBean.lname.nullable.error,com.dtmc.security.UserBean.lname.nullable.com.dtmc.security.UserBean.lname,com.dtmc.security.UserBean.lname.nullable.lname,com.dtmc.security.UserBean.lname.nullable.java.lang.String,com.dtmc.security.UserBean.lname.nullable,userBean.lname.nullable.com.dtmc.security.UserBean.lname,userBean.lname.nullable.lname,userBean.lname.nullable.java.lang.String,userBean.lname.nullable,nullable.com.dtmc.security.UserBean.lname,nullable.lname,nullable.java.lang.String,nullable]; arguments [lname,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'email': rejected value [null]; codes [com.dtmc.security.UserBean.email.nullable.error.com.dtmc.security.UserBean.email,com.dtmc.security.UserBean.email.nullable.error.email,com.dtmc.security.UserBean.email.nullable.error.java.lang.String,com.dtmc.security.UserBean.email.nullable.error,userBean.email.nullable.error.com.dtmc.security.UserBean.email,userBean.email.nullable.error.email,userBean.email.nullable.error.java.lang.String,userBean.email.nullable.error,com.dtmc.security.UserBean.email.nullable.com.dtmc.security.UserBean.email,com.dtmc.security.UserBean.email.nullable.email,com.dtmc.security.UserBean.email.nullable.java.lang.String,com.dtmc.security.UserBean.email.nullable,userBean.email.nullable.com.dtmc.security.UserBean.email,userBean.email.nullable.email,userBean.email.nullable.java.lang.String,userBean.email.nullable,nullable.com.dtmc.security.UserBean.email,nullable.email,nullable.java.lang.String,nullable]; arguments [email,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'phone': rejected value [null]; codes [com.dtmc.security.UserBean.phone.nullable.error.com.dtmc.security.UserBean.phone,com.dtmc.security.UserBean.phone.nullable.error.phone,com.dtmc.security.UserBean.phone.nullable.error.java.lang.String,com.dtmc.security.UserBean.phone.nullable.error,userBean.phone.nullable.error.com.dtmc.security.UserBean.phone,userBean.phone.nullable.error.phone,userBean.phone.nullable.error.java.lang.String,userBean.phone.nullable.error,com.dtmc.security.UserBean.phone.nullable.com.dtmc.security.UserBean.phone,com.dtmc.security.UserBean.phone.nullable.phone,com.dtmc.security.UserBean.phone.nullable.java.lang.String,com.dtmc.security.UserBean.phone.nullable,userBean.phone.nullable.com.dtmc.security.UserBean.phone,userBean.phone.nullable.phone,userBean.phone.nullable.java.lang.String,userBean.phone.nullable,nullable.com.dtmc.security.UserBean.phone,nullable.phone,nullable.java.lang.String,nullable]; arguments [phone,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'mobile': rejected value [null]; codes [com.dtmc.security.UserBean.mobile.nullable.error.com.dtmc.security.UserBean.mobile,com.dtmc.security.UserBean.mobile.nullable.error.mobile,com.dtmc.security.UserBean.mobile.nullable.error.java.lang.String,com.dtmc.security.UserBean.mobile.nullable.error,userBean.mobile.nullable.error.com.dtmc.security.UserBean.mobile,userBean.mobile.nullable.error.mobile,userBean.mobile.nullable.error.java.lang.String,userBean.mobile.nullable.error,com.dtmc.security.UserBean.mobile.nullable.com.dtmc.security.UserBean.mobile,com.dtmc.security.UserBean.mobile.nullable.mobile,com.dtmc.security.UserBean.mobile.nullable.java.lang.String,com.dtmc.security.UserBean.mobile.nullable,userBean.mobile.nullable.com.dtmc.security.UserBean.mobile,userBean.mobile.nullable.mobile,userBean.mobile.nullable.java.lang.String,userBean.mobile.nullable,nullable.com.dtmc.security.UserBean.mobile,nullable.mobile,nullable.java.lang.String,nullable]; arguments [mobile,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'city': rejected value [null]; codes [com.dtmc.security.UserBean.city.nullable.error.com.dtmc.security.UserBean.city,com.dtmc.security.UserBean.city.nullable.error.city,com.dtmc.security.UserBean.city.nullable.error.java.lang.String,com.dtmc.security.UserBean.city.nullable.error,userBean.city.nullable.error.com.dtmc.security.UserBean.city,userBean.city.nullable.error.city,userBean.city.nullable.error.java.lang.String,userBean.city.nullable.error,com.dtmc.security.UserBean.city.nullable.com.dtmc.security.UserBean.city,com.dtmc.security.UserBean.city.nullable.city,com.dtmc.security.UserBean.city.nullable.java.lang.String,com.dtmc.security.UserBean.city.nullable,userBean.city.nullable.com.dtmc.security.UserBean.city,userBean.city.nullable.city,userBean.city.nullable.java.lang.String,userBean.city.nullable,nullable.com.dtmc.security.UserBean.city,nullable.city,nullable.java.lang.String,nullable]; arguments [city,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'state': rejected value [null]; codes [com.dtmc.security.UserBean.state.nullable.error.com.dtmc.security.UserBean.state,com.dtmc.security.UserBean.state.nullable.error.state,com.dtmc.security.UserBean.state.nullable.error.java.lang.String,com.dtmc.security.UserBean.state.nullable.error,userBean.state.nullable.error.com.dtmc.security.UserBean.state,userBean.state.nullable.error.state,userBean.state.nullable.error.java.lang.String,userBean.state.nullable.error,com.dtmc.security.UserBean.state.nullable.com.dtmc.security.UserBean.state,com.dtmc.security.UserBean.state.nullable.state,com.dtmc.security.UserBean.state.nullable.java.lang.String,com.dtmc.security.UserBean.state.nullable,userBean.state.nullable.com.dtmc.security.UserBean.state,userBean.state.nullable.state,userBean.state.nullable.java.lang.String,userBean.state.nullable,nullable.com.dtmc.security.UserBean.state,nullable.state,nullable.java.lang.String,nullable]; arguments [state,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'country': rejected value [null]; codes [com.dtmc.security.UserBean.country.nullable.error.com.dtmc.security.UserBean.country,com.dtmc.security.UserBean.country.nullable.error.country,com.dtmc.security.UserBean.country.nullable.error.java.lang.String,com.dtmc.security.UserBean.country.nullable.error,userBean.country.nullable.error.com.dtmc.security.UserBean.country,userBean.country.nullable.error.country,userBean.country.nullable.error.java.lang.String,userBean.country.nullable.error,com.dtmc.security.UserBean.country.nullable.com.dtmc.security.UserBean.country,com.dtmc.security.UserBean.country.nullable.country,com.dtmc.security.UserBean.country.nullable.java.lang.String,com.dtmc.security.UserBean.country.nullable,userBean.country.nullable.com.dtmc.security.UserBean.country,userBean.country.nullable.country,userBean.country.nullable.java.lang.String,userBean.country.nullable,nullable.com.dtmc.security.UserBean.country,nullable.country,nullable.java.lang.String,nullable]; arguments [country,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'address1': rejected value [null]; codes [com.dtmc.security.UserBean.address1.nullable.error.com.dtmc.security.UserBean.address1,com.dtmc.security.UserBean.address1.nullable.error.address1,com.dtmc.security.UserBean.address1.nullable.error.java.lang.String,com.dtmc.security.UserBean.address1.nullable.error,userBean.address1.nullable.error.com.dtmc.security.UserBean.address1,userBean.address1.nullable.error.address1,userBean.address1.nullable.error.java.lang.String,userBean.address1.nullable.error,com.dtmc.security.UserBean.address1.nullable.com.dtmc.security.UserBean.address1,com.dtmc.security.UserBean.address1.nullable.address1,com.dtmc.security.UserBean.address1.nullable.java.lang.String,com.dtmc.security.UserBean.address1.nullable,userBean.address1.nullable.com.dtmc.security.UserBean.address1,userBean.address1.nullable.address1,userBean.address1.nullable.java.lang.String,userBean.address1.nullable,nullable.com.dtmc.security.UserBean.address1,nullable.address1,nullable.java.lang.String,nullable]; arguments [address1,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'address2': rejected value [null]; codes [com.dtmc.security.UserBean.address2.nullable.error.com.dtmc.security.UserBean.address2,com.dtmc.security.UserBean.address2.nullable.error.address2,com.dtmc.security.UserBean.address2.nullable.error.java.lang.String,com.dtmc.security.UserBean.address2.nullable.error,userBean.address2.nullable.error.com.dtmc.security.UserBean.address2,userBean.address2.nullable.error.address2,userBean.address2.nullable.error.java.lang.String,userBean.address2.nullable.error,com.dtmc.security.UserBean.address2.nullable.com.dtmc.security.UserBean.address2,com.dtmc.security.UserBean.address2.nullable.address2,com.dtmc.security.UserBean.address2.nullable.java.lang.String,com.dtmc.security.UserBean.address2.nullable,userBean.address2.nullable.com.dtmc.security.UserBean.address2,userBean.address2.nullable.address2,userBean.address2.nullable.java.lang.String,userBean.address2.nullable,nullable.com.dtmc.security.UserBean.address2,nullable.address2,nullable.java.lang.String,nullable]; arguments [address2,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'company': rejected value [null]; codes [com.dtmc.security.UserBean.company.nullable.error.com.dtmc.security.UserBean.company,com.dtmc.security.UserBean.company.nullable.error.company,com.dtmc.security.UserBean.company.nullable.error.java.lang.String,com.dtmc.security.UserBean.company.nullable.error,userBean.company.nullable.error.com.dtmc.security.UserBean.company,userBean.company.nullable.error.company,userBean.company.nullable.error.java.lang.String,userBean.company.nullable.error,com.dtmc.security.UserBean.company.nullable.com.dtmc.security.UserBean.company,com.dtmc.security.UserBean.company.nullable.company,com.dtmc.security.UserBean.company.nullable.java.lang.String,com.dtmc.security.UserBean.company.nullable,userBean.company.nullable.com.dtmc.security.UserBean.company,userBean.company.nullable.company,userBean.company.nullable.java.lang.String,userBean.company.nullable,nullable.com.dtmc.security.UserBean.company,nullable.company,nullable.java.lang.String,nullable]; arguments [company,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'lastLoginDate': rejected value [null]; codes [com.dtmc.security.UserBean.lastLoginDate.nullable.error.com.dtmc.security.UserBean.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.error.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.error.java.util.Date,com.dtmc.security.UserBean.lastLoginDate.nullable.error,userBean.lastLoginDate.nullable.error.com.dtmc.security.UserBean.lastLoginDate,userBean.lastLoginDate.nullable.error.lastLoginDate,userBean.lastLoginDate.nullable.error.java.util.Date,userBean.lastLoginDate.nullable.error,com.dtmc.security.UserBean.lastLoginDate.nullable.com.dtmc.security.UserBean.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.java.util.Date,com.dtmc.security.UserBean.lastLoginDate.nullable,userBean.lastLoginDate.nullable.com.dtmc.security.UserBean.lastLoginDate,userBean.lastLoginDate.nullable.lastLoginDate,userBean.lastLoginDate.nullable.java.util.Date,userBean.lastLoginDate.nullable,nullable.com.dtmc.security.UserBean.lastLoginDate,nullable.lastLoginDate,nullable.java.util.Date,nullable]; arguments [lastLoginDate,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'registerDate': rejected value [null]; codes [com.dtmc.security.UserBean.registerDate.nullable.error.com.dtmc.security.UserBean.registerDate,com.dtmc.security.UserBean.registerDate.nullable.error.registerDate,com.dtmc.security.UserBean.registerDate.nullable.error.java.util.Date,com.dtmc.security.UserBean.registerDate.nullable.error,userBean.registerDate.nullable.error.com.dtmc.security.UserBean.registerDate,userBean.registerDate.nullable.error.registerDate,userBean.registerDate.nullable.error.java.util.Date,userBean.registerDate.nullable.error,com.dtmc.security.UserBean.registerDate.nullable.com.dtmc.security.UserBean.registerDate,com.dtmc.security.UserBean.registerDate.nullable.registerDate,com.dtmc.security.UserBean.registerDate.nullable.java.util.Date,com.dtmc.security.UserBean.registerDate.nullable,userBean.registerDate.nullable.com.dtmc.security.UserBean.registerDate,userBean.registerDate.nullable.registerDate,userBean.registerDate.nullable.java.util.Date,userBean.registerDate.nullable,nullable.com.dtmc.security.UserBean.registerDate,nullable.registerDate,nullable.java.util.Date,nullable]; arguments [registerDate,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:41:02,247 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.dtmc.security.UserBean' on field 'fname': rejected value [null]; codes [com.dtmc.security.UserBean.fname.nullable.error.com.dtmc.security.UserBean.fname,com.dtmc.security.UserBean.fname.nullable.error.fname,com.dtmc.security.UserBean.fname.nullable.error.java.lang.String,com.dtmc.security.UserBean.fname.nullable.error,userBean.fname.nullable.error.com.dtmc.security.UserBean.fname,userBean.fname.nullable.error.fname,userBean.fname.nullable.error.java.lang.String,userBean.fname.nullable.error,com.dtmc.security.UserBean.fname.nullable.com.dtmc.security.UserBean.fname,com.dtmc.security.UserBean.fname.nullable.fname,com.dtmc.security.UserBean.fname.nullable.java.lang.String,com.dtmc.security.UserBean.fname.nullable,userBean.fname.nullable.com.dtmc.security.UserBean.fname,userBean.fname.nullable.fname,userBean.fname.nullable.java.lang.String,userBean.fname.nullable,nullable.com.dtmc.security.UserBean.fname,nullable.fname,nullable.java.lang.String,nullable]; arguments [fname,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'lname': rejected value [null]; codes [com.dtmc.security.UserBean.lname.nullable.error.com.dtmc.security.UserBean.lname,com.dtmc.security.UserBean.lname.nullable.error.lname,com.dtmc.security.UserBean.lname.nullable.error.java.lang.String,com.dtmc.security.UserBean.lname.nullable.error,userBean.lname.nullable.error.com.dtmc.security.UserBean.lname,userBean.lname.nullable.error.lname,userBean.lname.nullable.error.java.lang.String,userBean.lname.nullable.error,com.dtmc.security.UserBean.lname.nullable.com.dtmc.security.UserBean.lname,com.dtmc.security.UserBean.lname.nullable.lname,com.dtmc.security.UserBean.lname.nullable.java.lang.String,com.dtmc.security.UserBean.lname.nullable,userBean.lname.nullable.com.dtmc.security.UserBean.lname,userBean.lname.nullable.lname,userBean.lname.nullable.java.lang.String,userBean.lname.nullable,nullable.com.dtmc.security.UserBean.lname,nullable.lname,nullable.java.lang.String,nullable]; arguments [lname,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'email': rejected value [null]; codes [com.dtmc.security.UserBean.email.nullable.error.com.dtmc.security.UserBean.email,com.dtmc.security.UserBean.email.nullable.error.email,com.dtmc.security.UserBean.email.nullable.error.java.lang.String,com.dtmc.security.UserBean.email.nullable.error,userBean.email.nullable.error.com.dtmc.security.UserBean.email,userBean.email.nullable.error.email,userBean.email.nullable.error.java.lang.String,userBean.email.nullable.error,com.dtmc.security.UserBean.email.nullable.com.dtmc.security.UserBean.email,com.dtmc.security.UserBean.email.nullable.email,com.dtmc.security.UserBean.email.nullable.java.lang.String,com.dtmc.security.UserBean.email.nullable,userBean.email.nullable.com.dtmc.security.UserBean.email,userBean.email.nullable.email,userBean.email.nullable.java.lang.String,userBean.email.nullable,nullable.com.dtmc.security.UserBean.email,nullable.email,nullable.java.lang.String,nullable]; arguments [email,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'phone': rejected value [null]; codes [com.dtmc.security.UserBean.phone.nullable.error.com.dtmc.security.UserBean.phone,com.dtmc.security.UserBean.phone.nullable.error.phone,com.dtmc.security.UserBean.phone.nullable.error.java.lang.String,com.dtmc.security.UserBean.phone.nullable.error,userBean.phone.nullable.error.com.dtmc.security.UserBean.phone,userBean.phone.nullable.error.phone,userBean.phone.nullable.error.java.lang.String,userBean.phone.nullable.error,com.dtmc.security.UserBean.phone.nullable.com.dtmc.security.UserBean.phone,com.dtmc.security.UserBean.phone.nullable.phone,com.dtmc.security.UserBean.phone.nullable.java.lang.String,com.dtmc.security.UserBean.phone.nullable,userBean.phone.nullable.com.dtmc.security.UserBean.phone,userBean.phone.nullable.phone,userBean.phone.nullable.java.lang.String,userBean.phone.nullable,nullable.com.dtmc.security.UserBean.phone,nullable.phone,nullable.java.lang.String,nullable]; arguments [phone,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'mobile': rejected value [null]; codes [com.dtmc.security.UserBean.mobile.nullable.error.com.dtmc.security.UserBean.mobile,com.dtmc.security.UserBean.mobile.nullable.error.mobile,com.dtmc.security.UserBean.mobile.nullable.error.java.lang.String,com.dtmc.security.UserBean.mobile.nullable.error,userBean.mobile.nullable.error.com.dtmc.security.UserBean.mobile,userBean.mobile.nullable.error.mobile,userBean.mobile.nullable.error.java.lang.String,userBean.mobile.nullable.error,com.dtmc.security.UserBean.mobile.nullable.com.dtmc.security.UserBean.mobile,com.dtmc.security.UserBean.mobile.nullable.mobile,com.dtmc.security.UserBean.mobile.nullable.java.lang.String,com.dtmc.security.UserBean.mobile.nullable,userBean.mobile.nullable.com.dtmc.security.UserBean.mobile,userBean.mobile.nullable.mobile,userBean.mobile.nullable.java.lang.String,userBean.mobile.nullable,nullable.com.dtmc.security.UserBean.mobile,nullable.mobile,nullable.java.lang.String,nullable]; arguments [mobile,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'city': rejected value [null]; codes [com.dtmc.security.UserBean.city.nullable.error.com.dtmc.security.UserBean.city,com.dtmc.security.UserBean.city.nullable.error.city,com.dtmc.security.UserBean.city.nullable.error.java.lang.String,com.dtmc.security.UserBean.city.nullable.error,userBean.city.nullable.error.com.dtmc.security.UserBean.city,userBean.city.nullable.error.city,userBean.city.nullable.error.java.lang.String,userBean.city.nullable.error,com.dtmc.security.UserBean.city.nullable.com.dtmc.security.UserBean.city,com.dtmc.security.UserBean.city.nullable.city,com.dtmc.security.UserBean.city.nullable.java.lang.String,com.dtmc.security.UserBean.city.nullable,userBean.city.nullable.com.dtmc.security.UserBean.city,userBean.city.nullable.city,userBean.city.nullable.java.lang.String,userBean.city.nullable,nullable.com.dtmc.security.UserBean.city,nullable.city,nullable.java.lang.String,nullable]; arguments [city,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'state': rejected value [null]; codes [com.dtmc.security.UserBean.state.nullable.error.com.dtmc.security.UserBean.state,com.dtmc.security.UserBean.state.nullable.error.state,com.dtmc.security.UserBean.state.nullable.error.java.lang.String,com.dtmc.security.UserBean.state.nullable.error,userBean.state.nullable.error.com.dtmc.security.UserBean.state,userBean.state.nullable.error.state,userBean.state.nullable.error.java.lang.String,userBean.state.nullable.error,com.dtmc.security.UserBean.state.nullable.com.dtmc.security.UserBean.state,com.dtmc.security.UserBean.state.nullable.state,com.dtmc.security.UserBean.state.nullable.java.lang.String,com.dtmc.security.UserBean.state.nullable,userBean.state.nullable.com.dtmc.security.UserBean.state,userBean.state.nullable.state,userBean.state.nullable.java.lang.String,userBean.state.nullable,nullable.com.dtmc.security.UserBean.state,nullable.state,nullable.java.lang.String,nullable]; arguments [state,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'country': rejected value [null]; codes [com.dtmc.security.UserBean.country.nullable.error.com.dtmc.security.UserBean.country,com.dtmc.security.UserBean.country.nullable.error.country,com.dtmc.security.UserBean.country.nullable.error.java.lang.String,com.dtmc.security.UserBean.country.nullable.error,userBean.country.nullable.error.com.dtmc.security.UserBean.country,userBean.country.nullable.error.country,userBean.country.nullable.error.java.lang.String,userBean.country.nullable.error,com.dtmc.security.UserBean.country.nullable.com.dtmc.security.UserBean.country,com.dtmc.security.UserBean.country.nullable.country,com.dtmc.security.UserBean.country.nullable.java.lang.String,com.dtmc.security.UserBean.country.nullable,userBean.country.nullable.com.dtmc.security.UserBean.country,userBean.country.nullable.country,userBean.country.nullable.java.lang.String,userBean.country.nullable,nullable.com.dtmc.security.UserBean.country,nullable.country,nullable.java.lang.String,nullable]; arguments [country,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'address1': rejected value [null]; codes [com.dtmc.security.UserBean.address1.nullable.error.com.dtmc.security.UserBean.address1,com.dtmc.security.UserBean.address1.nullable.error.address1,com.dtmc.security.UserBean.address1.nullable.error.java.lang.String,com.dtmc.security.UserBean.address1.nullable.error,userBean.address1.nullable.error.com.dtmc.security.UserBean.address1,userBean.address1.nullable.error.address1,userBean.address1.nullable.error.java.lang.String,userBean.address1.nullable.error,com.dtmc.security.UserBean.address1.nullable.com.dtmc.security.UserBean.address1,com.dtmc.security.UserBean.address1.nullable.address1,com.dtmc.security.UserBean.address1.nullable.java.lang.String,com.dtmc.security.UserBean.address1.nullable,userBean.address1.nullable.com.dtmc.security.UserBean.address1,userBean.address1.nullable.address1,userBean.address1.nullable.java.lang.String,userBean.address1.nullable,nullable.com.dtmc.security.UserBean.address1,nullable.address1,nullable.java.lang.String,nullable]; arguments [address1,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'address2': rejected value [null]; codes [com.dtmc.security.UserBean.address2.nullable.error.com.dtmc.security.UserBean.address2,com.dtmc.security.UserBean.address2.nullable.error.address2,com.dtmc.security.UserBean.address2.nullable.error.java.lang.String,com.dtmc.security.UserBean.address2.nullable.error,userBean.address2.nullable.error.com.dtmc.security.UserBean.address2,userBean.address2.nullable.error.address2,userBean.address2.nullable.error.java.lang.String,userBean.address2.nullable.error,com.dtmc.security.UserBean.address2.nullable.com.dtmc.security.UserBean.address2,com.dtmc.security.UserBean.address2.nullable.address2,com.dtmc.security.UserBean.address2.nullable.java.lang.String,com.dtmc.security.UserBean.address2.nullable,userBean.address2.nullable.com.dtmc.security.UserBean.address2,userBean.address2.nullable.address2,userBean.address2.nullable.java.lang.String,userBean.address2.nullable,nullable.com.dtmc.security.UserBean.address2,nullable.address2,nullable.java.lang.String,nullable]; arguments [address2,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'company': rejected value [null]; codes [com.dtmc.security.UserBean.company.nullable.error.com.dtmc.security.UserBean.company,com.dtmc.security.UserBean.company.nullable.error.company,com.dtmc.security.UserBean.company.nullable.error.java.lang.String,com.dtmc.security.UserBean.company.nullable.error,userBean.company.nullable.error.com.dtmc.security.UserBean.company,userBean.company.nullable.error.company,userBean.company.nullable.error.java.lang.String,userBean.company.nullable.error,com.dtmc.security.UserBean.company.nullable.com.dtmc.security.UserBean.company,com.dtmc.security.UserBean.company.nullable.company,com.dtmc.security.UserBean.company.nullable.java.lang.String,com.dtmc.security.UserBean.company.nullable,userBean.company.nullable.com.dtmc.security.UserBean.company,userBean.company.nullable.company,userBean.company.nullable.java.lang.String,userBean.company.nullable,nullable.com.dtmc.security.UserBean.company,nullable.company,nullable.java.lang.String,nullable]; arguments [company,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'lastLoginDate': rejected value [null]; codes [com.dtmc.security.UserBean.lastLoginDate.nullable.error.com.dtmc.security.UserBean.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.error.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.error.java.util.Date,com.dtmc.security.UserBean.lastLoginDate.nullable.error,userBean.lastLoginDate.nullable.error.com.dtmc.security.UserBean.lastLoginDate,userBean.lastLoginDate.nullable.error.lastLoginDate,userBean.lastLoginDate.nullable.error.java.util.Date,userBean.lastLoginDate.nullable.error,com.dtmc.security.UserBean.lastLoginDate.nullable.com.dtmc.security.UserBean.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.java.util.Date,com.dtmc.security.UserBean.lastLoginDate.nullable,userBean.lastLoginDate.nullable.com.dtmc.security.UserBean.lastLoginDate,userBean.lastLoginDate.nullable.lastLoginDate,userBean.lastLoginDate.nullable.java.util.Date,userBean.lastLoginDate.nullable,nullable.com.dtmc.security.UserBean.lastLoginDate,nullable.lastLoginDate,nullable.java.util.Date,nullable]; arguments [lastLoginDate,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'registerDate': rejected value [null]; codes [com.dtmc.security.UserBean.registerDate.nullable.error.com.dtmc.security.UserBean.registerDate,com.dtmc.security.UserBean.registerDate.nullable.error.registerDate,com.dtmc.security.UserBean.registerDate.nullable.error.java.util.Date,com.dtmc.security.UserBean.registerDate.nullable.error,userBean.registerDate.nullable.error.com.dtmc.security.UserBean.registerDate,userBean.registerDate.nullable.error.registerDate,userBean.registerDate.nullable.error.java.util.Date,userBean.registerDate.nullable.error,com.dtmc.security.UserBean.registerDate.nullable.com.dtmc.security.UserBean.registerDate,com.dtmc.security.UserBean.registerDate.nullable.registerDate,com.dtmc.security.UserBean.registerDate.nullable.java.util.Date,com.dtmc.security.UserBean.registerDate.nullable,userBean.registerDate.nullable.com.dtmc.security.UserBean.registerDate,userBean.registerDate.nullable.registerDate,userBean.registerDate.nullable.java.util.Date,userBean.registerDate.nullable,nullable.com.dtmc.security.UserBean.registerDate,nullable.registerDate,nullable.java.util.Date,nullable]; arguments [registerDate,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 18:41:02,248 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.dtmc.security.UserBean' on field 'fname': rejected value [null]; codes [com.dtmc.security.UserBean.fname.nullable.error.com.dtmc.security.UserBean.fname,com.dtmc.security.UserBean.fname.nullable.error.fname,com.dtmc.security.UserBean.fname.nullable.error.java.lang.String,com.dtmc.security.UserBean.fname.nullable.error,userBean.fname.nullable.error.com.dtmc.security.UserBean.fname,userBean.fname.nullable.error.fname,userBean.fname.nullable.error.java.lang.String,userBean.fname.nullable.error,com.dtmc.security.UserBean.fname.nullable.com.dtmc.security.UserBean.fname,com.dtmc.security.UserBean.fname.nullable.fname,com.dtmc.security.UserBean.fname.nullable.java.lang.String,com.dtmc.security.UserBean.fname.nullable,userBean.fname.nullable.com.dtmc.security.UserBean.fname,userBean.fname.nullable.fname,userBean.fname.nullable.java.lang.String,userBean.fname.nullable,nullable.com.dtmc.security.UserBean.fname,nullable.fname,nullable.java.lang.String,nullable]; arguments [fname,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'lname': rejected value [null]; codes [com.dtmc.security.UserBean.lname.nullable.error.com.dtmc.security.UserBean.lname,com.dtmc.security.UserBean.lname.nullable.error.lname,com.dtmc.security.UserBean.lname.nullable.error.java.lang.String,com.dtmc.security.UserBean.lname.nullable.error,userBean.lname.nullable.error.com.dtmc.security.UserBean.lname,userBean.lname.nullable.error.lname,userBean.lname.nullable.error.java.lang.String,userBean.lname.nullable.error,com.dtmc.security.UserBean.lname.nullable.com.dtmc.security.UserBean.lname,com.dtmc.security.UserBean.lname.nullable.lname,com.dtmc.security.UserBean.lname.nullable.java.lang.String,com.dtmc.security.UserBean.lname.nullable,userBean.lname.nullable.com.dtmc.security.UserBean.lname,userBean.lname.nullable.lname,userBean.lname.nullable.java.lang.String,userBean.lname.nullable,nullable.com.dtmc.security.UserBean.lname,nullable.lname,nullable.java.lang.String,nullable]; arguments [lname,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'email': rejected value [null]; codes [com.dtmc.security.UserBean.email.nullable.error.com.dtmc.security.UserBean.email,com.dtmc.security.UserBean.email.nullable.error.email,com.dtmc.security.UserBean.email.nullable.error.java.lang.String,com.dtmc.security.UserBean.email.nullable.error,userBean.email.nullable.error.com.dtmc.security.UserBean.email,userBean.email.nullable.error.email,userBean.email.nullable.error.java.lang.String,userBean.email.nullable.error,com.dtmc.security.UserBean.email.nullable.com.dtmc.security.UserBean.email,com.dtmc.security.UserBean.email.nullable.email,com.dtmc.security.UserBean.email.nullable.java.lang.String,com.dtmc.security.UserBean.email.nullable,userBean.email.nullable.com.dtmc.security.UserBean.email,userBean.email.nullable.email,userBean.email.nullable.java.lang.String,userBean.email.nullable,nullable.com.dtmc.security.UserBean.email,nullable.email,nullable.java.lang.String,nullable]; arguments [email,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'phone': rejected value [null]; codes [com.dtmc.security.UserBean.phone.nullable.error.com.dtmc.security.UserBean.phone,com.dtmc.security.UserBean.phone.nullable.error.phone,com.dtmc.security.UserBean.phone.nullable.error.java.lang.String,com.dtmc.security.UserBean.phone.nullable.error,userBean.phone.nullable.error.com.dtmc.security.UserBean.phone,userBean.phone.nullable.error.phone,userBean.phone.nullable.error.java.lang.String,userBean.phone.nullable.error,com.dtmc.security.UserBean.phone.nullable.com.dtmc.security.UserBean.phone,com.dtmc.security.UserBean.phone.nullable.phone,com.dtmc.security.UserBean.phone.nullable.java.lang.String,com.dtmc.security.UserBean.phone.nullable,userBean.phone.nullable.com.dtmc.security.UserBean.phone,userBean.phone.nullable.phone,userBean.phone.nullable.java.lang.String,userBean.phone.nullable,nullable.com.dtmc.security.UserBean.phone,nullable.phone,nullable.java.lang.String,nullable]; arguments [phone,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'mobile': rejected value [null]; codes [com.dtmc.security.UserBean.mobile.nullable.error.com.dtmc.security.UserBean.mobile,com.dtmc.security.UserBean.mobile.nullable.error.mobile,com.dtmc.security.UserBean.mobile.nullable.error.java.lang.String,com.dtmc.security.UserBean.mobile.nullable.error,userBean.mobile.nullable.error.com.dtmc.security.UserBean.mobile,userBean.mobile.nullable.error.mobile,userBean.mobile.nullable.error.java.lang.String,userBean.mobile.nullable.error,com.dtmc.security.UserBean.mobile.nullable.com.dtmc.security.UserBean.mobile,com.dtmc.security.UserBean.mobile.nullable.mobile,com.dtmc.security.UserBean.mobile.nullable.java.lang.String,com.dtmc.security.UserBean.mobile.nullable,userBean.mobile.nullable.com.dtmc.security.UserBean.mobile,userBean.mobile.nullable.mobile,userBean.mobile.nullable.java.lang.String,userBean.mobile.nullable,nullable.com.dtmc.security.UserBean.mobile,nullable.mobile,nullable.java.lang.String,nullable]; arguments [mobile,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'city': rejected value [null]; codes [com.dtmc.security.UserBean.city.nullable.error.com.dtmc.security.UserBean.city,com.dtmc.security.UserBean.city.nullable.error.city,com.dtmc.security.UserBean.city.nullable.error.java.lang.String,com.dtmc.security.UserBean.city.nullable.error,userBean.city.nullable.error.com.dtmc.security.UserBean.city,userBean.city.nullable.error.city,userBean.city.nullable.error.java.lang.String,userBean.city.nullable.error,com.dtmc.security.UserBean.city.nullable.com.dtmc.security.UserBean.city,com.dtmc.security.UserBean.city.nullable.city,com.dtmc.security.UserBean.city.nullable.java.lang.String,com.dtmc.security.UserBean.city.nullable,userBean.city.nullable.com.dtmc.security.UserBean.city,userBean.city.nullable.city,userBean.city.nullable.java.lang.String,userBean.city.nullable,nullable.com.dtmc.security.UserBean.city,nullable.city,nullable.java.lang.String,nullable]; arguments [city,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'state': rejected value [null]; codes [com.dtmc.security.UserBean.state.nullable.error.com.dtmc.security.UserBean.state,com.dtmc.security.UserBean.state.nullable.error.state,com.dtmc.security.UserBean.state.nullable.error.java.lang.String,com.dtmc.security.UserBean.state.nullable.error,userBean.state.nullable.error.com.dtmc.security.UserBean.state,userBean.state.nullable.error.state,userBean.state.nullable.error.java.lang.String,userBean.state.nullable.error,com.dtmc.security.UserBean.state.nullable.com.dtmc.security.UserBean.state,com.dtmc.security.UserBean.state.nullable.state,com.dtmc.security.UserBean.state.nullable.java.lang.String,com.dtmc.security.UserBean.state.nullable,userBean.state.nullable.com.dtmc.security.UserBean.state,userBean.state.nullable.state,userBean.state.nullable.java.lang.String,userBean.state.nullable,nullable.com.dtmc.security.UserBean.state,nullable.state,nullable.java.lang.String,nullable]; arguments [state,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'country': rejected value [null]; codes [com.dtmc.security.UserBean.country.nullable.error.com.dtmc.security.UserBean.country,com.dtmc.security.UserBean.country.nullable.error.country,com.dtmc.security.UserBean.country.nullable.error.java.lang.String,com.dtmc.security.UserBean.country.nullable.error,userBean.country.nullable.error.com.dtmc.security.UserBean.country,userBean.country.nullable.error.country,userBean.country.nullable.error.java.lang.String,userBean.country.nullable.error,com.dtmc.security.UserBean.country.nullable.com.dtmc.security.UserBean.country,com.dtmc.security.UserBean.country.nullable.country,com.dtmc.security.UserBean.country.nullable.java.lang.String,com.dtmc.security.UserBean.country.nullable,userBean.country.nullable.com.dtmc.security.UserBean.country,userBean.country.nullable.country,userBean.country.nullable.java.lang.String,userBean.country.nullable,nullable.com.dtmc.security.UserBean.country,nullable.country,nullable.java.lang.String,nullable]; arguments [country,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'address1': rejected value [null]; codes [com.dtmc.security.UserBean.address1.nullable.error.com.dtmc.security.UserBean.address1,com.dtmc.security.UserBean.address1.nullable.error.address1,com.dtmc.security.UserBean.address1.nullable.error.java.lang.String,com.dtmc.security.UserBean.address1.nullable.error,userBean.address1.nullable.error.com.dtmc.security.UserBean.address1,userBean.address1.nullable.error.address1,userBean.address1.nullable.error.java.lang.String,userBean.address1.nullable.error,com.dtmc.security.UserBean.address1.nullable.com.dtmc.security.UserBean.address1,com.dtmc.security.UserBean.address1.nullable.address1,com.dtmc.security.UserBean.address1.nullable.java.lang.String,com.dtmc.security.UserBean.address1.nullable,userBean.address1.nullable.com.dtmc.security.UserBean.address1,userBean.address1.nullable.address1,userBean.address1.nullable.java.lang.String,userBean.address1.nullable,nullable.com.dtmc.security.UserBean.address1,nullable.address1,nullable.java.lang.String,nullable]; arguments [address1,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'address2': rejected value [null]; codes [com.dtmc.security.UserBean.address2.nullable.error.com.dtmc.security.UserBean.address2,com.dtmc.security.UserBean.address2.nullable.error.address2,com.dtmc.security.UserBean.address2.nullable.error.java.lang.String,com.dtmc.security.UserBean.address2.nullable.error,userBean.address2.nullable.error.com.dtmc.security.UserBean.address2,userBean.address2.nullable.error.address2,userBean.address2.nullable.error.java.lang.String,userBean.address2.nullable.error,com.dtmc.security.UserBean.address2.nullable.com.dtmc.security.UserBean.address2,com.dtmc.security.UserBean.address2.nullable.address2,com.dtmc.security.UserBean.address2.nullable.java.lang.String,com.dtmc.security.UserBean.address2.nullable,userBean.address2.nullable.com.dtmc.security.UserBean.address2,userBean.address2.nullable.address2,userBean.address2.nullable.java.lang.String,userBean.address2.nullable,nullable.com.dtmc.security.UserBean.address2,nullable.address2,nullable.java.lang.String,nullable]; arguments [address2,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'company': rejected value [null]; codes [com.dtmc.security.UserBean.company.nullable.error.com.dtmc.security.UserBean.company,com.dtmc.security.UserBean.company.nullable.error.company,com.dtmc.security.UserBean.company.nullable.error.java.lang.String,com.dtmc.security.UserBean.company.nullable.error,userBean.company.nullable.error.com.dtmc.security.UserBean.company,userBean.company.nullable.error.company,userBean.company.nullable.error.java.lang.String,userBean.company.nullable.error,com.dtmc.security.UserBean.company.nullable.com.dtmc.security.UserBean.company,com.dtmc.security.UserBean.company.nullable.company,com.dtmc.security.UserBean.company.nullable.java.lang.String,com.dtmc.security.UserBean.company.nullable,userBean.company.nullable.com.dtmc.security.UserBean.company,userBean.company.nullable.company,userBean.company.nullable.java.lang.String,userBean.company.nullable,nullable.com.dtmc.security.UserBean.company,nullable.company,nullable.java.lang.String,nullable]; arguments [company,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'lastLoginDate': rejected value [null]; codes [com.dtmc.security.UserBean.lastLoginDate.nullable.error.com.dtmc.security.UserBean.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.error.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.error.java.util.Date,com.dtmc.security.UserBean.lastLoginDate.nullable.error,userBean.lastLoginDate.nullable.error.com.dtmc.security.UserBean.lastLoginDate,userBean.lastLoginDate.nullable.error.lastLoginDate,userBean.lastLoginDate.nullable.error.java.util.Date,userBean.lastLoginDate.nullable.error,com.dtmc.security.UserBean.lastLoginDate.nullable.com.dtmc.security.UserBean.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.lastLoginDate,com.dtmc.security.UserBean.lastLoginDate.nullable.java.util.Date,com.dtmc.security.UserBean.lastLoginDate.nullable,userBean.lastLoginDate.nullable.com.dtmc.security.UserBean.lastLoginDate,userBean.lastLoginDate.nullable.lastLoginDate,userBean.lastLoginDate.nullable.java.util.Date,userBean.lastLoginDate.nullable,nullable.com.dtmc.security.UserBean.lastLoginDate,nullable.lastLoginDate,nullable.java.util.Date,nullable]; arguments [lastLoginDate,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+- Field error in object 'com.dtmc.security.UserBean' on field 'registerDate': rejected value [null]; codes [com.dtmc.security.UserBean.registerDate.nullable.error.com.dtmc.security.UserBean.registerDate,com.dtmc.security.UserBean.registerDate.nullable.error.registerDate,com.dtmc.security.UserBean.registerDate.nullable.error.java.util.Date,com.dtmc.security.UserBean.registerDate.nullable.error,userBean.registerDate.nullable.error.com.dtmc.security.UserBean.registerDate,userBean.registerDate.nullable.error.registerDate,userBean.registerDate.nullable.error.java.util.Date,userBean.registerDate.nullable.error,com.dtmc.security.UserBean.registerDate.nullable.com.dtmc.security.UserBean.registerDate,com.dtmc.security.UserBean.registerDate.nullable.registerDate,com.dtmc.security.UserBean.registerDate.nullable.java.util.Date,com.dtmc.security.UserBean.registerDate.nullable,userBean.registerDate.nullable.com.dtmc.security.UserBean.registerDate,userBean.registerDate.nullable.registerDate,userBean.registerDate.nullable.java.util.Date,userBean.registerDate.nullable,nullable.com.dtmc.security.UserBean.registerDate,nullable.registerDate,nullable.java.util.Date,nullable]; arguments [registerDate,class com.dtmc.security.UserBean]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 22:27:45,993 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.dtmc.security.UserBean' on field 'username': rejected value [superuser]; codes [com.dtmc.security.UserBean.username.unique.error.com.dtmc.security.UserBean.username,com.dtmc.security.UserBean.username.unique.error.username,com.dtmc.security.UserBean.username.unique.error.java.lang.String,com.dtmc.security.UserBean.username.unique.error,userBean.username.unique.error.com.dtmc.security.UserBean.username,userBean.username.unique.error.username,userBean.username.unique.error.java.lang.String,userBean.username.unique.error,com.dtmc.security.UserBean.username.unique.com.dtmc.security.UserBean.username,com.dtmc.security.UserBean.username.unique.username,com.dtmc.security.UserBean.username.unique.java.lang.String,com.dtmc.security.UserBean.username.unique,userBean.username.unique.com.dtmc.security.UserBean.username,userBean.username.unique.username,userBean.username.unique.java.lang.String,userBean.username.unique,unique.com.dtmc.security.UserBean.username,unique.username,unique.java.lang.String,unique]; arguments [username,class com.dtmc.security.UserBean,superuser]; default message [Property [{0}] of class [{1}] with value [{2}] must be unique]
+
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractSavePersistentMethod.doInvokeInternal(AbstractSavePersistentMethod.java:190)
+	at org.codehaus.groovy.grails.orm.hibernate.metaclass.AbstractDynamicPersistentMethod.invoke(AbstractDynamicPersistentMethod.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoCachedMethodSite.invoke(PojoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
+	at org.codehaus.groovy.grails.orm.hibernate.HibernateGormInstanceApi.save(HibernateGormEnhancer.groovy:911)
+	at com.dtmc.security.UserBean.save(UserBean.groovy)
+	at com.dtmc.security.UserBean$save.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap.this$2$createData(BootStrap.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1243)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 22:27:45,996 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.dtmc.security.UserBean' on field 'username': rejected value [superuser]; codes [com.dtmc.security.UserBean.username.unique.error.com.dtmc.security.UserBean.username,com.dtmc.security.UserBean.username.unique.error.username,com.dtmc.security.UserBean.username.unique.error.java.lang.String,com.dtmc.security.UserBean.username.unique.error,userBean.username.unique.error.com.dtmc.security.UserBean.username,userBean.username.unique.error.username,userBean.username.unique.error.java.lang.String,userBean.username.unique.error,com.dtmc.security.UserBean.username.unique.com.dtmc.security.UserBean.username,com.dtmc.security.UserBean.username.unique.username,com.dtmc.security.UserBean.username.unique.java.lang.String,com.dtmc.security.UserBean.username.unique,userBean.username.unique.com.dtmc.security.UserBean.username,userBean.username.unique.username,userBean.username.unique.java.lang.String,userBean.username.unique,unique.com.dtmc.security.UserBean.username,unique.username,unique.java.lang.String,unique]; arguments [username,class com.dtmc.security.UserBean,superuser]; default message [Property [{0}] of class [{1}] with value [{2}] must be unique]
+
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 22:27:45,997 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.dtmc.security.UserBean' on field 'username': rejected value [superuser]; codes [com.dtmc.security.UserBean.username.unique.error.com.dtmc.security.UserBean.username,com.dtmc.security.UserBean.username.unique.error.username,com.dtmc.security.UserBean.username.unique.error.java.lang.String,com.dtmc.security.UserBean.username.unique.error,userBean.username.unique.error.com.dtmc.security.UserBean.username,userBean.username.unique.error.username,userBean.username.unique.error.java.lang.String,userBean.username.unique.error,com.dtmc.security.UserBean.username.unique.com.dtmc.security.UserBean.username,com.dtmc.security.UserBean.username.unique.username,com.dtmc.security.UserBean.username.unique.java.lang.String,com.dtmc.security.UserBean.username.unique,userBean.username.unique.com.dtmc.security.UserBean.username,userBean.username.unique.username,userBean.username.unique.java.lang.String,userBean.username.unique,unique.com.dtmc.security.UserBean.username,unique.username,unique.java.lang.String,unique]; arguments [username,class com.dtmc.security.UserBean,superuser]; default message [Property [{0}] of class [{1}] with value [{2}] must be unique]
+
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+2013-06-15 22:27:45,997 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'com.dtmc.security.UserBean' on field 'username': rejected value [superuser]; codes [com.dtmc.security.UserBean.username.unique.error.com.dtmc.security.UserBean.username,com.dtmc.security.UserBean.username.unique.error.username,com.dtmc.security.UserBean.username.unique.error.java.lang.String,com.dtmc.security.UserBean.username.unique.error,userBean.username.unique.error.com.dtmc.security.UserBean.username,userBean.username.unique.error.username,userBean.username.unique.error.java.lang.String,userBean.username.unique.error,com.dtmc.security.UserBean.username.unique.com.dtmc.security.UserBean.username,com.dtmc.security.UserBean.username.unique.username,com.dtmc.security.UserBean.username.unique.java.lang.String,com.dtmc.security.UserBean.username.unique,userBean.username.unique.com.dtmc.security.UserBean.username,userBean.username.unique.username,userBean.username.unique.java.lang.String,userBean.username.unique,unique.com.dtmc.security.UserBean.username,unique.username,unique.java.lang.String,unique]; arguments [username,class com.dtmc.security.UserBean,superuser]; default message [Property [{0}] of class [{1}] with value [{2}] must be unique]
+
+	at BootStrap.createData(BootStrap.groovy:40)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:10)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)

@@ -1,5 +1,6 @@
 <ul class="nav pull-right">
     <li class="dropdown dropdown-btn">
+
         <%--<sec:ifNotLoggedIn>--%>
 
         <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="#" tabindex="-1">
@@ -29,6 +30,7 @@
         </ul>
 
         <%--</sec:ifNotLoggedIn>--%>
+
         <%--<sec:ifLoggedIn>--%>
 
         <%--		<a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="#">--%>

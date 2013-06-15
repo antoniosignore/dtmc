@@ -16,13 +16,16 @@
         <thead>
         <tr>
 
-            <g:sortableColumn property="dateCreated"
-                              title="${message(code: 'stock.dateCreated.label', default: 'Date Created')}"/>
+            <g:sortableColumn property="name" title="${message(code: 'stock.name.label', default: 'Name')}"/>
 
             <g:sortableColumn property="description"
                               title="${message(code: 'stock.description.label', default: 'Description')}"/>
 
-            <g:sortableColumn property="name" title="${message(code: 'stock.name.label', default: 'Name')}"/>
+            <g:sortableColumn property="dateCreated"
+                              title="${message(code: 'stock.dateCreated.label', default: 'Date Created')}"/>
+
+            <g:sortableColumn property="lastUpdated"
+                              title="${message(code: 'stock.lastUpdated.label', default: 'Last Updated')}"/>
 
         </tr>
         </thead>
@@ -31,11 +34,13 @@
             <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
 
                 <td><g:link action="show"
-                            id="${stockInstance.id}">${fieldValue(bean: stockInstance, field: "dateCreated")}</g:link></td>
+                            id="${stockInstance.id}">${fieldValue(bean: stockInstance, field: "name")}</g:link></td>
 
                 <td>${fieldValue(bean: stockInstance, field: "description")}</td>
 
-                <td>${fieldValue(bean: stockInstance, field: "name")}</td>
+                <td>${fieldValue(bean: stockInstance, field: "dateCreated")}</td>
+
+                <td>${fieldValue(bean: stockInstance, field: "lastUpdated")}</td>
 
             </tr>
         </g:each>

@@ -23,6 +23,16 @@
         <datasource-map />
       </configuration>
     </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/src/templates/war/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/src/templates/war" relative="/WEB-INF" />
+        </webroots>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
