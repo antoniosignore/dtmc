@@ -488,24 +488,24 @@ class PortfolioService {
     // If we consider a portfolio as one
     // financial instrument, its premium is
     // equal to its value
-    public double getPrice(Portfolio portfolio, int Entry) {
-        return getValue(portfolio, Entry);
+    public double price(Portfolio portfolio, int Entry) {
+        return m2m(portfolio, Entry);
     }
 
     // Return marked to market portfolio premium If we consider a portfolio as one
     // financial instrument, its premium is equal to its value
-    public double getPrice(Portfolio portfolio, Date date) {
-        return getValue(portfolio, date);
+    public double price(Portfolio portfolio, Date date) {
+        return m2m(portfolio, date);
     }
 
     // Return portfolio premium If we consider a portfolio as one
     // financial instrument, its premium is equal to its value
     public double premium(Portfolio portfolio) {
-        return getValue(portfolio);
+        return m2m(portfolio);
     }
 
     // Return marked to market portfolio value
-    public double getValue(Portfolio portfolio, int index) {
+    public double m2m(Portfolio portfolio, int index) {
         Instrument instrument;
         Daily daily;
         int amount;
@@ -532,7 +532,7 @@ class PortfolioService {
      *
      * @param date
      */
-    public double getValue(Portfolio portfolio, Date date) {
+    public double m2m(Portfolio portfolio, Date date) {
         if (date == null) {
             throw new IllegalArgumentException("transactionDate cannot be null");
         }
@@ -563,17 +563,17 @@ class PortfolioService {
     }
 
     // Return portfolio value
-    public double getValue(Portfolio portfolio) {
+    public double m2m(Portfolio portfolio) {
         double Value = 0;
         for (int i = 0; i < portfolio.items.size(); i++) {
-            Value += item(portfolio, i).getValue();
+            Value += item(portfolio, i).value();
         }
         return Value;
     }
 
     public double getReturn(Portfolio portfolio, Date date) {
         // getAndRemove marked to market daily return
-        double price = getPrice(portfolio, date);
+        double price = price(portfolio, date);
         double previousPrice;
         if (price == 0) {
             return 1;
@@ -582,7 +582,7 @@ class PortfolioService {
         if (previousDate == null) {
             return 1;
         } else {
-            previousPrice = getPrice(portfolio, previousDate);
+            previousPrice = price(portfolio, previousDate);
             if (previousPrice == 0) {
                 return 1;
             } else {

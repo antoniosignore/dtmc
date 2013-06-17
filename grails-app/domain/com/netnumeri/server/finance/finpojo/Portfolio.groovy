@@ -60,7 +60,7 @@ class Portfolio extends Asset implements Serializable {
 
     // todo - remove dependency from PortfolioService
     Portfolio clone() {
-        Portfolio p = new Portfolio(getName());
+        Portfolio p = new Portfolio(getName(), "clone");
         for (int i = 0; i < items.size(); i++) {
             PortfolioItem portfolioItem = items.get(i);
             //     TradeService.add(p, portfolioItem);

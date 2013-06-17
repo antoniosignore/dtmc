@@ -1,15 +1,4 @@
 Testsuite: com.netnumeri.server.finance.strategy.SMACrossoverTest
-Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 8.105 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 7.973 sec
 
-Testcase: testStrategy took 7.955 sec
-	Caused an ERROR
-No signature of method: com.netnumeri.server.finance.finpojo.Portfolio.save() is applicable for argument types: () values: []
-Possible solutions: save(), save(), save(), save(), save(boolean), save(java.util.Map)
-groovy.lang.MissingMethodException: No signature of method: com.netnumeri.server.finance.finpojo.Portfolio.save() is applicable for argument types: () values: []
-Possible solutions: save(), save(), save(), save(), save(boolean), save(java.util.Map)
-	at dtmc.TradeService.add(TradeService.groovy:156)
-	at com.netnumeri.server.finance.strategy.Strategy.add(Strategy.groovy:42)
-	at com.netnumeri.server.finance.strategy.SMACrossover.evaluateInstrumentOnDate(SMACrossover.groovy:60)
-	at com.netnumeri.server.finance.strategy.Strategy.run(Strategy.groovy:63)
-	at com.netnumeri.server.finance.strategy.SMACrossoverTest.testStrategy(SMACrossoverTest.groovy:45)
-
+Testcase: testStrategy took 7.903 sec

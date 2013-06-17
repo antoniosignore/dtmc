@@ -15,7 +15,7 @@ import dtmc.PortfolioService
 
 public class Backtest implements Serializable {
 
-    PortfolioService tradeService = new PortfolioService();
+    PortfolioService portfolioService = new PortfolioService();
 
     double initialWealth;          // initial wealth
     double accountWealth;          // wealth on bank account
@@ -154,7 +154,7 @@ public class Backtest implements Serializable {
 
     public void setBenchmarkPortfolio(Asset benchmarkAsset) {
         benchmarkPortfolio = new Portfolio("Benchmark");
-        tradeService.add(benchmarkPortfolio, benchmarkAsset);
+        portfolioService.add(benchmarkPortfolio, benchmarkAsset);
     }
 
     public double test() {
@@ -310,12 +310,12 @@ public class Backtest implements Serializable {
                     }
                 }
 
-                tradeService.add(portfolio, transaction);
+                portfolioService.add(portfolio, transaction);
                 cost += transaction.getCost();
             }
 
             double mark2market = 0;
-            mark2market = tradeService.getValue(portfolio, date);
+            mark2market = portfolioService.m2m(portfolio, date);
             CurrentWealth = currentAccount + mark2market;
             wealthSeries.add(date, CurrentWealth);
             PnL = CurrentWealth - previousWealth;
@@ -345,7 +345,7 @@ public class Backtest implements Serializable {
         wealth = CurrentWealth;
         System.out.println("Wealth      : " + CurrentWealth);
         System.out.println("Account     : " + currentAccount);
-        System.out.println("Portfolio   : " + PortfolioService.getPrice(portfolio, lastDate));
+        System.out.println("Portfolio   : " + portfolioService.price(portfolio, lastDate));
         println "numberWinTradesTotal = $numberWinTradesTotal"
         println "numberLossTradesTotal = $numberLossTradesTotal"
 

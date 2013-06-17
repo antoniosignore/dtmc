@@ -26,11 +26,11 @@ public class SMACrossoverTest {
     @Test
     public void testStrategy() throws IOException, ParseException {
 
-        Portfolio portfolio = new Portfolio("SMA crossing", 10000);
+        Portfolio portfolio = new Portfolio("SMA crossing", "Description", 10000);
         Date da = DateUtils.Date("1/1/2007");
         Date a = DateUtils.today();
 
-        Instrument stock = YahooUtils.downloadYahooData("AAPL", da, a);
+        Instrument stock = YahooUtils.downloadYahooData("AAPL", "Apple Computers", da, a);
 
         TimeSeries closes = stock.getSeries(FinConstants.CLOSE);
         FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
