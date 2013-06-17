@@ -14,6 +14,7 @@
           <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/less-resources-1.3.3.1/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/font-awesome-resources-3.0/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jqplot-0.1/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/database-migration-1.3.2/grails-app/views" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -31,6 +32,48 @@
         <webroots>
           <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/src/templates/war" relative="/WEB-INF" />
         </webroots>
+        <sourceRoots>
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/cache-1.0.1/src/java" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/cache-1.0.1/src/groovy" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/cache-1.0.1/grails-app/services" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/cache-1.0.1/grails-app/taglib" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/fields-1.3/src/groovy" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/fields-1.3/grails-app/services" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/fields-1.3/grails-app/taglib" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/hibernate-2.2.2/grails-app/i18n" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jqplot-0.1/grails-app/taglib" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jquery-1.10.0/src/groovy" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jquery-1.10.0/grails-app/services" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jquery-1.10.0/grails-app/taglib" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/src/groovy" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/grails-app/i18n" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/grails-app/controllers" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/grails-app/domain" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/grails-app/taglib" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/less-resources-1.3.3.1/src/java" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/less-resources-1.3.3.1/src/groovy" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/less-resources-1.3.3.1/grails-app/i18n" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/less-resources-1.3.3.1/grails-app/services" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/mail-1.0.1/src/groovy" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/mail-1.0.1/grails-app/i18n" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/mail-1.0.1/grails-app/services" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/mail-1.0.1/grails-app/taglib" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/resources-1.2.RC2/src/java" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/resources-1.2.RC2/src/groovy" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/resources-1.2.RC2/grails-app/i18n" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/resources-1.2.RC2/grails-app/taglib" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/searchable-0.6.4/src/java" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/searchable-0.6.4/src/groovy" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/searchable-0.6.4/grails-app/i18n" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/searchable-0.6.4/grails-app/controllers" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/searchable-0.6.4/grails-app/services" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-core-1.2.7.3/src/java" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-core-1.2.7.3/src/groovy" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-core-1.2.7.3/grails-app/i18n" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-core-1.2.7.3/grails-app/services" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-core-1.2.7.3/grails-app/taglib" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/webxml-1.4.1/src/groovy" />
+        </sourceRoots>
       </configuration>
     </facet>
   </component>
@@ -41,6 +84,10 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/cache-1.0.1/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/cache-1.0.1/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/cache-1.0.1/grails-app/taglib" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/database-migration-1.3.2">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/database-migration-1.3.2/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/database-migration-1.3.2/grails-app/controllers" isTestSource="false" />
     </content>
     <content url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/fields-1.3">
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/fields-1.3/src/groovy" isTestSource="false" />

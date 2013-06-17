@@ -34,6 +34,7 @@
 </head>
 
 <body>
+
 <g:render template="/_menu/navbar"/>
 
 <!-- Enable to overwrite Header by individual page -->
