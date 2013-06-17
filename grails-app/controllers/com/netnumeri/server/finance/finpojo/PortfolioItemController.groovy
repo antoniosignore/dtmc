@@ -21,7 +21,7 @@ class PortfolioItemController {
 
     def save() {
         def portfolioItemInstance = new PortfolioItem(params)
-        if (!portfolioItemInstance.save(flush: true)) {
+        if (!portfolioItemInstance.save(flush: true, failOnError: true)) {
             render(view: "create", model: [portfolioItemInstance: portfolioItemInstance])
             return
         }

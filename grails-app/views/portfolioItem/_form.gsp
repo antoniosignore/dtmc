@@ -1,6 +1,4 @@
-<%@ page import="com.netnumeri.server.finance.finpojo.PortfolioItem" %>
-
-
+<%@ page import="com.netnumeri.server.finance.finpojo.Portfolio; com.netnumeri.server.finance.finpojo.Instrument; com.netnumeri.server.finance.finpojo.PortfolioItem" %>
 
 <div class="control-group fieldcontain ${hasErrors(bean: portfolioItemInstance, field: 'amount', 'error')} ">
     <label for="amount" class="control-label"><g:message
@@ -19,7 +17,7 @@
             default="Instrument"/></label>
 
     <div class="controls">
-        <g:select id="instrument" name="instrument.id" from="${com.netnumeri.server.finance.finpojo.Instrument.list()}"
+        <g:select id="instrument" name="instrument.id" from="${Instrument.list()}"
                   optionKey="id" value="${portfolioItemInstance?.instrument?.id}" class="many-to-one"
                   noSelection="['null': '']"/>
         <span class="help-inline">${hasErrors(bean: portfolioItemInstance, field: 'instrument', 'error')}</span>
@@ -32,7 +30,7 @@
             default="Portfolio"/></label>
 
     <div class="controls">
-        <g:select id="portfolio" name="portfolio.id" from="${com.netnumeri.server.finance.finpojo.Portfolio.list()}"
+        <g:select id="portfolio" name="portfolio.id" from="${Portfolio.list()}"
                   optionKey="id" value="${portfolioItemInstance?.portfolio?.id}" class="many-to-one"
                   noSelection="['null': '']"/>
         <span class="help-inline">${hasErrors(bean: portfolioItemInstance, field: 'portfolio', 'error')}</span>

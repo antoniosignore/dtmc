@@ -46,6 +46,7 @@
                         <li><g:link controller="portfolioItem" action="show"
                                     id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
                     </g:each>
+
                 </ul>
             </td>
 

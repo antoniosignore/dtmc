@@ -15,8 +15,8 @@ class Portfolio extends Asset implements Serializable {
 
     String description
 
-    List<PortfolioItem> items = []
-    List<Trade> transactions = []
+//    List<PortfolioItem> items = []
+//    List<Trade> transactions = []
     static hasMany = [items: PortfolioItem, transactions: Trade]
 
     static transients = [
