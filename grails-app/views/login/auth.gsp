@@ -1,68 +1,63 @@
 <html>
-<head>
-    <title><g:message code="springSecurity.login.title"/></title>
-    <meta name="layout" content="kickstart"/>
 
-    <g:set var="layout_nomainmenu" value="${true}" scope="request"/>
-    <g:set var="layout_nosecondarymenu" value="${true}" scope="request"/>
+<head>
+    <title><g:message code='spring.security.ui.login.title'/></title>
+    <meta name='layout' content='kickstart'/>
 </head>
 
 <body>
 
-<section id="login" class="first">
-    <div class="row">
-        <div class="span3"></div>
+<p/>
 
-        <div class="span6">
-            <h3><g:message code="springSecurity.login.header"/></h3>
+<div class="login s2ui_center ui-corner-all" style='text-align:center;'>
+    <div class="login-inner">
+        <form action='${postUrl}' method='POST' id="loginForm" name="loginForm" autocomplete='off'>
+            <div class="sign-in">
 
-            <form id='loginForm' class='form-horizontal' action='${postUrl}' method='POST' autocomplete='off'>
-                <fieldset class="form">
-                    <div class="control-group fieldcontain ${hasErrors(bean: _DemoPageInstance, field: 'name', 'error')} ">
-                        <label for='username' class="control-label"><g:message
-                                code="springSecurity.login.username.label"/>:</label>
+                <h1><g:message code='spring.security.ui.login.signin'/></h1>
 
-                        <div class="controls">
-                            <input type='text' class='span4' name='j_username' id='username'/>
-                        </div>
-                    </div>
+                <table>
+                    <tr>
+                        <td><label for="username"><g:message code='spring.security.ui.login.username'/></label></td>
+                        <td><input name="j_username" id="username" size="20"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password"><g:message code='spring.security.ui.login.password'/></label></td>
+                        <td><input type="password" name="j_password" id="password" size="20"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                            <input type="checkbox" class="checkbox" name="${rememberMeParameter}" id="remember_me"
+                                   checked="checked"/>
+                            <label for='remember_me'><g:message code='spring.security.ui.login.rememberme'/></label> |
+                            <span class="forgot-link">
+                                <g:link controller='register' action='forgotPassword'><g:message
+                                        code='spring.security.ui.login.forgotPassword'/></g:link>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                            <s2ui:linkButton elementId='register' controller='register'
+                                             messageCode='spring.security.ui.login.register'/>
+                            <s2ui:submitButton elementId='loginButton' form='loginForm'
+                                               messageCode='spring.security.ui.login.login'/>
+                        </td>
+                    </tr>
+                </table>
 
-                    <div class="control-group fieldcontain ${hasErrors(bean: _DemoPageInstance, field: 'name', 'error')} ">
-                        <label for='password' class="control-label"><g:message
-                                code="springSecurity.login.password.label"/>:</label>
-
-                        <div class="controls">
-                            <input type='password' class='span4' name='j_password' id='password'/>
-                        </div>
-                    </div>
-
-                    <div id="remember_me_holder" class="control-group fieldcontain">
-                        <label for='remember_me' class="control-label"><g:message
-                                code="springSecurity.login.remember.me.label"/></label>
-
-                        <div class="controls">
-                            <bs:checkBox class="span4" name="${rememberMeParameter}" value="${hasCookie}"/>
-                        </div>
-                    </div>
-                </fieldset>
-
-                <div class="controls">
-                    <input type='submit' id="submit" class="btn btn-success"
-                           value='${message(code: "springSecurity.login.button")}'/>
-                </div>
-            </form>
-        </div>
-
-        <div class="span3"></div>
+            </div>
+        </form>
     </div>
-</section>
+</div>
 
-<script type='text/javascript'>
-    <!--
-    (function () {
-        document.forms['loginForm'].elements['j_username'].focus();
-    })();
-    // -->
+<script>
+    $(document).ready(function () {
+        $('#username').focus();
+    });
+
+    <s2ui:initCheckboxes/>
+
 </script>
 
 </body>

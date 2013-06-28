@@ -15,6 +15,10 @@
           <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/font-awesome-resources-3.0/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jqplot-0.1/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/database-migration-1.3.2/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-ui-0.2/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/famfamfam-1.0.1/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jquery-ui-1.8.24/web-app" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -89,6 +93,9 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/database-migration-1.3.2/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/database-migration-1.3.2/grails-app/controllers" isTestSource="false" />
     </content>
+    <content url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/famfamfam-1.0.1">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/famfamfam-1.0.1/grails-app/taglib" isTestSource="false" />
+    </content>
     <content url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/fields-1.3">
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/fields-1.3/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/fields-1.3/grails-app/services" isTestSource="false" />
@@ -105,6 +112,10 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jquery-1.10.0/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jquery-1.10.0/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jquery-1.10.0/grails-app/taglib" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jquery-ui-1.8.24">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jquery-ui-1.8.24/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/jquery-ui-1.8.24/grails-app/taglib" isTestSource="false" />
     </content>
     <content url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6">
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/src/groovy" isTestSource="false" />
@@ -145,6 +156,13 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-core-1.2.7.3/grails-app/i18n" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-core-1.2.7.3/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-core-1.2.7.3/grails-app/taglib" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-ui-0.2">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/controllers" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/domain" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/services" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/taglib" isTestSource="false" />
     </content>
     <content url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/tomcat-2.2.2" />
     <content url="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/webxml-1.4.1">

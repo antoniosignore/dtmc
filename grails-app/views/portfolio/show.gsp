@@ -44,7 +44,7 @@
                 <ul>
                     <g:each in="${portfolioInstance.items}" var="i">
                         <li><g:link controller="portfolioItem" action="show"
-                                    id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
+                                    id="${i.id}">${i.instrument.name?.encodeAsHTML()}</g:link></li>
                     </g:each>
 
                 </ul>

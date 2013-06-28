@@ -111,9 +111,10 @@ grails.plugins.springsecurity.interceptUrlMap = [
         '/secure/**': ['ROLE_ADMIN'],
         '/portfolio/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/portfolioItem/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-        '/userBean/**': ['ROLE_SUPERUSER', 'IS_AUTHENTICATED_FULLY'],
+        '/userBean/**': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/_DemoPage/**': ['ROLE_SUPERUSER', 'IS_AUTHENTICATED_FULLY'],
         '/role/**': ['ROLE_SUPERUSER', 'IS_AUTHENTICATED_FULLY'],
+        '/userRole/**': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/stock/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/vanilla/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/trade/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
@@ -125,6 +126,15 @@ grails.plugins.springsecurity.interceptUrlMap = [
         '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/logout/**': ['IS_AUTHENTICATED_FULLY', 'IS_AUTHENTICATED_REMEMBERED']
 ]
+
+//grails.plugins.springsecurity.controllerAnnotations.staticRules = [
+//        '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/*': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/logout/**': ['IS_AUTHENTICATED_FULLY', 'IS_AUTHENTICATED_REMEMBERED']
+//]
 
 grails.gorm.default.constraints = {
     '*'(nullable: true)
