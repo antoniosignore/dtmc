@@ -3,50 +3,63 @@
 <head>
     <meta name='layout' content='kickstart'/>
     <title><g:message code='spring.security.ui.register.title'/></title>
+
+    <g:set var="layout_nomainmenu" value="${true}" scope="request"/>
+    <g:set var="layout_nosecondarymenu" value="${true}" scope="request"/>
+
 </head>
 
 <body>
 
-<p/>
+<section id="login" class="first">
+    <div class="row">
+        <div class="span3"></div>
 
-<s2ui:form width='650' height='300' elementId='loginFormContainer'
-           titleCode='spring.security.ui.register.description' center='true'>
+        <div class="span6">
 
-    <g:form action='register' name='registerForm'>
+            <s2ui:form width='650' height='300' elementId='loginFormContainer'
+                       titleCode='' center='true'>
 
-        <g:if test='${emailSent}'>
-            <br/>
-            <g:message code='spring.security.ui.register.sent'/>
-        </g:if>
-        <g:else>
+                <g:form action='register' name='registerForm'>
 
-            <br/>
+                    <g:if test='${emailSent}'>
+                        <br/>
+                        <g:message code='spring.security.ui.register.sent'/>
+                    </g:if>
+                    <g:else>
 
-            <table>
-                <tbody>
+                        <br/>
 
-                <s2ui:textFieldRow name='username' labelCode='user.username.label' bean="${command}"
-                                   size='40' labelCodeDefault='Username' value="${command.username}"/>
+                        <table>
+                            <tbody>
 
-                <s2ui:textFieldRow name='email' bean="${command}" value="${command.email}"
-                                   size='40' labelCode='user.email.label' labelCodeDefault='E-mail'/>
+                            <s2ui:textFieldRow name='username' labelCode='user.username.label' bean="${command}"
+                                               size='40' labelCodeDefault='Username' value="${command.username}"/>
 
-                <s2ui:passwordFieldRow name='password' labelCode='user.password.label' bean="${command}"
-                                       size='40' labelCodeDefault='Password' value="${command.password}"/>
+                            <s2ui:textFieldRow name='email' bean="${command}" value="${command.email}"
+                                               size='40' labelCode='user.email.label' labelCodeDefault='E-mail'/>
 
-                <s2ui:passwordFieldRow name='password2' labelCode='user.password2.label' bean="${command}"
-                                       size='40' labelCodeDefault='Password (again)' value="${command.password2}"/>
+                            <s2ui:passwordFieldRow name='password' labelCode='user.password.label' bean="${command}"
+                                                   size='40' labelCodeDefault='Password' value="${command.password}"/>
 
-                </tbody>
-            </table>
+                            <s2ui:passwordFieldRow name='password2' labelCode='user.password2.label' bean="${command}"
+                                                   size='40' labelCodeDefault='Password (again)'
+                                                   value="${command.password2}"/>
 
-            <s2ui:submitButton elementId='create' form='registerForm' messageCode='spring.security.ui.register.submit'/>
+                            </tbody>
+                        </table>
 
-        </g:else>
+                        <s2ui:submitButton elementId='create' form='registerForm'
+                                           messageCode='spring.security.ui.register.submit'/>
 
-    </g:form>
+                    </g:else>
 
-</s2ui:form>
+                </g:form>
+
+            </s2ui:form>
+        </div>
+    </div>
+</section>
 
 <script>
     $(document).ready(function () {

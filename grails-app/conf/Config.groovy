@@ -11,6 +11,8 @@
 //    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
 // }
 
+grails.plugins.springsecurity.ui.encodePassword = false
+
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
@@ -119,23 +121,30 @@ grails.plugins.springsecurity.interceptUrlMap = [
         '/vanilla/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/trade/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
 
+
         '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/*': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/logout/**': ['IS_AUTHENTICATED_FULLY', 'IS_AUTHENTICATED_REMEMBERED']
+        '/logout/**': ['IS_AUTHENTICATED_FULLY', 'IS_AUTHENTICATED_REMEMBERED'],
+        '/register/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
 ]
-
-//grails.plugins.springsecurity.controllerAnnotations.staticRules = [
-//        '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-//        '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-//        '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-//        '/*': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-//        '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-//        '/logout/**': ['IS_AUTHENTICATED_FULLY', 'IS_AUTHENTICATED_REMEMBERED']
-//]
 
 grails.gorm.default.constraints = {
     '*'(nullable: true)
+}
+
+grails {
+    mail {
+        host = "smtp.gmail.com"
+        port = 465
+        username = "antonio.signore@gmail.com"
+        password = "Nicholas1#"
+        props = ["mail.smtp.auth": "true",
+                "mail.smtp.socketFactory.port": "465",
+                "mail.smtp.socketFactory.class": "javax.net.ssl.SSLSocketFactory",
+                "mail.smtp.socketFactory.fallback": "false"]
+
+    }
 }
