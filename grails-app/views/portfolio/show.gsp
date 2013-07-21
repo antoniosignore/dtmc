@@ -1,3 +1,4 @@
+
 <%@ page import="com.netnumeri.server.finance.finpojo.Portfolio" %>
 <!doctype html>
 <html>
@@ -15,63 +16,87 @@
 
     <table class="table">
         <tbody>
-
+        
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="portfolio.dateCreated.label" default="Date Created"/></td>
-
+            <td valign="top" class="name"><g:message code="portfolio.club.label"
+                                                     default="Club"/></td>
+            
+            <td valign="top" class="value"><g:link controller="club" action="show"
+                                                   id="${portfolioInstance?.club?.id}">${portfolioInstance?.club?.encodeAsHTML()}</g:link></td>
+            
+        </tr>
+        
+        <tr class="prop">
+            <td valign="top" class="name"><g:message code="portfolio.dateCreated.label"
+                                                     default="Date Created"/></td>
+            
             <td valign="top" class="value"><g:formatDate date="${portfolioInstance?.dateCreated}"/></td>
-
+            
         </tr>
-
+        
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="portfolio.dateCreated.label" default="Last Updated"/></td>
-
-            <td valign="top" class="value"><g:formatDate date="${portfolioInstance?.lastUpdated}"/></td>
-
-        </tr>
-
-        <tr class="prop">
-            <td valign="top" class="name"><g:message code="portfolio.description.label" default="Description"/></td>
-
+            <td valign="top" class="name"><g:message code="portfolio.description.label"
+                                                     default="Description"/></td>
+            
             <td valign="top" class="value">${fieldValue(bean: portfolioInstance, field: "description")}</td>
-
+            
         </tr>
-
+        
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="portfolio.items.label" default="Items"/></td>
-
+            <td valign="top" class="name"><g:message code="portfolio.items.label"
+                                                     default="Items"/></td>
+            
             <td valign="top" style="text-align: left;" class="value">
                 <ul>
                     <g:each in="${portfolioInstance.items}" var="i">
                         <li><g:link controller="portfolioItem" action="show"
-                                    id="${i.id}">${i.instrument.name?.encodeAsHTML()}</g:link></li>
+                                    id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
                     </g:each>
-
                 </ul>
             </td>
-
+            
         </tr>
-
+        
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="portfolio.name.label" default="Name"/></td>
-
+            <td valign="top" class="name"><g:message code="portfolio.lastUpdated.label"
+                                                     default="Last Updated"/></td>
+            
+            <td valign="top" class="value"><g:formatDate date="${portfolioInstance?.lastUpdated}"/></td>
+            
+        </tr>
+        
+        <tr class="prop">
+            <td valign="top" class="name"><g:message code="portfolio.name.label"
+                                                     default="Name"/></td>
+            
             <td valign="top" class="value">${fieldValue(bean: portfolioInstance, field: "name")}</td>
-
+            
         </tr>
-
+        
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="portfolio.transactions.label" default="Transactions"/></td>
-
+            <td valign="top" class="name"><g:message code="portfolio.transactions.label"
+                                                     default="Transactions"/></td>
+            
             <td valign="top" style="text-align: left;" class="value">
                 <ul>
                     <g:each in="${portfolioInstance.transactions}" var="t">
-                        <li><g:link controller="trade" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></li>
+                        <li><g:link controller="trade" action="show"
+                                    id="${t.id}">${t?.encodeAsHTML()}</g:link></li>
                     </g:each>
                 </ul>
             </td>
-
+            
         </tr>
-
+        
+        <tr class="prop">
+            <td valign="top" class="name"><g:message code="portfolio.user.label"
+                                                     default="User"/></td>
+            
+            <td valign="top" class="value"><g:link controller="userBean" action="show"
+                                                   id="${portfolioInstance?.user?.id}">${portfolioInstance?.user?.encodeAsHTML()}</g:link></td>
+            
+        </tr>
+        
         </tbody>
     </table>
 </section>

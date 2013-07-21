@@ -2,10 +2,6 @@ package com.netnumeri.server.finance.finpojo
 
 import org.springframework.dao.DataIntegrityViolationException
 
-/**
- * PortfolioController
- * A controller class handles incoming web requests and performs actions such as redirects, rendering views and so on.
- */
 class PortfolioController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -14,8 +10,8 @@ class PortfolioController {
         redirect(action: "list", params: params)
     }
 
-    def list() {
-        params.max = Math.min(params.max ? params.int('max') : 10, 100)
+    def list(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
         [portfolioInstanceList: Portfolio.list(params), portfolioInstanceTotal: Portfolio.count()]
     }
 
@@ -34,10 +30,10 @@ class PortfolioController {
         redirect(action: "show", id: portfolioInstance.id)
     }
 
-    def show() {
-        def portfolioInstance = Portfolio.get(params.id)
+    def show(Long id) {
+        def portfolioInstance = Portfolio.get(id)
         if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
             redirect(action: "list")
             return
         }
@@ -45,10 +41,10 @@ class PortfolioController {
         [portfolioInstance: portfolioInstance]
     }
 
-    def edit() {
-        def portfolioInstance = Portfolio.get(params.id)
+    def edit(Long id) {
+        def portfolioInstance = Portfolio.get(id)
         if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
             redirect(action: "list")
             return
         }
@@ -56,16 +52,15 @@ class PortfolioController {
         [portfolioInstance: portfolioInstance]
     }
 
-    def update() {
-        def portfolioInstance = Portfolio.get(params.id)
+    def update(Long id, Long version) {
+        def portfolioInstance = Portfolio.get(id)
         if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
             redirect(action: "list")
             return
         }
 
-        if (params.version) {
-            def version = params.version.toLong()
+        if (version != null) {
             if (portfolioInstance.version > version) {
                 portfolioInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
                         [message(code: 'portfolio.label', default: 'Portfolio')] as Object[],
@@ -86,22 +81,22 @@ class PortfolioController {
         redirect(action: "show", id: portfolioInstance.id)
     }
 
-    def delete() {
-        def portfolioInstance = Portfolio.get(params.id)
+    def delete(Long id) {
+        def portfolioInstance = Portfolio.get(id)
         if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
             redirect(action: "list")
             return
         }
 
         try {
             portfolioInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
+            flash.message = message(code: 'default.deleted.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
             redirect(action: "list")
         }
         catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), params.id])
-            redirect(action: "show", id: params.id)
+            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
+            redirect(action: "show", id: id)
         }
     }
 }
