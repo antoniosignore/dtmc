@@ -11,7 +11,10 @@ class BootStrap {
 
     private void createData() {
 
+//        Club club =  new Club(name: 'mioclub').save(flush: true)
+//
 //        Portfolio portfolio = new Portfolio("SMA crossing", "desc", 10000)
+//        portfolio.club = club
 //        portfolio.save(failOnError: true, insert: true, flush: true)
 //
 //        println "portfolio.id = $portfolio.id"
@@ -26,7 +29,7 @@ class BootStrap {
 //        portfolioService.buy(portfolio, stock, 100);
 //
 //        portfolio.save(failOnError: true, insert: true, flush: true);
-
+//
 //        def superuserRole = new Role(authority: 'ROLE_SUPERUSER').save(flush: true)
 //        def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
 //        def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
@@ -42,7 +45,7 @@ class BootStrap {
 //        def user = new UserBean(username: 'user', enabled: true, password: 'cheese')
 //        user.save(flush: true,failOnError: true)
 //        UserRole.create user, userRole, true
-
+//
 //        assert UserBean.count() == 3
 //        assert Role.count() == 3
 //        assert UserRole.count() == 3

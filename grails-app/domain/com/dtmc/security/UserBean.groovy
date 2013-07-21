@@ -1,8 +1,12 @@
 package com.dtmc.security
 
+import com.dtmc.club.Club
+
 class UserBean {
 
     transient springSecurityService
+
+    Club club
 
     String username
     String password

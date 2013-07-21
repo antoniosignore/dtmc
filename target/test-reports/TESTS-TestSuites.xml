@@ -1,10 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite errors="0" failures="0" hostname="antonio-ThinkPad-SL500" id="0" name="SMACrossoverTest"
-               package="com.netnumeri.server.finance.strategy" tests="1" time="7.926" timestamp="2013-06-17T08:53:42">
+    <testsuite errors="8" failures="0" hostname="antonio-ThinkPad-SL500" id="0" name="GenericMatrixTest"
+               package="com.netnumeri.server.servlets" tests="9" time="2.184" timestamp="2013-07-12T09:28:07">
         <properties/>
 
-        <testcase classname="com.netnumeri.server.finance.strategy.SMACrossoverTest" name="testStrategy" time="7.862"/>
+        <testcase classname="com.netnumeri.server.servlets.GenericMatrixTest" name="testIsEmpty" time="1.094">
+            <error message="Cannot invoke method isEmpty() on null object" type="java.lang.NullPointerException">
+                java.lang.NullPointerException: Cannot invoke method isEmpty() on null object
+                at com.netnumeri.server.servlets.GenericMatrixTest.testIsEmpty(GenericMatrixTest.groovy:42)
+            </error>
+
+        </testcase>
+
+        <testcase classname="com.netnumeri.server.servlets.GenericMatrixTest" name="testIsValidRow" time="0.264">
+            <error message="Cannot invoke method isValidRow() on null object" type="java.lang.NullPointerException">
+                java.lang.NullPointerException: Cannot invoke method isValidRow() on null object
+                at com.netnumeri.server.servlets.GenericMatrixTest.testIsValidRow(GenericMatrixTest.groovy:55)
+            </error>
+
+        </testcase>
+
+        <testcase classname="com.netnumeri.server.servlets.GenericMatrixTest" name="testSize" time="0.292">
+            <error message="Cannot invoke method size() on null object" type="java.lang.NullPointerException">
+                java.lang.NullPointerException: Cannot invoke method size() on null object
+                at com.netnumeri.server.servlets.GenericMatrixTest.testSize(GenericMatrixTest.groovy:62)
+            </error>
+
+        </testcase>
+
+        <testcase classname="com.netnumeri.server.servlets.GenericMatrixTest" name="testCloneIt" time="0.056">
+            <error message="Cannot invoke method cloneIt() on null object" type="java.lang.NullPointerException">
+                java.lang.NullPointerException: Cannot invoke method cloneIt() on null object
+                at com.netnumeri.server.servlets.GenericMatrixTest.testCloneIt(GenericMatrixTest.groovy:67)
+            </error>
+
+        </testcase>
+
+        <testcase classname="com.netnumeri.server.servlets.GenericMatrixTest" name="testGetFirstDate" time="0.081">
+            <error message="Cannot invoke method getFirstDate() on null object" type="java.lang.NullPointerException">
+                java.lang.NullPointerException: Cannot invoke method getFirstDate() on null object
+                at com.netnumeri.server.servlets.GenericMatrixTest.testGetFirstDate(GenericMatrixTest.groovy:76)
+            </error>
+
+        </testcase>
+
+        <testcase classname="com.netnumeri.server.servlets.GenericMatrixTest" name="testNoElements" time="0.041"/>
+
+        <testcase classname="com.netnumeri.server.servlets.GenericMatrixTest" name="testGetLastValidData" time="0.054">
+            <error message="Cannot invoke method getLastValidData() on null object"
+                   type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method
+                getLastValidData() on null object
+                at com.netnumeri.server.servlets.GenericMatrixTest.testGetLastValidData(GenericMatrixTest.groovy:49)
+            </error>
+
+        </testcase>
+
+        <testcase classname="com.netnumeri.server.servlets.GenericMatrixTest" name="testGet" time="0.07">
+            <error message="Cannot invoke method getFirstDate() on null object" type="java.lang.NullPointerException">
+                java.lang.NullPointerException: Cannot invoke method getFirstDate() on null object
+                at com.netnumeri.server.servlets.GenericMatrixTest.testGet(GenericMatrixTest.groovy:34)
+            </error>
+
+        </testcase>
+
+        <testcase classname="com.netnumeri.server.servlets.GenericMatrixTest" name="testMap" time="0.07">
+            <error message="Cannot invoke method map() on null object" type="java.lang.NullPointerException">
+                java.lang.NullPointerException: Cannot invoke method map() on null object
+                at com.netnumeri.server.servlets.GenericMatrixTest.testMap(GenericMatrixTest.groovy:28)
+            </error>
+
+        </testcase>
 
         <system-out><![CDATA[]]></system-out>
 

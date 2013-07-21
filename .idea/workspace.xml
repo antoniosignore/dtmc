@@ -2,22 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/Controller.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/Controller.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/DomainClass.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/DomainClass.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/Filters.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/Filters.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/ScaffoldingController.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/ScaffoldingController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/Service.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/Service.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/TagLib.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/TagLib.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/Tests.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/Tests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/WebTest.groovy" afterPath="$PROJECT_DIR$/src/templates/artifacts/WebTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/artifacts/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/templates/artifacts/hibernate.cfg.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/ClubController.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/com/dtmc/club/BusinessAccountTests.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/com/dtmc/club/ClubTests.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/com/dtmc/club/PostItTests.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/com/dtmc/club/PostitTests.groovy" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/utils/DaoTestUtils.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/utils/DaoTestUtils.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/dtmc/PortfolioServiceTests.groovy" afterPath="$PROJECT_DIR$/test/unit/dtmc/PortfolioServiceTests.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/PostIt.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/PostIt.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/utils/StockUtilsTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/utils/StockUtilsTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.properties" afterPath="$PROJECT_DIR$/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login/auth.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login/auth.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" afterPath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373533057391" ignored="false" />
-    <file path="/a.dummy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372668428451" ignored="false" />
+    <file path="/Dummy.txt" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374436062381" ignored="false" />
+    <file path="/a.dummy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374438752779" ignored="false" />
     <file path="/PortfolioController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370897984993" ignored="false" />
     <file path="$PROJECT_DIR$/../iceScrum/web-app/WEB-INF/tld/spring.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459360658" ignored="false" />
     <file path="$PROJECT_DIR$/../iceScrum/web-app/WEB-INF/sitemesh.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459360658" ignored="false" />
@@ -52,12 +66,12 @@
     <file path="/portfolioview.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370776471241" ignored="false" />
     <file path="/portfoliolist.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370776543896" ignored="false" />
     <file path="/page.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370777042240" ignored="false" />
-    <file path="/BootStrap.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370796638379" ignored="false" />
+    <file path="/BootStrap.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373621804899" ignored="false" />
     <file path="/Config.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372427003435" ignored="false" />
     <file path="/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370796719561" ignored="false" />
     <file path="/StatusService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370796936440" ignored="false" />
     <file path="/Status.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370796984588" ignored="false" />
-    <file path="/Persistable.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370808460686" ignored="false" />
+    <file path="/Persistable.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373622490641" ignored="false" />
     <file path="/usercache.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370847816600" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.devices/src/main/java/com/vodafone/global/smhs/businesslogic/devices/service/DeviceServiceImplDiscover.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372248752513" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-discover-win8/src/main/java/com/vodafone/global/blueprint/discover/backend/services/DevicesUpdateService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371563243446" ignored="false" />
@@ -72,13 +86,13 @@
     <file path="$PROJECT_DIR$/../BlogSamples/layout-demo2/grails-app/views/layouts/page.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370889761884" ignored="false" />
     <file path="/fiveblocks.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370894916403" ignored="false" />
     <file path="/Stock.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370896848163" ignored="false" />
-    <file path="/Portfolio.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370896908038" ignored="false" />
+    <file path="/Portfolio.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373619778268" ignored="false" />
     <file path="/YahooUtils.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370898233874" ignored="false" />
     <file path="/StockController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371154653818" ignored="false" />
     <file path="$USER_HOME$/.IntelliJIdea12/config/options/intentionSettings.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371283371667" ignored="false" />
     <file path="/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371645678800" ignored="false" />
     <file path="/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371284496992" ignored="false" />
-    <file path="/UserBean.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371313540906" ignored="false" />
+    <file path="/UserBean.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373619725342" ignored="false" />
     <file path="/denied.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371450525369" ignored="false" />
     <file path="/Backtest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371459060243" ignored="false" />
     <file path="/PortfolioItemController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371500215086" ignored="false" />
@@ -138,7 +152,7 @@
     <file path="$M2_REPO$/com/vodafone/global/dcs/blueprint/core/1.4.12-SNAPSHOT/core-1.4.12-SNAPSHOT.jar!/com/vodafone/global/blueprint/blueadmin/client/Blueadmin.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372079864562" ignored="false" />
     <file path="$M2_REPO$/com/vodafone/global/dcs/blueprint/core/1.4.12-SNAPSHOT/core-1.4.12-SNAPSHOT.jar!/com/vodafone/global/blueprint/blueadmin/Blueadmin.gwt.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372079864562" ignored="false" />
     <file path="/_user.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372233537544" ignored="false" />
-    <file path="/auth.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372232808729" ignored="false" />
+    <file path="/auth.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374438723616" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.mondrian.2.0/src/main/groovy/com/vodafone/global/smhs/mondrian_2_0/scripts/ServicePlan.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372236826439" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.rss2xml/src/main/groovy/com/vodafone/global/smhs/rss2xml/services/ImageHeadDescriptionLayout.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372239408084" ignored="false" />
     <file path="/ImageHeadDescriptionLayout.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372237949237" ignored="false" />
@@ -232,7 +246,7 @@
     <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/NominalLedgerAccount.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050832" ignored="false" />
     <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/User.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050832" ignored="false" />
     <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericMoneyinTabGridPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050832" ignored="false" />
-    <file path="/Club.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372623683700" ignored="false" />
+    <file path="/Club.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373619874012" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.rss2xml/src/test/java/com/vodafone/global/smhs/rss2xml/services/Rss2XmlValidator.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372662043827" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.rss2xml/src/test/java/com/vodafone/global/smhs/rss2xml/services/RssDocumentParserTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372662043827" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/pom.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372662464712" ignored="false" />
@@ -242,6 +256,15 @@
     <file path="/PollerTask.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372685556627" ignored="false" />
     <file path="/Instrument.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373197778840" ignored="false" />
     <file path="/Postit.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373533248369" ignored="false" />
+    <file path="$PROJECT_DIR$/../grailsblog-read-only/web-app/WEB-INF/tld/grails.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373613627457" ignored="false" />
+    <file path="$PROJECT_DIR$/../grailsblog-read-only/application.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373613627458" ignored="false" />
+    <file path="$PROJECT_DIR$/../grailsblog-read-only/web-app/WEB-INF/tld/fmt.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373613627458" ignored="false" />
+    <file path="$PROJECT_DIR$/../grailsblog-read-only/web-app/WEB-INF/tld/c.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373613627458" ignored="false" />
+    <file path="/DaoTestUtils.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373620976694" ignored="false" />
+    <file path="$PROJECT_DIR$/../pikachoosesample/application.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374270407415" ignored="false" />
+    <file path="$PROJECT_DIR$/../pikachoosesample/web-app/WEB-INF/applicationContext.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374270407415" ignored="false" />
+    <file path="$PROJECT_DIR$/../pikachoosesample/grails-app/views/photo/photoGallery.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374436119576" ignored="false" />
+    <file path="/_content.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374437009403" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,6 +279,42 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy" line="34" class="dtmc.PortfolioService" package="dtmc">
         <option name="ENABLED" value="true" />
@@ -319,42 +378,6 @@
       </breakpoint>
     </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -364,111 +387,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Role.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/Role.groovy">
+      <file leaf-file-name="_content.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_content.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="-1.2">
+            <state line="20" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="-12.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserBean.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy">
+      <file leaf-file-name="_menubar.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="-0.5555556">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Portfolio.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="6" selection-start="128" selection-end="128" vertical-scroll-proportion="-1.3888888">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PortfolioItem.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="237" selection-end="237" vertical-scroll-proportion="-1.6666666">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Club.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="42" selection-start="913" selection-end="913" vertical-scroll-proportion="0.6439394">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClubController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/ClubController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="14" selection-start="1184" selection-end="1184" vertical-scroll-proportion="-11.24">
+            <state line="13" column="13" selection-start="20" selection-end="658" vertical-scroll-proportion="-3.9795918">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRole.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserRole.groovy">
+      <file leaf-file-name="_submenubar.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="89" selection-end="89" vertical-scroll-proportion="-1.1111112">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/src/templates/artifacts/Controller.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="21" column="47" selection-start="1127" selection-end="1127" vertical-scroll-proportion="-6.428571">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/artifacts/Controller.groovy">
+      <file leaf-file-name="_user.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_user.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="10.102041">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostIt.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/PostIt.groovy">
+      <file leaf-file-name="_navbar.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="6" selection-start="124" selection-end="124" vertical-scroll-proportion="-1.6666666">
+            <state line="37" column="55" selection-start="2068" selection-end="2068" vertical-scroll-proportion="-6.8163266">
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="auth.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/login/auth.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="29" selection-start="156" selection-end="156" vertical-scroll-proportion="-0.6103896">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_footer.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kickstart.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="40" selection-start="1700" selection-end="1700" vertical-scroll-proportion="-16.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="14.693877">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_header.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_header.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="58" selection-start="271" selection-end="271" vertical-scroll-proportion="0.18248175">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -495,28 +500,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/dtmc/security/UserRoleController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/userBean/show.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/i18n/view.properties" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/register.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/register/forgotPassword.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/register/resetPassword.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/login/auth.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/register/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/dtmc/Club.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/dtmc/PortfolioServiceTests.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Postit.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/ClubController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/PostIt.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/utils/DaoTestUtils.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/utils/StockUtilsTest.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/login/auth.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
     <option name="width" value="1617" />
     <option name="height" value="1055" />
   </component>
@@ -550,15 +555,15 @@
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="141" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="140" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../netnumero" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="169" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1065" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1064" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1065" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="169" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="161" />
@@ -618,19 +623,22 @@
       <ConfigurationWrapper RunnerId="GrailsMavenDebuggerRunner" />
       <method />
     </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
+    <configuration default="false" name="GenericMatrixTest" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
+      <module name="dtmc" />
       <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
+      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.servlets.GenericMatrix -echoOut" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <RunnerSettings RunnerId="GrailsMavenDebuggerRunner">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="GrailsMavenDebuggerRunner" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -643,12 +651,40 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -677,19 +713,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -749,15 +772,31 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="3">
+    <configuration default="false" name="testMap()" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="dtmc" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.servlets.GenericMatrix.testMap -echoOut" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <RunnerSettings RunnerId="Profile ">
+        <option name="myExternalizedOptions" />
+      </RunnerSettings>
+      <method />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Grails.Grails:dtmc" />
-      <item index="1" class="java.lang.String" itemvalue="Grails.testStrategy()" />
-      <item index="2" class="java.lang.String" itemvalue="Grails.testEdit()" />
+      <item index="1" class="java.lang.String" itemvalue="Grails.testMap()" />
+      <item index="2" class="java.lang.String" itemvalue="Grails.testStrategy()" />
+      <item index="3" class="java.lang.String" itemvalue="Grails.testEdit()" />
+      <item index="4" class="java.lang.String" itemvalue="Grails.GenericMatrixTest" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Grails.testEdit()" />
-        <item index="1" class="java.lang.String" itemvalue="Grails.testStrategy()" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Grails.GenericMatrixTest" />
+        <item index="1" class="java.lang.String" itemvalue="Grails.testEdit()" />
+        <item index="2" class="java.lang.String" itemvalue="Grails.testStrategy()" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -860,25 +899,33 @@
       <created>1372597630619</created>
       <updated>1372597630619</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="bootstrap">
+      <created>1373534061996</created>
+      <updated>1373534061996</updated>
+    </task>
+    <task id="LOCAL-00024" summary="bootstrap">
+      <created>1373534083041</created>
+      <updated>1373534083041</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1617" height="1055" extended-state="0" />
+    <frame x="64" y="-4" width="1617" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5582686" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39041534" sideWeight="0.56936735" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46503884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39908257" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5227525" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23386581" sideWeight="0.4772475" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26709265" sideWeight="0.53496116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -889,11 +936,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25303516" sideWeight="0.53385127" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4073252" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40399557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.521789" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46614873" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -965,143 +1012,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/register/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="31" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/i18n/view.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="31" selection-start="4394" selection-end="4394" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/LoginController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="13" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="370" selection-end="370" vertical-scroll-proportion="-5.4">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="40" selection-start="348" selection-end="348" vertical-scroll-proportion="-5.8333335">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/src/templates/artifacts/DomainClass.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/src/templates/artifacts/Controller.groovy">
+    <entry file="jar://$USER_HOME$/tools/grails-2.2.2/src/grails-plugin-controllers-2.2.2-sources.jar!/org/codehaus/groovy/grails/plugins/web/api/ControllersApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="220" column="18" selection-start="7720" selection-end="7720" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="40" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.grails/2.2.2/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/web-app/kickstart/css/kickstart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="38" selection-start="2395" selection-end="2395" vertical-scroll-proportion="0.35106382" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="53" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/portfolio/show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="62" selection-start="1879" selection-end="1879" vertical-scroll-proportion="-6.6734695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/artifacts/Controller.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_user.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="10.102041">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_content.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="6" selection-start="128" selection-end="128" vertical-scroll-proportion="-1.3888888">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="237" selection-end="237" vertical-scroll-proportion="-1.6666666">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/Role.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="-1.2">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="-0.5555556">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserRole.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="89" selection-end="89" vertical-scroll-proportion="-1.1111112">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/ClubController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="14" selection-start="1184" selection-end="1184" vertical-scroll-proportion="-11.24">
+        <state line="20" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="-12.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/PostIt.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="124" selection-end="124" vertical-scroll-proportion="-1.6666666">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="14.693877">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/login/auth.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="42" selection-start="913" selection-end="913" vertical-scroll-proportion="0.6439394">
+        <state line="5" column="29" selection-start="156" selection-end="156" vertical-scroll-proportion="-0.6103896">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="40" selection-start="1700" selection-end="1700" vertical-scroll-proportion="-16.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="55" selection-start="2068" selection-end="2068" vertical-scroll-proportion="-6.8163266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="47" selection-start="1127" selection-end="1127" vertical-scroll-proportion="-6.428571">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="20" selection-end="658" vertical-scroll-proportion="-3.9795918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_header.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="58" selection-start="271" selection-end="271" vertical-scroll-proportion="0.18248175">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

@@ -9,7 +9,7 @@ public class StockUtilsTest {
 
     public static Stock getStock(String filePath, String ticker) throws Exception {
 
-        Stock instrument = new Stock(ticker);
+        Stock instrument = new Stock(ticker, "myass");
         Stack lines = new Stack();
         StringBuffer fileData = new StringBuffer(1000);
         BufferedReader reader = new BufferedReader(new FileReader(filePath));

@@ -1,5 +1,7 @@
 package com.netnumeri.server.finance.finpojo
 
+import com.dtmc.club.Club
+import com.dtmc.security.UserBean
 
 class Persistable {
 
@@ -7,7 +9,9 @@ class Persistable {
         tablePerHierarchy false
     }
 
-    String name;
+    UserBean user
+    Club club
+    String name
 
     Date dateCreated
     Date lastUpdated
