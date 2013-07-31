@@ -121,7 +121,6 @@ grails.plugins.springsecurity.interceptUrlMap = [
         '/vanilla/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/trade/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
 
-
         '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
@@ -148,3 +147,6 @@ grails {
 
     }
 }
+
+//grails.plugin.cloudfoundry.username = "<your_username>"
+//grails.plugin.cloudfoundry.password = "<pass>"
