@@ -13,19 +13,24 @@
                         </div>
 
                         <div class="item" data-slide-number="1">
-                            <img src="http://placehold.it/770x300&text=two" width="100%"/></div>
+                            <img src="http://placehold.it/770x300&text=two" width="100%"/>
+                        </div>
 
                         <div class="item" data-slide-number="2">
-                            <img src="http://placehold.it/770x300&text=three"/></div>
+                            <img src="http://placehold.it/770x300&text=three"/>
+                        </div>
 
                         <div class="item" data-slide-number="3">
-                            <img src="http://placehold.it/770x300&text=four"/></div>
+                            <img src="http://placehold.it/770x300&text=four"/>
+                        </div>
 
                         <div class="item" data-slide-number="4">
-                            <img src="http://placehold.it/770x300&text=five"/></div>
+                            <img src="http://placehold.it/770x300&text=five"/>
+                        </div>
 
                         <div class="item" data-slide-number="5">
-                            <img src="http://placehold.it/770x300&text=six"/></div>
+                            <img src="http://placehold.it/770x300&text=six"/>
+                        </div>
                     </div>
                     <!-- Carousel nav -->
                     <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
