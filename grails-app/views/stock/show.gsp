@@ -32,13 +32,19 @@
 
         <tr class="prop">
             <td valign="top" class="name"><g:message code="stock.name.label" default="Name"/></td>
-
             <td valign="top" class="value">${fieldValue(bean: stockInstance, field: "name")}</td>
+        </tr>
 
+
+        <tr class="prop">
+            <td valign="top" class="value" colspan="2">
+                <g:render template="slider"/>
+            </td>
         </tr>
 
         </tbody>
     </table>
+
 </section>
 
 </body>
