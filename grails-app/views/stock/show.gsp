@@ -36,11 +36,11 @@
         </tr>
 
 
-        <tr class="prop">
-            <td valign="top" class="value" colspan="2">
-                <g:render template="slider"/>
-            </td>
-        </tr>
+        %{--<tr class="prop">--}%
+        %{--<td valign="top" class="value" colspan="2">--}%
+        %{--<g:render template="slider"/>--}%
+        %{--</td>--}%
+        %{--</tr>--}%
 
         </tbody>
     </table>
