@@ -1,4 +1,23 @@
-<script type="text/javascript" src="http://api.simile-widgets.org/timeplot/1.1/timeplot-api.js"></script>
+<style type="text/css">
+
+.label {
+    color: #666;
+    margin-top: 0.5em;
+    padding: 0.1em;
+    font-family: 'verdana', 'helvetica', sans serif;
+}
+
+.timeplot-grid-label {
+    color: #333;
+    font-family: 'verdana', 'helvetica', sans serif;
+    font-size: 9px !important;
+}
+
+.sources {
+    font-size: 90%;
+}
+</style>
+
 
 <script>
     var timeplot1;
@@ -16,6 +35,7 @@
     function onLoad() {
 
         var timeGeometry = new Timeplot.DefaultTimeGeometry({
+            min: "2012-01-01",
             gridColor: "#FFFFFF",
             axisLabelsPlacement: "bottom"
         });
@@ -26,7 +46,6 @@
 
         var eventSource1 = new Timeplot.DefaultEventSource();
         var dataSourceStock = new Timeplot.ColumnSource(eventSource1, 1);
-
 
         var plotInfo1 = [
             Timeplot.createPlotInfo({
@@ -42,18 +61,17 @@
         ];
 
         timeplot1 = Timeplot.create(document.getElementById("timeplot1"), plotInfo1);
-        timeplot1.loadText("/home/antonio/timeplot/T/stock.txt", " ", eventSource1);
+        timeplot1.loadText("http://localhost:7777/dtmc/stock/quotes", " ", eventSource1);
 
+    }
 
-        var resizeTimerID = null;
-
-        function onResize() {
-            if (resizeTimerID == null) {
-                resizeTimerID = window.setTimeout(function () {
-                    resizeTimerID = null;
-                    if (timeplot1) timeplot1.repaint();
-                }, 0);
-            }
+    var resizeTimerID = null;
+    function onResize() {
+        if (resizeTimerID == null) {
+            resizeTimerID = window.setTimeout(function () {
+                resizeTimerID = null;
+                if (timeplot1) timeplot1.repaint();
+            }, 0);
         }
     }
 </script>
@@ -64,9 +82,15 @@
         onLoad();
     }
     window.onload = codeAddress;
+
+    function codeResize() {
+        onResize();
+    }
+    window.onresize = codeResize;
 </script>
 
 <div id="content">
+
     <div id="timeplot1" style="height: 400px" class="timeplot"></div>
 </div>
 

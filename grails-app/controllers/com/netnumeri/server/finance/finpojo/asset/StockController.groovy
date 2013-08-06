@@ -1,5 +1,6 @@
 package com.netnumeri.server.finance.finpojo.asset
 
+import com.netnumeri.server.finance.utils.YahooUtils
 import org.springframework.dao.DataIntegrityViolationException
 
 /**
@@ -30,14 +31,14 @@ class StockController {
             return
         }
 
-		flash.message = message(code: 'default.created.message', args: [message(code: 'stock.label', default: 'Stock'), stockInstance.id])
+        flash.message = message(code: 'default.created.message', args: [message(code: 'stock.label', default: 'Stock'), stockInstance.id])
         redirect(action: "show", id: stockInstance.id)
     }
 
     def show() {
         def stockInstance = Stock.get(params.id)
         if (!stockInstance) {
-			flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
             redirect(action: "list")
             return
         }
@@ -68,8 +69,8 @@ class StockController {
             def version = params.version.toLong()
             if (stockInstance.version > version) {
                 stockInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                          [message(code: 'stock.label', default: 'Stock')] as Object[],
-                          "Another user has updated this Stock while you were editing")
+                        [message(code: 'stock.label', default: 'Stock')] as Object[],
+                        "Another user has updated this Stock while you were editing")
                 render(view: "edit", model: [stockInstance: stockInstance])
                 return
             }
@@ -82,26 +83,40 @@ class StockController {
             return
         }
 
-		flash.message = message(code: 'default.updated.message', args: [message(code: 'stock.label', default: 'Stock'), stockInstance.id])
+        flash.message = message(code: 'default.updated.message', args: [message(code: 'stock.label', default: 'Stock'), stockInstance.id])
         redirect(action: "show", id: stockInstance.id)
     }
 
     def delete() {
         def stockInstance = Stock.get(params.id)
         if (!stockInstance) {
-			flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
             redirect(action: "list")
             return
         }
 
         try {
             stockInstance.delete(flush: true)
-			flash.message = message(code: 'default.deleted.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
+            flash.message = message(code: 'default.deleted.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
             redirect(action: "list")
         }
         catch (DataIntegrityViolationException e) {
-			flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
+            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
             redirect(action: "show", id: params.id)
         }
     }
+
+    def quotes() {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.YEAR, -1);
+
+        String s = null;
+        try {
+            s = YahooUtils.proxyYahooData("IBM", cal.getTime(), new Date());
+        } catch (Exception e) {
+        }
+
+        render s
+    }
+
 }

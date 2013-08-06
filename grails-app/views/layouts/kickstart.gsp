@@ -21,6 +21,7 @@
     <r:require modules="jquery"/>
     <r:require modules="bootstrap"/>
     <r:require modules="bootstrap_utils"/>
+    <r:require modules="raphael"/>
 
     <r:layoutResources/>
     <g:layoutHead/>

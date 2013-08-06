@@ -5,7 +5,6 @@ class UrlMappings {
         /*
          * Pages without controller
          */
-//		"/"				(view:"/index")
         "/about"(view: "/siteinfo/about")
         "/blog"(view: "/siteinfo/blog")
         "/systeminfo"(view: "/siteinfo/systeminfo")
