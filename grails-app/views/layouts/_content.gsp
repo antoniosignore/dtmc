@@ -13,14 +13,10 @@
     <div class="alert alert-info">${flash.message}</div>
 </g:if>
 
-
 <div class="container-fluid">
-
     <div class="row-fluid">
-
         <div class="span2">
-            <div class="well sidebar-nav">
-
+            <div class="well sidebar-nav" style="width:150px;">
                 <ul class="nav nav-list">
                     <li class="nav-header">Navigation</li>
                     %{--<li><a href="/promoapi/deviceFamiles/list"><i class="icon-file"></i> Families</a></li>--}%
@@ -38,7 +34,7 @@
             </div><!--/.well -->
         </div><!--/span-->
 
-        <div class="span7">
+        <div class="span9">
         <!-- Secondary menu in one row (e.g., actions for current controller) -->
             <g:if test="${!layout_nosecondarymenu}">
                 <div class="row">
@@ -51,48 +47,48 @@
             <g:pageProperty name="page.body"/>
         </div>
 
-        <div class="list-group span3">
+        %{--<div class="list-group span2">--}%
 
-            <div class="row-fluid well">
-                <div class="span3"><a href="http://critterapp.pagodabox.com/others/admin" class="thumbnail"><img
-                        src="http://critterapp.pagodabox.com/img/user.jpg" alt=""></a></div>
+        %{--<div class="row-fluid well">--}%
+        %{--<div class="span3"><a href="http://critterapp.pagodabox.com/others/admin" class="thumbnail"><img--}%
+        %{--src="http://critterapp.pagodabox.com/img/user.jpg" alt=""></a></div>--}%
 
-                <div class="span7">
-                    <p>admin</p>
+        %{--<div class="span7">--}%
+        %{--<p>admin</p>--}%
 
-                    <p><strong>First Last Name</strong></p>
-                    <span class=" badge badge-warning">8 messages</span> <span
-                        class=" badge badge-info">15 followers</span>
-                </div>
-            </div>
+        %{--<p><strong>First Last Name</strong></p>--}%
+        %{--<span class=" badge badge-warning">8 messages</span> <span--}%
+        %{--class=" badge badge-info">15 followers</span>--}%
+        %{--</div>--}%
+        %{--</div>--}%
 
-            <div class="row-fluid well">
-                <div class="span3"><a href="http://critterapp.pagodabox.com/others/admin" class="thumbnail"><img
-                        src="http://critterapp.pagodabox.com/img/user.jpg" alt=""></a></div>
+        %{--<div class="row-fluid well">--}%
+        %{--<div class="span3"><a href="http://critterapp.pagodabox.com/others/admin" class="thumbnail"><img--}%
+        %{--src="http://critterapp.pagodabox.com/img/user.jpg" alt=""></a></div>--}%
 
-                <div class="span7">
-                    <p>admin</p>
+        %{--<div class="span7">--}%
+        %{--<p>admin</p>--}%
 
-                    <p><strong>First Last Name</strong></p>
-                    <span class=" badge badge-warning">8 messages</span> <span
-                        class=" badge badge-info">15 followers</span>
-                </div>
-            </div>
+        %{--<p><strong>First Last Name</strong></p>--}%
+        %{--<span class=" badge badge-warning">8 messages</span> <span--}%
+        %{--class=" badge badge-info">15 followers</span>--}%
+        %{--</div>--}%
+        %{--</div>--}%
 
-            <div class="row-fluid well">
-                <div class="span3"><a href="http://critterapp.pagodabox.com/others/admin" class="thumbnail"><img
-                        src="http://critterapp.pagodabox.com/img/user.jpg" alt=""></a></div>
+        %{--<div class="row-fluid well">--}%
+        %{--<div class="span3"><a href="http://critterapp.pagodabox.com/others/admin" class="thumbnail"><img--}%
+        %{--src="http://critterapp.pagodabox.com/img/user.jpg" alt=""></a></div>--}%
 
-                <div class="span7">
-                    <p>admin</p>
+        %{--<div class="span7">--}%
+        %{--<p>admin</p>--}%
 
-                    <p><strong>First Last Name</strong></p>
-                    <span class=" badge badge-warning">8 messages</span> <span
-                        class=" badge badge-info">15 followers</span>
-                </div>
-            </div>
+        %{--<p><strong>First Last Name</strong></p>--}%
+        %{--<span class=" badge badge-warning">8 messages</span> <span--}%
+        %{--class=" badge badge-info">15 followers</span>--}%
+        %{--</div>--}%
+        %{--</div>--}%
 
-        </div>
+        %{--</div>--}%
 
     </div>
 
