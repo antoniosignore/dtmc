@@ -1,15 +1,14 @@
 package com.netnumeri.server.finance.finpojo.asset
 
+import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import org.springframework.dao.DataIntegrityViolationException
 
-/**
- * StockController
- * A controller class handles incoming web requests and performs actions such as redirects, rendering views and so on.
- */
 class StockController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    def gsonBuilder
 
     def index() {
         redirect(action: "list", params: params)
@@ -43,18 +42,60 @@ class StockController {
             return
         }
 
-        [stockInstance: stockInstance, javascript: "[\n" +
-                "        {'period': '2012-10-30', 'licensed': 3407, 'sorned': 1},\n" +
-                "        {'period': '2012-09-30', 'licensed': 3351, 'sorned': 2},\n" +
-                "        {'period': '2012-09-29', 'licensed': 3269, 'sorned': 2},\n" +
-                "        {'period': '2012-09-20', 'licensed': 3246, 'sorned': 10},\n" +
-                "        {'period': '2012-09-19', 'licensed': 3257, 'sorned': 3},\n" +
-                "        {'period': '2012-09-18', 'licensed': 3248, 'sorned': 18},\n" +
-                "        {'period': '2012-09-17', 'licensed': 3171, 'sorned': 15},\n" +
-                "        {'period': '2012-09-16', 'licensed': 3171, 'sorned': 14},\n" +
-                "        {'period': '2012-09-15', 'licensed': 3201, 'sorned': 8},\n" +
-                "        {'period': '2012-09-10', 'licensed': 3215, 'sorned': 5}\n" +
-                "    ]"]
+        Date da = DateUtils.Date("11/1/2012");
+        Date a = DateUtils.today();
+
+        Stock stock = YahooUtils.downloadYahooData(stockInstance.name, "", da, a);
+        TimeSeries series = stock.getCloseSeries()
+
+//        DailyGSON  dailygson = StockUtils.getDailyGSON(stockInstance)
+//        def gson = gsonBuilder.setPrettyPrinting().create()
+//        String json = gson.toJson(dailygson)
+
+        [stockInstance: stockInstance, javascript: series.getJsonSeries()]
+
+//        "[\n" +
+//                "  {\n" +
+//                "    \"period\": \"2013-01-01\",\n" +
+//                "    \"close\": \"1\"\n" +
+//                "  },\n" +
+//                "  {\n" +
+//                "    \"period\": \"2013-01-02\",\n" +
+//                "    \"close\": \"2\"\n" +
+//                "  },\n" +
+//                "  {\n" +
+//                "    \"period\": \"2013-01-03\",\n" +
+//                "    \"close\": \"3\"\n" +
+//                "  },\n" +
+//                "  {\n" +
+//                "    \"period\": \"2013-01-04\",\n" +
+//                "    \"close\": \"4\"\n" +
+//                "  },\n" +
+//                "  {\n" +
+//                "    \"period\": \"2013-01-05\",\n" +
+//                "    \"close\": \"5\"\n" +
+//                "  },\n" +
+//                "  {\n" +
+//                "    \"period\": \"2013-01-06\",\n" +
+//                "    \"close\": \"4\"\n" +
+//                "  },\n" +
+//                "  {\n" +
+//                "    \"period\": \"2013-01-07\",\n" +
+//                "    \"close\": \"3\"\n" +
+//                "  },\n" +
+//                "  {\n" +
+//                "    \"period\": \"2013-01-08\",\n" +
+//                "    \"close\": \"4\"\n" +
+//                "  },\n" +
+//                "  {\n" +
+//                "    \"period\": \"2013-01-09\",\n" +
+//                "    \"close\": \"1.3\"\n" +
+//                "  },\n" +
+//                "  {\n" +
+//                "    \"period\": \"2013-01-10\",\n" +
+//                "    \"close\": \"1.5\"\n" +
+//                "  }\n" +
+//                "]"]
     }
 
     def edit() {

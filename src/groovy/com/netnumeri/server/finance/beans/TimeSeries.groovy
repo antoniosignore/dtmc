@@ -1,5 +1,8 @@
 package com.netnumeri.server.finance.beans
 
+import com.dtmc.gson.DailyGSON
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.netnumeri.server.finance.math.NumericalRecipes
 import com.netnumeri.server.finance.utils.DateUtils
 
@@ -1066,6 +1069,58 @@ public class TimeSeries implements Serializable {
         }
         return null;
     }
+
+//    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//    DecimalFormat df = new DecimalFormat("#.####");
+//
+//    List<DailyGSON> ds = new ArrayList<DailyGSON>();
+//    ds.add(buildDaily("2013-01-01","1"));
+//    ds.add(buildDaily("2013-01-02","2"));
+//    ds.add(buildDaily("2013-01-03","3"));
+//    ds.add(buildDaily("2013-01-04","4"));
+//    ds.add(buildDaily("2013-01-05","5"));
+//    ds.add(buildDaily("2013-01-06","4"));
+//    ds.add(buildDaily("2013-01-07","3"));
+//    ds.add(buildDaily("2013-01-08","4"));
+//    ds.add(buildDaily("2013-01-09","1.3"));
+//    ds.add(buildDaily("2013-01-10", "1.5"));
+//
+//    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//    String jsonOutput = gson.toJson(ds);
+//    System.out.println("json = " + jsonOutput);
+//}
+
+    private static DailyGSON buildDaily(String day, String val) {
+        DailyGSON d1 = new DailyGSON();
+        d1.period = day;
+        d1.setClose(val);
+        return d1;
+    }
+
+    public String getJsonSeries() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        DecimalFormat df = new DecimalFormat("#.####");
+        List<DailyGSON> ds = new ArrayList<DailyGSON>();
+        try {
+            Date d = firstDate;
+            while (DateUtils.isLessEqual(d, lastDate)) {
+                Double v = this.getData(d);
+                if (v == null) {
+                    d = DateUtils.addDays(d, 1)
+                    continue
+                };
+                ds.add(buildDaily(sdf.format(d), df.format(v)));
+                d = DateUtils.addDays(d, 1)
+            }
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            String jsonOutput = gson.toJson(ds);
+            return jsonOutput;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 
     public String getNoDateSeries() {
         DecimalFormat df = new DecimalFormat("#.####");

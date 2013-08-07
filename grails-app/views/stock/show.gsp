@@ -9,7 +9,7 @@
     <title><g:message code="default.show.label" args="[entityName]"/></title>
 
     <r:external uri="/js/morris.js"/>
-    <r:external uri="/css/morris.js"/>
+    <r:external uri="/css/morris.css"/>
 
 </head>
 
@@ -22,14 +22,11 @@
 
         <tr class="prop">
             <td valign="top" class="name"><g:message code="stock.dateCreated.label" default="Date Created"/></td>
-
             <td valign="top" class="value"><g:formatDate date="${stockInstance?.dateCreated}"/></td>
-
         </tr>
 
         <tr class="prop">
             <td valign="top" class="name"><g:message code="stock.description.label" default="Description"/></td>
-
             <td valign="top" class="value">${fieldValue(bean: stockInstance, field: "description")}</td>
 
         </tr>
@@ -45,6 +42,7 @@
 
     <div id="graph"></div>
 
+
     <script>
         var day_data =
                 ${javascript};
@@ -53,8 +51,8 @@
             element: 'graph',
             data: day_data,
             xkey: 'period',
-            ykeys: ['licensed', 'sorned'],
-            labels: ['Licensed', 'SORN'],
+            ykeys: ['close'],
+            labels: ['Close'],
             xLabelAngle: 60
         });
 
