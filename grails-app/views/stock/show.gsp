@@ -40,7 +40,7 @@
     </table>
 
 
-    <div id="graph"></div>
+    <div id="graph" style="height: 600px;width: 100%;"></div>
 
 
     <script>
@@ -53,7 +53,12 @@
             xkey: 'period',
             ykeys: ['close'],
             labels: ['Close'],
-            xLabelAngle: 60
+            lineWidth: 1,
+            pointSize: 1,
+            xLabelAngle: 60,
+            ymin: 'auto',
+            ymax: 'auto',
+            axes: 'false'
         });
 
     </script>

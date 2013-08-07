@@ -46,7 +46,7 @@ class StockController {
         Date a = DateUtils.today();
 
         Stock stock = YahooUtils.downloadYahooData(stockInstance.name, "", da, a);
-        TimeSeries series = stock.getCloseSeries()
+        TimeSeries series = stock.closeSeries()
 
 //        DailyGSON  dailygson = StockUtils.getDailyGSON(stockInstance)
 //        def gson = gsonBuilder.setPrettyPrinting().create()

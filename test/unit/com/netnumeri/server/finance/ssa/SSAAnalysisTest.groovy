@@ -21,11 +21,11 @@ class SSAAnalysisTest {
     @Test
     public void setUp() throws IOException, ParseException {
 
-        Date da = DateUtils.Date("11/1/2009");
+        Date da = DateUtils.Date("11/2/2009");
         Date a = DateUtils.today();
 
         stock = YahooUtils.downloadYahooData(TICKER, "test", da, a);
-        closes = stock.getCloseSeries();
+        closes = stock.closeSeries();
 //        stock.indicators.put("SMA-" + 50, new SMAIndicator(closes, "SMA-" + 50, 50, -1, -1, -1, -1))
 
         dir = TOP_DI + stock.name + "/"
