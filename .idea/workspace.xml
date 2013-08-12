@@ -2,16 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ssa/SSAAnalysisTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ssa/SSAAnalysisTest.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/dtmc/gson/CandleGSON.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/IndicatorEnum.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Indicators.groovy" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/PostIt.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Posts.groovy" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/IndicatorTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/IndicatorsTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandLowerIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandLowerIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandMiddleIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandMiddleIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/FinConstants.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/FinConstants.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/GenericMatrix.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/GenericMatrix.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/GenericTimeSeries.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/GenericTimeSeries.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/beans/TimeSeriesTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/beans/TimeSeriesTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Trade.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Trade.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TradeOscillatorIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TradeOscillatorIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/data/TransactionSeries.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/data/TransactionSeries.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/derivative/equity/Vanilla.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/derivative/equity/Vanilla.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooInstantSnapshot.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooInstantSnapshot.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooUtils.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooUtils.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/register.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/register.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375909758063" ignored="false" />
-    <file path="/a.dummy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375903407931" ignored="false" />
+    <file path="/Dummy.txt" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376342117047" ignored="false" />
+    <file path="/a.dummy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376316635216" ignored="false" />
     <file path="/PortfolioController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370897984993" ignored="false" />
     <file path="$PROJECT_DIR$/../iceScrum/web-app/WEB-INF/tld/spring.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459360658" ignored="false" />
     <file path="$PROJECT_DIR$/../iceScrum/web-app/WEB-INF/sitemesh.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459360658" ignored="false" />
@@ -38,7 +67,7 @@
     <file path="$PROJECT_DIR$/../BlogSamples/layout-demo2/grails-app/views/templates/homepage.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370720432269" ignored="false" />
     <file path="/homepage.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370890041938" ignored="false" />
     <file path="/TradeService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370768995525" ignored="false" />
-    <file path="/fragment.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372249975551" ignored="false" />
+    <file path="/fragment.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376306198426" ignored="false" />
     <file path="/PageController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370888827595" ignored="false" />
     <file path="$PROJECT_DIR$/../BlogSamples/layout-demo2/grails-app/controllers/com/mrhaki/layout/controller/PageController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370771027884" ignored="false" />
     <file path="/PortfolioService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371458959183" ignored="false" />
@@ -46,9 +75,9 @@
     <file path="/portfolioview.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370776471241" ignored="false" />
     <file path="/portfoliolist.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370776543896" ignored="false" />
     <file path="/page.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370777042240" ignored="false" />
-    <file path="/BootStrap.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375655177282" ignored="false" />
+    <file path="/BootStrap.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376310874689" ignored="false" />
     <file path="/Config.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372427003435" ignored="false" />
-    <file path="/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868048315" ignored="false" />
+    <file path="/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315516486" ignored="false" />
     <file path="/StatusService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370796936440" ignored="false" />
     <file path="/Status.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370796984588" ignored="false" />
     <file path="/Persistable.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373622490641" ignored="false" />
@@ -65,14 +94,14 @@
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-devicemanager/smhs.businesslogic.devicemanager/src/test/java/com/vodafone/global/smhs/businesslogic/devicemanager/utils/FileTokenLockTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370859853795" ignored="false" />
     <file path="$PROJECT_DIR$/../BlogSamples/layout-demo2/grails-app/views/layouts/page.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370889761884" ignored="false" />
     <file path="/fiveblocks.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370894916403" ignored="false" />
-    <file path="/Stock.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370896848163" ignored="false" />
+    <file path="/Stock.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375990507961" ignored="false" />
     <file path="/Portfolio.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373619778268" ignored="false" />
-    <file path="/YahooUtils.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370898233874" ignored="false" />
-    <file path="/StockController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375910411877" ignored="false" />
+    <file path="/YahooUtils.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375994121789" ignored="false" />
+    <file path="/StockController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375993805214" ignored="false" />
     <file path="$USER_HOME$/.IntelliJIdea12/config/options/intentionSettings.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371283371667" ignored="false" />
-    <file path="/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375911511501" ignored="false" />
-    <file path="/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371284496992" ignored="false" />
-    <file path="/UserBean.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373619725342" ignored="false" />
+    <file path="/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376345055889" ignored="false" />
+    <file path="/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341962866" ignored="false" />
+    <file path="/UserBean.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376155561903" ignored="false" />
     <file path="/denied.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371450525369" ignored="false" />
     <file path="/Backtest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371459060243" ignored="false" />
     <file path="/PortfolioItemController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371500215086" ignored="false" />
@@ -244,7 +273,7 @@
     <file path="$PROJECT_DIR$/../pikachoosesample/application.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374270407415" ignored="false" />
     <file path="$PROJECT_DIR$/../pikachoosesample/web-app/WEB-INF/applicationContext.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374270407415" ignored="false" />
     <file path="$PROJECT_DIR$/../pikachoosesample/grails-app/views/photo/photoGallery.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374436119576" ignored="false" />
-    <file path="/_content.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375867860915" ignored="false" />
+    <file path="/_content.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376343515460" ignored="false" />
     <file path="$PROJECT_DIR$/../promoht/grails-app/conf/DataSource.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374479314798" ignored="false" />
     <file path="$PROJECT_DIR$/../promoapi/application.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374479578040" ignored="false" />
     <file path="$PROJECT_DIR$/../promoapi/grails-app/conf/UrlMappings.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374479578040" ignored="false" />
@@ -383,7 +412,7 @@
     <file path="$PROJECT_DIR$/../promo-api/grails-app/domain/promoapi/CampaignItems.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374573932549" ignored="false" />
     <file path="$PROJECT_DIR$/../promo-api/grails-app/conf/BuildConfig.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374574180845" ignored="false" />
     <file path="$PROJECT_DIR$/../promo-api/target/stacktrace.log" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374575405010" ignored="false" />
-    <file path="/CampaignsController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576555006" ignored="false" />
+    <file path="/CampaignsController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376312691328" ignored="false" />
     <file path="$PROJECT_DIR$/../promo-api/grails-app/views/campaigns/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576632912" ignored="false" />
     <file path="$PROJECT_DIR$/../promo-api/grails-app/views/campaigns/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576632912" ignored="false" />
     <file path="$PROJECT_DIR$/../promo-api/grails-app/views/campaigns/create.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576632912" ignored="false" />
@@ -411,16 +440,16 @@
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/PublishController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375262223176" ignored="false" />
     <file path="/PublishController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375262206970" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/.idea/workspace.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375310939044" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/services/com/vodafone/publish/PublishService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868445355" ignored="false" />
-    <file path="/PublishService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868430261" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/services/com/vodafone/publish/PublishService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317214094" ignored="false" />
+    <file path="/PublishService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376316229246" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/src/java/com/vodafone/gson/CampaignsGSON.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868387792" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/debug.log" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375352363532" ignored="false" />
     <file path="/contact.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375309325633" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/layouts/_content.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375897012608" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/campaigns/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868489897" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/layouts/_content.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317684220" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/campaigns/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376256980500" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/DataSource.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868489897" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/services/com/vodafone/publish/WebDavService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375351771942" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/target/stacktrace.log" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375351723169" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/target/stacktrace.log" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315057136" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Campaigns.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
     <file path="/_slider.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375444439364" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/services/com/vodafone/publish/PublishImagesService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375801282459" ignored="false" />
@@ -431,10 +460,10 @@
     <file path="/_timeplot.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375738871467" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-discover/src/main/webapp/WEB-INF/web.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375448949577" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-discover/src/main/java/com/vodafone/global/blueprint/discover/backend/services/SMHSImageUploadService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375449830282" ignored="false" />
-    <file path="/UrlMappings.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375563992805" ignored="false" />
+    <file path="/UrlMappings.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376246925108" ignored="false" />
     <file path="/_submenubar.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375564513785" ignored="false" />
     <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/shared/pojoc/SearchReference.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/ImageNode.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/ImageNode.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376310701172" ignored="false" />
     <file path="/ImageNode.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375801251045" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/CampaignToClient.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/CampaignToFamily.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
@@ -444,17 +473,67 @@
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Opco.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Tags.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
     <file path="/CampaignsGSON.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868360823" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/CampaignsController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868489897" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/CampaignsController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376318064893" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/blueprint-promo.log" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868842006" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_navbar.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375869144651" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_menubar.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375869129475" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/BuildConfig.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375869663191" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/BuildConfig.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376307161711" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/imageNode/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375870007894" ignored="false" />
     <file path="/DailyGSON.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375900273416" ignored="false" />
     <file path="/File Header.txt.ft" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375899394687" ignored="false" />
-    <file path="/TimeSeries.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375899603200" ignored="false" />
-    <file path="/StockUtils.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375903402410" ignored="false" />
+    <file path="/TimeSeries.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376142972020" ignored="false" />
+    <file path="/StockUtils.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375992920042" ignored="false" />
     <file path="/SSAAnalysisTest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375910367625" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/pom.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375947534933" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/smhs.properties.promo/src/main/resources/META-INF/spring/promo-properties-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375947838348" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/smhs.properties.promo/src/main/resources/META-INF/spring/promo-properties-bean-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375947838348" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/smhs.properties.promo/pom.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375947838348" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/smhs.businesslogic.promo/src/main/java/com/vodafone/global/smhs/businesslogic/promo/rules/sample.json" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375947953985" ignored="false" />
+    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/smhs.businesslogic.promo/src/main/java/com/vodafone/global/smhs/businesslogic/promo/rules/sample.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375948188369" ignored="false" />
+    <file path="/TimeSeriesTest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375991377625" ignored="false" />
+    <file path="/IndicatorTest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375991261737" ignored="false" />
+    <file path="/IndicatorEnum.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376139397482" ignored="false" />
+    <file path="/Attributes.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376343172621" ignored="false" />
+    <file path="/Indicator.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376144323811" ignored="false" />
+    <file path="/Strategy.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376145236842" ignored="false" />
+    <file path="/TASettings.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376155518911" ignored="false" />
+    <file path="/Trade.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376157821016" ignored="false" />
+    <file path="/Vanilla.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376158678747" ignored="false" />
+    <file path="/UserController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376177814303" ignored="false" />
+    <file path="/RegisterController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376209357858" ignored="false" />
+    <file path="/JoinController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376209568420" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publish/panel.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341923460" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/imageNode/photoGallery.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376256623151" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/web-app/css/base.css" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376256936509" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/TimelineController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376309501124" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/timeline/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376342055469" ignored="false" />
+    <file path="/TimelineController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376309412897" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/src/java/com/vodafone/gson/ImagesGSON.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376306189689" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/src/java/com/vodafone/gson/DailyGSON.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376306272546" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/layouts/kickstart.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317778126" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/BootStrap.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317778126" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/src/groovy/com/vodafone/promoapi/StatusEnum.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376309888634" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/ImageNodeController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376310953644" ignored="false" />
+    <file path="/ImageNodeController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376310950062" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publishHistory/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341850010" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publishHistory/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315380096" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/PublishHistoryController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376314139599" ignored="false" />
+    <file path="/PublishHistoryController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376314138330" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publishHistory/edit.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376314971870" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publishHistory/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315528332" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publishHistory/create.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376314971870" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/TrashController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315938333" ignored="false" />
+    <file path="/TrashController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315270708" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/src/templates/scaffolding/Test.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315938333" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/siteinfo/systeminfo.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317044874" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_settings_logout.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317778126" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/campaigns/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317778126" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_opco.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317778126" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/src/java/com/vodafone/filter/PlatformServicesClient.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317778126" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/promoapi/SimpleCheckFilters.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317778126" ignored="false" />
+    <file path="/panel.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341921258" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/trash/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341966920" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/timeline/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341978322" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -469,7 +548,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/controllers/grails/plugins/springsecurity/ui/UserController.groovy" line="37" class="grails.plugins.springsecurity.ui.UserController" package="grails.plugins.springsecurity.ui">
         <option name="ENABLED" value="false" />
@@ -501,7 +579,7 @@
         <option name="CONDITION" value="&#13;&#13;JAVA" />
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" line="47" class="com.netnumeri.server.finance.finpojo.asset.StockController" package="com.netnumeri.server.finance.finpojo.asset">
+      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" line="48" class="com.netnumeri.server.finance.finpojo.asset.StockController" package="com.netnumeri.server.finance.finpojo.asset">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -546,7 +624,23 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/controllers/grails/plugins/springsecurity/ui/RegisterController.groovy" line="38" class="grails.plugins.springsecurity.ui.RegisterController" package="grails.plugins.springsecurity.ui">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -592,96 +686,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.gsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/stock/show.gsp">
+      <file leaf-file-name="StockController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="78" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.5445545">
+            <state line="8" column="6" selection-start="325" selection-end="325" vertical-scroll-proportion="-4.8">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
+      <file leaf-file-name="show.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/stock/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="63" selection-start="1895" selection-end="1895" vertical-scroll-proportion="-7.8">
+            <state line="66" column="100" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.5135135">
               <folding>
-                <marker date="1375910409738" expanded="true" signature="52:272" placeholder="..." />
+                <marker date="1376345056816" expanded="true" signature="5523:5940" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Persistable.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy">
+      <file leaf-file-name="YahooInstantSnapshot.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooInstantSnapshot.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="11" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+            <state line="223" column="51" selection-start="5687" selection-end="5707" vertical-scroll-proportion="-7.321429">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stock.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="10" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeSeriesTest.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/beans/TimeSeriesTest.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="39" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SSAAnalysisTest.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ssa/SSAAnalysisTest.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="70" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Instrument.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy">
+      <file leaf-file-name="Posts.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Posts.groovy">
           <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="406" column="32" selection-start="12748" selection-end="12748" vertical-scroll-proportion="-4.195122">
+            <state line="13" column="34" selection-start="181" selection-end="181" vertical-scroll-proportion="-3.6111112">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SSAStudy.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy">
+      <file leaf-file-name="Indicators.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Indicators.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="22" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+            <state line="5" column="13" selection-start="152" selection-end="152" vertical-scroll-proportion="-1.3888888">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeSeries.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
+      <file leaf-file-name="IndicatorsController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/IndicatorsController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1107" column="53" selection-start="38677" selection-end="38677" vertical-scroll-proportion="0.0">
+            <state line="38" column="25" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-22.8">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DateUtils.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/DateUtils.groovy">
+      <file leaf-file-name="_content.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_content.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="399" column="0" selection-start="12543" selection-end="12543" vertical-scroll-proportion="0.0">
+            <state line="17" column="49" selection-start="564" selection-end="564" vertical-scroll-proportion="-10.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Attributes.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="13" selection-start="63" selection-end="63" vertical-scroll-proportion="-0.8333333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttributesController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/AttributesController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/attributes/edit.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -710,21 +810,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$USER_HOME$/timeplot/plot.html" />
-        <option value="$USER_HOME$/timeplot/bb.html" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/timeplot.html" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/_timeplot.gsp" />
-        <option value="$PROJECT_DIR$/application.properties" />
-        <option value="$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/raphael-2.0.1/grails-app/conf/RaphaelPluginResources.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/ApplicationResources.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/controller/UserController/groovy/UserController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/register/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/views/register/index/gsp/JoinController.groovy" />
+        <option value="$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/controllers/grails/plugins/springsecurity/ui/RegisterController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
+        <option value="$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/src/UrlMappings.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/views/register/index/gsp/RegisterController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Posts.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Indicators.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/AttributesController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/attributes/edit.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/IndicatorsController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
-        <option value="$PROJECT_DIR$/src/java/com/dtmc/gson/DailyGSON.java" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ssa/SSAAnalysisTest.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/stock/show.gsp" />
       </list>
     </option>
@@ -761,6 +861,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -768,9 +870,15 @@
               <option name="myItemId" value="dtmc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="dtmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc-grailsPlugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -779,29 +887,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="dtmc-grailsPlugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="grails-2.2.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-2.2.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring-webmvc-3.1.4.RELEASE.jar" />
+              <option name="myItemId" value="kickstart-with-bootstrap-0.9.6" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -811,19 +901,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="dtmc-grailsPlugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="grails-2.2.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring-webmvc-3.1.4.RELEASE.jar" />
+              <option name="myItemId" value="kickstart-with-bootstrap-0.9.6" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -831,6 +917,88 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="dtmc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc-grailsPlugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kickstart-with-bootstrap-0.9.6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc-grailsPlugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kickstart-with-bootstrap-0.9.6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc-grailsPlugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kickstart-with-bootstrap-0.9.6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc-grailsPlugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kickstart-with-bootstrap-0.9.6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -933,195 +1101,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netnumeri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netnumeri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netnumeri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netnumeri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ssa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netnumeri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1166,228 +1146,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gson" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ssa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beans" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1461,7 +1219,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="register" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1480,96 +1238,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finpojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finpojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asset" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1592,6 +1260,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gsp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1682,25 +1376,45 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtmc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="141" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
     <property name="project.structure.proportion" value="0.0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="140" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="140" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../netnumeri" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="169" />
@@ -1716,8 +1430,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -1725,11 +1439,13 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.netnumeri.server.finance.indicator" />
+      <recent name="com.dtmc.gson" />
       <recent name="dtmc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -1827,6 +1543,21 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
@@ -1837,40 +1568,12 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -1901,6 +1604,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -1914,6 +1630,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1935,13 +1658,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="false" name="Grails:dtmc" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -2148,7 +1864,11 @@
       <created>1375904800044</created>
       <updated>1375904800044</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="bootstrap">
+      <created>1375912615179</created>
+      <updated>1375912615179</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2161,11 +1881,12 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22747605" sideWeight="0.7580466" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41731408" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41676235" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2633015" sideWeight="0.73537606" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35627082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2709265" sideWeight="0.54051054" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2175,13 +1896,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23642172" sideWeight="0.4517203" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5482797" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26462397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984026" sideWeight="0.3762486" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45948946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.65482795" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6237514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2258,120 +1978,129 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-app/js/application.js">
+    <entry file="file://$PROJECT_DIR$/web-app/css/morris.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/js/morris.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/dtmc/gson/DailyGSON.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="55" selection-start="481" selection-end="1474" vertical-scroll-proportion="0.0">
+        <state line="22" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy">
+    <entry file="file://$PROJECT_DIR$/web-app/js/morris.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="50" selection-start="6276" selection-end="6327" vertical-scroll-proportion="0.0">
+        <state line="683" column="19" selection-start="27348" selection-end="27348" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1375904799870" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1375904799870" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="19" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BalanceOfPowerIndicator.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="43" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0">
+        <state line="23" column="24" selection-start="1118" selection-end="1153" vertical-scroll-proportion="-1.3333334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/beans/TimeSeriesTest.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/register/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="39" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Persistable.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="11" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/tools/grails-2.2.3/lib/org.springframework/spring-webmvc/jars/spring-webmvc-3.1.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="19" selection-start="7018" selection-end="7018" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/DateUtils.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="399" column="0" selection-start="12543" selection-end="12543" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="22" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="406" column="32" selection-start="12748" selection-end="12748" vertical-scroll-proportion="-4.195122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ssa/SSAAnalysisTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="70" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1107" column="53" selection-start="38677" selection-end="38677" vertical-scroll-proportion="0.0">
+        <state line="5" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="-1.5306122">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="63" selection-start="1895" selection-end="1895" vertical-scroll-proportion="-7.8">
-          <folding>
-            <marker date="1375910409738" expanded="true" signature="52:272" placeholder="..." />
-          </folding>
+        <state line="8" column="6" selection-start="325" selection-end="325" vertical-scroll-proportion="-4.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Posts.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="34" selection-start="181" selection-end="181" vertical-scroll-proportion="-3.6111112">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="63" selection-end="63" vertical-scroll-proportion="-0.8333333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/AttributesController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/attributes/edit.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Indicators.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="152" selection-end="152" vertical-scroll-proportion="-1.3888888">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/IndicatorsController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="25" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-22.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_content.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="49" selection-start="564" selection-end="564" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooInstantSnapshot.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="223" column="51" selection-start="5687" selection-end="5707" vertical-scroll-proportion="-7.321429">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="78" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.5445545">
-          <folding />
+        <state line="66" column="100" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.5135135">
+          <folding>
+            <marker date="1376345056816" expanded="true" signature="5523:5940" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

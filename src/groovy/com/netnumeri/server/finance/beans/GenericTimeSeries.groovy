@@ -16,11 +16,6 @@ class GenericTimeSeries<T> implements Serializable {
         treeMap.get(date)
     }
 
-
-    public Long size() {
-        return treeMap.size()
-    }
-
     public boolean isEmpty() {
         return treeMap.isEmpty()
     }

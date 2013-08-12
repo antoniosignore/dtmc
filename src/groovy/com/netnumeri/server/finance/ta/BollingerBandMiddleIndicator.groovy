@@ -1,9 +1,7 @@
 package com.netnumeri.server.finance.ta
 
-import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.indicator.BollingerMiddle
-import com.netnumeri.server.finance.indicator.BollingerUpper
 
 public class BollingerBandMiddleIndicator extends Indicator {
 

@@ -1,13 +1,13 @@
 package com.netnumeri.server.finance.finpojo.derivative.equity;
 
-
 import com.netnumeri.server.entity.OptionType
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.derivative.Derivative
 
 class Vanilla extends Derivative implements Serializable {
 
-    public Instrument underlying;
+    static belongsTo = [underlying: Instrument]
+
     double interestRate;
     def expiration;
     def strike;

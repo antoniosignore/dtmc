@@ -1,4 +1,4 @@
-package com.netnumeri.server.finance.finpojo;
+package com.netnumeri.server.finance.finpojo
 
 import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
@@ -8,7 +8,8 @@ import com.netnumeri.server.finance.utils.FormatUtils
 public class Trade implements Serializable {
 
     TradeEnum tradeAction;
-    Instrument instrument;
+
+    static belongsTo = [portfolio: Portfolio]
 
     Integer amount = 0;
     Double price = 0.0;

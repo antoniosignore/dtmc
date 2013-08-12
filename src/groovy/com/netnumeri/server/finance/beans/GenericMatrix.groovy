@@ -65,7 +65,7 @@ class GenericMatrix<T> implements Serializable {
 
     public int size(int row) {
         def get = listOfTimeSeries.get(row);
-        return get.size();
+        return get.treeMap.size();
     }
 
     public GenericMatrix<T> cloneIt() {

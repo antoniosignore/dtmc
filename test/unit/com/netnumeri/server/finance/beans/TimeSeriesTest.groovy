@@ -29,6 +29,11 @@ public class TimeSeriesTest extends GroovyTestCase {
 
         Stock stock = TestUtils.buildStockTWOLines("SSRI");
 
+
+
+        Daily value = dailyarray.getFirstValue()
+
+
         assertEquals(2, stock.getNDaily());
 
         System.out.println("stock.getFirstDate() = " + stock.getFirstDate());

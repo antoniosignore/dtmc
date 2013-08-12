@@ -871,13 +871,13 @@ class Instrument extends Persistable implements Serializable {
             return false;
         }
         if (date == null) {
-            return dailyarray.size() != 0;
+            return dailyarray.treeMap.size() != 0;
         }
         return dataAvailable(date);
     }
 
     public int length() {
-        return dailyarray.size();
+        return dailyarray.treeMap.size();
     }
 
     public Date firstDailyDate() {

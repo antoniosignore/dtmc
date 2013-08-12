@@ -12,7 +12,7 @@ import org.junit.Test
 
 import java.text.ParseException
 
-public class IndicatorTest extends TestCase {
+public class IndicatorsTest extends TestCase {
 
     String dir = "/home/antonio/timeplot/"
     Instrument stock

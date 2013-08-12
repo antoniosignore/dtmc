@@ -1,7 +1,6 @@
 package com.netnumeri.server.finance.ta
 
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.indicator.RSI
 import com.netnumeri.server.finance.utils.IndicatorUtils
 
 public class TradeOscillatorIndicator extends Indicator {

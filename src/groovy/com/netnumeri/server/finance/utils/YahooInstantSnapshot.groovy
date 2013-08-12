@@ -1,6 +1,7 @@
 package com.netnumeri.server.finance.utils;
 
 public class YahooInstantSnapshot implements Serializable {
+
     private String Symbol;
     private String CompanyName;
     private String LastPrice;

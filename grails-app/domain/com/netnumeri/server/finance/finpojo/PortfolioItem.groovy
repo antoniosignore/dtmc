@@ -10,7 +10,7 @@ public class PortfolioItem implements Serializable {
     }
 
     Instrument instrument
-    Portfolio portfolio
+    static belongsTo = [portfolio: Portfolio]
 
     Integer amount = 0;
 

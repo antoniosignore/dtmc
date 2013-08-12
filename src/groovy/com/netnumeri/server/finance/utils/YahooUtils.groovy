@@ -236,6 +236,7 @@ public class YahooUtils {
         }
 
         snap.setSymbol(token);
+
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
             if (token.equalsIgnoreCase(delimiter)) {

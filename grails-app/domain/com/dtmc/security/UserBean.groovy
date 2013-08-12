@@ -6,7 +6,7 @@ class UserBean {
 
     transient springSecurityService
 
-    Club club
+    static belongsTo = [club: Club]
 
     String username
     String password

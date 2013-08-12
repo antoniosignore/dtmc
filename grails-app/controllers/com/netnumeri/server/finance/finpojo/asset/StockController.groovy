@@ -3,6 +3,7 @@ package com.netnumeri.server.finance.finpojo.asset
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
+import com.netnumeri.server.utils.StockUtils
 import org.springframework.dao.DataIntegrityViolationException
 
 class StockController {
@@ -48,54 +49,11 @@ class StockController {
         Stock stock = YahooUtils.downloadYahooData(stockInstance.name, "", da, a);
         TimeSeries series = stock.closeSeries()
 
-//        DailyGSON  dailygson = StockUtils.getDailyGSON(stockInstance)
-//        def gson = gsonBuilder.setPrettyPrinting().create()
-//        String json = gson.toJson(dailygson)
+        stockInstance.snapshot = YahooUtils.getCompanySnapshot(stock.name);
 
-        [stockInstance: stockInstance, javascript: series.getJsonSeries()]
+        String plot = StockUtils.getJqPlot(stock)
+        [stockInstance: stockInstance, javascript: series.getJsonSeries(), ohlc: plot]
 
-//        "[\n" +
-//                "  {\n" +
-//                "    \"period\": \"2013-01-01\",\n" +
-//                "    \"close\": \"1\"\n" +
-//                "  },\n" +
-//                "  {\n" +
-//                "    \"period\": \"2013-01-02\",\n" +
-//                "    \"close\": \"2\"\n" +
-//                "  },\n" +
-//                "  {\n" +
-//                "    \"period\": \"2013-01-03\",\n" +
-//                "    \"close\": \"3\"\n" +
-//                "  },\n" +
-//                "  {\n" +
-//                "    \"period\": \"2013-01-04\",\n" +
-//                "    \"close\": \"4\"\n" +
-//                "  },\n" +
-//                "  {\n" +
-//                "    \"period\": \"2013-01-05\",\n" +
-//                "    \"close\": \"5\"\n" +
-//                "  },\n" +
-//                "  {\n" +
-//                "    \"period\": \"2013-01-06\",\n" +
-//                "    \"close\": \"4\"\n" +
-//                "  },\n" +
-//                "  {\n" +
-//                "    \"period\": \"2013-01-07\",\n" +
-//                "    \"close\": \"3\"\n" +
-//                "  },\n" +
-//                "  {\n" +
-//                "    \"period\": \"2013-01-08\",\n" +
-//                "    \"close\": \"4\"\n" +
-//                "  },\n" +
-//                "  {\n" +
-//                "    \"period\": \"2013-01-09\",\n" +
-//                "    \"close\": \"1.3\"\n" +
-//                "  },\n" +
-//                "  {\n" +
-//                "    \"period\": \"2013-01-10\",\n" +
-//                "    \"close\": \"1.5\"\n" +
-//                "  }\n" +
-//                "]"]
     }
 
     def edit() {

@@ -3,6 +3,8 @@ package com.netnumeri.server.utils
 import com.dtmc.gson.DailyGSON
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.netnumeri.server.finance.beans.Daily
+import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.ta.Indicator
@@ -143,6 +145,38 @@ class StockUtils {
         sb.append("]")
         FileUtils.writeStringToFile(new File(name + ".txt"), sb.toString())
 
+    }
+
+    /*
+<script class="code" language="javascript" type="text/javascript">
+ohlc = [
+['06/15/2009 16:00:00', 136.01, 139.5, 134.53, 139.48],
+['09/15/2008 16:00:00', 142.03, 147.69, 120.68, 140.91]
+];
+</script>
+ */
+
+    static String getJqPlot(Stock stock) {
+        GenericTimeSeries<Daily> dailyarray = stock.dailyarray;
+        Date startDate = dailyarray.getFirstDate()
+        Date last = dailyarray.getLastDate()
+        Date dateIndex = startDate
+
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
+        StringBuffer sb = new StringBuffer("<script class=\"code\" language=\"javascript\" type=\"text/javascript\">\n");
+        sb.append("ohlc = [\n")
+
+        while (dateIndex != null) {
+            Daily daily = dailyarray.get(dateIndex)
+            if (dateIndex.getTime() == last.getTime())
+                sb.append("['" + sdf.format(dateIndex) + "'," + daily.openprice + "," + daily.high + "," + daily.low + "," + daily.closeprice + "]\n")
+            else
+                sb.append("['" + sdf.format(dateIndex) + "'," + daily.openprice + "," + daily.high + "," + daily.low + "," + daily.closeprice + "],\n")
+            dateIndex = dailyarray.getNextDate(dateIndex)
+        }
+        sb.append("];\n")
+        sb.append("</script>\n")
+        return sb.toString()
     }
 
     static DailyGSON getDailyGSON(Stock stock) {

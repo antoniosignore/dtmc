@@ -20,11 +20,15 @@
                 <ul class="nav nav-list">
                     <li class="nav-header">Navigation</li>
                     %{--<li><a href="/promoapi/deviceFamiles/list"><i class="icon-file"></i> Families</a></li>--}%
-                    <li><a href="/dtmc/portfolio/list"><i class="icon-home"></i> Portfolio</a></li>
-                    <li><a href="/dtmc/stock/list"><i class="icon-file"></i> Stock</a></li>
-                    <li><a href="/dtmc/trade/list"><i class="icon-save"></i> Trade</a></li>
-                    <li><a href="/dtmc/trade/vanilla"><i class="icon-save"></i> Options</a></li>
-                    %{--<li class="nav-header">Sidebar</li>--}%
+                    <li><a href="/dtmc/portfolio"><i class="icon-home"></i> Portfolio</a></li>
+                    <li><a href="/dtmc/stock"><i class="icon-file"></i> Stock</a></li>
+                    <li><a href="/dtmc/trade"><i class="icon-save"></i> Trade</a></li>
+                    <li><a href="/dtmc/vanilla"><i class="icon-save"></i> Options</a></li>
+
+                    <li class="nav-header">Settings</li>
+                    <li><a href="/dtmc/indicators"><i class="icon-save"></i> Indicators</a></li>
+                    <li><a href="/dtmc/attributes"><i class="icon-save"></i> Attributes</a></li>
+
                     %{--<li><a href="#">Link</a></li>--}%
                     %{--<li><a href="#">Link</a></li>--}%
                     <li class="divider"></li>

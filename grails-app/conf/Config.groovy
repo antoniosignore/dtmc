@@ -81,7 +81,8 @@ log4j = {
     }
 
     debug 'org.codehaus.groovy.grails.orm.hibernate',
-            'org.hibernate.SQL'
+            'org.hibernate.SQL',
+            'org.codehaus.groovy.grails.web.mapping'
 
     error 'org.codehaus.groovy.grails.web.servlet',        // controllers
             'org.codehaus.groovy.grails.web.pages',          // GSP
@@ -111,6 +112,7 @@ grails.plugins.springsecurity.rejectIfNoRule = true
 
 grails.plugins.springsecurity.interceptUrlMap = [
         '/secure/**': ['ROLE_ADMIN'],
+        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/portfolio/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/portfolioItem/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/userBean/**': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
