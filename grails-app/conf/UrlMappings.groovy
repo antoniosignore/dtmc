@@ -31,7 +31,7 @@ class UrlMappings {
         /*
          * System Pages without controller
          */
-        "403"(view: '/_errors/403')
+        "403"(view: '/_errors/403')     // no permission
         "404"(view: '/_errors/404')
         "500"(view: '/_errors/error')
         "503"(view: '/_errors/503')
