@@ -17,13 +17,8 @@
         <thead>
         <tr>
             
-            <g:sortableColumn property="indicator"
-                              title="${message(code: 'indicators.indicator.label', default: 'Indicator')}"/>
-            
-            <g:sortableColumn property="name"
-                              title="${message(code: 'indicators.name.label', default: 'Name')}"/>
-            
-            <th><g:message code="indicators.user.label" default="User"/></th>
+            <g:sortableColumn property="code"
+                              title="${message(code: 'indicators.code.label', default: 'Code')}"/>
             
         </tr>
         </thead>
@@ -32,11 +27,7 @@
             <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                 
                 <td><g:link action="show"
-                            id="${indicatorsInstance.id}">${fieldValue(bean: indicatorsInstance, field: "indicator")}</g:link></td>
-                
-                <td>${fieldValue(bean: indicatorsInstance, field: "name")}</td>
-                
-                <td>${fieldValue(bean: indicatorsInstance, field: "user")}</td>
+                            id="${indicatorsInstance.id}">${fieldValue(bean: indicatorsInstance, field: "code")}</g:link></td>
                 
             </tr>
         </g:each>

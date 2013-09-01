@@ -3,9 +3,9 @@ package com.netnumeri.server.finance.indicator;
 
 public class Attributes implements Serializable {
 
-    static belongsTo = [indicator: Indicators]
+    static belongsTo = [userIndicator: UserIndicators]
 
     String name
-    Integer value
+    Double value
 
 }

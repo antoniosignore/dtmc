@@ -18,19 +18,19 @@
         <tbody>
         
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="attributes.indicator.label"
-                                                     default="Indicator"/></td>
-            
-            <td valign="top" class="value"><g:link controller="indicators" action="show"
-                                                   id="${attributesInstance?.indicator?.id}">${attributesInstance?.indicator?.encodeAsHTML()}</g:link></td>
-            
-        </tr>
-        
-        <tr class="prop">
             <td valign="top" class="name"><g:message code="attributes.name.label"
                                                      default="Name"/></td>
             
             <td valign="top" class="value">${fieldValue(bean: attributesInstance, field: "name")}</td>
+            
+        </tr>
+        
+        <tr class="prop">
+            <td valign="top" class="name"><g:message code="attributes.userIndicator.label"
+                                                     default="User Indicator"/></td>
+            
+            <td valign="top" class="value"><g:link controller="userIndicators" action="show"
+                                                   id="${attributesInstance?.userIndicator?.id}">${attributesInstance?.userIndicator?.encodeAsHTML()}</g:link></td>
             
         </tr>
         

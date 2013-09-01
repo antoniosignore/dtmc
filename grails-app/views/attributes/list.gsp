@@ -17,10 +17,10 @@
         <thead>
         <tr>
             
-            <th><g:message code="attributes.indicator.label" default="Indicator"/></th>
-            
             <g:sortableColumn property="name"
                               title="${message(code: 'attributes.name.label', default: 'Name')}"/>
+            
+            <th><g:message code="attributes.userIndicator.label" default="User Indicator"/></th>
             
             <g:sortableColumn property="value"
                               title="${message(code: 'attributes.value.label', default: 'Value')}"/>
@@ -32,9 +32,9 @@
             <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                 
                 <td><g:link action="show"
-                            id="${attributesInstance.id}">${fieldValue(bean: attributesInstance, field: "indicator")}</g:link></td>
+                            id="${attributesInstance.id}">${fieldValue(bean: attributesInstance, field: "name")}</g:link></td>
                 
-                <td>${fieldValue(bean: attributesInstance, field: "name")}</td>
+                <td>${fieldValue(bean: attributesInstance, field: "userIndicator")}</td>
                 
                 <td>${fieldValue(bean: attributesInstance, field: "value")}</td>
                 

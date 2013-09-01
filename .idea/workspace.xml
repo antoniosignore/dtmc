@@ -1,532 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
+    <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/attributes/_form.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/attributes/create.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/attributes/edit.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/attributes/list.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/attributes/show.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/indicators/_form.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/indicators/create.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/indicators/edit.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/indicators/list.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/indicators/show.gsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/IndicatorEnum.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/IndicatorEnum.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Indicators.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Indicators.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376409685109" ignored="false" />
-    <file path="/a.dummy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376407361479" ignored="false" />
-    <file path="/PortfolioController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370897984993" ignored="false" />
-    <file path="$PROJECT_DIR$/../iceScrum/web-app/WEB-INF/tld/spring.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459360658" ignored="false" />
-    <file path="$PROJECT_DIR$/../iceScrum/web-app/WEB-INF/sitemesh.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459360658" ignored="false" />
-    <file path="$PROJECT_DIR$/../iceScrum/web-app/WEB-INF/applicationContext.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459360658" ignored="false" />
-    <file path="$PROJECT_DIR$/../iceScrum/web-app/WEB-INF/tld/c.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459360658" ignored="false" />
-    <file path="$PROJECT_DIR$/../iceScrum/web-app/WEB-INF/tld/fmt.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459360658" ignored="false" />
-    <file path="$PROJECT_DIR$/../iceScrum/web-app/WEB-INF/tld/grails.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459360659" ignored="false" />
-    <file path="$PROJECT_DIR$/../iceScrum/application.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370462559755" ignored="false" />
-    <file path="/application.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370459637832" ignored="false" />
-    <file path="$PROJECT_DIR$/../ice/iceScrum/web-app/WEB-INF/tld/c.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370460441860" ignored="false" />
-    <file path="$PROJECT_DIR$/../ice/iceScrum/application.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370460441860" ignored="false" />
-    <file path="$PROJECT_DIR$/../ice/iceScrum/web-app/WEB-INF/sitemesh.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370460441860" ignored="false" />
-    <file path="$PROJECT_DIR$/../ice/iceScrum/web-app/WEB-INF/tld/fmt.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370460441860" ignored="false" />
-    <file path="$PROJECT_DIR$/../ice/iceScrum/web-app/WEB-INF/applicationContext.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370460441860" ignored="false" />
-    <file path="$PROJECT_DIR$/../ice/iceScrum/web-app/WEB-INF/tld/grails.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370460441860" ignored="false" />
-    <file path="$PROJECT_DIR$/../ice/iceScrum/web-app/WEB-INF/tld/spring.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370460441860" ignored="false" />
-    <file path="$PROJECT_DIR$/../ice/iceScrum/grails-app/conf/BuildConfig.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370461434264" ignored="false" />
-    <file path="$PROJECT_DIR$/../iceScrum/grails-app/conf/BuildConfig.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370461887768" ignored="false" />
-    <file path="/BuildConfig.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376404421992" ignored="false" />
-    <file path="/main.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370524643359" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/widget/submenu/ClientsSubmenu.ui.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$USER_HOME$/grails/grailstwitter/grails-app/conf/BuildConfig.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370467169119" ignored="false" />
-    <file path="$USER_HOME$/grails/grailstwitter/grails-app/views/index.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370467482487" ignored="false" />
-    <file path="$PROJECT_DIR$/../BlogSamples/layout-demo2/grails-app/views/templates/homepage.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370720432269" ignored="false" />
-    <file path="/homepage.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370890041938" ignored="false" />
-    <file path="/TradeService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370768995525" ignored="false" />
-    <file path="/fragment.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376306198426" ignored="false" />
-    <file path="/PageController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370888827595" ignored="false" />
-    <file path="$PROJECT_DIR$/../BlogSamples/layout-demo2/grails-app/controllers/com/mrhaki/layout/controller/PageController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370771027884" ignored="false" />
-    <file path="/PortfolioService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371458959183" ignored="false" />
-    <file path="$USER_HOME$/grails/grailstwitter/grails-app/domain/org/grails/twitter/Status.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370774601873" ignored="false" />
-    <file path="/portfolioview.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370776471241" ignored="false" />
-    <file path="/portfoliolist.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370776543896" ignored="false" />
-    <file path="/page.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370777042240" ignored="false" />
-    <file path="/BootStrap.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376393059019" ignored="false" />
-    <file path="/Config.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372427003435" ignored="false" />
-    <file path="/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315516486" ignored="false" />
-    <file path="/StatusService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370796936440" ignored="false" />
-    <file path="/Status.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370796984588" ignored="false" />
-    <file path="/Persistable.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373622490641" ignored="false" />
-    <file path="/usercache.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370847816600" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.devices/src/main/java/com/vodafone/global/smhs/businesslogic/devices/service/DeviceServiceImplDiscover.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372248752513" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover-win8/src/main/java/com/vodafone/global/blueprint/discover/backend/services/DevicesUpdateService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371563243446" ignored="false" />
-    <file path="/DevicesUpdateService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371562234834" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover-win8/src/main/java/com/vodafone/global/blueprint/discover/backend/dao/VdmsDeviceDao.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371550654526" ignored="false" />
-    <file path="/VdmsDeviceDao.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370854965218" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover/src/main/java/com/vodafone/global/blueprint/discover/backend/services/DevicesUpdateService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371563279678" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover/src/main/java/com/vodafone/global/blueprint/discover/backend/dao/SmhsDeviceDao.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371550505458" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover/src/main/java/com/vodafone/global/blueprint/discover/backend/DiscoverProperties.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371637910857" ignored="false" />
-    <file path="/DiscoverProperties.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370855628880" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-devicemanager/smhs.businesslogic.devicemanager/src/test/java/com/vodafone/global/smhs/businesslogic/devicemanager/utils/FileTokenLockTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370859853795" ignored="false" />
-    <file path="$PROJECT_DIR$/../BlogSamples/layout-demo2/grails-app/views/layouts/page.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370889761884" ignored="false" />
-    <file path="/fiveblocks.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1370894916403" ignored="false" />
-    <file path="/Stock.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375990507961" ignored="false" />
-    <file path="/Portfolio.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373619778268" ignored="false" />
-    <file path="/YahooUtils.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375994121789" ignored="false" />
-    <file path="/StockController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375993805214" ignored="false" />
-    <file path="$USER_HOME$/.IntelliJIdea12/config/options/intentionSettings.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371283371667" ignored="false" />
-    <file path="/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376391519028" ignored="false" />
-    <file path="/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376389816487" ignored="false" />
-    <file path="/UserBean.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376155561903" ignored="false" />
-    <file path="/denied.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371450525369" ignored="false" />
-    <file path="/Backtest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371459060243" ignored="false" />
-    <file path="/PortfolioItemController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371500215086" ignored="false" />
-    <file path="/SmhsDeviceDao.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371546306403" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-core/pom.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371559531361" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover/blueprint_home/discover.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371559832153" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover-win8/src/main/java/com/vodafone/global/blueprint/discover/backend/command/publish/PublishValidator.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371559874791" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover-win8/src/main/java/com/vodafone/global/blueprint/discover/backend/validators/DashboardConstraintsValidator.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371559874791" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover-win8/src/main/java/com/vodafone/global/blueprint/discover/backend/validators/schedule/DashboardScheduleBuilder.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371559874791" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-platform/src/main/java/com/vodafone/global/blueprint/platform/controller/UserController.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371559890742" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-platform/pom.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371559990950" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover-win8/src/assembly/discover.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371637934475" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover/src/assembly/discover.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371637862362" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover-win8/src/main/java/com/vodafone/global/blueprint/discover/backend/DiscoverProperties.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371637886747" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.profile/src/main/resources/META-INF/spring/frontend-profiles-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721714160" ignored="false" />
-    <file path="/frontend-profiles-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371718162819" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/ErrorLogs/IntegrationProxyTests/RegressionSuite/ConfigurationApi/BasicCall/properties.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371727300100" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/ErrorLogs/IntegrationProxyTests/RegressionSuite/ProfileCall/ProfileCall/properties.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721572262" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.profile/src/main/resources/META-INF/spring/frontend-profiles-bean-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371718902886" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.configuration/src/main/resources/META-INF/spring/configuration-frontend-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721609521" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.dashboard/src/main/resources/META-INF/spring/dashboard-frontend-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721626318" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.dynamicdashboard/src/main/resources/META-INF/spring/dyndashboard-frontend-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721636769" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.events/src/main/resources/META-INF/spring/events-frontend-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721645853" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.globalservices/src/main/resources/META-INF/spring/global-services-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721653218" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.images/src/main/resources/META-INF/spring/images-frontend-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721666852" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.infofeed/src/main/resources/META-INF/spring/infofeed-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721676685" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.oobe/src/main/resources/META-INF/spring/frontend-oobe-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721696900" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.rss2xml/src/main/resources/META-INF/spring/rss2xml-frontend-osgi.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721725007" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.frontend.slots/src/main/resources/META-INF/spring/slots-frontend-osgi.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371721735401" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/config/platform/smhs.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372685592561" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/ErrorLogs/IntegrationProxyTests/RegressionSuite/DynDashboardApi/CacheHeaders/properties.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371727516783" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/RecentChanges/properties.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371727516783" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/platform-tests/fitnesse/FitNesseRoot/IntegrationProxyTests/RegressionSuite/DynDashboardApi/CacheHeaders/properties.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371727516783" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/logs/intproxy.log" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372668669555" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api/src/main/java/com/vodafone/global/smhs/api/v30/datastore/XmlFetcher.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371734816185" ignored="false" />
-    <file path="/XmlFetcher.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371728249998" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.datastore/src/main/java/com/vodafone/global/smhs/datastore/fetcher/NFSXmlDatastoreFetcherImpl.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371733728367" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.dashboard/src/main/java/com/vodafone/global/smhs/base/DeviceContentRetriever.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371734642958" ignored="false" />
-    <file path="/DeviceContentRetriever.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371734642958" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api.datastore/src/main/java/com/vodafone/global/smhs/api/v31/datastore/service/MetadataStoreReader.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371734805265" ignored="false" />
-    <file path="/MetadataStoreReader.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371734805265" ignored="false" />
-    <file path="/DeviceServiceImplDiscover.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371798425764" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.api/src/main/java/com/vodafone/global/smhs/api/v30/device/DiscoverDevicesService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371798136694" ignored="false" />
-    <file path="/ConfigurationService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371798228139" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.dashboard/src/main/java/com/vodafone/global/smhs/configuration/ConfigurationService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371798230634" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.datastore/src/main/java/com/vodafone/global/smhs/datastore/reader/MetadataStoreReaderCached.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371800825226" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.datastore/src/test/java/com/vodafone/global/smhs/datastore/MetadataStoreReaderCachedTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371801157025" ignored="false" />
-    <file path="/MetadataStoreReaderCachedTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371800879551" ignored="false" />
-    <file path="/MetadataStoreReaderCached.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371799668995" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.datastore/src/test/resources/BP_PUBLISH/V3_0/BUSINESS/DE/PREVIEW/android_HTC_ChaCha/dashboards.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1371800862099" ignored="false" />
-    <file path="$M2_REPO$/com/vodafone/global/dcs/blueprint/core/1.4.12-SNAPSHOT/core-1.4.12-SNAPSHOT.jar!/com/vodafone/global/blueprint/core/authentication/AuthenticationContext.class" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372079864562" ignored="false" />
-    <file path="$M2_REPO$/com/vodafone/global/dcs/blueprint/core/1.4.12-SNAPSHOT/core-1.4.12-SNAPSHOT.jar!/com/vodafone/global/blueprint/core/client/view/TabsController.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372079864562" ignored="false" />
-    <file path="$M2_REPO$/com/vodafone/global/dcs/blueprint/core/1.4.12-SNAPSHOT/core-1.4.12-SNAPSHOT.jar!/com/vodafone/global/blueprint/core/Core.gwt.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372079864562" ignored="false" />
-    <file path="$M2_REPO$/com/vodafone/global/dcs/blueprint/core/1.4.12-SNAPSHOT/core-1.4.12-SNAPSHOT.jar!/com/vodafone/global/blueprint/help/Help.gwt.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372079864562" ignored="false" />
-    <file path="$M2_REPO$/com/vodafone/global/dcs/blueprint/core/1.4.12-SNAPSHOT/core-1.4.12-SNAPSHOT.jar!/com/vodafone/global/blueprint/blueadmin/client/panels/TabsGridsController.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372079864562" ignored="false" />
-    <file path="$M2_REPO$/com/vodafone/global/dcs/blueprint/core/1.4.12-SNAPSHOT/core-1.4.12-SNAPSHOT.jar!/com/vodafone/global/blueprint/shell/Shell.gwt.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372079864562" ignored="false" />
-    <file path="$M2_REPO$/com/vodafone/global/dcs/blueprint/core/1.4.12-SNAPSHOT/core-1.4.12-SNAPSHOT.jar!/com/vodafone/global/blueprint/blueadmin/client/Blueadmin.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372079864562" ignored="false" />
-    <file path="$M2_REPO$/com/vodafone/global/dcs/blueprint/core/1.4.12-SNAPSHOT/core-1.4.12-SNAPSHOT.jar!/com/vodafone/global/blueprint/blueadmin/Blueadmin.gwt.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372079864562" ignored="false" />
-    <file path="/_user.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372233537544" ignored="false" />
-    <file path="/auth.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374438723616" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.mondrian.2.0/src/main/groovy/com/vodafone/global/smhs/mondrian_2_0/scripts/ServicePlan.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372236826439" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.rss2xml/src/main/groovy/com/vodafone/global/smhs/rss2xml/services/ImageHeadDescriptionLayout.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372239408084" ignored="false" />
-    <file path="/ImageHeadDescriptionLayout.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372237949237" ignored="false" />
-    <file path="/Rss2xmlService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372238052542" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.rss2xml/src/main/java/com/vodafone/global/smhs/rss2xml/services/Rss2xmlService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372238057068" ignored="false" />
-    <file path="/Rss2xmlServiceTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372238441973" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.rss2xml/src/test/java/com/vodafone/global/smhs/rss2xml/services/Rss2xmlServiceTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372662051331" ignored="false" />
-    <file path="/Catch Statement Body.txt.ft" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372238218099" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.rss2xml/src/main/groovy/com/vodafone/global/smhs/rss2xml/services/TwoSlotsLayout.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372239400801" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover-win8/.idea/libraries/Maven__com_vodafone_global_dcs_blueprint_core_test_jar_tests_1_4_12_SNAPSHOT.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372242988858" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover-win8/.idea/libraries/Maven__com_vodafone_global_dcs_blueprint_core_1_4_12_SNAPSHOT.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372242988858" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.dashboard/src/test/java/com/vodafone/global/smhs/profiles/ProfileServiceTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372248363482" ignored="false" />
-    <file path="/ProfileServiceTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372248362248" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.mondrian.2.0/src/main/groovy/com/vodafone/global/smhs/mondrian_2_0/scripts/Italy.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372315537310" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.datastore/src/test/resources/BP_PUBLISH/V3_0/PROFILES/es.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372252334669" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.dashboard/src/main/groovy/com/vodafone/global/smhs/profiles/Aggregator.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372252555789" ignored="false" />
-    <file path="/Aggregator.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372252546728" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.datastore/src/test/resources/curl.txt" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372253340136" ignored="false" />
-    <file path="/Italy.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372315377481" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.mondrian.2.0/src/main/groovy/com/vodafone/global/smhs/mondrian_2_0/scripts/Portugal.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372315772575" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.mondrian.2.0/src/main/groovy/com/vodafone/global/smhs/mondrian_2_0/scripts/Spain.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372315806508" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.mondrian.2.0/src/main/groovy/com/vodafone/global/smhs/mondrian_2_0/scripts/UK.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372315848771" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.mondrian.2.0/src/test/java/com/vodafone/global/smhs/mondrian_2_0/MondrianXmlDashboardServiceItalyTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372316129980" ignored="false" />
-    <file path="/MondrianXmlDashboardServiceItalyTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372316129980" ignored="false" />
-    <file path="/index.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375564049125" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/shared/finance/beans/DateWindow.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593027911" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/EditPresenter.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050817" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/InfoPresenter.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050817" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/Project.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GridPageView.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050817" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/AbstractTableForEntities.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050818" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/TimeEntry.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/ApplicationController.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050818" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericStaffTabEditPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050818" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericMoneyinTabViewPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050818" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/ClientSupplier.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/UserMessage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/Task.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/widget/TabBar.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050818" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/Invoice.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericTimeTabViewPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050818" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/Category.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericAccountsTabViewPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050818" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/TaxInfo.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/build.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/BankAccount.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/Staff.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/war/Application.html" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/AccountingLeg.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/ProductService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericReportTabViewPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050830" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/AbstractEditEntityPanel.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050830" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/widget/Footer.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050830" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/war/WEB-INF/web.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericMoneyoutTabViewPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050830" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/BusinessTransaction.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/UserDetail.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericMoneyoutTabGridPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050830" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericMoneyoutTabEditPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/ExpenseReceipt.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/war/c/base.css" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/BasePresenter.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/widget/combobox/CurrencySelect.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericStaffTabViewPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericTimeTabEditPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/widget/TabBar.ui.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/BaseView.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GridPresenter.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/shared/pojoc/BAPojo.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/Application.gwt.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/shared/pojoc/EntityPojo.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/shared/pojoc/SearchablePojo.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/LocalizableConstants.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/Application.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/shared/pojoc/field/DateTimeField.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/EditPageView.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/TabbedPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/PageView.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GridTabbedPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericClientTabViewPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericAccountsTabEditPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/AbstractTabbedPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericClientTabEditPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/TabbedEditPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/widget/submenu/ProjectsSubmenu.ui.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050831" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/BankTransaction.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/widget/submenu/ItemsSubmenu.ui.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050832" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericReportTabEditPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050832" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericReportTabGridPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050832" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericMoneyinTabEditPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050832" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/NominalLedgerAccount.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/model/pojoc/User.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/client/mvp/GenericMoneyinTabGridPage.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372593050832" ignored="false" />
-    <file path="/Club.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373619874012" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.rss2xml/src/test/java/com/vodafone/global/smhs/rss2xml/services/Rss2XmlValidator.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372662043827" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.rss2xml/src/test/java/com/vodafone/global/smhs/rss2xml/services/RssDocumentParserTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372662043827" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/pom.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372662464712" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/SMHS-backend/config/platform/timeout.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372668453398" ignored="false" />
-    <file path="/smhs.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372668587805" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.businesslogic.events/src/main/java/com/vodafone/global/smhs/businesslogic/events/smapi/PollerTask.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372685576852" ignored="false" />
-    <file path="/PollerTask.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1372685556627" ignored="false" />
-    <file path="/Instrument.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373197778840" ignored="false" />
-    <file path="/Postit.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373533248369" ignored="false" />
-    <file path="$PROJECT_DIR$/../grailsblog-read-only/web-app/WEB-INF/tld/grails.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373613627457" ignored="false" />
-    <file path="$PROJECT_DIR$/../grailsblog-read-only/application.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373613627458" ignored="false" />
-    <file path="$PROJECT_DIR$/../grailsblog-read-only/web-app/WEB-INF/tld/fmt.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373613627458" ignored="false" />
-    <file path="$PROJECT_DIR$/../grailsblog-read-only/web-app/WEB-INF/tld/c.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373613627458" ignored="false" />
-    <file path="/DaoTestUtils.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1373620976694" ignored="false" />
-    <file path="$PROJECT_DIR$/../pikachoosesample/application.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374270407415" ignored="false" />
-    <file path="$PROJECT_DIR$/../pikachoosesample/web-app/WEB-INF/applicationContext.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374270407415" ignored="false" />
-    <file path="$PROJECT_DIR$/../pikachoosesample/grails-app/views/photo/photoGallery.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374436119576" ignored="false" />
-    <file path="/_content.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376343515460" ignored="false" />
-    <file path="$PROJECT_DIR$/../promoht/grails-app/conf/DataSource.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374479314798" ignored="false" />
-    <file path="$PROJECT_DIR$/../promoapi/application.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374479578040" ignored="false" />
-    <file path="$PROJECT_DIR$/../promoapi/grails-app/conf/UrlMappings.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374479578040" ignored="false" />
-    <file path="$PROJECT_DIR$/../promoapi/grails-app/conf/Config.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374479578040" ignored="false" />
-    <file path="$PROJECT_DIR$/../promoapi/grails-app/conf/DataSource.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374479647841" ignored="false" />
-    <file path="$PROJECT_DIR$/../promoapi/src/groovy/com/vodafone/promoapi/CategoryEnum.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374480439595" ignored="false" />
-    <file path="/CategoryEnum.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374480431606" ignored="false" />
-    <file path="$PROJECT_DIR$/../promoapi/grails-app/domain/promoapi/Campaigns.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374485327688" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-devicemanager/smhs.businesslogic.devicemanager/src/main/java/com/vodafone/global/smhs/businesslogic/devicemanager/service/DeviceManagerImpl.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374484900836" ignored="false" />
-    <file path="/DeviceManagerImpl.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374484895080" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-devicemanager/smhs.businesslogic.devicemanager/src/test/java/com/vodafone/global/smhs/businesslogic/devicemanager/service/DeviceManagerImplTest.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374484906988" ignored="false" />
-    <file path="$PROJECT_DIR$/../promoapi/test/unit/promoapi/CampaignItemsTests.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374485019093" ignored="false" />
-    <file path="$PROJECT_DIR$/../promoapi/grails-app/domain/promoapi/CampaignItems.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374485373325" ignored="false" />
-    <file path="/CampaignItems.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374573909862" ignored="false" />
-    <file path="/Campaigns.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374574658928" ignored="false" />
-    <file path="$PROJECT_DIR$/../promoapi/grails-app/conf/BuildConfig.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374485705604" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/scaffolding/Test.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576885005" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/testing/UnitTest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/testing/DomainClass.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/artifacts/Tests.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/testing/TagLib.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/testing/Service.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/testing/Generic.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/testing/Controller.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/test/unit/promoapi/CampaignsTests.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/testing/Filters.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/test/unit/promoapi/CampaignItemsTests.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486580105" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/responsive-768px-979px.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/responsive.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/artifacts/Filters.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/utilities.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/artifacts/WebTest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/layouts.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/artifacts/Controller.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/sprites.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/artifacts/Service.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/accordion.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/mixins.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/artifacts/ScaffoldingController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/modals.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/artifacts/TagLib.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/tooltip.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/dropdowns.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/carousel.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/tables.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/labels-badges.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/breadcrumbs.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/media.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/code.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597484" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/scaffolding/Controller.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/popovers.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/scaffolding/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/wells.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/scaffolding/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/navs.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/scaffolding/edit.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/alerts.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/grid.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/scaffolding.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/variables.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/responsive-utilities.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/css/errors.css" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_common/modals/_registerTextLink.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/conf/UrlMappings.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597503" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_menu/_navbar.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_menu/_menubar.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837772" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_menu/_admin.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_menu/_info.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_menu/_language.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/css/mobile.css" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_common/buttons/_showSymbolLink.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_menu/_user.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/js/application.js" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_menu/_submenubar.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/login/denied.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/login/auth.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/css/main.css" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_common/modals/_deleteTextLink.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_common/modals/_deleteSymbolLink.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/close.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/bootstrap.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_common/buttons/_editSymbolLink.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/pager.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_errors/503.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/hero-unit.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_errors/403.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/responsive-1200px-min.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_errors/error.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/dummy.css" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_errors/404.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/layouts/kickstart.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/layouts/_header.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374580184056" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/layouts/_footer.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/conf/spring/resources.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/layouts/_content.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/layouts/main.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/siteinfo/systeminfo.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/siteinfo/about.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/siteinfo/contact.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/conf/ApplicationResources.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_DemoPage/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/conf/Config.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/WEB-INF/tld/spring.tld" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_DemoPage/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/home/nextSteps.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_DemoPage/edit.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/home/index.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/WEB-INF/sitemesh.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_DemoPage/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/WEB-INF/applicationContext.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_common/modals/_deleteDialog.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_DemoPage/create.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/domain/promoapi/Campaigns.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576540746" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/domain/promoapi/Photo.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374574696781" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/reset.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/button-groups.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/responsive-navbar.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/forms.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/artifacts/DomainClass.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/thumbnails.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/responsive-767px-max.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/_common/modals/_registerDialog.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/type.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/artifacts/hibernate.cfg.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597503" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/progress-bars.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/component-animations.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/pagination.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/scaffolding/create.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/buttons.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/scaffolding/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597485" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/web-app/less/bootstrap/navbar.less" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374486597486" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/controllers/promoapi/CampaignsController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576862334" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/controllers/promoapi/CampaignItemsController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374573711398" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/controllers/promoapi/CampaignTagsController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374573740856" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/controllers/promoapi/PhotoController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374573772773" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/domain/promoapi/CampaignItems.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374573932549" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/conf/BuildConfig.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374574180845" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/target/stacktrace.log" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374575405010" ignored="false" />
-    <file path="/CampaignsController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376406661021" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/campaigns/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576632912" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/campaigns/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576632912" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/campaigns/create.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576632912" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/campaigns/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374580326931" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/views/campaigns/edit.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374576632912" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/grails-app/i18n/messages.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1374579677460" ignored="false" />
-    <file path="$PROJECT_DIR$/../grailsblog-read-only/plugins/fckeditor-0.8/grails-app/controllers/FckeditorController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375012226902" ignored="false" />
-    <file path="$PROJECT_DIR$/../grailsblog-read-only/plugins/jsecurity-0.3/JsecurityGrailsPlugin.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375012261865" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/.idea/workspace.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375112165112" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/Password.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837771" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/Session.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837771" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/AuthenticationSecurityFilter.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837772" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/User.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837772" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/AuthenticationContext.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837771" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/XEdtUserOpco.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837771" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/GlobalUtils.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837771" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/PlatformServicesClient.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837771" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/AModule.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837771" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/Opco.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837772" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/Versionable.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837772" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/java/com/vodafone/filter/UserRole.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375109837772" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumeri/src/main/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375112046936" ignored="false" />
-    <file path="$PROJECT_DIR$/../promo-api/src/templates/war/web.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375112163377" ignored="false" />
-    <file path="/web.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375112162803" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/PublishController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375262223176" ignored="false" />
-    <file path="/PublishController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375262206970" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/.idea/workspace.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375310939044" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/services/com/vodafone/publish/PublishService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317214094" ignored="false" />
-    <file path="/PublishService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376316229246" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/src/java/com/vodafone/gson/CampaignsGSON.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868387792" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/debug.log" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375352363532" ignored="false" />
-    <file path="/contact.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375309325633" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/layouts/_content.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376391031986" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/campaigns/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376256980500" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/DataSource.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868489897" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/services/com/vodafone/publish/WebDavService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375351771942" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/target/stacktrace.log" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315057136" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Campaigns.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
-    <file path="/_slider.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375444439364" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/services/com/vodafone/publish/PublishImagesService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375801282459" ignored="false" />
-    <file path="/PublishImagesService.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375801281114" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/services/com/vodafone/publish/ImagesData.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375431801772" ignored="false" />
-    <file path="/kickstart.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375824928727" ignored="false" />
-    <file path="/ApplicationResources.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375824597891" ignored="false" />
-    <file path="/_timeplot.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375738871467" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover/src/main/webapp/WEB-INF/web.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375448949577" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover/src/main/java/com/vodafone/global/blueprint/discover/backend/services/SMHSImageUploadService.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375449830282" ignored="false" />
-    <file path="/UrlMappings.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376395989433" ignored="false" />
-    <file path="/_submenubar.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375564513785" ignored="false" />
-    <file path="$PROJECT_DIR$/../netnumero/src/com/numhero/shared/pojoc/SearchReference.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375568188442" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/ImageNode.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376310701172" ignored="false" />
-    <file path="/ImageNode.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375801251045" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/CampaignToClient.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/CampaignToFamily.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Categories.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376396632237" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Clients.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/DeviceFamilies.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Opco.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Tags.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375827216366" ignored="false" />
-    <file path="/CampaignsGSON.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375868360823" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/CampaignsController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376406687308" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/blueprint-promo.log" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376397302703" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_navbar.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375869144651" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_menubar.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375869129475" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/BuildConfig.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376404495640" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/imageNode/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375870007894" ignored="false" />
-    <file path="/DailyGSON.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375900273416" ignored="false" />
-    <file path="/File Header.txt.ft" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375899394687" ignored="false" />
-    <file path="/TimeSeries.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376142972020" ignored="false" />
-    <file path="/StockUtils.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375992920042" ignored="false" />
-    <file path="/SSAAnalysisTest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375910367625" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/pom.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375947534933" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/smhs.properties.promo/src/main/resources/META-INF/spring/promo-properties-osgi-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375947838348" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/smhs.properties.promo/src/main/resources/META-INF/spring/promo-properties-bean-context.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375947838348" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/smhs.properties.promo/pom.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375947838348" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/smhs.businesslogic.promo/src/main/java/com/vodafone/global/smhs/businesslogic/promo/rules/sample.json" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375947953985" ignored="false" />
-    <file path="$USER_HOME$/SMHS/SMHS-backend/application-promo/smhs.businesslogic.promo/src/main/java/com/vodafone/global/smhs/businesslogic/promo/rules/sample.xml" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375948188369" ignored="false" />
-    <file path="/TimeSeriesTest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375991377625" ignored="false" />
-    <file path="/IndicatorTest.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1375991261737" ignored="false" />
-    <file path="/IndicatorEnum.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376139397482" ignored="false" />
-    <file path="/Attributes.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376343172621" ignored="false" />
-    <file path="/Indicator.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376144323811" ignored="false" />
-    <file path="/Strategy.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376145236842" ignored="false" />
-    <file path="/TASettings.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376155518911" ignored="false" />
-    <file path="/Trade.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376157821016" ignored="false" />
-    <file path="/Vanilla.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376158678747" ignored="false" />
-    <file path="/UserController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376177814303" ignored="false" />
-    <file path="/RegisterController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376209357858" ignored="false" />
-    <file path="/JoinController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376209568420" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publish/panel.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341923460" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/imageNode/photoGallery.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376256623151" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/web-app/css/base.css" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376256936509" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/TimelineController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376309501124" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/timeline/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376396632237" ignored="false" />
-    <file path="/TimelineController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376309412897" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/src/java/com/vodafone/gson/ImagesGSON.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376306189689" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/src/java/com/vodafone/gson/DailyGSON.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376306272546" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/layouts/kickstart.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376398189527" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/BootStrap.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376396926197" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/src/groovy/com/vodafone/promoapi/StatusEnum.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376309888634" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/ImageNodeController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376396632237" ignored="false" />
-    <file path="/ImageNodeController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376310950062" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publishHistory/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341850010" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publishHistory/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315380096" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/PublishHistoryController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376314139599" ignored="false" />
-    <file path="/PublishHistoryController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376314138330" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publishHistory/edit.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376314971870" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publishHistory/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315528332" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/publishHistory/create.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376314971870" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/TrashController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315938333" ignored="false" />
-    <file path="/TrashController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315270708" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/src/templates/scaffolding/Test.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376315938333" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/siteinfo/systeminfo.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317044874" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_settings_logout.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317778126" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/campaigns/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376393875869" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_opco.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376399327712" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/src/java/com/vodafone/filter/PlatformServicesClient.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376317778126" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/promoapi/SimpleCheckFilters.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376399287457" ignored="false" />
-    <file path="/panel.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341921258" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/trash/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341966920" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/timeline/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376341978322" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/layouts/pippo.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376389805890" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/CategoriesController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376396632237" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/categories/create.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376393873112" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/categories/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376393873112" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/categories/_form.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376393873112" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/categories/edit.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376393873112" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/categories/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376393873112" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/web-app/js/Chart.js" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376396632237" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/web-app/js/Chart.min.js" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376393873112" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/imageNode/list.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376393875869" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/Config.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376405214499" ignored="false" />
-    <file path="/_opco.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376398814739" ignored="false" />
-    <file path="/SimpleCheckFilters.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376399216621" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-discover/src/main/java/com/vodafone/global/blueprint/discover/client/dashboard/wizard/DashboardWizard.java" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376405626860" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/ErrorController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376409085894" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/UrlMappings.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376409068260" ignored="false" />
-    <file path="/ErrorController.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376407805336" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/blueprint_home/promoapi.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376407278155" ignored="false" />
-    <file path="/promoapi.properties" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376407277766" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/promoapi/SecurityFilters.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376408710948" ignored="false" />
-    <file path="/SecurityFilters.groovy" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376408291242" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/error/error.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376409643871" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/deviceFamilies/show.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376407606683" ignored="false" />
-    <file path="/error.gsp" changelist="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" time="1376409575799" ignored="false" />
+    <file path="/Dummy.txt" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378066273412" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_common/modals/_deleteDialog.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377538656704" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Campaigns.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377969124279" ignored="false" />
+    <file path="/Campaigns.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377969119276" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/campaigns/_form.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377969580393" ignored="false" />
+    <file path="/_form.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377969543935" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/CampaignsController.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377969629668" ignored="false" />
+    <file path="/BootStrap.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378068665090" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/BootStrap.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378060393586" ignored="false" />
+    <file path="/Attributes.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378069185854" ignored="false" />
+    <file path="/a.dummy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378064729254" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_submenubar.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378066317021" ignored="false" />
+    <file path="/Indicators.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378068193499" ignored="false" />
+    <file path="/fragment.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378068978471" ignored="false" />
+    <file path="/UserIndicators.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378069070868" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -578,98 +89,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/controllers/grails/plugins/springsecurity/ui/UserController.groovy" line="37" class="grails.plugins.springsecurity.ui.UserController" package="grails.plugins.springsecurity.ui">
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;Groovy" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;Groovy" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/views/stock/_timeplot.gsp" line="63" class="gsp.default.stock/_timeplot_gsp" package="gsp.default">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" line="48" class="com.netnumeri.server.finance.finpojo.asset.StockController" package="com.netnumeri.server.finance.finpojo.asset">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ssa/SSAAnalysisTest.groovy" line="32" class="com.netnumeri.server.finance.ssa.SSAAnalysisTest" package="com.netnumeri.server.finance.ssa">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ssa/SSAAnalysisTest.groovy" line="27" class="com.netnumeri.server.finance.ssa.SSAAnalysisTest" package="com.netnumeri.server.finance.ssa">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/controllers/grails/plugins/springsecurity/ui/RegisterController.groovy" line="38" class="grails.plugins.springsecurity.ui.RegisterController" package="grails.plugins.springsecurity.ui">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -679,91 +98,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Config.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="62" selection-start="4716" selection-end="4716" vertical-scroll-proportion="-5.107143">
+            <state line="62" column="82" selection-start="2433" selection-end="2433" vertical-scroll-proportion="-3.6842105">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/views/register/index/gsp/RegisterController.groovy">
+      <file leaf-file-name="_menubar.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="16" selection-start="1727" selection-end="1727" vertical-scroll-proportion="-17.6">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/controllers/grails/plugins/springsecurity/ui/RegisterController.groovy">
+      <file leaf-file-name="_submenubar.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="19" selection-start="1214" selection-end="1225" vertical-scroll-proportion="-3.0943396">
+            <state line="25" column="69" selection-start="1200" selection-end="1200" vertical-scroll-proportion="-7.6530614">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UrlMappings.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
+      <file leaf-file-name="Indicators.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Indicators.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="36" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.63829786">
+            <state line="5" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="-1.3888888">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpringSecurityCoreGrailsPlugin.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-core-1.2.7.3/SpringSecurityCoreGrailsPlugin.groovy">
+      <file leaf-file-name="IndicatorsController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/IndicatorsController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="255" column="125" selection-start="12650" selection-end="12650" vertical-scroll-proportion="0.0">
+            <state line="55" column="44" selection-start="1850" selection-end="1850" vertical-scroll-proportion="-17.52">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildConfig.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+      <file leaf-file-name="UserIndicators.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="24" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.0">
+            <state line="10" column="36" selection-start="242" selection-end="242" vertical-scroll-proportion="-2.7777777">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/mail-1.0.1/plugin.xml">
+      <file leaf-file-name="UserIndicatorsController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/UserIndicatorsController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailGrailsPlugin.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/mail-1.0.1/MailGrailsPlugin.groovy">
+      <file leaf-file-name="Attributes.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="10" column="29" selection-start="192" selection-end="192" vertical-scroll-proportion="-2.7777777">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dependencies.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/mail-1.0.1/dependencies.groovy">
+      <file leaf-file-name="AttributesController.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/AttributesController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="11" column="35" selection-start="291" selection-end="291" vertical-scroll-proportion="0.33880904">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/mail-1.0.1/application.properties">
+      <file leaf-file-name="IndicatorEnum.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/IndicatorEnum.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="60" column="75" selection-start="69" selection-end="2538" vertical-scroll-proportion="-10.684211">
               <folding />
             </state>
           </provider>
@@ -784,30 +212,25 @@
       <MyDateState />
     </option>
   </component>
-  <component name="GrailsProjectView">
-    <option name="autoScrollFromSource" value="true" />
-    <option name="autoScrollToSource" value="true" />
-    <option name="hideEmptyMiddlePackages" value="false" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/controllers/controller/UserController/groovy/UserController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/register/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/views/register/index/gsp/JoinController.groovy" />
         <option value="$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/controllers/grails/plugins/springsecurity/ui/RegisterController.groovy" />
-        <option value="$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/src/UrlMappings.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/views/register/index/gsp/RegisterController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Posts.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/IndicatorEnum.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Indicators.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/AttributesController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/attributes/edit.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/IndicatorsController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/show.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/UserIndicatorsController.groovy" />
+      </list>
+    </option>
+  </component>
+  <component name="Osmorc">
+    <option name="libraryBundlificationRules">
+      <list>
+        <LibraryBundlificationRule>
+          <option name="lastModified" value="1377011194611" />
+        </LibraryBundlificationRule>
       </list>
     </option>
   </component>
@@ -831,410 +254,41 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource ProjectPane="true" />
-      <autoscrollFromSource ProjectPane="true" />
+      <autoscrollToSource />
+      <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc-grailsPlugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc-grailsPlugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring-security-ui-0.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc-grailsPlugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring-security-ui-0.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc-grailsPlugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring-security-ui-0.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc-grailsPlugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring-security-ui-0.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegisterController.groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc-grailsPlugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mail-1.0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="141" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="140" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../netnumeri" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="169" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1065" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1064" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="169" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="161" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="fileTemplates" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.netnumeri.server.finance.indicator" />
-      <recent name="com.dtmc.gson" />
-      <recent name="dtmc" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/grails-app/views/stock" />
-      <recent name="$PROJECT_DIR$/src/templates/artifacts" />
-      <recent name="$PROJECT_DIR$/grails-app/views/login" />
-      <recent name="$PROJECT_DIR$/web-app/js" />
-      <recent name="$PROJECT_DIR$/web-app/images" />
     </key>
   </component>
   <component name="RunManager" selected="Grails.Grails:dtmc">
-    <configuration default="false" name="testStrategy()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
-      <module name="dtmc" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.strategy.SMACrossover.testStrategy -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="testEdit()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
-      <module name="dtmc" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.finpojo.PortfolioController.testEdit -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="GrailsMavenDebuggerRunner">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="GrailsMavenDebuggerRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="GenericMatrixTest" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
-      <module name="dtmc" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.servlets.GenericMatrix -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="GrailsMavenDebuggerRunner">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="GrailsMavenDebuggerRunner" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="DailyGSON" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.dtmc.gson.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.dtmc.gson.DailyGSON" />
-      <option name="VM_PARAMETERS" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="dtmc" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="testSSAIndicators()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
-      <module name="dtmc" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.ssa.SSAAnalysis.testSSAIndicators -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="GrailsMavenDebuggerRunner">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="GrailsMavenDebuggerRunner" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -1245,21 +299,6 @@
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -1347,65 +386,21 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="false" name="Grails:dtmc" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="dtmc" />
       <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app  -Dserver.port=7777" />
+      <setting name="cmdLine" value="run-app" />
       <setting name="depsClasspath" value="true" />
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="GrailsMavenDebuggerRunner">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Profile ">
-        <option name="myExternalizedOptions" value="&#10;additional-options2=onexit\=snapshot&#10;" />
-      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="GrailsMavenDebuggerRunner" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="testMap()" type="GrailsRunConfigurationType" factoryName="Grails">
-      <module name="dtmc" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.servlets.GenericMatrix.testMap -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="Profile ">
-        <option name="myExternalizedOptions" />
-      </RunnerSettings>
-      <method />
-    </configuration>
-    <list size="7">
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Grails.Grails:dtmc" />
-      <item index="1" class="java.lang.String" itemvalue="Grails.testMap()" />
-      <item index="2" class="java.lang.String" itemvalue="Grails.testStrategy()" />
-      <item index="3" class="java.lang.String" itemvalue="Grails.testEdit()" />
-      <item index="4" class="java.lang.String" itemvalue="Grails.GenericMatrixTest" />
-      <item index="5" class="java.lang.String" itemvalue="Application.DailyGSON" />
-      <item index="6" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
     </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
-        <item index="1" class="java.lang.String" itemvalue="Application.DailyGSON" />
-        <item index="2" class="java.lang.String" itemvalue="Grails.GenericMatrixTest" />
-        <item index="3" class="java.lang.String" itemvalue="Grails.testEdit()" />
-        <item index="4" class="java.lang.String" itemvalue="Grails.testStrategy()" />
-      </list>
-    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -1414,198 +409,44 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d835d6c5-2f3a-4184-ac9c-6edeedb9dd98" name="Default" comment="" />
-      <created>1370453043266</created>
-      <updated>1370453043266</updated>
+      <changelist id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="" />
+      <created>1377538576359</created>
+      <updated>1377538576359</updated>
     </task>
-    <task id="LOCAL-00001" summary="blah">
-      <created>1370720492806</created>
-      <updated>1370720492806</updated>
-    </task>
-    <task id="LOCAL-00002" summary="blah">
-      <created>1370809259174</created>
-      <updated>1370809259174</updated>
-    </task>
-    <task id="LOCAL-00003" summary="blah">
-      <created>1370891772339</created>
-      <updated>1370891772339</updated>
-    </task>
-    <task id="LOCAL-00004" summary="blah">
-      <created>1370895729388</created>
-      <updated>1370895729388</updated>
-    </task>
-    <task id="LOCAL-00005" summary="blah">
-      <created>1370896461498</created>
-      <updated>1370896461498</updated>
-    </task>
-    <task id="LOCAL-00006" summary="blah">
-      <created>1370896482190</created>
-      <updated>1370896482190</updated>
-    </task>
-    <task id="LOCAL-00007" summary="blah">
-      <created>1370898959650</created>
-      <updated>1370898959650</updated>
-    </task>
-    <task id="LOCAL-00008" summary="bootstrap">
-      <created>1371156466442</created>
-      <updated>1371156466442</updated>
-    </task>
-    <task id="LOCAL-00009" summary="bootstrap">
-      <created>1371156570850</created>
-      <updated>1371156570850</updated>
-    </task>
-    <task id="LOCAL-00010" summary="bootstrap">
-      <created>1371200278323</created>
-      <updated>1371200278323</updated>
-    </task>
-    <task id="LOCAL-00011" summary="bootstrap">
-      <created>1371220881305</created>
-      <updated>1371220881305</updated>
-    </task>
-    <task id="LOCAL-00012" summary="bootstrap">
-      <created>1371335273239</created>
-      <updated>1371335273239</updated>
-    </task>
-    <task id="LOCAL-00013" summary="bootstrap">
-      <created>1371335281236</created>
-      <updated>1371335281236</updated>
-    </task>
-    <task id="LOCAL-00014" summary="bootstrap">
-      <created>1371454313854</created>
-      <updated>1371454313854</updated>
-    </task>
-    <task id="LOCAL-00015" summary="bootstrap">
-      <created>1371455183801</created>
-      <updated>1371455183802</updated>
-    </task>
-    <task id="LOCAL-00016" summary="bootstrap">
-      <created>1371459196672</created>
-      <updated>1371459196672</updated>
-    </task>
-    <task id="LOCAL-00017" summary="bootstrap">
-      <created>1371459280769</created>
-      <updated>1371459280769</updated>
-    </task>
-    <task id="LOCAL-00018" summary="bootstrap">
-      <created>1371502776393</created>
-      <updated>1371502776393</updated>
-    </task>
-    <task id="LOCAL-00019" summary="bootstrap">
-      <created>1371566040987</created>
-      <updated>1371566040987</updated>
-    </task>
-    <task id="LOCAL-00020" summary="bootstrap">
-      <created>1372421364382</created>
-      <updated>1372421364382</updated>
-    </task>
-    <task id="LOCAL-00021" summary="bootstrap">
-      <created>1372421392231</created>
-      <updated>1372421392231</updated>
-    </task>
-    <task id="LOCAL-00022" summary="bootstrap">
-      <created>1372597630619</created>
-      <updated>1372597630619</updated>
-    </task>
-    <task id="LOCAL-00023" summary="bootstrap">
-      <created>1373534061996</created>
-      <updated>1373534061996</updated>
-    </task>
-    <task id="LOCAL-00024" summary="bootstrap">
-      <created>1373534083041</created>
-      <updated>1373534083041</updated>
-    </task>
-    <task id="LOCAL-00025" summary="bootstrap">
-      <created>1374439123721</created>
-      <updated>1374439123721</updated>
-    </task>
-    <task id="LOCAL-00026" summary="bootstrap">
-      <created>1374439931893</created>
-      <updated>1374439931893</updated>
-    </task>
-    <task id="LOCAL-00027" summary="bootstrap">
-      <created>1374486234789</created>
-      <updated>1374486234789</updated>
-    </task>
-    <task id="LOCAL-00028" summary="bootstrap">
-      <created>1375309340785</created>
-      <updated>1375309340785</updated>
-    </task>
-    <task id="LOCAL-00029" summary="bootstrap">
-      <created>1375394523465</created>
-      <updated>1375394523465</updated>
-    </task>
-    <task id="LOCAL-00030" summary="bootstrap">
-      <created>1375394641608</created>
-      <updated>1375394641608</updated>
-    </task>
-    <task id="LOCAL-00031" summary="bootstrap">
-      <created>1375446852883</created>
-      <updated>1375446852883</updated>
-    </task>
-    <task id="LOCAL-00032" summary="bootstrap">
-      <created>1375774085447</created>
-      <updated>1375774085452</updated>
-    </task>
-    <task id="LOCAL-00033" summary="bootstrap">
-      <created>1375897411669</created>
-      <updated>1375897411669</updated>
-    </task>
-    <task id="LOCAL-00034" summary="bootstrap">
-      <created>1375904783017</created>
-      <updated>1375904783017</updated>
-    </task>
-    <task id="LOCAL-00035" summary="bootstrap">
-      <created>1375904800044</created>
-      <updated>1375904800044</updated>
-    </task>
-    <task id="LOCAL-00036" summary="bootstrap">
-      <created>1375912615179</created>
-      <updated>1375912615179</updated>
-    </task>
-    <task id="LOCAL-00037" summary="bootstrap">
-      <created>1376345091032</created>
-      <updated>1376345091032</updated>
-    </task>
-    <task id="LOCAL-00038" summary="bootstrap">
-      <created>1376345164262</created>
-      <updated>1376345164262</updated>
-    </task>
-    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1617" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5582686" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39041534" sideWeight="0.56936735" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33296338" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54051054" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22747605" sideWeight="0.7580466" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41676235" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27028754" sideWeight="0.44173142" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29392973" sideWeight="0.6714761" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24089457" sideWeight="0.44950056" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55049944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35627082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984026" sideWeight="0.6703663" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32852387" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1613,8 +454,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
       <value>
         <are-packages-shown value="false" />
@@ -1650,7 +491,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1664,137 +505,140 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="blah" />
-    <MESSAGE value="bootstrap" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
+    <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/LogoutController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-core-1.2.7.3/src/templates/denied.gsp.template">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-core-1.2.7.3/src/templates/LoginController.groovy.template">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Posts.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-core-1.2.7.3/src/templates/Person.groovy.template">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="181" selection-end="181" vertical-scroll-proportion="-3.6111112">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+    </entry>
+    <entry file="jar://$USER_HOME$/tools/grails-2.2.3/src/grails-plugin-gsp-2.2.3-sources.jar!/org/codehaus/groovy/grails/plugins/web/taglib/FormTagLib.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="12" selection-start="3370" selection-end="3370" vertical-scroll-proportion="-30.494219">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/controllers/grails/plugins/springsecurity/ui/UserController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="30" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-4.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/Role.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-core-1.2.7.3/src/templates/auth.gsp.template">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="2" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="-1.2">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-core-1.2.7.3/grails-app/conf/DefaultSecurityConfig.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="43" selection-start="4465" selection-end="4465" vertical-scroll-proportion="0.0">
+        <state line="20" column="51" selection-start="361" selection-end="361" vertical-scroll-proportion="-6.6">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-core-1.2.7.3/SpringSecurityCoreGrailsPlugin.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserRole.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="255" column="125" selection-start="12650" selection-end="12650" vertical-scroll-proportion="0.0">
+        <state line="15" column="50" selection-start="346" selection-end="346" vertical-scroll-proportion="-9.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="24" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/mail-1.0.1/plugin.xml">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/mail-1.0.1/MailGrailsPlugin.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="69" selection-start="1200" selection-end="1200" vertical-scroll-proportion="-7.6530614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/IndicatorEnum.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="75" selection-start="69" selection-end="2538" vertical-scroll-proportion="-10.684211">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="82" selection-start="2433" selection-end="2433" vertical-scroll-proportion="-3.6842105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="36" selection-start="242" selection-end="242" vertical-scroll-proportion="-2.7777777">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/UserIndicatorsController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/mail-1.0.1/dependencies.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Indicators.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="5" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="-1.3888888">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/mail-1.0.1/application.properties">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/IndicatorsController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="55" column="44" selection-start="1850" selection-end="1850" vertical-scroll-proportion="-17.52">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/views/register/index/gsp/RegisterController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="16" selection-start="1727" selection-end="1727" vertical-scroll-proportion="-17.6">
+        <state line="10" column="29" selection-start="192" selection-end="192" vertical-scroll-proportion="-2.7777777">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.grails/2.2.3/projects/dtmc/plugins/spring-security-ui-0.2/grails-app/controllers/grails/plugins/springsecurity/ui/RegisterController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/AttributesController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="19" selection-start="1214" selection-end="1225" vertical-scroll-proportion="-3.0943396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="62" selection-start="4716" selection-end="4716" vertical-scroll-proportion="-5.107143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="36" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.63829786">
+        <state line="11" column="35" selection-start="291" selection-end="291" vertical-scroll-proportion="0.33880904">
           <folding />
         </state>
       </provider>
@@ -1826,82 +670,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Hibernate</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>grails-2.2.3</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.6</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>dtmc</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
 
