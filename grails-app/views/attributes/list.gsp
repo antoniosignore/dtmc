@@ -1,4 +1,3 @@
-
 <%@ page import="com.netnumeri.server.finance.indicator.Attributes" %>
 <!doctype html>
 <html>
@@ -16,28 +15,30 @@
     <table class="table table-bordered">
         <thead>
         <tr>
-            
+
+            <th><g:message code="attributes.userIndicator.label" default="User Indicator"/></th>
+
             <g:sortableColumn property="name"
                               title="${message(code: 'attributes.name.label', default: 'Name')}"/>
-            
-            <th><g:message code="attributes.userIndicator.label" default="User Indicator"/></th>
-            
+
             <g:sortableColumn property="value"
                               title="${message(code: 'attributes.value.label', default: 'Value')}"/>
-            
+
         </tr>
         </thead>
         <tbody>
         <g:each in="${attributesInstanceList}" status="i" var="attributesInstance">
             <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                
+
                 <td><g:link action="show"
-                            id="${attributesInstance.id}">${fieldValue(bean: attributesInstance, field: "name")}</g:link></td>
-                
-                <td>${fieldValue(bean: attributesInstance, field: "userIndicator")}</td>
-                
+                            id="${attributesInstance.id}">${fieldValue(bean: attributesInstance, field: "userIndicator.name")}</g:link></td>
+
+                <td>${fieldValue(bean: attributesInstance, field: "name")}</td>
+
+
+
                 <td>${fieldValue(bean: attributesInstance, field: "value")}</td>
-                
+
             </tr>
         </g:each>
         </tbody>

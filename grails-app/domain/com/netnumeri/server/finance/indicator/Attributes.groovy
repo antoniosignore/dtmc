@@ -8,4 +8,5 @@ public class Attributes implements Serializable {
     String name
     Double value
 
+
 }

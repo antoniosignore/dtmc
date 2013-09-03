@@ -19,7 +19,10 @@
             default="User Indicator"/></label>
 
     <div class="controls">
-        <g:select id="userIndicator" name="userIndicator.id" from="${com.netnumeri.server.finance.indicator.UserIndicators.list()}" optionKey="id" value="${attributesInstance?.userIndicator?.id}" class="many-to-one" noSelection="['null': '']"/>
+        <g:select id="userIndicator" name="userIndicator.id"
+                  from="${com.netnumeri.server.finance.indicator.UserIndicators.list()}"
+                  optionKey="id" optionValue="name" value="${attributesInstance?.userIndicator?.id}" class="many-to-one"
+                  noSelection="['null': '']"/>
         <span class="help-inline">${hasErrors(bean: attributesInstance, field: 'userIndicator', 'error')}</span>
     </div>
 </div>
