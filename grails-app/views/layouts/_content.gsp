@@ -24,6 +24,7 @@
                     <li><a href="/dtmc/stock"><i class="icon-file"></i> Stock</a></li>
                     <li><a href="/dtmc/trade"><i class="icon-save"></i> Trade</a></li>
                     <li><a href="/dtmc/vanilla"><i class="icon-save"></i> Options</a></li>
+                    <li><a href="/dtmc/userIndicators"><i class="icon-save"></i>User Indicators</a></li>
 
                     <li class="nav-header">Settings</li>
                     <li><a href="/dtmc/indicators"><i class="icon-save"></i> Indicators</a></li>
