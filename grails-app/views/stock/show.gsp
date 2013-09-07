@@ -97,7 +97,7 @@
                         tickOptions: {formatString: '%b %e'},
                         min: "11-01-2012",
                         max: "08-08-2013",
-                        tickInterval: "6 weeks",
+                        tickInterval: "6 weeks"
                     },
                     y2axis: {
                         tickOptions: {formatString: '$%d'}

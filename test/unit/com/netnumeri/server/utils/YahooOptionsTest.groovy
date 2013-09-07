@@ -22,7 +22,7 @@ public class YahooOptionsTest extends GroovyTestCase {
     }
 
 
-    public void computeMaxpain() throws Exception {
+    public void testComputeMaxpain() throws Exception {
 
         setUp();
         Double aa = MaximumPainCalculator.calculate("GOOG", new Date());

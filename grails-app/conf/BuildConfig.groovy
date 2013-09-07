@@ -48,7 +48,9 @@ grails.project.dependency.resolution = {
 
         runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
 
-
+        runtime('jaxen:jaxen:1.1.1') {
+            exclude group: 'xerces', name: 'xmlParserAPIs'
+        }
     }
 
     plugins {
@@ -60,6 +62,9 @@ grails.project.dependency.resolution = {
         runtime ':resources:1.2'
         runtime ':raphael:2.0.1'
         compile ':gson:1.1.4'
+//        runtime "jaxen:jaxen:1.1.1", {
+//            transitive = false
+//        }
 //        compile ":spring-security-core:1.2.7.3"
 //        compile ":kickstart-with-bootstrap:0.9.6"
 //        runtime ':jquery:1.8.3'

@@ -1,6 +1,8 @@
 package com.netnumeri.server.finance.finpojo.asset
 
 import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.indicator.Indicators
+import com.netnumeri.server.finance.indicator.UserIndicators
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
@@ -43,15 +45,29 @@ class StockController {
             return
         }
 
+        List<UserIndicators> list = UserIndicators.list(params)
+
+        for (int i = 0; i < list.size(); i++) {
+            UserIndicators userIndicator = list.get(i);
+            Indicators indicator = userIndicator.indicator
+
+            println "indicator = $indicator"
+
+        }
+
+
         Date da = DateUtils.Date("11/1/2012");
         Date a = DateUtils.today();
 
-        Stock stock = YahooUtils.downloadYahooData(stockInstance.name, "", da, a);
-        TimeSeries series = stock.closeSeries()
+        // last year
+        StockUtils.refreshData(stockInstance);
 
-        stockInstance.snapshot = YahooUtils.getCompanySnapshot(stock.name);
+//        Stock stock = YahooUtils.downloadYahooData(stockInstance.name, "", da, a);
+        TimeSeries series = stockInstance.closeSeries()
 
-        String plot = StockUtils.getJqPlot(stock)
+//        stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
+
+        String plot = StockUtils.getJqPlot(stockInstance)
         [stockInstance: stockInstance, javascript: series.getJsonSeries(), ohlc: plot]
 
     }

@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite errors="1" failures="0" hostname="antonio-ThinkPad-SL500" id="0" name="SSAAnalysisTest"
-               package="com.netnumeri.server.finance.ssa" tests="1" time="0.912" timestamp="2013-08-07T19:45:09">
+    <testsuite errors="0" failures="0" hostname="antonio-ThinkPad-SL500" id="0" name="YahooOptionsTest"
+               package="com.netnumeri.server.utils" tests="1" time="18.005" timestamp="2013-09-07T21:42:26">
         <properties/>
 
-        <testcase classname="com.netnumeri.server.finance.ssa.SSAAnalysisTest" name="testSSAIndicators" time="0.807">
-            <error message="No signature of method: static com.netnumeri.server.finance.utils.YahooUtils.downloadYahooData() is applicable for argument types: (java.lang.String, java.util.Date, java.util.Date) values: [BUD, Sun Nov 01 00:00:00 CET 2009, Wed Aug 07 00:00:00 CEST 2013]&#xa;Possible solutions: downloadYahooData(java.lang.String, java.lang.String, java.util.Date, java.util.Date), downloadYahooData(java.lang.String, java.lang.String, java.util.Date, java.util.Date, java.lang.String)"
-                   type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method:
-                static com.netnumeri.server.finance.utils.YahooUtils.downloadYahooData() is applicable for argument
-                types: (java.lang.String, java.util.Date, java.util.Date) values: [BUD, Sun Nov 01 00:00:00 CET 2009,
-                Wed Aug 07 00:00:00 CEST 2013]
-                Possible solutions: downloadYahooData(java.lang.String, java.lang.String, java.util.Date,
-                java.util.Date), downloadYahooData(java.lang.String, java.lang.String, java.util.Date, java.util.Date,
-                java.lang.String)
-                at com.netnumeri.server.finance.ssa.SSAAnalysisTest.setUp(SSAAnalysisTest.groovy:27)
-            </error>
-
-        </testcase>
+        <testcase classname="com.netnumeri.server.utils.YahooOptionsTest" name="testComputeMaxpain" time="17.873"/>
 
         <system-out><![CDATA[]]></system-out>
 

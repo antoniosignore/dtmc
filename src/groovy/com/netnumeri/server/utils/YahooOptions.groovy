@@ -10,6 +10,8 @@ import org.dom4j.DocumentHelper
 import org.dom4j.Element
 import org.dom4j.XPath
 
+import static com.netnumeri.server.utils.YahooOptions.getOptionsDocuments
+
 public class YahooOptions {
 
     static final String LOGON_SITE = "finance.yahoo.com";
@@ -198,11 +200,11 @@ public class YahooOptions {
     }
 
     private static void getOptions(String ticker, OptionsChain optionChain, Date date) throws Exception {
-        String s = YahooOptions.getOptionsDocuments(ticker, date);
+        String s = getOptionsDocuments(ticker, date);
         OptionsDocuments optionsDocuments = scrape(ticker, s);
         optionsDocuments.setExpirationDate(date)
-        List<Vanilla> callsOptions = YahooOptions.getChain(optionsDocuments, OptionType.CALL);
-        List<Vanilla> putsOptions = YahooOptions.getChain(optionsDocuments, OptionType.PUT);
+        List<Vanilla> callsOptions = getChain(optionsDocuments, OptionType.CALL);
+        List<Vanilla> putsOptions = getChain(optionsDocuments, OptionType.PUT);
         optionChain.calls.put(date, callsOptions);
         optionChain.puts.put(date, putsOptions);
     }

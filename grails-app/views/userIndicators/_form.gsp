@@ -40,7 +40,6 @@
     </div>
 </div>
 
-
 <div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'attributes', 'error')} ">
     <label for="attributes" class="control-label"><g:message
             code="userIndicators.attributes.label"

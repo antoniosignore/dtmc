@@ -27,9 +27,17 @@ class StockUtils {
     }
 
     public static void refreshData(Stock stock) {
-        YahooUtils.refreshDailyData(stock, DateUtils.todayOneYearAgo(), DateUtils.today());
-        stock.chain = YahooOptions.loadOptionChain(stock.name)
+        refreshDaily(stock)
+        refreshChain(stock)
         stock.snapshot = YahooUtils.getCompanySnapshot(stock.name);
+    }
+
+    public static void refreshDaily(Stock stock) {
+        YahooUtils.refreshDailyData(stock, DateUtils.todayOneYearAgo(), DateUtils.today());
+    }
+
+    public static void refreshChain(Stock stock) {
+        stock.chain = YahooOptions.loadOptionChain(stock.name)
     }
 
     public static void printTimeplotIndicatorOnFile(String dir, Stock stock) {
