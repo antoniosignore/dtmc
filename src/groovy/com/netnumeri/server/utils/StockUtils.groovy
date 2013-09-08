@@ -173,7 +173,6 @@ ohlc = [
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
         StringBuffer sb = new StringBuffer("<script class=\"code\" language=\"javascript\" type=\"text/javascript\">\n");
         sb.append("ohlc = [\n")
-
         while (dateIndex != null) {
             Daily daily = dailyarray.get(dateIndex)
             if (dateIndex.getTime() == last.getTime())

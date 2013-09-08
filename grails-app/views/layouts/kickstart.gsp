@@ -7,6 +7,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -17,6 +18,12 @@
     <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-72x72.png" sizes="72x72">
     <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-114x114.png" sizes="114x114">
 
+    <style>
+    body {
+        padding-top: 70px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+    </style>
+
     <%-- Manual switch for the skin can be found in /view/_menu/_config.gsp --%>
     <r:require modules="jquery"/>
     <r:require modules="bootstrap"/>
@@ -24,6 +31,7 @@
     <r:require modules="raphael"/>
     <r:require modules="application"/>
 
+    %{--<r:external uri="/css/metro-bootstrap.css"/>--}%
 
     <r:layoutResources/>
     <g:layoutHead/>
@@ -44,9 +52,7 @@
 <g:if test="${pageProperty(name: 'page.header')}">
     <g:pageProperty name="page.header"/>
 </g:if>
-<g:else>
-    <g:render template="/layouts/header"/>
-</g:else>
+
 
 <g:render template="/layouts/content"/>
 
@@ -67,7 +73,6 @@
     <g:render template="/_common/modals/registerDialog" model="[item: item]"/>
 </g:else>
 
-<!-- Included Javascript files and other resources -->
 <r:layoutResources/>
 </body>
 

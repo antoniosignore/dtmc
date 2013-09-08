@@ -45,14 +45,13 @@ class StockController {
             return
         }
 
-        List<UserIndicators> list = UserIndicators.list(params)
+        // todo - add user
+        List<UserIndicators> list = UserIndicators.list()
 
         for (int i = 0; i < list.size(); i++) {
             UserIndicators userIndicator = list.get(i);
             Indicators indicator = userIndicator.indicator
-
-            println "indicator = $indicator"
-
+            println "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX userIndicator = $userIndicator"
         }
 
 
@@ -60,7 +59,8 @@ class StockController {
         Date a = DateUtils.today();
 
         // last year
-        StockUtils.refreshData(stockInstance);
+        StockUtils.refreshDaily(stockInstance);
+        stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
 
 //        Stock stock = YahooUtils.downloadYahooData(stockInstance.name, "", da, a);
         TimeSeries series = stockInstance.closeSeries()
@@ -68,7 +68,12 @@ class StockController {
 //        stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
 
         String plot = StockUtils.getJqPlot(stockInstance)
-        [stockInstance: stockInstance, javascript: series.getJsonSeries(), ohlc: plot]
+        [
+                stockInstance: stockInstance,
+                javascript: series.getJsonSeries(),
+                ohlc: plot,
+                indicators: list
+        ]
 
     }
 

@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon"/>
 
     <s2ui:resources module='register'/>
+
     <%--
 
     The 'resources' tag in SecurityUiTagLib renders these tags if you're not using the resources plugin:

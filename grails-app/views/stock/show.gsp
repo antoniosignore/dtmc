@@ -21,6 +21,19 @@
 
 <body>
 
+<ul class="thumbnails">
+    <li class="span3 tile tile-double tile-orange">
+        <a href="#">
+            <h1 class="tile-text">I'm the 2!</h1>
+        </a>
+    </li>
+    <li class="span3 tile">
+        <a href="#">
+            <h1>the 1!</h1>
+        </a>
+    </li>
+</ul>
+
 <section id="show-stock" class="first">
 
     <table class="table">
@@ -163,6 +176,11 @@
         });
 
     </script>
+
+
+    <div id="messages">
+        <dtmc:renderIndicators indicators="${indicators}"/>
+    </div>
 
 </section>
 

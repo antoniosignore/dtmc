@@ -12,4 +12,15 @@ public class UserIndicators implements Serializable {
 
     static hasMany = [attributes: Attributes]
 
+    @Override
+    public java.lang.String toString() {
+        return "UserIndicators{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", indicator=" + indicator +
+                ", version=" + version +
+                ", attributes=" + attributes +
+                ", user=" + user +
+                '}';
+    }
 }
