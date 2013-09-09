@@ -1,5 +1,4 @@
-<%@ page import="com.vodafone.global.blueprint.promo.common.Constants" %>
-<div class="span3">
+<div class="span2">
     <div class="well sidebar-nav" style="padding: 8px 0;">
         <ul class="nav nav-list ">
 
