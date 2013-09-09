@@ -52,10 +52,18 @@
 <g:if test="${pageProperty(name: 'page.header')}">
     <g:pageProperty name="page.header"/>
 </g:if>
+<g:else>
+    <g:render template="/layouts/header"/>
+</g:else>
 
 
-<g:render template="/layouts/content"/>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <g:render template="/layouts/promoleftbar"/>
+        <g:render template="/layouts/content"/>
+    </div>
 
+</div>
 <!-- Enable to overwrite Footer by individual page -->
 <g:if test="${pageProperty(name: 'page.footer')}">
     <g:pageProperty name="page.footer"/>
@@ -77,3 +85,4 @@
 </body>
 
 </html>
+
