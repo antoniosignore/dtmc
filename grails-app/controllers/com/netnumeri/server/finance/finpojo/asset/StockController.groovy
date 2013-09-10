@@ -52,6 +52,11 @@ class StockController {
             UserIndicators userIndicator = list.get(i);
             Indicators indicator = userIndicator.indicator
             println "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX userIndicator = $userIndicator"
+
+            if (indicator.code.equalsIgnoreCase("SimpleMovingAverage")) {
+                userIndicator.attributes.getProperties()
+            }
+
         }
 
 
@@ -69,6 +74,8 @@ class StockController {
 
         String plot = StockUtils.getJqPlot(stockInstance)
         [
+                startDate: da,
+                endDate: a,
                 stockInstance: stockInstance,
                 javascript: series.getJsonSeries(),
                 ohlc: plot,
