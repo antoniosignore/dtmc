@@ -64,6 +64,55 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+
+        interceptUrlMap = [
+
+                '/campaigns/edit': ['ADMIN_ROLE', 'EDITOR_ROLE'],
+                '/campaigns/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/campaigns/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/campaigns/create': ['ADMIN_ROLE', 'EDITOR_ROLE'],
+                '/campaigns/delete': ['ADMIN_ROLE', 'EDITOR_ROLE'],
+
+                '/trash/edit': ['ADMIN_ROLE', 'EDITOR_ROLE'],
+                '/trash/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/trash/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/trash/create': ['ADMIN_ROLE', 'EDITOR_ROLE'],
+                '/trash/delete': ['ADMIN_ROLE', 'EDITOR_ROLE'],
+
+                '/categories/edit': ['ADMIN_ROLE', 'EDITOR_ROLE'],
+                '/categories/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/categories/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/categories/create': ['ADMIN_ROLE', 'EDITOR_ROLE'],
+                '/categories/delete': ['ADMIN_ROLE', 'EDITOR_ROLE'],
+
+                '/opcos/edit': ['ADMIN_ROLE'],
+                '/opcos/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/opcos/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/opcos/create': ['ADMIN_ROLE'],
+                '/opcos/delete': ['ADMIN_ROLE'],
+
+                '/deviceFamilies/edit': ['ADMIN_ROLE'],
+                '/deviceFamilies/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/deviceFamilies/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/deviceFamilies/create': ['ADMIN_ROLE'],
+                '/deviceFamilies/delete': ['ADMIN_ROLE'],
+
+                '/clients/edit': ['ADMIN_ROLE'],
+                '/clients/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/clients/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/clients/create': ['ADMIN_ROLE'],
+                '/clients/delete': ['ADMIN_ROLE'],
+
+                '/publishHistory/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/publishHistory/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
+                '/publishHistory/delete': ['EDITOR_ROLE', 'ADMIN_ROLE'],
+
+                '/publish/**': ['EDITOR_ROLE', 'ADMIN_ROLE'],
+
+                '/**': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE']
+        ]
+
+
     }
     production {
         grails.logging.jul.usebridge = false

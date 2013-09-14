@@ -8,6 +8,8 @@ import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
 import org.springframework.dao.DataIntegrityViolationException
 
+import java.text.SimpleDateFormat
+
 class StockController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -51,7 +53,6 @@ class StockController {
         for (int i = 0; i < list.size(); i++) {
             UserIndicators userIndicator = list.get(i);
             Indicators indicator = userIndicator.indicator
-            println "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX userIndicator = $userIndicator"
 
             if (indicator.code.equalsIgnoreCase("SimpleMovingAverage")) {
                 userIndicator.attributes.getProperties()
@@ -72,6 +73,15 @@ class StockController {
 
 //        stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
 
+        /*
+        min: "11-01-2012",
+                        max: "08-08-2013",
+         */
+
+        /* var line1=[['2008-09-30',4], ['2008-10-30',6.5], ['2008-11-30',5.7], ['2008-12-30',9], ['2009-01-30',8.2]]; */
+        SimpleDateFormat sdf = new SimpleDateFormat("");
+
+        // todo date in jqplot format
         String plot = StockUtils.getJqPlot(stockInstance)
         [
                 startDate: da,

@@ -1,8 +1,8 @@
 package com.netnumeri.server.finance.finpojo
 
+import com.netnumeri.server.enums.TradeEnum
 import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
-import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.utils.FormatUtils
 
 public class Trade implements Serializable {

@@ -20,7 +20,6 @@
 
     <style>
     body {
-        padding-top: 70px; /* 60px to make the container go all the way to the bottom of the topbar */
     }
     </style>
 
@@ -33,8 +32,6 @@
 
     %{--<r:external uri="/css/metro-bootstrap.css"/>--}%
 
-    <r:layoutResources/>
-    <g:layoutHead/>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -42,6 +39,9 @@
 	<![endif]-->
 
     <%-- For Javascript see end of body --%>
+
+    <r:layoutResources/>
+    <g:layoutHead/>
 </head>
 
 <body>

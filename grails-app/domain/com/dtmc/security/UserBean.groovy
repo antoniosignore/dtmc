@@ -30,6 +30,8 @@ class UserBean {
     Date lastLoginDate
     Date registerDate
 
+    Double allocatedUnits
+
     // Constraints used for validations
     static constraints = {
         fname(size: 1..30, blank: true)

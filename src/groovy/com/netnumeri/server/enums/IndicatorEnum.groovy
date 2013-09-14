@@ -1,4 +1,4 @@
-package com.netnumeri.server.finance.beans
+package com.netnumeri.server.enums
 
 enum IndicatorEnum {
 

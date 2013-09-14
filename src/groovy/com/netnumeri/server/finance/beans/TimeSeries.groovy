@@ -1152,14 +1152,14 @@ $(document).ready(function(){
 });
 */
 
-    public String getJqPlot() {
+    public String getJqPlot(String jsname) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         DecimalFormat df = new DecimalFormat("#.####");
         List<DailyGSON> ds = new ArrayList<DailyGSON>();
         try {
             Date d = firstDate;
             StringBuffer sb = new StringBuffer("<script class=\"code\" language=\"javascript\" type=\"text/javascript\">\n");
-            sb.append("var line " + name + " = [\n")
+            sb.append("var " + jsname + " = [\n")
             while (DateUtils.isLessEqual(d, lastDate)) {
                 Double v = this.getData(d);
                 if (v == null) {

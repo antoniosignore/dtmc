@@ -8,9 +8,6 @@
     <g:set var="entityName" value="${message(code: 'stock.label', default: 'Stock')}"/>
     <title><g:message code="default.show.label" args="[entityName]"/></title>
 
-    <r:external uri="/js/morris.js"/>
-    <r:external uri="/css/morris.css"/>
-
     <r:external uri="/css/jquery.jqplot.css"/>
     <r:external uri="/js/jquery.jqplot.js"/>
     <r:external uri="/js/plugins/jqplot.dateAxisRenderer.min.js"/>
@@ -100,6 +97,7 @@
         </tr>
     </table>
 
+
     <script class="code" language="javascript" type="text/javascript">
         $(document).ready(function () {
             var plot2 = $.jqplot('chart2', [ohlc], {
@@ -142,40 +140,10 @@
 
     ${ohlc}
 
-    <ul class="nav nav-pills">
-        <li class="active"><a href="#tabs4-pane1" data-toggle="tab">Candlestick</a></li>
-        <li class=""><a href="#tabs4-pane2" data-toggle="tab">Line chart</a></li>
-    </ul>
 
-    <div class="tab-content">
-        <div id="tabs4-pane1" class="tab-pane active">
-            <div id="chart2" style="height:600px; width:800px;"></div>
-        </div>
-
-        <div id="tabs4-pane2" class="tab-pane">
-            <div id="graph" style="height: 600px; width:800px;"></div>
-        </div>
+    <div id="tabs4-pane1" class="tab-pane active">
+        <div id="chart2" style="height:600px; width:800px;"></div>
     </div>
-
-    <script>
-        var day_data =
-                ${javascript};
-
-        Morris.Line({
-            element: 'graph',
-            data: day_data,
-            xkey: 'period',
-            ykeys: ['close'],
-            labels: ['Close'],
-            lineWidth: 1,
-            pointSize: 1,
-            xLabelAngle: 60,
-            ymin: 'auto',
-            ymax: 'auto',
-            axes: 'false'
-        });
-
-    </script>
 
 
     <div id="messages">

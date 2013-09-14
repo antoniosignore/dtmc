@@ -1153,7 +1153,7 @@ input[type="color"]:focus,
 .uneditable-input:focus {
     border-color: rgba(82, 168, 236, 0.8);
     outline: 0;
-    outline: thin dotted  \9;
+    outline: thin dotted   \9;
     /* IE6-9 */
 
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
@@ -1167,7 +1167,7 @@ input[type="checkbox"] {
     *margin-top: 0;
     /* IE7 */
 
-    margin-top: 1px  \9;
+    margin-top: 1px   \9;
     /* IE8-9 */
 
     line-height: normal;
@@ -1797,9 +1797,9 @@ select:focus:invalid:focus {
 
 input.search-query {
     padding-right: 14px;
-    padding-right: 4px  \9;
+    padding-right: 4px   \9;
     padding-left: 14px;
-    padding-left: 4px  \9;
+    padding-left: 4px   \9;
     /* IE7-8 doesn't have border-radius, so don't indent the padding */
 
     margin-bottom: 0;
@@ -3196,7 +3196,7 @@ button.close {
 
 .btn:active,
 .btn.active {
-    background-color: #d5d5d5  \9;
+    background-color: #d5d5d5   \9;
 }
 
 .btn:first-child {
@@ -3343,7 +3343,7 @@ input[type="button"].btn-block {
 
 .btn-primary:active,
 .btn-primary.active {
-    background-color: #254fa2  \9;
+    background-color: #254fa2   \9;
 }
 
 .btn-warning {
@@ -3377,7 +3377,7 @@ input[type="button"].btn-block {
 
 .btn-warning:active,
 .btn-warning.active {
-    background-color: #bf7707  \9;
+    background-color: #bf7707   \9;
 }
 
 .btn-danger {
@@ -3411,7 +3411,7 @@ input[type="button"].btn-block {
 
 .btn-danger:active,
 .btn-danger.active {
-    background-color: #942a25  \9;
+    background-color: #942a25   \9;
 }
 
 .btn-success {
@@ -3445,7 +3445,7 @@ input[type="button"].btn-block {
 
 .btn-success:active,
 .btn-success.active {
-    background-color: #408140  \9;
+    background-color: #408140   \9;
 }
 
 .btn-info {
@@ -3479,7 +3479,7 @@ input[type="button"].btn-block {
 
 .btn-info:active,
 .btn-info.active {
-    background-color: #24748c  \9;
+    background-color: #24748c   \9;
 }
 
 .btn-inverse {
@@ -3513,7 +3513,7 @@ input[type="button"].btn-block {
 
 .btn-inverse:active,
 .btn-inverse.active {
-    background-color: #080808  \9;
+    background-color: #080808   \9;
 }
 
 button.btn,
@@ -4363,6 +4363,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .brand:hover {
     text-decoration: none;
+    color: #555555;
 }
 
 .navbar-text {
@@ -4614,7 +4615,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .btn-navbar:active,
 .navbar .btn-navbar.active {
-    background-color: #d9d9d9  \9;
+    background-color: #d9d9d9   \9;
 }
 
 .navbar .btn-navbar .icon-bar {
@@ -4875,7 +4876,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-inverse .btn-navbar:active,
 .navbar-inverse .btn-navbar.active {
-    background-color: #000000  \9;
+    background-color: #000000   \9;
 }
 
 .breadcrumb {
