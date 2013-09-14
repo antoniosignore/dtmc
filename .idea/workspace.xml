@@ -2,54 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/OwnershipEnum.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/ReturnOnInvestment.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/TradeEnum.groovy" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_cs_CZ.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_da.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_de.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_es.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_fr.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_it.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_ja.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_nb.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_nl.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_pl.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_pt_BR.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_pt_PT.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_ru.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_sv.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_th.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/i18n/messages_zh_CN.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/TEST-unit-unit-com.netnumeri.server.utils.YahooOptionsTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/html/all.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-com.netnumeri.server.utils.YahooOptionsTest-err.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-com.netnumeri.server.utils.YahooOptionsTest-out.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-com.netnumeri.server.utils.YahooOptionsTest.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/IndicatorEnum.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Trade.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Trade.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" afterPath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/metro-bootstrap.css" afterPath="$PROJECT_DIR$/web-app/css/metro-bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/morris.css" afterPath="$PROJECT_DIR$/web-app/css/morris.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379155036084" ignored="false" />
+    <file path="/Dummy.txt" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379155335436" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_common/modals/_deleteDialog.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377538656704" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Campaigns.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379094118391" ignored="false" />
     <file path="/Campaigns.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377969119276" ignored="false" />
@@ -272,8 +230,8 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="8" column="0" selection-start="235" selection-end="235" vertical-scroll-proportion="-1.5306122">
               <folding>
-                <marker date="1379155212618" expanded="true" signature="291:586" placeholder="{...}" />
-                <marker date="1379155212618" expanded="true" signature="406:574" placeholder="{&quot;title&quot;: 'Default Date Axis'...}" />
+                <marker date="1379155368894" expanded="true" signature="291:586" placeholder="{...}" />
+                <marker date="1379155368894" expanded="true" signature="406:574" placeholder="{&quot;title&quot;: 'Default Date Axis'...}" />
               </folding>
             </state>
           </provider>
@@ -284,7 +242,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="99" column="0" selection-start="4503" selection-end="4503" vertical-scroll-proportion="5.7755103">
               <folding>
-                <marker date="1379154893812" expanded="true" signature="5719:6136" placeholder="..." />
+                <marker date="1379155368862" expanded="true" signature="5719:6136" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -302,7 +260,7 @@
       <file leaf-file-name="morris.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-app/css/morris.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="50" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+            <state line="25" column="0" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -335,10 +293,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockController.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="StockController.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="51" selection-start="2780" selection-end="2780" vertical-scroll-proportion="-7.72">
+            <state line="69" column="36" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.21680877">
               <folding />
             </state>
           </provider>
@@ -353,10 +311,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeSeries.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TimeSeries.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1186" column="70" selection-start="41230" selection-end="41230" vertical-scroll-proportion="0.57579464">
+            <state line="1168" column="60" selection-start="40706" selection-end="40706" vertical-scroll-proportion="-12.0">
               <folding />
             </state>
           </provider>
@@ -1103,7 +1061,11 @@
       <created>1378795800511</created>
       <updated>1378795800511</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added indicators in tables">
+      <created>1379155372047</created>
+      <updated>1379155372047</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1124,6 +1086,7 @@
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28753993" sideWeight="0.46392897" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1137,7 +1100,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1268,7 +1230,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-app/css/morris.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="50" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+        <state line="25" column="0" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1284,8 +1246,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="235" selection-end="235" vertical-scroll-proportion="-1.5306122">
           <folding>
-            <marker date="1379155212618" expanded="true" signature="291:586" placeholder="{...}" />
-            <marker date="1379155212618" expanded="true" signature="406:574" placeholder="{&quot;title&quot;: 'Default Date Axis'...}" />
+            <marker date="1379155368894" expanded="true" signature="291:586" placeholder="{...}" />
+            <marker date="1379155368894" expanded="true" signature="406:574" placeholder="{&quot;title&quot;: 'Default Date Axis'...}" />
           </folding>
         </state>
       </provider>
@@ -1294,15 +1256,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="99" column="0" selection-start="4503" selection-end="4503" vertical-scroll-proportion="5.7755103">
           <folding>
-            <marker date="1379154893812" expanded="true" signature="5719:6136" placeholder="..." />
+            <marker date="1379155368862" expanded="true" signature="5719:6136" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="51" selection-start="2780" selection-end="2780" vertical-scroll-proportion="-7.72">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1315,7 +1270,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1186" column="70" selection-start="41230" selection-end="41230" vertical-scroll-proportion="0.57579464">
+        <state line="1168" column="60" selection-start="40706" selection-end="40706" vertical-scroll-proportion="-12.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="36" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.21680877">
           <folding />
         </state>
       </provider>
