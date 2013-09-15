@@ -4,13 +4,11 @@
         </span>
     </strong>
 
-    <div id="chart_${indicatorCounter}" style="height:300px; width:650px;"></div>
-
-
+    <div id="chart_${getFullname()}" style="height:300px; width:650px;"></div>
     <g:javascript>
         $(document).ready(function(){
-        var line1=[data_${indicatorCounter}];
-        var plot1 = $.jqplot('chart_${indicatorCounter}', [line1], {
+        var line1=[data_${getFullname()}];
+        var plot1 = $.jqplot('chart_${getFullname()}', [line1], {
         title:'Default Date Axis',
         axes:{xaxis:{renderer:$.jqplot.DateAxisRenderer}},
         series:[{lineWidth:4, markerOptions:{style:'square'}}]
@@ -18,8 +16,4 @@
         });
     </g:javascript>
 
-    <g:var counter="${indicatorCounter}">
-
-    </g:var>
-    ${data_$ { indicatorCounter }}
 </div>

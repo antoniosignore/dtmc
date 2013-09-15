@@ -57,9 +57,7 @@ class StockController {
             if (indicator.code.equalsIgnoreCase("SimpleMovingAverage")) {
                 userIndicator.attributes.getProperties()
             }
-
         }
-
 
         Date da = DateUtils.Date("11/1/2012");
         Date a = DateUtils.today();
@@ -70,13 +68,6 @@ class StockController {
 
 //        Stock stock = YahooUtils.downloadYahooData(stockInstance.name, "", da, a);
         TimeSeries series = stockInstance.closeSeries()
-
-//        stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
-
-        /*
-        min: "11-01-2012",
-                        max: "08-08-2013",
-         */
 
         /* var line1=[['2008-09-30',4], ['2008-10-30',6.5], ['2008-11-30',5.7], ['2008-12-30',9], ['2009-01-30',8.2]]; */
         SimpleDateFormat sdf = new SimpleDateFormat("");

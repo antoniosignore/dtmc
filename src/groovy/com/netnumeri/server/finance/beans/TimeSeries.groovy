@@ -1158,8 +1158,7 @@ $(document).ready(function(){
         List<DailyGSON> ds = new ArrayList<DailyGSON>();
         try {
             Date d = firstDate;
-            StringBuffer sb = new StringBuffer("<script class=\"code\" language=\"javascript\" type=\"text/javascript\">\n");
-            sb.append("var " + jsname + " = [\n")
+            StringBuffer sb = new StringBuffer("[");
             while (DateUtils.isLessEqual(d, lastDate)) {
                 Double v = this.getData(d);
                 if (v == null) {
@@ -1167,7 +1166,6 @@ $(document).ready(function(){
                     continue
                 };
                 ds.add(buildDaily(sdf.format(d), df.format(v)));
-
                 if (d.getTime() == lastDate.getTime())
                     sb.append("['" + sdf.format(d) + "'," + v + "]\n")
                 else
@@ -1176,13 +1174,28 @@ $(document).ready(function(){
                 d = DateUtils.addDays(d, 1)
             }
             sb.append("];\n")
-            sb.append("</script>\n")
-            return sb.toString()
+
+            StringBuffer jscript = new StringBuffer();
+            jscript.append("<div id='chart_" + jsname + "' style='height:300px; width:650px;'></div>\n" +
+                    "    <g:javascript>\n" +
+                    "        \$(document).ready(function(){\n" +
+                    "        var plot1 = \$.jqplot('chart_" + jsname + ", " + sb.toString() + ", {\n" +
+                    "        title:'Default Date Axis',\n" +
+                    "        axes:{xaxis:{renderer:\$.jqplot.DateAxisRenderer}},\n" +
+                    "        series:[{lineWidth:4, markerOptions:{style:'square'}}]\n" +
+                    "        });\n" +
+                    "        });\n" +
+                    "    </g:javascript>")
+
+            return jscript.toString()
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
+
+
+
 
     public String getNoDateSeries() {
         DecimalFormat df = new DecimalFormat("#.####");
