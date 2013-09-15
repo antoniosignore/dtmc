@@ -1,6 +1,8 @@
 package com.netnumeri.server.finance.indicator
 
 import com.dtmc.security.UserBean
+import com.netnumeri.server.enums.IndicatorEnum
+import com.netnumeri.server.finance.ta.Indicator
 
 public class UserIndicators implements Serializable {
 
@@ -8,9 +10,13 @@ public class UserIndicators implements Serializable {
 
     String name
 
-    Indicators indicator;
+    IndicatorEnum type
+
+    Indicator indicator;
 
     static hasMany = [attributes: Attributes]
+
+    static transients = ["indicator"]
 
     @Override
     public java.lang.String toString() {
