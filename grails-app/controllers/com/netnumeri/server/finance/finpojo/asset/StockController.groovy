@@ -1,8 +1,11 @@
 package com.netnumeri.server.finance.finpojo.asset
 
+import com.netnumeri.server.enums.IndicatorEnum
+import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.indicator.Indicators
 import com.netnumeri.server.finance.indicator.UserIndicators
+import com.netnumeri.server.finance.ta.SMAIndicator
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
@@ -47,23 +50,25 @@ class StockController {
             return
         }
 
-        // todo - add user
-        List<UserIndicators> list = UserIndicators.list()
-
-        for (int i = 0; i < list.size(); i++) {
-            UserIndicators userIndicator = list.get(i);
-            Indicators indicator = userIndicator.indicator
-
-            if (indicator.code.equalsIgnoreCase("SimpleMovingAverage")) {
-                userIndicator.attributes.getProperties()
-            }
-        }
 
         Date da = DateUtils.Date("11/1/2012");
         Date a = DateUtils.today();
 
         // last year
         StockUtils.refreshDaily(stockInstance);
+
+        // todo - add user
+        List<UserIndicators> list = UserIndicators.list()
+
+        for (int i = 0; i < list.size(); i++) {
+            UserIndicators userIndicator = list.get(i);
+            if (userIndicator.type == IndicatorEnum.SimpleMovingAverage) {
+                userIndicator.attributes.getProperties()
+                TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
+                userIndicator.indicator = new SMAIndicator(closes, "SMA-" + 50, 50);
+            }
+        }
+
         stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
 
 //        Stock stock = YahooUtils.downloadYahooData(stockInstance.name, "", da, a);

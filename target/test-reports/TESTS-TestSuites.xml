@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-    <testsuite errors="0" failures="0" hostname="antonio-ThinkPad-SL500" id="0" name="YahooOptionsTest"
-               package="com.netnumeri.server.utils" tests="1" time="15.173" timestamp="2013-09-07T22:09:20">
+    <testsuite errors="1" failures="0" hostname="antonio-ThinkPad-SL500" id="0" name="SMACrossoverTest"
+               package="com.netnumeri.server.finance.strategy" tests="1" time="5.669" timestamp="2013-09-18T19:57:02">
         <properties/>
 
-        <testcase classname="com.netnumeri.server.utils.YahooOptionsTest" name="testComputeMaxpain" time="15.085"/>
+        <testcase classname="com.netnumeri.server.finance.strategy.SMACrossoverTest" name="testStrategy" time="5.572">
+            <error message="Cannot invoke method add() on null object" type="java.lang.NullPointerException">
+                java.lang.NullPointerException: Cannot invoke method add() on null object
+                at dtmc.PortfolioService.add(PortfolioService.groovy:116)
+                at dtmc.PortfolioService.add(PortfolioService.groovy:131)
+                at dtmc.PortfolioService.add(PortfolioService.groovy:124)
+                at com.netnumeri.server.finance.strategy.SMACrossoverTest.testStrategy(SMACrossoverTest.groovy:42)
+            </error>
+
+        </testcase>
 
         <system-out><![CDATA[]]></system-out>
 
