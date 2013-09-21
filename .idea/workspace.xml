@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" afterPath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379534390985" ignored="false" />
+    <file path="/Dummy.txt" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379752480014" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_common/modals/_deleteDialog.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377538656704" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Campaigns.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379094118391" ignored="false" />
     <file path="/Campaigns.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377969119276" ignored="false" />
@@ -216,7 +219,38 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="jar://$USER_HOME$/tools/jdk1.7.0_03/src.zip!/java/net/URLClassLoader.java" line="365" class="java.net.URLClassLoader$1" package="java.net">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" line="71" class="com.netnumeri.server.finance.finpojo.asset.StockController" package="com.netnumeri.server.finance.finpojo.asset">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -253,23 +287,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="jar://$USER_HOME$/tools/jdk1.7.0_03/src.zip!/java/net/URLClassLoader.java" line="365" class="java.net.URLClassLoader$1" package="java.net">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -279,13 +297,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StockController.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="StockController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="19" selection-start="2681" selection-end="2681" vertical-scroll-proportion="0.49588478">
-              <folding>
-                <marker date="1379534394691" expanded="true" signature="155:625" placeholder="..." />
-              </folding>
+            <state line="81" column="44" selection-start="2967" selection-end="2967" vertical-scroll-proportion="-11.04">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/portfolioList/show.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="85" column="42" selection-start="4454" selection-end="4454" vertical-scroll-proportion="-5.714286">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -302,8 +327,20 @@
       <file leaf-file-name="SMAIndicator.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="17" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
+            <state line="4" column="13" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_indicator.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="4" selection-start="153" selection-end="153" vertical-scroll-proportion="0.22292994">
+              <folding>
+                <marker date="1379799019365" expanded="true" signature="308:653" placeholder="{...}" />
+                <marker date="1379799019365" expanded="true" signature="433:633" placeholder="{&quot;title&quot;: 'Default Date Axis'...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -311,7 +348,7 @@
       <file leaf-file-name="SMACrossoverTest.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="45" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.0">
+            <state line="57" column="49" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -329,19 +366,7 @@
       <file leaf-file-name="Instrument.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="352" column="35" selection-start="11259" selection-end="11264" vertical-scroll-proportion="-3.182927">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="26" selection-start="2614" selection-end="2614" vertical-scroll-proportion="0.0">
+            <state line="352" column="35" selection-start="11259" selection-end="11264" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -350,16 +375,7 @@
       <file leaf-file-name="UserIndicators.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="31" selection-start="389" selection-end="389" vertical-scroll-proportion="-10.2">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Attributes.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="13" selection-start="63" selection-end="63" vertical-scroll-proportion="-1.8">
+            <state line="17" column="31" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -407,12 +423,12 @@
         <option value="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" />
         <option value="$PROJECT_DIR$/web-app/css/morris.css" />
         <option value="$PROJECT_DIR$/grails-app/views/stock/show.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Indicators.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" />
       </list>
     </option>
   </component>
@@ -461,17 +477,17 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="141" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="140" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="140" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../grailstwitter" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="169" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1064" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1065" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1064" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="169" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="161" />
@@ -504,7 +520,7 @@
       <recent name="$PROJECT_DIR$/grails-app/conf" />
     </key>
   </component>
-  <component name="RunManager" selected="Grails.testStrategy()">
+  <component name="RunManager" selected="Grails.Grails:dtmc">
     <configuration default="false" name="YahooOptionsTest" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
       <module name="dtmc" />
       <setting name="vmparams" value="" />
@@ -541,6 +557,21 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
@@ -551,27 +582,25 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -600,19 +629,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -754,7 +770,11 @@
       <created>1379534397274</created>
       <updated>1379534397274</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added indicators in tables">
+      <created>1379534416785</created>
+      <updated>1379534416785</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -765,17 +785,15 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53496116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33929712" sideWeight="0.6703663" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23897764" sideWeight="0.6381798" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32963374" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -784,11 +802,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32384342" sideWeight="0.6371308" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3618202" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3618202" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5016648" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53496116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -854,47 +874,14 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="152" selection-end="598" vertical-scroll-proportion="0.43814433" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="49" selection-start="4658" selection-end="4664" vertical-scroll-proportion="-0.30612245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1149" column="7" selection-start="39954" selection-end="39954" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/FinConstants.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="412" column="25" selection-start="6109" selection-end="6128" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="412" column="25" selection-start="6109" selection-end="6128" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="41" selection-end="54" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="5" selection-start="359" selection-end="430" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
+        <state line="2" column="18" selection-start="41" selection-end="54" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
@@ -912,42 +899,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="63" selection-end="63" vertical-scroll-proportion="-1.8">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="31" selection-start="389" selection-end="389" vertical-scroll-proportion="-10.2">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="31" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MovingAverage.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="45" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -960,20 +933,66 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="352" column="35" selection-start="11259" selection-end="11264" vertical-scroll-proportion="-3.182927">
+        <state line="352" column="35" selection-start="11259" selection-end="11264" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="5" selection-start="359" selection-end="430" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="49" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="18" selection-start="6737" selection-end="6737" vertical-scroll-proportion="1.1299505">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="19" selection-start="2681" selection-end="2681" vertical-scroll-proportion="0.49588478">
+        <state line="81" column="44" selection-start="2967" selection-end="2967" vertical-scroll-proportion="-11.04">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/portfolioList/show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="42" selection-start="4454" selection-end="4454" vertical-scroll-proportion="-5.714286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="153" selection-end="153" vertical-scroll-proportion="0.22292994">
           <folding>
-            <marker date="1379534394691" expanded="true" signature="155:625" placeholder="..." />
+            <marker date="1379799019365" expanded="true" signature="308:653" placeholder="{...}" />
+            <marker date="1379799019365" expanded="true" signature="433:633" placeholder="{&quot;title&quot;: 'Default Date Axis'...}" />
           </folding>
         </state>
       </provider>
