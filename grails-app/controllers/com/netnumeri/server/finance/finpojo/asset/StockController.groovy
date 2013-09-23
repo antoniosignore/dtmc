@@ -83,8 +83,8 @@ class StockController {
                 startDate: da,
                 endDate: a,
                 stockInstance: stockInstance,
-                javascript: series.getJsonSeries(),
-                ohlc: plot,
+//                javascript: series.getJsonSeries(),
+//                ohlc: plot,
                 indicators: list
         ]
 

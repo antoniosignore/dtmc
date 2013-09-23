@@ -1152,7 +1152,7 @@ $(document).ready(function(){
 });
 */
 
-    public String getJqPlot(String jsname) {
+    public String getJqPlot() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         DecimalFormat df = new DecimalFormat("#.####");
         List<DailyGSON> ds = new ArrayList<DailyGSON>();
@@ -1175,26 +1175,24 @@ $(document).ready(function(){
             }
             sb.append("];\n")
 
-            StringBuffer jscript = new StringBuffer();
-            jscript.append("<div id='chart_" + jsname + "' style='height:300px; width:650px;'></div>\n" +
-                    "    <g:javascript>\n" +
-                    "        \$(document).ready(function(){\n" +
-                    "        var plot1 = \$.jqplot('chart_" + jsname + ", " + sb.toString() + ", {\n" +
-                    "        title:'Default Date Axis',\n" +
-                    "        axes:{xaxis:{renderer:\$.jqplot.DateAxisRenderer}},\n" +
-                    "        series:[{lineWidth:4, markerOptions:{style:'square'}}]\n" +
-                    "        });\n" +
-                    "        });\n" +
-                    "    </g:javascript>")
+//            StringBuffer jscript = new StringBuffer();
+//            jscript.append("<div id='chart_" + jsname + "' style='height:300px; width:650px;'></div>\n" +
+//                    "    <g:javascript>\n" +
+//                    "        \$(document).ready(function(){\n" +
+//                    "        var plot1 = \$.jqplot('chart_" + jsname + ", " + sb.toString() + ", {\n" +
+//                    "        title:'Default Date Axis',\n" +
+//                    "        axes:{xaxis:{renderer:\$.jqplot.DateAxisRenderer}},\n" +
+//                    "        series:[{lineWidth:4, markerOptions:{style:'square'}}]\n" +
+//                    "        });\n" +
+//                    "        });\n" +
+//                    "    </g:javascript>")
 
-            return jscript.toString()
+            return sb.toString()
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
-
-
 
 
     public String getNoDateSeries() {

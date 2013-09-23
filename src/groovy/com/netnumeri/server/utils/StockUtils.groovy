@@ -171,8 +171,9 @@ ohlc = [
         Date dateIndex = startDate
 
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
-        StringBuffer sb = new StringBuffer("<script class=\"code\" language=\"javascript\" type=\"text/javascript\">\n");
-        sb.append("ohlc = [\n")
+//        StringBuffer sb = new StringBuffer("<script class=\"code\" language=\"javascript\" type=\"text/javascript\">\n");
+//        sb.append("ohlc = [\n")
+        StringBuffer sb = new StringBuffer("[\n");
         while (dateIndex != null) {
             Daily daily = dailyarray.get(dateIndex)
             if (dateIndex.getTime() == last.getTime())
@@ -182,7 +183,7 @@ ohlc = [
             dateIndex = dailyarray.getNextDate(dateIndex)
         }
         sb.append("];\n")
-        sb.append("</script>\n")
+//        sb.append("</script>\n")
         return sb.toString()
     }
 

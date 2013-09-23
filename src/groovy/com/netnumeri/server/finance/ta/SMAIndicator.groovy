@@ -6,9 +6,6 @@ public class SMAIndicator extends Indicator {
 
     int smoothing;
 
-    public SMAIndicator() {
-    }
-
     public SMAIndicator(TimeSeries series, String name, Integer param1) {
         super(series, name);
         smoothing = param1;

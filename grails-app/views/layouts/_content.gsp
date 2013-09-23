@@ -1,5 +1,6 @@
 <!-- Main menu in one row (e.g., controller entry points -->
 <div class="span9">
+
 <!-- print system messages (infos, warnings, etc) - not validation errors -->
 
     <g:if test="${flash.message && !layout_noflashmessage}">
@@ -16,8 +17,7 @@
         </div>
     </g:if>
 
-%{--<g:render template="/_menu/promosubmenubar"/>--}%
-
     <g:layoutBody/>
     <g:pageProperty name="page.body"/>
-</div><!--/span-->
+
+</div>

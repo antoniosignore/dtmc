@@ -30,7 +30,6 @@
     <r:require modules="raphael"/>
     <r:require modules="application"/>
 
-    %{--<r:external uri="/css/metro-bootstrap.css"/>--}%
 
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
