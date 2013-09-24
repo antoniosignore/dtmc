@@ -40,23 +40,3 @@
     </div>
 </div>
 
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'attributes', 'error')} ">
-    <label for="attributes" class="control-label"><g:message
-            code="userIndicators.attributes.label"
-            default="Attributes"/></label>
-
-    <div class="controls">
-
-        <ul class="one-to-many">
-            <g:each in="${userIndicatorsInstance?.attributes ?}" var="a">
-                <li><g:link controller="attributes" action="show" id="${a.id}">${a?.name.encodeAsHTML()}</g:link></li>
-            </g:each>
-            <li class="add">
-                <g:link controller="attributes" action="create"
-                        params="['userIndicators.id': userIndicatorsInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'attributes.label', default: 'Attributes')])}</g:link>
-            </li>
-        </ul>
-
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'attributes', 'error')}</span>
-    </div>
-</div>

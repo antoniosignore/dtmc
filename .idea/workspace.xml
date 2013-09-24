@@ -2,42 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingAverageUserIndicator.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/WMAIndicator.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/WeightedMovingAverage.groovy" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/AttributesController.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/IndicatorsController.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/UserIndicatorsController.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/attributes/_form.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/attributes/create.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/attributes/edit.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/attributes/list.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/attributes/show.gsp" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingAverageUserIndicator.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingAverage.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/FinConstants.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/FinConstants.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/IndicatorsTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/IndicatorsTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/OscillatorsClient.java" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/OscillatorsClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/indicator/RSI2.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/indicator/RSI2.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSI2Indicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSI2Indicator.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSIIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSIIndicator.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/userIndicators/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/userIndicators/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" afterPath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/userIndicators/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/userIndicators/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380004515245" ignored="false" />
+    <file path="/Dummy.txt" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380052305523" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_common/modals/_deleteDialog.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377538656704" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Campaigns.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379094118391" ignored="false" />
     <file path="/Campaigns.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377969119276" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/campaigns/_form.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379094345255" ignored="false" />
-    <file path="/_form.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378502651590" ignored="false" />
+    <file path="/_form.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380057352900" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/controllers/promoapi/CampaignsController.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379094984237" ignored="false" />
     <file path="/BootStrap.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380006367237" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/BootStrap.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379095190431" ignored="false" />
     <file path="/Attributes.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378069185854" ignored="false" />
-    <file path="/a.dummy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380007480856" ignored="false" />
+    <file path="/a.dummy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380057437141" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_submenubar.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378066317021" ignored="false" />
     <file path="/Indicators.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378068193499" ignored="false" />
-    <file path="/fragment.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380006221159" ignored="false" />
+    <file path="/fragment.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380056360253" ignored="false" />
     <file path="/UserIndicators.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379264797484" ignored="false" />
     <file path="/list.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378709050053" ignored="false" />
-    <file path="/show.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379966467635" ignored="false" />
+    <file path="/show.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380057279089" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-platform/blueprint_home/platform.properties" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378714778819" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-platform/scripts/db_oracle/db.version.properties" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378278416718" ignored="false" />
     <file path="/01_platform.sql" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378278450021" ignored="false" />
@@ -53,10 +62,10 @@
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/conf/Config.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378395341250" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/domain/ssp/Opco.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378395477623" ignored="false" />
     <file path="/Opco.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378395439946" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-ssp/blueprint-ssp.log" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378728663242" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/blueprint-ssp.log" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380037331110" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/conf/BootStrap.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397649881" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-ssp/target/ddl.sql" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378712884424" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-ssp/scripts/db_oracle/migrations/0_to_BP_1.0_1/01_ssp.sql" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378712884424" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/target/ddl.sql" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380037372264" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/scripts/db_oracle/migrations/0_to_BP_1.0_1/01_ssp.sql" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380037452083" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/conf/DataSource.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378395824729" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/target/stacktrace.log" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378712663326" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/deviceFamilies/list.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397077568" ignored="false" />
@@ -66,20 +75,20 @@
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/deviceFamilies/show.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397100866" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/layouts/_promoleftbar.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397722734" ignored="false" />
     <file path="/_promoleftbar.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378721046826" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/WebDavDaoService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378719415060" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/WebDavDaoService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009506630" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/ImagesData.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666089" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/PublishConfiguration.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666089" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/DevicesPublishService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397649881" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/PublishImagesService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666088" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/CustomerLifetimeMappings.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666088" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/src/templates/scaffolding/Test.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666088" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/PublishService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378719528765" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/PublishService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009477296" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/opco/show.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666088" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/opco/list.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666088" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/Profile.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666089" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/opco/_form.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666089" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/opco/create.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666089" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/PublishDevicesService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378719321751" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/publish2/PublishDevicesService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380010215874" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/opco/edit.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397666089" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/controllers/ssp/DashboardsController.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379318421983" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/test/unit/ssp/VFServiceControllerTests.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397967087" ignored="false" />
@@ -88,7 +97,7 @@
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/VFService/edit.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397967087" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/VFService/show.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397967087" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/VFService/create.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378397967087" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboards/list.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378710986417" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboards/list.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380010400060" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboards/_form.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378710986417" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboards/edit.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378710986417" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboards/show.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378710986417" ignored="false" />
@@ -98,7 +107,7 @@
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/services/com/vodafone/publish/PublishService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379094190209" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/campaigns/_campaignShow.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379094223425" ignored="false" />
     <file path="/_content.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378659650999" ignored="false" />
-    <file path="/StockController.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380006927308" ignored="false" />
+    <file path="/StockController.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380056289490" ignored="false" />
     <file path="/YahooOptionsTest.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378590052369" ignored="false" />
     <file path="/StockUtils.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378590606174" ignored="false" />
     <file path="$PROJECT_DIR$/../grailstwitter/grails-app/views/status/index.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378632643569" ignored="false" />
@@ -115,10 +124,10 @@
     <file path="/_footer.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378657320468" ignored="false" />
     <file path="/_navbar.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379958144882" ignored="false" />
     <file path="/_submenubar.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378659503174" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/domain/ssp/Dashboards.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378708066053" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/domain/ssp/Dashboards.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380036981208" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/taglib/com/vodafone/global/blueprint/promo/taglib/PromoTagLib.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378708857295" ignored="false" />
     <file path="/PromoTagLib.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378709161846" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/taglib/com/vodafone/global/blueprint/promo/taglib/SspTagLib.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378710986417" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/taglib/com/vodafone/global/blueprint/promo/taglib/SspTagLib.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380010373670" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/controllers/ssp/DashboardToFamilyController.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378711195947" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboardToFamily/_form.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378711262334" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboardToFamily/edit.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378711262334" ignored="false" />
@@ -215,7 +224,6 @@
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-ssp/ssp.connector.discover/src/main/java/com/vodafone/global/ssp/apix/RequestResponseStatus.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379327370943" ignored="false" />
     <file path="/ApixService.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379327394399" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-ssp/ssp.connector.discover/src/main/java/com/vodafone/global/ssp/apix/ApixService.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379327394399" ignored="false" />
-    <file path="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379534397405" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.stubs/src/main/resources/META-INF/spring/fitnesse-http-resource-osgi.xml" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379918340934" ignored="false" />
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.stubs/src/main/resources/META-INF/spring/fitnesse-http-resource-bean.xml" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379918021957" ignored="false" />
     <file path="/fitnesse-http-resource-bean.xml" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379918016026" ignored="false" />
@@ -257,6 +265,34 @@
     <file path="$USER_HOME$/SMHS/SMHS-backend/application-supermobile/smhs.datastore/src/test/resources/BP_PUBLISH/SSP/CONSUMER/DE/PROD/ios/20130918101954/dashboards.xml" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379964970523" ignored="false" />
     <file path="/SimpleMovingAverageUserIndicator.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380006267782" ignored="false" />
     <file path="/IndicatorEnum.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380007357683" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/ssp/services/utils/OpcoUtilsService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380008363035" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/ImageDescriptionPreview.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009198519" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/AbstractPreviewWithImageAndText.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380008828959" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/AbstractPreviewWithBottomTitle.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380008901601" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/Layout.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009386303" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/DashboardPreview.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380008983710" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/DataCargo.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009355060" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/VStack.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009018915" ignored="false" />
+    <file path="/VStack.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009018915" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-discover/src/main/java/com/vodafone/global/blueprint/discover/client/shared/DynamicFeedsAttributes.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009089271" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/DynamicFeedsAttributes.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009097981" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/Img.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009128206" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/HTMLBox.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009218293" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/HTMLBox.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009229234" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/HTMLFlow.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009256908" ignored="false" />
+    <file path="/DataCargo.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009342042" ignored="false" />
+    <file path="/Layout.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009385441" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/enums/DynamicDashboardType.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009454422" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/enums/DashboardType.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009607449" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboards/_formFirst.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380010279886" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboards/_dynDashboards.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380010439575" ignored="false" />
+    <file path="$PROJECT_DIR$/../charisma/grails-app/conf/UrlMappings.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380034456022" ignored="false" />
+    <file path="/UrlMappings.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380034453095" ignored="false" />
+    <file path="/Dashboards.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380036746055" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/domain/ssp/DeviceFamilies.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380036954202" ignored="false" />
+    <file path="/DeviceFamilies.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380036830994" ignored="false" />
+    <file path="/WeightedMovingAverage.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380056212516" ignored="false" />
+    <file path="/WMAIndicator.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380056379249" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,6 +307,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -307,7 +344,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -318,33 +354,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_indicator.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp">
+      <file leaf-file-name="_form.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/simpleMovingAverage/_form.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="118" selection-start="260" selection-end="260" vertical-scroll-proportion="-0.30612245">
-              <folding>
-                <marker date="1379961696432" expanded="true" signature="233:472" placeholder="[...]" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="79" selection-start="2746" selection-end="2746" vertical-scroll-proportion="0.0">
+            <state line="30" column="123" selection-start="1505" selection-end="1505" vertical-scroll-proportion="-4.836735">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_candlestick.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="19" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1379963579230" expanded="true" signature="1159:1576" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -352,70 +366,89 @@
       <file leaf-file-name="UserIndicators.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="-7.2">
+            <state line="7" column="31" selection-start="218" selection-end="218" vertical-scroll-proportion="-1.9444444">
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndicatorEnum.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="48" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.4432624">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleMovingAverageUserIndicator.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingAverageUserIndicator.groovy">
           <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/userIndicators/_form.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="61" selection-start="110" selection-end="110" vertical-scroll-proportion="-0.8333333">
+            <state line="42" column="0" selection-start="1924" selection-end="1924" vertical-scroll-proportion="-4.7959185">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Attributes.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy">
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="UserBean.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="16" selection-start="190" selection-end="190" vertical-scroll-proportion="-2.5">
+            <state line="13" column="57" selection-start="232" selection-end="232" vertical-scroll-proportion="-3.6111112">
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/stock/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="26" selection-start="5864" selection-end="5864" vertical-scroll-proportion="-8.306123">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="27.040817">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndicatorsTagLib.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/taglib/com/netnumeri/server/finance/indicator/IndicatorsTagLib.groovy">
+      <file leaf-file-name="list.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/userIndicators/list.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="65" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.7551022">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
+      <file leaf-file-name="SimpleMovingAverage.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingAverage.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="41" selection-start="1866" selection-end="1866" vertical-scroll-proportion="-7.32">
-              <folding>
-                <marker date="1380006947710" expanded="true" signature="100:704" placeholder="..." />
-              </folding>
+            <state line="3" column="45" selection-start="94" selection-end="94" vertical-scroll-proportion="-0.8333333">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/userIndicators/show.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="33" selection-start="697" selection-end="697" vertical-scroll-proportion="0.42948717">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/simpleMovingAverage/show.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="168" selection-start="1820" selection-end="1820" vertical-scroll-proportion="-3.9795918">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleMovingAverageController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/SimpleMovingAverageController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="6" selection-start="118" selection-end="118" vertical-scroll-proportion="-2.4">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -443,22 +476,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
-        <option value="$PROJECT_DIR$/web-app/css/metro-bootstrap.css" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/_snapshot.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/show.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingAverageUserIndicator.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/SimpleMovingAverageUserIndicatorController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/WeightedMovingAverageUserIndicator.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/WeightedMovingAverageUserIndicatorController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingAverage.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/SimpleMovingAverageController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/WeightedMovingAverageController.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/WeightedMovingAverage.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/WMAIndicator.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/stock/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/simpleMovingAverage/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/simpleMovingAverage/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/userIndicators/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/userIndicators/show.gsp" />
       </list>
     </option>
   </component>
@@ -472,10 +505,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-4" />
-    <option name="width" value="1617" />
-    <option name="height" value="1055" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1615" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -538,9 +571,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.netnumeri.server.finance.ta" />
       <recent name="com.netnumeri.server.finance.indicator" />
       <recent name="com.dtmc.club" />
-      <recent name="com.netnumeri.server.finance.ta" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/grails-app/views/layouts" />
@@ -579,6 +612,18 @@
       <module name="dtmc" />
       <setting name="vmparams" value="" />
       <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.strategy.SMACrossover.testStrategy -echoOut" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="testSSAIndicators()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
+      <module name="dtmc" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.ta.SSA.testSSAIndicators -echoOut" />
       <setting name="depsClasspath" value="true" />
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -715,17 +760,19 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Grails.Grails:dtmc" />
       <item index="1" class="java.lang.String" itemvalue="Grails.YahooOptionsTest" />
       <item index="2" class="java.lang.String" itemvalue="Grails.testComputeMaxpain()" />
       <item index="3" class="java.lang.String" itemvalue="Grails.testStrategy()" />
+      <item index="4" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Grails.testStrategy()" />
-        <item index="1" class="java.lang.String" itemvalue="Grails.testComputeMaxpain()" />
-        <item index="2" class="java.lang.String" itemvalue="Grails.YahooOptionsTest" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
+        <item index="1" class="java.lang.String" itemvalue="Grails.testStrategy()" />
+        <item index="2" class="java.lang.String" itemvalue="Grails.testComputeMaxpain()" />
+        <item index="3" class="java.lang.String" itemvalue="Grails.YahooOptionsTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -812,25 +859,30 @@
       <created>1379961699075</created>
       <updated>1379961699075</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added indicators in tables">
+      <created>1380007637144</created>
+      <updated>1380007637144</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1617" height="1055" extended-state="6" />
+    <frame x="65" y="24" width="1615" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4361949" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53496116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5080275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955604" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28626198" sideWeight="0.46503884" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27293578" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29238644" sideWeight="0.49197248" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -841,8 +893,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32384342" sideWeight="0.6371308" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38290787" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5016648" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37041286" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -912,125 +963,123 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="38" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Indicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="45" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
+        <state line="78" column="0" selection-start="2961" selection-end="2961" vertical-scroll-proportion="-15.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/portfolio/list.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1179" column="0" selection-start="40941" selection-end="41049" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.265306">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/taglib/com/netnumeri/server/finance/indicator/IndicatorsTagLib.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/simpleMovingAverage/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="65" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/DateUtils.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/simpleMovingAverage/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="23" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="19" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1379963579230" expanded="true" signature="1159:1576" placeholder="..." />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/portfolio/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="118" selection-start="260" selection-end="260" vertical-scroll-proportion="-0.30612245">
-          <folding>
-            <marker date="1379961696432" expanded="true" signature="233:472" placeholder="[...]" />
-          </folding>
+        <state line="75" column="112" selection-start="3288" selection-end="3288" vertical-scroll-proportion="-5.5102043">
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="53" selection-start="1006" selection-end="1006" vertical-scroll-proportion="-5.8163266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/userIndicators/list.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.7551022">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/indicator/SimpleMovingAverageController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="118" selection-end="118" vertical-scroll-proportion="-2.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingAverage.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="45" selection-start="94" selection-end="94" vertical-scroll-proportion="-0.8333333">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="57" selection-start="232" selection-end="232" vertical-scroll-proportion="-3.6111112">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="26" selection-start="5864" selection-end="5864" vertical-scroll-proportion="-8.306123">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="27.040817">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/tools/grails-2.2.4/lib/org.codehaus.groovy/groovy-all/jars/groovy-all-2.0.8-sources.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.java">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/simpleMovingAverage/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="363" column="57" selection-start="14085" selection-end="14085" vertical-scroll-proportion="0.38655463">
+        <state line="40" column="168" selection-start="1820" selection-end="1820" vertical-scroll-proportion="-3.9795918">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/tools/jdk1.7.0_03/src.zip!/java/net/URLClassLoader.java">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/simpleMovingAverage/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="365" column="45" selection-start="13595" selection-end="13595" vertical-scroll-proportion="0.5802469">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Attributes.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="16" selection-start="190" selection-end="190" vertical-scroll-proportion="-2.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="41" selection-start="1866" selection-end="1866" vertical-scroll-proportion="-7.32">
-          <folding>
-            <marker date="1380006947710" expanded="true" signature="100:704" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="79" selection-start="2746" selection-end="2746" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingAverageUserIndicator.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="61" selection-start="110" selection-end="110" vertical-scroll-proportion="-0.8333333">
+        <state line="30" column="123" selection-start="1505" selection-end="1505" vertical-scroll-proportion="-4.836735">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="31" selection-start="218" selection-end="218" vertical-scroll-proportion="-1.9444444">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/userIndicators/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="-7.2">
+        <state line="42" column="0" selection-start="1924" selection-end="1924" vertical-scroll-proportion="-4.7959185">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/userIndicators/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="48" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.4432624">
+        <state line="21" column="33" selection-start="697" selection-end="697" vertical-scroll-proportion="0.42948717">
           <folding />
         </state>
       </provider>

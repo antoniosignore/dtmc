@@ -3,9 +3,11 @@ package com.netnumeri.server.finance.finpojo.asset
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.indicator.Indicators
-import com.netnumeri.server.finance.indicator.SimpleMovingAverageUserIndicator
+import com.netnumeri.server.finance.indicator.SimpleMovingAverage
 import com.netnumeri.server.finance.indicator.UserIndicators
+import com.netnumeri.server.finance.indicator.WeightedMovingAverage
 import com.netnumeri.server.finance.ta.SMAIndicator
+import com.netnumeri.server.finance.ta.WMAIndicator
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
@@ -60,15 +62,18 @@ class StockController {
 
         for (int i = 0; i < list.size(); i++) {
             UserIndicators userIndicator = list.get(i);
-            if (userIndicator instanceof SimpleMovingAverageUserIndicator) {
+            if (userIndicator instanceof SimpleMovingAverage) {
                 TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
                 userIndicator.indicator = new SMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
+            } else if (userIndicator instanceof WeightedMovingAverage) {
+                TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
+                userIndicator.indicator = new WMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
             }
+
         }
 
         stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
 
-//        Stock stock = YahooUtils.downloadYahooData(stockInstance.name, "", da, a);
         TimeSeries series = stockInstance.closeSeries()
 
         // todo date in jqplot format

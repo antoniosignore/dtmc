@@ -17,20 +17,6 @@
         <tbody>
 
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.attributes.label" default="Attributes"/></td>
-
-            <td valign="top" style="text-align: left;" class="value">
-                <ul>
-                    <g:each in="${userIndicatorsInstance.attributes}" var="a">
-                        <li><g:link controller="attributes" action="show"
-                                    id="${a.id}">${a?.name.encodeAsHTML()}</g:link></li>
-                    </g:each>
-                </ul>
-            </td>
-
-        </tr>
-
-        <tr class="prop">
             <td valign="top" class="name"><g:message code="userIndicators.indicator.label" default="Indicator"/></td>
 
             <td valign="top" class="value"><g:link controller="indicators" action="show"

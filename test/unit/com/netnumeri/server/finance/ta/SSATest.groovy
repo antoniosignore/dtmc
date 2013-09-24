@@ -67,7 +67,7 @@ public class SSATest extends TestCase {
         Date da = DateUtils.Date("11/1/2009");
         Date a = DateUtils.today();
 
-        stock = YahooUtils.downloadYahooData(ticker, da, a);
+        stock = YahooUtils.downloadYahooData(ticker, "", da, a);
 
         closes = stock.getSeries(FinConstants.CLOSE);
 //        stock.indicators.put("SMA-" + 50, new SMAIndicator(closes, "SMA-" + 50, 50, -1, -1, -1, -1))

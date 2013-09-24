@@ -13,15 +13,9 @@ class SSAStudy {
 
     public static study(Stock stock, int window) {
 
-        println "pippo 98"
-
         TimeSeries closes = stock.getSeries(FinConstants.CLOSE);
 
-        println "pippo 99"
-
         SSAAnalysis analysis = new SSAAnalysis(closes.convertToList(), window)
-
-        println "pippo 100"
 
         def components = [0]
         Indicator ssa0 = new SSAComponentsIndicator(closes, "SSA-0", analysis, components);

@@ -1,7 +1,6 @@
 <%@ page import="com.netnumeri.server.finance.finpojo.asset.Stock" %>
 
 
-
 <div class="control-group fieldcontain ${hasErrors(bean: stockInstance, field: 'description', 'error')} ">
     <label for="description" class="control-label"><g:message code="stock.description.label"
                                                               default="Description"/></label>
