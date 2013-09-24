@@ -1,17 +1,15 @@
 package com.netnumeri.server.finance.finpojo.asset
 
-import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.indicator.Indicators
+import com.netnumeri.server.finance.indicator.SimpleMovingAverageUserIndicator
 import com.netnumeri.server.finance.indicator.UserIndicators
 import com.netnumeri.server.finance.ta.SMAIndicator
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
 import org.springframework.dao.DataIntegrityViolationException
-
-import java.text.SimpleDateFormat
 
 class StockController {
 
@@ -62,10 +60,9 @@ class StockController {
 
         for (int i = 0; i < list.size(); i++) {
             UserIndicators userIndicator = list.get(i);
-            if (userIndicator.type == IndicatorEnum.SimpleMovingAverage) {
-                userIndicator.attributes.getProperties()
+            if (userIndicator instanceof SimpleMovingAverageUserIndicator) {
                 TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
-                userIndicator.indicator = new SMAIndicator(closes, "SMA-" + 50, 50);
+                userIndicator.indicator = new SMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
             }
         }
 
@@ -74,17 +71,12 @@ class StockController {
 //        Stock stock = YahooUtils.downloadYahooData(stockInstance.name, "", da, a);
         TimeSeries series = stockInstance.closeSeries()
 
-        /* var line1=[['2008-09-30',4], ['2008-10-30',6.5], ['2008-11-30',5.7], ['2008-12-30',9], ['2009-01-30',8.2]]; */
-        SimpleDateFormat sdf = new SimpleDateFormat("");
-
         // todo date in jqplot format
         String plot = StockUtils.getJqPlot(stockInstance)
         [
                 startDate: da,
                 endDate: a,
                 stockInstance: stockInstance,
-//                javascript: series.getJsonSeries(),
-//                ohlc: plot,
                 indicators: list
         ]
 

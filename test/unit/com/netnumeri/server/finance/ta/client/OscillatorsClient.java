@@ -236,7 +236,7 @@ public class OscillatorsClient {
         System.out.println(" ");
         System.out.println(" ");
         System.out.println(" +++++++++++++++++++++++++++++++++");
-        System.out.println(" + Relative Strength Index (RSI) +");
+        System.out.println(" + Relative Strength Index (RelativeStrengthIndex) +");
         System.out.println(" +++++++++++++++++++++++++++++++++");
         System.out.println(" ");
         System.out.println(" Within this example we test the following method:");
@@ -257,7 +257,7 @@ public class OscillatorsClient {
         System.out.println(" ");
         System.out.println("    close = {43.6875, 44.875, 43.5625, 43.0625, 45.6875, 46.6875, 47.6875, 46.3125, 44.5625, 47.0, 47.5625, 47.8125, 45.75, 44.625, 44.25, 44.9375, 46.9375, 46.4375, 47.125, 46.125}");
         System.out.println("    noOfPeriods = 14");
-        // Here we calculate the 14-period RSI
+        // Here we calculate the 14-period RelativeStrengthIndex
         double[] rsi1 = Oscillators.relativeStrengthIndex(
                 new double[]{43.6875, 44.875, 43.5625, 43.0625, 45.6875, 46.6875, 47.6875, 46.3125, 44.5625, 47.0, 47.5625, 47.8125, 45.75, 44.625, 44.25, 44.9375, 46.9375, 46.4375, 47.125, 46.125}, // close
                 14 // noOfPeriods

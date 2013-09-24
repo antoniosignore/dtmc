@@ -6,26 +6,26 @@ import com.netnumeri.server.finance.beans.TimeSeries
 /**
  * Relative Strength Index. Implemented up to this specification:
  *
- * The RSI calculation appears in its original and derived form. Average Up and
+ * The RelativeStrengthIndex calculation appears in its original and derived form. Average Up and
  * Average Down are calculated using a simple average method for the initial
  * observation. NOTE: The initial observation is the first transactionDate shown on the
  * scrolling graph, which may or may not be seen. Subsequent values are computed
  * using these initial values in conjunction with a damping factor to smooth out
- * extreme points. The RSI equation and two averaging methods are presented
- * below. RSI = 100 - [ 100/(1 + [Avg Up/Avg Dn])] where Avg Up: Sum of all
- * changes for advancing periods divided by the total number of RSI periods.
+ * extreme points. The RelativeStrengthIndex equation and two averaging methods are presented
+ * below. RelativeStrengthIndex = 100 - [ 100/(1 + [Avg Up/Avg Dn])] where Avg Up: Sum of all
+ * changes for advancing periods divided by the total number of RelativeStrengthIndex periods.
  *
  * Avg Dn: Sum of all changes for declining periods divided by the total number
- * of RSI periods.
+ * of RelativeStrengthIndex periods.
  *
- * Subsequent RSI calculations are based on up and down sums calculated as
+ * Subsequent RelativeStrengthIndex calculations are based on up and down sums calculated as
  * follows:
  *
- * RSI = 100 - [100/(1 + [Next Avg Up/Next Avg Dn])]
+ * RelativeStrengthIndex = 100 - [100/(1 + [Next Avg Up/Next Avg Dn])]
  *
- * Next Avg Up = [([Previous Avg Up * (RSI periods - 1)]) + today's up
- * close]/(RSI periods) Next Avg Dn = [([Previous Avg Dn * (RSI periods - 1)]) +
- * today's dn close]/(RSI periods) NOTE: If there is no up or down close,
+ * Next Avg Up = [([Previous Avg Up * (RelativeStrengthIndex periods - 1)]) + today's up
+ * close]/(RelativeStrengthIndex periods) Next Avg Dn = [([Previous Avg Dn * (RelativeStrengthIndex periods - 1)]) +
+ * today's dn close]/(RelativeStrengthIndex periods) NOTE: If there is no up or down close,
  * today's up/dn close is zero.
  */
 

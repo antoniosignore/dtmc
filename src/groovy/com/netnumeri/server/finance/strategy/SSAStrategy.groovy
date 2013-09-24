@@ -98,7 +98,7 @@ public class SSAStrategy extends Strategy {
 //
 //        Indicator to = new Indicator(closes, "TO", 4, 20, -1, -1, -1);
 //        Indicator roc = new Indicator(closes, "ROC", sma10, -1, -1, -1, -1);
-//        Indicator rsi = new Indicator(closes, "RSI", sma10, -1, -1, -1, -1);
+//        Indicator rsi = new Indicator(closes, "RelativeStrengthIndex", sma10, -1, -1, -1, -1);
 //        Indicator cci = new Indicator(closes, "CCI", sma10, -1, -1, -1, -1);
 //        Indicator osc = new Indicator(closes, "OSC", 4, 20, -1, -1, -1);
 //        Indicator k = new Indicator(instrument, "%K", sma10, -1, -1, -1, -1);

@@ -86,7 +86,7 @@ public class IndicatorsTest extends TestCase {
         stock.indicators.put("SMA-" + 10, new SMAIndicator(closes, "SMA-" + 10, 10))
         stock.indicators.put("BBU", new BollingerBandUpIndicator(closes, "BBU", 20, 2));
         stock.indicators.put("BBL", new BollingerBandLowerIndicator(closes, "BBL", 20, 2));
-        stock.indicators.put("RSI2", new RSIIndicator(closes, "RSI2", 14));
+        stock.indicators.put("RelativeStrengthIndex2", new RSIIndicator(closes, "RelativeStrengthIndex2", 14));
 
 //        stock.indicators.put("MOM", new Indicator(closes, "MOM", 10, -1, -1, -1, -1));
 //        stock.indicators.put("SMV", new Indicator(closes, "SMV", 10, -1, -1, -1, -1));
@@ -111,7 +111,7 @@ public class IndicatorsTest extends TestCase {
 //
 //        Indicator to = new Indicator(closes, "TO", 4, 20, -1, -1, -1);
 //        Indicator roc = new Indicator(closes, "ROC", sma10, -1, -1, -1, -1);
-//        Indicator rsi = new Indicator(closes, "RSI", sma10, -1, -1, -1, -1);
+//        Indicator rsi = new Indicator(closes, "RelativeStrengthIndex", sma10, -1, -1, -1, -1);
 //        Indicator cci = new Indicator(closes, "CCI", sma10, -1, -1, -1, -1);
 //        Indicator osc = new Indicator(closes, "OSC", 4, 20, -1, -1, -1);
 //        Indicator k = new Indicator(stock, "%K", sma10, -1, -1, -1, -1);
