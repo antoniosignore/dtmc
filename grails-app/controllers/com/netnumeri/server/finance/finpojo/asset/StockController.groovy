@@ -60,16 +60,103 @@ class StockController {
         // todo - add user
         List<UserIndicators> list = UserIndicators.list()
 
+        TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
+
         for (int i = 0; i < list.size(); i++) {
             UserIndicators userIndicator = list.get(i);
             if (userIndicator instanceof SimpleMovingAverage) {
-                TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
                 userIndicator.indicator = new SMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
             } else if (userIndicator instanceof WeightedMovingAverage) {
-                TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
                 userIndicator.indicator = new WMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
-            }
+            } else if (userIndicator instanceof SingularSpectrumTrend) {
 
+            } else if (userIndicator instanceof SingularSpectrumPrediction) {
+
+            } else if (userIndicator instanceof PriceChannelUpper) {
+
+            } else if (userIndicator instanceof PriceChannelLower) {
+
+            } else if (userIndicator instanceof UpperBollingerBand) {
+
+            } else if (userIndicator instanceof LowerBollingerBand) {
+
+            } else if (userIndicator instanceof SimpleMovingVariance) {
+
+            } else if (userIndicator instanceof SimpleMovingDivergence) {
+
+            } else if (userIndicator instanceof Momentum) {
+
+            } else if (userIndicator instanceof Macd) {
+
+            } else if (userIndicator instanceof RateOfChange) {
+
+            } else if (userIndicator instanceof RelativeStrengthIndex) {
+
+            } else if (userIndicator instanceof RelativeStrengthIndex2) {
+
+            } else if (userIndicator instanceof CommoditiChannelIndicator) {
+
+            } else if (userIndicator instanceof Oscillator) {
+
+            } else if (userIndicator instanceof PriceChannelR) {
+
+            } else if (userIndicator instanceof TrueChange) {
+
+            } else if (userIndicator instanceof AverageTrueChange) {
+
+            } else if (userIndicator instanceof MoneyFlowOverPeriod) {
+
+            } else if (userIndicator instanceof AccumulateDistributionOverPeriod) {
+
+            } else if (userIndicator instanceof ChaikinOscillatorOverPeriod) {
+
+            } else if (userIndicator instanceof ChaikinMoneyFlowOverPeriod) {
+
+            } else if (userIndicator instanceof AroonOscillatorOverPeriod) {
+
+            } else if (userIndicator instanceof AroonDownOverPeriod) {
+
+            } else if (userIndicator instanceof AroonUpOverPeriod) {
+
+            } else if (userIndicator instanceof TrueRangePeriod) {
+
+            } else if (userIndicator instanceof kFastStochasticPeriod) {
+
+            } else if (userIndicator instanceof dStochastic) {
+
+            } else if (userIndicator instanceof DStochasticSmoothed) {
+
+            } else if (userIndicator instanceof ChaikinVolatility) {
+
+            } else if (userIndicator instanceof kMACDSignal) {
+
+            } else if (userIndicator instanceof PlusDirectionalMovementPeriod) {
+
+            } else if (userIndicator instanceof MinusDirectionalMovementPeriod) {
+
+            } else if (userIndicator instanceof RateOfChangePeriod) {
+
+            } else if (userIndicator instanceof Kairi) {
+
+            } else if (userIndicator instanceof ExponentiallyWeightedMovingAverage) {
+
+            } else if (userIndicator instanceof TriangularMovingAverage) {
+
+            } else if (userIndicator instanceof LinearlyWeightedMovingAverage) {
+
+            } else if (userIndicator instanceof GeometricMovingAverage) {
+
+            } else if (userIndicator instanceof MomentumPctPeriod) {
+
+            } else if (userIndicator instanceof CommodityChannelIndexOverPeriod) {
+
+            } else if (userIndicator instanceof MarketFacilitationIndexOverPeriod) {
+
+            } else if (userIndicator instanceof BalanceOfPowerOverPeriod) {
+
+            } else if (userIndicator instanceof PriceActionOverPeriod) {
+
+            }
         }
 
         stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
