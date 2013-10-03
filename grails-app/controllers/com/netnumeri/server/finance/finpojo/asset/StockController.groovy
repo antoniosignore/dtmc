@@ -3,10 +3,7 @@ package com.netnumeri.server.finance.finpojo.asset
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.indicator.*
-import com.netnumeri.server.finance.ta.CommodityChannelIndicator
-import com.netnumeri.server.finance.ta.Momentum
-import com.netnumeri.server.finance.ta.SMAIndicator
-import com.netnumeri.server.finance.ta.WMAIndicator
+import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
@@ -76,6 +73,9 @@ class StockController {
             } else if (userIndicator instanceof SingularSpectrumPrediction) {
 
             } else if (userIndicator instanceof PriceChannelUpper) {
+
+                userIndicator.indicator = new PriceChannelUpIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
+
 
             } else if (userIndicator instanceof PriceChannelLower) {
 

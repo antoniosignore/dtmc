@@ -1,6 +1,5 @@
 package com.netnumeri.server.finance.ta
 
-import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.utils.IndicatorUtils
 
@@ -9,9 +8,9 @@ public class PriceChannelLowerIndicator extends Indicator {
     int order;
     double k;
 
-    public PriceChannelLowerIndicator(TimeSeries series, String name, Integer param1, double k) {
+    public PriceChannelLowerIndicator(TimeSeries series, String name, int order, double k) {
         super(series, name);
-        order = param1;
+        this.order = order;
         this.k = k;
         title = "Price channel Indicator up";
         build();

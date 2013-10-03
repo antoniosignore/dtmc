@@ -2,14 +2,14 @@ package com.netnumeri.server.finance.ta
 
 import com.netnumeri.server.finance.finpojo.Instrument
 
-public class ChaikinOverPeriodIndicator extends Indicator {
+public class ChaikinOscillatorOverPeriodIndicator extends Indicator {
 
     int smoothing;
 
-    public ChaikinOverPeriodIndicator() {
+    public ChaikinOscillatorOverPeriodIndicator() {
     }
 
-    public ChaikinOverPeriodIndicator(Instrument instrument, String name, Integer param1) {
+    public ChaikinOscillatorOverPeriodIndicator(Instrument instrument, String name, Integer param1) {
         super(instrument, name);
         smoothing = param1;
         title = "Chaikin Oscillator over period";

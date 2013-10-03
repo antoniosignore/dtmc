@@ -10,7 +10,6 @@ public class SSAMath {
 
     private static double epsilon = 0.002F;
 
-
     public static double[] computeSeriesForecast(TimeSeries series,
                                                  Integer numberOfDaysInTheFuture,
                                                  int window,

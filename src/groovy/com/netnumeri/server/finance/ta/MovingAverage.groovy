@@ -38,12 +38,12 @@ public class MovingAverage implements Serializable {
         return ad1;
     }
 
-    public static double[] exponentiallyWeightedMovingAverage(double[] series, double smoothing, int i) {
-        validateStandardMAParameters(series, i);
+    public static double[] exponentiallyWeightedMovingAverage(double[] series, double smoothing, int movingAverage) {
+        validateStandardMAParameters(series, movingAverage);
         validateEWMASmoothingFactor(smoothing);
-        double[] ad1 = new double[(series.length - i) + 1];
+        double[] ad1 = new double[(series.length - movingAverage) + 1];
         for (int j = ad1.length; --j >= 0;) {
-            ad1[j] = oneExponentiallyWeightedMovingAverage(series, smoothing, j, i);
+            ad1[j] = oneExponentiallyWeightedMovingAverage(series, smoothing, j, movingAverage);
         }
         return ad1;
     }

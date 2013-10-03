@@ -4,7 +4,7 @@ import com.netnumeri.server.finance.finpojo.Instrument
 
 public class ChaikinVolatilityIndicator extends Indicator {
 
-    int period;
+    int period
 
     public ChaikinVolatilityIndicator() {
     }

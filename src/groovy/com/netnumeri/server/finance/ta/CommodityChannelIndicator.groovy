@@ -5,7 +5,7 @@ import com.netnumeri.server.finance.utils.IndicatorUtils
 
 public class CommodityChannelIndicator extends Indicator {
 
-    int order;
+    int order
 
     public CommodityChannelIndicator() {
     }
