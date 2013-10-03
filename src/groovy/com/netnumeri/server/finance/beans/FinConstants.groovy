@@ -455,7 +455,7 @@ public enum FinConstants {
 //    ChaikinVolatility,
 //    kMACDSignal,
 //    PlusDirectionalMovementPeriod,
-//    MinusDirectionalMovementPeriod,
+//    RateOfChangePeriod,
 //    PriceActionOverPeriod,
 //    BalanceOfPowerOverPeriod,
 //    MarketFacilitationIndexOverPeriod,

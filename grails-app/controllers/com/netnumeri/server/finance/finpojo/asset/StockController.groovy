@@ -2,10 +2,9 @@ package com.netnumeri.server.finance.finpojo.asset
 
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.indicator.Indicators
-import com.netnumeri.server.finance.indicator.SimpleMovingAverage
-import com.netnumeri.server.finance.indicator.UserIndicators
-import com.netnumeri.server.finance.indicator.WeightedMovingAverage
+import com.netnumeri.server.finance.indicator.*
+import com.netnumeri.server.finance.ta.CommodityChannelIndicator
+import com.netnumeri.server.finance.ta.Momentum
 import com.netnumeri.server.finance.ta.SMAIndicator
 import com.netnumeri.server.finance.ta.WMAIndicator
 import com.netnumeri.server.finance.utils.DateUtils
@@ -65,9 +64,13 @@ class StockController {
         for (int i = 0; i < list.size(); i++) {
             UserIndicators userIndicator = list.get(i);
             if (userIndicator instanceof SimpleMovingAverage) {
+
                 userIndicator.indicator = new SMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
+
             } else if (userIndicator instanceof WeightedMovingAverage) {
+
                 userIndicator.indicator = new WMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
+
             } else if (userIndicator instanceof SingularSpectrumTrend) {
 
             } else if (userIndicator instanceof SingularSpectrumPrediction) {
@@ -82,8 +85,6 @@ class StockController {
 
             } else if (userIndicator instanceof SimpleMovingVariance) {
 
-            } else if (userIndicator instanceof SimpleMovingDivergence) {
-
             } else if (userIndicator instanceof Momentum) {
 
             } else if (userIndicator instanceof Macd) {
@@ -94,7 +95,7 @@ class StockController {
 
             } else if (userIndicator instanceof RelativeStrengthIndex2) {
 
-            } else if (userIndicator instanceof CommoditiChannelIndicator) {
+            } else if (userIndicator instanceof CommodityChannelIndicator) {
 
             } else if (userIndicator instanceof Oscillator) {
 
@@ -120,19 +121,19 @@ class StockController {
 
             } else if (userIndicator instanceof TrueRangePeriod) {
 
-            } else if (userIndicator instanceof kFastStochasticPeriod) {
+            } else if (userIndicator instanceof FastStochasticPeriodK) {
 
-            } else if (userIndicator instanceof dStochastic) {
+            } else if (userIndicator instanceof StochasticD) {
 
-            } else if (userIndicator instanceof DStochasticSmoothed) {
+            } else if (userIndicator instanceof StochasticDSmoothed) {
 
             } else if (userIndicator instanceof ChaikinVolatility) {
 
-            } else if (userIndicator instanceof kMACDSignal) {
+            } else if (userIndicator instanceof MACDSignalK) {
 
             } else if (userIndicator instanceof PlusDirectionalMovementPeriod) {
 
-            } else if (userIndicator instanceof MinusDirectionalMovementPeriod) {
+            } else if (userIndicator instanceof RateOfChangePeriod) {
 
             } else if (userIndicator instanceof RateOfChangePeriod) {
 
