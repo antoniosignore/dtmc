@@ -13,7 +13,6 @@ class Club {
 
     Double netAssetValue
 
-
     static mapping = {
     }
 
