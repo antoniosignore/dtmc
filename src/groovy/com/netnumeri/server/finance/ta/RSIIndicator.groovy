@@ -5,7 +5,7 @@ import com.netnumeri.server.finance.indicator.RSI
 
 public class RSIIndicator extends Indicator {
 
-    int periodLength;
+    int periodLength
 
     public RSIIndicator() {
     }

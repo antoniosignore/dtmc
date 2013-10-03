@@ -5,8 +5,8 @@ import com.netnumeri.server.finance.utils.IndicatorUtils
 
 public class PriceChannelLowerIndicator extends Indicator {
 
-    int order;
-    double k;
+    int order
+    double k
 
     public PriceChannelLowerIndicator(TimeSeries series, String name, int order, double k) {
         super(series, name);

@@ -45,15 +45,15 @@ public class Stochastics implements Serializable {
         return ad5;
     }
 
-    public static double dStochastic(double[] fast_stochastic, int i) {
+    public static double dStochastic(double[] fast_stochastic, int movingAverageType) {
         double d;
         if (fast_stochastic == null || fast_stochastic.length == 0)
             throw new IllegalArgumentException("The array fast_stochastic is empty.");
         d = (0.0D / 0.0D);
-        if (i == 1) d = MovingAverage.simpleMovingAverage(fast_stochastic, fast_stochastic.length)[0];
-        else if (i == 2) d = MovingAverage.geometricMovingAverage(fast_stochastic, fast_stochastic.length)[0];
-        else if (i == 3) d = MovingAverage.linearlyWeightedMovingAverage(fast_stochastic, fast_stochastic.length)[0];
-        else if (i == 4)
+        if (movingAverageType == 1) d = MovingAverage.simpleMovingAverage(fast_stochastic, fast_stochastic.length)[0];
+        else if (movingAverageType == 2) d = MovingAverage.geometricMovingAverage(fast_stochastic, fast_stochastic.length)[0];
+        else if (movingAverageType == 3) d = MovingAverage.linearlyWeightedMovingAverage(fast_stochastic, fast_stochastic.length)[0];
+        else if (movingAverageType == 4)
             d = MovingAverage.exponentiallyWeightedMovingAverage(fast_stochastic, 0.5D, fast_stochastic.length)[0];
         else throw new IllegalArgumentException("The `method' parameter must be one of 1, 2, 3, 4");
         return d;

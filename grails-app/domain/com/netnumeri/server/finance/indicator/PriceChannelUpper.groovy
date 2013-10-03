@@ -5,5 +5,4 @@ public class PriceChannelUpper extends UserIndicators {
 
     int order
     double k
-
 }

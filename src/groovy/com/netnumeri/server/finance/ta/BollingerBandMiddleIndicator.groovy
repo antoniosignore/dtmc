@@ -4,13 +4,13 @@ import com.netnumeri.server.finance.beans.TimeSeries
 
 public class BollingerBandMiddleIndicator extends Indicator {
 
-    int lenght;
-    double deviation;
+    int length
+    double deviation
 
     public BollingerBandMiddleIndicator(TimeSeries series, String name, Integer param1, double deviation) {
 
         super(series, name);
-        lenght = param1;
+        length = param1;
         this.deviation = deviation;
         title = "Bollinger Band Middle";
         build();
@@ -30,7 +30,7 @@ public class BollingerBandMiddleIndicator extends Indicator {
 
             if (!series.isEmpty(date)) {
 
-                add(date, calculate(series, date, lenght));
+                add(date, calculate(series, date, length));
             }
             date = series.getNextDate(date)
         }
@@ -53,7 +53,7 @@ public class BollingerBandMiddleIndicator extends Indicator {
 
     public int getFirstIndicatorIndex() {
 
-        return (int) lenght + 1;
+        return (int) length + 1;
 
     }
 

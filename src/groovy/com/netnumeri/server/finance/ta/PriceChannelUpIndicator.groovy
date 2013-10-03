@@ -1,13 +1,12 @@
 package com.netnumeri.server.finance.ta
 
-import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.utils.IndicatorUtils
 
 public class PriceChannelUpIndicator extends Indicator {
 
-    int order;
-    double k;
+    int order
+    double k
 
     public PriceChannelUpIndicator(TimeSeries series, String name, Integer param1, double k) {
         super(series, name);

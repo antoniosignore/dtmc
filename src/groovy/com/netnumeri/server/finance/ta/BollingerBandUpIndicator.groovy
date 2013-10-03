@@ -4,8 +4,8 @@ import com.netnumeri.server.finance.beans.TimeSeries
 
 public class BollingerBandUpIndicator extends Indicator {
 
-    int lenght;
-    double deviation;
+    int length
+    double deviation
 
     public BollingerBandUpIndicator() {
     }
@@ -13,7 +13,7 @@ public class BollingerBandUpIndicator extends Indicator {
     public BollingerBandUpIndicator(TimeSeries series, String name, Integer param1, double deviation) {
 
         super(series, name);
-        lenght = param1;
+        length = param1;
         this.deviation = deviation;
         title = "Bollinger Band Upper";
         build();
@@ -33,7 +33,7 @@ public class BollingerBandUpIndicator extends Indicator {
 
             if (!series.isEmpty(date)) {
 
-                add(date, calculate(series, date, lenght, deviation));
+                add(date, calculate(series, date, length, deviation));
             }
             date = series.getNextDate(date)
         }
@@ -68,7 +68,7 @@ public class BollingerBandUpIndicator extends Indicator {
 
     public int getFirstIndicatorIndex() {
 
-        return (int) lenght + 1;
+        return (int) length + 1;
 
     }
 
