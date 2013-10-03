@@ -1,7 +1,6 @@
 package com.netnumeri.server.finance.ta
 
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.indicator.BollingerMiddle
 
 public class BollingerBandMiddleIndicator extends Indicator {
 
@@ -31,11 +30,24 @@ public class BollingerBandMiddleIndicator extends Indicator {
 
             if (!series.isEmpty(date)) {
 
-                add(date, BollingerMiddle.calculate(series, date, lenght));
+                add(date, calculate(series, date, lenght));
             }
             date = series.getNextDate(date)
         }
 
+    }
+
+    public static double calculate(TimeSeries qh, Date date, int length) {
+
+        int lastBar = qh.matrix.getIndex(date);
+
+        int firstBar = lastBar - length + 1;
+        double sum = 0;
+        for (int bar = firstBar; bar <= lastBar; bar++) {
+            sum += qh.matrix.getValue(bar);
+        }
+
+        return sum / length;
     }
 
 

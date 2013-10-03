@@ -1,7 +1,6 @@
 package com.netnumeri.server.finance.ta
 
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.indicator.BollingerUpper
 
 public class BollingerBandUpIndicator extends Indicator {
 
@@ -34,12 +33,37 @@ public class BollingerBandUpIndicator extends Indicator {
 
             if (!series.isEmpty(date)) {
 
-                add(date, BollingerUpper.calculate(series, date, lenght, deviation));
+                add(date, calculate(series, date, lenght, deviation));
             }
             date = series.getNextDate(date)
         }
 
     }
+
+    public static double calculate(TimeSeries qh, Date date, int length, double deviations) {
+        int lastBar = qh.matrix.getIndex(date);
+
+//		if (sizeLimitHistory != 0) {
+//			lastBar = sizeLimitHistory - 1;
+//		}
+
+        int firstBar = lastBar - length + 1;
+        double squareSum = 0;
+        double sum = 0;
+
+        for (int bar = firstBar; bar <= lastBar; bar++) {
+            double barClose = qh.matrix.getValue(bar);
+            sum += barClose;
+            squareSum += barClose * barClose;
+        }
+
+        double stDev = length * squareSum - sum * sum;
+        stDev /= length * (length - 1);
+        stDev = Math.sqrt(stDev);
+
+        return sum / length + deviations * stDev;
+    }
+
 
 
     public int getFirstIndicatorIndex() {

@@ -3,9 +3,6 @@ package com.netnumeri.server.finance.indicator;
 
 import com.netnumeri.server.finance.beans.TimeSeries;
 
-/**
- * Lowest low of the period.
- */
 public class PeriodLow {
 
     public static double calculate(TimeSeries lows, Date date, int periodLength) {

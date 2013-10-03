@@ -1,9 +1,6 @@
 package com.netnumeri.server.finance.indicator;
 
-
 import com.netnumeri.server.finance.beans.TimeSeries;
-
-
 
 public class NoiseAdjustedRSI {
 

@@ -7,7 +7,7 @@ import com.netnumeri.server.finance.beans.TimeSeries
  * Exponential Moving Average.
  */
 
-public class WilliamPercR {
+public class WilliamPercentR {
 
     public static double calculate(TimeSeries opens,
                                    TimeSeries closes,

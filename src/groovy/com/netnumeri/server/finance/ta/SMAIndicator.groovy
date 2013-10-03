@@ -6,9 +6,9 @@ public class SMAIndicator extends Indicator {
 
     int smoothing;
 
-    public SMAIndicator(TimeSeries series, String name, Integer param1) {
+    public SMAIndicator(TimeSeries series, String name, Integer smoothing) {
         super(series, name);
-        smoothing = param1;
+        this.smoothing = smoothing;
         title = "Simple moving average";
         build();
     }
@@ -17,7 +17,6 @@ public class SMAIndicator extends Indicator {
         double[] ad = MovingAverage.simpleMovingAverage(series.convertToArray(), smoothing);
         copyBackwords(ad);
     }
-
 }
 
 

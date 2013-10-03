@@ -1,13 +1,8 @@
 package com.netnumeri.server.finance.indicator;
 
-
 import com.netnumeri.server.finance.beans.TimeSeries;
 
-/**
- * Highest high of the period.
- */
 public class PeriodHigh {
-
 
     public static double calculate(TimeSeries qh, Date date, int periodLength) {
 

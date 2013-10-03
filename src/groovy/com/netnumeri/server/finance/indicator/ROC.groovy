@@ -8,7 +8,6 @@ import com.netnumeri.server.finance.beans.TimeSeries;
  */
 public class ROC {
 
-
     public static double calculate(TimeSeries qh, Date date, int lookBackLength) {
         int thenBar = qh.size - 1 - lookBackLength;
 

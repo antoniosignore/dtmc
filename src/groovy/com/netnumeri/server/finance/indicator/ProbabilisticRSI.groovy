@@ -3,9 +3,6 @@ package com.netnumeri.server.finance.indicator;
 
 import com.netnumeri.server.finance.beans.TimeSeries;
 
-/**
- * Experimental, under development
- */
 public class ProbabilisticRSI {
 
     public static double calculate(TimeSeries closes, Date date, int periodLength) {

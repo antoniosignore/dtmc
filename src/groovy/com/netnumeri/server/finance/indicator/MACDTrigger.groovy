@@ -2,9 +2,6 @@ package com.netnumeri.server.finance.indicator
 
 import com.netnumeri.server.finance.beans.TimeSeries;
 
-/**
- * MACD Trigger
- */
 public class MACDTrigger {
 
     public static double calculate(TimeSeries qh, Date date, int triggerLength, double multiplier) {

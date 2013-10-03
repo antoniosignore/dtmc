@@ -16,10 +16,6 @@
                 <g:link controller="userIndicators" action="list">User Indicators</g:link>
             </li>
 
-            <li class="${'indicators'.equals(params.controller) ? 'active' : ''}">
-                <g:link controller="indicators" action="list">Indicators</g:link>
-            </li>
-
         </ul>
     </div>
 </div>

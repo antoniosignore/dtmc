@@ -1,6 +1,5 @@
 package com.netnumeri.server.finance.indicator;
 
-
 import com.netnumeri.server.finance.beans.TimeSeries;
 
 /**
@@ -9,10 +8,22 @@ import com.netnumeri.server.finance.beans.TimeSeries;
 public class MACD {
 
     public static double calculate(TimeSeries qh, Date date, int fastLength, int slowLength) {
-        double fastEMA = new EMA(qh, date, fastLength).calculate();
-        double slowEMA = new EMA(qh, date, slowLength).calculate();
+        double fastEMA = calculate(qh, date, fastLength)
+        double slowEMA = calculate(qh, date, slowLength)
         double value = fastEMA - slowEMA;
 
         return value;
+    }
+
+    public static double calculate(TimeSeries qh, Date date, int length) {
+        double multiplier = 2 / (length + 1);
+        int lastBar = qh.matrix.getIndex(date);
+        int firstBar = lastBar - 2 * length + 1;
+        double ema = qh.matrix.getValue(firstBar)
+        for (int bar = firstBar; bar <= lastBar; bar++) {
+            double barClose = qh.matrix.getValue(bar)
+            ema += (barClose - ema) * multiplier;
+        }
+        return ema;
     }
 }
