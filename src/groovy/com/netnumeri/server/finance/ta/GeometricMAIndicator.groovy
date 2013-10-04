@@ -12,7 +12,6 @@ public class GeometricMAIndicator extends Indicator {
     public GeometricMAIndicator(TimeSeries series, String name, Integer param1) {
         super(series, name);
         smoothing = param1;
-        title = "Geometric moving average";
         build();
     }
 

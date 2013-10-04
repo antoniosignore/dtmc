@@ -14,7 +14,6 @@ public class MACDIndicator extends Indicator {
         super(series, name);
         this.smoothing1 = smoothing1;
         this.smoothing2 = smoothing2;
-        title = "MACD";
         build();
     }
 

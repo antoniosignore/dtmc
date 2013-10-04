@@ -12,7 +12,6 @@ public class RateOfChangeOverPeriodIndicator extends Indicator {
     public RateOfChangeOverPeriodIndicator(Instrument instrument, String name, Integer param1) {
         super(instrument, name);
         period = param1;
-        title = "Rate of Change";
         build();
     }
 

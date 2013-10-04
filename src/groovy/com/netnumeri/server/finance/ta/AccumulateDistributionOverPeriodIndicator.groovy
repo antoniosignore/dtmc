@@ -9,10 +9,9 @@ public class AccumulateDistributionOverPeriodIndicator extends Indicator {
     public AccumulateDistributionOverPeriodIndicator() {
     }
 
-    public AccumulateDistributionOverPeriodIndicator(Instrument instrument, String name, Integer param1) {
+    public AccumulateDistributionOverPeriodIndicator(Instrument instrument, String name, Integer smoothing) {
         super(instrument, name);
-        smoothing = param1;
-        title = "Accumulation Distribution over period";
+        this.smoothing = smoothing;
         build();
     }
 

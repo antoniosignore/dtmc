@@ -12,7 +12,6 @@ public class BollingerBandMiddleIndicator extends Indicator {
         super(series, name);
         length = param1;
         this.deviation = deviation;
-        title = "Bollinger Band Middle";
         build();
 
     }

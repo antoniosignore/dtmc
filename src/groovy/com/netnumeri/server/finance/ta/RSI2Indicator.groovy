@@ -14,7 +14,6 @@ public class RSI2Indicator extends Indicator {
 
         super(series, name);
         periodLength = param1;
-        title = "RelativeStrengthIndex";
         build();
 
     }

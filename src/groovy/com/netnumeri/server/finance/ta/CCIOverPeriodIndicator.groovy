@@ -12,7 +12,6 @@ public class CCIOverPeriodIndicator extends Indicator {
     public CCIOverPeriodIndicator(Instrument instrument, String name, Integer param1) {
         super(instrument, name);
         period = param1;
-        title = "CCI over period";
         build();
     }
 

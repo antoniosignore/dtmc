@@ -1,7 +1,6 @@
 package com.netnumeri.server.finance.ta
 
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.indicator.RSI
 
 public class RSIIndicator extends Indicator {
 
@@ -10,11 +9,10 @@ public class RSIIndicator extends Indicator {
     public RSIIndicator() {
     }
 
-    public RSIIndicator(TimeSeries series, String name, Integer param1) {
+    public RSIIndicator(TimeSeries series, String name, Integer periodLength) {
 
         super(series, name);
-        periodLength = param1;
-        title = "RelativeStrengthIndex";
+        this.periodLength = periodLength;
         build();
 
     }

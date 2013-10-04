@@ -9,10 +9,9 @@ public class AaronDownOverPeriodIndicator extends Indicator {
     public AaronDownOverPeriodIndicator() {
     }
 
-    public AaronDownOverPeriodIndicator(Instrument instrument, String name, Integer param1) {
+    public AaronDownOverPeriodIndicator(Instrument instrument, String name, Integer period) {
         super(instrument, name);
-        period = param1;
-        title = "Aaron down over period";
+        this.period = period;
         build();
     }
 

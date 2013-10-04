@@ -12,7 +12,6 @@ public class TriangularMAIndicator extends Indicator {
     public TriangularMAIndicator(TimeSeries series, String name, Integer param1) {
         super(series, name);
         smoothing = param1;
-        title = "Triangular moving average";
         build();
     }
 

@@ -11,7 +11,6 @@ public class SSAComponentsIndicator extends Indicator {
         setName(name);
         this.series = series
         this.window = window
-        title = "Singular Spectrum Component";
         copyBackwords(analysis.getEigenComponents(components));
     }
 

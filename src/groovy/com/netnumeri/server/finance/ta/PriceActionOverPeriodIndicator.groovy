@@ -10,7 +10,6 @@ public class PriceActionOverPeriodIndicator extends Indicator {
 
     public PriceActionOverPeriodIndicator(Instrument instrument, String name) {
         super(instrument, name);
-        title = "Price Action over period";
         build();
     }
 

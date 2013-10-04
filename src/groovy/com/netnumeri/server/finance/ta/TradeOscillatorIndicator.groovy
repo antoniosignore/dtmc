@@ -15,7 +15,6 @@ public class TradeOscillatorIndicator extends Indicator {
         super(series, name);
         smoothing = param1;
         smoothing2 = param2;
-        title = "Trade Oscillator Indicator";
         build();
     }
 

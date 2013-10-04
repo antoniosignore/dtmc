@@ -60,137 +60,192 @@ class StockController {
         TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
 
         for (int i = 0; i < list.size(); i++) {
-            UserIndicators userIndicator = list.get(i);
-            if (userIndicator.type == IndicatorEnum.SimpleMovingAverage) {
+            UserIndicators ui = list.get(i);
+            if (ui.type == IndicatorEnum.SimpleMovingAverage) {
 
-                userIndicator.indicator = new SMAIndicator(closes, "SMA-" + userIndicator.smoothing1, userIndicator.smoothing1);
+                ui.indicator = new SMAIndicator(closes, "SMA-" + ui.smoothing1, ui.smoothing1);
 
-            } else if (userIndicator.type == IndicatorEnum.WeightedMovingAverage) {
+            } else if (ui.type == IndicatorEnum.WeightedMovingAverage) {
 
-                userIndicator.indicator = new WMAIndicator(closes, "SMA-" + userIndicator.smoothing1, userIndicator.smoothing1);
+                ui.indicator = new WMAIndicator(closes, "SMA-" + ui.smoothing1, ui.smoothing1);
 
-            } else if (userIndicator.type == IndicatorEnum.SingularSpectrumTrend) {
+            } else if (ui.type == IndicatorEnum.SingularSpectrumTrend) {
 
-            } else if (userIndicator.type == IndicatorEnum.SingularSpectrumPrediction) {
+            } else if (ui.type == IndicatorEnum.SingularSpectrumPrediction) {
 
-            } else if (userIndicator.type == IndicatorEnum.PriceChannelUpper) {
+            } else if (ui.type == IndicatorEnum.PriceChannelUpper) {
 
-                userIndicator.indicator = new
-                PriceChannelUpIndicator(closes, "PC-Upper-" + userIndicator.order + "-" + userIndicator.k,
-                        userIndicator.order,
-                        userIndicator.k);
+                ui.indicator = new
+                PriceChannelUpIndicator(closes, "PC-Upper-" + ui.order + "-" + ui.k,
+                        ui.order,
+                        ui.k);
 
-            } else if (userIndicator.type == IndicatorEnum.PriceChannelLower) {
+            } else if (ui.type == IndicatorEnum.PriceChannelLower) {
 
-                userIndicator.indicator = new
-                PriceChannelLowerIndicator(closes, "PC-Lower-" + userIndicator.order + "-" + userIndicator.k,
-                        userIndicator.order,
-                        userIndicator.k);
+                ui.indicator = new
+                PriceChannelLowerIndicator(closes, "PC-Lower-" + ui.order + "-" + ui.k,
+                        ui.order,
+                        ui.k);
 
-            } else if (userIndicator.type == IndicatorEnum.UpperBollingerBand) {
+            } else if (ui.type == IndicatorEnum.UpperBollingerBand) {
 
-                userIndicator.indicator = new
-                BollingerBandUpIndicator(closes, "BB-Upper" + userIndicator.length + "-" + userIndicator.deviation,
-                        userIndicator.length,
-                        userIndicator.deviation);
+                ui.indicator = new
+                BollingerBandUpIndicator(closes, "BB-Upper" + ui.length + "-" + ui.deviation,
+                        ui.length,
+                        ui.deviation);
 
-            } else if (userIndicator.type == IndicatorEnum.LowerBollingerBand) {
+            } else if (ui.type == IndicatorEnum.LowerBollingerBand) {
 
-                userIndicator.indicator = new
-                BollingerBandLowerIndicator(closes, "BB-Lower" + userIndicator.length + "-" + userIndicator.deviation,
-                        userIndicator.length,
-                        userIndicator.deviation);
+                ui.indicator = new
+                BollingerBandLowerIndicator(closes, "BB-Lower" + ui.length + "-" + ui.deviation,
+                        ui.length,
+                        ui.deviation);
 
-            } else if (userIndicator.type == IndicatorEnum.SimpleMovingVariance) {
+            } else if (ui.type == IndicatorEnum.SimpleMovingVariance) {
 
-                userIndicator.indicator = new SimpleMovingVarianceIndicator(
-                        closes, "Simple Moving variance-" + userIndicator.order,
-                        userIndicator.order);
+                ui.indicator = new SimpleMovingVarianceIndicator(
+                        closes, "Simple Moving variance-" + ui.order,
+                        ui.order);
 
-            } else if (userIndicator.type == IndicatorEnum.Momentum) {
+            } else if (ui.type == IndicatorEnum.Momentum) {
 
-                userIndicator.indicator =
-                    new MomentumPctPeriodIndicator(stockInstance, "Momentum-" + userIndicator.period, userIndicator.period)
+                ui.indicator =
+                    new MomentumPctPeriodIndicator(stockInstance, "Momentum-" + ui.period, ui.period)
 
-            } else if (userIndicator.type == IndicatorEnum.MACD) {
+            } else if (ui.type == IndicatorEnum.MACD) {
 
-                userIndicator.indicator =
-                    new MACDIndicator(closes, "MACD-" + userIndicator.period,
-                            userIndicator.smoothing1, userIndicator.smoothing2)
+                ui.indicator =
+                    new MACDIndicator(closes, "MACD-" + ui.period,
+                            ui.smoothing1, ui.smoothing2)
 
-            } else if (userIndicator.type == IndicatorEnum.kMACDSignal) {
+            } else if (ui.type == IndicatorEnum.kMACDSignal) {
 
-                userIndicator.indicator =
-                    new MACDSignal(closes, "MACD-" + userIndicator.period,
-                            userIndicator.smoothing1, userIndicator.smoothing2, userIndicator.smoothing3)
+                ui.indicator =
+                    new MACDSignal(closes, "MACD-Signal" + ui.period,
+                            ui.smoothing1, ui.smoothing2, ui.smoothing3)
 
-            } else if (userIndicator.type == IndicatorEnum.RateOfChange) {
+            } else if (ui.type == IndicatorEnum.RateOfChange) {
 
-            } else if (userIndicator.type == IndicatorEnum.RelativeStrengthIndex) {
+                ui.indicator =
+                    new RateOfChangeOverPeriodIndicator(stockInstance, "MACD-" + ui.period, ui.period)
 
-            } else if (userIndicator.type == IndicatorEnum.RelativeStrengthIndex2) {
+            } else if (ui.type == IndicatorEnum.RelativeStrengthIndex) {
 
-            } else if (userIndicator.type == IndicatorEnum.CommodityChannelIndicator) {
+                ui.indicator =
+                    new RSIIndicator(closes, "RSI-" + ui.period,
+                            ui.period)
 
-            } else if (userIndicator.type == IndicatorEnum.Oscillator) {
+            } else if (ui.type == IndicatorEnum.RelativeStrengthIndex2) {
 
-            } else if (userIndicator.type == IndicatorEnum.PriceChannelR) {
+                ui.indicator =
+                    new RSI2Indicator(closes, "RSI-" + ui.period, ui.period)
 
-            } else if (userIndicator.type == IndicatorEnum.TrueChange) {
+            } else if (ui.type == IndicatorEnum.CommodityChannelIndicator) {
 
-            } else if (userIndicator.type == IndicatorEnum.AverageTrueChange) {
+                ui.indicator =
+                    new CommodityChannelIndicator(closes, "CCI-" + ui.order, ui.order)
 
-            } else if (userIndicator.type == IndicatorEnum.MoneyFlowOverPeriod) {
+            } else if (ui.type == IndicatorEnum.Oscillator) {
 
-            } else if (userIndicator.type == IndicatorEnum.AccumulateDistributionOverPeriod) {
+//                userIndicator.indicator =
+//                    new Os(closes, "PCI-" + userIndicator.order + "-" + userIndicator.k, userIndicator.order, userIndicator.k)
 
-            } else if (userIndicator.type == IndicatorEnum.ChaikinOscillatorOverPeriod) {
+            } else if (ui.type == IndicatorEnum.PriceChannelUpper) {
 
-            } else if (userIndicator.type == IndicatorEnum.ChaikinMoneyFlowOverPeriod) {
+                ui.indicator =
+                    new PriceChannelUpIndicator(closes, "PCI-" + ui.order + "-" + ui.k, ui.order, ui.k)
 
-            } else if (userIndicator.type == IndicatorEnum.AroonOscillatorOverPeriod) {
+            } else if (ui.type == IndicatorEnum.PriceChannelLower) {
 
-            } else if (userIndicator.type == IndicatorEnum.AroonDownOverPeriod) {
+                ui.indicator =
+                    new PriceChannelLowerIndicator(closes, "PCI-" + ui.order + "-" + ui.k, ui.order, ui.k)
 
-            } else if (userIndicator.type == IndicatorEnum.AroonUpOverPeriod) {
+            } else if (ui.type == IndicatorEnum.TrueChange) {
 
-            } else if (userIndicator.type == IndicatorEnum.TrueRangePeriod) {
+                ui.indicator =
+                    new TrueRangeOverPeriodIndicator(closes, "TrueRange-" + ui.period)
 
-            } else if (userIndicator.type == IndicatorEnum.kFastStochasticPeriod) {
+//            } else if (ui.type == IndicatorEnum.AverageTrueChange) {
+//
+//                ui.indicator =
+//                    new TrueRangeOverPeriodIndicator(closes, "TrueRange-" + ui.period)
 
-            } else if (userIndicator.type == IndicatorEnum.dStochastic) {
+            } else if (ui.type == IndicatorEnum.MoneyFlowOverPeriod) {
 
-            } else if (userIndicator.type == IndicatorEnum.DStochasticSmoothed) {
+                ui.indicator =
+                    new MoneyFlowOverPeriodIndicator(stockInstance, "Money flow-" + ui.period, ui.period)
 
-            } else if (userIndicator.type == IndicatorEnum.ChaikinVolatility) {
+            } else if (ui.type == IndicatorEnum.AccumulateDistributionOverPeriod) {
 
-            } else if (userIndicator.type == IndicatorEnum.kMACDSignal) {
+                ui.indicator =
+                    new AccumulateDistributionOverPeriodIndicator(stockInstance, "Accumulate Distribution-" + ui.smoothing1, ui.smoothing1)
 
-            } else if (userIndicator.type == IndicatorEnum.PlusDirectionalMovementPeriod) {
+            } else if (ui.type == IndicatorEnum.ChaikinOscillatorOverPeriod) {
 
-            } else if (userIndicator.type == IndicatorEnum.RateOfChangePeriod) {
+                ui.indicator =
+                    new ChaikinOscillatorOverPeriodIndicator(stockInstance, "ChaikinOscillatorOverPeriodIndicator-" + ui.smoothing1, ui.smoothing1)
 
-            } else if (userIndicator.type == IndicatorEnum.RateOfChangePeriod) {
 
-            } else if (userIndicator.type == IndicatorEnum.Kairi) {
+            } else if (ui.type == IndicatorEnum.ChaikinMoneyFlowOverPeriod) {
 
-            } else if (userIndicator.type == IndicatorEnum.ExponentiallyWeightedMovingAverage) {
+                ui.indicator =
+                    new ChaikinMoneyFlowOverPeriodIndicator(stockInstance, "ChaikinMoneyFlowOverPeriodIndicator-" + ui.smoothing1, ui.smoothing1)
 
-            } else if (userIndicator.type == IndicatorEnum.TriangularMovingAverage) {
+            } else if (ui.type == IndicatorEnum.AroonOscillatorOverPeriod) {
 
-            } else if (userIndicator.type == IndicatorEnum.LinearlyWeightedMovingAverage) {
+                ui.indicator =
+                    new AaronOscillatorOverPeriodIndicator(stockInstance, "AaronOscillatorOverPeriodIndicator-" + ui.period, ui.period)
 
-            } else if (userIndicator.type == IndicatorEnum.GeometricMovingAverage) {
+            } else if (ui.type == IndicatorEnum.AroonDownOverPeriod) {
 
-            } else if (userIndicator.type == IndicatorEnum.MomentumPctPeriod) {
+                ui.indicator =
+                    new AaronDownOverPeriodIndicator(stockInstance, "Aaron Down Over Period Indicator-" + ui.period, ui.period)
 
-            } else if (userIndicator.type == IndicatorEnum.CommodityChannelIndexOverPeriod) {
+            } else if (ui.type == IndicatorEnum.AroonUpOverPeriod) {
 
-            } else if (userIndicator.type == IndicatorEnum.MarketFacilitationIndexOverPeriod) {
+                ui.indicator =
+                    new AaronUpOverPeriodIndicator(stockInstance, "Aaron Up Over Period Indicator-" + ui.period, ui.period)
 
-            } else if (userIndicator.type == IndicatorEnum.BalanceOfPowerOverPeriod) {
+            } else if (ui.type == IndicatorEnum.TrueRangePeriod) {
 
-            } else if (userIndicator.type == IndicatorEnum.PriceActionOverPeriod) {
+                ui.indicator =
+                    new TrueRangeOverPeriodIndicator(stockInstance, "true Range Over Period Indicator-" + ui.period)
+
+            } else if (ui.type == IndicatorEnum.kFastStochasticPeriod) {
+
+            } else if (ui.type == IndicatorEnum.dStochastic) {
+
+            } else if (ui.type == IndicatorEnum.DStochasticSmoothed) {
+
+            } else if (ui.type == IndicatorEnum.ChaikinVolatility) {
+
+            } else if (ui.type == IndicatorEnum.kMACDSignal) {
+
+            } else if (ui.type == IndicatorEnum.PlusDirectionalMovementPeriod) {
+
+            } else if (ui.type == IndicatorEnum.RateOfChangePeriod) {
+
+            } else if (ui.type == IndicatorEnum.RateOfChangePeriod) {
+
+            } else if (ui.type == IndicatorEnum.Kairi) {
+
+            } else if (ui.type == IndicatorEnum.ExponentiallyWeightedMovingAverage) {
+
+            } else if (ui.type == IndicatorEnum.TriangularMovingAverage) {
+
+            } else if (ui.type == IndicatorEnum.LinearlyWeightedMovingAverage) {
+
+            } else if (ui.type == IndicatorEnum.GeometricMovingAverage) {
+
+            } else if (ui.type == IndicatorEnum.MomentumPctPeriod) {
+
+            } else if (ui.type == IndicatorEnum.CommodityChannelIndexOverPeriod) {
+
+            } else if (ui.type == IndicatorEnum.MarketFacilitationIndexOverPeriod) {
+
+            } else if (ui.type == IndicatorEnum.BalanceOfPowerOverPeriod) {
+
+            } else if (ui.type == IndicatorEnum.PriceActionOverPeriod) {
 
             }
         }

@@ -9,7 +9,6 @@ public abstract class Indicator extends TimeSeries {
 
     protected FinConstants indicator;
     protected String name;
-    protected String title;
     protected TimeSeries series;
     protected TimeSeries series1;
     protected TimeSeries series2;
@@ -57,6 +56,26 @@ public abstract class Indicator extends TimeSeries {
         }
     }
 
+
+
+    public static void main(String[] args) {
+
+//        String[] tests = {
+//            "lowercase",        // [lowercase]
+//            "Class",            // [Class]
+//            "MyClass",          // [My Class]
+//            "HTML",             // [HTML]
+//            "PDFLoader",        // [PDF Loader]
+//            "AString",          // [A String]
+//            "SimpleXMLParser",  // [Simple XML Parser]
+//            "GL11Version",      // [GL 11 Version]
+//            "99Bottles",        // [99 Bottles]
+//            "May5",             // [May 5]
+//            "BFG9000",          // [BFG 9000]
+//        };
+
+        System.out.println("[" + splitCamelCase("SimpleXMLParser") + "]");
+    }
 }
 
 

@@ -12,7 +12,6 @@ public class PriceChannelUpIndicator extends Indicator {
         super(series, name);
         this.order = order;
         this.k = k;
-        title = "Price channel Indicator up";
         build();
     }
 

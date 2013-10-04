@@ -9,10 +9,9 @@ public class AaronOscillatorOverPeriodIndicator extends Indicator {
     public AaronOscillatorOverPeriodIndicator() {
     }
 
-    public AaronOscillatorOverPeriodIndicator(Instrument instrument, String name, Integer param1) {
+    public AaronOscillatorOverPeriodIndicator(Instrument instrument, String name, Integer period) {
         super(instrument, name);
-        period = param1;
-        title = "Chaikin Oscillator over period";
+        this.period = period;
         build();
     }
 

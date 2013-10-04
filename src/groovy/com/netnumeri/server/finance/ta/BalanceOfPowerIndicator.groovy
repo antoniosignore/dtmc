@@ -9,7 +9,6 @@ public class BalanceOfPowerIndicator extends Indicator {
 
     public BalanceOfPowerIndicator(Instrument instrument, String name) {
         super(instrument, name);
-        title = "Balance Of Power";
         build();
     }
 

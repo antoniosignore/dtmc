@@ -14,7 +14,6 @@ public class SimpleMovingVarianceIndicator extends Indicator {
 
         super(series, name);
         this.order = order;
-        title = "Simple Moving Variance";
         build();
 
     }

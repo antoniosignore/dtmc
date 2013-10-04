@@ -9,7 +9,6 @@ public class WMAIndicator extends Indicator {
     public WMAIndicator(TimeSeries series, String name, Integer param1) {
         super(series, name);
         smoothing = param1;
-        title = "Simple moving average";
         build();
     }
 

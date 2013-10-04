@@ -10,7 +10,6 @@ public class MoneyFlowOverPeriodIndicator extends Indicator {
         super(instrument, name);
         this.instrument = instrument;
         this.period = period;
-        title = "Money Flow over period";
         build();
     }
 

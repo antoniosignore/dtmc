@@ -12,7 +12,6 @@ public class ChaikinVolatilityIndicator extends Indicator {
     public ChaikinVolatilityIndicator(Instrument instrument, String name, Integer param1) {
         super(instrument, name);
         period = param1;
-        title = "Chaikin Oscillator over period";
         build();
     }
 

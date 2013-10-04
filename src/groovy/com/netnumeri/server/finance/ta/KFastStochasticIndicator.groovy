@@ -9,7 +9,6 @@ public class KFastStochasticIndicator extends Indicator {
     public KFastStochasticIndicator(Instrument instrument, String name, Integer param1) {
         super(instrument, name);
         period = param1;
-        title = "k Fast Stochastic";
         build();
     }
 

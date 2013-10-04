@@ -11,7 +11,6 @@ public class DStochasticSmoothedIndicator extends Indicator {
         super(instrument, name);
         period = param1;
         this.smoothing = smoothing;
-        title = "d Smoothed Stochastic";
         build();
     }
 

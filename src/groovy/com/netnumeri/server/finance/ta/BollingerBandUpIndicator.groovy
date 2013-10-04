@@ -15,7 +15,6 @@ public class BollingerBandUpIndicator extends Indicator {
         super(series, name);
         this.length = length;
         this.deviation = deviation;
-        title = "Bollinger Band Upper";
         build();
 
     }

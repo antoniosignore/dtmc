@@ -14,7 +14,6 @@ public class MOMIndicator extends Indicator {
 
         super(series, name);
         order = param1;
-        title = "Momentum";
         build();
 
     }

@@ -14,7 +14,6 @@ public class EWMAIndicator extends Indicator {
         super(series, name);
         smoothing = param1;
         this.i = i;
-        title = "Exponential weighted moving average";
         build();
     }
 

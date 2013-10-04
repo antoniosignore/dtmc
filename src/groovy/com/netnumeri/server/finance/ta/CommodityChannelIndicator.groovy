@@ -10,11 +10,10 @@ public class CommodityChannelIndicator extends Indicator {
     public CommodityChannelIndicator() {
     }
 
-    public CommodityChannelIndicator(TimeSeries series, String name, Integer param1) {
+    public CommodityChannelIndicator(TimeSeries series, String name, Integer order) {
 
         super(series, name);
-        order = param1;
-        title = "Commodity Channel Indicator";
+        this.order = order;
         build();
 
     }

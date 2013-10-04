@@ -9,7 +9,6 @@ public class MarketFacilitationIndexIndicator extends Indicator {
 
     public MarketFacilitationIndexIndicator(Instrument instrument, String name) {
         super(instrument, name);
-        title = "market Facilitation Index";
         build();
     }
 

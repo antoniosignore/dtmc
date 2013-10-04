@@ -15,7 +15,6 @@ public class SSASeriesPredictionIndicator extends Indicator {
                                         Integer noFuture) {
         setName(name);
         this.series = series;
-        title = "Singular Spectrum Forecast"
         double[] prediction = SSAMath.computeSeriesForecast(series, noFuture, window, order, components)
         copyInTheFuture(prediction)
     }

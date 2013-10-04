@@ -13,7 +13,6 @@ public class DStochasticIndicator extends Indicator {
         period = param1;
         method = method;
         smoothing = smoothing;
-        title = "d Stochastic";
         build();
     }
 

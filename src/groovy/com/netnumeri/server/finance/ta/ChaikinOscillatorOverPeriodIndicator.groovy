@@ -9,10 +9,9 @@ public class ChaikinOscillatorOverPeriodIndicator extends Indicator {
     public ChaikinOscillatorOverPeriodIndicator() {
     }
 
-    public ChaikinOscillatorOverPeriodIndicator(Instrument instrument, String name, Integer param1) {
+    public ChaikinOscillatorOverPeriodIndicator(Instrument instrument, String name, Integer smoothing) {
         super(instrument, name);
-        smoothing = param1;
-        title = "Chaikin Oscillator over period";
+        this.smoothing = smoothing;
         build();
     }
 

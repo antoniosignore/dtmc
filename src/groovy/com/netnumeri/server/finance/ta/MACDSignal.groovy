@@ -16,7 +16,6 @@ public class MACDSignal extends Indicator {
         this.smoothing1 = smoothing1;
         this.smoothing2 = smoothing2;
         this.smoothing3 = smoothing3;
-        title = "MACD Signal";
         build();
     }
 

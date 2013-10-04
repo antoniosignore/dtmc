@@ -9,7 +9,6 @@ public class PlusDMIndicator extends Indicator {
 
     public PlusDMIndicator(Instrument instrument, String name) {
         super(instrument, name);
-        title = "Plus DMI";
         build();
     }
 

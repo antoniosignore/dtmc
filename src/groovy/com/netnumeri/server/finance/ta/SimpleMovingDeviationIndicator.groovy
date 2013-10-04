@@ -14,7 +14,6 @@ public class SimpleMovingDeviationIndicator extends Indicator {
 
         super(series, name);
         order = param1;
-        title = "Simple Moving Deviation";
         build();
 
     }

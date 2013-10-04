@@ -12,7 +12,6 @@ public class KairiIndicator extends Indicator {
     public KairiIndicator(Instrument instrument, String name, Integer smoothing) {
         super(instrument, name);
         this.smoothing = smoothing;
-        title = "Kairi Indicator";
         build();
     }
 

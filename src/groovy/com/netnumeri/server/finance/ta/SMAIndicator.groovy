@@ -9,7 +9,6 @@ public class SMAIndicator extends Indicator {
     public SMAIndicator(TimeSeries series, String name, Integer smoothing) {
         super(series, name);
         this.smoothing = smoothing;
-        title = "Simple moving average";
         build();
     }
 
