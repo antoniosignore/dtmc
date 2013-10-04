@@ -17,7 +17,6 @@ public class WMAIndicator extends Indicator {
         double[] ad = MovingAverage.weightedXDayMovingAverage(series.convertToArray(), smoothing);
         copyBackwords(ad);
     }
-
 }
 
 

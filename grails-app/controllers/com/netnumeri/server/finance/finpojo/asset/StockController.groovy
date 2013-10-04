@@ -1,9 +1,12 @@
 package com.netnumeri.server.finance.finpojo.asset
 
+import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.indicator.*
-import com.netnumeri.server.finance.ta.*
+import com.netnumeri.server.finance.indicator.UserIndicators
+import com.netnumeri.server.finance.ta.PriceChannelUpIndicator
+import com.netnumeri.server.finance.ta.SMAIndicator
+import com.netnumeri.server.finance.ta.WMAIndicator
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
@@ -60,102 +63,102 @@ class StockController {
 
         for (int i = 0; i < list.size(); i++) {
             UserIndicators userIndicator = list.get(i);
-            if (userIndicator instanceof SimpleMovingAverage) {
+            if (userIndicator.type == IndicatorEnum.SimpleMovingAverage) {
 
                 userIndicator.indicator = new SMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
 
-            } else if (userIndicator instanceof WeightedMovingAverage) {
+            } else if (userIndicator.type == IndicatorEnum.WeightedMovingAverage) {
 
                 userIndicator.indicator = new WMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
 
-            } else if (userIndicator instanceof SingularSpectrumTrend) {
+            } else if (userIndicator.type == IndicatorEnum.SingularSpectrumTrend) {
 
-            } else if (userIndicator instanceof SingularSpectrumPrediction) {
+            } else if (userIndicator.type == IndicatorEnum.SingularSpectrumPrediction) {
 
-            } else if (userIndicator instanceof PriceChannelUpper) {
+            } else if (userIndicator.type == IndicatorEnum.PriceChannelUpper) {
 
                 userIndicator.indicator = new PriceChannelUpIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
 
 
-            } else if (userIndicator instanceof PriceChannelLower) {
+            } else if (userIndicator.type == IndicatorEnum.PriceChannelLower) {
 
-            } else if (userIndicator instanceof UpperBollingerBand) {
+            } else if (userIndicator.type == IndicatorEnum.UpperBollingerBand) {
 
-            } else if (userIndicator instanceof LowerBollingerBand) {
+            } else if (userIndicator.type == IndicatorEnum.LowerBollingerBand) {
 
-            } else if (userIndicator instanceof SimpleMovingVariance) {
+            } else if (userIndicator.type == IndicatorEnum.SimpleMovingVariance) {
 
-            } else if (userIndicator instanceof Momentum) {
+            } else if (userIndicator.type == IndicatorEnum.Momentum) {
 
-            } else if (userIndicator instanceof Macd) {
+            } else if (userIndicator.type == IndicatorEnum.Macd) {
 
-            } else if (userIndicator instanceof RateOfChange) {
+            } else if (userIndicator.type == IndicatorEnum.RateOfChange) {
 
-            } else if (userIndicator instanceof RelativeStrengthIndex) {
+            } else if (userIndicator.type == IndicatorEnum.RelativeStrengthIndex) {
 
-            } else if (userIndicator instanceof RelativeStrengthIndex2) {
+            } else if (userIndicator.type == IndicatorEnum.RelativeStrengthIndex2) {
 
-            } else if (userIndicator instanceof CommodityChannelIndicator) {
+            } else if (userIndicator.type == IndicatorEnum.CommodityChannelIndicator) {
 
-            } else if (userIndicator instanceof Oscillator) {
+            } else if (userIndicator.type == IndicatorEnum.Oscillator) {
 
-            } else if (userIndicator instanceof PriceChannelR) {
+            } else if (userIndicator.type == IndicatorEnum.PriceChannelR) {
 
-            } else if (userIndicator instanceof TrueChange) {
+            } else if (userIndicator.type == IndicatorEnum.TrueChange) {
 
-            } else if (userIndicator instanceof AverageTrueChange) {
+            } else if (userIndicator.type == IndicatorEnum.AverageTrueChange) {
 
-            } else if (userIndicator instanceof MoneyFlowOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.MoneyFlowOverPeriod) {
 
-            } else if (userIndicator instanceof AccumulateDistributionOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.AccumulateDistributionOverPeriod) {
 
-            } else if (userIndicator instanceof ChaikinOscillatorOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.ChaikinOscillatorOverPeriod) {
 
-            } else if (userIndicator instanceof ChaikinMoneyFlowOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.ChaikinMoneyFlowOverPeriod) {
 
-            } else if (userIndicator instanceof AroonOscillatorOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.AroonOscillatorOverPeriod) {
 
-            } else if (userIndicator instanceof AroonDownOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.AroonDownOverPeriod) {
 
-            } else if (userIndicator instanceof AroonUpOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.AroonUpOverPeriod) {
 
-            } else if (userIndicator instanceof TrueRangePeriod) {
+            } else if (userIndicator.type == IndicatorEnum.TrueRangePeriod) {
 
-            } else if (userIndicator instanceof FastStochasticPeriodK) {
+            } else if (userIndicator.type == IndicatorEnum.kFastStochasticPeriod) {
 
-            } else if (userIndicator instanceof StochasticD) {
+            } else if (userIndicator.type == IndicatorEnum.dStochastic) {
 
-            } else if (userIndicator instanceof StochasticDSmoothed) {
+            } else if (userIndicator.type == IndicatorEnum.DStochasticSmoothed) {
 
-            } else if (userIndicator instanceof ChaikinVolatility) {
+            } else if (userIndicator.type == IndicatorEnum.ChaikinVolatility) {
 
-            } else if (userIndicator instanceof MACDSignalK) {
+            } else if (userIndicator.type == IndicatorEnum.kMACDSignal) {
 
-            } else if (userIndicator instanceof PlusDirectionalMovementPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.PlusDirectionalMovementPeriod) {
 
-            } else if (userIndicator instanceof RateOfChangePeriod) {
+            } else if (userIndicator.type == IndicatorEnum.RateOfChangePeriod) {
 
-            } else if (userIndicator instanceof RateOfChangePeriod) {
+            } else if (userIndicator.type == IndicatorEnum.RateOfChangePeriod) {
 
-            } else if (userIndicator instanceof Kairi) {
+            } else if (userIndicator.type == IndicatorEnum.Kairi) {
 
-            } else if (userIndicator instanceof ExponentiallyWeightedMovingAverage) {
+            } else if (userIndicator.type == IndicatorEnum.ExponentiallyWeightedMovingAverage) {
 
-            } else if (userIndicator instanceof TriangularMovingAverage) {
+            } else if (userIndicator.type == IndicatorEnum.TriangularMovingAverage) {
 
-            } else if (userIndicator instanceof LinearlyWeightedMovingAverage) {
+            } else if (userIndicator.type == IndicatorEnum.LinearlyWeightedMovingAverage) {
 
-            } else if (userIndicator instanceof GeometricMovingAverage) {
+            } else if (userIndicator.type == IndicatorEnum.GeometricMovingAverage) {
 
-            } else if (userIndicator instanceof MomentumPctPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.MomentumPctPeriod) {
 
-            } else if (userIndicator instanceof CommodityChannelIndexOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.CommodityChannelIndexOverPeriod) {
 
-            } else if (userIndicator instanceof MarketFacilitationIndexOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.MarketFacilitationIndexOverPeriod) {
 
-            } else if (userIndicator instanceof BalanceOfPowerOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.BalanceOfPowerOverPeriod) {
 
-            } else if (userIndicator instanceof PriceActionOverPeriod) {
+            } else if (userIndicator.type == IndicatorEnum.PriceActionOverPeriod) {
 
             }
         }

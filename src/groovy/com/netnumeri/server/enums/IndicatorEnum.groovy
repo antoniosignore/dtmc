@@ -18,7 +18,7 @@ enum IndicatorEnum {
     RateOfChange("Rate of Change"),
     RelativeStrengthIndex("Relative Strength Index"),
     RelativeStrengthIndex2("Relative Strength Index 2"),
-    CommoditiChannelIndicator("CCI"),
+    CommodityChannelIndicator("CCI"),
     Oscillator("Oscillator"),
     PriceChannelR("Price Channel R"),
     TrueChange("True Change"),
