@@ -1,62 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" line="104" mnemonic="8" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/AccumulateDistributionOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/AroonDownOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/AroonOscillatorOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/AroonUpOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/AverageTrueChange.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/BalanceOfPowerOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/ChaikinMoneyFlowOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/ChaikinOscillatorOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/ChaikinVolatility.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/CommodityChannelIndex.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/ExponentiallyWeightedMovingAverage.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/FastStochasticPeriodK.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/GeometricMovingAverage.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Kairi.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/LinearlyWeightedMovingAverage.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/LowerBollingerBand.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/MACDSignalK.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Macd.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/MarketFacilitationIndexOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/MinusDirectionalMovementPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Momentum.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/MomentumPctPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/MoneyFlowOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/Oscillator.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/PlusDirectionalMovementPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/PriceActionOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/PriceChannelLower.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/PriceChannelOverPeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/PriceChannelR.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/PriceChannelUpper.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/RateOfChange.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/RateOfChangePeriod.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/RelativeStrengthIndex.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/RelativeStrengthIndex2.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingAverage.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SimpleMovingVariance.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SingularSpectrumPrediction.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/SingularSpectrumTrend.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/StochasticD.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/StochasticDSmoothed.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/TriangularMovingAverage.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/TrueChange.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/TrueRangePeriod.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UpperBollingerBand.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/WeightedMovingAverage.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/simpleMovingAverage/_form.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/simpleMovingAverage/create.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/simpleMovingAverage/edit.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/simpleMovingAverage/list.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/simpleMovingAverage/show.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/weightedMovingAverage/_form.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/weightedMovingAverage/create.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/weightedMovingAverage/edit.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/weightedMovingAverage/list.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/weightedMovingAverage/show.gsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/FinConstants.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/FinConstants.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDSignal.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDSignal.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MomentumPctPeriodIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MomentumPctPeriodIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelUpIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelUpIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingVarianceIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingVarianceIndicator.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/WMAIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/WMAIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" afterPath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/js/jquery.jqplot.js" afterPath="$PROJECT_DIR$/web-app/js/jquery.jqplot.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="/Dummy.txt" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380884359536" ignored="false" />
+    <file path="/Dummy.txt" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380908650835" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_common/modals/_deleteDialog.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377538656704" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/domain/promoapi/Campaigns.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379094118391" ignored="false" />
     <file path="/Campaigns.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1377969119276" ignored="false" />
@@ -66,7 +41,7 @@
     <file path="/BootStrap.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380006367237" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/conf/BootStrap.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379095190431" ignored="false" />
     <file path="/Attributes.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378069185854" ignored="false" />
-    <file path="/a.dummy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380870703079" ignored="false" />
+    <file path="/a.dummy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380911539903" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/_menu/_submenubar.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378066317021" ignored="false" />
     <file path="/Indicators.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378068193499" ignored="false" />
     <file path="/fragment.java" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380868890355" ignored="false" />
@@ -133,7 +108,7 @@
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/services/com/vodafone/publish/PublishService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379094190209" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-promo/grails-app/views/campaigns/_campaignShow.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1379094223425" ignored="false" />
     <file path="/_content.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378659650999" ignored="false" />
-    <file path="/StockController.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380884610811" ignored="false" />
+    <file path="/StockController.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380911826576" ignored="false" />
     <file path="/YahooOptionsTest.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378590052369" ignored="false" />
     <file path="/StockUtils.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378590606174" ignored="false" />
     <file path="$PROJECT_DIR$/../grailstwitter/grails-app/views/status/index.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1378632643569" ignored="false" />
@@ -308,7 +283,7 @@
     <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/preview/HTMLFlow.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009256908" ignored="false" />
     <file path="/DataCargo.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009342042" ignored="false" />
     <file path="/Layout.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009385441" ignored="false" />
-    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/enums/DynamicDashboardType.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009454422" ignored="false" />
+    <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/enums/DynamicDashboardType.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380908623284" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/src/groovy/ssp/enums/DashboardType.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380009607449" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboards/_formFirst.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380010279886" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/dashboards/_dynDashboards.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380010439575" ignored="false" />
@@ -334,6 +309,12 @@
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/i18n/messages.properties" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380871461511" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/views/VFService/_form.gsp" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380872130966" ignored="false" />
     <file path="$USER_HOME$/vodafone/blueprint-ssp/grails-app/services/com/vodafone/customconditions/CustomConditionsXSDValidatorService.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380873696185" ignored="false" />
+    <file path="/PriceChannelUpIndicator.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380910880716" ignored="false" />
+    <file path="/BollingerBandUpIndicator.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380911133159" ignored="false" />
+    <file path="/SimpleMovingVarianceIndicator.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380911265446" ignored="false" />
+    <file path="/MomentumPctPeriodIndicator.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380911361370" ignored="false" />
+    <file path="/MACDIndicator.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380911634017" ignored="false" />
+    <file path="/MACDSignal.groovy" changelist="2a185fc2-8462-4bec-8b08-6534cfe541d3" time="1380911545125" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,6 +329,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -385,7 +367,6 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -395,10 +376,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Indicator.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Indicator.groovy">
+      <file leaf-file-name="MACDIndicator.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDIndicator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="23" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+            <state line="20" column="25" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -407,28 +388,79 @@
       <file leaf-file-name="StockController.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="82" selection-start="6238" selection-end="6238" vertical-scroll-proportion="0.627907">
+            <state line="140" column="81" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.43042073">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndicatorEnum.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy">
+      <file leaf-file-name="MACDSignal.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDSignal.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="56" selection-start="1479" selection-end="1612" vertical-scroll-proportion="0.0">
+            <state line="4" column="13" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserIndicators.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="create.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/userBean/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="17" selection-start="296" selection-end="309" vertical-scroll-proportion="-3.0555556">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/user/create.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="85" selection-start="241" selection-end="241" vertical-scroll-proportion="-2.6470587">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Momentum.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Momentum.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="13" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MomentumPctPeriodIndicator.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MomentumPctPeriodIndicator.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="39" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleMovingVarianceIndicator.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingVarianceIndicator.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="60" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BollingerBandUpIndicator.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="57" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BollingerBandLowerIndicator.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandLowerIndicator.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="36" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -457,12 +489,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelLowerIndicator.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/PriceChannelOverPeriod.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelUpIndicator.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/PriceChannelUpper.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RateOfChangeOverPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/RateOfChange.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSIIndicator.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/RelativeStrengthIndex.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/RelativeStrengthIndex2.groovy" />
@@ -472,6 +498,12 @@
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/IndicatorBean.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelUpIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingVarianceIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MomentumPctPeriodIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDSignal.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDIndicator.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
       </list>
     </option>
@@ -486,10 +518,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="135" />
-    <option name="y" value="28" />
-    <option name="width" value="1465" />
-    <option name="height" value="838" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
+    <option name="width" value="1537" />
+    <option name="height" value="905" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -521,17 +553,17 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="136" />
-    <property name="project.structure.proportion" value="0.0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="155" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="135" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../grailstwitter" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="163" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1002" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1001" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1002" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="163" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="155" />
@@ -613,21 +645,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
@@ -638,25 +655,27 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -685,6 +704,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -880,24 +912,29 @@
       <created>1380836989909</created>
       <updated>1380836989909</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="user properties&#10;">
+      <created>1380884623279</created>
+      <updated>1380884623279</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="135" y="28" width="1465" height="838" extended-state="0" />
+    <frame x="64" y="-4" width="1537" height="905" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43541944" sideWeight="0.5744108" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50537634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955604" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5003367" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3368719" sideWeight="0.5659121" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32703978" sideWeight="0.49462366" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43408787" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -914,7 +951,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.505992" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.4996633" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
@@ -982,13 +1018,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Indicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="21" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.0">
@@ -1003,26 +1032,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="49" selection-start="1479" selection-end="1612" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="296" selection-end="309" vertical-scroll-proportion="-3.0555556">
+        <state line="11" column="17" selection-start="296" selection-end="309" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelUpIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="56" selection-start="1479" selection-end="1612" vertical-scroll-proportion="0.0">
+        <state line="10" column="11" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBands.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandLowerIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="36" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="57" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingVarianceIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="60" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Momentum.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/userBean/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/user/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="85" selection-start="241" selection-end="241" vertical-scroll-proportion="-2.6470587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDSignal.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="25" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MomentumPctPeriodIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="39" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="82" selection-start="6238" selection-end="6238" vertical-scroll-proportion="0.627907">
+        <state line="140" column="81" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.43042073">
           <folding />
         </state>
       </provider>

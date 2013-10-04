@@ -14,7 +14,7 @@ enum IndicatorEnum {
     SimpleMovingDivergence("Simple Moving Divergence"),
     SimpleMovingCovariance("Simple Moving Covariance"),
     Momentum("Momentum"),
-    Macd("MACD"),
+    MACD("MACD"),
     RateOfChange("Rate of Change"),
     RelativeStrengthIndex("Relative Strength Index"),
     RelativeStrengthIndex2("Relative Strength Index 2"),

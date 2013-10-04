@@ -4,9 +4,7 @@ import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.indicator.UserIndicators
-import com.netnumeri.server.finance.ta.PriceChannelUpIndicator
-import com.netnumeri.server.finance.ta.SMAIndicator
-import com.netnumeri.server.finance.ta.WMAIndicator
+import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
@@ -65,11 +63,11 @@ class StockController {
             UserIndicators userIndicator = list.get(i);
             if (userIndicator.type == IndicatorEnum.SimpleMovingAverage) {
 
-                userIndicator.indicator = new SMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
+                userIndicator.indicator = new SMAIndicator(closes, "SMA-" + userIndicator.smoothing1, userIndicator.smoothing1);
 
             } else if (userIndicator.type == IndicatorEnum.WeightedMovingAverage) {
 
-                userIndicator.indicator = new WMAIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
+                userIndicator.indicator = new WMAIndicator(closes, "SMA-" + userIndicator.smoothing1, userIndicator.smoothing1);
 
             } else if (userIndicator.type == IndicatorEnum.SingularSpectrumTrend) {
 
@@ -77,20 +75,54 @@ class StockController {
 
             } else if (userIndicator.type == IndicatorEnum.PriceChannelUpper) {
 
-                userIndicator.indicator = new PriceChannelUpIndicator(closes, "SMA-" + userIndicator.smoothing, userIndicator.smoothing);
-
+                userIndicator.indicator = new
+                PriceChannelUpIndicator(closes, "PC-Upper-" + userIndicator.order + "-" + userIndicator.k,
+                        userIndicator.order,
+                        userIndicator.k);
 
             } else if (userIndicator.type == IndicatorEnum.PriceChannelLower) {
 
+                userIndicator.indicator = new
+                PriceChannelLowerIndicator(closes, "PC-Lower-" + userIndicator.order + "-" + userIndicator.k,
+                        userIndicator.order,
+                        userIndicator.k);
+
             } else if (userIndicator.type == IndicatorEnum.UpperBollingerBand) {
+
+                userIndicator.indicator = new
+                BollingerBandUpIndicator(closes, "BB-Upper" + userIndicator.length + "-" + userIndicator.deviation,
+                        userIndicator.length,
+                        userIndicator.deviation);
 
             } else if (userIndicator.type == IndicatorEnum.LowerBollingerBand) {
 
+                userIndicator.indicator = new
+                BollingerBandLowerIndicator(closes, "BB-Lower" + userIndicator.length + "-" + userIndicator.deviation,
+                        userIndicator.length,
+                        userIndicator.deviation);
+
             } else if (userIndicator.type == IndicatorEnum.SimpleMovingVariance) {
+
+                userIndicator.indicator = new SimpleMovingVarianceIndicator(
+                        closes, "Simple Moving variance-" + userIndicator.order,
+                        userIndicator.order);
 
             } else if (userIndicator.type == IndicatorEnum.Momentum) {
 
-            } else if (userIndicator.type == IndicatorEnum.Macd) {
+                userIndicator.indicator =
+                    new MomentumPctPeriodIndicator(stockInstance, "Momentum-" + userIndicator.period, userIndicator.period)
+
+            } else if (userIndicator.type == IndicatorEnum.MACD) {
+
+                userIndicator.indicator =
+                    new MACDIndicator(closes, "MACD-" + userIndicator.period,
+                            userIndicator.smoothing1, userIndicator.smoothing2)
+
+            } else if (userIndicator.type == IndicatorEnum.kMACDSignal) {
+
+                userIndicator.indicator =
+                    new MACDSignal(closes, "MACD-" + userIndicator.period,
+                            userIndicator.smoothing1, userIndicator.smoothing2, userIndicator.smoothing3)
 
             } else if (userIndicator.type == IndicatorEnum.RateOfChange) {
 

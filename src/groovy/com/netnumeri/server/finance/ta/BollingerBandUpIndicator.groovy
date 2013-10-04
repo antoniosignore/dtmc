@@ -10,10 +10,10 @@ public class BollingerBandUpIndicator extends Indicator {
     public BollingerBandUpIndicator() {
     }
 
-    public BollingerBandUpIndicator(TimeSeries series, String name, Integer param1, double deviation) {
+    public BollingerBandUpIndicator(TimeSeries series, String name, Integer length, double deviation) {
 
         super(series, name);
-        length = param1;
+        this.length = length;
         this.deviation = deviation;
         title = "Bollinger Band Upper";
         build();

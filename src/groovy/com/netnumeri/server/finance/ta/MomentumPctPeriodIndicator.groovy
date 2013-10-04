@@ -6,9 +6,9 @@ public class MomentumPctPeriodIndicator extends Indicator {
 
     int period;
 
-    public MomentumPctPeriodIndicator(Instrument instrument, String name, Integer param1) {
+    public MomentumPctPeriodIndicator(Instrument instrument, String name, Integer period) {
         super(instrument, name);
-        period = param1;
+        this.period = period;
         title = "Momentum Pct Period";
         build();
     }

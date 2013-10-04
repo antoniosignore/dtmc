@@ -8,9 +8,9 @@ public class PriceChannelUpIndicator extends Indicator {
     int order
     double k
 
-    public PriceChannelUpIndicator(TimeSeries series, String name, Integer param1, double k) {
+    public PriceChannelUpIndicator(TimeSeries series, String name, Integer order, double k) {
         super(series, name);
-        order = param1;
+        this.order = order;
         this.k = k;
         title = "Price channel Indicator up";
         build();

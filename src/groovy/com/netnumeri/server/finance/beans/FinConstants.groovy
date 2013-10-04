@@ -424,7 +424,7 @@ public enum FinConstants {
 //    SimpleMovingCovariance,
 //    Momentum,
 //    To,
-//    Macd,
+//    MACD,
 //    RateOfChange,
 //    RelativeStrengthIndex,
 //    RelativeStrengthIndex2,

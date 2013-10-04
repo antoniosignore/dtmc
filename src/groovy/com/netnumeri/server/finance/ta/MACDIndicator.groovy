@@ -4,23 +4,23 @@ import com.netnumeri.server.finance.beans.TimeSeries
 
 public class MACDIndicator extends Indicator {
 
-    int smoothing;
+    int smoothing1;
     int smoothing2;
 
     public MACDIndicator() {
     }
 
-    public MACDIndicator(TimeSeries series, String name, Integer param1, Integer param2) {
+    public MACDIndicator(TimeSeries series, String name, Integer smoothing1, Integer smoothing2) {
         super(series, name);
-        smoothing = param1;
-        smoothing2 = param2;
+        this.smoothing1 = smoothing1;
+        this.smoothing2 = smoothing2;
         title = "MACD";
         build();
     }
 
     public void build() {
         double[] closes = series.convertToArray();
-        double[] ma12 = MovingAverage.simpleMovingAverage(closes, smoothing);
+        double[] ma12 = MovingAverage.simpleMovingAverage(closes, smoothing1);
         double[] ma26 = MovingAverage.simpleMovingAverage(closes, smoothing2);
 
         double[] macdSignal = new double[ma26.length];

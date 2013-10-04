@@ -10,10 +10,10 @@ public class SimpleMovingVarianceIndicator extends Indicator {
     public SimpleMovingVarianceIndicator() {
     }
 
-    public SimpleMovingVarianceIndicator(TimeSeries series, String name, Integer param1) {
+    public SimpleMovingVarianceIndicator(TimeSeries series, String name, Integer order) {
 
         super(series, name);
-        order = param1;
+        this.order = order;
         title = "Simple Moving Variance";
         build();
 
