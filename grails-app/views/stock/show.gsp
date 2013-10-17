@@ -22,7 +22,7 @@
 
 <section id="show-stock" class="first">
 
-    <table class="table">
+    <table class="table table-striped table-bordered table-condensed table-hover">
         <tbody>
         <tr class="prop">
             <td valign="top" class="name"><g:message code="stock.name.label" default="Name"/></td>

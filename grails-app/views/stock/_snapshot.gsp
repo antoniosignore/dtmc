@@ -1,7 +1,7 @@
 <table>
     <tr>
         <td>
-            <table class="table">
+            <table class="table table-striped table-bordered table-condensed table-hover">
                 <tr><td>Last Price</td><td>${stockInstance.snapshot.lastPrice}</td></tr>
                 <tr><td>Symbol</td><td>${stockInstance.snapshot.symbol}</td></tr>
                 <tr><td>CompanyName</td><td>${stockInstance.snapshot.companyName}</td></tr>
@@ -11,7 +11,7 @@
             </table>
         </td>
         <td>
-            <table class="table">
+            <table class="table table-striped table-bordered table-condensed table-hover">
                 <tr><td>Change</td><td>${stockInstance.snapshot.change}</td></tr>
                 <tr><td>PercentChange</td><td>${stockInstance.snapshot.percentChange}</td></tr>
                 <tr><td>Volume</td><td>${stockInstance.snapshot.volume}</td></tr>
@@ -21,7 +21,7 @@
             </table>
         </td>
         <td>
-            <table class="table">
+            <table class="table table-striped table-bordered table-condensed table-hover">
                 <tr><td>PreviousClose</td><td>${stockInstance.snapshot.previousClose}</td></tr>
                 <tr><td>TodaysOpen</td><td>${stockInstance.snapshot.todaysOpen}</td></tr>
                 <tr><td>DaysRange</td><td>${stockInstance.snapshot.daysRange}</td></tr>
@@ -31,7 +31,7 @@
             </table>
         </td>
         <td valign="top">
-            <table class="table">
+            <table class="table table-striped table-bordered table-condensed table-hover">
                 <tr><td>DividendPayDate</td><td>${stockInstance.snapshot.dividendPayDate}</td></tr>
                 <tr><td>DividendperShare</td><td>${stockInstance.snapshot.dividendperShare}</td></tr>
                 <tr><td>DividendYield</td><td>${stockInstance.snapshot.dividendYield}</td></tr>

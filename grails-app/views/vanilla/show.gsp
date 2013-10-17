@@ -13,7 +13,7 @@
 
 <section id="show-vanilla" class="first">
 
-    <table class="table">
+    <table class="table table-striped table-bordered table-condensed table-hover">
         <tbody>
 
         <tr class="prop">

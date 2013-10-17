@@ -13,12 +13,14 @@
 
 <section id="list-${domainClass.propertyName}" class="first">
 
-    <table class="table table-bordered">
+    <table class="table table-striped table-bordered table-condensed table-hover">
         <thead>
         <tr>
             <% excludedProps = Event.allEvents.toList() << 'id' << 'version'
             allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
-            props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) && !Collection.isAssignableFrom(it.type) }
+            props = domainClass.properties.findAll {
+                allowedNames.contains(it.name) && !excludedProps.contains(it.name) && !Collection.isAssignableFrom(it.type)
+            }
             Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
             props.eachWithIndex { p, i ->
                 if (i < 6) {
@@ -26,7 +28,8 @@
             <th><g:message code="${domainClass.propertyName}.${p.name}.label" default="${p.naturalName}"/></th>
             <% } else { %>
             <g:sortableColumn property="${p.name}"
-                              title="\${message(code: '${domainClass.propertyName}.${p.name}.label', default: '${p.naturalName}')}"/>
+                              title="\${message(code: '${domainClass.propertyName}.${p.name}.label', default: '${
+                                      p.naturalName}')}"/>
             <% }
             }
             } %>
@@ -38,11 +41,13 @@
                 <% props.eachWithIndex { p, i ->
                     if (i == 0) { %>
                 <td><g:link action="show"
-                            id="\${${propertyName}.id}">\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</g:link></td>
+                            id="\${${propertyName}.id}">\${fieldValue(bean: ${propertyName}, field: "${
+                            p.name}")}</g:link></td>
                 <% } else if (i < 6) {
                     if (p.type == Boolean.class || p.type == boolean.class) { %>
                 <td><g:formatBoolean boolean="\${${propertyName}.${p.name}}"/></td>
-                <% } else if (p.type == Date.class || p.type == java.sql.Date.class || p.type == java.sql.Time.class || p.type == Calendar.class) { %>
+                <%
+                    } else if (p.type == Date.class || p.type == java.sql.Date.class || p.type == java.sql.Time.class || p.type == Calendar.class) { %>
                 <td><g:formatDate date="\${${propertyName}.${p.name}}"/></td>
                 <% } else { %>
                 <td>\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</td>

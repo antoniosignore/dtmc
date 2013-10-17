@@ -14,7 +14,7 @@
 
 <section id="show-${domainClass.propertyName}" class="first">
 
-    <table class="table">
+    <table class="table table-striped table-bordered table-condensed table-hover">
         <tbody>
         <% excludedProps = Event.allEvents.toList() << 'id' << 'version'
         allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
@@ -37,10 +37,12 @@
             </td>
             <% } else if (p.manyToOne || p.oneToOne) { %>
             <td valign="top" class="value"><g:link controller="${p.referencedDomainClass?.propertyName}" action="show"
-                                                   id="\${${propertyName}?.${p.name}?.id}">\${${propertyName}?.${p.name}?.encodeAsHTML()}</g:link></td>
+                                                   id="\${${propertyName}?.${p.name}?.id}">\${${propertyName}?.${
+                        p.name}?.encodeAsHTML()}</g:link></td>
             <% } else if (p.type == Boolean.class || p.type == boolean.class) { %>
             <td valign="top" class="value"><g:formatBoolean boolean="\${${propertyName}?.${p.name}}"/></td>
-            <% } else if (p.type == Date.class || p.type == java.sql.Date.class || p.type == java.sql.Time.class || p.type == Calendar.class) { %>
+            <%
+                } else if (p.type == Date.class || p.type == java.sql.Date.class || p.type == java.sql.Time.class || p.type == Calendar.class) { %>
             <td valign="top" class="value"><g:formatDate date="\${${propertyName}?.${p.name}}"/></td>
             <% } else if (!p.type.isArray()) { %>
             <td valign="top" class="value">\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</td>

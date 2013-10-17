@@ -5,7 +5,6 @@ import com.dtmc.security.UserRole
 import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.asset.Stock
-import com.netnumeri.server.finance.indicator.SimpleMovingAverage
 import com.netnumeri.server.finance.indicator.UserIndicators
 import com.netnumeri.server.finance.utils.DateUtils
 
@@ -65,11 +64,11 @@ class BootStrap {
 
             if (UserIndicators.getAll() == null || UserIndicators.getAll().size() == 0) {
 
-                SimpleMovingAverage indicator = new SimpleMovingAverage(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma10", smoothing: 10);
-                indicator.save(flush: true, failOnError: true)
+                UserIndicators sma10 = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma10", smoothing1: 10);
+                sma10.save(flush: true, failOnError: true)
 
-                indicator = new SimpleMovingAverage(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma50", smoothing: 50);
-                indicator.save(flush: true, failOnError: true)
+                UserIndicators sma50 = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma50", smoothing1: 50);
+                sma50.save(flush: true, failOnError: true)
             }
         }
     }
