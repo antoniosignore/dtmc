@@ -9,9 +9,9 @@ public class RateOfChangeOverPeriodIndicator extends Indicator {
     public RateOfChangeOverPeriodIndicator() {
     }
 
-    public RateOfChangeOverPeriodIndicator(Instrument instrument, String name, Integer param1) {
+    public RateOfChangeOverPeriodIndicator(Instrument instrument, String name, Integer period) {
         super(instrument, name);
-        period = param1;
+        this.period = period;
         build();
     }
 

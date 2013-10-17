@@ -22,20 +22,20 @@ public class Stochastics implements Serializable {
         return ((order - d1) / (d2 - d1)) * 100D;
     }
 
-    public static double[] kFastStochasticPeriod(double[] highs, double[] lows, double[] closes, int i) {
+    public static double[] kFastStochasticPeriod(double[] highs, double[] lows, double[] closes, int periods) {
         if (highs == null || highs.length == 0) throw new IllegalArgumentException("The array highs is empty.");
         if (lows == null || lows.length == 0) throw new IllegalArgumentException("The array lows is empty.");
         if (highs.length != lows.length || lows.length != closes.length || closes.length != highs.length) {
             throw new IllegalArgumentException("The lengths of the lows and highs and close arrays should be identical.");
         }
-        if (i > highs.length)
+        if (periods > highs.length)
             throw new IllegalArgumentException("The noOfPeriods must not exceed the length of the arrays.");
-        double[] ad3 = new double[i];
-        double[] ad4 = new double[i];
-        double[] ad5 = new double[highs.length - i];
-        for (int j = 0; j < highs.length - i; j++) {
+        double[] ad3 = new double[periods];
+        double[] ad4 = new double[periods];
+        double[] ad5 = new double[highs.length - periods];
+        for (int j = 0; j < highs.length - periods; j++) {
             int k = j;
-            for (int l = 0; k < j + i; l++) {
+            for (int l = 0; k < j + periods; l++) {
                 ad3[l] = highs[k];
                 ad4[l] = lows[k];
                 k++;
@@ -74,8 +74,9 @@ public class Stochastics implements Serializable {
         return ad1;
     }
 
-    public static double[] dStochastic(double[] highs, double[] lows, double[] close, int noOfPeriods, int method, int lenghtOfMA)
-    throws RuntimeException {
+    public
+    static double[] dStochastic(double[] highs, double[] lows, double[] close, int noOfPeriods, int method, int lenghtOfMA)
+            throws RuntimeException {
         double[] ad3;
         if (highs == null || highs.length == 0) throw new IllegalArgumentException("The array highs is empty.");
         if (lows == null || lows.length == 0) throw new IllegalArgumentException("The array lows is empty.");
@@ -148,7 +149,8 @@ public class Stochastics implements Serializable {
         return ai;
     }
 
-    public static int[] crossingSignal(double[] highs, double[] lows, double[] closes, int noOfPeriods, int j, int lengthOfMA) {
+    public
+    static int[] crossingSignal(double[] highs, double[] lows, double[] closes, int noOfPeriods, int j, int lengthOfMA) {
         if (highs == null || highs.length == 0) throw new IllegalArgumentException("The array high is empty.");
         if (lows == null || lows.length == 0) throw new IllegalArgumentException("The array low is empty.");
         if (highs.length != lows.length || lows.length != closes.length || closes.length != highs.length) {

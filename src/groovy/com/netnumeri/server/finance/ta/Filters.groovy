@@ -99,11 +99,11 @@ public class Filters implements Serializable {
         return ad4;
     }
 
-    public static double priceAction(double d, double d1, double d2, double d3) {
-        if (d2 < 0.0D || d3 < 0.0D || d < 0.0D || d1 < 0.0D) {
+    public static double priceAction(double high, double low, double close, double open) {
+        if (close < 0.0D || open < 0.0D || high < 0.0D || low < 0.0D) {
             throw new IllegalArgumentException("All method's parameteres must be positive.");
         } else {
-            return ((d3 - d2) + (d3 - d) + (d3 - d1)) / 2D;
+            return ((open - close) + (open - high) + (open - low)) / 2D;
         }
     }
 
@@ -117,7 +117,6 @@ public class Filters implements Serializable {
 
         return ad4;
     }
-
 
     public static double[] finiteImpulseResponse(double[] closes, double[] weights) {
         if (closes.length - weights.length < 0) {

@@ -7,9 +7,9 @@ public class DStochasticSmoothedIndicator extends Indicator {
     int period;
     int smoothing;
 
-    public DStochasticSmoothedIndicator(Instrument instrument, String name, Integer param1, Integer smoothing) {
+    public DStochasticSmoothedIndicator(Instrument instrument, String name, Integer period, Integer smoothing) {
         super(instrument, name);
-        period = param1;
+        this.period = period;
         this.smoothing = smoothing;
         build();
     }

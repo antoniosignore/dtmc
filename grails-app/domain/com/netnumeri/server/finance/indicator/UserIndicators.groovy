@@ -17,6 +17,7 @@ public class UserIndicators implements Serializable {
     Integer smoothing1
     Integer smoothing2
     Integer smoothing3
+    Integer method
     Integer period
     Integer order
     Integer length

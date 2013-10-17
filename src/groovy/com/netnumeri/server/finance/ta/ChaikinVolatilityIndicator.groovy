@@ -5,20 +5,22 @@ import com.netnumeri.server.finance.finpojo.Instrument
 public class ChaikinVolatilityIndicator extends Indicator {
 
     int period
+    int smoothing
 
     public ChaikinVolatilityIndicator() {
     }
 
-    public ChaikinVolatilityIndicator(Instrument instrument, String name, Integer param1) {
+    public ChaikinVolatilityIndicator(Instrument instrument, String name, Integer smoothing, Integer period) {
         super(instrument, name);
-        period = param1;
+        this.smoothing = smoothing;
+        this.period = period;
         build();
     }
 
     public void build() {
         double[] highs = instrument.getHighSeries().convertToArray();
         double[] lows = instrument.getLowSeries().convertToArray();
-        double[] ad = Volatility.chaikinVolatility(highs, lows, (int) parm.parameter[0], period);
+        double[] ad = Volatility.chaikinVolatility(highs, lows, (int) smoothing, period);
         copyBackwords(ad);
     }
 

@@ -4,7 +4,6 @@ import com.netnumeri.server.finance.finpojo.Instrument
 
 public class PriceActionOverPeriodIndicator extends Indicator {
 
-
     public PriceActionOverPeriodIndicator() {
     }
 

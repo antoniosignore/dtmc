@@ -8,11 +8,11 @@ public class DStochasticIndicator extends Indicator {
     int method;
     int smoothing;
 
-    public DStochasticIndicator(Instrument instrument, String name, Integer param1, Integer method, Integer smoothing) {
+    public DStochasticIndicator(Instrument instrument, String name, Integer period, Integer method, Integer smoothing) {
         super(instrument, name);
-        period = param1;
-        method = method;
-        smoothing = smoothing;
+        this.period = period;
+        this.method = method;
+        this.smoothing = smoothing;
         build();
     }
 

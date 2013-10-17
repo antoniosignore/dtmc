@@ -11,11 +11,9 @@ public class CommodityChannelIndicator extends Indicator {
     }
 
     public CommodityChannelIndicator(TimeSeries series, String name, Integer order) {
-
         super(series, name);
         this.order = order;
         build();
-
     }
 
     public void build() {
@@ -28,24 +26,16 @@ public class CommodityChannelIndicator extends Indicator {
         }
 
         while (date != null) {
-
             if (!series.isEmpty(date)) {
-
                 add(date, IndicatorUtils.CCI(series, date, order));
-
             }
             date = series.getNextDate(date)
         }
-
     }
-
 
     public int getFirstIndicatorIndex() {
-
         return (int) order;
-
     }
-
 }
 
 
