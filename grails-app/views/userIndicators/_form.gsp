@@ -58,12 +58,12 @@
 </div>
 
 <div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'indicatorOrder', 'error')} ">
-    <label for="order" class="control-label"><g:message
-            code="userIndicators.order.label"
+    <label for="indicatorOrder" class="control-label"><g:message
+            code="userIndicators.indicatorOrder.label"
             default="Order"/></label>
 
     <div class="controls">
-        <g:field type="number" name="order" value="${userIndicatorsInstance.order}"/>
+        <g:field type="number" name="order" value="${userIndicatorsInstance.indicatorOrder}"/>
         <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'indicatorOrder', 'error')}</span>
     </div>
 </div>

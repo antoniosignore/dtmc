@@ -63,11 +63,11 @@ class StockController {
             UserIndicators ui = list.get(i);
             if (ui.type == IndicatorEnum.SimpleMovingAverage) {
 
-                ui.indicator = new SMAIndicator(closes, "SMA", ui.smoothing1);
+                ui.indicator = new SMAIndicator(closes, "Simple Moving Average", ui.smoothing1);
 
             } else if (ui.type == IndicatorEnum.WeightedMovingAverage) {
 
-                ui.indicator = new WMAIndicator(closes, "SMA", ui.smoothing1);
+                ui.indicator = new WMAIndicator(closes, ui.smoothing1);
 
             } else if (ui.type == IndicatorEnum.SingularSpectrumTrend) {
 

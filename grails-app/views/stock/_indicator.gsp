@@ -14,6 +14,6 @@
         ${indicator.indicator.getJqPlot()}
     </script>
 
-    <div id='chart_${indicator.name}' style='height:600px; width:800px;'></div>
+    <div id='chart_${indicator.name}' style='height:200px; width:400px;'></div>
 
 </div>

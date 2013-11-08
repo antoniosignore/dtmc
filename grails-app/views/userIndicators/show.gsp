@@ -57,7 +57,7 @@
         </tr>
 
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.order.label"
+            <td valign="top" class="name"><g:message code="userIndicators.indicatorOrder.label"
                                                      default="Order"/></td>
 
             <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "indicatorOrder")}</td>

@@ -37,7 +37,7 @@ class UserBean {
     }
 
     def beforeInsert() {
-        encodePassword()
+        // encodePassword()
     }
 
     def beforeUpdate() {

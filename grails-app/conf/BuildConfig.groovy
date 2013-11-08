@@ -5,6 +5,7 @@ grails.project.test.reports.dir = "target/test-reports"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
+grails.project.dependency.resolver = "maven"
 
 // uncomment (and adjust settings) to fork the JVM to isolate classpaths
 //grails.project.fork = [
@@ -42,33 +43,49 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
-        // runtime 'mysql:mysql-connector-java:5.1.22'
-
         build "gov.nist.math:jama:1.0.2"
 
-        runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
+        runtime('org.apache.jackrabbit:jackrabbit-webdav:2.2.5') {
+            exclude group: 'org.slf4j', name: 'jcl-over-slf4j'
+        }
 
         runtime('jaxen:jaxen:1.1.1') {
             exclude group: 'xerces', name: 'xmlParserAPIs'
         }
+        runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
+
+        runtime 'xalan:xalan:2.7.0'
+
+        runtime('xerces:xercesImpl:2.8.1') {
+            excludes "xml-apis"
+        }
     }
 
     plugins {
-        runtime ":hibernate:$grailsVersion"
-        build ":tomcat:$grailsVersion"
-//        runtime ":database-migration:1.3.2"
-        runtime ":fields:1.3"
+
+        runtime ":hibernate:3.6.10.2"
+        runtime ":jquery:1.8.3"
+        runtime ":resources:1.1.6"
+
+        runtime ':kickstart-with-bootstrap:0.9.6'
+        runtime ':lesscss-resources:1.3.1'
+        runtime ':font-awesome-resources:3.0'
+
+        compile ':gson:1.1.4'
+
+        build ":tomcat:7.0.42"
+        runtime ":raphael:2.0.1"
+
+        compile ':mail:1.0', {
+            excludes 'spring-test'
+        }
+        compile ":cookie:0.4"
+        compile ":cache-headers:1.1.5"
+        compile ":rest:0.8"
+
         compile ':cache:1.0.1'
-        runtime ':resources:1.2'
         runtime ':raphael:2.0.1'
         compile ':gson:1.1.4'
-//        runtime "jaxen:jaxen:1.1.1", {
-//            transitive = false
-//        }
-//        compile ":spring-security-core:1.2.7.3"
-//        compile ":kickstart-with-bootstrap:0.9.6"
-//        runtime ':jquery:1.8.3'
-//        compile ':lesscss-resources:1.3.0.3'
 
     }
 }

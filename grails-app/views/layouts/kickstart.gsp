@@ -18,10 +18,6 @@
     <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-72x72.png" sizes="72x72">
     <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-114x114.png" sizes="114x114">
 
-    <style>
-    body {
-    }
-    </style>
 
     <%-- Manual switch for the skin can be found in /view/_menu/_config.gsp --%>
     <r:require modules="jquery"/>
@@ -29,8 +25,6 @@
     <r:require modules="bootstrap_utils"/>
     <r:require modules="raphael"/>
     <r:require modules="application"/>
-
-
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
