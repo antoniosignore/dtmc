@@ -1,134 +1,119 @@
-//
-// Carousel
-// --------------------------------------------------
-
 .carousel {
+  display: block;
   position: relative;
-  margin-bottom: @baseLineHeight;
-  line-height: 1;
-}
-
-.carousel-inner {
+  //margin-bottom: @unitSize;
   overflow: hidden;
-  width: 100%;
-  position: relative;
-}
+  background-color: @grayLighter;
 
-.carousel-inner {
-
-  > .item {
-    display: none;
-    position: relative;
-    .transition(.6s ease-in-out left);
-  }
-
-  // Account for jankitude on images
-  > .item > img {
-    display: block;
-    line-height: 1;
-  }
-
-  > .active,
-  > .next,
-  > .prev {
-    display: block;
-  }
-
-  > .active {
-    left: 0;
-  }
-
-  > .next,
-  > .prev {
+  .slide {
     position: absolute;
+    left: 0;
     top: 0;
     width: 100%;
+    height: 100%;
+    display: none;
+    padding: 0;
+
+    div.subslide {
+      z-index: 2;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    img.cover {
+      width: 100%;
+      min-height: 100%;
+      z-index: 1;
+      position: absolute;
+      top: 0 !important;
+      left: 0 !important;
+    }
+
+    &:first-child {
+      display: block;
+    }
   }
 
-  > .next {
-    left: 100%;
-  }
-  > .prev {
-    left: -100%;
-  }
-  > .next.left,
-  > .prev.right {
-    left: 0;
-  }
+  .controls {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    min-width: 40px;
+    min-height: 40px;
+    width: auto;
+    height: auto;
+    margin-top: -20px;
+    font-size: 48pt;
+    font-weight: 100;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    opacity: .75;
+    z-index: 100;
 
-  > .active.left {
-    left: -100%;
-  }
-  > .active.right {
-    left: 100%;
-  }
+    &.left {
+    }
 
-}
+    &.right {
+      left: auto;
+      right: 15px;
+    }
 
-// Left/right controls for nav
-// ---------------------------
-
-.carousel-control {
-  position: absolute;
-  top: 40%;
-  left: 15px;
-  width: 40px;
-  height: 40px;
-  margin-top: -20px;
-  font-size: 60px;
-  font-weight: 100;
-  line-height: 30px;
-  color: @white;
-  text-align: center;
-  background: @grayDarker;
-  border: 3px solid @white;
-  .border-radius(23px);
-  .opacity(50);
-
-  // we can't have this transition here
-  // because webkit cancels the carousel
-  // animation if you trip this while
-  // in the middle of another animation
-  // ;_;
-  // .transition(opacity .2s linear);
-
-  // Reposition the right one
-  &.right {
-    left: auto;
-    right: 15px;
+    &:hover {
+      opacity: 1;
+    }
   }
 
-  // Hover state
-  &:hover {
-    color: @white;
-    text-decoration: none;
-    .opacity(90);
+  .markers {
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    & > ul {
+      .unstyled;
+    }
+
+    li {
+      display: block;
+      float: left;
+      margin-right: 5px;
+
+      a {
+        background-color: @white;
+        display: block;
+        float: left;
+        border: 1px @white solid;
+      }
+
+      &.active a {
+        background-color: @amber;
+      }
+    }
+
+    &.default {
+      & > ul > li > a {
+        width: 32px;
+        height: 6px;
+      }
+    }
+    &.cycle {
+      & > ul > li > a {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+    }
+    &.square {
+      & > ul > li > a {
+        .square(24px);
+      }
+    }
   }
-}
-
-// Caption for text below images
-// -----------------------------
-
-.carousel-caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 15px;
-  background: @grayDark;
-  background: rgba(0, 0, 0, .75);
-}
-
-.carousel-caption h4,
-.carousel-caption p {
-  color: @white;
-  line-height: @baseLineHeight;
-}
-
-.carousel-caption h4 {
-  margin: 0 0 5px;
-}
-
-.carousel-caption p {
-  margin-bottom: 0;
 }
