@@ -12,7 +12,7 @@ import java.text.ParseException
 
 class SSAAnalysisTest {
 
-    public static final String TICKER = "BUD"
+    public static final String TICKER = "IBM"
     public static final String TOP_DI = "/home/antonio/timeplot/"
     String dir
     Instrument stock
@@ -32,12 +32,6 @@ class SSAAnalysisTest {
 
         FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
         FileUtils.writeStringToFile(new File(dir + "stock.raw"), closes.getNoDateSeries())
-
-    }
-
-
-    @Test
-    public void testSSAIndicators() throws IOException, ParseException {
 
         SSAStudy.study(stock, 50);
 

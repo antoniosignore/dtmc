@@ -4,7 +4,9 @@ enum IndicatorEnum {
 
     SimpleMovingAverage("Simple Moving Average"),
     WeightedMovingAverage("Weighted Moving Average"),
-    SingularSpectrumTrend("Singular Spectrum Trend"),
+    SingularSpectrumFirstComponent("Singular Spectrum First Component"),
+    SingularSpectrumSecondComponent("Singular Spectrum Second Component"),
+    SingularSpectrumFirstSecondComponent("Singular Spectrum First Second Component"),
     SingularSpectrumPrediction("Singular Spectrum Prediction"),
     PriceChannelUpper("Price Channel Upper"),
     PriceChannelLower("Price Channel Lower"),

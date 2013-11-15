@@ -47,7 +47,6 @@ class StockController {
             return
         }
 
-
         Date da = DateUtils.Date("11/1/2012");
         Date a = DateUtils.today();
 
@@ -67,9 +66,22 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.WeightedMovingAverage) {
 
-                ui.indicator = new WMAIndicator(closes, ui.smoothing1);
+                ui.indicator = new WMAIndicator(closes, "Weighted Moving Average", ui.smoothing1);
 
-            } else if (ui.type == IndicatorEnum.SingularSpectrumTrend) {
+            } else if (ui.type == IndicatorEnum.SingularSpectrumFirstComponent) {
+
+                List<Integer> components = [0]
+                ui.indicator = new SSAComponentsIndicator(closes, "SSA-0", ui.period, components);
+
+            } else if (ui.type == IndicatorEnum.SingularSpectrumSecondComponent) {
+
+                List<Integer> components = [1]
+                ui.indicator = new SSAComponentsIndicator(closes, "SSA-0", ui.period, components);
+
+            } else if (ui.type == IndicatorEnum.SingularSpectrumFirstSecondComponent) {
+
+                List<Integer> components = [0, 1]
+                ui.indicator = new SSAComponentsIndicator(closes, "SSA-0", ui.period, components);
 
             } else if (ui.type == IndicatorEnum.SingularSpectrumPrediction) {
 

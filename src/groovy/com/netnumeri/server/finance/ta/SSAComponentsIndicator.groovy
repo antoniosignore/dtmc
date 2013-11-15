@@ -5,12 +5,10 @@ import com.netnumeri.server.finance.ssa.SSAAnalysis
 
 public class SSAComponentsIndicator extends Indicator {
 
-    int window
-
-    public SSAComponentsIndicator(TimeSeries series, String name, SSAAnalysis analysis, List<Integer> components) {
+    public SSAComponentsIndicator(TimeSeries series, String name, Integer window, List<Integer> components) {
         setName(name);
+        SSAAnalysis analysis = new SSAAnalysis(series.convertToList(), window)
         this.series = series
-        this.window = window
         copyBackwords(analysis.getEigenComponents(components));
     }
 

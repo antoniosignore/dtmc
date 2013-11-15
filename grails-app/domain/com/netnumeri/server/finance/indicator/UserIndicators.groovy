@@ -18,6 +18,8 @@ public class UserIndicators implements Serializable {
     Integer smoothing2
     Integer smoothing3
     Integer period
+    Integer component
+    String components
     Integer method
     Integer indicatorOrder
     Integer length

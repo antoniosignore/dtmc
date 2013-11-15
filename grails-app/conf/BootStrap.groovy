@@ -69,6 +69,20 @@ class BootStrap {
 
                 UserIndicators sma50 = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma50", smoothing1: 50);
                 sma50.save(flush: true, failOnError: true)
+
+                UserIndicators wma50 = new UserIndicators(user: adminUser, type: IndicatorEnum.WeightedMovingAverage, name: "wma50", smoothing1: 50);
+                wma50.save(flush: true, failOnError: true)
+
+                UserIndicators ssa0 = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumFirstComponent, name: "ssa0", period: 50);
+                ssa0.save(flush: true, failOnError: true)
+
+                UserIndicators ssa1 = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumSecondComponent, name: "ssa1", period: 50);
+                ssa1.save(flush: true, failOnError: true)
+
+                UserIndicators ssa01 = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumFirstSecondComponent, name: "ssa01", period: 50);
+                ssa01.save(flush: true, failOnError: true)
+
+
             }
         }
     }

@@ -412,7 +412,7 @@ public enum FinConstants {
 
 //    SimpleMovingAverage,
 //    WeightedMovingAverage,
-//    SingularSpectrumTrend,
+//    SingularSpectrumFirstComponent,
 //    SingularSpectrumPrediction,
 //    PriceChannelUpper,
 //    PriceChannelLower,

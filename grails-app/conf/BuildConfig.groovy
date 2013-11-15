@@ -20,7 +20,8 @@ grails.project.dependency.resolution = {
     }
     log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
-    legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
+    legacyResolve false
+    // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
@@ -45,20 +46,8 @@ grails.project.dependency.resolution = {
 
         build "gov.nist.math:jama:1.0.2"
 
-        runtime('org.apache.jackrabbit:jackrabbit-webdav:2.2.5') {
-            exclude group: 'org.slf4j', name: 'jcl-over-slf4j'
-        }
-
-        runtime('jaxen:jaxen:1.1.1') {
-            exclude group: 'xerces', name: 'xmlParserAPIs'
-        }
         runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
 
-        runtime 'xalan:xalan:2.7.0'
-
-        runtime('xerces:xercesImpl:2.8.1') {
-            excludes "xml-apis"
-        }
     }
 
     plugins {
@@ -84,8 +73,6 @@ grails.project.dependency.resolution = {
         compile ":rest:0.8"
 
         compile ':cache:1.0.1'
-        runtime ':raphael:2.0.1'
-        compile ':gson:1.1.4'
 
     }
 }
