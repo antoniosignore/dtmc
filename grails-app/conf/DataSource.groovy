@@ -30,7 +30,7 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop"
+            dbCreate = "none"
             username = "dtmc_dev"
             password = "dtmc_dev"
 
@@ -45,7 +45,7 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
+            dbCreate = "none"
             username = "dtmc"
             password = "dtmc"
         }

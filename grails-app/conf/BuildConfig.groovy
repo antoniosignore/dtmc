@@ -53,6 +53,8 @@ grails.project.dependency.resolution = {
     plugins {
 
         runtime ":hibernate:3.6.10.2"
+        build ":tomcat:7.0.42"
+
         runtime ":jquery:1.8.3"
         runtime ":resources:1.1.6"
 
@@ -62,7 +64,6 @@ grails.project.dependency.resolution = {
 
         compile ':gson:1.1.4'
 
-        build ":tomcat:7.0.42"
         runtime ":raphael:2.0.1"
 
         compile ':mail:1.0', {
