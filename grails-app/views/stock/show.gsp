@@ -41,7 +41,7 @@
     <g:render template="candlestick"/>
 
     <div id="messages">
-        <dtmc:renderIndicators indicators="${indicators}"/>
+        <dtmc:indicators indicators="${indicators}"/>
     </div>
 
 </section>

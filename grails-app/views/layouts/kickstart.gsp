@@ -52,8 +52,9 @@
 
 <div class="container-fluid">
     <div class="row-fluid">
-        <g:render template="/layouts/promoleftbar"/>
+        <g:render template="/layouts/leftbar"/>
         <g:render template="/layouts/content"/>
+        <g:render template="/layouts/rightbar"/>
     </div>
 
 </div>

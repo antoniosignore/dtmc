@@ -1,3 +1,5 @@
+Counter : ${indicatorCounter}
+
 <div class="statusMessage" id="message_${indicatorCounter}">
 
     <script class="code" language="javascript" type="text/javascript">
