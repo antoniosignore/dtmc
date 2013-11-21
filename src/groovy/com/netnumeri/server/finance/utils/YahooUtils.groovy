@@ -409,6 +409,206 @@ public class YahooUtils {
         return snap;
     }
 
+    private static Map<String, Object> toSnapshotMap(String line, String delimiter) {
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        StringTokenizer stringtokenizer = new StringTokenizer(line, delimiter, true);
+        String token = null;
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+        }
+
+        map.put("Symbol", token)
+
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Company Name", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Last Price", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Last Trade", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Last Trade Time", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Change", token)
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+            map.put("Percent", token)
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Volume", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+            map.put("Average Daily Volume", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Bid", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Ask", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Previous Close", token)
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Today Open", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Day Range", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Year Week Range", token)
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Earnings x Share", token)
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("P/E Ratio", token)
+        }
+
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Dividend Pay Date", token)
+        }
+
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Dividend x Share", token)
+        }
+
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Dividend yield", token)
+
+
+        }
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+            token = stringtokenizer.nextToken();
+
+            map.put("Market Capitalization", token)
+        }
+
+        if (stringtokenizer.hasMoreTokens()) {
+            token = stringtokenizer.nextToken();
+            if (token.equalsIgnoreCase(delimiter)) {
+                token = stringtokenizer.nextToken();
+            }
+
+            map.put("Stock Exchange", token)
+
+        }
+        return map;
+    }
+
     public static YahooInstantSnapshot getCompanySnapshot(String s) {
         try {
             String completeUrl = "http://download.finance.yahoo.com/d/quotes.csv";
@@ -425,6 +625,28 @@ public class YahooUtils {
                 InputStream is = connection.getInputStream();
                 String line = getLineFromURL(is);
                 return toSnapshot(line, ",");
+            }
+        } catch (IOException e) {
+        }
+        return null;
+    }
+
+    public static Map<String, Object> getCompanySnapshotMap(String s) {
+        try {
+            String completeUrl = "http://download.finance.yahoo.com/d/quotes.csv";
+            URL url = new URL(completeUrl);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setUseCaches(false);
+            connection.setRequestMethod("POST");
+            connection.setDoOutput(true);
+            OutputStreamWriter os = new OutputStreamWriter(connection.getOutputStream());
+            os.flush();
+            os.write("f=snl1d1t1c1p2va2bapomwerr1dyj1x&s=" + s);
+            os.close();
+            if (connection.getResponseCode() == 200) {
+                InputStream is = connection.getInputStream();
+                String line = getLineFromURL(is);
+                return toSnapshotMap(line, ",");
             }
         } catch (IOException e) {
         }
