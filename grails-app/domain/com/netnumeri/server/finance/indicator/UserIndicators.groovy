@@ -19,10 +19,12 @@ public class UserIndicators implements Serializable {
     Integer smoothing3
     Integer period
     Integer component
-    String components
     Integer method
     Integer indicatorOrder
     Integer length
+
+    String components
+
     Double deviation
     Double k
 

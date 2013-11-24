@@ -33,6 +33,18 @@
 
     <%-- For Javascript see end of body --%>
 
+    <style type="text/css">
+    .item {
+        width: 25%;
+    }
+
+    .item.w2 {
+        width: 50%;
+    }
+    </style>
+
+    <r:external uri="/js/masonry.pkgd.min.js"/>
+
     <r:layoutResources/>
     <g:layoutHead/>
 </head>

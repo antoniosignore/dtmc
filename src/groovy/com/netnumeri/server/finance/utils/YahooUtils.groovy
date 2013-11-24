@@ -609,7 +609,7 @@ public class YahooUtils {
         return map;
     }
 
-    public static YahooInstantSnapshot getCompanySnapshot(String s) {
+    public static YahooInstantSnapshot getCompanySnapshot(String ticker) {
         try {
             String completeUrl = "http://download.finance.yahoo.com/d/quotes.csv";
             URL url = new URL(completeUrl);
@@ -619,7 +619,7 @@ public class YahooUtils {
             connection.setDoOutput(true);
             OutputStreamWriter os = new OutputStreamWriter(connection.getOutputStream());
             os.flush();
-            os.write("f=snl1d1t1c1p2va2bapomwerr1dyj1x&s=" + s);
+            os.write("f=snl1d1t1c1p2va2bapomwerr1dyj1x&s=" + ticker);
             os.close();
             if (connection.getResponseCode() == 200) {
                 InputStream is = connection.getInputStream();
