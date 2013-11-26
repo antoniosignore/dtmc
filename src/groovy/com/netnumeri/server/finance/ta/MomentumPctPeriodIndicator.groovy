@@ -13,7 +13,7 @@ public class MomentumPctPeriodIndicator extends Indicator {
     }
 
     public void build() {
-        double[] closes = instrument.getCloseSeries().convertToArray();
+        double[] closes = instrument.closeSeries().convertToArray();
         double[] ar = Momentum.momentumPctPeriod(closes, period);
         copyBackwords(ar);
     }
