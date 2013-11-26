@@ -453,7 +453,7 @@ public enum FinConstants {
 //    dStochastic,
 //    DStochasticSmoothed,
 //    ChaikinVolatility,
-//    kMACDSignal,
+//    MACDSignal,
 //    PlusDirectionalMovementPeriod,
 //    RateOfChangePeriod,
 //    PriceActionOverPeriod,

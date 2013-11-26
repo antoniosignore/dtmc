@@ -81,7 +81,7 @@ class StockController {
             } else if (ui.type == IndicatorEnum.SingularSpectrumFirstSecondComponent) {
 
                 List<Integer> components = [0, 1]
-                ui.indicator = new SSAComponentsIndicator(closes, "SSA-0", ui.period, components);
+                ui.indicator = new SSAComponentsIndicator(closes, "SSA-01", ui.period, components);
 
             } else if (ui.type == IndicatorEnum.SingularSpectrumPrediction) {
 
@@ -113,7 +113,7 @@ class StockController {
 
                 ui.indicator = new MACDIndicator(closes, "MACD", ui.smoothing1, ui.smoothing2)
 
-            } else if (ui.type == IndicatorEnum.kMACDSignal) {
+            } else if (ui.type == IndicatorEnum.MACDSignal) {
 
                 ui.indicator = new MACDSignal(closes, "MACD-Signal", ui.smoothing1, ui.smoothing2, ui.smoothing3)
 
@@ -203,7 +203,7 @@ class StockController {
 
                 ui.indicator = new ChaikinVolatilityIndicator(stockInstance, "Chaikin Volatility Indicator", ui.smoothing1, ui.period)
 
-            } else if (ui.type == IndicatorEnum.kMACDSignal) {
+            } else if (ui.type == IndicatorEnum.MACDSignal) {
 
                 ui.indicator = new MACDSignal(closes, "MACD Signal Indicator", ui.smoothing1, ui.smoothing2, ui.smoothing3)
 
@@ -237,7 +237,7 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.PriceActionOverPeriod) {
 
-                ui.indicator = new PriceActionOverPeriodIndicator(stockInstance, "Prica action over period indicator")
+                ui.indicator = new PriceActionOverPeriodIndicator(stockInstance, "Price action over period indicator")
 
             }
         }
