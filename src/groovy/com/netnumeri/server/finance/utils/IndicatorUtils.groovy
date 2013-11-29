@@ -210,12 +210,12 @@ class IndicatorUtils {
     public static double CCI(TimeSeries series, Date date, int order) {
         double D = 0;
         double P;
-        double SMA;
+        double media;
         if (series.isEmpty(date)) {
             return 0;
         } else {
             P = series.getData(date);
-            SMA = SMA(series, date, order);
+            media = SMA(series, date, order);
         }
         int Count = 0;
 
@@ -223,12 +223,12 @@ class IndicatorUtils {
             if (date == null) {
                 return 0;
             }
-            D += Math.abs(series.getData(date) - SMA);
+            D += Math.abs(series.getData(date) - media);
             Count++;
             date = series.getPrevDate(date)
         }
         D /= Count;
-        return (P - SMA) / (0.015 * D);
+        return (P - media) / (0.015 * D);
     }
 
 

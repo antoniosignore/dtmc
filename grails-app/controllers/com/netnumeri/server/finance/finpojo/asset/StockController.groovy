@@ -64,6 +64,14 @@ class StockController {
 
                 ui.indicator = new SMAIndicator(closes, "Simple Moving Average", ui.smoothing1);
 
+            } else if (ui.type == IndicatorEnum.PriceChannelUpper) {
+
+                ui.indicator = new PriceChannelUpIndicator(closes, "PCUpper", ui.indicatorOrder, ui.k);
+
+            } else if (ui.type == IndicatorEnum.PriceChannelLower) {
+
+                ui.indicator = new PriceChannelLowerIndicator(closes, "PCLower", ui.indicatorOrder, ui.k);
+
             } else if (ui.type == IndicatorEnum.WeightedMovingAverage) {
 
                 ui.indicator = new WMAIndicator(closes, "Weighted Moving Average", ui.smoothing1);
@@ -84,14 +92,6 @@ class StockController {
                 ui.indicator = new SSAComponentsIndicator(closes, "SSA-01", ui.period, components);
 
             } else if (ui.type == IndicatorEnum.SingularSpectrumPrediction) {
-
-            } else if (ui.type == IndicatorEnum.PriceChannelUpper) {
-
-                ui.indicator = new PriceChannelUpIndicator(closes, "PC-Upper", ui.indicatorOrder, ui.k);
-
-            } else if (ui.type == IndicatorEnum.PriceChannelLower) {
-
-                ui.indicator = new PriceChannelLowerIndicator(closes, "PC-Lower", ui.indicatorOrder, ui.k);
 
             } else if (ui.type == IndicatorEnum.UpperBollingerBand) {
 
@@ -119,7 +119,7 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.RateOfChange) {
 
-                ui.indicator = new RateOfChangeOverPeriodIndicator(stockInstance, "MACD", ui.period)
+                ui.indicator = new RateOfChangeOverPeriodIndicator(stockInstance, "Rate of Change", ui.period)
 
             } else if (ui.type == IndicatorEnum.RelativeStrengthIndex) {
 

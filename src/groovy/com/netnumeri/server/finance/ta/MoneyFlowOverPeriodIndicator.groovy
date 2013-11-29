@@ -1,5 +1,6 @@
 package com.netnumeri.server.finance.ta
 
+import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 
 public class MoneyFlowOverPeriodIndicator extends Indicator {
@@ -10,15 +11,14 @@ public class MoneyFlowOverPeriodIndicator extends Indicator {
         super(instrument, name);
         this.instrument = instrument;
         this.period = period;
-        build();
-    }
 
-    public void build() {
+        TimeSeries series = instrument.highSeries()
+
         double[] ad = Oscillators.moneyFlowIndexOverPeriod(
-                instrument.getHighSeries().convertToArray(),
-                instrument.getLowSeries().convertToArray(),
-                instrument.getCloseSeries().convertToArray(),
-                instrument.getVolumeSeries().convertToArray(),
+                series.convertToArray(),
+                instrument.lowSeries().convertToArray(),
+                instrument.closeSeries().convertToArray(),
+                instrument.volumeSeries().convertToArray(),
                 (int) period);
         copyBackwords(ad);
     }
