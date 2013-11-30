@@ -9,13 +9,10 @@ public class TrueRangeOverPeriodIndicator extends Indicator {
 
     public TrueRangeOverPeriodIndicator(Instrument instrument, String name) {
         super(instrument, name);
-        build();
-    }
 
-    public void build() {
-        double[] highs = instrument.getHighSeries().convertToArray();
-        double[] lows = instrument.getLowSeries().convertToArray();
-        double[] closes = instrument.getCloseSeries().convertToArray();
+        double[] highs = instrument.highSeries().convertToArray();
+        double[] lows = instrument.lowSeries().convertToArray();
+        double[] closes = instrument.closeSeries().convertToArray();
         double[] ar = DirectionalMovementIndicator.trueRangePeriod(highs, lows, closes);
         copyBackwords(ar);
     }

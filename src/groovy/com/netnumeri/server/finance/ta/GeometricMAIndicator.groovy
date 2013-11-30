@@ -16,7 +16,7 @@ public class GeometricMAIndicator extends Indicator {
     }
 
     public void build() {
-        double[] closes = instrument.getCloseSeries().convertToArray();
+        double[] closes = instrument.closeSeries().convertToArray();
         double[] ar = MovingAverage.geometricMovingAverage(closes, smoothing);
         copyBackwords(ar);
     }

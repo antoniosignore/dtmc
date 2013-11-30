@@ -16,7 +16,7 @@ public class TriangularMAIndicator extends Indicator {
     }
 
     public void build() {
-        double[] closes = instrument.getCloseSeries().convertToArray();
+        double[] closes = instrument.closeSeries().convertToArray();
         double[] ar = MovingAverage.triangularMovingAverage(closes, smoothing);
         copyBackwords(ar);
     }

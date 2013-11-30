@@ -13,9 +13,9 @@ public class BalanceOfPowerIndicator extends Indicator {
     }
 
     public void build() {
-        double[] highs = instrument.getHighSeries().convertToArray();
-        double[] lows = instrument.getLowSeries().convertToArray();
-        double[] closes = instrument.getCloseSeries().convertToArray();
+        double[] highs = instrument.highSeries().convertToArray();
+        double[] lows = instrument.lowSeries().convertToArray();
+        double[] closes = instrument.closeSeries().convertToArray();
         double[] opens = instrument.getOpenSeries().convertToArray();
         double[] ar = MarketStrength.balanceOfPowerOverPeriod(highs, lows, closes, opens);
         copyBackwords(ar);

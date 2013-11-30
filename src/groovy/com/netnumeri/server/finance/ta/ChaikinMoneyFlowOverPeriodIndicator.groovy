@@ -16,10 +16,10 @@ public class ChaikinMoneyFlowOverPeriodIndicator extends Indicator {
     }
 
     public void build() {
-        double[] highs = instrument.getHighSeries().convertToArray();
-        double[] lows = instrument.getLowSeries().convertToArray();
-        double[] closes = instrument.getCloseSeries().convertToArray();
-        double[] vols = instrument.getVolumeSeries().convertToArray();
+        double[] highs = instrument.highSeries().convertToArray();
+        double[] lows = instrument.lowSeries().convertToArray();
+        double[] closes = instrument.closeSeries().convertToArray();
+        double[] vols = instrument.volumeSeries().convertToArray();
         double[] ad = AccumulateDistribute.chaikinMoneyFlowOverPeriod(highs, lows, closes, vols, period);
         copyBackwords(ad);
     }

@@ -16,9 +16,9 @@ public class ChaikinOscillatorOverPeriodIndicator extends Indicator {
     }
 
     public void build() {
-        double[] highs = instrument.getHighSeries().convertToArray();
-        double[] lows = instrument.getLowSeries().convertToArray();
-        double[] vols = instrument.getVolumeSeries().convertToArray();
+        double[] highs = instrument.highSeries().convertToArray();
+        double[] lows = instrument.lowSeries().convertToArray();
+        double[] vols = instrument.volumeSeries().convertToArray();
         double smoothing = (int) parm.parameter[0];
         double[] ad = AccumulateDistribute.chaikinOscillatorOverPeriod(highs, lows, vols, smoothing);
         copyBackwords(ad);

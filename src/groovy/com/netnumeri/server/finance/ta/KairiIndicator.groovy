@@ -16,7 +16,7 @@ public class KairiIndicator extends Indicator {
     }
 
     public void build() {
-        double[] closes = instrument.getCloseSeries().convertToArray();
+        double[] closes = instrument.closeSeries().convertToArray();
         double[] ar = MovingAverage.kairi(closes, (int) smoothing);
         copyBackwords(ar);
     }

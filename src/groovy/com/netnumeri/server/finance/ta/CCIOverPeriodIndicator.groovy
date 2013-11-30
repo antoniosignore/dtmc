@@ -16,9 +16,9 @@ public class CCIOverPeriodIndicator extends Indicator {
     }
 
     public void build() {
-        double[] highs = instrument.getHighSeries().convertToArray();
-        double[] lows = instrument.getLowSeries().convertToArray();
-        double[] volumes = instrument.getVolumeSeries().convertToArray();
+        double[] highs = instrument.highSeries().convertToArray();
+        double[] lows = instrument.lowSeries().convertToArray();
+        double[] volumes = instrument.volumeSeries().convertToArray();
         double[] ar = MeanReversion.commodityChannelIndexOverPeriod(highs, lows, volumes, period);
         copyBackwords(ar);
     }

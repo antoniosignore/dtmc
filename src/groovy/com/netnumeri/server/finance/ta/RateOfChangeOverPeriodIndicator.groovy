@@ -1,6 +1,6 @@
 package com.netnumeri.server.finance.ta
 
-import com.netnumeri.server.finance.finpojo.Instrument
+import com.netnumeri.server.finance.beans.TimeSeries
 
 public class RateOfChangeOverPeriodIndicator extends Indicator {
 
@@ -9,15 +9,11 @@ public class RateOfChangeOverPeriodIndicator extends Indicator {
     public RateOfChangeOverPeriodIndicator() {
     }
 
-    public RateOfChangeOverPeriodIndicator(Instrument instrument, String name, Integer period) {
+    public RateOfChangeOverPeriodIndicator(TimeSeries instrument, String name, Integer period) {
         super(instrument, name);
         this.period = period;
-        build();
-    }
-
-    public void build() {
         double[] ad = Oscillators.rateOfChangePeriod(
-                instrument.getCloseSeries().convertToArray(),
+                instrument.convertToArray(),
                 (int) period);
         copyBackwords(ad);
     }

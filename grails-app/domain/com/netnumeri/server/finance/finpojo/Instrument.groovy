@@ -365,15 +365,8 @@ class Instrument extends Persistable implements Serializable {
 
     // Return high time series
     public TimeSeries highSeries(Date firstDate, Date lastDate) {
-        if (firstDate != null) {
-            if (lastDate == null) {
-                lastDate = lastDay();
-            }
-            return buildHighSeries(firstDate, lastDate);
-        }
-        firstDate = firstDate();
-        lastDate = lastDate();
-        //   if (highSeriesChanged)
+        if (firstDate == null) firstDate = firstDay();
+        if (lastDate == null) lastDate = lastDay();
         highSeries = buildHighSeries(firstDate, lastDate);
         //       highSeriesChanged = false;
         return highSeries;
@@ -385,14 +378,8 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public TimeSeries lowSeries(Date firstDate, Date lastDate) {
-        if (firstDate != null) {
-            if (lastDate == null) {
-                lastDate = lastDay();
-            }
-            return buildLowSeries(firstDate, lastDate);
-        }
-        firstDate = firstDate();
-        lastDate = lastDate();
+        if (firstDate == null) firstDate = firstDay();
+        if (lastDate == null) lastDate = lastDay();
         lowSeries = buildLowSeries(firstDate, lastDate);
         return lowSeries;
     }
@@ -403,31 +390,19 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public TimeSeries closeSeries(Date firstD, Date lastD) {
-        if (firstD != null) {
-            if (lastD == null) {
-                lastD = lastDay();
-            }
-            return buildCloseSeries(firstD, lastD);
-        }
-        firstD = firstDate();
-        lastD = lastDate();
+        if (firstDate == null) firstDate = firstDay();
+        if (lastDate == null) lastDate = lastDay();
         closeSeries = buildCloseSeries(firstD, lastD);
         return closeSeries;
     }
 
     public TimeSeries openSeries() {
-        return getOpenSeries(null, null);
+        return openSeries(null, null);
     }
 
     public TimeSeries openSeries(Date firstDate, Date lastDate) {
-        if (firstDate != null) {
-            if (lastDate == null) {
-                lastDate = lastDay();
-            }
-            return buildOpenSeries(firstDate, lastDate);
-        }
-        firstDate = firstDate();
-        lastDate = lastDate();
+        if (firstDate == null) firstDate = firstDay();
+        if (lastDate == null) lastDate = lastDay();
         //  if (openSeriesChanged)
         openSeries = buildOpenSeries(firstDate, lastDate);
         //      openSeriesChanged = false;
@@ -439,14 +414,8 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public TimeSeries volumeSeries(Date firstDate, Date lastDate) {
-        if (firstDate != null) {
-            if (lastDate == null) {
-                lastDate = lastDay();
-            }
-            return buildVolumeSeries(firstDate, lastDate);
-        }
-        firstDate = firstDate();
-        lastDate = lastDate();
+        if (firstDate == null) firstDate = firstDay();
+        if (lastDate == null) lastDate = lastDay();
         volumeSeries = buildVolumeSeries(firstDate, lastDate);
         return volumeSeries;
     }
@@ -767,17 +736,12 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public double open(Date date) {
-//        return open(date(transactionDate));
         return dailyarray.get(date).openprice;
     }
 
     public double close(Date date) {
         return dailyarray.get(date).closeprice;
     }
-
-//    public double fReturn(Date transactionDate) {
-//        return fReturn(date(transactionDate));
-//    }
 
     public int volume(Date date) {
         return dailyarray.get(date).volume;
@@ -786,10 +750,6 @@ class Instrument extends Persistable implements Serializable {
     public int openInterest(Date date) {
         return dailyarray.get(date).openInterest;
     }
-
-//    public double get(Date transactionDate, int Option) {
-//        return get(date(transactionDate), Option);
-//    }
 
     public TimeSeries timeSeries(FinConstants What, Date firstDate, Date lastDate) {
         TimeSeries series = new TimeSeries();

@@ -16,7 +16,7 @@ public class AaronUpOverPeriodIndicator extends Indicator {
     }
 
     public void build() {
-        double[] highs = instrument.getHighSeries().convertToArray();
+        double[] highs = instrument.highSeries().convertToArray();
         double[] ad = Aroon.aroonUpOverPeriod(highs, period);
         copyBackwords(ad);
     }

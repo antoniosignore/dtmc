@@ -16,7 +16,7 @@ public class LineralyWeightedMAIndicator extends Indicator {
     }
 
     public void build() {
-        double[] closes = instrument.getCloseSeries().convertToArray();
+        double[] closes = instrument.closeSeries().convertToArray();
         double[] ar = MovingAverage.linearlyWeightedMovingAverage(closes, smoothing);
         copyBackwords(ar);
     }

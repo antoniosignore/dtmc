@@ -103,8 +103,8 @@ class BootStrap {
                 userIndicators.save(flush: true, failOnError: true)
 //
 ////                ui.indicator = new MomentumPctPeriodIndicator(stockInstance, "Momentum", ui.period)
-//                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.Momentum, name: "Momentum", period: 10);
-//                userIndicators.save(flush: true, failOnError: true)
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.Momentum, name: "Momentum", period: 10);
+                userIndicators.save(flush: true, failOnError: true)
 //
 ////                ui.indicator = new MACDIndicator(closes, "MACD", ui.smoothing1, ui.smoothing2)
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.MACD, name: "MACD", smoothing1: 13, smoothing2: 26);
@@ -128,12 +128,7 @@ class BootStrap {
 //
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.CommodityChannelIndicator, name: "Commodity Channel", indicatorOrder: 14);
                 userIndicators.save(flush: true, failOnError: true)
-//
-////                ui.indicator = new TrueRangeOverPeriodIndicator(stockInstance, "TrueRange")
-//
-//////                ui.indicator =
-//////                    new TrueRangeOverPeriodIndicator(closes, "TrueRange")
-//
+
 ////                ui.indicator = new MoneyFlowOverPeriodIndicator(stockInstance, "Money flow", ui.period)
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.MoneyFlowOverPeriod, name: "MoneyFlow Over Period", period: 14);
                 userIndicators.save(flush: true, failOnError: true)

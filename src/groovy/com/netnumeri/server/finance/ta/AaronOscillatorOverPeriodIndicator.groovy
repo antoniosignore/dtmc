@@ -16,8 +16,8 @@ public class AaronOscillatorOverPeriodIndicator extends Indicator {
     }
 
     public void build() {
-        double[] highs = instrument.getHighSeries().convertToArray();
-        double[] lows = instrument.getLowSeries().convertToArray();
+        double[] highs = instrument.highSeries().convertToArray();
+        double[] lows = instrument.lowSeries().convertToArray();
         double[] ad = Aroon.aroonOscillatorOverPeriod(highs, lows, period);
         copyBackwords(ad);
     }
