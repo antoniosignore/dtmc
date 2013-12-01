@@ -13,10 +13,6 @@ public class CommodityChannelIndicator extends Indicator {
     public CommodityChannelIndicator(TimeSeries series, String name, Integer order) {
         super(series, name);
         this.order = order;
-        build();
-    }
-
-    public void build() {
 
         Date date = series.getFirstDate()
         int index = 0;

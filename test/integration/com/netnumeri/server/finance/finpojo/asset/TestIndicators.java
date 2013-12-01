@@ -60,27 +60,28 @@ public class TestIndicators {
         new PriceChannelUpIndicator(closes, "PCI", indicatorOrder, k);
         new PriceChannelLowerIndicator(closes, "PCI", indicatorOrder, k);
         new TrueRangeOverPeriodIndicator(stockInstance, "TrueRange");
-        new MoneyFlowOverPeriodIndicator(stockInstance, "Money flow", period);
         new AccumulateDistributionOverPeriodIndicator(stockInstance, "Accumulate Distribution", smoothing1);
-        new ChaikinOscillatorOverPeriodIndicator(stockInstance, "ChaikinOscillatorOverPeriodIndicator", smoothing1);
-        new ChaikinMoneyFlowOverPeriodIndicator(stockInstance, "ChaikinMoneyFlowOverPeriodIndicator", smoothing1);
+        new ChaikinOscillatorOverPeriodIndicator(stockInstance, "ChaikinOscillatorOverPeriodIndicator", 0);
+        new ChaikinMoneyFlowOverPeriodIndicator(stockInstance, "ChaikinMoneyFlowOverPeriodIndicator", 10);
         new AaronOscillatorOverPeriodIndicator(stockInstance, "AaronOscillatorOverPeriodIndicator", period);
         new AaronDownOverPeriodIndicator(stockInstance, "Aaron Down Over Period Indicator", period);
         new AaronUpOverPeriodIndicator(stockInstance, "Aaron Up Over Period Indicator", period);
         new TrueRangeOverPeriodIndicator(stockInstance, "true Range Over Period Indicator");
         new KFastStochasticIndicator(stockInstance, "K Fast Stochastic Indicator", period);
-        new DStochasticIndicator(stockInstance, "D Stochastic Indicator", period, method, smoothing1);
+        new DStochasticIndicator(stockInstance, "D Stochastic Indicator", period, 1, smoothing1);
         new DStochasticSmoothedIndicator(stockInstance, "D Stochastic Smoothed Indicator", period, smoothing1);
         new ChaikinVolatilityIndicator(stockInstance, "Chaikin Volatility Indicator", smoothing1, period);
         new MACDSignal(closes, "MACD Signal Indicator", smoothing1, smoothing2, smoothing3);
         new PlusDMIndicator(stockInstance, "Plus DMI Indicator");
 //        new RateOfChangeOverPeriodIndicator(stockInstance, "Rate of Change Indicator", period);
-        new KairiIndicator(stockInstance, "Kairi Indicator", smoothing1);
+        //new KairiIndicator(closes, "Kairi Indicator", Integer.getInteger("10"));
 //        new MomentumPctPeriodIndicator(stockInstance, "Momentum Pct Period Indicator", period);
         new CommodityChannelIndicator(closes, "CCI", indicatorOrder);
         new MarketFacilitationIndexIndicator(stockInstance, "Market Facilitation Index Indicator");
         new BalanceOfPowerIndicator(stockInstance, "Balance of Power Indicator");
         new PriceActionOverPeriodIndicator(stockInstance, "Price action over period indicator");
+
+        new MoneyFlowOverPeriodIndicator(stockInstance, "Money flow", 10);
 
     }
 }

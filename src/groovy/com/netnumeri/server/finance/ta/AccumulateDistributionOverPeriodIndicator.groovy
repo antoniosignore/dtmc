@@ -15,7 +15,7 @@ public class AccumulateDistributionOverPeriodIndicator extends Indicator {
         double[] ad = AccumulateDistribute.accumulateDistributionOverPeriod(
                 instrument.highSeries().convertToArray(),
                 instrument.lowSeries().convertToArray(),
-                instrument.volumeSeries().convertToArray(), (int) parm.parameter[0]);
+                instrument.volumeSeries().convertToArray(), smoothing);
         copyBackwords(ad);
     }
 
