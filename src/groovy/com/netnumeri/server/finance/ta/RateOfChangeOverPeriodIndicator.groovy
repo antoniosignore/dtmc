@@ -6,9 +6,6 @@ public class RateOfChangeOverPeriodIndicator extends Indicator {
 
     int period
 
-    public RateOfChangeOverPeriodIndicator() {
-    }
-
     public RateOfChangeOverPeriodIndicator(TimeSeries instrument, String name, Integer period) {
         super(instrument, name);
         this.period = period;

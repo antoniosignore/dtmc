@@ -7,18 +7,10 @@ public class MOMIndicator extends Indicator {
 
     int order;
 
-    public MOMIndicator() {
-    }
-
     public MOMIndicator(TimeSeries series, String name, Integer param1) {
 
         super(series, name);
         order = param1;
-        build();
-
-    }
-
-    public void build() {
 
         Date date = series.getFirstDate()
         int index = 0;

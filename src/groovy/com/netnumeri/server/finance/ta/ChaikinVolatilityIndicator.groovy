@@ -7,9 +7,6 @@ public class ChaikinVolatilityIndicator extends Indicator {
     int period
     int smoothing
 
-    public ChaikinVolatilityIndicator() {
-    }
-
     public ChaikinVolatilityIndicator(Instrument instrument, String name, Integer smoothing, Integer period) {
         super(instrument, name);
         this.smoothing = smoothing;

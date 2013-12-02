@@ -7,9 +7,6 @@ public class SimpleMovingVarianceIndicator extends Indicator {
 
     int order;
 
-    public SimpleMovingVarianceIndicator() {
-    }
-
     public SimpleMovingVarianceIndicator(TimeSeries series, String name, Integer order) {
 
         super(series, name);

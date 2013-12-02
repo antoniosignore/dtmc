@@ -12,11 +12,6 @@ public class BollingerBandMiddleIndicator extends Indicator {
         super(series, name);
         length = param1;
         this.deviation = deviation;
-        build();
-
-    }
-
-    public void build() {
 
         Date date = series.getFirstDate()
         int index = 0;

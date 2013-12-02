@@ -6,18 +6,10 @@ public class RSIIndicator extends Indicator {
 
     int periodLength
 
-    public RSIIndicator() {
-    }
-
     public RSIIndicator(TimeSeries series, String name, Integer periodLength) {
 
         super(series, name);
         this.periodLength = periodLength;
-        build();
-
-    }
-
-    public void build() {
 
         Date date = series.getFirstDate()
         int index = 0;
@@ -52,19 +44,12 @@ public class RSIIndicator extends Indicator {
         }
 
         double change = gains + losses;
-
         double value = (change == 0) ? 50 : (100 * gains / change);
-
-        println "value = $value"
-
         return value;
     }
 
-
     public int getFirstIndicatorIndex() {
-
         return (int) periodLength + 1;
-
     }
 
 }

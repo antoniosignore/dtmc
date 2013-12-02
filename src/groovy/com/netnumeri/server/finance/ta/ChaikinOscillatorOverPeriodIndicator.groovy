@@ -6,9 +6,6 @@ public class ChaikinOscillatorOverPeriodIndicator extends Indicator {
 
     int smoothing;
 
-    public ChaikinOscillatorOverPeriodIndicator() {
-    }
-
     public ChaikinOscillatorOverPeriodIndicator(Instrument instrument, String name, Integer smoothing) {
         super(instrument, name);
         this.smoothing = smoothing;

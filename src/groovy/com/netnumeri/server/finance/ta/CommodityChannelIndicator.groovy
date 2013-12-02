@@ -7,9 +7,6 @@ public class CommodityChannelIndicator extends Indicator {
 
     int order
 
-    public CommodityChannelIndicator() {
-    }
-
     public CommodityChannelIndicator(TimeSeries series, String name, Integer order) {
         super(series, name);
         this.order = order;

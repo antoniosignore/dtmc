@@ -7,9 +7,6 @@ public class BollingerBandUpIndicator extends Indicator {
     int length
     double deviation
 
-    public BollingerBandUpIndicator() {
-    }
-
     public BollingerBandUpIndicator(TimeSeries series, String name, Integer length, double deviation) {
 
         super(series, name);
@@ -62,7 +59,6 @@ public class BollingerBandUpIndicator extends Indicator {
 
         return sum / length + deviations * stDev;
     }
-
 
 
     public int getFirstIndicatorIndex() {

@@ -2,13 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/KairiIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/KairiIndicator.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/TestIndicators.java" afterPath="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/TestIndicators.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/userIndicators/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/userIndicators/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/userIndicators/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/userIndicators/show.gsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/LineralyWeightedMAIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/LinerlyWeightedMAIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronDownOverPeriodIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronDownOverPeriodIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronOscillatorOverPeriodIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronOscillatorOverPeriodIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronUpOverPeriodIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronUpOverPeriodIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AccumulateDistributionOverPeriodIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AccumulateDistributionOverPeriodIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BalanceOfPowerIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BalanceOfPowerIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandLowerIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandLowerIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandMiddleIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandMiddleIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CCIOverPeriodIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CCIOverPeriodIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinMoneyFlowOverPeriodIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinMoneyFlowOverPeriodIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinOscillatorOverPeriodIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinOscillatorOverPeriodIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinVolatilityIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinVolatilityIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CommodityChannelIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CommodityChannelIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/DStochasticSmoothedIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/DStochasticSmoothedIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/EWMAIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/EWMAIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/GeometricMAIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/GeometricMAIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDSignal.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDSignal.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MOMIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MOMIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MarketFacilitationIndexIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MarketFacilitationIndexIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MinusDMIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MinusDMIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceActionOverPeriodIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceActionOverPeriodIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelLowerIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelLowerIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelUpIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelUpIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSI2Indicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSI2Indicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSIIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSIIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RateOfChangeOverPeriodIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RateOfChangeOverPeriodIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingDeviationIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingDeviationIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingVarianceIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingVarianceIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TradeOscillatorIndicator.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TradeOscillatorIndicator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/indicator/TrendDivergence.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/indicator/TrendDivergence.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -124,91 +151,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestIndicators.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/TestIndicators.java">
+      <file leaf-file-name="SMAIndicator.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="57" selection-start="4210" selection-end="4210" vertical-scroll-proportion="0.49822065" vertical-offset="1060" max-vertical-offset="1395">
+            <state line="11" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RateOfChangeOverPeriodIndicator.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RateOfChangeOverPeriodIndicator.groovy">
+      <file leaf-file-name="SSAComponentsIndicator.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SSAComponentsIndicator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="44" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+            <state line="5" column="13" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KairiIndicator.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/KairiIndicator.groovy">
+      <file leaf-file-name="SSASeriesPredictionIndicator.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SSASeriesPredictionIndicator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="38" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="5" column="13" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovingAverageClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/MovingAverageClient.java">
+      <file leaf-file-name="Stochastics.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Stochastics.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="513" column="24" selection-start="29380" selection-end="29380" vertical-scroll-proportion="0.0" vertical-offset="7632" max-vertical-offset="9540">
+            <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3045">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovingAverage.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MovingAverage.groovy">
+      <file leaf-file-name="TradeInfo.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TradeInfo.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="245" column="22" selection-start="8586" selection-end="8586" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3765">
+            <state line="5" column="13" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
+      <file leaf-file-name="TriangularMAIndicator.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TriangularMAIndicator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="239" column="108" selection-start="10291" selection-end="10291" vertical-scroll-proportion="0.0" vertical-offset="2801" max-vertical-offset="5085">
+            <state line="4" column="13" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserIndicators.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
+      <file leaf-file-name="TradeOscillatorIndicator.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TradeOscillatorIndicator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="62" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="630">
+            <state line="10" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoneyFlowOverPeriodIndicator.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MoneyFlowOverPeriodIndicator.groovy">
+      <file leaf-file-name="Volatility.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Volatility.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="510">
+            <state line="3" column="13" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1650">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Oscillators.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Oscillators.groovy">
+      <file leaf-file-name="Volume.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Volume.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="0" selection-start="3058" selection-end="3058" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2430">
+            <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FiltersClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/FiltersClient.java">
+      <file leaf-file-name="WMAIndicator.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/WMAIndicator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="355" column="66" selection-start="19156" selection-end="19156" vertical-scroll-proportion="0.0" vertical-offset="5325" max-vertical-offset="6390">
+            <state line="4" column="13" selection-start="108" selection-end="108" vertical-scroll-proportion="0.098684214" vertical-offset="0" max-vertical-offset="608">
               <folding />
             </state>
           </provider>
@@ -237,57 +264,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_leftbar.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_rightbar.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/page.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/fiveblocks.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/templates/homepage.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/oneblock.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/twoblocks.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/templates/productlist.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/templates/productview.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooUtils.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-        <option value="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/IndicatorUtils.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MomentumPctPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronDownOverPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/GeometricMAIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/LineralyWeightedMAIndicator.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TriangularMAIndicator.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TrueRangeOverPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronOscillatorOverPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronUpOverPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinVolatilityIndicator.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/DStochasticIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/DStochasticSmoothedIndicator.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/KFastStochasticIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MinusDMIndicator.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PlusDMIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceActionOverPeriodIndicator.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CCIOverPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinMoneyFlowOverPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MarketFacilitationIndexIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CommodityChannelIndicator.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Indicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AccumulateDistributionOverPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinOscillatorOverPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BalanceOfPowerIndicator.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MoneyFlowOverPeriodIndicator.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/KairiIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RateOfChangeOverPeriodIndicator.groovy" />
         <option value="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/TestIndicators.java" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/indicator/TrendDivergence.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronDownOverPeriodIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronOscillatorOverPeriodIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronUpOverPeriodIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AccumulateDistributionOverPeriodIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BalanceOfPowerIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandLowerIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandMiddleIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CCIOverPeriodIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinMoneyFlowOverPeriodIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinOscillatorOverPeriodIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinVolatilityIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CommodityChannelIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/DStochasticSmoothedIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/EWMAIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/GeometricMAIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/LineralyWeightedMAIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/LinerlyWeightedMAIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDSignal.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MarketFacilitationIndexIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MinusDMIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MOMIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceActionOverPeriodIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelLowerIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelUpIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RateOfChangeOverPeriodIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSI2Indicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSIIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingDeviationIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingVarianceIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TradeOscillatorIndicator.groovy" />
       </list>
     </option>
   </component>
@@ -301,8 +328,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="66" />
-    <option name="y" value="-8" />
+    <option name="x" value="135" />
+    <option name="y" value="161" />
     <option name="width" value="1363" />
     <option name="height" value="892" />
   </component>
@@ -387,7 +414,7 @@
       <recent name="$PROJECT_DIR$/grails-app/conf" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestIndicators.testSomething">
+  <component name="RunManager" selected="Grails.Grails:dtmc">
     <configuration default="false" name="testSSAIndicators()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
       <module name="dtmc" />
       <setting name="vmparams" value="" />
@@ -819,7 +846,7 @@
       <workItem from="1385809443854" duration="6446000" />
       <workItem from="1385889601387" duration="6134000" />
       <workItem from="1385969857299" duration="528000" />
-      <workItem from="1385970983854" duration="328000" />
+      <workItem from="1385970983854" duration="3185000" />
     </task>
     <task id="LOCAL-00001" summary="added indicators in tables">
       <created>1378071164332</created>
@@ -1017,15 +1044,23 @@
       <created>1385925564386</created>
       <updated>1385925564386</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="refactoring indicators&#10;">
+      <created>1385971348221</created>
+      <updated>1385971348221</updated>
+    </task>
+    <task id="LOCAL-00051" summary="refactoring indicators&#10;">
+      <created>1385973465077</created>
+      <updated>1385973465077</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116033000" />
+    <option name="totallyTimeSpent" value="118890000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="-8" width="1363" height="892" extended-state="6" />
-    <editor active="true" />
+    <frame x="135" y="161" width="1363" height="892" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43541944" sideWeight="0.5744108" order="6" side_tool="false" content_ui="tabs" />
@@ -1041,15 +1076,15 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31829897" sideWeight="0.6300268" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5249308" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52420473" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5041551" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5041551" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50345784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50345784" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1969112" sideWeight="0.6747312" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41544402" sideWeight="0.6747312" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32365146" sideWeight="0.4996633" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24949427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1084,7 +1119,8 @@
     <MESSAGE value="user properties&#10;" />
     <MESSAGE value="added metro" />
     <MESSAGE value="added metro&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added metro&#10;" />
+    <MESSAGE value="refactoring indicators&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring indicators&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1096,324 +1132,121 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandLowerIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+        <state line="9" column="0" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$M2_REPO$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar!/org/apache/commons/logging/LogFactory.class">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandMiddleIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/tools/grails-2.3.1/lib/junit/junit/jars/junit-4.11.jar!/org/junit/internal/runners/model/EachTestNotifier.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="490" selection-end="490" vertical-scroll-proportion="-4.92" vertical-offset="42" max-vertical-offset="420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MomentumPctPeriodIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="474" selection-end="474" vertical-scroll-proportion="0.7049608" vertical-offset="0" max-vertical-offset="383">
+        <state line="14" column="0" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/tools/grails-2.3.1/lib/junit/junit/jars/junit-4.11.jar!/org/junit/runner/JUnitCore.class">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBands.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="35" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.67874795" vertical-offset="38" max-vertical-offset="645" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="0" selection-start="7715" selection-end="7715" vertical-scroll-proportion="0.0" vertical-offset="1728" max-vertical-offset="3210">
+        <state line="3" column="13" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/tools/grails-2.3.1/lib/junit/junit/jars/junit-4.11.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BollingerBandUpIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="420" selection-end="420" vertical-scroll-proportion="-4.6" vertical-offset="5" max-vertical-offset="1425" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/tools/grails-2.3.1/lib/junit/junit/jars/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="25" selection-start="2400" selection-end="2400" vertical-scroll-proportion="-4.92" vertical-offset="522" max-vertical-offset="1080" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/GeometricMAIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="37" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/LineralyWeightedMAIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="37" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TriangularMAIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="37" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronDownOverPeriodIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="35" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronOscillatorOverPeriodIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="36" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AaronUpOverPeriodIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="36" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinVolatilityIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="36" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/DStochasticIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="36" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/DStochasticSmoothedIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="36" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/KFastStochasticIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MinusDMIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PlusDMIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/FinConstants.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="55" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.2447665" vertical-offset="2893" max-vertical-offset="7140">
+        <state line="9" column="0" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CCIOverPeriodIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MarketFacilitationIndexIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="32" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelLowerIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CommodityChannelIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSIIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Indicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="43" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="1320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AccumulateDistributionOverPeriodIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="46" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinOscillatorOverPeriodIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TrueRangeOverPeriodIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="367" column="0" selection-start="11626" selection-end="11626" vertical-scroll-proportion="-1.5192307" vertical-offset="5426" max-vertical-offset="13230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/AccumulateDistribute.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="0" selection-start="9325" selection-end="9325" vertical-scroll-proportion="0.0" vertical-offset="2962" max-vertical-offset="3600">
+        <state line="8" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinMoneyFlowOverPeriodIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="525">
+        <state line="8" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Stochastics.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinOscillatorOverPeriodIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="4055" selection-end="4055" vertical-scroll-proportion="0.0" vertical-offset="997" max-vertical-offset="3045">
+        <state line="8" column="0" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ChaikinVolatilityIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1009" column="0" selection-start="35117" selection-end="35117" vertical-scroll-proportion="0.0" vertical-offset="15051" max-vertical-offset="18660">
+        <state line="9" column="0" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/BalanceOfPowerIndicator.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/CommodityChannelIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="15" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="480">
+        <state line="9" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceActionOverPeriodIndicator.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Filter.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="35" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+        <state line="25" column="31" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7710">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Filters.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="122" selection-start="4540" selection-end="4540" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="3165">
+        <state line="141" column="0" selection-start="5388" selection-end="5388" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="3165">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/OscillatorsClient.java">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/DirectionalMovementIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="52" selection-start="8787" selection-end="8787" vertical-scroll-proportion="0.0" vertical-offset="1922" max-vertical-offset="4335">
+        <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4860">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MoneyFlowOverPeriodIndicator.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/DStochasticIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="510">
+        <state line="3" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Oscillators.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/DStochasticSmoothedIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="3058" selection-end="3058" vertical-scroll-proportion="0.0" vertical-offset="743" max-vertical-offset="2430">
+        <state line="13" column="0" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/WMAIndicator.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/EWMAIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="385" selection-end="385" vertical-scroll-proportion="0.33582088" vertical-offset="0" max-vertical-offset="670">
+        <state line="13" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/ExponentialMovingAverage.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="108" selection-start="10291" selection-end="10291" vertical-scroll-proportion="0.0" vertical-offset="2801" max-vertical-offset="5085">
+        <state line="2" column="13" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/GeometricMAIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="62" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/FiltersClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="355" column="66" selection-start="19156" selection-end="19156" vertical-scroll-proportion="0.0" vertical-offset="5172" max-vertical-offset="6390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RateOfChangeOverPeriodIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="44" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/tools/grails-2.3.1/lib/junit/junit/jars/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="388" selection-end="388" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MovingAverage.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="245" column="22" selection-start="8586" selection-end="8586" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3765">
+        <state line="8" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
           <folding />
         </state>
       </provider>
@@ -1425,16 +1258,236 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/MovingAverageClient.java">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/KFastStochasticIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="513" column="24" selection-start="29380" selection-end="29380" vertical-scroll-proportion="0.0" vertical-offset="7632" max-vertical-offset="9540">
+        <state line="4" column="13" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/TestIndicators.java">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/LinerlyWeightedMAIndicator.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="57" selection-start="4210" selection-end="4210" vertical-scroll-proportion="0.49822065" vertical-offset="1060" max-vertical-offset="1395">
+        <state line="8" column="0" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MACDSignal.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MarketFacilitationIndexIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MarketStrength.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MeanReversion.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MinusDMIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Momentum.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MomentumPctPeriodIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MOMIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MoneyFlowOverPeriodIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Oscillators.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2430">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Pattern.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PairTrading.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5490">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceActionOverPeriodIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelLowerIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/PriceChannelUpIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="48" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding>
+            <marker date="1385974160669" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385974160669" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RateOfChangeOverPeriodIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSI2Indicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/RSIIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingDeviationIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SimpleMovingVarianceIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SSAComponentsIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SSASeriesPredictionIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Stochastics.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TradeInfo.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TriangularMAIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/TradeOscillatorIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Volatility.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Volume.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/WMAIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="108" selection-end="108" vertical-scroll-proportion="0.098684214" vertical-offset="0" max-vertical-offset="608">
           <folding />
         </state>
       </provider>

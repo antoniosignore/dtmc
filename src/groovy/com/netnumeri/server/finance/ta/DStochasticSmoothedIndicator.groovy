@@ -11,10 +11,6 @@ public class DStochasticSmoothedIndicator extends Indicator {
         super(instrument, name);
         this.period = period;
         this.smoothing = smoothing;
-        build();
-    }
-
-    public void build() {
         double[] highs = instrument.highSeries().convertToArray();
         double[] lows = instrument.lowSeries().convertToArray();
         double[] closes = instrument.closeSeries().convertToArray();

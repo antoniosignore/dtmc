@@ -6,9 +6,6 @@ public class GeometricMAIndicator extends Indicator {
 
     int smoothing;
 
-    public GeometricMAIndicator() {
-    }
-
     public GeometricMAIndicator(TimeSeries series, String name, Integer param1) {
         super(series, name);
         smoothing = param1;

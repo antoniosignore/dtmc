@@ -7,9 +7,6 @@ public class RSI2Indicator extends Indicator {
 
     int periodLength;
 
-    public RSI2Indicator() {
-    }
-
     public RSI2Indicator(TimeSeries series, String name, Integer param1) {
 
         super(series, name);

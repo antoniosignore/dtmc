@@ -6,9 +6,6 @@ public class AaronDownOverPeriodIndicator extends Indicator {
 
     int period;
 
-    public AaronDownOverPeriodIndicator() {
-    }
-
     public AaronDownOverPeriodIndicator(Instrument instrument, String name, Integer period) {
         super(instrument, name);
         this.period = period;

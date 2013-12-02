@@ -33,8 +33,6 @@ public class TrendDivergence {
 
         double value = (change == 0) ? 50 : (100 * gains / change);
 
-        println "value = $value"
-
         return value;
     }
 

@@ -7,9 +7,6 @@ public class BollingerBandLowerIndicator extends Indicator {
     int length
     double deviation
 
-    public BollingerBandLowerIndicator() {
-    }
-
     public BollingerBandLowerIndicator(TimeSeries series, String name, Integer param1, double deviation) {
 
         super(series, name);

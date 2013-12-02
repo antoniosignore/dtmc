@@ -4,9 +4,6 @@ import com.netnumeri.server.finance.finpojo.Instrument
 
 public class BalanceOfPowerIndicator extends Indicator {
 
-    public BalanceOfPowerIndicator() {
-    }
-
     public BalanceOfPowerIndicator(Instrument instrument, String name) {
         super(instrument, name);
         build();

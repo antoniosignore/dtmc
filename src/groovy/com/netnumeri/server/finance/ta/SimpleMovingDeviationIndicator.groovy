@@ -7,9 +7,6 @@ public class SimpleMovingDeviationIndicator extends Indicator {
 
     int order;
 
-    public SimpleMovingDeviationIndicator() {
-    }
-
     public SimpleMovingDeviationIndicator(TimeSeries series, String name, Integer param1) {
 
         super(series, name);

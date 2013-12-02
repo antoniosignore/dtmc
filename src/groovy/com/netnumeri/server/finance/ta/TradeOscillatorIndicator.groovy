@@ -8,9 +8,6 @@ public class TradeOscillatorIndicator extends Indicator {
     int smoothing;
     int smoothing2;
 
-    public TradeOscillatorIndicator() {
-    }
-
     public TradeOscillatorIndicator(TimeSeries series, String name, Integer param1, Integer param2) {
         super(series, name);
         smoothing = param1;

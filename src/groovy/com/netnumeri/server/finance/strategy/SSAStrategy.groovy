@@ -253,7 +253,6 @@ public class SSAStrategy extends Strategy {
 
             Backtest trader = new Backtest(getTransactionSerie(), getPortfolio(), 100000);
             double value = trader.test();
-            Util.debug("value = " + value);
             try {
 //                trader.generateCharts();
 //                Util.debug(XML.toString(XML.stringToDocument(trader.toXMLString()), true, true));

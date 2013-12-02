@@ -7,9 +7,6 @@ public class MACDIndicator extends Indicator {
     int smoothing1;
     int smoothing2;
 
-    public MACDIndicator() {
-    }
-
     public MACDIndicator(TimeSeries series, String name, Integer smoothing1, Integer smoothing2) {
         super(series, name);
         this.smoothing1 = smoothing1;

@@ -6,9 +6,6 @@ public class ChaikinMoneyFlowOverPeriodIndicator extends Indicator {
 
     int period
 
-    public ChaikinMoneyFlowOverPeriodIndicator() {
-    }
-
     public ChaikinMoneyFlowOverPeriodIndicator(Instrument instrument, String name, Integer period) {
         super(instrument, name);
         this.period = period;

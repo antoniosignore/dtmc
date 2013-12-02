@@ -12,10 +12,6 @@ public class PriceChannelLowerIndicator extends Indicator {
         super(series, name);
         this.order = order;
         this.k = k;
-        build();
-    }
-
-    public void build() {
 
         Date date = series.getFirstDate()
         int index = 0;
