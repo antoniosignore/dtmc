@@ -73,15 +73,15 @@ public class TestIndicators {
         new ChaikinVolatilityIndicator(stockInstance, "Chaikin Volatility Indicator", smoothing1, period);
         new MACDSignal(closes, "MACD Signal Indicator", smoothing1, smoothing2, smoothing3);
         new PlusDMIndicator(stockInstance, "Plus DMI Indicator");
-//        new RateOfChangeOverPeriodIndicator(stockInstance, "Rate of Change Indicator", period);
-        //new KairiIndicator(closes, "Kairi Indicator", Integer.getInteger("10"));
-//        new MomentumPctPeriodIndicator(stockInstance, "Momentum Pct Period Indicator", period);
+        new RateOfChangeOverPeriodIndicator(closes, "Rate of Change Indicator", period);
+//        new KairiIndicator(stockInstance, "Kairi Indicator", 10);
+        new MomentumPctPeriodIndicator(closes, "Momentum Pct Period Indicator", period);
         new CommodityChannelIndicator(closes, "CCI", indicatorOrder);
         new MarketFacilitationIndexIndicator(stockInstance, "Market Facilitation Index Indicator");
         new BalanceOfPowerIndicator(stockInstance, "Balance of Power Indicator");
         new PriceActionOverPeriodIndicator(stockInstance, "Price action over period indicator");
 
-        new MoneyFlowOverPeriodIndicator(stockInstance, "Money flow", 10);
+//        new MoneyFlowOverPeriodIndicator(stockInstance, "Money flow", 10);
 
     }
 }

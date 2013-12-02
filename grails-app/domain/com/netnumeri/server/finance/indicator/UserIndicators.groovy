@@ -14,19 +14,14 @@ public class UserIndicators implements Serializable {
     static transients = ["indicator"]
     Indicator indicator;
 
-    Integer smoothing1
-    Integer smoothing2
-    Integer smoothing3
-    Integer period
-    Integer component
-    Integer method
-    Integer indicatorOrder
-    Integer length
+    Integer integer1
+    Integer integer2
+    Integer integer3
 
     String components
 
-    Double deviation
-    Double k
+    Double double1
+    Double double2
 
     @Override
     public String toString() {

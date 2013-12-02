@@ -79,36 +79,36 @@
     </div>
 </div>
 
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'smoothing1', 'error')} ">
+<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'integer1', 'error')} ">
     <label for="smoothing1" class="control-label"><g:message
             code="userIndicators.smoothing1.label"
             default="Smoothing1"/></label>
 
     <div class="controls">
         <g:field type="number" name="smoothing1" value="${userIndicatorsInstance.smoothing1}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'smoothing1', 'error')}</span>
+        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'integer1', 'error')}</span>
     </div>
 </div>
 
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'smoothing2', 'error')} ">
+<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'integer2', 'error')} ">
     <label for="smoothing2" class="control-label"><g:message
             code="userIndicators.smoothing2.label"
             default="Smoothing2"/></label>
 
     <div class="controls">
         <g:field type="number" name="smoothing2" value="${userIndicatorsInstance.smoothing2}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'smoothing2', 'error')}</span>
+        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'integer2', 'error')}</span>
     </div>
 </div>
 
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'smoothing3', 'error')} ">
+<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'integer3', 'error')} ">
     <label for="smoothing3" class="control-label"><g:message
             code="userIndicators.smoothing3.label"
             default="Smoothing3"/></label>
 
     <div class="controls">
         <g:field type="number" name="smoothing3" value="${userIndicatorsInstance.smoothing3}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'smoothing3', 'error')}</span>
+        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'integer3', 'error')}</span>
     </div>
 </div>
 

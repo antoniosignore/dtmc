@@ -20,7 +20,7 @@
             <td valign="top" class="name"><g:message code="userIndicators.deviation.label"
                                                      default="Deviation"/></td>
 
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "deviation")}</td>
+            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "double1")}</td>
 
         </tr>
 
@@ -28,7 +28,7 @@
             <td valign="top" class="name"><g:message code="userIndicators.k.label"
                                                      default="K"/></td>
 
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "k")}</td>
+            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "double2")}</td>
 
         </tr>
 
@@ -76,7 +76,7 @@
             <td valign="top" class="name"><g:message code="userIndicators.smoothing1.label"
                                                      default="Smoothing1"/></td>
 
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "smoothing1")}</td>
+            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "integer1")}</td>
 
         </tr>
 
@@ -84,7 +84,7 @@
             <td valign="top" class="name"><g:message code="userIndicators.smoothing2.label"
                                                      default="Smoothing2"/></td>
 
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "smoothing2")}</td>
+            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "integer2")}</td>
 
         </tr>
 
@@ -92,7 +92,7 @@
             <td valign="top" class="name"><g:message code="userIndicators.smoothing3.label"
                                                      default="Smoothing3"/></td>
 
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "smoothing3")}</td>
+            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "integer3")}</td>
 
         </tr>
 

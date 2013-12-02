@@ -64,13 +64,13 @@ class BootStrap {
 
             if (UserIndicators.getAll() == null || UserIndicators.getAll().size() == 0) {
 
-                UserIndicators userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma10", smoothing1: 10);
+                UserIndicators userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma10", integer1: 10);
                 userIndicators.save(flush: true, failOnError: true)
 
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma50", smoothing1: 50);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma50", integer1: 50);
                 userIndicators.save(flush: true, failOnError: true)
 
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.WeightedMovingAverage, name: "wma50", smoothing1: 50);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.WeightedMovingAverage, name: "wma50", integer1: 50);
                 userIndicators.save(flush: true, failOnError: true)
 
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumFirstComponent, name: "ssa0", period: 50);
@@ -83,19 +83,19 @@ class BootStrap {
                 userIndicators.save(flush: true, failOnError: true)
 
 //                ui.indicator = new PriceChannelUpIndicator(closes, "PC-Upper", ui.indicatorOrder, ui.k);
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.PriceChannelUpper, name: "PC Upper", indicatorOrder: 10, k: 50);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.PriceChannelUpper, name: "PC Upper", indicatorOrder: 10, double2: 50);
                 userIndicators.save(flush: true, failOnError: true)
 
 //                ui.indicator = new PriceChannelLowerIndicator(closes, "PC-Lower", ui.indicatorOrder, ui.k);
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.PriceChannelLower, name: "PC Lower", indicatorOrder: 10, k: 50);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.PriceChannelLower, name: "PC Lower", indicatorOrder: 10, double2: 50);
                 userIndicators.save(flush: true, failOnError: true)
 
 //                ui.indicator = new BollingerBandUpIndicator(closes, "BB-Upper", ui.length, ui.deviation);
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.UpperBollingerBand, name: "BB Upper", length: 10, deviation: 2);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.UpperBollingerBand, name: "BB Upper", length: 10, double1: 2);
                 userIndicators.save(flush: true, failOnError: true)
 
 //                ui.indicator = new BollingerBandLowerIndicator(closes, "BB-Lower", ui.length, ui.deviation);
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.LowerBollingerBand, name: "BB Lower", length: 10, deviation: 2);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.LowerBollingerBand, name: "BB Lower", length: 10, double1: 2);
                 userIndicators.save(flush: true, failOnError: true)
 //
 ////                ui.indicator = new SimpleMovingVarianceIndicator(closes, "Simple Moving variance", ui.indicatorOrder);
@@ -107,11 +107,11 @@ class BootStrap {
                 userIndicators.save(flush: true, failOnError: true)
 //
 ////                ui.indicator = new MACDIndicator(closes, "MACD", ui.smoothing1, ui.smoothing2)
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.MACD, name: "MACD", smoothing1: 13, smoothing2: 26);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.MACD, name: "MACD", integer1: 13, integer2: 26);
                 userIndicators.save(flush: true, failOnError: true)
 //
-////                ui.indicator = new MACDSignal(closes, "MACD-Signal", ui.smoothing1, ui.smoothing2, ui.smoothing3)
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.MACDSignal, name: "MACD-Signal", smoothing1: 13, smoothing2: 26, smoothing3: 5);
+////                ui.indicator = new MACDSignal(closes, "MACD-Signal", ui.smoothing1, ui.smoothing2, ui.integer3)
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.MACDSignal, name: "MACD-Signal", integer1: 13, integer2: 26, integer3: 5);
                 userIndicators.save(flush: true, failOnError: true)
 ////
 ////                ui.indicator = new RSIIndicator(closes, "RSI", ui.period)
@@ -133,13 +133,13 @@ class BootStrap {
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.MoneyFlowOverPeriod, name: "MoneyFlow Over Period", period: 14);
                 userIndicators.save(flush: true, failOnError: true)
 //
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.ChaikinMoneyFlowOverPeriod, name: "Chaikin MoneyFlow Over Period", smoothing1: 14);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.ChaikinMoneyFlowOverPeriod, name: "Chaikin MoneyFlow Over Period", integer1: 14);
                 userIndicators.save(flush: true, failOnError: true)
 //
 ////                ui.indicator = new AccumulateDistributionOverPeriodIndicator(stockInstance, "Accumulate Distribution", ui.smoothing1)
 //
 ////                ui.indicator = new ChaikinOscillatorOverPeriodIndicator(stockInstance, "ChaikinOscillatorOverPeriodIndicator", ui.smoothing1)
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.ChaikinOscillatorOverPeriod, name: "Chaikin Oscillator Over Period", smoothing1: 14);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.ChaikinOscillatorOverPeriod, name: "Chaikin Oscillator Over Period", integer1: 14);
                 userIndicators.save(flush: true, failOnError: true)
 //
 ////                ui.indicator = new AaronOscillatorOverPeriodIndicator(stockInstance, "AaronOscillatorOverPeriodIndicator", ui.period)
