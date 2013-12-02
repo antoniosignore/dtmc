@@ -53,7 +53,7 @@ public class TestIndicators {
         new SimpleMovingVarianceIndicator(closes, "Simple Moving variance", indicatorOrder);
         new MACDIndicator(closes, "MACD", smoothing1, smoothing2);
         new MACDSignal(closes, "MACD-Signal", smoothing1, smoothing2, smoothing3);
-        new RateOfChangeOverPeriodIndicator(closes, "MACD", period);
+        new RateOfChangeOverPeriodIndicator(closes, "Rate of change", period);
         new RSIIndicator(closes, "RSI", period);
         new RSI2Indicator(closes, "RSI", period);
         new CommodityChannelIndicator(closes, "CCI", indicatorOrder);

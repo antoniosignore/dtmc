@@ -66,11 +66,11 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.PriceChannelUpper) {
 
-                ui.indicator = new PriceChannelUpIndicator(closes, "PCUpper", ui.indicatorOrder, ui.double2);
+                ui.indicator = new PriceChannelUpIndicator(closes, "PCUpper", ui.integer1, ui.double2);
 
             } else if (ui.type == IndicatorEnum.PriceChannelLower) {
 
-                ui.indicator = new PriceChannelLowerIndicator(closes, "PCLower", ui.indicatorOrder, ui.double2);
+                ui.indicator = new PriceChannelLowerIndicator(closes, "PCLower", ui.integer1, ui.double2);
 
             } else if (ui.type == IndicatorEnum.WeightedMovingAverage) {
 
@@ -95,19 +95,19 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.UpperBollingerBand) {
 
-                ui.indicator = new BollingerBandUpIndicator(closes, "BB-Upper", ui.length, ui.double1);
+                ui.indicator = new BollingerBandUpIndicator(closes, "BB-Upper", ui.integer1, ui.double1);
 
             } else if (ui.type == IndicatorEnum.LowerBollingerBand) {
 
-                ui.indicator = new BollingerBandLowerIndicator(closes, "BB-Lower", ui.length, ui.double1);
+                ui.indicator = new BollingerBandLowerIndicator(closes, "BB-Lower", ui.integer1, ui.double1);
 
             } else if (ui.type == IndicatorEnum.SimpleMovingVariance) {
 
-                ui.indicator = new SimpleMovingVarianceIndicator(closes, "Simple Moving variance", ui.indicatorOrder);
+                ui.indicator = new SimpleMovingVarianceIndicator(closes, "Simple Moving variance", ui.integer1);
 
             } else if (ui.type == IndicatorEnum.Momentum) {
 
-                ui.indicator = new MomentumPctPeriodIndicator(stockInstance, "Momentum", ui.integer1)
+                ui.indicator = new MomentumPctPeriodIndicator(closes, "Momentum", ui.integer1)
 
             } else if (ui.type == IndicatorEnum.MACD) {
 
@@ -119,7 +119,7 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.RateOfChange) {
 
-                ui.indicator = new RateOfChangeOverPeriodIndicator(stockInstance, "Rate of Change", ui.integer1)
+                ui.indicator = new RateOfChangeOverPeriodIndicator(closes, "Rate of Change", ui.integer1)
 
             } else if (ui.type == IndicatorEnum.RelativeStrengthIndex) {
 
@@ -131,7 +131,7 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.CommodityChannelIndicator) {
 
-                ui.indicator = new CommodityChannelIndicator(closes, "CCI", ui.indicatorOrder)
+                ui.indicator = new CommodityChannelIndicator(closes, "CCI", ui.integer1)
 
             } else if (ui.type == IndicatorEnum.Oscillator) {
 
@@ -140,11 +140,11 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.PriceChannelUpper) {
 
-                ui.indicator = new PriceChannelUpIndicator(closes, "PCI", ui.indicatorOrder, ui.double2)
+                ui.indicator = new PriceChannelUpIndicator(closes, "PCI", ui.integer1, ui.double2)
 
             } else if (ui.type == IndicatorEnum.PriceChannelLower) {
 
-                ui.indicator = new PriceChannelLowerIndicator(closes, "PCI", ui.indicatorOrder, ui.double2)
+                ui.indicator = new PriceChannelLowerIndicator(closes, "PCI", ui.integer1, ui.double2)
 
             } else if (ui.type == IndicatorEnum.TrueChange) {
 
@@ -193,15 +193,15 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.dStochastic) {
 
-                ui.indicator = new DStochasticIndicator(stockInstance, "D Stochastic Indicator", ui.integer1, ui.method, ui.integer1)
+                ui.indicator = new DStochasticIndicator(stockInstance, "D Stochastic Indicator", ui.integer1, ui.integer2, ui.integer3)
 
             } else if (ui.type == IndicatorEnum.DStochasticSmoothed) {
 
-                ui.indicator = new DStochasticSmoothedIndicator(stockInstance, "D Stochastic Smoothed Indicator", ui.integer1, ui.integer1)
+                ui.indicator = new DStochasticSmoothedIndicator(stockInstance, "D Stochastic Smoothed Indicator", ui.integer1, ui.integer2)
 
             } else if (ui.type == IndicatorEnum.ChaikinVolatility) {
 
-                ui.indicator = new ChaikinVolatilityIndicator(stockInstance, "Chaikin Volatility Indicator", ui.integer1, ui.integer1)
+                ui.indicator = new ChaikinVolatilityIndicator(stockInstance, "Chaikin Volatility Indicator", ui.integer1, ui.integer2)
 
             } else if (ui.type == IndicatorEnum.MACDSignal) {
 
@@ -213,7 +213,7 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.RateOfChangePeriod) {
 
-                ui.indicator = new RateOfChangeOverPeriodIndicator(stockInstance, "Rate of Change Indicator", ui.integer1)
+                ui.indicator = new RateOfChangeOverPeriodIndicator(closes, "Rate of Change Indicator", ui.integer1)
 
             } else if (ui.type == IndicatorEnum.Kairi) {
 
@@ -221,11 +221,11 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.MomentumPctPeriod) {
 
-                ui.indicator = new MomentumPctPeriodIndicator(stockInstance, "Momentum Pct Period Indicator", ui.integer1)
+                ui.indicator = new MomentumPctPeriodIndicator(closes, "Momentum Pct Period Indicator", ui.integer1)
 
             } else if (ui.type == IndicatorEnum.CommodityChannelIndexOverPeriod) {
 
-                ui.indicator = new CommodityChannelIndicator(closes, "CCI", ui.indicatorOrder)
+                ui.indicator = new CommodityChannelIndicator(closes, "CCI", ui.integer1)
 
             } else if (ui.type == IndicatorEnum.MarketFacilitationIndexOverPeriod) {
 
