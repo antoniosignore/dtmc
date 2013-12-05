@@ -18,19 +18,19 @@
 
             <th><g:message code="portfolio.club.label" default="Club"/></th>
 
-            <g:sortableColumn property="dateCreated"
-                              title="${message(code: 'portfolio.dateCreated.label', default: 'Date Created')}"/>
+            %{--<g:sortableColumn property="dateCreated"--}%
+            %{--title="${message(code: 'portfolio.dateCreated.label', default: 'Date Created')}"/>--}%
 
             <g:sortableColumn property="description"
                               title="${message(code: 'portfolio.description.label', default: 'Description')}"/>
 
-            <g:sortableColumn property="lastUpdated"
-                              title="${message(code: 'portfolio.lastUpdated.label', default: 'Last Updated')}"/>
+            %{--<g:sortableColumn property="lastUpdated"--}%
+            %{--title="${message(code: 'portfolio.lastUpdated.label', default: 'Last Updated')}"/>--}%
 
             <g:sortableColumn property="name"
                               title="${message(code: 'portfolio.name.label', default: 'Name')}"/>
 
-            <th><g:message code="portfolio.user.label" default="User"/></th>
+            %{--<th><g:message code="portfolio.user.label" default="User"/></th>--}%
 
         </tr>
         </thead>
@@ -39,17 +39,17 @@
             <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
 
                 <td><g:link action="show"
-                            id="${portfolioInstance.id}">${fieldValue(bean: portfolioInstance, field: "club")}</g:link></td>
+                            id="${portfolioInstance.id}">${fieldValue(bean: portfolioInstance, field: "club.name")}</g:link></td>
 
-                <td><g:formatDate date="${portfolioInstance.dateCreated}"/></td>
+                %{--<td><g:formatDate date="${portfolioInstance.dateCreated}"/></td>--}%
 
                 <td>${fieldValue(bean: portfolioInstance, field: "description")}</td>
 
-                <td><g:formatDate date="${portfolioInstance.lastUpdated}"/></td>
+                %{--<td><g:formatDate date="${portfolioInstance.lastUpdated}"/></td>--}%
 
                 <td>${fieldValue(bean: portfolioInstance, field: "name")}</td>
 
-                <td>${fieldValue(bean: portfolioInstance, field: "user")}</td>
+                %{--<td>${fieldValue(bean: portfolioInstance, field: "user")}</td>--}%
 
             </tr>
         </g:each>

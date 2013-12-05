@@ -40,11 +40,16 @@
     <g:render template="snapshot"/>
     <g:render template="candlestick"/>
 
-    <div id="messages">
-        <dtmc:indicators indicators="${indicators}"/>
-    </div>
 
 </section>
+
+%{--<div id="container" class="js-masonry"--}%
+%{--data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item" }'>--}%
+%{--<dtmc:indicators indicators="${indicators}"/>--}%
+%{--</div>--}%
+
+
+<dtmc:indicators indicators="${indicators}"/>
 
 </body>
 
