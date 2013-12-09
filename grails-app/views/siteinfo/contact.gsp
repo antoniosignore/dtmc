@@ -17,7 +17,7 @@
 </section>
 
 <section id="address">
-    <div class="row-fluid">
+    <div class="row">
         <div class="span4">
             <h1><g:message code="default.contact.address"/></h1>
             <address>
@@ -25,18 +25,35 @@
                 123 Future Ave<br>
                 San Francisco, CA 94107<br>
                 <br>
-                <strong><abbr title="Phone">Phone</abbr></strong>
-                (123) 456-7890
-                <br>
+            </address>
+            <address>
+                <div class="row">
+                    <span class="span1">
+                        <strong><abbr title="Phone">Phone</abbr></strong>
+                    </span>
+                    <span class="span3">
+                        (123) 456-7890
+                    </span>
+                </div>
 
-                <strong><abbr title="Phone">Fax</abbr></strong>
-                +49 (0) 72 27 - 95 35 - 605
-                <br>
-
-                <strong><abbr title="Phone">Email</abbr></strong>
-                <a href="mailto:info@${meta(name: 'app.name')}.com">info@${meta(name: 'app.name')}.com</a>
-                <br>
-
+                <div class="row">
+                    <span class="span1">
+                        <strong><abbr title="Fax">Fax</abbr></strong>
+                    </span>
+                    <span class="span3">
+                        +49 (0) 72 27 - 95 35 - 605
+                    </span>
+                </div>
+            </address>
+            <address>
+                <div class="row">
+                    <span class="span1">
+                        <strong>Email</strong>
+                    </span>
+                    <span class="span3">
+                        <a href="mailto:info@${meta(name: 'app.name')}.com">info@${meta(name: 'app.name')}.com</a>
+                    </span>
+                </div>
             </address>
         </div>
 

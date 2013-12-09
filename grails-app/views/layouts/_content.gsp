@@ -1,27 +1,28 @@
+<div id="Content" class="container">
 <!-- Main menu in one row (e.g., controller entry points -->
-<div class="span6">
-
-<!-- print system messages (infos, warnings, etc) - not validation errors -->
-
-    <g:if test="${flash.message && !layout_noflashmessage}">
-        <div class="alert alert-info">${flash.message}</div>
+    <g:if test="${!layout_nomainmenu}">
+        <div class="row">
+            <div class="span12">
+                <g:render template="/_menu/menubar"/>
+            </div>
+        </div>
     </g:if>
 
-    <g:set var="pagetitle"
-           value="${message(code: params.controller + '.' + params.action + '.custom.title.label', default: params.controller + '.' + params.action + '.custom.title.label NOT DEFINED')}"/>
-
-    <h3>${pagetitle}</h3>
-
+<!-- Secondary menu in one row (e.g., actions for current controller) -->
     <g:if test="${!layout_nosecondarymenu}">
-        <div class="row-fluid">
+        <div class="row">
             <div class="span12">
                 <g:render template="/_menu/submenubar"/>
             </div>
         </div>
     </g:if>
 
+<!-- print system messages (infos, warnings, etc) - not validation errors -->
+    <g:if test="${flash.message && !layout_noflashmessage}">
+        <div class="alert alert-info">${flash.message}</div>
+    </g:if>
+
+<!-- Show page's content -->
     <g:layoutBody/>
-
     <g:pageProperty name="page.body"/>
-
 </div>

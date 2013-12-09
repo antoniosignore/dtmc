@@ -79,7 +79,7 @@ class PortfolioService {
             if (instrument instanceof Asset) {
                 if (instrument.firstDay() != null) {
                     portfolio.firstDailyDate =
-                        DateUtils.max(portfolio.firstDailyDate, instrument.firstDay());
+                            DateUtils.max(portfolio.firstDailyDate, instrument.firstDay());
                 }
             }
         }
@@ -131,59 +131,59 @@ class PortfolioService {
         add(portfolio, item);
     }
 
-    public void add(Portfolio portfolio, Trade transaction) {
-        if (transaction == null) throw new IllegalArgumentException("transactions cannot be null");
+    public void add(Portfolio portfolio, Trade trade) {
+        if (trade == null) throw new IllegalArgumentException("transactions cannot be null");
 
-        Instrument instrument = transaction.instrument;
+        Instrument instrument = trade.instrument;
         PortfolioItem entry = entry(portfolio, instrument);
 
         if (entry == null) {
             entry = new PortfolioItem(instrument, portfolio);
-            if (transaction.getTradeAction() == TradeEnum.BUY) {
-                entry.setAmount(transaction.getAmount());
-            } else if (transaction.getTradeAction() == TradeEnum.SELL) {
-                System.out.println("addTransaction. No long position on sell for " + transaction.instrument.name + " in " + portfolio.getName());
+            if (trade.getTradeAction() == TradeEnum.BUY) {
+                entry.setAmount(trade.getAmount());
+            } else if (trade.getTradeAction() == TradeEnum.SELL) {
+                System.out.println("addTransaction. No long position on sell for " + trade.instrument.name + " in " + portfolio.getName());
                 return;
-            } else if (transaction.getTradeAction() == TradeEnum.SELLSHORT) {
-                entry.setAmount(-transaction.getAmount());
-            } else if (transaction.getTradeAction() == TradeEnum.BUYSHORT) {
-                System.out.println("addTransaction. No short position on buy short for " + transaction.instrument.name + " in " + portfolio.getName());
+            } else if (trade.getTradeAction() == TradeEnum.SELLSHORT) {
+                entry.setAmount(-trade.getAmount());
+            } else if (trade.getTradeAction() == TradeEnum.BUYSHORT) {
+                System.out.println("addTransaction. No short position on buy short for " + trade.instrument.name + " in " + portfolio.getName());
                 return;
             }
-            portfolio.transactions.add(transaction);
+            portfolio.transactions.add(trade);
             add(portfolio, entry); ;
         } else {
             int amount = 0;
-            if (transaction.getTradeAction() == TradeEnum.BUY) {
+            if (trade.getTradeAction() == TradeEnum.BUY) {
                 if (entry.getAmount() < 0) {
-                    System.out.println("addTransaction. Short position on buy for " + transaction.instrument.name + " in " + portfolio.getName());
+                    System.out.println("addTransaction. Short position on buy for " + trade.instrument.name + " in " + portfolio.getName());
                     return;
                 }
-                amount = entry.getAmount() + transaction.getAmount();
-            } else if (transaction.getTradeAction() == TradeEnum.SELL) {
-                amount = entry.getAmount() - transaction.getAmount();
+                amount = entry.getAmount() + trade.getAmount();
+            } else if (trade.getTradeAction() == TradeEnum.SELL) {
+                amount = entry.getAmount() - trade.getAmount();
                 if (amount < 0) {
-                    System.out.println("addTransaction. Sell amount larger than long position for" + transaction.instrument.name + " in " + portfolio.getName());
+                    System.out.println("addTransaction. Sell amount larger than long position for" + trade.instrument.name + " in " + portfolio.getName());
                     return;
                 }
-            } else if (transaction.getTradeAction() == TradeEnum.SELLSHORT) {
+            } else if (trade.getTradeAction() == TradeEnum.SELLSHORT) {
                 if (entry.getAmount() > 0) {
                     System.out.println("addTransaction. Long position in instrument on sell short: " + portfolio.getName());
                     return;
                 }
-                amount = entry.getAmount() - transaction.getAmount();
-            } else if (transaction.getTradeAction() == TradeEnum.BUYSHORT) {
+                amount = entry.getAmount() - trade.getAmount();
+            } else if (trade.getTradeAction() == TradeEnum.BUYSHORT) {
                 if (entry.getAmount() > 0) {
-                    System.out.println("addTransaction. Long position on buy short for " + transaction.instrument.name + " in " + portfolio.getName());
+                    System.out.println("addTransaction. Long position on buy short for " + trade.instrument.name + " in " + portfolio.getName());
                     return;
                 }
-                amount = entry.getAmount() + transaction.getAmount();
+                amount = entry.getAmount() + trade.getAmount();
                 if (amount > 0) {
                     System.out.println("addTransaction. Buy short amount larger than short position: " + portfolio.getName());
                     return;
                 }
             }
-            portfolio.transactions.add(transaction);
+            portfolio.transactions.add(trade);
 
             if (amount == 0) {
                 remove(portfolio, instrument);
@@ -600,8 +600,8 @@ class PortfolioService {
         Date firstDate = getInstrument(portfolio, 0).firstDate();
         Date lastDate = getInstrument(portfolio, 0).lastDate();
         for (Date date = firstDate;
-        DateUtils.isLessEqual(date, lastDate);
-        date = DateUtils.nextDay(date)) {
+             DateUtils.isLessEqual(date, lastDate);
+             date = DateUtils.nextDay(date)) {
             logReturnSeries.add(date, getLogReturn(portfolio, date));
         }
         return logReturnSeries;

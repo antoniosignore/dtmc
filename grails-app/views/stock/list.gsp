@@ -15,7 +15,6 @@
     <table class="table table-striped table-bordered table-condensed table-hover">
         <thead>
         <tr>
-
             <g:sortableColumn property="name" title="${message(code: 'stock.name.label', default: 'Name')}"/>
 
             <g:sortableColumn property="description"

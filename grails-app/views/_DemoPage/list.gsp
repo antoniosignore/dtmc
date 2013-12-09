@@ -12,7 +12,7 @@
 
 <section id="list-_DemoPage" class="first">
 
-    <table class="table table-striped table-bordered table-condensed table-hover">
+    <table class="table table-bordered">
         <thead>
         <tr>
 

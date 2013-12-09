@@ -26,7 +26,7 @@
                 </a>
                 <a href="${createLink(uri: '/login')}" class="btn btn-large btn-success">
                     <i class="icon-user"></i>
-                    <g:message code="error.button.login"/>
+                    <g:message code="error.button.Login"/>
                 </a>
             </div>
         </div>

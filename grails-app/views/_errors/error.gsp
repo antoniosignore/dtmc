@@ -30,7 +30,7 @@
     <h2>Error Details</h2>
 
     <div class="message">
-        <table class="table table-striped table-bordered table-condensed table-hover">
+        <table class="table">
             <tbody>
             <tr>
                 <td><strong>Error ${request.'javax.servlet.error.status_code'}</strong></td>

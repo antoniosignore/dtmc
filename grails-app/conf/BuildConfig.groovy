@@ -58,9 +58,9 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.8.3"
         runtime ":resources:1.1.6"
 
-        runtime ':kickstart-with-bootstrap:0.9.6'
-        runtime ':lesscss-resources:1.3.1'
-        runtime ':font-awesome-resources:3.0'
+//        runtime ':kickstart-with-bootstrap:0.9.9'
+//        runtime ':lesscss-resources:1.3.1'
+//        runtime ':font-awesome-resources:3.0'
 
         compile ':gson:1.1.4'
 
