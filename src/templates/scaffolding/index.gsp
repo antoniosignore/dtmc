@@ -20,7 +20,7 @@
 			<g:if test="\${flash.message}">
 				<div class="message" role="status">\${flash.message}</div>
 			</g:if>
-			<table>
+			<table class="table table-striped table-bordered table-condensed table-hover">
 			<thead>
 					<tr>
 					<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'

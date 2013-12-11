@@ -5,15 +5,15 @@
             <li class="nav-header">Navigation</li>
 
             <li class="${'portfolio'.equals(params.controller) ? 'active' : ''}">
-                <g:link controller="portfolio" action="list">Portfolio</g:link>
+                <g:link controller="portfolio" action="">Portfolio</g:link>
             </li>
 
             <li class="${'stock'.equals(params.controller) ? 'active' : ''}">
-                <g:link controller="stock" action="list">Stock</g:link>
+                <g:link controller="stock" action="">Stock</g:link>
             </li>
 
             <li class="${'userIndicators'.equals(params.controller) ? 'active' : ''}">
-                <g:link controller="userIndicators" action="list">User Indicators</g:link>
+                <g:link controller="userIndicators" action="">User Indicators</g:link>
             </li>
 
         </ul>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="kickstart">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="layout" content="kickstart">
 		<g:set var="entityName" value="\${message(code: '${domainClass.propertyName}.label', default: '${className}')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
@@ -30,7 +31,7 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="\${message(code: 'default.button.create.label', default: 'Create')}" />
+					<g:submitButton name="create" class="save btn btn-primary" value="\${message(code: 'default.button.create.label', default: 'Create')}" />
 				</fieldset>
 			</g:form>
 		</div>

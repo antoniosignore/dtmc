@@ -1,102 +1,104 @@
 package com.netnumeri.server.finance.finpojo
 
-import org.springframework.dao.DataIntegrityViolationException
 
+
+import static org.springframework.http.HttpStatus.*
+import grails.transaction.Transactional
+
+@Transactional(readOnly = true)
 class PortfolioController {
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index() {
-        redirect(action: "list", params: params)
+    def index(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond Portfolio.list(params), model:[portfolioInstanceCount: Portfolio.count()]
     }
 
-    def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [portfolioInstanceList: Portfolio.list(params), portfolioInstanceTotal: Portfolio.count()]
+    def show(Portfolio portfolioInstance) {
+        respond portfolioInstance
     }
 
     def create() {
-        [portfolioInstance: new Portfolio(params)]
+        respond new Portfolio(params)
     }
 
-    def save() {
-        def portfolioInstance = new Portfolio(params)
-        if (!portfolioInstance.save(flush: true)) {
-            render(view: "create", model: [portfolioInstance: portfolioInstance])
+    @Transactional
+    def save(Portfolio portfolioInstance) {
+        if (portfolioInstance == null) {
+            notFound()
             return
         }
 
-        flash.message = message(code: 'default.created.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), portfolioInstance.id])
-        redirect(action: "show", id: portfolioInstance.id)
-    }
-
-    def show(Long id) {
-        def portfolioInstance = Portfolio.get(id)
-        if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
-            redirect(action: "list")
+        if (portfolioInstance.hasErrors()) {
+            respond portfolioInstance.errors, view:'create'
             return
         }
 
-        [portfolioInstance: portfolioInstance]
-    }
+        portfolioInstance.save flush:true
 
-    def edit(Long id) {
-        def portfolioInstance = Portfolio.get(id)
-        if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
-            redirect(action: "list")
-            return
-        }
-
-        [portfolioInstance: portfolioInstance]
-    }
-
-    def update(Long id, Long version) {
-        def portfolioInstance = Portfolio.get(id)
-        if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
-            redirect(action: "list")
-            return
-        }
-
-        if (version != null) {
-            if (portfolioInstance.version > version) {
-                portfolioInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                        [message(code: 'portfolio.label', default: 'Portfolio')] as Object[],
-                        "Another user has updated this Portfolio while you were editing")
-                render(view: "edit", model: [portfolioInstance: portfolioInstance])
-                return
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'portfolioInstance.label', default: 'Portfolio'), portfolioInstance.id])
+                redirect portfolioInstance
             }
+            '*' { respond portfolioInstance, [status: CREATED] }
         }
-
-        portfolioInstance.properties = params
-
-        if (!portfolioInstance.save(flush: true)) {
-            render(view: "edit", model: [portfolioInstance: portfolioInstance])
-            return
-        }
-
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), portfolioInstance.id])
-        redirect(action: "show", id: portfolioInstance.id)
     }
 
-    def delete(Long id) {
-        def portfolioInstance = Portfolio.get(id)
-        if (!portfolioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
-            redirect(action: "list")
+    def edit(Portfolio portfolioInstance) {
+        respond portfolioInstance
+    }
+
+    @Transactional
+    def update(Portfolio portfolioInstance) {
+        if (portfolioInstance == null) {
+            notFound()
             return
         }
 
-        try {
-            portfolioInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
-            redirect(action: "list")
+        if (portfolioInstance.hasErrors()) {
+            respond portfolioInstance.errors, view:'edit'
+            return
         }
-        catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'portfolio.label', default: 'Portfolio'), id])
-            redirect(action: "show", id: id)
+
+        portfolioInstance.save flush:true
+
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'Portfolio.label', default: 'Portfolio'), portfolioInstance.id])
+                redirect portfolioInstance
+            }
+            '*'{ respond portfolioInstance, [status: OK] }
+        }
+    }
+
+    @Transactional
+    def delete(Portfolio portfolioInstance) {
+
+        if (portfolioInstance == null) {
+            notFound()
+            return
+        }
+
+        portfolioInstance.delete flush:true
+
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Portfolio.label', default: 'Portfolio'), portfolioInstance.id])
+                redirect action:"index", method:"GET"
+            }
+            '*'{ render status: NO_CONTENT }
+        }
+    }
+
+    protected void notFound() {
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolioInstance.label', default: 'Portfolio'), params.id])
+                redirect action: "index", method: "GET"
+            }
+            '*'{ render status: NOT_FOUND }
         }
     }
 }
