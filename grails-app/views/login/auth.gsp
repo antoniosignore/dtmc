@@ -10,6 +10,7 @@
 <body>
 
 <section id="login" class="first">
+
     <div class="row">
         <div class="span3"></div>
 
@@ -49,6 +50,8 @@
                 <div class="controls">
                     <input type='submit' id="submit" class="btn btn-success"
                            value='${message(code: "springSecurity.login.button")}'/>
+                    <s2ui:linkButton elementId='register' controller='register'
+                                     messageCode='spring.security.ui.login.register'/>
                 </div>
             </form>
         </div>

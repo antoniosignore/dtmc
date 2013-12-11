@@ -5,7 +5,6 @@ class UrlMappings {
         /*
          * Pages without controller
          */
-//		"/"				(view:"/index")
         "/about"(view: "/siteinfo/about")
         "/blog"(view: "/siteinfo/blog")
         "/systeminfo"(view: "/siteinfo/systeminfo")
@@ -18,11 +17,13 @@ class UrlMappings {
          * Pages with controller
          * WARN: No domain/controller should be named "api" or "mobile" or "web"!
          */
+
         "/" {
             controller = 'home'
             action = { 'index' }
             view = { 'index' }
         }
+
         "/$controller/$action?/$id?" {
             constraints {
                 controller(matches: /^((?!(api|mobile|web)).*)$/)
@@ -32,7 +33,7 @@ class UrlMappings {
         /*
          * System Pages without controller
          */
-        "403"(view: '/_errors/403')
+        "403"(view: '/_errors/403')     // no permission
         "404"(view: '/_errors/404')
         "500"(view: '/_errors/error')
         "503"(view: '/_errors/503')

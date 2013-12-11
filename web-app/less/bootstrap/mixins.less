@@ -27,7 +27,8 @@
 // ------------------
 .tab-focus() {
   // Default
-  outline: thin dotted #333;
+  outline: thin dotted #333
+;
   // Webkit
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -176,7 +177,7 @@
   select,
   textarea {
     border-color: @borderColor;
-    .box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075)); // Redeclare so transitions work
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
     &:focus {
       border-color: darken(@borderColor, 10%);
       @shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten(@borderColor, 20%);
@@ -576,8 +577,7 @@
   .core (@gridColumnWidth, @gridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
-      .span@{index} {
-        .span(@index);
+      .span@{index} { .span(@index);
       }
       .spanX(@index - 1);
     }
@@ -585,8 +585,7 @@
     }
 
     .offsetX (@index) when (@index > 0) {
-      .offset@{index} {
-        .offset(@index);
+      .offset@{index} { .offset(@index);
       }
       .offsetX(@index - 1);
     }
@@ -616,8 +615,7 @@
     .container,
     .navbar-static-top .container,
     .navbar-fixed-top .container,
-    .navbar-fixed-bottom .container {
-      .span(@gridColumns);
+    .navbar-fixed-bottom .container { .span(@gridColumns);
     }
 
     // generate .spanX and .offsetX
@@ -629,8 +627,7 @@
   .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
-      .span@{index} {
-        .span(@index);
+      .span@{index} { .span(@index);
       }
       .spanX(@index - 1);
     }
@@ -638,11 +635,9 @@
     }
 
     .offsetX (@index) when (@index > 0) {
-      .offset@{index} {
-        .offset(@index);
+      .offset@{index} { .offset(@index);
       }
-      .offset@{index}:first-child {
-        .offsetFirstChild(@index);
+      .offset@{index}:first-child { .offsetFirstChild(@index);
       }
       .offsetX(@index - 1);
     }
@@ -692,8 +687,7 @@
   .input(@gridColumnWidth, @gridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
-      input.span@{index}, textarea.span@{index}, .uneditable-input.span@{index} {
-        .span(@index);
+      input.span@{index}, textarea.span@{index}, .uneditable-input.span@{index} { .span(@index);
       }
       .spanX(@index - 1);
     }

@@ -40,7 +40,6 @@
     <g:render template="snapshot"/>
     <g:render template="candlestick"/>
 
-
 </section>
 
 %{--<div id="container" class="js-masonry"--}%

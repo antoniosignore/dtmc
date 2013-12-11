@@ -7,26 +7,24 @@ import com.netnumeri.server.finance.utils.FormatUtils
 
 public class Trade implements Serializable {
 
-    TradeEnum tradeAction
+    TradeEnum tradeAction;
 
     static belongsTo = [portfolio: Portfolio]
 
-    Integer amount
-    Double price
-    Double cost = 0
+    Integer amount = 0;
+    Double price = 0.0;
+    Double cost = 0;
     Date transactionDate;
-    Instrument instrument
 
     public Trade() {
     }
 
     public Trade(Instrument instrument,
                  TradeEnum tradeAction,
-                 int amo1unt,
+                 int amount,
                  double price,
                  Date transactionDate) {
-        if (transactionDate == null) throw1
-        new IllegalArgumentException("transactionDate cannot be null");
+        if (transactionDate == null) throw new IllegalArgumentException("transactionDate cannot be null");
         this.transactionDate = transactionDate;
         this.instrument = instrument;
         this.tradeAction = tradeAction;
