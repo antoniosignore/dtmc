@@ -1,102 +1,104 @@
 package com.netnumeri.server.finance.finpojo
 
-import org.springframework.dao.DataIntegrityViolationException
 
+
+import static org.springframework.http.HttpStatus.*
+import grails.transaction.Transactional
+
+@Transactional(readOnly = true)
 class TradeController {
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index() {
-        redirect(action: "list", params: params)
+    def index(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond Trade.list(params), model:[tradeInstanceCount: Trade.count()]
     }
 
-    def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [tradeInstanceList: Trade.list(params), tradeInstanceTotal: Trade.count()]
+    def show(Trade tradeInstance) {
+        respond tradeInstance
     }
 
     def create() {
-        [tradeInstance: new Trade(params)]
+        respond new Trade(params)
     }
 
-    def save() {
-        def tradeInstance = new Trade(params)
-        if (!tradeInstance.save(flush: true)) {
-            render(view: "create", model: [tradeInstance: tradeInstance])
+    @Transactional
+    def save(Trade tradeInstance) {
+        if (tradeInstance == null) {
+            notFound()
             return
         }
 
-        flash.message = message(code: 'default.created.message', args: [message(code: 'trade.label', default: 'Trade'), tradeInstance.id])
-        redirect(action: "show", id: tradeInstance.id)
-    }
-
-    def show(Long id) {
-        def tradeInstance = Trade.get(id)
-        if (!tradeInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'trade.label', default: 'Trade'), id])
-            redirect(action: "list")
+        if (tradeInstance.hasErrors()) {
+            respond tradeInstance.errors, view:'create'
             return
         }
 
-        [tradeInstance: tradeInstance]
-    }
+        tradeInstance.save flush:true
 
-    def edit(Long id) {
-        def tradeInstance = Trade.get(id)
-        if (!tradeInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'trade.label', default: 'Trade'), id])
-            redirect(action: "list")
-            return
-        }
-
-        [tradeInstance: tradeInstance]
-    }
-
-    def update(Long id, Long version) {
-        def tradeInstance = Trade.get(id)
-        if (!tradeInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'trade.label', default: 'Trade'), id])
-            redirect(action: "list")
-            return
-        }
-
-        if (version != null) {
-            if (tradeInstance.version > version) {
-                tradeInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                        [message(code: 'trade.label', default: 'Trade')] as Object[],
-                        "Another user has updated this Trade while you were editing")
-                render(view: "edit", model: [tradeInstance: tradeInstance])
-                return
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'tradeInstance.label', default: 'Trade'), tradeInstance.id])
+                redirect tradeInstance
             }
+            '*' { respond tradeInstance, [status: CREATED] }
         }
-
-        tradeInstance.properties = params
-
-        if (!tradeInstance.save(flush: true)) {
-            render(view: "edit", model: [tradeInstance: tradeInstance])
-            return
-        }
-
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'trade.label', default: 'Trade'), tradeInstance.id])
-        redirect(action: "show", id: tradeInstance.id)
     }
 
-    def delete(Long id) {
-        def tradeInstance = Trade.get(id)
-        if (!tradeInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'trade.label', default: 'Trade'), id])
-            redirect(action: "list")
+    def edit(Trade tradeInstance) {
+        respond tradeInstance
+    }
+
+    @Transactional
+    def update(Trade tradeInstance) {
+        if (tradeInstance == null) {
+            notFound()
             return
         }
 
-        try {
-            tradeInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'trade.label', default: 'Trade'), id])
-            redirect(action: "list")
+        if (tradeInstance.hasErrors()) {
+            respond tradeInstance.errors, view:'edit'
+            return
         }
-        catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'trade.label', default: 'Trade'), id])
-            redirect(action: "show", id: id)
+
+        tradeInstance.save flush:true
+
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'Trade.label', default: 'Trade'), tradeInstance.id])
+                redirect tradeInstance
+            }
+            '*'{ respond tradeInstance, [status: OK] }
+        }
+    }
+
+    @Transactional
+    def delete(Trade tradeInstance) {
+
+        if (tradeInstance == null) {
+            notFound()
+            return
+        }
+
+        tradeInstance.delete flush:true
+
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Trade.label', default: 'Trade'), tradeInstance.id])
+                redirect action:"index", method:"GET"
+            }
+            '*'{ render status: NO_CONTENT }
+        }
+    }
+
+    protected void notFound() {
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'tradeInstance.label', default: 'Trade'), params.id])
+                redirect action: "index", method: "GET"
+            }
+            '*'{ render status: NOT_FOUND }
         }
     }
 }

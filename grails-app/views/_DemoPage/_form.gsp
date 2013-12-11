@@ -1,7 +1,5 @@
 <%@ page import="kickstartwithbootstrapgrailsplugin._DemoPage" %>
 
-
-
 <div class="control-group fieldcontain ${hasErrors(bean: _DemoPageInstance, field: 'name', 'error')} ">
     <label for="name" class="control-label"><g:message code="_DemoPage.name.label" default="Name"/></label>
 

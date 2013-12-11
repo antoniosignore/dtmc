@@ -1,9 +1,6 @@
-@ artifact.package @/**
- * @artifact.name @
- * A unit test class is used to test individual methods or blocks of code without considering the surrounding infrastructure
- */
-@
-class @artifact.name @ extends @artifact.superclass @ {
+@artifact.package@import grails.test.*
+
+class @artifact.name@ extends @artifact.superclass@ {
     protected void setUp() {
         super.setUp()
     }
