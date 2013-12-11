@@ -242,7 +242,7 @@ class StockController {
             }
         }
 
-        stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
+            stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
 
 //        TimeSeries series = stockInstance.closeSeries()
 
