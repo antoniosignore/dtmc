@@ -299,7 +299,7 @@ class PortfolioService {
         return sell(portfolio, instrument, new Date());
     }
 
-    // Sell everything
+    // Sell everything - todo
     public Trade sell(Portfolio portfolio, Instrument instrument, Date date) {
         int amount;
         if (entry(portfolio, instrument) != null) {

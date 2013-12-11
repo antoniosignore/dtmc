@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/PortfolioController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/show.gsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/trade/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/trade/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/_form.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_leftbar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_leftbar.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/trade/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/trade/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/create.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/index.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -82,24 +71,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/edit.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="61" selection-start="1437" selection-end="1437" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="705">
-              <folding>
-                <marker date="1386770261302" expanded="true" signature="1056:1129" placeholder="..." />
-                <marker date="1386770261302" expanded="true" signature="1173:1463" placeholder="..." />
-                <marker date="1386770261302" expanded="true" signature="1254:1436" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
             <state line="22" column="89" selection-start="1132" selection-end="1132" vertical-scroll-proportion="-5.0416665" vertical-offset="209" max-vertical-offset="1020">
-              <folding />
+              <folding>
+                <marker date="1386777290346" expanded="true" signature="976:1050" placeholder="..." />
+                <marker date="1386777290346" expanded="true" signature="2065:2853" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,10 +101,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_leftbar.gsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_leftbar.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_leftbar.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="734" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="17" column="57" selection-start="701" selection-end="701" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PortfolioService.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="301" column="23" selection-start="12125" selection-end="12125" vertical-scroll-proportion="0.28593996" vertical-offset="4334" max-vertical-offset="13500">
               <folding />
             </state>
           </provider>
@@ -223,7 +211,6 @@
         <option value="$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/portfolio/list.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy" />
         <option value="$PROJECT_DIR$/src/templates/artifacts/Controller.groovy" />
         <option value="$PROJECT_DIR$/src/templates/artifacts/DomainClass.groovy" />
         <option value="$PROJECT_DIR$/src/templates/artifacts/Filters.groovy" />
@@ -258,6 +245,7 @@
         <option value="$PROJECT_DIR$/src/templates/scaffolding/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/portfolio/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/_leftbar.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy" />
       </list>
     </option>
   </component>
@@ -969,7 +957,7 @@
       <workItem from="1386683119665" duration="280000" />
       <workItem from="1386685431816" duration="1960000" />
       <workItem from="1386755523601" duration="2333000" />
-      <workItem from="1386757997326" duration="9964000" />
+      <workItem from="1386757997326" duration="10205000" />
     </task>
     <task id="LOCAL-00001" summary="added indicators in tables">
       <created>1378071164332</created>
@@ -1207,18 +1195,26 @@
       <created>1386770845044</created>
       <updated>1386770845044</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="cleanup&#10;">
+      <created>1386777542422</created>
+      <updated>1386777542422</updated>
+    </task>
+    <task id="LOCAL-00061" summary="cleanup&#10;">
+      <created>1386777559010</created>
+      <updated>1386777559010</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161894000" />
+    <option name="totallyTimeSpent" value="162135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-8" width="1618" height="892" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6546961" sideWeight="0.5744108" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6533149" sideWeight="0.5744108" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -1232,7 +1228,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32303733" sideWeight="0.6300268" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6353591" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6353591" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1286,14 +1282,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/UserBean.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="6" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="870" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/Role.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
@@ -1592,9 +1580,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="61" selection-start="1437" selection-end="1437" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="705">
           <folding>
-            <marker date="1386770261302" expanded="true" signature="1056:1129" placeholder="..." />
-            <marker date="1386770261302" expanded="true" signature="1173:1463" placeholder="..." />
-            <marker date="1386770261302" expanded="true" signature="1254:1436" placeholder="..." />
+            <marker date="1386770261302" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386770261302" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386770261302" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1645,7 +1633,10 @@
     <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="89" selection-start="1132" selection-end="1132" vertical-scroll-proportion="-5.0416665" vertical-offset="209" max-vertical-offset="1020">
-          <folding />
+          <folding>
+            <marker date="1386777290346" expanded="true" signature="976:1050" placeholder="..." />
+            <marker date="1386777290346" expanded="true" signature="2065:2853" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1665,7 +1656,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_leftbar.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="734" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+        <state line="17" column="57" selection-start="701" selection-end="701" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="301" column="23" selection-start="12125" selection-end="12125" vertical-scroll-proportion="0.28593996" vertical-offset="4334" max-vertical-offset="13500">
           <folding />
         </state>
       </provider>
