@@ -301,12 +301,12 @@ class PortfolioService {
 
     // Sell everything - todo
     public Trade sell(Portfolio portfolio, Instrument instrument, Date date) {
-        int amount;
-        if (entry(portfolio, instrument) != null) {
-            amount = amount(portfolio, instrument);
-        } else {
-            return null;
-        }
+//        int amount;
+//        if (entry(portfolio, instrument) != null) {
+//            amount = amount(portfolio, instrument);
+//        } else {
+//            return null;
+//        }
         if (date == null) date = new Date();
         Trade transaction = new Trade(instrument, TradeEnum.SELL, amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
@@ -328,11 +328,10 @@ class PortfolioService {
 
     // Return weight of this instrument in the portfolio
     // Return 0 if instrument is not in the portfolio
-
     public double getWeight(Portfolio portfolio, Instrument instrument) {
         PortfolioItem entry = entry(portfolio, instrument);
         if (entry != null) {
-            return entry.getWeight();
+            return entry.amount();
         } else {
             return 0;
         }
@@ -344,7 +343,7 @@ class PortfolioService {
     public int position(Portfolio portfolio, Instrument instrument) {
         PortfolioItem entry = entry(portfolio, instrument);
         if (entry != null) {
-            return entry.getPosition();
+            return entry.position()
         } else {
             return 0;
         }
@@ -405,50 +404,50 @@ class PortfolioService {
     // weight sum equal to unity and satisfy boundary conditions
     // Note that we exclude stock with zero weights from the portfolio,
     // meaning that such stock will have zero weight after normalization
-    public void normalizeWeights(Portfolio portfolio) {
-        double WeightSum = 0;
-        int i = 0;
-        for (i = 0; i < portfolio.items.size(); i++) {
-            WeightSum += getWeight(portfolio, i);
-        }
-        for (i = 0; i < portfolio.items.size(); i++) {
-            setWeight(portfolio, i, getWeight(portfolio, i) / WeightSum);
-        }
-        WeightSum = 1;
-        boolean InBounds = true;
-        for (i = 0; i < portfolio.items.size(); i++) {
-            if (getWeight(portfolio, i) != 0) {
-                if (getWeight(portfolio, i) < lowerBound(portfolio, i)) {
-                    InBounds = false;
-                    break;
-                }
-            }
-        }
-        if (!InBounds) {
-            double LowerBoundSum = 0;
-            for (i = 0; i < portfolio.items.size(); i++) {
-                if (getWeight(portfolio, i) != 0) {
-                    LowerBoundSum += lowerBound(portfolio, i);
-                }
-            }
-            for (i = 0; i < portfolio.items.size(); i++) {
-                if (getWeight(portfolio, i) != 0) {
-                    setWeight(portfolio, i, lowerBound(portfolio, i) + getWeight(portfolio, i) * (1 - LowerBoundSum) / WeightSum);
-                }
-            }
-        }
-    }
+//    public void normalizeWeights(Portfolio portfolio) {
+//        double WeightSum = 0;
+//        int i = 0;
+//        for (i = 0; i < portfolio.items.size(); i++) {
+//            WeightSum += getWeight(portfolio, i);
+//        }
+//        for (i = 0; i < portfolio.items.size(); i++) {
+//            setWeight(portfolio, i, getWeight(portfolio, i) / WeightSum);
+//        }
+//        WeightSum = 1;
+//        boolean InBounds = true;
+//        for (i = 0; i < portfolio.items.size(); i++) {
+//            if (getWeight(portfolio, i) != 0) {
+//                if (getWeight(portfolio, i) < lowerBound(portfolio, i)) {
+//                    InBounds = false;
+//                    break;
+//                }
+//            }
+//        }
+//        if (!InBounds) {
+//            double LowerBoundSum = 0;
+//            for (i = 0; i < portfolio.items.size(); i++) {
+//                if (getWeight(portfolio, i) != 0) {
+//                    LowerBoundSum += lowerBound(portfolio, i);
+//                }
+//            }
+//            for (i = 0; i < portfolio.items.size(); i++) {
+//                if (getWeight(portfolio, i) != 0) {
+//                    setWeight(portfolio, i, lowerBound(portfolio, i) + getWeight(portfolio, i) * (1 - LowerBoundSum) / WeightSum);
+//                }
+//            }
+//        }
+//    }
 
-    public void normalize(Portfolio portfolio, int Option) {
-        if (Option == FinConstants.kFixedWeight) {
-            normalizeWeights(portfolio);
-        } else {
-            double Wealth = getWealth(portfolio);
-            for (int i = 0; i < portfolio.items.size(); i++) {
-                setWeight(portfolio, i, wealth(portfolio, i) / Wealth);
-            }
-        }
-    }
+//    public void normalize(Portfolio portfolio, int Option) {
+//        if (Option == FinConstants.kFixedWeight) {
+//            normalizeWeights(portfolio);
+//        } else {
+//            double Wealth = getWealth(portfolio);
+//            for (int i = 0; i < portfolio.items.size(); i++) {
+//                setWeight(portfolio, i, wealth(portfolio, i) / Wealth);
+//            }
+//        }
+//    }
 
 //    // Check boundary conditions. Return true if feasible
 //    public boolean checkBounds(Portfolio portfolio) {

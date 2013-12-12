@@ -17,7 +17,6 @@ class Member extends SecUser{
     String mobile
     String twitter
     String facebook
-    String google
     String linkedin
 
     ImageNode small
@@ -32,7 +31,9 @@ class Member extends SecUser{
         city(size: 1..20, blank: true)
         state(size: 1..20, blank: true)
         country(size: 1..20, blank: true)
-        address1(size: 5..200, blank: true)
+        twitter(size: 5..200, blank: true)
+        facebook(size: 5..200, blank: true)
+        linkedin(size: 5..200, blank: true)
 
     }
 

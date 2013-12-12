@@ -67,7 +67,8 @@ grails.project.dependency.resolution = {
 
         runtime ":raphael:2.0.1"
 
-        compile ':mail:1.0', {
+
+        compile ':mail:1.0.1', {
             excludes 'spring-test'
         }
         compile ":cookie:0.4"

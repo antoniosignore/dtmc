@@ -1,7 +1,5 @@
 <%@ page import="com.netnumeri.server.finance.finpojo.Portfolio" %>
 
-
-
 <div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'club', 'error')} ">
 	<label for="club">
 		<g:message code="portfolio.club.label" default="Club" />

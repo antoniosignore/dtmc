@@ -1,7 +1,8 @@
 package com.netnumeri.server.finance.finpojo
 
 import Jama.Matrix
-import com.dtmc.security.UserBean
+import com.dtmc.club.Member
+//import com.dtmc.security.UserBean
 import com.netnumeri.server.finance.finpojo.asset.Asset
 
 class Portfolio extends Asset implements Serializable {
@@ -9,7 +10,7 @@ class Portfolio extends Asset implements Serializable {
     static constraints = {
     }
 
-    static belongsTo = [user: UserBean]
+    static belongsTo = [user: Member]
 
     static mapping = {
         id generator: 'hilo',
@@ -23,11 +24,8 @@ class Portfolio extends Asset implements Serializable {
     static transients = [
             "assetsToHold",
             "tempWeights",
-            "wealth",
             "correlationMatrix",
-            "covarianceMatrix",
-            "firstDailyDate",
-            "lastDailyDate"]
+            "covarianceMatrix"]
 
     int assetsToHold = 0;
     double wealth = 0;

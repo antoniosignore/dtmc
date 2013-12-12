@@ -1,13 +1,15 @@
+<!doctype html>
 <html>
+
 <head>
-    <title><g:message code="springSecurity.denied.title"/></title>
-    <meta name="layout" content="kickstart"/>
+    <meta name="layout" content="kickstart">
 
     <g:set var="layout_nomainmenu" value="${true}" scope="request"/>
     <g:set var="layout_nosecondarymenu" value="${true}" scope="request"/>
 </head>
 
 <body>
+
 <content tag="header">
     <!-- Empty Header -->
 </content>

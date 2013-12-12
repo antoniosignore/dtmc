@@ -30,6 +30,15 @@ class UrlMappings {
             }
         }
 
+
+        /**
+         * Spring Security Controller Mappings
+         */
+        "/login/$action?"(controller: "login")
+        "/logout/$action?"(controller: "logout")
+
+        /**
+
         /*
          * System Pages without controller
          */

@@ -1,4 +1,3 @@
-
 <%@ page import="com.netnumeri.server.finance.finpojo.Portfolio" %>
 <!DOCTYPE html>
 <html>

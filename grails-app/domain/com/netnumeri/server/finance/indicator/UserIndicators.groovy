@@ -1,12 +1,12 @@
 package com.netnumeri.server.finance.indicator
 
-import com.dtmc.security.UserBean
+import com.dtmc.club.SecUser
 import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.finance.ta.Indicator
 
 public class UserIndicators implements Serializable {
 
-    static belongsTo = [user: UserBean]
+    static belongsTo = [user: SecUser]
 
     String name
     IndicatorEnum type

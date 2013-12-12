@@ -1,6 +1,6 @@
 package com.dtmc.club
 
-import com.dtmc.security.UserBean
+//import com.dtmc.security.UserBean
 
 class Club {
 
