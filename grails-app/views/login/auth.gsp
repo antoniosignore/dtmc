@@ -1,9 +1,9 @@
-<html>
+<!doctype html>
 <head>
-    <meta name="layout" content="kickstart">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="layout" content="kickstart"/>
 
-    <g:set var="layout_nomainmenu" value="${true}" scope="request"/>
-    <g:set var="layout_nosecondarymenu" value="${true}" scope="request"/>
+
 </head>
 
 <body>
