@@ -66,7 +66,7 @@ environments {
     development {
         grails.logging.jul.usebridge = true
 
-        grails.serverURL = "http://localhost:9999/${appName}"
+        grails.serverURL = "http://localhost:8080/${appName}"
 
         interceptUrlMap = [
 

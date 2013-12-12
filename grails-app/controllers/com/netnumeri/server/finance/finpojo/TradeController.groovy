@@ -10,6 +10,10 @@ class TradeController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def list() {
+        redirect(action: "index", params: params)
+    }
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Trade.list(params), model:[tradeInstanceCount: Trade.count()]
