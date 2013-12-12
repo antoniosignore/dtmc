@@ -1,7 +1,5 @@
 package com.netnumeri.server.finance.finpojo
 
-import grails.plugin.springsecurity.annotation.Secured
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -10,7 +8,6 @@ class PortfolioController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    @Secured (['ROLE_ADMIN'])
     def list() {
         redirect(action: "index", params: params)
     }

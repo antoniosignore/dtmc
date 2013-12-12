@@ -1,5 +1,7 @@
 <%@ page import="com.netnumeri.server.finance.finpojo.Portfolio" %>
 
+
+
 <div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'club', 'error')} ">
 	<label for="club">
 		<g:message code="portfolio.club.label" default="Club" />
@@ -14,6 +16,14 @@
 		
 	</label>
 	<g:textField name="description" value="${portfolioInstance?.description}"/>
+</div>
+
+<div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'firstDailyDate', 'error')} ">
+	<label for="firstDailyDate">
+		<g:message code="portfolio.firstDailyDate.label" default="First Daily Date" />
+		
+	</label>
+	<g:datePicker name="firstDailyDate" precision="day"  value="${portfolioInstance?.firstDailyDate}" default="none" noSelection="['': '']" />
 </div>
 
 <div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'items', 'error')} ">
@@ -31,6 +41,14 @@
 </li>
 </ul>
 
+</div>
+
+<div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'lastDailyDate', 'error')} ">
+	<label for="lastDailyDate">
+		<g:message code="portfolio.lastDailyDate.label" default="Last Daily Date" />
+		
+	</label>
+	<g:datePicker name="lastDailyDate" precision="day"  value="${portfolioInstance?.lastDailyDate}" default="none" noSelection="['': '']" />
 </div>
 
 <div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'name', 'error')} ">
@@ -63,6 +81,14 @@
 		<g:message code="portfolio.user.label" default="User" />
 		
 	</label>
-	<g:select id="user" name="user.id" from="${com.dtmc.security.UserBean.list()}" optionKey="id" value="${portfolioInstance?.user?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select id="user" name="user.id" from="${com.dtmc.club.Member.list()}" optionKey="id" value="${portfolioInstance?.user?.id}" class="many-to-one" noSelection="['null': '']"/>
+</div>
+
+<div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'wealth', 'error')} required">
+	<label for="wealth">
+		<g:message code="portfolio.wealth.label" default="Wealth" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="wealth" value="${fieldValue(bean: portfolioInstance, field: 'wealth')}" required=""/>
 </div>
 

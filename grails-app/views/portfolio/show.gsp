@@ -8,7 +8,14 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
-
+		%{--<a href="#show-portfolio" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>--}%
+		%{--<div class="nav" role="navigation">--}%
+			%{--<ul>--}%
+				%{--<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>--}%
+				%{--<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>--}%
+				%{--<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>--}%
+			%{--</ul>--}%
+		%{--</div>--}%
 		<div id="show-portfolio" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
@@ -43,6 +50,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${portfolioInstance?.firstDailyDate}">
+				<li class="fieldcontain">
+					<span id="firstDailyDate-label" class="property-label"><g:message code="portfolio.firstDailyDate.label" default="First Daily Date" /></span>
+					
+						<span class="property-value" aria-labelledby="firstDailyDate-label"><g:formatDate date="${portfolioInstance?.firstDailyDate}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${portfolioInstance?.items}">
 				<li class="fieldcontain">
 					<span id="items-label" class="property-label"><g:message code="portfolio.items.label" default="Items" /></span>
@@ -50,6 +66,15 @@
 						<g:each in="${portfolioInstance.items}" var="i">
 						<span class="property-value" aria-labelledby="items-label"><g:link controller="portfolioItem" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></span>
 						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${portfolioInstance?.lastDailyDate}">
+				<li class="fieldcontain">
+					<span id="lastDailyDate-label" class="property-label"><g:message code="portfolio.lastDailyDate.label" default="Last Daily Date" /></span>
+					
+						<span class="property-value" aria-labelledby="lastDailyDate-label"><g:formatDate date="${portfolioInstance?.lastDailyDate}" /></span>
 					
 				</li>
 				</g:if>
@@ -87,7 +112,16 @@
 				<li class="fieldcontain">
 					<span id="user-label" class="property-label"><g:message code="portfolio.user.label" default="User" /></span>
 					
-						<span class="property-value" aria-labelledby="user-label"><g:link controller="userBean" action="show" id="${portfolioInstance?.user?.id}">${portfolioInstance?.user?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="user-label"><g:link controller="member" action="show" id="${portfolioInstance?.user?.id}">${portfolioInstance?.user?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${portfolioInstance?.wealth}">
+				<li class="fieldcontain">
+					<span id="wealth-label" class="property-label"><g:message code="portfolio.wealth.label" default="Wealth" /></span>
+					
+						<span class="property-value" aria-labelledby="wealth-label"><g:fieldValue bean="${portfolioInstance}" field="wealth"/></span>
 					
 				</li>
 				</g:if>
