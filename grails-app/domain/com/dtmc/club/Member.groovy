@@ -1,13 +1,11 @@
 package com.dtmc.club
 
-import com.dtmc.security.UserBean
+class Member extends SecUser{
 
-class UserProperties {
+    static belongsTo = [club: Club]
 
-    static belongsTo = [userBean: UserBean]
-
-    String fname
-    String lname
+    String firstname
+    String lastname
     String address1
     String address2
     String city
@@ -17,13 +15,17 @@ class UserProperties {
     String email
     String phone
     String mobile
+    String twitter
+    String facebook
+    String google
+    String linkedin
 
-    Double allocatedUnits
+    ImageNode small
 
-    // Constraints used for validations
     static constraints = {
-        fname(size: 1..30, blank: true)
-        lname(size: 1..30, blank: true)
+
+        firstname(size: 1..30, blank: true)
+        lastname(size: 1..30, blank: true)
         email(email: true, blank: true)
         phone(size: 6..15, blank: true)
         mobile(size: 6..15, blank: true)
@@ -31,6 +33,7 @@ class UserProperties {
         state(size: 1..20, blank: true)
         country(size: 1..20, blank: true)
         address1(size: 5..200, blank: true)
+
     }
 
     static mapping = {

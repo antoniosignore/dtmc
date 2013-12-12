@@ -67,55 +67,6 @@ environments {
         grails.logging.jul.usebridge = true
 
         grails.serverURL = "http://localhost:8080/${appName}"
-
-        interceptUrlMap = [
-
-                '/campaigns/edit': ['ADMIN_ROLE', 'EDITOR_ROLE'],
-                '/campaigns/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/campaigns/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/campaigns/create': ['ADMIN_ROLE', 'EDITOR_ROLE'],
-                '/campaigns/delete': ['ADMIN_ROLE', 'EDITOR_ROLE'],
-
-                '/trash/edit': ['ADMIN_ROLE', 'EDITOR_ROLE'],
-                '/trash/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/trash/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/trash/create': ['ADMIN_ROLE', 'EDITOR_ROLE'],
-                '/trash/delete': ['ADMIN_ROLE', 'EDITOR_ROLE'],
-
-                '/categories/edit': ['ADMIN_ROLE', 'EDITOR_ROLE'],
-                '/categories/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/categories/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/categories/create': ['ADMIN_ROLE', 'EDITOR_ROLE'],
-                '/categories/delete': ['ADMIN_ROLE', 'EDITOR_ROLE'],
-
-                '/opcos/edit': ['ADMIN_ROLE'],
-                '/opcos/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/opcos/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/opcos/create': ['ADMIN_ROLE'],
-                '/opcos/delete': ['ADMIN_ROLE'],
-
-                '/deviceFamilies/edit': ['ADMIN_ROLE'],
-                '/deviceFamilies/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/deviceFamilies/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/deviceFamilies/create': ['ADMIN_ROLE'],
-                '/deviceFamilies/delete': ['ADMIN_ROLE'],
-
-                '/clients/edit': ['ADMIN_ROLE'],
-                '/clients/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/clients/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/clients/create': ['ADMIN_ROLE'],
-                '/clients/delete': ['ADMIN_ROLE'],
-
-                '/publishHistory/list': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/publishHistory/view': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE'],
-                '/publishHistory/delete': ['EDITOR_ROLE', 'ADMIN_ROLE'],
-
-                '/publish/**': ['EDITOR_ROLE', 'ADMIN_ROLE'],
-
-                '/**': ['VIEWER_ROLE', 'EDITOR_ROLE', 'ADMIN_ROLE']
-        ]
-
-
     }
     production {
         grails.logging.jul.usebridge = false
@@ -153,40 +104,19 @@ log4j = {
 grails.config.defaults.locations = [KickstartResources]
 
 // Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.dtmc.security.UserBean'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.dtmc.security.UserRole'
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.dtmc.security.SecUser'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.dtmc.security.SecRole'
 grails.plugins.springsecurity.authority.className = 'com.dtmc.security.Role'
 
-grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
+grails.plugins.springsecurity.securityConfigType = "Annotation"
 
 // Pessimistic Lockdown
 grails.plugins.springsecurity.rejectIfNoRule = true
 
-grails.plugins.springsecurity.interceptUrlMap = [
-        '/secure/**': ['ROLE_ADMIN'],
-        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/portfolio/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-        '/portfolioItem/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-        '/userBean/**': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-        '/_DemoPage/**': ['ROLE_SUPERUSER', 'IS_AUTHENTICATED_FULLY'],
-        '/role/**': ['ROLE_SUPERUSER', 'IS_AUTHENTICATED_FULLY'],
-        '/userRole/**': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-        '/stock/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/vanilla/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-        '/trade/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
 
-        '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/*': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/logout/**': ['IS_AUTHENTICATED_FULLY', 'IS_AUTHENTICATED_REMEMBERED'],
-        '/register/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-]
-
-grails.gorm.default.constraints = {
-    '*'(nullable: true)
-}
+//grails.gorm.default.constraints = {
+//    '*'(nullable: true)
+//}
 
 grails {
     mail {
@@ -228,3 +158,35 @@ grails {
     }
 }
 remove this line */
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.dtmc.club.SecUser'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.dtmc.club.SecUserSecRole'
+grails.plugin.springsecurity.authority.className = 'com.dtmc.club.SecRole'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll']
+]
+
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.dtmc.club.SecUser'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.dtmc.club.SecUserSecRole'
+grails.plugin.springsecurity.authority.className = 'com.dtmc.club.SecRole'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll']
+]
+

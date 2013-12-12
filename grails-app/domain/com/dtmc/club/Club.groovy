@@ -6,12 +6,10 @@ class Club {
 
     String name
 
-    static hasMany = [members: UserBean, uv: MonthlyUnitValue]
+    static hasMany = [members: Member]
 
     Date dateCreated
     Date lastUpdated
-
-    Double netAssetValue
 
     static mapping = {
     }
