@@ -173,7 +173,7 @@ remove this line */
 
 
 // Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.dtmc.club.SecUser'
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.dtmc.club.Member'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.dtmc.club.SecUserSecRole'
 grails.plugin.springsecurity.authority.className = 'com.dtmc.club.SecRole'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [

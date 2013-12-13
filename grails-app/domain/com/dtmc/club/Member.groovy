@@ -1,8 +1,14 @@
 package com.dtmc.club
 
+import com.netnumeri.server.enums.MemberGoalEnum
+import com.netnumeri.server.enums.MemberTypeEnum
+
 class Member extends SecUser{
 
     static belongsTo = [club: Club]
+
+    MemberTypeEnum memberType
+    MemberGoalEnum memberGoal
 
     String firstname
     String lastname
@@ -19,6 +25,10 @@ class Member extends SecUser{
     String facebook
     String linkedin
 
+    String timezone
+
+    Integer hoursWeeklyDedicated
+
     ImageNode small
 
     static constraints = {
@@ -34,6 +44,7 @@ class Member extends SecUser{
         twitter(size: 5..200, blank: true)
         facebook(size: 5..200, blank: true)
         linkedin(size: 5..200, blank: true)
+        timezone(nullable: true)
 
     }
 
