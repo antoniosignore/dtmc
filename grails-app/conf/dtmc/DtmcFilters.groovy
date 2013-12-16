@@ -18,10 +18,10 @@ class DtmcFilters {
                         model = [:]
                     }
 
-                    model.activeOpco = opcoStatus.currentOpco
-                    model.username = opcoStatus.username
-                    model.opcos = opcoStatus.opcos
-                    model.roles = opcoStatus.roles
+//                    model.activeOpco = opcoStatus.currentOpco
+//                    model.username = opcoStatus.username
+//                    model.opcos = opcoStatus.opcos
+//                    model.roles = opcoStatus.roles
 
             }
             afterView = { Exception e ->
