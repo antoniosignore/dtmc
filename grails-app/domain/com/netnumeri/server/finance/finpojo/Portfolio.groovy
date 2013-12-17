@@ -2,7 +2,6 @@ package com.netnumeri.server.finance.finpojo
 
 import Jama.Matrix
 import com.dtmc.club.Member
-//import com.dtmc.security.UserBean
 import com.netnumeri.server.finance.finpojo.asset.Asset
 
 class Portfolio extends Asset implements Serializable {

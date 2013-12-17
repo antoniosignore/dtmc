@@ -1,6 +1,6 @@
 package com.netnumeri.server.finance.strategy;
 
-public enum StrategyEnum {
+public enum OptionStrategyEnum {
 
     BearCallSpread,
     BearPutSpread,

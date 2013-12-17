@@ -22,7 +22,7 @@
                                                      default="Club"/></td>
             
             <td valign="top" class="value"><g:link controller="club" action="show"
-                                                   id="${portfolioInstance?.club?.id}">${portfolioInstance?.club?.encodeAsHTML()}</g:link></td>
+                                                   id="${portfolioInstance?.club?.id}">${portfolioInstance?.club?.name?.encodeAsHTML()}</g:link></td>
             
         </tr>
         
@@ -109,7 +109,7 @@
                                                      default="User"/></td>
             
             <td valign="top" class="value"><g:link controller="member" action="show"
-                                                   id="${portfolioInstance?.user?.id}">${portfolioInstance?.user?.encodeAsHTML()}</g:link></td>
+                                                   id="${portfolioInstance?.user?.id}">${portfolioInstance?.user?.username?.encodeAsHTML()}</g:link></td>
             
         </tr>
         

@@ -1,11 +1,8 @@
-<html>
+<!doctype html>
 <head>
-    <title>Grails Runtime Exception</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="layout" content="kickstart"/>
-    <g:set var="layout_nomainmenu" value="${true}" scope="request"/>
-    <g:set var="layout_nosecondarymenu" value="${true}" scope="request"/>
 </head>
-
 <body>
 
 <section id="Error" class="">

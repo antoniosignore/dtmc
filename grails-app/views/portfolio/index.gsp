@@ -42,7 +42,7 @@
 				<g:each in="${portfolioInstanceList}" status="i" var="portfolioInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${portfolioInstance.id}">${fieldValue(bean: portfolioInstance, field: "club")}</g:link></td>
+						<td><g:link action="show" id="${portfolioInstance.id}">${fieldValue(bean: portfolioInstance, field: "club.name")}</g:link></td>
 					
 						<td><g:formatDate date="${portfolioInstance.dateCreated}" /></td>
 					

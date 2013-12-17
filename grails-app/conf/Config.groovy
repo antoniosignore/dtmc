@@ -11,7 +11,7 @@
 //    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
 // }
 
-grails.plugin.springsecurity.ui.encodePassword = false
+//grails.plugin.springsecurity.ui.encodePassword = false
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
@@ -103,32 +103,32 @@ log4j = {
 
 grails.config.defaults.locations = [KickstartResources]
 
-grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
+//grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
 
 // Pessimistic Lockdown
-grails.plugin.springsecurity.rejectIfNoRule = true
+//grails.plugin.springsecurity.rejectIfNoRule = true
 
 grails.gorm.default.constraints = {
     '*'(nullable: true)
 }
-
-grails.plugin.springsecurity.interceptUrlMap = [
-        '/secure/**': ['ROLE_ADMIN'],
-//        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/portfolio/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-        '/portfolioItem/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-        '/stock/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/vanilla/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-        '/trade/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-
-        '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/*': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/login/**':   ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/logout/**': ['IS_AUTHENTICATED_FULLY', 'IS_AUTHENTICATED_REMEMBERED'],
-        '/register/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-]
+//
+//grails.plugin.springsecurity.interceptUrlMap = [
+//        '/secure/**': ['ROLE_ADMIN'],
+////        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/portfolio/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
+//        '/strategy/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
+//        '/stock/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/vanilla/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
+//        '/trade/**': ['ROLE_USER', 'ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
+//
+//        '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/*': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/login/**':   ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//        '/logout/**': ['IS_AUTHENTICATED_FULLY', 'IS_AUTHENTICATED_REMEMBERED'],
+//        '/register/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+//]
 
 grails {
     mail {
@@ -173,17 +173,17 @@ remove this line */
 
 
 // Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.dtmc.club.Member'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.dtmc.club.SecUserSecRole'
-grails.plugin.springsecurity.authority.className = 'com.dtmc.club.SecRole'
-grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':                              ['permitAll'],
-	'/index':                         ['permitAll'],
-	'/index.gsp':                     ['permitAll'],
-	'/**/js/**':                      ['permitAll'],
-	'/**/css/**':                     ['permitAll'],
-	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
-]
-
+//grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.dtmc.club.Member'
+//grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.dtmc.club.SecUserSecRole'
+//grails.plugin.springsecurity.authority.className = 'com.dtmc.club.SecRole'
+//grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+//	'/':                              ['permitAll'],
+//	'/index':                         ['permitAll'],
+//	'/index.gsp':                     ['permitAll'],
+//	'/**/js/**':                      ['permitAll'],
+//	'/**/css/**':                     ['permitAll'],
+//	'/**/images/**':                  ['permitAll'],
+//	'/**/favicon.ico':                ['permitAll']
+//]
+//
 

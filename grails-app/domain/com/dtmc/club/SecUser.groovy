@@ -2,7 +2,7 @@ package com.dtmc.club
 
 class SecUser {
 
-	transient springSecurityService
+//	transient springSecurityService
 
 	String username
 	String password
@@ -11,7 +11,7 @@ class SecUser {
 	boolean accountLocked
 	boolean passwordExpired
 
-	static transients = ['springSecurityService']
+//	static transients = ['springSecurityService']
 
 	static constraints = {
 		username blank: false, unique: true
@@ -27,16 +27,16 @@ class SecUser {
 	}
 
 	def beforeInsert() {
-		encodePassword()
+//		encodePassword()
 	}
 
 	def beforeUpdate() {
-		if (isDirty('password')) {
-			encodePassword()
-		}
+//		if (isDirty('password')) {
+//			encodePassword()
+//		}
 	}
 
 	protected void encodePassword() {
-		password = springSecurityService.encodePassword(password)
+//		password = springSecurityService.encodePassword(password)
 	}
 }

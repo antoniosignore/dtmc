@@ -79,7 +79,7 @@ grails.project.dependency.resolution = {
 
         compile ":scaffolding:2.0.1"
 
-        compile ":spring-security-core:2.0-RC2"
+//        compile ":spring-security-core:2.0-RC2"
 
     }
 }
