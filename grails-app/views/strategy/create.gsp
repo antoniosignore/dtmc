@@ -6,7 +6,6 @@
     <g:set var="entityName" value="${message(code: 'strategy.label', default: 'Strategy')}"/>
     <title><g:message code="default.create.label" args="[entityName]"/></title>
 
-
 </head>
 
 
@@ -36,31 +35,25 @@
     </g:form>
 </div>
 
-<div class="row">
-    <div class="span4">
-        <ol class="simple_with_animation vertical">
-            <li class="well">Item 1</li>
-            <li  class="well">Item 2</li>
-            <li class="well">Item 2</li>
-            <li class="well">Item 3</li>
-            <li class="well">Item 4</li>
-            <li class="well">Item 5</li>
-            <li class="well">Item 6</li>
-        </ol>
-    </div>
+<div class="bootstrap-container">
 
-    <div class="span4">
-        <ol class="simple_with_animation vertical">
-            <li class="well">Item 1</li>
+    <div class="row">
+        <div class="span4">
+            <ol id="test" class="simple_with_animation vertical">
+                <li id='pippo' class="well">Item 1</li>
+                <li id='pluto' class="well">Item 2</li>
+            </ol>
+        </div>
 
-            <li class="well">Item 3</li>
-            <li class="well">Item 4</li>
-            <li class="well">Item 5</li>
-            <li class="well">Item 6</li>
-        </ol>
+        <div class="span4">
+            <ol class="simple_with_animation vertical">
+                <g:each in="${userIndicatorsInstanceList}" status="i" var="userIndicatorsInstance">
+                    <li id='${fieldValue(bean: userIndicatorsInstance, field: "id")}'>${fieldValue(bean: userIndicatorsInstance, field: "name")}</li>
+                </g:each>
+            </ol>
+        </div>
     </div>
 </div>
-
 
 <r:external uri="/js/jquery-sortable.js"/>
 
@@ -70,8 +63,28 @@
     $("ol.simple_with_animation").sortable({
         group: 'simple_with_animation',
         pullPlaceholder: false,
+
+        serialize: function (parent, children, isContainer) {
+            return isContainer ? children.join() : parent.text()
+        },
+
         // animation on drop
         onDrop: function (item, targetContainer, _super) {
+
+            var dataToSend = $("ol#test").sortable("serialize").get();
+
+            alert(dataToSend)
+
+            $.ajax({
+                url: "ajax_action.php",
+                type: "post",
+                data: dataToSend,
+                cache: false,
+                dataType: "json",
+                success: function () {
+                }
+            });
+
             var clonedItem = $('<li/>').css({height: 0})
             item.before(clonedItem)
             clonedItem.animate({'height': item.height()})

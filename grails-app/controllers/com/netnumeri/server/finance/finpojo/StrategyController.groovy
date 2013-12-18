@@ -1,6 +1,6 @@
 package com.netnumeri.server.finance.finpojo
 
-
+import com.netnumeri.server.finance.indicator.UserIndicators
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -24,7 +24,7 @@ class StrategyController {
     }
 
     def create() {
-        respond new Strategy(params)
+        respond new Strategy(params), model:[userIndicatorsInstanceList: UserIndicators.list()]
     }
 
     @Transactional
