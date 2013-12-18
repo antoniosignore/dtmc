@@ -5,6 +5,10 @@ import com.netnumeri.server.enums.StrategyEnum
 
 class Strategy {
 
+    static mapping = {
+        tablePerHierarchy false
+    }
+
     StrategyEnum strategyEnum
 
     String name
@@ -18,9 +22,6 @@ class Strategy {
     static belongsTo	= [member: Member]
 
     static constraints = {
-    }
-
-    static mapping = {
     }
 
 }

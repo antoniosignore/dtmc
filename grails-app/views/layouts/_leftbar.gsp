@@ -16,6 +16,9 @@
                 <g:link controller="userIndicators" action="">User Indicators</g:link>
             </li>
 
+            <li class="${'strategy'.equals(params.controller) ? 'active' : ''}">
+                <g:link controller="SMACrossover" action="">SMA Strategy</g:link>
+            </li>
         </ul>
     </div>
 </div>
