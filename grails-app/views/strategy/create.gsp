@@ -71,9 +71,11 @@
         // animation on drop
         onDrop: function (item, targetContainer, _super) {
 
+            alert ('on drop start')
+
             var dataToSend = $("ol#test").sortable("serialize").get();
 
-            alert(dataToSend)
+//            alert(dataToSend)
 
             $.ajax({
                 url: "action1",
@@ -81,25 +83,25 @@
                 data:  {code: JSON.stringify(dataToSend)},
                 cache: false,
                 success: function () {
-                    alert('success')
+//                    alert('success')
+                    var clonedItem = $('<li/>').css({height: 0})
+                    item.before(clonedItem)
+                    clonedItem.animate({'height': item.height()})
+
+                    item.animate(clonedItem.position(), function () {
+                        clonedItem.detach()
+                        _super(item)
+                    })
                 },
                 error: function(){
                     alert('error')
                 }
             });
-
-            var clonedItem = $('<li/>').css({height: 0})
-            item.before(clonedItem)
-            clonedItem.animate({'height': item.height()})
-
-            item.animate(clonedItem.position(), function () {
-                clonedItem.detach()
-                _super(item)
-            })
         },
 
         // set item relative to cursor position
         onDragStart: function ($item, container, _super) {
+
             var offset = $item.offset(),
                     pointer = container.rootGroup.pointer
 
