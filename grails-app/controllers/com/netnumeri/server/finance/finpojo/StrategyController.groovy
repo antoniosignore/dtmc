@@ -29,7 +29,7 @@ class StrategyController {
 
     def action1(){
 
-        println 'PIPPO'
+        println 'PIPPO : ' + params
 
         redirect(action: "create", params: params)
 

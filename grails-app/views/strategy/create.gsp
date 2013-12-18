@@ -78,7 +78,7 @@
             $.ajax({
                 url: "action1",
                 type: "post",
-                data: dataToSend,
+                data:  {code: JSON.stringify(dataToSend)},
                 cache: false,
                 success: function () {
                     alert('success')
