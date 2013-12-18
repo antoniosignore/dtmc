@@ -8,7 +8,7 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class StrategyController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", action1:"POST"]
 
     def list() {
         redirect(action: "index", params: params)
@@ -25,6 +25,19 @@ class StrategyController {
 
     def create() {
         respond new Strategy(params), model:[userIndicatorsInstanceList: UserIndicators.list()]
+    }
+
+    def action1(){
+
+        println 'PIPPO'
+
+        redirect(action: "create", params: params)
+
+//        println("Got request " + request.reader.text)
+//
+//        println "params = " + params
+
+//        respond view:'create'
     }
 
     @Transactional

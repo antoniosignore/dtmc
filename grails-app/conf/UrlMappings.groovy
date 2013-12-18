@@ -17,7 +17,6 @@ class UrlMappings {
          * Pages with controller
          * WARN: No domain/controller should be named "api" or "mobile" or "web"!
          */
-
         "/" {
             controller = 'home'
             action = { 'index' }
@@ -30,14 +29,11 @@ class UrlMappings {
             }
         }
 
-
         /**
          * Spring Security Controller Mappings
          */
         "/login/$action?"(controller: "login")
         "/logout/$action?"(controller: "logout")
-
-        /**
 
         /*
          * System Pages without controller

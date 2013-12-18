@@ -76,12 +76,15 @@
             alert(dataToSend)
 
             $.ajax({
-                url: "ajax_action.php",
+                url: "action1",
                 type: "post",
                 data: dataToSend,
                 cache: false,
-                dataType: "json",
                 success: function () {
+                    alert('success')
+                },
+                error: function(){
+                    alert('error')
                 }
             });
 
