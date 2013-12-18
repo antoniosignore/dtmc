@@ -20,7 +20,6 @@ import java.text.ParseException
 
 public class SMACrossoverTest {
 
-
     String dir = "/home/antonio/timeplot/"
 
     @Test

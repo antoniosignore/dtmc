@@ -9,8 +9,8 @@ public class PortfolioItem implements Serializable {
     static constraints = {
     }
 
-    Instrument instrument
     static belongsTo = [portfolio: Portfolio]
+    static hasOne = [instrument: Instrument]
 
     Integer amount = 0;
 

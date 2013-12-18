@@ -11,14 +11,16 @@ class Portfolio extends Asset implements Serializable {
 
     static belongsTo = [user: Member]
 
+    static hasMany = [items: PortfolioItem, transactions: Trade]
+
     static mapping = {
         id generator: 'hilo',
                 params: [table: 'hi_value', column: 'next_value', max_lo: 100]
+
+        items cascade: 'all-delete-orphan'
     }
 
     String description
-
-    static hasMany = [items: PortfolioItem, transactions: Trade]
 
     static transients = [
             "assetsToHold",

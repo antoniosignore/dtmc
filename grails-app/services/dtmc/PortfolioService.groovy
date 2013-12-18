@@ -51,10 +51,10 @@ class PortfolioService {
 //        }
 //    }
 
-    void createPortfolio(String name, String description) {
-        def status = new Portfolio(name: name, description: description)
-        status.save()
-    }
+//    void createPortfolio(String name, String description) {
+//        def status = new Portfolio(name: name, description: description)
+//        status.save()
+//    }
 
     void clear(Portfolio portfolio) {
         portfolio.items.clear();
@@ -113,9 +113,10 @@ class PortfolioService {
         if (item.instrument instanceof Asset)
             portfolio.setRangeBounds(item.instrument.lowerRangeDate, item.instrument.getUpperRangeDate());
 
-        portfolio.items.add(item);
+//        item.save(flush:true)
 
-        //portfolio.save(failOnError: true, insert: true, flush: true);
+        portfolio.addToItems(item);
+        portfolio.save(flush: true);
     }
 
 
@@ -191,7 +192,7 @@ class PortfolioService {
                 entry.setAmount(amount);
             }
         }
-        // portfolio.save(failOnError: true, insert: true, flush: true);
+        portfolio.save(flush: true);
     }
 
     // add series of trade transactions
