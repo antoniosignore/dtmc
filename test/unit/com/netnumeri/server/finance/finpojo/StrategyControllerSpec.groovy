@@ -6,7 +6,7 @@ import grails.test.mixin.*
 import spock.lang.*
 
 @TestFor(StrategyController)
-@Mock(Strategy)
+@Mock(TradingSystem)
 class StrategyControllerSpec extends Specification {
 
     def populateValidParams(params) {
@@ -36,7 +36,7 @@ class StrategyControllerSpec extends Specification {
     void "Test the save action correctly persists an instance"() {
 
         when:"The save action is executed with an invalid instance"
-            def strategy = new Strategy()
+            def strategy = new TradingSystem()
             strategy.validate()
             controller.save(strategy)
 
@@ -47,14 +47,14 @@ class StrategyControllerSpec extends Specification {
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
-            strategy = new Strategy(params)
+            strategy = new TradingSystem(params)
 
             controller.save(strategy)
 
         then:"A redirect is issued to the show action"
             response.redirectedUrl == '/strategy/show/1'
             controller.flash.message != null
-            Strategy.count() == 1
+            TradingSystem.count() == 1
     }
 
     void "Test that the show action returns the correct model"() {
@@ -66,7 +66,7 @@ class StrategyControllerSpec extends Specification {
 
         when:"A domain instance is passed to the show action"
             populateValidParams(params)
-            def strategy = new Strategy(params)
+            def strategy = new TradingSystem(params)
             controller.show(strategy)
 
         then:"A model is populated containing the domain instance"
@@ -82,7 +82,7 @@ class StrategyControllerSpec extends Specification {
 
         when:"A domain instance is passed to the edit action"
             populateValidParams(params)
-            def strategy = new Strategy(params)
+            def strategy = new TradingSystem(params)
             controller.edit(strategy)
 
         then:"A model is populated containing the domain instance"
@@ -100,7 +100,7 @@ class StrategyControllerSpec extends Specification {
 
         when:"An invalid domain instance is passed to the update action"
             response.reset()
-            def strategy = new Strategy()
+            def strategy = new TradingSystem()
             strategy.validate()
             controller.update(strategy)
 
@@ -111,7 +111,7 @@ class StrategyControllerSpec extends Specification {
         when:"A valid domain instance is passed to the update action"
             response.reset()
             populateValidParams(params)
-            strategy = new Strategy(params).save(flush: true)
+            strategy = new TradingSystem(params).save(flush: true)
             controller.update(strategy)
 
         then:"A redirect is issues to the show action"
@@ -130,16 +130,16 @@ class StrategyControllerSpec extends Specification {
         when:"A domain instance is created"
             response.reset()
             populateValidParams(params)
-            def strategy = new Strategy(params).save(flush: true)
+            def strategy = new TradingSystem(params).save(flush: true)
 
         then:"It exists"
-            Strategy.count() == 1
+            TradingSystem.count() == 1
 
         when:"The domain instance is passed to the delete action"
             controller.delete(strategy)
 
         then:"The instance is deleted"
-            Strategy.count() == 0
+            TradingSystem.count() == 0
             response.redirectedUrl == '/strategy/index'
             flash.message != null
     }

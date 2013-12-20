@@ -6,7 +6,7 @@ import grails.test.mixin.*
 import spock.lang.*
 
 @TestFor(TradeController)
-@Mock(Trade)
+@Mock(Transaction)
 class TradeControllerSpec extends Specification {
 
     def populateValidParams(params) {
@@ -36,7 +36,7 @@ class TradeControllerSpec extends Specification {
     void "Test the save action correctly persists an instance"() {
 
         when:"The save action is executed with an invalid instance"
-            def trade = new Trade()
+            def trade = new Transaction()
             trade.validate()
             controller.save(trade)
 
@@ -47,14 +47,14 @@ class TradeControllerSpec extends Specification {
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
-            trade = new Trade(params)
+            trade = new Transaction(params)
 
             controller.save(trade)
 
         then:"A redirect is issued to the show action"
             response.redirectedUrl == '/trade/show/1'
             controller.flash.message != null
-            Trade.count() == 1
+            Transaction.count() == 1
     }
 
     void "Test that the show action returns the correct model"() {
@@ -66,7 +66,7 @@ class TradeControllerSpec extends Specification {
 
         when:"A domain instance is passed to the show action"
             populateValidParams(params)
-            def trade = new Trade(params)
+            def trade = new Transaction(params)
             controller.show(trade)
 
         then:"A model is populated containing the domain instance"
@@ -82,7 +82,7 @@ class TradeControllerSpec extends Specification {
 
         when:"A domain instance is passed to the edit action"
             populateValidParams(params)
-            def trade = new Trade(params)
+            def trade = new Transaction(params)
             controller.edit(trade)
 
         then:"A model is populated containing the domain instance"
@@ -100,7 +100,7 @@ class TradeControllerSpec extends Specification {
 
         when:"An invalid domain instance is passed to the update action"
             response.reset()
-            def trade = new Trade()
+            def trade = new Transaction()
             trade.validate()
             controller.update(trade)
 
@@ -111,7 +111,7 @@ class TradeControllerSpec extends Specification {
         when:"A valid domain instance is passed to the update action"
             response.reset()
             populateValidParams(params)
-            trade = new Trade(params).save(flush: true)
+            trade = new Transaction(params).save(flush: true)
             controller.update(trade)
 
         then:"A redirect is issues to the show action"
@@ -130,16 +130,16 @@ class TradeControllerSpec extends Specification {
         when:"A domain instance is created"
             response.reset()
             populateValidParams(params)
-            def trade = new Trade(params).save(flush: true)
+            def trade = new Transaction(params).save(flush: true)
 
         then:"It exists"
-            Trade.count() == 1
+            Transaction.count() == 1
 
         when:"The domain instance is passed to the delete action"
             controller.delete(trade)
 
         then:"The instance is deleted"
-            Trade.count() == 0
+            Transaction.count() == 0
             response.redirectedUrl == '/trade/index'
             flash.message != null
     }

@@ -5,6 +5,6 @@ class Bet extends Persistable implements Serializable {
 
     double score;
 
-    def transactions = new ArrayList<Trade>()
+    def transactions = new ArrayList<Transaction>()
 
 }

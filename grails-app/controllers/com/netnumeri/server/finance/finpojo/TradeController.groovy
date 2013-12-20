@@ -16,19 +16,19 @@ class TradeController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Trade.list(params), model:[tradeInstanceCount: Trade.count()]
+        respond Transaction.list(params), model:[tradeInstanceCount: Transaction.count()]
     }
 
-    def show(Trade tradeInstance) {
+    def show(Transaction tradeInstance) {
         respond tradeInstance
     }
 
     def create() {
-        respond new Trade(params)
+        respond new Transaction(params)
     }
 
     @Transactional
-    def save(Trade tradeInstance) {
+    def save(Transaction tradeInstance) {
         if (tradeInstance == null) {
             notFound()
             return
@@ -50,12 +50,12 @@ class TradeController {
         }
     }
 
-    def edit(Trade tradeInstance) {
+    def edit(Transaction tradeInstance) {
         respond tradeInstance
     }
 
     @Transactional
-    def update(Trade tradeInstance) {
+    def update(Transaction tradeInstance) {
         if (tradeInstance == null) {
             notFound()
             return
@@ -78,7 +78,7 @@ class TradeController {
     }
 
     @Transactional
-    def delete(Trade tradeInstance) {
+    def delete(Transaction tradeInstance) {
 
         if (tradeInstance == null) {
             notFound()

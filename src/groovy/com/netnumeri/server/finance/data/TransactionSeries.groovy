@@ -4,16 +4,16 @@ import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.finpojo.Trade
+import com.netnumeri.server.finance.finpojo.Transaction
 
 public class TransactionSeries implements Serializable {
 
-    protected GenericTimeSeries<Trade> transactionArray = new GenericTimeSeries<Trade>();
+    protected GenericTimeSeries<Transaction> transactionArray = new GenericTimeSeries<Transaction>();
 
     public TransactionSeries() {
     }
 
-    public void add(Trade transaction) {
+    public void add(Transaction transaction) {
         transactionArray.put(transaction.getTransactionDate(), transaction);
     }
 
@@ -25,7 +25,7 @@ public class TransactionSeries implements Serializable {
         return transactionArray.treeMap.size();
     }
 
-    public Trade getTransaction(Date date) {
+    public Transaction getTransaction(Date date) {
         return transactionArray.get(date);
     }
 
@@ -61,11 +61,11 @@ public class TransactionSeries implements Serializable {
         transactionArray.clear()
     }
 
-    public Trade getFirstTransaction() {
+    public Transaction getFirstTransaction() {
         return transactionArray.getFirstValue()
     }
 
-    public Trade getLastTransaction() {
+    public Transaction getLastTransaction() {
         return transactionArray.getLastValue()
     }
 
@@ -81,10 +81,10 @@ public class TransactionSeries implements Serializable {
     // Return next sell transactions for the same Instrument of buy transactions
     // Return previous buy transactions for the same Instrument of sell transactions
     // Return null if there is no pair transactions
-    public Trade getPair(Date date, TradeEnum action) {
+    public Transaction getPair(Date date, TradeEnum action) {
 
         if (action == TradeEnum.BUY) {
-            Trade transaction = transactionArray.getNextValue(date)
+            Transaction transaction = transactionArray.getNextValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.SELL)
@@ -94,7 +94,7 @@ public class TransactionSeries implements Serializable {
         }
 
         if (action == TradeEnum.SELL) {
-            Trade transaction = transactionArray.getPrevValue(date)
+            Transaction transaction = transactionArray.getPrevValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.BUY)
@@ -104,7 +104,7 @@ public class TransactionSeries implements Serializable {
         }
 
         if (action == TradeEnum.SELLSHORT) {
-            Trade transaction = transactionArray.getNextValue(date)
+            Transaction transaction = transactionArray.getNextValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.BUYSHORT)
@@ -114,7 +114,7 @@ public class TransactionSeries implements Serializable {
         }
 
         if (action == TradeEnum.SELLSHORT) {
-            Trade transaction = transactionArray.getPrevValue(date)
+            Transaction transaction = transactionArray.getPrevValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.BUYSHORT)
@@ -127,8 +127,8 @@ public class TransactionSeries implements Serializable {
     public Object clone() {
         TransactionSeries ts = new TransactionSeries();
         transactionArray.iterator();
-        for (Iterator<Trade> iterator = transactionArray.iterator(); iterator.hasNext();) {
-            Trade transaction = iterator.next();
+        for (Iterator<Transaction> iterator = transactionArray.iterator(); iterator.hasNext();) {
+            Transaction transaction = iterator.next();
             ts.transactionArray.put(transaction.getTransactionDate(), transaction);
         }
         return ts;

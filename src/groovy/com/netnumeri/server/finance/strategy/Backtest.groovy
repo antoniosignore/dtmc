@@ -6,7 +6,7 @@ import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
-import com.netnumeri.server.finance.finpojo.Trade
+import com.netnumeri.server.finance.finpojo.Transaction
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.ta.TradeInfo
 import com.netnumeri.server.finance.ta.TradeListEntry
@@ -214,8 +214,8 @@ public class Backtest implements Serializable {
         double maxWealth = initialWealth;
         double aktDrawDown = 0;
 
-        Trade transaction;
-        Trade transactionPair;
+        Transaction transaction;
+        Transaction transactionPair;
 
         if (firstDate == null) firstDate = portfolio.getFirstDate();
         if (lastDate == null) lastDate = portfolio.getLastDate();
@@ -235,7 +235,7 @@ public class Backtest implements Serializable {
 
             if (transaction != null) {
 
-                Date transactionDate = transaction.getTransactionDate();
+                Date transactionDate = transaction.transactionDate;
 
                 println "transactionDate = $date"
                 println "transactionDate = $transactionDate"
@@ -364,8 +364,8 @@ public class Backtest implements Serializable {
         return 0;
     }
 
-    public void addToTradeList(Trade transaction,
-                               Trade transactionPair,
+    public void addToTradeList(Transaction transaction,
+                               Transaction transactionPair,
                                double WealthDiff,
                                FinConstants transactionType) {
         Instrument instrument;

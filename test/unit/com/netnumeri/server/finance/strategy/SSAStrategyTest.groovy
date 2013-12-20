@@ -5,7 +5,7 @@ import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
-import com.netnumeri.server.finance.finpojo.Trade
+import com.netnumeri.server.finance.finpojo.Transaction
 import com.netnumeri.server.finance.ta.TradeListEntry
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
@@ -51,7 +51,7 @@ public class SSAStrategyTest {
         FileUtils.writeStringToFile(new File(dir + "/table.html"), trader.toXMLString())
 
         TransactionSeries transactions = strategy.transactionSeries;
-        GenericTimeSeries<Trade> array = transactions.transactionArray
+        GenericTimeSeries<Transaction> array = transactions.transactionArray
 
         List<TradeListEntry> list = trader.getTradeList();
 

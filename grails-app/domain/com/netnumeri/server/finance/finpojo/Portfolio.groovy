@@ -11,7 +11,9 @@ class Portfolio extends Asset implements Serializable {
 
     static belongsTo = [user: Member]
 
-    static hasMany = [items: PortfolioItem, transactions: Trade]
+    static hasMany = [items: PortfolioItem, transactions: Transaction]
+    List<PortfolioItem> items = new ArrayList<PortfolioItem>()
+    List<Transaction> transactions = new ArrayList<Transaction>()
 
     static mapping = {
         id generator: 'hilo',
@@ -58,18 +60,15 @@ class Portfolio extends Asset implements Serializable {
         return item;
     }
 
-    // todo - remove dependency from PortfolioService
     Portfolio clone() {
         Portfolio p = new Portfolio(getName(), "clone");
-        for (int i = 0; i < items.size(); i++) {
-            PortfolioItem portfolioItem = items.get(i);
-            //     TradeService.add(p, portfolioItem);
+
+        items.each{item ->
+            p.addToItems(item)
         }
 
-        this.transactions
-        for (int i = 0; i < transactions.size(); i++) {
-            Trade t = transactions.get(i);
-            p.transactions.add(t)
+        transactions.each{transaction ->
+            p.addToTransactions(transaction)
         }
 
         p.assetsToHold = assetsToHold;

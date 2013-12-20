@@ -1,4 +1,4 @@
-<%@ page import="com.netnumeri.server.finance.finpojo.Trade" %>
+<%@ page import="com.netnumeri.server.finance.finpojo.Transaction" %>
 <!DOCTYPE html>
 <html>
 	<head>

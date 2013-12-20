@@ -1,5 +1,5 @@
 
-<%@ page import="com.netnumeri.server.finance.finpojo.Strategy" %>
+<%@ page import="com.netnumeri.server.finance.finpojo.TradingSystem" %>
 <!DOCTYPE html>
 <html>
 	<head>

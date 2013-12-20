@@ -2,7 +2,6 @@ package com.dtmc.club
 
 import com.netnumeri.server.enums.MemberGoalEnum
 import com.netnumeri.server.enums.MemberTypeEnum
-import com.netnumeri.server.finance.finpojo.Strategy
 import com.netnumeri.server.finance.indicator.UserIndicators
 
 class Member extends SecUser{
@@ -33,7 +32,7 @@ class Member extends SecUser{
 
     ImageNode small
 
-    static hasMany = [indicators: UserIndicators, strategies: Strategy]
+    static hasMany = [indicators: UserIndicators]
 
     static constraints = {
 

@@ -3,11 +3,17 @@ package com.netnumeri.server.finance.finpojo.asset
 import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.data.TransactionSeries
+import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.indicator.UserIndicators
+import com.netnumeri.server.finance.strategy.Backtest
+import com.netnumeri.server.finance.strategy.SMACrossover
+import com.netnumeri.server.finance.strategy.Strategy
 import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
+import dtmc.PortfolioService
 import org.springframework.dao.DataIntegrityViolationException
 
 class StockController {
@@ -242,9 +248,35 @@ class StockController {
             }
         }
 
-            stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
+        stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
 
 //        TimeSeries series = stockInstance.closeSeries()
+
+        Portfolio portfolio = new Portfolio("SMA crossing", "Description", 10000);
+
+//        Date da = DateUtils.Date("1/1/2007");
+//        Date a = DateUtils.today();
+
+//        Instrument stock = YahooUtils.downloadYahooData("AAPL", "Apple Computers", da, a);
+
+//        TimeSeries closes = stock.getSeries(FinConstants.CLOSE);
+//        FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
+
+        stockInstance.indicators.put("upper", new SMAIndicator(closes, "SMA-" + 50, 50))
+        stockInstance.indicators.put("lower", new SMAIndicator(closes, "SMA-" + 10, 10))
+
+        PortfolioService tradeService = new PortfolioService();
+        tradeService.add(portfolio, stockInstance);
+
+        Strategy strategy = new SMACrossover("test", portfolio, da, a, 10000);
+        strategy.run();
+
+        TransactionSeries series = strategy.transactionSeries
+
+        Backtest trader = new Backtest(strategy.transactionSeries, portfolio, 100000);
+        double value = trader.test();
+
+        println trader.toXMLString()
 
         // todo date in jqplot format
         String plot = StockUtils.getJqPlot(stockInstance)

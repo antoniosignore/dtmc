@@ -7,9 +7,7 @@ import com.dtmc.club.Member
 
 class Persistable {
 
-    static mapping = {
-        tablePerHierarchy false
-    }
+    static mapping = { tablePerHierarchy false }
 
     Member user
     Club club
