@@ -4,6 +4,7 @@ import com.dtmc.club.SecRole
 import com.dtmc.club.SecUser
 import com.dtmc.club.SecUserSecRole
 import com.netnumeri.server.enums.IndicatorEnum
+import com.netnumeri.server.enums.PortfolioEnum
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.indicator.UserIndicators
@@ -50,6 +51,7 @@ class BootStrap {
             assert SecUserSecRole.count() == 3
 
             Portfolio portfolio = new Portfolio("SMA crossing", "desc", 10000)
+            portfolio.portfolioType = PortfolioEnum.Main
             portfolio.user = adminUser
             portfolio.club = club
             portfolio.save(failOnError: true, insert: true, flush: true)

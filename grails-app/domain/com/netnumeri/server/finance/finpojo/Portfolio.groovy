@@ -2,6 +2,7 @@ package com.netnumeri.server.finance.finpojo
 
 import Jama.Matrix
 import com.dtmc.club.Member
+import com.netnumeri.server.enums.PortfolioEnum
 import com.netnumeri.server.finance.finpojo.asset.Asset
 
 class Portfolio extends Asset implements Serializable {
@@ -38,6 +39,7 @@ class Portfolio extends Asset implements Serializable {
     Matrix correlationMatrix
     Date firstDailyDate;
     Date lastDailyDate;
+    PortfolioEnum portfolioType
 
     Portfolio(String name, String description) {
         setName(name);

@@ -1,6 +1,7 @@
 package com.netnumeri.server.finance.finpojo.asset
 
 import com.netnumeri.server.enums.IndicatorEnum
+import com.netnumeri.server.enums.PortfolioEnum
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.data.TransactionSeries
@@ -253,6 +254,7 @@ class StockController {
 //        TimeSeries series = stockInstance.closeSeries()
 
         Portfolio portfolio = new Portfolio("SMA crossing", "Description", 10000);
+        portfolio.portfolioType = PortfolioEnum.Strategy
         portfolio.save(flush: true)
 
 //        Date da = DateUtils.Date("1/1/2007");
