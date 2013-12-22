@@ -6,7 +6,7 @@ import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.indicator.UserIndicators
-import com.netnumeri.server.finance.strategy.Backtest
+import com.netnumeri.server.finance.strategy.BackTest
 import com.netnumeri.server.finance.strategy.SMACrossover
 import com.netnumeri.server.finance.strategy.Strategy
 import com.netnumeri.server.finance.ta.*
@@ -253,6 +253,7 @@ class StockController {
 //        TimeSeries series = stockInstance.closeSeries()
 
         Portfolio portfolio = new Portfolio("SMA crossing", "Description", 10000);
+        portfolio.save(flush: true)
 
 //        Date da = DateUtils.Date("1/1/2007");
 //        Date a = DateUtils.today();
@@ -273,10 +274,13 @@ class StockController {
 
         TransactionSeries series = strategy.transactionSeries
 
-        Backtest trader = new Backtest(strategy.transactionSeries, portfolio, 100000);
+        BackTest trader = new BackTest(strategy.transactionSeries, portfolio, 100000);
         double value = trader.test();
 
         println trader.toXMLString()
+
+        portfolio.save(flush: true)
+
 
         // todo date in jqplot format
         String plot = StockUtils.getJqPlot(stockInstance)

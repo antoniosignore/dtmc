@@ -19,6 +19,7 @@ class Portfolio extends Asset implements Serializable {
         id generator: 'hilo',
                 params: [table: 'hi_value', column: 'next_value', max_lo: 100]
 
+        transactions cascade: 'all-delete-orphan'
         items cascade: 'all-delete-orphan'
     }
 

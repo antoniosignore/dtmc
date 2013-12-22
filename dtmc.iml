@@ -107,7 +107,9 @@
           <root url="jar://$M2_REPO$/bouncycastle/bcprov-jdk14/138/bcprov-jdk14-138.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ideaLibSources/hibernate-core-3.6.10.Final-sources.jar!/" />
+        </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>

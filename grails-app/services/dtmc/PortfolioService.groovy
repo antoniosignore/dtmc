@@ -1,10 +1,10 @@
 package dtmc
 
 import Jama.Matrix
-import com.netnumeri.server.enums.TradeEnum
 import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
@@ -113,10 +113,8 @@ class PortfolioService {
         if (item.instrument instanceof Asset)
             portfolio.setRangeBounds(item.instrument.lowerRangeDate, item.instrument.getUpperRangeDate());
 
-//        item.save(flush:true)
-
+        item.save(flush:true)
         portfolio.addToItems(item);
-        portfolio.save(flush: true);
     }
 
 
@@ -128,7 +126,6 @@ class PortfolioService {
     public void add(Portfolio portfolio, Instrument instrument, int Amount) {
         PortfolioItem item = new PortfolioItem(instrument, Amount, portfolio);
 
-//        item.save(failOnError: true, insert: true, flush: true)
         add(portfolio, item);
     }
 
@@ -151,29 +148,29 @@ class PortfolioService {
                 System.out.println("addTransaction. No short position on buy short for " + transaction.instrument.name + " in " + portfolio.getName());
                 return;
             }
-            portfolio.transactions.add(transaction);
-            add(portfolio, entry); ;
+            portfolio.addToTransactions(transaction);
+            add(portfolio, entry);
         } else {
             int amount = 0;
-            if (transaction.getTradeAction() == TradeEnum.BUY) {
+            if (transaction.tradeAction == TradeEnum.BUY) {
                 if (entry.getAmount() < 0) {
                     System.out.println("addTransaction. Short position on buy for " + transaction.instrument.name + " in " + portfolio.getName());
                     return;
                 }
                 amount = entry.getAmount() + transaction.getAmount();
-            } else if (transaction.getTradeAction() == TradeEnum.SELL) {
+            } else if (transaction.tradeAction == TradeEnum.SELL) {
                 amount = entry.getAmount() - transaction.getAmount();
                 if (amount < 0) {
                     System.out.println("addTransaction. Sell amount larger than long position for" + transaction.instrument.name + " in " + portfolio.getName());
                     return;
                 }
-            } else if (transaction.getTradeAction() == TradeEnum.SELLSHORT) {
+            } else if (transaction.tradeAction == TradeEnum.SELLSHORT) {
                 if (entry.getAmount() > 0) {
                     System.out.println("addTransaction. Long position in instrument on sell short: " + portfolio.getName());
                     return;
                 }
                 amount = entry.getAmount() - transaction.getAmount();
-            } else if (transaction.getTradeAction() == TradeEnum.BUYSHORT) {
+            } else if (transaction.tradeAction == TradeEnum.BUYSHORT) {
                 if (entry.getAmount() > 0) {
                     System.out.println("addTransaction. Long position on buy short for " + transaction.instrument.name + " in " + portfolio.getName());
                     return;
@@ -184,7 +181,7 @@ class PortfolioService {
                     return;
                 }
             }
-            portfolio.transactions.add(transaction);
+            portfolio.addToTransactions(transaction);
 
             if (amount == 0) {
                 remove(portfolio, instrument);
@@ -192,7 +189,7 @@ class PortfolioService {
                 entry.setAmount(amount);
             }
         }
-        portfolio.save(flush: true);
+       // portfolio.save(flush: true);
     }
 
     // add series of trade transactions

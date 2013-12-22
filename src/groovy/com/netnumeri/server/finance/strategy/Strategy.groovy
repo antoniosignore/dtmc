@@ -11,9 +11,9 @@ import dtmc.PortfolioService
 
 public abstract class Strategy {
 
-    private Backtest tester;
-    protected Portfolio portfolio;
-    protected Portfolio strategyPortfolio;
+    String name
+    BackTest tester;
+    Portfolio portfolio;
     double wealth = 0;
     public TransactionSeries transactionSeries = null;
     PortfolioService portfolioService = new PortfolioService()
@@ -29,16 +29,17 @@ public abstract class Strategy {
     public Strategy(String name, final Portfolio portfolio, Date firstDate, Date lastDate, double wealth) {
         this.transactionSeries = new TransactionSeries();
         this.wealth = wealth;
-        this.strategyPortfolio = portfolio.clone();
+        this.portfolio = portfolio
+        this.name = name
         this.portfolio = portfolio;
-        tester = new Backtest(this, wealth);
+        tester = new BackTest(this, wealth);
         this.firstDate = firstDate
         this.lastDate = lastDate
     }
 
     public void add(Transaction transaction) {
         transactionSeries.add(transaction);
-        portfolioService.add(strategyPortfolio, transaction);
+        portfolioService.add(portfolio, transaction);
     }
 
     public void add(Instrument instrument, TradeEnum action, int amount, double price, Date date) {

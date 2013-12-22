@@ -13,7 +13,7 @@ import com.netnumeri.server.finance.ta.TradeListEntry
 import com.netnumeri.server.finance.utils.DateUtils
 import dtmc.PortfolioService
 
-public class Backtest implements Serializable {
+public class BackTest implements Serializable {
 
     PortfolioService portfolioService = new PortfolioService();
 
@@ -84,7 +84,7 @@ public class Backtest implements Serializable {
     boolean isTested;
     ArrayList<TradeListEntry> tradeList = new ArrayList();
 
-    public Backtest(Strategy strategy, double InitialWealth) {
+    public BackTest(Strategy strategy, double InitialWealth) {
         super();
         initialWealth = InitialWealth;
 //        signalSeries = null;
@@ -102,7 +102,7 @@ public class Backtest implements Serializable {
 //        init();
 //    }
 
-    public Backtest(TransactionSeries transactionSeries, Portfolio initPortfolio, double InitialWealth) {
+    public BackTest(TransactionSeries transactionSeries, Portfolio initPortfolio, double InitialWealth) {
         super();
         this.initialWealth = InitialWealth;
 //        this.signalSeries = null;

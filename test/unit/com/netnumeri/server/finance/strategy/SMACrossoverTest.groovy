@@ -47,7 +47,7 @@ public class SMACrossoverTest {
 
         TransactionSeries series = strategy.transactionSeries
 
-        Backtest trader = new Backtest(strategy.transactionSeries, portfolio, 100000);
+        BackTest trader = new BackTest(strategy.transactionSeries, portfolio, 100000);
         double value = trader.test();
 
         System.out.println(trader.toXMLString())

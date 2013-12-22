@@ -251,7 +251,7 @@ public class SSAStrategy extends Strategy {
             TransactionSeries tserie = getTransactionSerie();
             Util.debug("tserie.getNTransactions() = " + tserie.getNTransactions());
 
-            Backtest trader = new Backtest(getTransactionSerie(), getPortfolio(), 100000);
+            BackTest trader = new BackTest(getTransactionSerie(), getPortfolio(), 100000);
             double value = trader.test();
             try {
 //                trader.generateCharts();
