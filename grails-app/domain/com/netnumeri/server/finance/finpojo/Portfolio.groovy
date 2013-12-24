@@ -13,8 +13,9 @@ class Portfolio extends Asset implements Serializable {
     static belongsTo = [user: Member]
 
     static hasMany = [items: PortfolioItem, transactions: Transaction]
-    List<PortfolioItem> items = new ArrayList<PortfolioItem>()
-    List<Transaction> transactions = new ArrayList<Transaction>()
+
+//    List<PortfolioItem> items = new ArrayList<PortfolioItem>()
+//    List<Transaction> transactions = new ArrayList<Transaction>()
 
     static mapping = {
         id generator: 'hilo',

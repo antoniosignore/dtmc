@@ -6,6 +6,7 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class PortfolioController {
 
+
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def list() {
@@ -18,6 +19,9 @@ class PortfolioController {
     }
 
     def show(Portfolio portfolioInstance) {
+
+       //println "xxxxxxx : " +  portfolioInstance.transactions?.size()
+
         respond portfolioInstance
     }
 

@@ -253,7 +253,7 @@ class StockController {
 
 //        TimeSeries series = stockInstance.closeSeries()
 
-        Portfolio portfolio = new Portfolio("SMA crossing", "Description", 10000);
+        Portfolio portfolio = new Portfolio("SMA crossing", "MA 50 - 10 crossing ", 10000);
         portfolio.portfolioType = PortfolioEnum.Strategy
         portfolio.save(flush: true)
 

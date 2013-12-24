@@ -8,13 +8,12 @@ public class Transaction implements Serializable {
 
     TradeEnum tradeAction;
 
-    static belongsTo = [portfolio: Portfolio]
+    static belongsTo = [portfolio: Portfolio, instrument: Instrument]
 
     Integer amount = 0;
     Double price = 0.0;
     Double cost = 0;
     Date transactionDate;
-    Instrument instrument
 
     public Transaction() {
     }

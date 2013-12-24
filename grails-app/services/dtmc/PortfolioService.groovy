@@ -17,7 +17,7 @@ import com.netnumeri.server.finance.utils.YahooUtils
 
 class PortfolioService {
 
-    def springSecurityService
+//    def springSecurityService
 
     /*
      def list(Integer max) {
@@ -113,7 +113,7 @@ class PortfolioService {
         if (item.instrument instanceof Asset)
             portfolio.setRangeBounds(item.instrument.lowerRangeDate, item.instrument.getUpperRangeDate());
 
-        item.save(flush:true)
+        //item.save(flush:true)
         portfolio.addToItems(item);
     }
 
@@ -131,6 +131,8 @@ class PortfolioService {
 
     public void add(Portfolio portfolio, Transaction transaction) {
         if (transaction == null) throw new IllegalArgumentException("transactions cannot be null");
+
+        transaction.save(flush: true)
 
         Instrument instrument = transaction.instrument;
         PortfolioItem entry = entry(portfolio, instrument);
@@ -299,12 +301,12 @@ class PortfolioService {
 
     // Sell everything - todo
     public Transaction sell(Portfolio portfolio, Instrument instrument, Date date) {
-//        int amount;
-//        if (entry(portfolio, instrument) != null) {
-//            amount = amount(portfolio, instrument);
-//        } else {
-//            return null;
-//        }
+        int amount;
+        if (entry(portfolio, instrument) != null) {
+            amount = amount(portfolio, instrument);
+        } else {
+            return null;
+        }
         if (date == null) date = new Date();
         Transaction transaction = new Transaction(instrument, TradeEnum.SELL, amount, instrument.getPrice(date), date);
         add(portfolio, transaction);
