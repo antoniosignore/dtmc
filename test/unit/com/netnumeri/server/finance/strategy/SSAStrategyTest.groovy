@@ -41,16 +41,16 @@ public class SSAStrategyTest {
         Strategy strategy = new SSAStrategy("test", portfolio, da, a, 10000);
         strategy.run();
 
-        TransactionSeries series = strategy.transactionSeries
+//        TransactionSeries series = strategy.transactionSeries
 
-        BackTest trader = new BackTest(strategy.transactionSeries, portfolio, 100000);
+        BackTest trader = new BackTest(strategy, portfolio, 100000);
         double value = trader.test();
 
         System.out.println(trader.toXMLString())
 
         FileUtils.writeStringToFile(new File(dir + "/table.html"), trader.toXMLString())
 
-        TransactionSeries transactions = strategy.transactionSeries;
+       // TransactionSeries transactions = strategy.transactionSeries;
         GenericTimeSeries<Transaction> array = transactions.transactionArray
 
         List<TradeListEntry> list = trader.getTradeList();

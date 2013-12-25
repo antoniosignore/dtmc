@@ -274,9 +274,9 @@ class StockController {
         Strategy strategy = new SMACrossover("test", portfolio, da, a, 10000);
         strategy.run();
 
-        TransactionSeries series = strategy.transactionSeries
+//        TransactionSeries series = strategy.transactionSeries
 
-        BackTest trader = new BackTest(strategy.transactionSeries, portfolio, 100000);
+        BackTest trader = new BackTest(strategy.portfolio, 100000);
         double value = trader.test();
 
         println trader.toXMLString()

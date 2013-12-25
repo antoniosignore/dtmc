@@ -88,7 +88,7 @@ public class BackTest implements Serializable {
         super();
         initialWealth = InitialWealth;
 //        signalSeries = null;
-        transactionSerie = strategy.transactionSeries
+//        transactionSerie = strategy.transactionSeries
         init();
     }
 
@@ -102,11 +102,11 @@ public class BackTest implements Serializable {
 //        init();
 //    }
 
-    public BackTest(TransactionSeries transactionSeries, Portfolio initPortfolio, double InitialWealth) {
+    public BackTest(Portfolio initPortfolio, double InitialWealth) {
         super();
         this.initialWealth = InitialWealth;
 //        this.signalSeries = null;
-        this.transactionSerie = transactionSeries;
+//        this.transactionSerie = transactionSeries;
         this.portfolio = initPortfolio;
         init();
     }

@@ -27,7 +27,7 @@ public abstract class Strategy {
     }
 
     public Strategy(String name, final Portfolio portfolio, Date firstDate, Date lastDate, double wealth) {
-        this.transactionSeries = new TransactionSeries();
+      //  this.transactionSeries = new TransactionSeries();
         this.wealth = wealth;
         this.portfolio = portfolio
         this.name = name
@@ -38,7 +38,7 @@ public abstract class Strategy {
     }
 
     public void add(Transaction transaction) {
-        transactionSeries.add(transaction);
+//        transactionSeries.add(transaction);
         portfolioService.add(portfolio, transaction);
     }
 
