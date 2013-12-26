@@ -4,8 +4,8 @@ import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import grails.test.mixin.TestFor
 
-@TestFor(PortfolioItem)
-class PortfolioItemTest {
+@TestFor(PortfolioEntry)
+class PortfolioEntryTest {
 
     def portfolioService
 
@@ -22,7 +22,7 @@ class PortfolioItemTest {
 
         println "stock.id = $stock.id"
 
-        PortfolioItem item = new PortfolioItem(stock, 100, portfolio);
+        PortfolioEntry item = new PortfolioEntry(stock, 100, portfolio);
         item.save(failOnError: true, insert: true, flush: true)
     }
 }

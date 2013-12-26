@@ -57,12 +57,21 @@ public abstract class Strategy {
 
         while (DateUtils.isLessEqual(day, lastDay)) {
 
-            for (int i = 0; i < portfolio.items.size(); i++) {
-                Instrument asset = portfolioService.getInstrument(portfolio, i);
+            portfolio.items.each {
+
+                Instrument asset = it.instrument
                 if (asset.isDataAvailable(day)) {
                     evaluateInstrumentOnDate(day, asset);
                 }
+
             }
+
+//            for (int i = 0; i < portfolio.items.size(); i++) {
+//                Instrument asset = portfolioService.getInstrument(portfolio, i);
+//                if (asset.isDataAvailable(day)) {
+//                    evaluateInstrumentOnDate(day, asset);
+//                }
+//            }
             day = DateUtils.nextDay(day);
         }
     }

@@ -8,7 +8,7 @@ import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
-import com.netnumeri.server.finance.finpojo.PortfolioItem
+import com.netnumeri.server.finance.finpojo.PortfolioEntry
 import com.netnumeri.server.finance.finpojo.Transaction
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.finpojo.derivative.Derivative
@@ -74,8 +74,9 @@ class PortfolioService {
             return portfolio.firstDailyDate;
         }
         Instrument instrument
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            instrument = getInstrument(portfolio, i);
+
+        portfolio.items.each {
+            instrument = it.instrument
             if (instrument instanceof Asset) {
                 if (instrument.firstDay() != null) {
                     portfolio.firstDailyDate =
@@ -83,6 +84,11 @@ class PortfolioService {
                 }
             }
         }
+//
+//        for (int i = 0; i < portfolio.items.size(); i++) {
+//            instrument = getInstrument(portfolio, i);
+//        }
+//
         return portfolio.firstDailyDate;
     }
 
@@ -91,19 +97,24 @@ class PortfolioService {
         if (portfolio.lastDailyDate != null) {
             return portfolio.lastDailyDate;
         }
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            instrument = getInstrument(portfolio, i);
-            if (instrument instanceof Asset) {
-                if (instrument.lastDay() != null) {
-                    portfolio.lastDailyDate = DateUtils.min(portfolio.lastDailyDate,
-                            instrument.lastDay());
-                }
+
+        portfolio.items.each {
+            instrument = it.instrument
+            if (instrument.lastDay() != null) {
+                portfolio.lastDailyDate = DateUtils.min(portfolio.lastDailyDate,
+                        instrument.lastDay());
             }
         }
+
+//        for (int i = 0; i < portfolio.items.size(); i++) {
+//            instrument = getInstrument(portfolio, i);
+//            if (instrument instanceof Asset) {
+//            }
+//        }
         return portfolio.lastDailyDate;
     }
 
-    public void add(Portfolio portfolio, PortfolioItem item) {
+    public void add(Portfolio portfolio, PortfolioEntry item) {
 
         if (entry(portfolio, item.instrument) != null) {
             System.out.println("addEntry. Instrument: " + item.instrument.name + " already exists in portfolio " + portfolio.getName());
@@ -124,7 +135,7 @@ class PortfolioService {
     }
 
     public void add(Portfolio portfolio, Instrument instrument, int Amount) {
-        PortfolioItem item = new PortfolioItem(instrument, Amount, portfolio);
+        PortfolioEntry item = new PortfolioEntry(instrument, Amount, portfolio);
 
         add(portfolio, item);
     }
@@ -135,10 +146,10 @@ class PortfolioService {
         transaction.save(flush: true)
 
         Instrument instrument = transaction.instrument;
-        PortfolioItem entry = entry(portfolio, instrument);
+        PortfolioEntry entry = entry(portfolio, instrument);
 
         if (entry == null) {
-            entry = new PortfolioItem(instrument, portfolio);
+            entry = new PortfolioEntry(instrument, portfolio);
             if (transaction.getTradeAction() == TradeEnum.BUY) {
                 entry.setAmount(transaction.getAmount());
             } else if (transaction.getTradeAction() == TradeEnum.SELL) {
@@ -205,27 +216,34 @@ class PortfolioService {
 
     // Return pointer to portfolio entry holding instrument
     // Return null if there is no such entry in portfolio
-    public PortfolioItem entry(Portfolio portfolio, Instrument instrument) {
+    public PortfolioEntry entry(Portfolio portfolio, Instrument instrument) {
         if (instrument == null) throw new IllegalArgumentException("instrument cannot be null");
-        PortfolioItem entry;
+        PortfolioEntry entry;
         if (portfolio.items != null)
-            for (int i = 0; i < portfolio.items.size(); i++) {
-                entry = item(portfolio, i);
+
+            portfolio.items.each {
+                entry = it
                 if (entry.instrument.id == instrument.id) {
                     return entry;
                 }
             }
+
         return null;
     }
 
-    public PortfolioItem entry(Portfolio portfolio, String Name) {
-        PortfolioItem entry;
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            entry = item(portfolio, i);
+    public PortfolioEntry entry(Portfolio portfolio, String Name) {
+        PortfolioEntry entry;
+
+        portfolio.items.each {
+            entry = it
             if (entry.getInstrument().getName().compareToIgnoreCase(Name) >= 0) {
                 return entry;
             }
         }
+
+//        for (int i = 0; i < portfolio.items.size(); i++) {
+//            entry = item(portfolio, i);
+//        }
         return null;
     }
 
@@ -238,15 +256,16 @@ class PortfolioService {
 
         if (portfolio.items == null || portfolio.items.isEmpty())
             throw new RuntimeException("no instruments to invest money into");
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            Instrument asset = getInstrument(portfolio, i);
+
+        portfolio.items.each {
+            Instrument asset = it.instrument
             double price = 0;
             if (asset.isDataAvailable(date)) {
                 price = asset.getLast();
             } else {
                 price = YahooUtils.getLastTradedValue(asset.name)
             }
-            setAmount(portfolio, i, (int) (getItemAmount(portfolio, i) + wealth * getWeight(portfolio, i) / price));
+            setAmount(portfolio, i, (int) (getItemAmount(it) + wealth * getWeight(portfolio, i) / price));
         }
     }
 
@@ -315,13 +334,13 @@ class PortfolioService {
 
     // delete instrument from portfolio
     public void remove(Portfolio portfolio, Instrument instrument) {
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            PortfolioItem entry = portfolio.items.get(i);
+
+        portfolio.items.each {
+            PortfolioEntry entry = it
             if (entry.instrument == null) throw new RuntimeException("entry cannot have null name");
             if (entry.instrument.id == instrument.id) {
                 portfolio.items.remove(entry);
 //                normalizeWeights(portfolio);
-                break;
             }
         }
     }
@@ -329,7 +348,7 @@ class PortfolioService {
     // Return weight of this instrument in the portfolio
     // Return 0 if instrument is not in the portfolio
     public double getWeight(Portfolio portfolio, Instrument instrument) {
-        PortfolioItem entry = entry(portfolio, instrument);
+        PortfolioEntry entry = entry(portfolio, instrument);
         if (entry != null) {
             return entry.amount();
         } else {
@@ -341,7 +360,7 @@ class PortfolioService {
     // Return 0 if instrument is not in the portfolio
 
     public int position(Portfolio portfolio, Instrument instrument) {
-        PortfolioItem entry = entry(portfolio, instrument);
+        PortfolioEntry entry = entry(portfolio, instrument);
         if (entry != null) {
             return entry.position()
         } else {
@@ -352,7 +371,7 @@ class PortfolioService {
     // Return amount of this instrument in the portfolio
     // Return 0 if instrument is not in the portfolio
     public int amount(Portfolio portfolio, Instrument instrument) {
-        PortfolioItem entry = entry(portfolio, instrument);
+        PortfolioEntry entry = entry(portfolio, instrument);
         if (entry != null) {
             return entry.getAmount();
         } else {
@@ -364,19 +383,21 @@ class PortfolioService {
     public double amount(Portfolio portfolio) {
         // Return amount of all items in portfolio
         int Amount = 0;
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            Amount += getItemAmount(portfolio, i);
+
+        portfolio.items.each {
+            Amount += it.amount
         }
+
         return Amount;
     }
 
-    public double wealth(Portfolio portfolio, int i) {
-        return wealth(portfolio, i, null);
-    }
+//    public double wealth(Portfolio portfolio, int i) {
+//        return wealth(portfolio, i, null);
+//    }
 
     // Return wealth for i-th asset in portfolio
-    public double wealth(Portfolio portfolio, int i, Date date) {
-        Instrument asset = getInstrument(portfolio, i);
+    public double wealth(Portfolio portfolio, Instrument asset, Date date) {
+//        Instrument asset = getInstrument(portfolio, i);
         double price = 0;
         if (asset.isDataAvailable(date)) {
             price = asset.premium();
@@ -394,9 +415,12 @@ class PortfolioService {
     // Return wealth of portfolio
     public double getWealth(Portfolio portfolio, Date date) {
         double Wealth = 0;
-        for (int i = 0; i < portfolio.items.size(); i++) {
+
+        portfolio.items.each {
             Wealth += wealth(portfolio, i, date);
+
         }
+
         return Wealth;
     }
 
@@ -655,27 +679,27 @@ class PortfolioService {
 
     public double expectedReturn(Portfolio portfolio) {
         // Calculate portfolio expected return
-        double ExpectedReturn = 0;
-        double Weight = 0;
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            Weight = getWeight(portfolio, i);
-            if (Weight != 0) {
-                ExpectedReturn += getInstrument(portfolio, i).expectedReturn() * Weight;
+        double expectedReturn = 0;
+        double weight = 0;
+        portfolio.items.each {
+            weight = it.amount
+            if (weight != 0) {
+                expectedReturn += it.instrument.expectedReturn() * weight;
             }
         }
-        return ExpectedReturn;
+        return expectedReturn;
     }
 
     public void setNHoldAsset(Portfolio portfolio, int NHoldAsset) {
         portfolio.assetsToHold = NHoldAsset;
     }
 
-    public void setInstrument(Portfolio portfolio, int i, Instrument instrument) {
-        item(portfolio, i).setInstrument(instrument);
+    public void setInstrument(Portfolio portfolio, PortfolioEntry entry, Instrument instrument) {
+        entry.setInstrument(instrument);
     }
 
-    public void setAmount(Portfolio portfolio, int i, int amount) {
-        item(portfolio, i).setAmount(amount);
+    public void setAmount(Portfolio portfolio, PortfolioEntry entry, int amount) {
+        entry.setAmount(amount);
     }
 
 
@@ -689,18 +713,22 @@ class PortfolioService {
         double Variance = 0;
         double Weight1 = 0;
         double Weight2 = 0;
-        for (int i1 = 0; i1 < portfolio.items.size(); i1++) {
-            Weight1 = getWeight(portfolio, i1);
+
+        int i1 = 0
+        int i2 = 0
+
+        portfolio.items.each {
+            Weight1 = it.amount
             if (Weight1 != 0) {
-                for (int i2 = 0; i2 < portfolio.items.size(); i2++) {
-                    Weight2 = getWeight(portfolio, i2);
-                    if (Weight2 != 0)
-                    //      Variance += covarianceMatrix[i1][i2]*Weight1*Weight2;
-                    {
+                portfolio.items.each { item ->
+                    Weight2 = item.amount
+                    if (Weight2 != 0) {
                         Variance += matrix.get(i1, i2) * Weight1 * Weight2;
                     }
+                    i2++
                 }
             }
+            i1++
         }
         return Variance;
     }
@@ -729,10 +757,10 @@ class PortfolioService {
     // Calculate CAPM beta with Benchmark representing market portfolio
     public double getBeta(Portfolio portfolio, Portfolio index) {
         double Beta = 0;
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            Portfolio p = (Portfolio) getInstrument(portfolio, i);
-            double beta = getBeta(portfolio, index);
-            Beta += beta * getWeight(portfolio, i);
+        portfolio.items.each {
+            Portfolio p = (Portfolio) it.instrument
+            double beta = getBeta(p, index);
+            Beta += beta * getWeight(portfolio, it.instrument);
         }
         return Beta;
     }
@@ -752,8 +780,8 @@ class PortfolioService {
 
 
     public double getDelta(Portfolio portfolio) {
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            portfolio.delta += getInstrument(portfolio, i).getDelta() * getItemAmount(portfolio, i);
+        portfolio.items.each {
+            portfolio.delta += it.instrument.getDelta() * it.amount;
         }
         return portfolio.delta;
     }
@@ -771,12 +799,24 @@ class PortfolioService {
 
     public Matrix covarianceMatrix(Portfolio portfolio) {
         portfolio.covarianceMatrix = new Matrix(portfolio.items.size(), portfolio.items.size());
-        for (int i1 = 0; i1 < portfolio.items.size(); i1++) {
-            for (int i2 = i1; i2 < portfolio.items.size(); i2++) {
-                portfolio.covarianceMatrix.set(i1, i2, getInstrument(portfolio, i1).getCovariance(getInstrument(portfolio, i2), FinConstants.LOGRETURN));
+
+        int i1 = 0
+        int i2 = 0
+        portfolio.items.each { it1->
+            portfolio.items.each { it2 ->
+                portfolio.covarianceMatrix.set(i1, i2, it1.instrument.getCovariance(it2.instrument, FinConstants.LOGRETURN));
                 portfolio.covarianceMatrix.set(i2, i1, portfolio.covarianceMatrix.get(i1, i2));
+                i2++
             }
+            i1++
         }
+
+//        for (int i1 = 0; i1 < portfolio.items.size(); i1++) {
+//            for (int i2 = i1; i2 < portfolio.items.size(); i2++) {
+//                portfolio.covarianceMatrix.set(i1, i2, getInstrument(portfolio, i1).getCovariance(getInstrument(portfolio, i2), FinConstants.LOGRETURN));
+//                portfolio.covarianceMatrix.set(i2, i1, portfolio.covarianceMatrix.get(i1, i2));
+//            }
+//        }
         return portfolio.covarianceMatrix;
     }
 
@@ -784,14 +824,27 @@ class PortfolioService {
     public Matrix correlationMatrix(Portfolio portfolio) {
         portfolio.correlationMatrix = new Matrix(portfolio.items.size(), portfolio.items.size());
         portfolio.covarianceMatrix = covarianceMatrix(portfolio);
-        for (int i1 = 0; i1 < portfolio.items.size(); i1++) {
-            for (int i2 = i1; i2 < portfolio.items.size(); i2++) {
+
+        int i1 = 0
+        int i2 = 0
+        portfolio.items.each { it1->
+            portfolio.items.each { it2 ->
                 portfolio.correlationMatrix.set(i1, i2, portfolio.covarianceMatrix.get(i1, i2) /
-                        (getInstrument(portfolio, i1).getStandardDeviation(FinConstants.LOGRETURN) *
-                                getInstrument(portfolio, i2).getStandardDeviation(FinConstants.LOGRETURN)));
+                        (it1.instrument.getStandardDeviation(FinConstants.LOGRETURN) *
+                                it2.instrument.getStandardDeviation(FinConstants.LOGRETURN)));
                 portfolio.correlationMatrix.set(i2, i1, portfolio.correlationMatrix.get(i1, i2));
+                i2++
             }
+            i1++
         }
+//        for (int i1 = 0; i1 < portfolio.items.size(); i1++) {
+//            for (int i2 = i1; i2 < portfolio.items.size(); i2++) {
+//                portfolio.correlationMatrix.set(i1, i2, portfolio.covarianceMatrix.get(i1, i2) /
+//                        (getInstrument(portfolio, i1).getStandardDeviation(FinConstants.LOGRETURN) *
+//                                getInstrument(portfolio, i2).getStandardDeviation(FinConstants.LOGRETURN)));
+//                portfolio.correlationMatrix.set(i2, i1, portfolio.correlationMatrix.get(i1, i2));
+//            }
+//        }
         return portfolio.correlationMatrix;
     }
 
@@ -808,9 +861,9 @@ class PortfolioService {
         return portfolio.transactions.get(i);
     }
 
-    public PortfolioItem item(Portfolio portfolio, int i) {
-        return portfolio.items.get(i);
-    }
+//    public PortfolioItem item(Portfolio portfolio, int i) {
+//        return portfolio.items.get(i);
+//    }
 
     public int nentries(Portfolio portfolio) {
         return portfolio.items.size();
@@ -820,36 +873,28 @@ class PortfolioService {
         return portfolio.assetsToHold;
     }
 
-    public Instrument getInstrument(Portfolio portfolio, int i) {
-        return portfolio.items.get(i).instrument
+//    public Instrument getInstrument(Portfolio portfolio, int i) {
+//        return portfolio.items.get(i).instrument
+//    }
+//
+//    public FinConstants getPosition(Portfolio portfolio, int i) {
+//        return item(portfolio, i).position();
+//    }
+//
+    public int getItemAmount(PortfolioEntry item) {
+        return item.amount;
     }
-
-    public FinConstants getPosition(Portfolio portfolio, int i) {
-        return item(portfolio, i).position();
-    }
-
-    public int getItemAmount(Portfolio portfolio, int i) {
-        return item(portfolio, i).getAmount();
-    }
-
-    public double getModelPrice(Portfolio portfolio, int i) {
-        return item(portfolio, i).price()
-    }
+//
+//    public double getModelPrice(Portfolio portfolio, int i) {
+//        return item(portfolio, i).price()
+//    }
 
     public double getCovariance(Portfolio portfolio, int Row, int Col) {
         return portfolio.covarianceMatrix.get(Row, Col);
     }
 
-    public double getCorrelation(Portfolio portfolio, int Row, int Col) {
-        return portfolio.correlationMatrix.get(Row, Col);
-    }
-
-    public List<PortfolioItem> getInstruments(Portfolio portfolio) {
+    public List<PortfolioEntry> getInstruments(Portfolio portfolio) {
         return portfolio.items;
-    }
-
-    public void setItems(Portfolio portfolio, List<PortfolioItem> items) {
-        portfolio.items = items;
     }
 
     public Matrix toMatrixLogReturns(Portfolio portfolio) {
@@ -857,7 +902,7 @@ class PortfolioService {
         Matrix ret = null;
         List entries = getInstruments(portfolio);
         for (int i = 0; i < entries.size(); i++) {
-            PortfolioItem item = (PortfolioItem) entries.get(i);
+            PortfolioEntry item = (PortfolioEntry) entries.get(i);
             Instrument instrument = item.getInstrument();
             double[] series = instrument.logReturnSeries().convertToArray();
             if (ret == null) {
@@ -876,7 +921,7 @@ class PortfolioService {
         Matrix ret = null;
         List entries = getInstruments(portfolio);
         for (int i = 0; i < entries.size(); i++) {
-            PortfolioItem item = (PortfolioItem) entries.get(i);
+            PortfolioEntry item = (PortfolioEntry) entries.get(i);
             Instrument instrument = item.getInstrument();
             double[] serie = instrument.returnSeries().convertToArray();
             if (ret == null) {

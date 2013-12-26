@@ -1,4 +1,4 @@
-<%@ page import="com.netnumeri.server.finance.finpojo.Portfolio; com.netnumeri.server.finance.finpojo.Instrument; com.netnumeri.server.finance.finpojo.PortfolioItem" %>
+<%@ page import="com.netnumeri.server.finance.finpojo.Portfolio; com.netnumeri.server.finance.finpojo.Instrument; com.netnumeri.server.finance.finpojo.PortfolioEntry" %>
 
 <div class="control-group fieldcontain ${hasErrors(bean: portfolioItemInstance, field: 'amount', 'error')} ">
     <label for="amount" class="control-label"><g:message

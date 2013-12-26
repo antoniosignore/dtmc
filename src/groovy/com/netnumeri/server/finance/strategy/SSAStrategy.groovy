@@ -7,7 +7,7 @@ import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
-import com.netnumeri.server.finance.finpojo.PortfolioItem
+import com.netnumeri.server.finance.finpojo.PortfolioEntry
 import com.netnumeri.server.finance.finpojo.Transaction
 import com.netnumeri.server.finance.ssa.SSAAnalysis
 import com.netnumeri.server.finance.ssa.SSAMath
@@ -222,15 +222,16 @@ public class SSAStrategy extends Strategy {
 
     public void execute(Map parametersMap) {
         try {
-            List<PortfolioItem> portfolioItems = getPortfolio().getItems();
-            for (int i = 0; i < portfolioItems.size(); i++) {
+            List<PortfolioEntry> portfolioItems = getPortfolio().getItems();
+
+            getPortfolio().getItems().each {
 
                 init();
 
-                PortfolioItem portfolioItem = portfolioItems.get(i);
+                PortfolioEntry portfolioItem = it
                 Instrument instrument = portfolioItem.getInstrument();
 
-                TimeSeries logserie = instrument.buldLlogAverageSeries();
+                TimeSeries logserie = instrument.buildlogAverageSeries();
                 NumericalRecipesSeries lserie = logserie.asRecipes();
                 int size = Util.size(lserie.getData());
                 double[] vals = Util.vector(1, snapshot);

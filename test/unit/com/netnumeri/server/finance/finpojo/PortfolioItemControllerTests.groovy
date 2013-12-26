@@ -4,7 +4,7 @@ import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 
 @TestFor(PortfolioItemController)
-@Mock(PortfolioItem)
+@Mock(PortfolioEntry)
 class PortfolioItemControllerTests {
 
     def populateValidParams(params) {
@@ -45,7 +45,7 @@ class PortfolioItemControllerTests {
 
         assert response.redirectedUrl == '/portfolioItem/show/1'
         assert controller.flash.message != null
-        assert PortfolioItem.count() == 1
+        assert PortfolioEntry.count() == 1
     }
 
     void testShow() {
@@ -55,7 +55,7 @@ class PortfolioItemControllerTests {
         assert response.redirectedUrl == '/portfolioItem/list'
 
         populateValidParams(params)
-        def portfolioItem = new PortfolioItem(params)
+        def portfolioItem = new PortfolioEntry(params)
 
         assert portfolioItem.save() != null
 
@@ -73,7 +73,7 @@ class PortfolioItemControllerTests {
         assert response.redirectedUrl == '/portfolioItem/list'
 
         populateValidParams(params)
-        def portfolioItem = new PortfolioItem(params)
+        def portfolioItem = new PortfolioEntry(params)
 
         assert portfolioItem.save() != null
 
@@ -93,7 +93,7 @@ class PortfolioItemControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def portfolioItem = new PortfolioItem(params)
+        def portfolioItem = new PortfolioEntry(params)
 
         assert portfolioItem.save() != null
 
@@ -137,17 +137,17 @@ class PortfolioItemControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def portfolioItem = new PortfolioItem(params)
+        def portfolioItem = new PortfolioEntry(params)
 
         assert portfolioItem.save() != null
-        assert PortfolioItem.count() == 1
+        assert PortfolioEntry.count() == 1
 
         params.id = portfolioItem.id
 
         controller.delete()
 
-        assert PortfolioItem.count() == 0
-        assert PortfolioItem.get(portfolioItem.id) == null
+        assert PortfolioEntry.count() == 0
+        assert PortfolioEntry.get(portfolioItem.id) == null
         assert response.redirectedUrl == '/portfolioItem/list'
     }
 }

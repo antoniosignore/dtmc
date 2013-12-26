@@ -12,7 +12,7 @@ class Portfolio extends Asset implements Serializable {
 
     static belongsTo = [user: Member]
 
-    static hasMany = [items: PortfolioItem, transactions: Transaction]
+    static hasMany = [items: PortfolioEntry, transactions: Transaction]
 
 //    List<PortfolioItem> items = new ArrayList<PortfolioItem>()
 //    List<Transaction> transactions = new ArrayList<Transaction>()
@@ -53,11 +53,11 @@ class Portfolio extends Asset implements Serializable {
         this.description = description
     }
 
-    PortfolioItem portfolioItemByName(String name) {
-        PortfolioItem item = null;
+    PortfolioEntry portfolioItemByName(String name) {
+        PortfolioEntry item = null;
         if (items != null)
-            for (int i = 0; i < items.size(); i++) {
-                PortfolioItem portfolioItem = items.get(i);
+            items.each {
+                PortfolioEntry portfolioItem = it
                 if (portfolioItem.instrument.name.equalsIgnoreCase(name))
                     item = portfolioItem;
             }

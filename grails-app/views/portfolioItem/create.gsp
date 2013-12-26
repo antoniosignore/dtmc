@@ -1,4 +1,4 @@
-<%@ page import="com.netnumeri.server.finance.finpojo.PortfolioItem" %>
+<%@ page import="com.netnumeri.server.finance.finpojo.PortfolioEntry" %>
 <!doctype html>
 <html>
 

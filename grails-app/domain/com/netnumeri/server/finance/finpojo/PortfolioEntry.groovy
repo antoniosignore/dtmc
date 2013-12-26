@@ -4,7 +4,7 @@ import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.finpojo.derivative.Derivative
 
-public class PortfolioItem implements Serializable {
+public class PortfolioEntry implements Serializable {
 
     static constraints = {
     }
@@ -13,20 +13,20 @@ public class PortfolioItem implements Serializable {
 
     Integer amount = 0;
 
-    public PortfolioItem() {
+    public PortfolioEntry() {
     }
 
     private void init() {
         this.amount = 0;
     }
 
-    public PortfolioItem(Instrument instrument, Portfolio portfolio) {
+    public PortfolioEntry(Instrument instrument, Portfolio portfolio) {
         this.instrument = instrument;
         this.portfolio = portfolio;
     }
 
     // amount < 0 means taking short position in instrument
-    public PortfolioItem(Instrument instrument, Integer amount, Portfolio portfolio) {
+    public PortfolioEntry(Instrument instrument, Integer amount, Portfolio portfolio) {
         this.instrument = instrument;
         this.amount = amount;
         this.portfolio = portfolio;

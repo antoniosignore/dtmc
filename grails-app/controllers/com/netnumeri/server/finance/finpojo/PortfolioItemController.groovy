@@ -12,15 +12,15 @@ class PortfolioItemController {
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        [portfolioItemInstanceList: PortfolioItem.list(params), portfolioItemInstanceTotal: PortfolioItem.count()]
+        [portfolioItemInstanceList: PortfolioEntry.list(params), portfolioItemInstanceTotal: PortfolioEntry.count()]
     }
 
     def create() {
-        [portfolioItemInstance: new PortfolioItem(params)]
+        [portfolioItemInstance: new PortfolioEntry(params)]
     }
 
     def save() {
-        def portfolioItemInstance = new PortfolioItem(params)
+        def portfolioItemInstance = new PortfolioEntry(params)
         if (!portfolioItemInstance.save(flush: true, failOnError: true)) {
             render(view: "create", model: [portfolioItemInstance: portfolioItemInstance])
             return
@@ -31,7 +31,7 @@ class PortfolioItemController {
     }
 
     def show(Long id) {
-        def portfolioItemInstance = PortfolioItem.get(id)
+        def portfolioItemInstance = PortfolioEntry.get(id)
         if (!portfolioItemInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolioItem.label', default: 'PortfolioItem'), id])
             redirect(action: "list")
@@ -42,7 +42,7 @@ class PortfolioItemController {
     }
 
     def edit(Long id) {
-        def portfolioItemInstance = PortfolioItem.get(id)
+        def portfolioItemInstance = PortfolioEntry.get(id)
         if (!portfolioItemInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolioItem.label', default: 'PortfolioItem'), id])
             redirect(action: "list")
@@ -53,7 +53,7 @@ class PortfolioItemController {
     }
 
     def update(Long id, Long version) {
-        def portfolioItemInstance = PortfolioItem.get(id)
+        def portfolioItemInstance = PortfolioEntry.get(id)
         if (!portfolioItemInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolioItem.label', default: 'PortfolioItem'), id])
             redirect(action: "list")
@@ -82,7 +82,7 @@ class PortfolioItemController {
     }
 
     def delete(Long id) {
-        def portfolioItemInstance = PortfolioItem.get(id)
+        def portfolioItemInstance = PortfolioEntry.get(id)
         if (!portfolioItemInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'portfolioItem.label', default: 'PortfolioItem'), id])
             redirect(action: "list")
