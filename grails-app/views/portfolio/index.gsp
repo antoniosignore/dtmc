@@ -32,9 +32,9 @@
 
             <g:sortableColumn property="description" title="${message(code: 'portfolio.description.label', default: 'Description')}"/>
 
-            <g:sortableColumn property="firstDailyDate" title="${message(code: 'portfolio.firstDailyDate.label', default: 'First Daily Date')}"/>
+            <g:sortableColumn property="firstDailyDate" title="${message(code: 'portfolio.firstDate.label', default: 'First Daily Date')}"/>
 
-            <g:sortableColumn property="lastDailyDate" title="${message(code: 'portfolio.lastDailyDate.label', default: 'Last Daily Date')}"/>
+            <g:sortableColumn property="lastDailyDate" title="${message(code: 'portfolio.lastDate.label', default: 'Last Daily Date')}"/>
 
             <g:sortableColumn property="lastUpdated" title="${message(code: 'portfolio.lastUpdated.label', default: 'Last Updated')}"/>
 

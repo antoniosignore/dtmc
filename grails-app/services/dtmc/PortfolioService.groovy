@@ -17,44 +17,9 @@ import com.netnumeri.server.finance.utils.YahooUtils
 
 class PortfolioService {
 
-//    def springSecurityService
-
-    /*
-     def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [portfolioInstanceList: Portfolio.list(params), portfolioInstanceTotal: Portfolio.count()]
-    }
-     */
-//    def list(Object username) {
-
     List<Portfolio> listPortfolio() {
-//            params.max = Math.min(max ?: 10, 100)
         return Portfolio.list()
-
-//            def user = springSecurityService.currentUser
-//
-//        //def per = SecUser.get(user)
-//       def query = Portfolio.whereAny {
-//            author { username == per.username }
-//        }.order 'dateCreated', 'desc'
-//        def portfolios = query.list()
-//        portfolios
     }
-
-//    void onMessage(newMessageUserName) {
-//        log.debug "Message received. New status message posted by user <${newMessageUserName}>."
-//        def following = SecUser.where {
-//            followed.username == newMessageUserName
-//        }.property('username').list()
-//        following.each {uname ->
-////            timelineService.clearTimelineCacheForUser(uname)
-//        }
-//    }
-
-//    void createPortfolio(String name, String description) {
-//        def status = new Portfolio(name: name, description: description)
-//        status.save()
-//    }
 
     void clear(Portfolio portfolio) {
         portfolio.items.clear();
@@ -70,38 +35,32 @@ class PortfolioService {
     }
 
     public Date firstDay(Portfolio portfolio) {
-        if (portfolio.firstDailyDate != null) {
-            return portfolio.firstDailyDate;
+        if (portfolio.firstDate != null) {
+            return portfolio.firstDate;
         }
         Instrument instrument
-
         portfolio.items.each {
             instrument = it.instrument
             if (instrument instanceof Asset) {
                 if (instrument.firstDay() != null) {
-                    portfolio.firstDailyDate =
-                            DateUtils.max(portfolio.firstDailyDate, instrument.firstDay());
+                    portfolio.firstDate =
+                            DateUtils.max(portfolio.firstDate, instrument.firstDay());
                 }
             }
         }
-//
-//        for (int i = 0; i < portfolio.items.size(); i++) {
-//            instrument = getInstrument(portfolio, i);
-//        }
-//
-        return portfolio.firstDailyDate;
+        return portfolio.firstDate;
     }
 
     public Date latestDay(Portfolio portfolio) {
         Instrument instrument;
-        if (portfolio.lastDailyDate != null) {
-            return portfolio.lastDailyDate;
+        if (portfolio.lastDate != null) {
+            return portfolio.lastDate;
         }
 
         portfolio.items.each {
             instrument = it.instrument
             if (instrument.lastDay() != null) {
-                portfolio.lastDailyDate = DateUtils.min(portfolio.lastDailyDate,
+                portfolio.lastDate = DateUtils.min(portfolio.lastDate,
                         instrument.lastDay());
             }
         }
@@ -111,7 +70,7 @@ class PortfolioService {
 //            if (instrument instanceof Asset) {
 //            }
 //        }
-        return portfolio.lastDailyDate;
+        return portfolio.lastDate;
     }
 
     public void add(Portfolio portfolio, PortfolioEntry item) {
@@ -231,12 +190,12 @@ class PortfolioService {
         return null;
     }
 
-    public PortfolioEntry entry(Portfolio portfolio, String Name) {
+    public PortfolioEntry entryByName(Portfolio portfolio, String name) {
         PortfolioEntry entry;
 
         portfolio.items.each {
             entry = it
-            if (entry.getInstrument().getName().compareToIgnoreCase(Name) >= 0) {
+            if (entry.getInstrument().getName().compareToIgnoreCase(name) >= 0) {
                 return entry;
             }
         }
@@ -321,8 +280,9 @@ class PortfolioService {
     // Sell everything - todo
     public Transaction sell(Portfolio portfolio, Instrument instrument, Date date) {
         int amount;
-        if (entry(portfolio, instrument) != null) {
-            amount = amount(portfolio, instrument);
+        PortfolioEntry entry = entry(portfolio, instrument)
+        if (entry != null) {
+            amount = entry.amount
         } else {
             return null;
         }
@@ -350,7 +310,7 @@ class PortfolioService {
     public double getWeight(Portfolio portfolio, Instrument instrument) {
         PortfolioEntry entry = entry(portfolio, instrument);
         if (entry != null) {
-            return entry.amount();
+            return entry.amount;
         } else {
             return 0;
         }
@@ -359,7 +319,7 @@ class PortfolioService {
     // Return position of this instrument in the portfolio
     // Return 0 if instrument is not in the portfolio
 
-    public int position(Portfolio portfolio, Instrument instrument) {
+    public FinConstants position(Portfolio portfolio, Instrument instrument) {
         PortfolioEntry entry = entry(portfolio, instrument);
         if (entry != null) {
             return entry.position()
@@ -404,7 +364,7 @@ class PortfolioService {
         } else {
             price = YahooUtils.getLastTradedValue(asset.name)
         }
-        return price * getItemAmount(portfolio, i);
+        return price * entryByName (portfolio, asset.name).amount;
     }
 
 
@@ -417,7 +377,7 @@ class PortfolioService {
         double Wealth = 0;
 
         portfolio.items.each {
-            Wealth += wealth(portfolio, i, date);
+            Wealth += wealth(portfolio, it.instrument, date);
 
         }
 
@@ -500,8 +460,8 @@ class PortfolioService {
 
     public double getModelPrice(Portfolio portfolio, String Model, String printMode) {
         double price = 0;
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            price += getInstrument(portfolio, i).premium() * getItemAmount(portfolio, i) * getPosition(portfolio, i);
+        portfolio.items.each {
+            price += it.instrument.premium() * it.amount * it.position();
         }
         return price;
     }
@@ -527,27 +487,27 @@ class PortfolioService {
     }
 
     // Return marked to market portfolio value
-    public double m2m(Portfolio portfolio, int index) {
-        Instrument instrument;
-        Daily daily;
-        int amount;
-        double value = 0;
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            amount = getItemAmount(portfolio, i);
-            instrument = getInstrument(portfolio, i);
-            daily = instrument.getDaily();
-            if (!daily.valid()) {
-                daily = instrument.getPrevDaily(index);
-            }
-            if (daily != null) {
-                value += daily.getCloseprice() * amount;
-            } else {
-                System.out.println("getName. Out of data range :" + index);
-                return 0;
-            }
-        }
-        return value;
-    }
+//    public double m2m(Portfolio portfolio, int index) {
+//        Instrument instrument;
+//        Daily daily;
+//        int amount;
+//        double value = 0;
+//        portfolio.items.each {
+//            amount = it.amount
+//            instrument = it.instrument
+//            daily = instrument.getDaily();
+//            if (!daily.valid()) {
+//                daily = instrument.getPrevDaily(index);
+//            }
+//            if (daily != null) {
+//                value += daily.getCloseprice() * amount;
+//            } else {
+//                System.out.println("getName. Out of data range :" + index);
+//                return 0;
+//            }
+//        }
+//        return value;
+//    }
 
     /**
      * Mark 2 Market portfolio value
@@ -562,9 +522,9 @@ class PortfolioService {
         Daily daily;
         int amount;
         double value = 0;
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            instrument = getInstrument(portfolio, i);
-            amount = getItemAmount(portfolio, i);
+        portfolio.items.each {
+            amount = it.amount
+            instrument = it.instrument
             if (instrument instanceof Asset) {
                 daily = instrument.getDaily(date);
                 if (daily == null || !daily.valid()) {
@@ -587,8 +547,8 @@ class PortfolioService {
     // Return portfolio value
     public double m2m(Portfolio portfolio) {
         double Value = 0;
-        for (int i = 0; i < portfolio.items.size(); i++) {
-            Value += item(portfolio, i).value();
+        portfolio.items.each {
+            Value += it.value()
         }
         return Value;
     }

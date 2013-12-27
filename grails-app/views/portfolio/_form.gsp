@@ -18,7 +18,7 @@
 	<g:textField name="description" value="${portfolioInstance?.description}"/>
 </div>
 
-<div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'firstDailyDate', 'error')} ">
+<div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'firstDate', 'error')} ">
 	<label for="firstDailyDate">
 		<g:message code="portfolio.firstDailyDate.label" default="First Daily Date" />
 		
@@ -43,7 +43,7 @@
 
 </div>
 
-<div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'lastDailyDate', 'error')} ">
+<div class="control-group fieldcontain ${hasErrors(bean: portfolioInstance, field: 'lastDate', 'error')} ">
 	<label for="lastDailyDate">
 		<g:message code="portfolio.lastDailyDate.label" default="Last Daily Date" />
 		

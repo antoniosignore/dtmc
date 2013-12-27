@@ -38,8 +38,8 @@ class Portfolio extends Asset implements Serializable {
     double[] tempWeights;
     Matrix covarianceMatrix
     Matrix correlationMatrix
-    Date firstDailyDate;
-    Date lastDailyDate;
+    Date firstDate;
+    Date lastDate;
     PortfolioEnum portfolioType
 
     Portfolio(String name, String description) {
@@ -80,8 +80,8 @@ class Portfolio extends Asset implements Serializable {
         p.tempWeights = tempWeights;
         if (covarianceMatrix != null) p.covarianceMatrix = (Matrix) covarianceMatrix.clone();
         if (correlationMatrix != null) p.correlationMatrix = (Matrix) correlationMatrix.clone();
-        p.firstDailyDate = firstDailyDate;
-        p.lastDailyDate = lastDailyDate;
+        p.firstDate = firstDate;
+        p.lastDate = lastDate;
         return p;
     }
 

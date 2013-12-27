@@ -32,11 +32,11 @@ public class PortfolioEntry implements Serializable {
         this.portfolio = portfolio;
     }
 
-    public FinConstants position() {
+    public int position() {
         if (amount >= 0)
-            return FinConstants.LONG;
+            return +1;
         else
-            return FinConstants.SHORT;
+            return -1;
     }
 
     public double price() {

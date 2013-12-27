@@ -89,16 +89,6 @@ class Instrument extends Persistable implements Serializable {
         return b3;
     }
 
-    public Date getFirstDate() {
-        if (lowerRangeDate == null) return null;
-        return lowerRangeDate;
-    }
-
-    public Date getLastDate() {
-        if (upperRangeDate == null) return null;
-        return upperRangeDate;
-    }
-
     public Instrument() {
         isSpotFixed = false;
         isVolatilityFixed = false;
