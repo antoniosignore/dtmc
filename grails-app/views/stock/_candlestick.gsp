@@ -26,6 +26,7 @@
             highlighter: {
                 show: true,
                 showMarker: false,
+                pointLabels:{ show:true, location:'s', ypadding:3 },
                 tooltipAxes: 'xy',
                 yvalues: 4,
                 formatString: '<table class="jqplot-highlighter"> \
@@ -39,8 +40,7 @@
         });
     });
 
-    ohlc =
-    ${StockUtils.getJqPlot(stockInstance)}
+    ohlc = ${StockUtils.getJqPlot(stockInstance)}
 </script>
 
 <div id="chart2" style="height:600px; width:800px;"></div>

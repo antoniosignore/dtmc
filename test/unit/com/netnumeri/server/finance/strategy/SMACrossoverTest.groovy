@@ -3,18 +3,13 @@ package com.netnumeri.server.finance.strategy
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.finpojo.Portfolio
-import com.netnumeri.server.finance.finpojo.SMACrossover
-import com.netnumeri.server.finance.finpojo.Strategy
 import com.netnumeri.server.finance.finpojo.Transaction
 import com.netnumeri.server.finance.ta.SMAIndicator
 import com.netnumeri.server.finance.ta.TradeListEntry
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
-import dtmc.PortfolioService
 import org.apache.commons.io.FileUtils
 import org.junit.Test
 
@@ -27,7 +22,7 @@ public class SMACrossoverTest {
     @Test
     public void testStrategy() throws IOException, ParseException {
 
-        Portfolio portfolio = new Portfolio("SMA crossing", "Description", 10000);
+//        Portfolio portfolio = new Portfolio("SMA crossing", "Description", 10000);
         Date da = DateUtils.Date("1/1/2007");
         Date a = DateUtils.today();
 
@@ -39,23 +34,23 @@ public class SMACrossoverTest {
         stock.indicators.put("upper", new SMAIndicator(closes, "SMA-" + 50, 50))
         stock.indicators.put("lower", new SMAIndicator(closes, "SMA-" + 10, 10))
 
-        PortfolioService tradeService = new PortfolioService();
-        tradeService.add(portfolio, stock);
+//        PortfolioService tradeService = new PortfolioService();
+//        tradeService.add(portfolio, stock);
 
-        Strategy strategy = new SMACrossover("test", portfolio, da, a, 10000);
+        Strategy strategy = new SMACrossoverSignal("test", stock, da, a);
         strategy.run();
 
 //        TransactionSeries series = strategy.transactionSeries
 
-        BackTest trader = new BackTest(strategy, portfolio, 100000);
-        double value = trader.test();
+        BackTest trader = new BackTest(strategy, 100000);
+        double value = strategy.tester.test();
 
         System.out.println(trader.toXMLString())
 
         FileUtils.writeStringToFile(new File(dir + "/table.html"), trader.toXMLString())
 
 //        TransactionSeries transactions = strategy.transactionSeries;
-        GenericTimeSeries<Transaction> array = portfolio.transactions
+        GenericTimeSeries<Transaction> array = strategy.portfolio.transactions
 
         List<TradeListEntry> list = trader.getTradeList();
 

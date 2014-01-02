@@ -100,5 +100,7 @@ public class Volatility {
             throw new IllegalArgumentException("The noOfPeriods value must not exceed the length of the calculated exponentially moving average array");
         else return;
     }
+
+
 }
 

@@ -5,7 +5,7 @@
                 title: '${indicator.name}',
                 axes: {xaxis: {renderer: $.jqplot.DateAxisRenderer}},
                 series: [
-                    {showMarker: false}
+                    {lineWidth:1, showMarker: false}
                 ]
             });
         });
@@ -13,5 +13,5 @@
         ${indicator.indicator.getJqPlot()}
     </script>
 
-    <div class="item" id='chart_${indicatorCounter}' style='height:200px; width:200px;'></div>
+    <div class="item" id='chart_${indicatorCounter}' style='height:200px; width:800px;'></div>
 

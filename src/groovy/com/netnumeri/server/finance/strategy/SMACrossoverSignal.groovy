@@ -7,7 +7,7 @@ import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.ta.Indicator
 import com.netnumeri.server.finance.utils.DateUtils
 
-public class SMACrossover extends Strategy {
+public class SMACrossoverSignal extends Strategy {
 
     Instrument asset
     private int sma1 = 0;
@@ -15,12 +15,11 @@ public class SMACrossover extends Strategy {
 
     private boolean foundABUY = false;
 
-    public SMACrossover(String name,
+    public SMACrossoverSignal(String name,
                         Stock asset,
                         Date firstDate,
-                        Date lastDate,
-                        double wealth) {
-        super(name, asset, firstDate, lastDate, wealth);
+                        Date lastDate) {
+        super(name, asset, firstDate, lastDate, 0);
         this.asset = asset
     }
 
@@ -28,17 +27,13 @@ public class SMACrossover extends Strategy {
 
         println "evaluateInstrumentOnDate date = $date"
 
-        int amount = 1000;
-
-        TradeEnum signal = null;
-
         Indicator lower = asset.indicators.get("lower");
         println "lower = $lower"
 
         Indicator upper = asset.indicators.get("upper");
         println "upper = $upper"
 
-        if (! (DateUtils.isGreater(date, lower.firstDate) && DateUtils.isGreater(date, upper.firstDate)))
+        if (!(DateUtils.isGreater(date, lower.firstDate) && DateUtils.isGreater(date, upper.firstDate)))
             return
 
         double todayLower = lower.getData(date)
@@ -51,27 +46,13 @@ public class SMACrossover extends Strategy {
         Date ud = lower.getPrevDate(date)
         double yesterdayUpper = upper.getData(ud)
 
-        if (todayUpper < todayLower && yesterdayUpper > yesterdayLower)
-            signal = TradeEnum.BUY
-
-        if (todayUpper > todayLower && yesterdayUpper < yesterdayLower)
-            signal = TradeEnum.SELL
-
-        if (signal == TradeEnum.SELL) {
-            if (foundABUY) {
-                System.out.println("SELL on transactionDate: " + date.toGMTString());
-                Transaction transaction = new Transaction(asset, TradeEnum.SELL, amount, asset.close(date), date);
-                add(transaction);
-                foundABUY = false;
-            }
-        } else if (signal == TradeEnum.BUY) {
-            System.out.println("BUY on transactionDate: " + date.toGMTString());
-            Transaction transaction = new Transaction(asset, TradeEnum.BUY, amount, asset.close(date), date);
-            add(transaction);
-            foundABUY = true;
+        if (todayUpper < todayLower && yesterdayUpper > yesterdayLower){
+            signals.add(new Signal (date, TradeEnum.BUY, asset))
+        }
+        else if (todayUpper > todayLower && yesterdayUpper < yesterdayLower) {
+            signals.add(new Signal (date, TradeEnum.SELL, asset))
         }
     }
-
 }
 
 

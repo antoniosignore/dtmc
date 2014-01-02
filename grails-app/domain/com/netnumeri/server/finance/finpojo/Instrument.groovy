@@ -378,10 +378,10 @@ class Instrument extends Persistable implements Serializable {
         return closeSeries(null, null);
     }
 
-    public TimeSeries closeSeries(Date firstD, Date lastD) {
+    public TimeSeries closeSeries(Date firstDate, Date lastDate) {
         if (firstDate == null) firstDate = firstDay();
         if (lastDate == null) lastDate = lastDay();
-        closeSeries = buildCloseSeries(firstD, lastD);
+        closeSeries = buildCloseSeries(firstDate, lastDate);
         return closeSeries;
     }
 

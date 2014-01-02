@@ -64,12 +64,6 @@ class PortfolioService {
                         instrument.lastDay());
             }
         }
-
-//        for (int i = 0; i < portfolio.items.size(); i++) {
-//            instrument = getInstrument(portfolio, i);
-//            if (instrument instanceof Asset) {
-//            }
-//        }
         return portfolio.lastDate;
     }
 
@@ -83,7 +77,6 @@ class PortfolioService {
         if (item.instrument instanceof Asset)
             portfolio.setRangeBounds(item.instrument.lowerRangeDate, item.instrument.getUpperRangeDate());
 
-        //item.save(flush:true)
         portfolio.addToItems(item);
     }
 
@@ -100,9 +93,10 @@ class PortfolioService {
     }
 
     public void add(Portfolio portfolio, Transaction transaction) {
+
         if (transaction == null) throw new IllegalArgumentException("transactions cannot be null");
 
-        transaction.save(flush: true)
+        if (portfolio.id) transaction.save(flush: true)
 
         Instrument instrument = transaction.instrument;
         PortfolioEntry entry = entry(portfolio, instrument);
@@ -161,7 +155,6 @@ class PortfolioService {
                 entry.setAmount(amount);
             }
         }
-       // portfolio.save(flush: true);
     }
 
     // add series of trade transactions

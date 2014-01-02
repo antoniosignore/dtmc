@@ -1,8 +1,7 @@
 package com.netnumeri.server.finance.strategy
 
+import com.netnumeri.server.enums.PortfolioEnum
 import com.netnumeri.server.finance.beans.FinConstants
-import com.netnumeri.server.finance.beans.TradeEnum
-import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.Transaction
@@ -15,7 +14,9 @@ public abstract class Strategy {
     BackTest tester;
     Portfolio portfolio;
     double wealth = 0;
-    public TransactionSeries transactionSeries = null;
+    Instrument asset;
+    List<Signal> signals = new ArrayList<>()
+
     PortfolioService portfolioService = new PortfolioService()
 
     def final Date firstDate;
@@ -23,55 +24,41 @@ public abstract class Strategy {
 
     abstract public void evaluateInstrumentOnDate(Date date, Instrument asset);
 
-    protected Strategy() {
-    }
+    public Strategy(String name, Instrument asset, Date firstDate, Date lastDate, double wealth) {
 
-    public Strategy(String name, final Portfolio portfolio, Date firstDate, Date lastDate, double wealth) {
-      //  this.transactionSeries = new TransactionSeries();
+        portfolio = new Portfolio(name, "Strategy Portfolio", wealth);
+        portfolio.portfolioType = PortfolioEnum.Strategy
+
+        this.asset = asset
         this.wealth = wealth;
         this.portfolio = portfolio
         this.name = name
-        this.portfolio = portfolio;
         tester = new BackTest(this, wealth);
         this.firstDate = firstDate
         this.lastDate = lastDate
     }
 
     public void add(Transaction transaction) {
-//        transactionSeries.add(transaction);
         portfolioService.add(portfolio, transaction);
     }
 
-    public void add(Instrument instrument, TradeEnum action, int amount, double price, Date date) {
-        add(new Transaction(instrument, action, amount, price, date));
-    }
-
-    public void test(Date firsDate, Date lasDate) {
-        tester.test(firsDate, lasDate, FinConstants.kInvestOnDate);
+    public void test() {
+        tester.test(firstDate, lastDate, FinConstants.kInvestOnDate);
     }
 
     public void run() {
 
-        Date day = portfolioService.firstDay(portfolio)
-        Date lastDay = portfolioService.latestDay(portfolio)
+        Date day = asset.firstDailyDate()
+        println "day = $day"
+
+        Date lastDay = asset.lastDailyDate()
+        println "lastDay = $lastDay"
 
         while (DateUtils.isLessEqual(day, lastDay)) {
-
-            portfolio.items.each {
-
-                Instrument asset = it.instrument
-                if (asset.isDataAvailable(day)) {
-                    evaluateInstrumentOnDate(day, asset);
-                }
-
+            if (asset.isDataAvailable(day)) {
+                println "evaluate day = $day"
+                evaluateInstrumentOnDate(day, asset);
             }
-
-//            for (int i = 0; i < portfolio.items.size(); i++) {
-//                Instrument asset = portfolioService.getInstrument(portfolio, i);
-//                if (asset.isDataAvailable(day)) {
-//                    evaluateInstrumentOnDate(day, asset);
-//                }
-//            }
             day = DateUtils.nextDay(day);
         }
     }
