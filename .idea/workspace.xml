@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/BackTest.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/BackTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossover.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossover.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossoverSignal.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossoverSignal.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Signal.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Signal.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -142,10 +132,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SMACrossoverTest.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SMACrossoverTest.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="18" selection-start="1522" selection-end="1664" vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1455">
+            <state line="63" column="40" selection-start="2497" selection-end="2497" vertical-scroll-proportion="0.7149425" vertical-offset="634" max-vertical-offset="1455">
               <folding>
                 <marker date="1388781707897" expanded="true" signature="1738:2565" placeholder="..." />
               </folding>
@@ -209,10 +199,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SMACrossoverSignal.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SMACrossoverSignal.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossoverSignal.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="54" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.6896552" vertical-offset="495" max-vertical-offset="930">
+            <state line="53" column="66" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="930">
               <folding />
             </state>
           </provider>
@@ -1074,7 +1064,7 @@
       <workItem from="1388477729965" duration="8064000" />
       <workItem from="1388576851296" duration="4581000" />
       <workItem from="1388699809966" duration="1665000" />
-      <workItem from="1388776313630" duration="5841000" />
+      <workItem from="1388776313630" duration="6592000" />
     </task>
     <task id="LOCAL-00001" summary="added indicators in tables">
       <created>1378071164332</created>
@@ -1432,11 +1422,15 @@
       <created>1388701171910</created>
       <updated>1388701171911</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="trading systems&#10;">
+      <created>1388785389193</created>
+      <updated>1388785389193</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286004000" />
+    <option name="totallyTimeSpent" value="286755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-8" width="1618" height="892" extended-state="0" />
@@ -1799,15 +1793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="18" selection-start="1522" selection-end="1664" vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1455">
-          <folding>
-            <marker date="1388781707897" expanded="true" signature="1738:2565" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="42" selection-start="667" selection-end="667" vertical-scroll-proportion="-1.25" vertical-offset="180" max-vertical-offset="885">
@@ -1850,8 +1835,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossoverSignal.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="54" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.6896552" vertical-offset="495" max-vertical-offset="930">
+        <state line="53" column="66" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="930">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="40" selection-start="2497" selection-end="2497" vertical-scroll-proportion="0.7149425" vertical-offset="634" max-vertical-offset="1455">
+          <folding>
+            <marker date="1388781707897" expanded="true" signature="1738:2565" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
