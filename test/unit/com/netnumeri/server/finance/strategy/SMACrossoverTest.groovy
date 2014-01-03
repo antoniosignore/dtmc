@@ -29,52 +29,55 @@ public class SMACrossoverTest {
         Instrument stock = YahooUtils.downloadYahooData("AAPL", "Apple Computers", da, a);
 
         TimeSeries closes = stock.getSeries(FinConstants.CLOSE);
-        FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
+        //FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
 
         stock.indicators.put("upper", new SMAIndicator(closes, "SMA-" + 50, 50))
         stock.indicators.put("lower", new SMAIndicator(closes, "SMA-" + 10, 10))
-
-//        PortfolioService tradeService = new PortfolioService();
-//        tradeService.add(portfolio, stock);
-
         Strategy strategy = new SMACrossoverSignal("test", stock, da, a);
         strategy.run();
+        def signals = strategy.signals
+        strategy.signals.each {
+            Signal signal = it
+            println "signal = $signal"
+        }
 
 //        TransactionSeries series = strategy.transactionSeries
 
-        BackTest trader = new BackTest(strategy, 100000);
-        double value = strategy.tester.test();
+//        BackTest trader = new BackTest(strategy, 100000);
+//        double value = strategy.tester.test();
+//
+//        System.out.println(trader.toXMLString())
+//
+//        FileUtils.writeStringToFile(new File(dir + "/table.html"), trader.toXMLString())
+//
+////        TransactionSeries transactions = strategy.transactionSeries;
+//        GenericTimeSeries<Transaction> array = strategy.portfolio.transactions
+//
+//        List<TradeListEntry> list = trader.getTradeList();
+//
+//        StockUtils.printTimeplotIndicatorOnFile(dir, stock)
+//
+//        TimeSeries pnlSeries = trader.getPnLSeries();
+//        StockUtils.printTimeSeriesOnFile(pnlSeries, dir)
+//
+//        TimeSeries wealthSeries = trader.getWealthSeries();
+//        StockUtils.printTimeSeriesOnFile(wealthSeries, dir)
+//
+//        StockUtils.printOnFile(dir, list)
 
-        System.out.println(trader.toXMLString())
+//        try {
+//            System.out.println(trader.accountWealth);
+//        } catch (Throwable e) {
+//            e.printStackTrace();
+//        }
 
-        FileUtils.writeStringToFile(new File(dir + "/table.html"), trader.toXMLString())
 
-//        TransactionSeries transactions = strategy.transactionSeries;
-        GenericTimeSeries<Transaction> array = strategy.portfolio.transactions
-
-        List<TradeListEntry> list = trader.getTradeList();
-
-        StockUtils.printTimeplotIndicatorOnFile(dir, stock)
-
-        TimeSeries pnlSeries = trader.getPnLSeries();
-        StockUtils.printTimeSeriesOnFile(pnlSeries, dir)
-
-        TimeSeries wealthSeries = trader.getWealthSeries();
-        StockUtils.printTimeSeriesOnFile(wealthSeries, dir)
-
-        StockUtils.printOnFile(dir, list)
-
-        try {
-            System.out.println(trader.accountWealth);
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
     }
 
     @Test
     public void testTimeplot() throws IOException, ParseException {
 
-        Date da = DateUtils.Date("1/1/2007");
+        Date da = DateUtils.Date("1/1/2011");
         Date a = DateUtils.today();
 
         Instrument stock = YahooUtils.downloadYahooData("AAPL", da, a);

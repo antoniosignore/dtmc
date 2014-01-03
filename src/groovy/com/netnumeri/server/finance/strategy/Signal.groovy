@@ -5,16 +5,27 @@ import com.netnumeri.server.finance.finpojo.Instrument
 
 class Signal {
 
-    private final Date day
-    private final TradeEnum direction
-    private final Instrument instrument
+    final Date day
+    final TradeEnum direction
+    final Instrument instrument
+    final double value
 
-    Signal(Date day, TradeEnum direction, Instrument instrument) {
+    Signal(Date day, TradeEnum direction, Instrument instrument, double value) {
         println "SIGNAL = $day"
         println "direction = $direction.value"
         println "instrument = $instrument.name"
         this.day = day
         this.direction = direction
         this.instrument = instrument
+        this.value = value
+    }
+
+    @Override
+    public String toString() {
+        return "Signal{\n" +
+                "day=" + day + "\n" +
+                ", direction=" + direction +   "\n" +
+                ", instrument=" + instrument +  "\n" +
+                '}';
     }
 }

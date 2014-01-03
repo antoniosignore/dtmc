@@ -260,7 +260,7 @@ class Instrument extends Persistable implements Serializable {
 
     public double value(Date date, FinConstants option) {
         if (dailyarray.get(date) == null)
-            date = getLastDate()
+            date = getLast(date)
         switch (option) {
             case FinConstants.HIGH:
                 return high(date);
@@ -286,7 +286,7 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public double getLast(Date date) {
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
+        if (date == null) throw new IllegalArgumentException("date cannot be null");
         Daily daily = getDaily(date);
         while (!daily.valid()) {
             daily = getPrevDaily(date);
@@ -860,6 +860,4 @@ class Instrument extends Persistable implements Serializable {
         Daily daily = new Daily(instrument, index, date, high, low, open, close, volume, openInterest, option);
         add(daily);
     }
-
-
 }

@@ -2,14 +2,14 @@
 
 <script class="code" language="javascript" type="text/javascript">
     $(document).ready(function () {
-        var plot2 = $.jqplot('chart2', [ohlc], {
+        var plot2 = $.jqplot('chart2', [ohlc, signals], {
             seriesDefaults: {yaxis: 'y2axis'},
             axes: {
                 xaxis: {
                     renderer: $.jqplot.DateAxisRenderer,
                     tickOptions: {formatString: '%b %e'},
                     min: "11-01-2012",
-                    max: "09-23-2013",
+                    max: "01-03-2014",
                     tickInterval: "6 weeks"
                 },
                 y2axis: {
@@ -21,6 +21,12 @@
                 {
                     renderer: $.jqplot.OHLCRenderer,
                     rendererOptions: { candleStick: true }
+                },
+                {
+                    // Don't show a line, just show markers.
+                    // Make the markers 7 pixels with an 'x' style
+                    showLine:false,
+                    markerOptions: { size: 7, style:"x" }
                 }
             ],
             highlighter: {
@@ -41,6 +47,7 @@
     });
 
     ohlc = ${StockUtils.getJqPlot(stockInstance)}
+    signals = ${StockUtils.getJqPlot(strategyInstance)}
 </script>
 
 <div id="chart2" style="height:600px; width:800px;"></div>

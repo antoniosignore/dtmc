@@ -7,6 +7,8 @@ import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.finpojo.asset.Stock
+import com.netnumeri.server.finance.strategy.Signal
+import com.netnumeri.server.finance.strategy.Strategy
 import com.netnumeri.server.finance.ta.Indicator
 import com.netnumeri.server.finance.ta.TradeInfo
 import com.netnumeri.server.finance.ta.TradeListEntry
@@ -171,8 +173,6 @@ ohlc = [
         Date dateIndex = startDate
 
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
-//        StringBuffer sb = new StringBuffer("<script class=\"code\" language=\"javascript\" type=\"text/javascript\">\n");
-//        sb.append("ohlc = [\n")
         StringBuffer sb = new StringBuffer("[\n");
         while (dateIndex != null) {
             Daily daily = dailyarray.get(dateIndex)
@@ -183,9 +183,21 @@ ohlc = [
             dateIndex = dailyarray.getNextDate(dateIndex)
         }
         sb.append("];\n")
-//        sb.append("</script>\n")
         return sb.toString()
     }
+
+    static String getJqPlot(Strategy strategy) {
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
+        StringBuffer sb = new StringBuffer("[\n");
+        strategy.signals.each {
+            Signal signal = it
+            sb.append("['" + sdf.format(signal.day) + "'," + signal.value + "],\n")
+        }
+        sb.append("];\n")
+        return sb.toString()
+    }
+
+    //Strategy
 
     static DailyGSON getDailyGSON(Stock stock) {
 

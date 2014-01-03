@@ -33,10 +33,10 @@ public class SMACrossover extends Strategy {
         TradeEnum signal = null;
 
         Indicator lower = asset.indicators.get("lower");
-        println "lower = $lower"
+        println "lower = $lower.name"
 
         Indicator upper = asset.indicators.get("upper");
-        println "upper = $upper"
+        println "upper = $upper.name"
 
         if (! (DateUtils.isGreater(date, lower.firstDate) && DateUtils.isGreater(date, upper.firstDate)))
             return

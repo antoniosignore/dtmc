@@ -246,7 +246,7 @@ public class BackTest implements Serializable {
                     Instrument instrument = transaction.getInstrument();
                     transactionPair = transactionSerie.getPair(date, transaction.getTradeAction());
                     if (transactionPair == null) {
-                        Date operationDate = instrument.getLastDate();
+                        Date operationDate = instrument.lastDate()
                         double operationLastPrice = instrument.close(operationDate);
                         double operationEntryPrice = transaction.getPrice();
                         int operationAmount = transaction.getAmount();
@@ -280,7 +280,7 @@ public class BackTest implements Serializable {
                     Instrument instrument = transaction.getInstrument();
                     transactionPair = transactionSerie.getPair(date, transaction.getTradeAction());
                     if (transactionPair == null) {
-                        Date operationDate = instrument.getLastDate();
+                        Date operationDate = instrument.lastDate;
                         double operationLastPrice = instrument.close(operationDate);
                         double entryPrice = transaction.getPrice();
                         int operationAmount = transaction.getAmount();

@@ -9,6 +9,8 @@ import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.indicator.UserIndicators
 import com.netnumeri.server.finance.strategy.BackTest
 import com.netnumeri.server.finance.strategy.SMACrossover
+import com.netnumeri.server.finance.strategy.SMACrossoverSignal
+import com.netnumeri.server.finance.strategy.Signal
 import com.netnumeri.server.finance.strategy.Strategy
 import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.DateUtils
@@ -251,6 +253,16 @@ class StockController {
 
         stockInstance.snapshot = YahooUtils.getCompanySnapshot(stockInstance.name);
 
+        stockInstance.indicators.put("upper", new SMAIndicator(closes, "SMA-" + 50, 50))
+        stockInstance.indicators.put("lower", new SMAIndicator(closes, "SMA-" + 10, 10))
+        Strategy strategy = new SMACrossoverSignal("test", stockInstance, da, a);
+        strategy.run();
+        def signals = strategy.signals
+        strategy.signals.each {
+            Signal signal = it
+            println "signal = $signal"
+        }
+
 //        Portfolio portfolio = new Portfolio("SMA crossing", "MA 50 - 10 crossing ", 10000);
 //        portfolio.portfolioType = PortfolioEnum.Strategy
 //
@@ -270,11 +282,13 @@ class StockController {
 //        println strategy.tester.toXMLString()
 
         // todo date in jqplot format
-        String plot = StockUtils.getJqPlot(stockInstance)
+//        String plot = StockUtils.getJqPlot(stockInstance)
+
         [
                 startDate: da,
                 endDate: a,
                 stockInstance: stockInstance,
+                strategyInstance: strategy,
                 indicators: list
         ]
 

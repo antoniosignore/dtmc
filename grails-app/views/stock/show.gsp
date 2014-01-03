@@ -48,8 +48,6 @@ data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
 <dtmc:indicators indicators="${indicators}"/>
 </div>
 
-
-
 </body>
 
 </html>
