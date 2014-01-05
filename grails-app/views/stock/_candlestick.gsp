@@ -2,15 +2,12 @@
 
 <script class="code" language="javascript" type="text/javascript">
     $(document).ready(function () {
-        var plot2 = $.jqplot('chart2', [ohlc, signals], {
+        var plot2 = $.jqplot('chart2', [ohlc, buysignals, sellsignals], {
             seriesDefaults: {yaxis: 'y2axis'},
             axes: {
                 xaxis: {
                     renderer: $.jqplot.DateAxisRenderer,
-                    tickOptions: {formatString: '%b %e'},
-                    min: "11-01-2012",
-                    max: "01-03-2014",
-                    tickInterval: "6 weeks"
+                    tickOptions: {formatString: '%b %e'}
                 },
                 y2axis: {
                     tickOptions: {formatString: '$%d'}
@@ -23,10 +20,13 @@
                     rendererOptions: { candleStick: true }
                 },
                 {
-                    // Don't show a line, just show markers.
-                    // Make the markers 7 pixels with an 'x' style
                     showLine:false,
-                    markerOptions: { size: 7, style:"x" }
+                    markerOptions: { size: 10, style:"filledCircle",color: '#008000' }
+                },
+                {
+                    showLine:false,
+                    markerOptions: { size: 10, style:"filledCircle",color: '#FF0000' }
+
                 }
             ],
             highlighter: {
@@ -47,7 +47,8 @@
     });
 
     ohlc = ${StockUtils.getJqPlot(stockInstance)}
-    signals = ${StockUtils.getJqPlot(strategyInstance)}
+    buysignals = ${StockUtils.getBuySignals(strategyInstance)}
+    sellsignals = ${StockUtils.getSellSignals(strategyInstance)}
 </script>
 
 <div id="chart2" style="height:600px; width:800px;"></div>

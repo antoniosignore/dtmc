@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder
 import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.strategy.Signal
 import com.netnumeri.server.finance.strategy.Strategy
@@ -192,6 +193,30 @@ ohlc = [
         strategy.signals.each {
             Signal signal = it
             sb.append("['" + sdf.format(signal.day) + "'," + signal.value + "],\n")
+        }
+        sb.append("];\n")
+        return sb.toString()
+    }
+
+    static String getBuySignals(Strategy strategy) {
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
+        StringBuffer sb = new StringBuffer("[\n");
+        strategy.signals.each {
+            Signal signal = it
+            if (signal.direction == TradeEnum.BUY)
+                sb.append("['" + sdf.format(signal.day) + "'," + signal.value + "],\n")
+        }
+        sb.append("];\n")
+        return sb.toString()
+    }
+
+    static String getSellSignals(Strategy strategy) {
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
+        StringBuffer sb = new StringBuffer("[\n");
+        strategy.signals.each {
+            Signal signal = it
+            if (signal.direction == TradeEnum.SELL)
+                sb.append("['" + sdf.format(signal.day) + "'," + signal.value + "],\n")
         }
         sb.append("];\n")
         return sb.toString()
