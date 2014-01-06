@@ -1,8 +1,9 @@
-<%@ page import="com.netnumeri.server.utils.StockUtils" %>
+<%@ page import="com.netnumeri.server.finance.ta.Indicator; com.netnumeri.server.utils.StockUtils" %>
+
 
 <script class="code" language="javascript" type="text/javascript">
     $(document).ready(function () {
-        var plot2 = $.jqplot('chart2', [ohlc, buysignals, sellsignals], {
+        var plot2 = $.jqplot('chart2', [ohlc, buysignals, sellsignals, lower, upper], {
             seriesDefaults: {yaxis: 'y2axis'},
             axes: {
                 xaxis: {
@@ -20,13 +21,22 @@
                     rendererOptions: { candleStick: true }
                 },
                 {
+//                    renderer: $.jqplot.DateAxisRenderer,
                     showLine:false,
                     markerOptions: { size: 10, style:"filledCircle",color: '#008000' }
                 },
                 {
+//                    renderer: $.jqplot.DateAxisRenderer,
                     showLine:false,
                     markerOptions: { size: 10, style:"filledCircle",color: '#FF0000' }
-
+                },
+                {
+                    lineWidth:1, showMarker: false,
+                    showLine:true
+                },
+                {
+                    lineWidth:1, showMarker: false,
+                    showLine:true
                 }
             ],
             highlighter: {
@@ -46,9 +56,11 @@
         });
     });
 
-    ohlc = ${StockUtils.getJqPlot(stockInstance)}
+    ohlc = ${StockUtils.getCandleStickPlot(stockInstance)}
     buysignals = ${StockUtils.getBuySignals(strategyInstance)}
     sellsignals = ${StockUtils.getSellSignals(strategyInstance)}
+    lower= ${stockInstance.indicators.get("lower").jqPlot}
+    upper= ${stockInstance.indicators.get("upper").jqPlot}
 </script>
 
 <div id="chart2" style="height:600px; width:800px;"></div>

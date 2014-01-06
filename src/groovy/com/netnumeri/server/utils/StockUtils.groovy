@@ -158,16 +158,7 @@ class StockUtils {
 
     }
 
-    /*
-<script class="code" language="javascript" type="text/javascript">
-ohlc = [
-['06/15/2009 16:00:00', 136.01, 139.5, 134.53, 139.48],
-['09/15/2008 16:00:00', 142.03, 147.69, 120.68, 140.91]
-];
-</script>
- */
-
-    static String getJqPlot(Stock stock) {
+    static String getCandleStickPlot(Stock stock) {
         GenericTimeSeries<Daily> dailyarray = stock.dailyarray;
         Date startDate = dailyarray.getFirstDate()
         Date last = dailyarray.getLastDate()
@@ -221,6 +212,36 @@ ohlc = [
         sb.append("];\n")
         return sb.toString()
     }
+
+    public String getTimeSeriesPlot(Indicator series) {
+            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+            DecimalFormat df = new DecimalFormat("#.####");
+            List<DailyGSON> ds = new ArrayList<DailyGSON>();
+            try {
+                Date d = series.firstDate;
+                StringBuffer sb = new StringBuffer("[");
+                while (DateUtils.isLessEqual(d, series.lastDate)) {
+                    Double v = series.getData(d);
+                    if (v == null) {
+                        d = DateUtils.addDays(d, 1)
+                        continue
+                    };
+                    ds.add(buildDaily(sdf.format(d), df.format(v)));
+                    if (d.getTime() == series.lastDate.getTime())
+                        sb.append("['" + sdf.format(d) + "'," + v + "]\n")
+                    else
+                        sb.append("['" + sdf.format(d) + "'," + v + "],\n")
+
+                    d = DateUtils.addDays(d, 1)
+                }
+                sb.append("];\n")
+                return sb.toString()
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
 
     //Strategy
 

@@ -22,20 +22,14 @@ public class SMACrossoverSignal extends Strategy {
 
     public void evaluateInstrumentOnDate(Date date, Instrument asset) {
 
-        println "evaluateInstrumentOnDate date = $date"
-
         Indicator lower = asset.indicators.get("lower");
-        println "lower = $lower.name"
-
         Indicator upper = asset.indicators.get("upper");
-        println "upper = $upper.name"
 
         if (!(DateUtils.isGreater(date, lower.firstDate) && DateUtils.isGreater(date, upper.firstDate)))
             return
 
         double todayLower = lower.getData(date)
         Date previousDate = lower.getPrevDate(date)
-        println "d = $previousDate"
 
         double yesterdayLower = lower.getData(previousDate)
 

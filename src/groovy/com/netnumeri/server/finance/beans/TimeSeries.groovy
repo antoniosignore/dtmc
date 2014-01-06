@@ -1070,26 +1070,6 @@ public class TimeSeries implements Serializable {
         return null;
     }
 
-//    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//    DecimalFormat df = new DecimalFormat("#.####");
-//
-//    List<DailyGSON> ds = new ArrayList<DailyGSON>();
-//    ds.add(buildDaily("2013-01-01","1"));
-//    ds.add(buildDaily("2013-01-02","2"));
-//    ds.add(buildDaily("2013-01-03","3"));
-//    ds.add(buildDaily("2013-01-04","4"));
-//    ds.add(buildDaily("2013-01-05","5"));
-//    ds.add(buildDaily("2013-01-06","4"));
-//    ds.add(buildDaily("2013-01-07","3"));
-//    ds.add(buildDaily("2013-01-08","4"));
-//    ds.add(buildDaily("2013-01-09","1.3"));
-//    ds.add(buildDaily("2013-01-10", "1.5"));
-//
-//    Gson gson = new GsonBuilder().setPrettyPrinting().create();
-//    String jsonOutput = gson.toJson(ds);
-//    System.out.println("json = " + jsonOutput);
-//}
-
     private static DailyGSON buildDaily(String day, String val) {
         DailyGSON d1 = new DailyGSON();
         d1.period = day;
@@ -1121,39 +1101,9 @@ public class TimeSeries implements Serializable {
         return null;
     }
 
-    /*
-$(document).ready(function(){
-  var line1=[['23-May-08', 578.55], ['20-Jun-08', 566.5], ['25-Jul-08', 480.88], ['22-Aug-08', 509.84],
-      ['26-Sep-08', 454.13], ['24-Oct-08', 379.75], ['21-Nov-08', 303], ['26-Dec-08', 308.56],
-      ['23-Jan-09', 299.14], ['20-Feb-09', 346.51], ['20-Mar-09', 325.99], ['24-Apr-09', 386.15]];
-  var plot1 = $.jqplot('chart1', [line1], {
-      title:'Data Point Highlighting',
-      axes:{
-        xaxis:{
-          renderer:$.jqplot.DateAxisRenderer,
-          tickOptions:{
-            formatString:'%b&nbsp;%#d'
-          }
-        },
-        yaxis:{
-          tickOptions:{
-            formatString:'$%.2f'
-            }
-        }
-      },
-      highlighter: {
-        show: true,
-        sizeAdjust: 7.5
-      },
-      cursor: {
-        show: false
-      }
-  });
-});
-*/
 
     public String getJqPlot() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         DecimalFormat df = new DecimalFormat("#.####");
         List<DailyGSON> ds = new ArrayList<DailyGSON>();
         try {
@@ -1174,19 +1124,6 @@ $(document).ready(function(){
                 d = DateUtils.addDays(d, 1)
             }
             sb.append("];\n")
-
-//            StringBuffer jscript = new StringBuffer();
-//            jscript.append("<div id='chart_" + jsname + "' style='height:300px; width:650px;'></div>\n" +
-//                    "    <g:javascript>\n" +
-//                    "        \$(document).ready(function(){\n" +
-//                    "        var plot1 = \$.jqplot('chart_" + jsname + ", " + sb.toString() + ", {\n" +
-//                    "        title:'Default Date Axis',\n" +
-//                    "        axes:{xaxis:{renderer:\$.jqplot.DateAxisRenderer}},\n" +
-//                    "        series:[{lineWidth:4, markerOptions:{style:'square'}}]\n" +
-//                    "        });\n" +
-//                    "        });\n" +
-//                    "    </g:javascript>")
-
             return sb.toString()
         } catch (Exception e) {
             e.printStackTrace();

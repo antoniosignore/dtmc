@@ -257,11 +257,7 @@ class StockController {
         stockInstance.indicators.put("lower", new SMAIndicator(closes, "SMA-" + 10, 10))
         Strategy strategy = new SMACrossoverSignal("test", stockInstance, da, a);
         strategy.run();
-        def signals = strategy.signals
-        strategy.signals.each {
-            Signal signal = it
-            println "signal = $signal"
-        }
+
 
 //        Portfolio portfolio = new Portfolio("SMA crossing", "MA 50 - 10 crossing ", 10000);
 //        portfolio.portfolioType = PortfolioEnum.Strategy
@@ -282,7 +278,7 @@ class StockController {
 //        println strategy.tester.toXMLString()
 
         // todo date in jqplot format
-//        String plot = StockUtils.getJqPlot(stockInstance)
+//        String plot = StockUtils.getCandleStickPlot(stockInstance)
 
         [
                 startDate: da,
