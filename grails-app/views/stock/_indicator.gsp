@@ -3,7 +3,7 @@
         $(document).ready(function () {
             var plot1 = $.jqplot('chart_${indicatorCounter}', [data_${indicatorCounter}], {
                 title: '${indicator.name}',
-                axes: {xaxis: {renderer: $.jqplot.DateAxisRenderer}},
+                axes: {xaxis: {renderer: $.jqplot.DateAxisRenderer}, yaxis:{yaxis:'y2axis'}},
                 series: [
                     {lineWidth:1, showMarker: false}
                 ]

@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossoverSignal.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossoverSignal.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" afterPath="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/antonio.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/antonio.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -137,33 +138,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SMACrossoverTest.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy">
+      <file leaf-file-name="_candlestick.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="35" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1455">
+            <state line="16" column="94" selection-start="735" selection-end="735" vertical-scroll-proportion="0.3130016" vertical-offset="45" max-vertical-offset="1125">
               <folding>
-                <marker date="1388781707897" expanded="true" signature="1738:2565" placeholder="..." />
+                <marker date="1389181360023" expanded="true" signature="1173:1590" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
+      <file leaf-file-name="jquery.jqplot.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-app/css/jquery.jqplot.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="257" column="38" selection-start="11039" selection-end="11039" vertical-scroll-proportion="-5.625" vertical-offset="3720" max-vertical-offset="5580">
+            <state line="119" column="23" selection-start="2906" selection-end="2906" vertical-scroll-proportion="-21.04" vertical-offset="1259" max-vertical-offset="3975">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_candlestick.gsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp">
+      <file leaf-file-name="_content.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_content.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="13" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.38523275" vertical-offset="360" max-vertical-offset="1080">
+            <state line="18" column="44" selection-start="704" selection-end="704" vertical-scroll-proportion="-7.5" vertical-offset="90" max-vertical-offset="510">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_submenubar.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="38" selection-start="384" selection-end="384" vertical-scroll-proportion="-3.4375" vertical-offset="0" max-vertical-offset="675">
               <folding>
-                <marker date="1389007942845" expanded="true" signature="1872:2289" placeholder="..." />
+                <marker date="1375564520568" expanded="true" signature="4:110" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_header.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_header.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="33" selection-start="315" selection-end="315" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="330">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kickstart.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="42" selection-start="2064" selection-end="2064" vertical-scroll-proportion="-5.0833335" vertical-offset="883" max-vertical-offset="1395">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,34 +199,7 @@
       <file leaf-file-name="_indicator.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="67" selection-start="279" selection-end="315" vertical-scroll-proportion="-1.5625" vertical-offset="0" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeSeries.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1112" column="40" selection-start="38772" selection-end="38772" vertical-scroll-proportion="0.0" vertical-offset="16337" max-vertical-offset="17715">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockUtils.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="63" selection-start="7733" selection-end="7743" vertical-scroll-proportion="0.0" vertical-offset="2642" max-vertical-offset="4260">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMACrossoverSignal.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossoverSignal.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="41" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0" vertical-offset="137" max-vertical-offset="840">
+            <state line="13" column="88" selection-start="558" selection-end="558" vertical-scroll-proportion="-4.0625" vertical-offset="0" max-vertical-offset="345">
               <folding />
             </state>
           </provider>
@@ -207,19 +208,7 @@
       <file leaf-file-name="Indicator.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Indicator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="46" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="1305">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Instrument.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy">
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="89" selection-start="1436" selection-end="1436" vertical-scroll-proportion="-4.5384617" vertical-offset="469" max-vertical-offset="13035">
+            <state line="10" column="46" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1305">
               <folding />
             </state>
           </provider>
@@ -257,8 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/SecUser.groovy" />
-        <option value="$PROJECT_DIR$/src/templates/scaffolding/renderEditor.template" />
         <option value="$PROJECT_DIR$/grails-app/views/strategy/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/strategy/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/portfolio/show.gsp" />
@@ -269,7 +256,6 @@
         <option value="$PROJECT_DIR$/grails-app/views/strategy/create.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/SMACrossover/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/_leftbar.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/SMACrossoverController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/TradingSystem.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Backtest.groovy" />
@@ -296,7 +282,6 @@
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Strategy.groovy" />
         <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/VolatilityClient.java" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Volatility.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/BackTest.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossover.groovy" />
         <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" />
@@ -307,6 +292,10 @@
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossoverSignal.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp" />
       </list>
     </option>
@@ -321,8 +310,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="287" />
-    <option name="y" value="106" />
+    <option name="x" value="-9" />
+    <option name="y" value="-8" />
     <option name="width" value="1618" />
     <option name="height" value="892" />
   </component>
@@ -1072,7 +1061,9 @@
       <workItem from="1388776313630" duration="8154000" />
       <workItem from="1388913067993" duration="980000" />
       <workItem from="1388941367546" duration="3395000" />
-      <workItem from="1389002991305" duration="4579000" />
+      <workItem from="1389002991305" duration="7887000" />
+      <workItem from="1389102564936" duration="2040000" />
+      <workItem from="1389174282592" duration="5024000" />
     </task>
     <task id="LOCAL-00001" summary="added indicators in tables">
       <created>1378071164332</created>
@@ -1442,14 +1433,18 @@
       <created>1388943453750</created>
       <updated>1388943453751</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="trading systems&#10;">
+      <created>1389007969624</created>
+      <updated>1389007969624</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297271000" />
+    <option name="totallyTimeSpent" value="307643000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="287" y="106" width="1618" height="892" extended-state="0" />
+    <frame x="-9" y="-8" width="1618" height="892" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1466,16 +1461,15 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.6300268" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5262431" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5248619" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6022099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52209944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49861878" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24259974" sideWeight="0.6747312" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48618785" sideWeight="0.4996633" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24195625" sideWeight="0.6747312" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24949427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -1488,6 +1482,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48618785" sideWeight="0.4996633" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1524,38 +1519,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="70" selection-start="2628" selection-end="2628" vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="52" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.grails/2.3.1/projects/dtmc/plugins/cache-1.0.1/src/java/grails/plugin/cache/web/filter/AbstractFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2206" selection-end="2206" vertical-scroll-proportion="0.0" vertical-offset="647" max-vertical-offset="3225" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.grails/2.3.1/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/grails-app/views/_DemoPage/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="75" selection-start="3805" selection-end="3805" vertical-scroll-proportion="0.0" vertical-offset="656" max-vertical-offset="2445" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/portfolio/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="62" selection-start="326" selection-end="326" vertical-scroll-proportion="4.6875" vertical-offset="360" max-vertical-offset="1500" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="66" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="3300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/portfolio/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="36" selection-start="2680" selection-end="2680" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="2040" />
@@ -1589,11 +1552,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioEntry.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="18" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.7725806" vertical-offset="271" max-vertical-offset="915" />
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/GenericMatrix.groovy">
@@ -1612,19 +1575,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Asset.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="360" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="570" />
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/DateUtils.groovy">
@@ -1638,11 +1601,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="66" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1410" />
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/FurtherExamplesClient.java">
@@ -1651,11 +1614,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Transaction.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="41" selection-start="1344" selection-end="1344" vertical-scroll-proportion="-16.25" vertical-offset="150" max-vertical-offset="1635" />
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TradeEnum.groovy">
@@ -1751,23 +1714,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Signal.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="55" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding />
-        </state>
+        <state line="4" column="55" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="35" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1455">
           <folding>
-            <marker date="1388781707897" expanded="true" signature="1738:2565" placeholder="..." />
+            <marker date="1388781707897" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="257" column="38" selection-start="11039" selection-end="11039" vertical-scroll-proportion="-5.625" vertical-offset="3720" max-vertical-offset="5580">
+        <state line="257" column="38" selection-start="11039" selection-end="11039" vertical-scroll-proportion="0.0" vertical-offset="3855" max-vertical-offset="5580">
           <folding />
         </state>
       </provider>
@@ -1780,13 +1741,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="89" selection-start="1436" selection-end="1436" vertical-scroll-proportion="-4.5384617" vertical-offset="469" max-vertical-offset="13035">
+        <state line="47" column="89" selection-start="1436" selection-end="1436" vertical-scroll-proportion="0.0" vertical-offset="469" max-vertical-offset="13035">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy">
@@ -1799,13 +1760,6 @@
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1112" column="40" selection-start="38772" selection-end="38772" vertical-scroll-proportion="0.0" vertical-offset="16337" max-vertical-offset="17715">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="67" selection-start="279" selection-end="315" vertical-scroll-proportion="-1.5625" vertical-offset="0" max-vertical-offset="345">
           <folding />
         </state>
       </provider>
@@ -1824,11 +1778,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="42" selection-start="2064" selection-end="2064" vertical-scroll-proportion="-5.0833335" vertical-offset="883" max-vertical-offset="1395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_content.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="44" selection-start="704" selection-end="704" vertical-scroll-proportion="-7.5" vertical-offset="90" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="38" selection-start="384" selection-end="384" vertical-scroll-proportion="-3.4375" vertical-offset="0" max-vertical-offset="675">
+          <folding>
+            <marker date="1375564520568" expanded="true" signature="4:110" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_leftbar.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="671">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_header.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="33" selection-start="315" selection-end="315" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/jquery.jqplot.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="23" selection-start="2906" selection-end="2906" vertical-scroll-proportion="-21.04" vertical-offset="1259" max-vertical-offset="3975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="88" selection-start="558" selection-end="558" vertical-scroll-proportion="-4.0625" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="13" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.38523275" vertical-offset="360" max-vertical-offset="1080">
+        <state line="16" column="94" selection-start="735" selection-end="735" vertical-scroll-proportion="0.3130016" vertical-offset="45" max-vertical-offset="1125">
           <folding>
-            <marker date="1389007942845" expanded="true" signature="1872:2289" placeholder="..." />
+            <marker date="1389181360023" expanded="true" signature="1173:1590" placeholder="..." />
           </folding>
         </state>
       </provider>

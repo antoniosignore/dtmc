@@ -1,16 +1,15 @@
 <%@ page import="com.netnumeri.server.finance.ta.Indicator; com.netnumeri.server.utils.StockUtils" %>
 
-
 <script class="code" language="javascript" type="text/javascript">
     $(document).ready(function () {
         var plot2 = $.jqplot('chart2', [ohlc, buysignals, sellsignals, lower, upper], {
-            seriesDefaults: {yaxis: 'y2axis'},
+            seriesDefaults: {yaxis: 'yaxis'},
             axes: {
                 xaxis: {
                     renderer: $.jqplot.DateAxisRenderer,
                     tickOptions: {formatString: '%b %e'}
                 },
-                y2axis: {
+                yaxis: {
                     tickOptions: {formatString: '$%d'}
                 }
             },
@@ -18,15 +17,26 @@
             series: [
                 {
                     renderer: $.jqplot.OHLCRenderer,
-                    rendererOptions: { candleStick: true }
+                    rendererOptions: { candleStick: true },
+                    highlighter: {
+                        showMarker: false,
+                        pointLabels:{ show:true, location:'s', ypadding:3 },
+                        tooltipAxes: 'xy',
+                        yvalues: 4,
+                        formatString: '<table class="jqplot-highlighter"> \
+                                      <tr><td>date:</td><td>%s</td></tr> \
+                                      <tr><td>open:</td><td>%s</td></tr> \
+                                      <tr><td>hi:</td><td>%s</td></tr> \
+                                      <tr><td>low:</td><td>%s</td></tr> \
+                                      <tr><td>close:</td><td>%s</td></tr>\
+                                  </table>'
+                    }
                 },
                 {
-//                    renderer: $.jqplot.DateAxisRenderer,
                     showLine:false,
                     markerOptions: { size: 10, style:"filledCircle",color: '#008000' }
                 },
                 {
-//                    renderer: $.jqplot.DateAxisRenderer,
                     showLine:false,
                     markerOptions: { size: 10, style:"filledCircle",color: '#FF0000' }
                 },
@@ -40,18 +50,10 @@
                 }
             ],
             highlighter: {
-                show: true,
-                showMarker: false,
-                pointLabels:{ show:true, location:'s', ypadding:3 },
-                tooltipAxes: 'xy',
-                yvalues: 4,
-                formatString: '<table class="jqplot-highlighter"> \
-                                      <tr><td>date:</td><td>%s</td></tr> \
-                                      <tr><td>open:</td><td>%s</td></tr> \
-                                      <tr><td>hi:</td><td>%s</td></tr> \
-                                      <tr><td>low:</td><td>%s</td></tr> \
-                                      <tr><td>close:</td><td>%s</td></tr>\
-                                  </table>'
+                show: true
+            },
+            cursor: {
+                show: true
             }
         });
     });
@@ -61,6 +63,7 @@
     sellsignals = ${StockUtils.getSellSignals(strategyInstance)}
     lower= ${stockInstance.indicators.get("lower").jqPlot}
     upper= ${stockInstance.indicators.get("upper").jqPlot}
+
 </script>
 
-<div id="chart2" style="height:600px; width:800px;"></div>
+<div id="chart2" style="height:300px; width:100%;"></div>

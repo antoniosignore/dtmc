@@ -1,5 +1,6 @@
 <!-- Main menu in one row (e.g., controller entry points -->
-<div class="span6">
+
+<div class="span12">
 
 <!-- print system messages (infos, warnings, etc) - not validation errors -->
 
@@ -14,9 +15,9 @@
 
     <g:if test="${!layout_nosecondarymenu}">
         <div class="row-fluid">
-            <div class="span12">
+            %{--<div class="span12">--}%
                 <g:render template="/_menu/submenubar"/>
-            </div>
+            %{--</div>--}%
         </div>
     </g:if>
 
