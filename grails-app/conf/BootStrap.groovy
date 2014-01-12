@@ -70,23 +70,23 @@ class BootStrap {
 
             if (UserIndicators.getAll() == null || UserIndicators.getAll().size() == 0) {
 
-                UserIndicators userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma10", integer1: 10);
+                UserIndicators userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma 10", integer1: 10);
                 userIndicators.save(flush: true, failOnError: true)
 
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "integer1", integer1: 50);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma 50", integer1: 50);
                 userIndicators.save(flush: true, failOnError: true)
 
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.WeightedMovingAverage, name: "integer1", integer1: 50);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.WeightedMovingAverage, name: "wma 50", integer1: 50);
                 userIndicators.save(flush: true, failOnError: true)
 
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumFirstComponent, name: "ssa0", integer1: 50);
                 userIndicators.save(flush: true, failOnError: true)
 
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumSecondComponent, name: "ssa1", integer1: 50);
-                userIndicators.save(flush: true, failOnError: true)
-
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumFirstSecondComponent, name: "ssa01", integer1: 50);
-                userIndicators.save(flush: true, failOnError: true)
+//                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumSecondComponent, name: "ssa1", integer1: 50);
+//                userIndicators.save(flush: true, failOnError: true)
+//
+//                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumFirstSecondComponent, name: "ssa01", integer1: 50);
+//                userIndicators.save(flush: true, failOnError: true)
 
 //                ui.indicator = new PriceChannelUpIndicator(closes, "PC-Upper", ui.indicatorOrder, ui.k);
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.PriceChannelUpper, name: "PC Upper", integer1: 10, double2: 50);

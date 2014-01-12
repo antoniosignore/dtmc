@@ -10,7 +10,7 @@
                     tickOptions: {formatString: '%b %e'}
                 },
                 yaxis: {
-                    tickOptions: {formatString: '$%d'}
+                    tickOptions: {formatString: '%d'}
                 }
             },
             // To make a candle stick chart, set the "candleStick" option to true.
@@ -34,11 +34,11 @@
                 },
                 {
                     showLine:false,
-                    markerOptions: { size: 10, style:"filledCircle",color: '#008000' }
+                    markerOptions: { size: 10, style:"filledCircle",color: 'blue' }
                 },
                 {
                     showLine:false,
-                    markerOptions: { size: 10, style:"filledCircle",color: '#FF0000' }
+                    markerOptions: { size: 10, style:"filledCircle",color: 'red' }
                 },
                 {
                     lineWidth:1, showMarker: false,

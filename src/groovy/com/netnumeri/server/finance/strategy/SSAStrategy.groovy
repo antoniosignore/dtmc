@@ -40,9 +40,6 @@ public class SSAStrategy extends Strategy {
     List<String> armonics = new ArrayList<String>();
 
 
-    public SSAStrategy() {
-    }
-
     public SSAStrategy(String name,
                        Portfolio portfolio,
                        Date firstDate,

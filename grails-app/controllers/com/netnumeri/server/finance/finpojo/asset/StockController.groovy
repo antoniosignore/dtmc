@@ -93,7 +93,7 @@ class StockController {
             } else if (ui.type == IndicatorEnum.SingularSpectrumSecondComponent) {
 
                 List<Integer> components = [1]
-                ui.indicator = new SSAComponentsIndicator(closes, "SSA-0", ui.integer1, components);
+                ui.indicator = new SSAComponentsIndicator(closes, "SSA-1", ui.integer1, components);
 
             } else if (ui.type == IndicatorEnum.SingularSpectrumFirstSecondComponent) {
 

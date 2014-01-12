@@ -26,9 +26,9 @@ public class SSAPredictionTest extends TestCase {
 
         Date da = DateUtils.Date("11/1/2009");
         Date a = DateUtils.today();
-        stock = YahooUtils.downloadYahooData(STOCK_TICKER, da, a);
+        stock = YahooUtils.downloadYahooData(STOCK_TICKER, "", da, a);
         closes = stock.getCloseSeries();
-        FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
+      //  FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
 
 //        a = DateUtils.Date("11/30/2010");
 //        Stock mystock = YahooUtils.downloadYahooData(STOCK_TICKER, da, a);

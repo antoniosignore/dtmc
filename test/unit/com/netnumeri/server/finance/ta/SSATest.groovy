@@ -3,6 +3,7 @@ package com.netnumeri.server.finance.ta
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.finpojo.Instrument
+import com.netnumeri.server.finance.ssa.SSAAnalysis
 import com.netnumeri.server.finance.ssa.SSAStudy
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
@@ -13,7 +14,7 @@ import org.junit.Test
 
 import java.text.ParseException
 
-public class SSATest extends TestCase {
+public class MyTest extends TestCase {
 
     String dir = "/home/antonio/timeplot/"
     Instrument stock
@@ -21,6 +22,40 @@ public class SSATest extends TestCase {
 
     @Test
     public void setUp() throws IOException, ParseException {
+
+    }
+
+
+    public static void main(String[] args) {
+
+        def components = [0]
+        List<Double> input = new ArrayList<Double>();
+        input.add(1.0135518)
+        input.add(-0.7113242 as Double)
+        input.add(-0.3906069 as Double)
+        input.add(1.565203)
+        input.add(0.0439317)
+        input.add(-1.1656093 as Double)
+        input.add(1.0701692)
+        input.add(1.0825379)
+        input.add(-1.2239744 as Double)
+        input.add(-0.0321446 as Double)
+        input.add(1.1815997)
+        input.add(-1.4969448 as Double)
+        input.add(-0.7455299 as Double)
+        input.add(1.0973884)
+        input.add(-0.2188716 as Double)
+        input.add(-1.0719573 as Double)
+        input.add(0.9922009)
+        input.add(0.4374216)
+        input.add(-1.6880219 as Double)
+        input.add(0.2609807 as Double)
+
+        SSAAnalysis analysis = new SSAAnalysis(input, 4)
+
+        List<Double> components1 = analysis.getEigenComponents(components);
+
+        println "components1 = $components1"
 
     }
 

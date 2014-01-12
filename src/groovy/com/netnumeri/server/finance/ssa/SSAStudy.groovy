@@ -25,7 +25,6 @@ class SSAStudy {
         Indicator ssa1 = new SSAComponentsIndicator(closes, "SSA-1", analysis, components);
         stock.indicators.put(ssa1.name, ssa1)
 
-
         components = [0, 1]
         Indicator ssa01 = new SSAComponentsIndicator(closes, "SSA-01", analysis, components);
         stock.indicators.put(ssa01.name, ssa01)

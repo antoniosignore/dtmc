@@ -209,7 +209,7 @@ public class SpectrumAnalysis {
 
     public static void setMovingAvarege(SSAData data) {
         List<Double> SMA = new ArrayList<Double>();
-        int m = data.getTimeSeries().size() - data.getL() + 1; //период осреднения
+        int m = data.getTimeSeries().size() - data.getL() + 1;
         for (int i = 0; i < data.getL(); i++) {
             double sum = 0;
             double avg = 0;
