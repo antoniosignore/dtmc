@@ -16,7 +16,7 @@ public class SSAData {
       List<Double> eigenValueList;  // eigenvalues
       List<Double> lgEigenValue; // logarithms of eigenvalues
       List<Double> sqrtEigenValue;// roots of the eigenvalues
-     List eigenVectors; //eigenvectors
+      List eigenVectors; //eigenvectors
       List<Double> percentList; // interest sobtvennyh numbers
       List<Double> accruePercentList;// accrued interest eigenvalues
 

@@ -11,4 +11,13 @@ class SSAEigenTriple {
         Matrix times = U.times(Math.sqrt(singularValue)).times(Vt)
         return times
     }
+
+    @Override
+    public String toString() {
+        return "SSAEigenTriple{" +
+                "\tsingularValue=" + singularValue +
+                "\t, U=" + U.print(3,2) +
+                "\t, Vt=" + Vt.print(3,2) +
+                '}';
+    }
 }

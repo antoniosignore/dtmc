@@ -7,7 +7,8 @@ public class SSA {
     private Integer L;
     private Integer K;
     private Matrix T = null;
-    private Matrix pcaMatrix = null;
+    List eigenVectors;
+    Matrix[] V; //the main components of singular value decomposition
 
     public List<SSAEigenTriple> triples = new ArrayList<SSAEigenTriple>()
 
@@ -15,37 +16,125 @@ public class SSA {
         N = s.size();
         L = window
         K = N - L + 1;
-        T = new Matrix(K, L);
+        T = new Matrix(L, K);
 
-        for (int i = 0; i < K; i++) {
-            for (int k = 0; k < L; k++) {
+        for (int i = 0; i < L; i++) {
+            for (int k = 0; k < K; k++) {
                 T.set(i, k, s[i + k]);
             }
         }
 
-        SingularValueDecomposition svd = T.svd();
+        println "Trajectory matrix"
+        T.print(4, 2)
 
-        Matrix D = svd.getS();
-        Matrix U = svd.getU();
-        Matrix V = svd.getV();
-        Matrix VTranspose = V.transpose();
 
-//        Matrix reconstructed = U.times(D).times(VTranspose)
-//        reconstructed.print(4, 2)
-//        Assert.assertEquals(T, reconstructed)
+        SingularValueDecomposition svd = T.svd()
 
-        double[] singularValues = svd.singularValues;
+//        double[] values = svd.getSingularValues()
+//        println "values = $values"
+//
+//        Matrix s1 = svd.getS()
+//        s1.print(4,3)
+//
+//        Matrix u = svd.getU()
+//        u.print(4,3)
+//
+//        Matrix v = svd.getV()
+//        v.print(4,3)
+//
 
-        for (int i = 0; i < singularValues.length; i++) {
-            SSAEigenTriple triple = new SSAEigenTriple()
-            double singularValue = singularValues[i];
-            triple.singularValue = Math.sqrt(singularValue)
-            Matrix columnMatrix = getColumnMatrix(U, i)
-            triple.U = columnMatrix     // EOF
-            Matrix rowMatrix = getRowMatrix(VTranspose, i)
-            triple.Vt = rowMatrix
-            triples.add(triple);
+
+        Matrix TTranspose = T.transpose()
+
+        Matrix S = T.times(TTranspose)
+
+        println "S Matrix"
+        S.print(4, 2)
+
+        EigenvalueDecomposition decomposition = S.eig()
+
+        Matrix eigenvalue = decomposition.getD();   //matrix with eigenvalues
+        Matrix eigenvec = decomposition.getV();     //matrix of eigenvectors
+
+        List<Double> eigenvalueList = new ArrayList<Double>();
+        //form the set of eigenvalues​​, standing on the diagonal
+        for (int i = 0; i < eigenvalue.getRowDimension(); i++) {
+            for (int j = 0; j < eigenvalue.getRowDimension(); j++) {
+                if (i == j) {
+                    eigenvalueList.add(eigenvalue.get(i, j));
+                }
+            }
         }
+        Comparator comparator = Collections.reverseOrder();
+        /*
+         * eigenvalues ​​must be in descending order, so
+         * sort them in reverse order (original values ​​in ascending
+         * order)
+         */
+        Collections.sort(eigenvalueList, comparator);
+
+        println "eigenvalueList = $eigenvalueList"
+        println "eigenvectors"
+        eigenvec.print(4,3)
+
+        int size = eigenvec.getColumnDimension();
+        Matrix[] V = new Matrix[size];
+        Matrix[] U = new Matrix[size];
+        Matrix[] X = new Matrix[size];
+        ArrayList listSeries = new ArrayList();
+
+        for (int j = 0; j < eigenvec.getColumnDimension(); j++) {
+            double[][] uVec = new double[size][1];
+            ArrayList series = new ArrayList();
+            for (int k = 0; k < eigenvec.getRowDimension(); k++) {
+
+                uVec[k][0] = eigenvec.get(k, eigenvec.getColumnDimension() - j - 1);
+                series.add(uVec[k][0]);
+            }
+            listSeries.add(series);
+            U[j] = new Matrix(uVec);
+            V[j] = S.times(U[j]);
+        }
+
+        eigenVectors = listSeries
+
+        for (int i = 0; i < V.length; i++) {
+            for (int j = 0; j < V[i].getRowDimension(); j++) {
+                for (int k = 0; k < V[i].getColumnDimension(); k++) {
+                    double val = V[i].get(j, k) / Math.sqrt(eigenvalueList.get(i));
+                    V[i].set(j, k, val);
+                }
+            }
+        }
+
+        for (int i = 0; i < X.length; i++) {
+            X[i] = U[i].times(V[i].transpose());
+            for (int j = 0; j < X[i].getRowDimension(); j++) {
+                for (int k = 0; k < X[i].getColumnDimension(); k++) {
+                    double val = X[i].get(j, k) * Math.sqrt(eigenvalueList.get(i));
+                    X[i].set(j, k, val);
+                }
+            }
+        }
+
+        println "U Matrices"
+        U.each {
+            it.print(4, 3)
+        }
+
+//        println "V Matrices V.radice(lambda)"
+//        V.each {
+//            it.print(4, 3)
+//        }
+
+        println "Elementary SVD Matrices"
+        X.each {
+            it.print(4, 3)
+            println "RANK: "+ it.rank()
+        }
+
+
+
     }
 
     public Matrix rebuild(Matrix matrix) {
@@ -66,7 +155,6 @@ public class SSA {
         int j = 0
         int noElements = 0;
         double sum = 0;
-
         while (i >= 0 && j >= 0 && j <= rightBound) {
             sum = sum + matrix.get(i, j)
             i--
