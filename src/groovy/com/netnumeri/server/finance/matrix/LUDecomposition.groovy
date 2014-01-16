@@ -281,10 +281,10 @@ public class LUDecomposition implements java.io.Serializable {
     }
 
     /**
-     * Solve A*X = B
+     * Solve A*Y = B
      *
      * @param B A GenericMatrix with as many rows as A and any number of columns.
-     * @return X so that L*U*X = B(piv,:)
+     * @return Y so that L*U*Y = B(piv,:)
      * @throws IllegalArgumentException GenericMatrix row dimensions must agree.
      * @throws RuntimeException         GenericMatrix is singular.
      */
@@ -309,7 +309,7 @@ public class LUDecomposition implements java.io.Serializable {
                 }
             }
         }
-        // Solve U*X = Y;
+        // Solve U*Y = Y;
         for (int k = n - 1; k >= 0; k--) {
             for (int j = 0; j < nx; j++) {
                 X[k][j] /= LU[k][k];

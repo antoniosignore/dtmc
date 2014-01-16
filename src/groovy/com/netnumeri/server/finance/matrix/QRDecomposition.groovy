@@ -177,10 +177,10 @@ public class QRDecomposition implements java.io.Serializable {
     }
 
     /**
-     * Least squares solution of A*X = B
+     * Least squares solution of A*Y = B
      *
      * @param B A GenericMatrix with as many rows as A and any number of columns.
-     * @return X that minimizes the two norm of Q*R*X-B.
+     * @return Y that minimizes the two norm of Q*R*Y-B.
      * @throws IllegalArgumentException GenericMatrix row dimensions must agree.
      * @throws RuntimeException         GenericMatrix is rank deficient.
      */
@@ -209,7 +209,7 @@ public class QRDecomposition implements java.io.Serializable {
                 }
             }
         }
-        // Solve R*X = Y;
+        // Solve R*Y = Y;
         for (int k = n - 1; k >= 0; k--) {
             for (int j = 0; j < nx; j++) {
                 X[k][j] /= Rdiag[k];

@@ -593,8 +593,8 @@ public class TimeSeries implements Serializable {
 
 //        for (int i = firstIndex; i <= lastIndex; i++) {
 //            if (!isEmpty(i)) {
-//                // Momentum += Math.pow(valori[row][i] - X, k);
-//                Momentum += Math.pow(matrix.get(row, i) - X, k);
+//                // Momentum += Math.pow(valori[row][i] - Y, k);
+//                Momentum += Math.pow(matrix.get(row, i) - Y, k);
 //                N++;
 //            }
 //        }

@@ -454,12 +454,12 @@ public class Matrix implements Serializable {
 
     /*  public GenericMatrix transpose()
         {
-            GenericMatrix X = new GenericMatrix(cols, rows);
-            double[][] C = X.getArray();
+            GenericMatrix Y = new GenericMatrix(cols, rows);
+            double[][] C = Y.getArray();
             for (int i = 0; i < rows; i++)
                 for (int j = 0; j < cols; j++)
                     C[j][i] = A[i][j];
-            return X;
+            return Y;
         }
     */
 
@@ -815,7 +815,7 @@ public class Matrix implements Serializable {
     }
 
     /**
-     * Solve A*X = B
+     * Solve A*Y = B
      *
      * @param B right hand side
      * @return solution if A is square, least squares solution otherwise
@@ -826,7 +826,7 @@ public class Matrix implements Serializable {
     }
 
     /**
-     * Solve X*A = B, which is also A'*X' = B'
+     * Solve Y*A = B, which is also A'*Y' = B'
      *
      * @param B right hand side
      * @return solution if A is square, least squares solution otherwise.

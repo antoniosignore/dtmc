@@ -43,7 +43,7 @@ public class YahooUtils {
         }
     }
 
-    // http://finance.yahoo.com/d/quotes.csv?s=EURUSD=X&f=sl1d1ba&e=.csv
+    // http://finance.yahoo.com/d/quotes.csv?s=EURUSD=Y&f=sl1d1ba&e=.csv
     public static String getExchangeRate(String s) {
         try {
             String completeUrl = "http://download.finance.yahoo.com/d/quotes.csv";

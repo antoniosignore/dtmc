@@ -85,10 +85,10 @@ public class CholeskyDecomposition implements java.io.Serializable {
     }
 
     /**
-     * Solve A*X = B
+     * Solve A*Y = B
      *
      * @param B A GenericMatrix with as many rows as A and any number of columns.
-     * @return X so that L*L'*X = B
+     * @return Y so that L*L'*Y = B
      * @throws IllegalArgumentException GenericMatrix row dimensions must agree.
      * @throws RuntimeException         GenericMatrix is not symmetric positive definite.
      */
@@ -116,7 +116,7 @@ public class CholeskyDecomposition implements java.io.Serializable {
             }
         }
 
-        // Solve L'*X = Y;
+        // Solve L'*Y = Y;
         for (int k = n - 1; k >= 0; k--) {
             for (int j = 0; j < nx; j++) {
                 X[k][j] /= L[k][k];

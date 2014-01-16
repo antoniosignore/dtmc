@@ -30,7 +30,7 @@ public class FinRecipes extends FinMath {
         double tau1_sqrt = Math.sqrt(tau1);
         double rho = -Math.sqrt(tau1 / tau);
 
-        double S_bar = 0;  // first find the S_bar that solves c=S_bar+D1-X
+        double S_bar = 0;  // first find the S_bar that solves c=S_bar+D1-Y
         double S_low = 0;    // the simplest: binomial search
         double S_high = S;  // start by finding a very high S above S_bar
         double c = optionBlackScholesCall(S_high, X, r, sigma, tau - tau1);
@@ -45,7 +45,7 @@ public class FinRecipes extends FinMath {
             return optionBlackScholesCall(S - D1 * Math.exp(-r * tau1), X, r, sigma, tau);
         }
 
-        S_bar = 0.5 * S_high;  // now find S_bar that solves c=S_bar-D+X
+        S_bar = 0.5 * S_high;  // now find S_bar that solves c=S_bar-D+Y
         c = optionBlackScholesCall(S_bar, X, r, sigma, tau - tau1);
         test = c - S_bar - D1 + X;
 
@@ -1849,7 +1849,7 @@ public class FinRecipes extends FinMath {
             //            F = A.inverse().times(B);
             F = A.inverse().times(new Matrix(B, M + 1));
             for (int m = 1; m < M; ++m) {   // now check for exercise
-                //  F[m] = Math.max(F[m], X-S_values[m]);
+                //  F[m] = Math.max(F[m], Y-S_values[m]);
                 F.getColumnPackedCopy()[m] = Math.max(F.getColumnPackedCopy()[m], X - S_values[m]);
             }
         }
@@ -2065,7 +2065,7 @@ public class FinRecipes extends FinMath {
                                                           double r,
                                                           double sigma,
                                                           double time,
-                                                          //double payoff(double& premium, double& X),
+                                                          //double payoff(double& premium, double& Y),
                                                           int payoff,
                                                           int no_sims) {
         double sum_payoffs = 0;

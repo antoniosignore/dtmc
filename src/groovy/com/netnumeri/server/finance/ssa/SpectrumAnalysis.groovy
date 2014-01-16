@@ -34,6 +34,9 @@ public class SpectrumAnalysis {
         EigenvalueDecomposition decomposition = new EigenvalueDecomposition(S);
         Matrix eigenvalue = decomposition.getD();   //matrix with eigenvalues
         Matrix eigenvec = decomposition.getV();     //matrix of eigenvectors
+
+        eigenvec.print(4,3)
+
         List<Double> eigenvalueList = new ArrayList<Double>();
         //form the set of eigenvalues​​, standing on the diagonal
         for (int i = 0; i < eigenvalue.getRowDimension(); i++) {
@@ -195,6 +198,8 @@ public class SpectrumAnalysis {
             reconstructionList.add(sum);
         }
         data.setReconstructionList(reconstructionList);
+        println "reconstructionList = $reconstructionList"
+
     }
 
     private static double[][] transpositionMatrix(double[][] matrix) {

@@ -6,55 +6,44 @@ public class SSA {
     private Integer N;
     private Integer L;
     private Integer K;
-    private Matrix T = null;
+    private Matrix Y = null;
     List eigenVectors;
     Matrix[] V; //the main components of singular value decomposition
 
     public List<SSAEigenTriple> triples = new ArrayList<SSAEigenTriple>()
 
     public SSA(double[] s, int window) {
+
         N = s.size();
         L = window
         K = N - L + 1;
-        T = new Matrix(L, K);
+        Y = new Matrix(N, L);
 
-        for (int i = 0; i < L; i++) {
-            for (int k = 0; k < K; k++) {
-                T.set(i, k, s[i + k]);
+        for (int i = 0; i < N; i++) {
+            for (int k = 0; k < L; k++) {
+                Y.set(i, k, getVal(s, i, k));
             }
         }
 
-        println "Trajectory matrix"
-        T.print(4, 2)
+        println "Trajectory matrix Y"
+        Y.print(4, 7)
 
+        Matrix Ytranspose = Y.transpose()
+        println "Trajectory matrix Xt"
+        Ytranspose.print(4, 7)
 
-        SingularValueDecomposition svd = T.svd()
+        Matrix C = Ytranspose.times(Y).times(1/N)
+        println "C = Yt * Y / N"
+        C.print(4, 7)
 
-//        double[] values = svd.getSingularValues()
-//        println "values = $values"
-//
-//        Matrix s1 = svd.getS()
-//        s1.print(4,3)
-//
-//        Matrix u = svd.getU()
-//        u.print(4,3)
-//
-//        Matrix v = svd.getV()
-//        v.print(4,3)
-//
+        EigenvalueDecomposition decomposition = C.eig()
+        Matrix RHO = decomposition.getV();
+        println "RHO eigenvectors"
+        RHO.print(4,7)
 
-
-        Matrix TTranspose = T.transpose()
-
-        Matrix S = T.times(TTranspose)
-
-        println "S Matrix"
-        S.print(4, 2)
-
-        EigenvalueDecomposition decomposition = S.eig()
-
-        Matrix eigenvalue = decomposition.getD();   //matrix with eigenvalues
-        Matrix eigenvec = decomposition.getV();     //matrix of eigenvectors
+        Matrix eigenvalue = decomposition.getD();
+        println "eigenvalue"
+        eigenvalue.print(4,7)
 
         List<Double> eigenvalueList = new ArrayList<Double>();
         //form the set of eigenvalues​​, standing on the diagonal
@@ -66,76 +55,210 @@ public class SSA {
             }
         }
         Comparator comparator = Collections.reverseOrder();
-        /*
-         * eigenvalues ​​must be in descending order, so
-         * sort them in reverse order (original values ​​in ascending
-         * order)
-         */
         Collections.sort(eigenvalueList, comparator);
-
         println "eigenvalueList = $eigenvalueList"
-        println "eigenvectors"
-        eigenvec.print(4,3)
 
-        int size = eigenvec.getColumnDimension();
+        Matrix PC = Y.times(RHO)
+        println "PC Matrix"
+        PC.print(4,7)
+
+        Double[] pc = getColumn(PC, PC.columnDimension-1)
+        println pc
+
+        Matrix Z = buildPCReconstructionMatrix(pc, 4)
+        Z.print (4,7)
+
+
+//        Matrix DIAG = new Matrix(L, L);
+//        for (int j = 0; j < L; j++){
+//            DIAG.set(j,j, eigenvalueList.get(j))
+//        }
+//
+//        println "DIAG"
+//        DIAG.print(4, 3)
+
+
+
+//        Matrix times = (RHO.times(eigenvalue)).times(RHO.transpose())
+//        println "P x LAMBDA x Pt"
+//        times.print(4,7)
+//
+        int size = RHO.getColumnDimension();
         Matrix[] V = new Matrix[size];
         Matrix[] U = new Matrix[size];
-        Matrix[] X = new Matrix[size];
+        Matrix[] Y = new Matrix[size];
         ArrayList listSeries = new ArrayList();
 
-        for (int j = 0; j < eigenvec.getColumnDimension(); j++) {
+        for (int j = 0; j < size; j++) {
             double[][] uVec = new double[size][1];
             ArrayList series = new ArrayList();
-            for (int k = 0; k < eigenvec.getRowDimension(); k++) {
-
-                uVec[k][0] = eigenvec.get(k, eigenvec.getColumnDimension() - j - 1);
+            for (int k = 0; k < size; k++) {
+                uVec[k][0] = RHO.get(k, RHO.getColumnDimension() - j - 1);
                 series.add(uVec[k][0]);
             }
             listSeries.add(series);
             U[j] = new Matrix(uVec);
-            V[j] = S.times(U[j]);
+//            V[j] = Ztranspose.times(U[j]);
         }
 
-        eigenVectors = listSeries
 
-        for (int i = 0; i < V.length; i++) {
-            for (int j = 0; j < V[i].getRowDimension(); j++) {
-                for (int k = 0; k < V[i].getColumnDimension(); k++) {
-                    double val = V[i].get(j, k) / Math.sqrt(eigenvalueList.get(i));
-                    V[i].set(j, k, val);
-                }
-            }
-        }
-
-        for (int i = 0; i < X.length; i++) {
-            X[i] = U[i].times(V[i].transpose());
-            for (int j = 0; j < X[i].getRowDimension(); j++) {
-                for (int k = 0; k < X[i].getColumnDimension(); k++) {
-                    double val = X[i].get(j, k) * Math.sqrt(eigenvalueList.get(i));
-                    X[i].set(j, k, val);
-                }
-            }
-        }
-
-        println "U Matrices"
+        println "U Matrices EOFs"
         U.each {
-            it.print(4, 3)
+            it.print(4, 7)
         }
 
-//        println "V Matrices V.radice(lambda)"
+//        println "V = Xt Ui Matrices"
 //        V.each {
-//            it.print(4, 3)
+//            it.print(4, 7)
 //        }
-
-        println "Elementary SVD Matrices"
-        X.each {
-            it.print(4, 3)
-            println "RANK: "+ it.rank()
-        }
-
-
+//
+//        eigenVectors = listSeries
+//        for (int i = 0; i < V.length; i++) {
+//            for (int j = 0; j < V[i].getRowDimension(); j++) {
+//                for (int k = 0; k < V[i].getColumnDimension(); k++) {
+//                    double val = V[i].get(j, k) / Math.sqrt(eigenvalueList.get(i));
+//                    V[i].set(j, k, val);
+//                }
+//            }
+//        }
+//
+//        for (int i = 0; i < Y.length; i++) {
+//            Y[i] = U[i].times(V[i].transpose());
+//            for (int j = 0; j < Y[i].getRowDimension(); j++) {
+//                for (int k = 0; k < Y[i].getColumnDimension(); k++) {
+//                    double val = Y[i].get(j, k) * Math.sqrt(eigenvalueList.get(i));
+//                    Y[i].set(j, k, val);
+//                }
+//            }
+//        }
+//
+//        println "Elementary Xi Matrices"
+//        Y.each {
+//            it.print(4, 7)
+//            println "RANK: "+ it.rank()
+//        }
+//
+//        Matrix covariance = C.times(1/K)
+//        println "covariance"
+//        covariance.print(4,7)
 
     }
+
+    def Matrix buildPCReconstructionMatrix(Double[] doubles, int columns) {
+        Matrix Z = new Matrix (doubles.size(), columns)
+        for (int j = 0; j < columns; j++)
+            for (int i = 0; i < doubles.size(); i++){
+                try {
+                    Z.set(i+j,j, doubles[i])
+                } catch (Throwable ex) {
+                }
+            }
+        return Z
+    }
+
+    def getColumn(Matrix matrix, int column) {
+        Double[] result = new Double[matrix.rowDimension];
+        for (int i = 0; i < matrix.rowDimension; i++){
+            result[i] = matrix.get(i,column)
+        }
+        return result
+    }
+
+    private double getVal(double[] s, int i, int k) {
+        try {
+            double x = s[i + k]
+            return x
+        } catch (Throwable x) {
+            return 0
+        }
+    }
+
+    /**
+     * recovery time series (group stage)
+     */
+    public static void grouping(List<Integer> model, SSAData data) {
+        Matrix[] grouX = new Matrix[1];
+        for (int j = 0; j < model.size(); j++) {
+            Integer unselect = model.get(j);
+            if (j == 0) {
+                grouX[0] = data.getX()[unselect];
+            } else {
+                grouX[0] = grouX[0].plus(data.getX()[unselect]);
+            }
+        }
+        data.setGroupX(grouX);
+    }
+
+    /**
+     * recovery time series (step diagonal averaging)
+     */
+//    public static void diagonalAveraging(SSAData data) {
+//        int L;
+//        int K;
+//        int N;
+//        List<List> list = new ArrayList<List>();
+//        for (int i = 0; i < data.getGroupX().length; i++) {
+//            if (data.getGroupX()[i].getRowDimension() < data.getGroupX()[i].getColumnDimension()) {
+//                L = data.getGroupX()[i].getRowDimension();
+//                K = data.getGroupX()[i].getColumnDimension();
+//            } else {
+//                K = data.getGroupX()[i].getRowDimension();
+//                L = data.getGroupX()[i].getColumnDimension();
+//            }
+//            N = data.getGroupX()[i].getRowDimension() + data.getGroupX()[i].getColumnDimension() - 1;
+//            List series = new ArrayList();
+//            double element;
+//            for (int k = 0; k <= N - 1; k++) {
+//                element = 0;
+//                if (k >= 0 && k < L - 1) {
+//                    for (int m = 0; m <= k; m++) {
+//                        if (data.getGroupX()[i].getRowDimension() <= data.getGroupX()[i].getColumnDimension()) {
+//                            element += data.getGroupX()[i].get(m, k - m);
+//                        } else if (data.getGroupX()[i].getRowDimension() > data.getGroupX()[i].getColumnDimension()) {
+//                            element += data.getGroupX()[i].get(k - m, m);
+//                        }
+//                    }
+//                    element = element * (1.0 / (k + 1));
+//                    series.add(element);
+//                }
+//                if (k >= L - 1 && k < K - 1) {
+//                    for (int m = 0; m <= L - 2; m++) {
+//                        if (data.getGroupX()[i].getRowDimension() <= data.getGroupX()[i].getColumnDimension()) {
+//                            element += data.getGroupX()[i].get(m, k - m);
+//                        } else if (data.getGroupX()[i].getRowDimension() > data.getGroupX()[i].getColumnDimension()) {
+//                            element += data.getGroupX()[i].get(k - m, m);
+//                        }
+//                    }
+//                    element = element * (1.0 / L);
+//                    series.add(element);
+//                }
+//                if (k >= K - 1 && k < N) {
+//                    for (int m = k - K + 1; m <= N - K; m++) {
+//                        if (data.getGroupX()[i].getRowDimension() <= data.getGroupX()[i].getColumnDimension()) {
+//                            element += data.getGroupX()[i].get(m, k - m);
+//                        } else if (data.getGroupX()[i].getRowDimension() > data.getGroupX()[i].getColumnDimension()) {
+//                            element += data.getGroupX()[i].get(k - m, m);
+//                        }
+//                    }
+//                    element = element * (1.0 / (N - k));
+//                    series.add(element);
+//                }
+//            }
+//            list.add(series);
+//        }
+//        double sum;
+//        //Summing the series and get the original series
+//        List<Double> reconstructionList = new ArrayList<Double>();
+//        for (int j = 0; j < list.get(0).size(); j++) {
+//            sum = 0;
+//            for (int i = 0; i < list.size(); i++) {
+//                sum += (Double) list.get(i).get(j);
+//            }
+//            reconstructionList.add(sum);
+//        }
+//        data.setReconstructionList(reconstructionList);
+//    }
+
 
     public Matrix rebuild(Matrix matrix) {
         Matrix rebuiltSerie = new Matrix(1, K)
@@ -183,7 +306,6 @@ public class SSA {
     public static void main(String[] args) {
 
         double[] input = new double[20]
-
         input[0] = (1.0135518)
         input[1] =(-0.7113242 as Double)
         input[2] =(-0.3906069 as Double)
@@ -205,12 +327,47 @@ public class SSA {
         input[18] =(-1.6880219 as Double)
         input[19] =(0.2609807 as Double)
 
-        SSA analysis = new SSA(input, 4)
 
 
-        double[] component = analysis.getEigenComponent(0)
+        /*
+        1.0135518
+  - 0.7113242
+  - 0.3906069
+    1.565203
+    0.0439317
+  - 1.1656093
+    1.0701692
+    1.0825379
+  - 1.2239745
+  - 0.0321446
+    1.1815997
+  - 1.4969448
+  - 0.7455299
+    1.0973884
+  - 0.2188716
+  - 1.0719573
+    0.9922009
+    0.4374216
+  - 1.6880219
+    0.2609807
+         */
 
-        println "component = $component"
+//        double[] input = new double[8]
+//        input[0] = 6.3
+//        input[1] = 6.8
+//        input[2] =7.1
+//        input[3] =7.5
+//        input[4] =7.2
+//        input[5] =7.7
+//        input[6] =8.0
+//        input[7] =7.7
+
+        SSA analysis = new  SSA(input, 4)
+
+
+//        double[] component = analysis.getEigenComponent(0)
+//
+//        println "component = $component"
 
     }
 
