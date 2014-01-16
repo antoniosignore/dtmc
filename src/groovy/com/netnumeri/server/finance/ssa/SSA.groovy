@@ -62,11 +62,39 @@ public class SSA {
         println "PC Matrix"
         PC.print(4,7)
 
+//        PC'*PC/N
+        Matrix ZCovariance = PC.transpose().times(PC).times(1/N)
+        println "ZCovariance"
+        ZCovariance.print(4, 7)
+
         Double[] pc = getColumn(PC, PC.columnDimension-1)
         println pc
 
         Matrix Z = buildPCReconstructionMatrix(pc, 4)
         Z.print (4,7)
+
+        // build
+//        20 * 4  4 * 1
+
+        int size = RHO.getColumnDimension();
+        Matrix[] U = new Matrix[size];
+
+        for (int j = 0; j < size; j++) {
+            double[][] uVec = new double[size][1];
+            for (int k = 0; k < size; k++) {
+                uVec[k][0] = RHO.get(k, RHO.getColumnDimension() - j - 1);
+//                series.add(uVec[k][0]);
+            }
+            U[j] = new Matrix(uVec);
+        }
+
+        println "U Matrices eigenvectors"
+        U.each {
+            it.print(4, 7)
+            Matrix reconstructed = Z.times(it).times(1/4)
+            println "====================> reconstructed"
+            reconstructed.print(4,7)
+        }
 
 
 //        Matrix DIAG = new Matrix(L, L);
@@ -78,34 +106,29 @@ public class SSA {
 //        DIAG.print(4, 3)
 
 
-
 //        Matrix times = (RHO.times(eigenvalue)).times(RHO.transpose())
 //        println "P x LAMBDA x Pt"
 //        times.print(4,7)
 //
-        int size = RHO.getColumnDimension();
-        Matrix[] V = new Matrix[size];
-        Matrix[] U = new Matrix[size];
-        Matrix[] Y = new Matrix[size];
-        ArrayList listSeries = new ArrayList();
-
-        for (int j = 0; j < size; j++) {
-            double[][] uVec = new double[size][1];
-            ArrayList series = new ArrayList();
-            for (int k = 0; k < size; k++) {
-                uVec[k][0] = RHO.get(k, RHO.getColumnDimension() - j - 1);
-                series.add(uVec[k][0]);
-            }
-            listSeries.add(series);
-            U[j] = new Matrix(uVec);
-//            V[j] = Ztranspose.times(U[j]);
-        }
-
-
-        println "U Matrices EOFs"
-        U.each {
-            it.print(4, 7)
-        }
+//        int size = RHO.getColumnDimension();
+//        Matrix[] U = new Matrix[size];
+//        ArrayList listSeries = new ArrayList();
+//
+//        for (int j = 0; j < size; j++) {
+//            double[][] uVec = new double[size][1];
+//            ArrayList series = new ArrayList();
+//            for (int k = 0; k < size; k++) {
+//                uVec[k][0] = RHO.get(k, RHO.getColumnDimension() - j - 1);
+//                series.add(uVec[k][0]);
+//            }
+//            listSeries.add(series);
+//            U[j] = new Matrix(uVec);
+//        }
+//
+//        println "U Matrices eigenvectors"
+//        U.each {
+//            it.print(4, 7)
+//        }
 
 //        println "V = Xt Ui Matrices"
 //        V.each {
