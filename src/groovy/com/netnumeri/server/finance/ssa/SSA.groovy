@@ -103,6 +103,8 @@ public class SSA {
             map.put(eigenvalueList[jj++], item)
         }
 
+        println "map = $map"
+
     }
 
     def Matrix buildPCReconstructionMatrix(Double[] doubles, int columns) {

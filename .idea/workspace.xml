@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAItem.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -251,7 +250,7 @@
       <file leaf-file-name="SSA.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="3025" selection-end="3025" vertical-scroll-proportion="0.15107913" vertical-offset="1470" max-vertical-offset="5100">
+            <state line="104" column="20" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.2549575" vertical-offset="1470" max-vertical-offset="5130">
               <folding />
             </state>
           </provider>
@@ -1140,7 +1139,7 @@
       <workItem from="1389851522034" duration="826000" />
       <workItem from="1389859681421" duration="637000" />
       <workItem from="1389867210569" duration="14603000" />
-      <workItem from="1389952677802" duration="6749000" />
+      <workItem from="1389952677802" duration="8093000" />
     </task>
     <task id="LOCAL-00001" summary="added indicators in tables">
       <created>1378071164332</created>
@@ -1534,11 +1533,15 @@
       <created>1389885995487</created>
       <updated>1389885995487</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="trading systems&#10;">
+      <created>1389965224758</created>
+      <updated>1389965224759</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="396854000" />
+    <option name="totallyTimeSpent" value="398198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-8" width="1618" height="892" extended-state="0" />
@@ -1559,7 +1562,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.6300268" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4723757" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4723757" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1899,7 +1902,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="3025" selection-end="3025" vertical-scroll-proportion="0.15107913" vertical-offset="1470" max-vertical-offset="5100">
+        <state line="104" column="20" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.2549575" vertical-offset="1470" max-vertical-offset="5130">
           <folding />
         </state>
       </provider>
