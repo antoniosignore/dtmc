@@ -67,14 +67,6 @@ public class SSA {
         println "ZCovariance"
         ZCovariance.print(4, 7)
 
-        Double[] pc = getColumn(PC, PC.columnDimension-1)
-        println pc
-
-        Matrix Z = buildPCReconstructionMatrix(pc, 4)
-        Z.print (4,7)
-
-        // build
-//        20 * 4  4 * 1
 
         int size = RHO.getColumnDimension();
         Matrix[] U = new Matrix[size];
@@ -88,82 +80,28 @@ public class SSA {
             U[j] = new Matrix(uVec);
         }
 
-        println "U Matrices eigenvectors"
-        U.each {
-            it.print(4, 7)
-            Matrix reconstructed = Z.times(it).times(1/4)
-            println "====================> reconstructed"
-            reconstructed.print(4,7)
+        Map map = new HashMap()
+        int jj = 0;
+
+        for (int x = PC.columnDimension-1; x >=0; x--){
+            SSAItem item = new SSAItem()
+
+            Double[] pc = getColumn(PC, x)
+            println pc
+
+            Matrix Z = buildPCReconstructionMatrix(pc, PC.columnDimension)
+            println "reconstructionMatrix Z"
+            Z.print (4,7)
+
+            Matrix reconstructed = Z.times(U[jj]).times(1/4)
+            println "reconstructed"
+            reconstructed.print (4,7)
+
+            item.reconstructionMatrix = Z
+            item.reconstructed = reconstructed
+
+            map.put(eigenvalueList[jj++], item)
         }
-
-
-//        Matrix DIAG = new Matrix(L, L);
-//        for (int j = 0; j < L; j++){
-//            DIAG.set(j,j, eigenvalueList.get(j))
-//        }
-//
-//        println "DIAG"
-//        DIAG.print(4, 3)
-
-
-//        Matrix times = (RHO.times(eigenvalue)).times(RHO.transpose())
-//        println "P x LAMBDA x Pt"
-//        times.print(4,7)
-//
-//        int size = RHO.getColumnDimension();
-//        Matrix[] U = new Matrix[size];
-//        ArrayList listSeries = new ArrayList();
-//
-//        for (int j = 0; j < size; j++) {
-//            double[][] uVec = new double[size][1];
-//            ArrayList series = new ArrayList();
-//            for (int k = 0; k < size; k++) {
-//                uVec[k][0] = RHO.get(k, RHO.getColumnDimension() - j - 1);
-//                series.add(uVec[k][0]);
-//            }
-//            listSeries.add(series);
-//            U[j] = new Matrix(uVec);
-//        }
-//
-//        println "U Matrices eigenvectors"
-//        U.each {
-//            it.print(4, 7)
-//        }
-
-//        println "V = Xt Ui Matrices"
-//        V.each {
-//            it.print(4, 7)
-//        }
-//
-//        eigenVectors = listSeries
-//        for (int i = 0; i < V.length; i++) {
-//            for (int j = 0; j < V[i].getRowDimension(); j++) {
-//                for (int k = 0; k < V[i].getColumnDimension(); k++) {
-//                    double val = V[i].get(j, k) / Math.sqrt(eigenvalueList.get(i));
-//                    V[i].set(j, k, val);
-//                }
-//            }
-//        }
-//
-//        for (int i = 0; i < Y.length; i++) {
-//            Y[i] = U[i].times(V[i].transpose());
-//            for (int j = 0; j < Y[i].getRowDimension(); j++) {
-//                for (int k = 0; k < Y[i].getColumnDimension(); k++) {
-//                    double val = Y[i].get(j, k) * Math.sqrt(eigenvalueList.get(i));
-//                    Y[i].set(j, k, val);
-//                }
-//            }
-//        }
-//
-//        println "Elementary Xi Matrices"
-//        Y.each {
-//            it.print(4, 7)
-//            println "RANK: "+ it.rank()
-//        }
-//
-//        Matrix covariance = C.times(1/K)
-//        println "covariance"
-//        covariance.print(4,7)
 
     }
 

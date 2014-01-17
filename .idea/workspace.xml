@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAItem.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -228,36 +229,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy" line="132" class="com.netnumeri.server.finance.ssa.SSA" package="com.netnumeri.server.finance.ssa">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy" line="73" class="com.netnumeri.server.finance.ssa.SSA" package="com.netnumeri.server.finance.ssa">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -271,16 +242,7 @@
       <file leaf-file-name="SSAComponentsIndicator.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SSAComponentsIndicator.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="23" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SSAData.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAData.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="6" selection-start="399" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="525">
+            <state line="15" column="23" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
               <folding />
             </state>
           </provider>
@@ -289,7 +251,16 @@
       <file leaf-file-name="SSA.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="39" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.32388058" vertical-offset="1163" max-vertical-offset="6030">
+            <state line="105" column="0" selection-start="3025" selection-end="3025" vertical-scroll-proportion="0.15107913" vertical-offset="1470" max-vertical-offset="5100">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SSAItem.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAItem.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="69" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
               <folding />
             </state>
           </provider>
@@ -336,7 +307,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/SMACrossoverController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/TradingSystem.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Backtest.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Trade.groovy" />
@@ -386,9 +356,13 @@
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAEigenTriple.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAData.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SpectrumAnalysis.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAItem.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="Osmorc">
     <option name="libraryBundlificationRules">
@@ -1165,7 +1139,8 @@
       <workItem from="1389817595652" duration="3015000" />
       <workItem from="1389851522034" duration="826000" />
       <workItem from="1389859681421" duration="637000" />
-      <workItem from="1389867210569" duration="14590000" />
+      <workItem from="1389867210569" duration="14603000" />
+      <workItem from="1389952677802" duration="6749000" />
     </task>
     <task id="LOCAL-00001" summary="added indicators in tables">
       <created>1378071164332</created>
@@ -1555,22 +1530,26 @@
       <created>1389878402116</created>
       <updated>1389878402116</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="trading systems&#10;">
+      <created>1389885995487</created>
+      <updated>1389885995487</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390092000" />
+    <option name="totallyTimeSpent" value="396854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-8" width="1618" height="892" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="29" y="-8" width="1337" height="705" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="20" y="-8" width="1337" height="705" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6524138" sideWeight="0.5744108" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14736165" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14736165" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6353591" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -1580,19 +1559,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.6300268" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4627072" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4723757" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44413793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47724137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21621622" sideWeight="0.6747312" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18146718" sideWeight="0.6747312" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48551723" sideWeight="0.4996633" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24949427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1601,6 +1579,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44413793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1637,11 +1616,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/MeanReversion.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="33" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/MeanReversionClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="48" selection-start="3449" selection-end="3449" vertical-scroll-proportion="0.0" vertical-offset="839" max-vertical-offset="2235" />
@@ -1876,13 +1850,6 @@
         <state line="18" column="54" selection-start="770" selection-end="770" vertical-scroll-proportion="0.44272447" vertical-offset="127" max-vertical-offset="450" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SSAComponentsIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="23" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ideaLibSources/jama-1.0.2-sources.jar!/Jama/EigenvalueDecomposition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="914" column="17" selection-start="25994" selection-end="25994" vertical-scroll-proportion="-0.57894737" vertical-offset="13897" max-vertical-offset="14355" />
@@ -1911,14 +1878,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAData.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="399" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+        <state line="23" column="42" selection-start="995" selection-end="995" vertical-scroll-proportion="0.509915" vertical-offset="165" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SSAComponentsIndicator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="23" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAItem.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="69" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="39" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.32388058" vertical-offset="1163" max-vertical-offset="6030">
+        <state line="105" column="0" selection-start="3025" selection-end="3025" vertical-scroll-proportion="0.15107913" vertical-offset="1470" max-vertical-offset="5100">
           <folding />
         </state>
       </provider>
