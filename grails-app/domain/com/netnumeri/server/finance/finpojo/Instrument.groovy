@@ -133,7 +133,7 @@ class Instrument extends Persistable implements Serializable {
      */
     public double spot() {
         if (isSpotFixed()) {
-            return marketSpotShift * getFixedSpot();
+            return marketSpotShift * getSpot();
         } else {
             return marketSpotShift * historicalSpot();
         }
@@ -312,7 +312,7 @@ class Instrument extends Persistable implements Serializable {
         for (int i = firstIndex; i <= lastIndex; i++) {
             Daily daily = getDaily(i);
             Date date = daily.getDailydate();
-            double price = daily.getPrice();
+            double price = daily.price();
             if (daily != null && daily.valid() && price != 0) {
                 priceSeries.add(date, price);
             }
@@ -409,31 +409,55 @@ class Instrument extends Persistable implements Serializable {
         return volumeSeries;
     }
 
-    public TimeSeries returnSeries() {
-        //  if (returnSeriesChanged)
-        returnSeries.clear();
-        Date date = null;
-        double price = 0;
-        Daily daily = null;
-        int firstIndex = getFirstIndex();
-        int lastIndex = getLastIndex();
-        daily = getDaily(firstIndex);
-        if (daily != null && !daily.valid()) {
-            firstIndex = getNextIndex(firstIndex);
-        }
-        double fLastPrice = daily.getCloseprice();
-        for (int i = firstIndex + 1; i <= lastIndex; i++) {
-            daily = getDaily(i);
-            price = daily.getCloseprice();
-            date = daily.getDailydate();
-            if (daily != null && daily.valid() && price != 0) {
-                returnSeries.add(date, price / fLastPrice);
-                fLastPrice = price;
+
+    public TimeSeries buildReturnSeries(Date firstDate, Date lastDate) {
+
+        double fLastPrice = 0;
+
+        boolean isFirst = true;
+
+        for (Date treeKey : dailyarray.treeMap.keySet())  {
+            Daily daily = dailyarray.treeMap.get(treeKey)
+
+            if (isFirst) {
+                fLastPrice =  daily.closeprice
+                returnSeries.add(treeKey, 0);
+                isFirst = false
             }
-//            returnSeriesChanged = false;
+            else{
+                returnSeries.add(treeKey, (daily.closeprice - fLastPrice) / fLastPrice);
+                fLastPrice = daily.closeprice;
+            }
         }
+
         return returnSeries;
     }
+
+//    public TimeSeries returnSeries() {
+//        //  if (returnSeriesChanged)
+//        returnSeries.clear();
+//        Date date = null;
+//        double price = 0;
+//        Daily daily = null;
+//        int firstIndex = getFirstIndex();
+//        int lastIndex = getLastIndex();
+//        daily = getDaily(firstIndex);
+//        if (daily != null && !daily.valid()) {
+//            firstIndex = getNextIndex(firstIndex);
+//        }
+//        double fLastPrice = daily.getCloseprice();
+//        for (int i = firstIndex + 1; i <= lastIndex; i++) {
+//            daily = getDaily(i);
+//            price = daily.getCloseprice();
+//            date = daily.getDailydate();
+//            if (daily != null && daily.valid() && price != 0) {
+//                returnSeries.add(date, price / fLastPrice);
+//                fLastPrice = price;
+//            }
+////            returnSeriesChanged = false;
+//        }
+//        return returnSeries;
+//    }
 
     public TimeSeries logReturnSeries() {
         logReturnSeries.clear();

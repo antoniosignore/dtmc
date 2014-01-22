@@ -1,146 +1,103 @@
 package com.netnumeri.server.finance.ta
 
-import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.ssa.SSAAnalysis
+import com.netnumeri.server.finance.finpojo.asset.Stock
+import com.netnumeri.server.finance.ssa.SSAItem
 import com.netnumeri.server.finance.ssa.SSAStudy
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
-import com.netnumeri.server.utils.StockUtils
 import junit.framework.TestCase
 import org.apache.commons.io.FileUtils
+import org.junit.Ignore
 import org.junit.Test
 
 import java.text.ParseException
 
-public class MyTest extends TestCase {
+public class SSATest extends TestCase {
 
-    String dir = "/home/antonio/timeplot/"
-    Instrument stock
-    TimeSeries closes
+    Stock stock
 
     @Test
     public void setUp() throws IOException, ParseException {
 
+        Date da = DateUtils.Date("11/1/2011");
+        Date a = DateUtils.today();
+
+        stock = YahooUtils.downloadYahooData("AAPL", "", da, a)
+
+//        closes = stock.getCloseSeries()
+//        stock.indicators.put("SMA-" + 50, new SMAIndicator(closes, "SMA-" + 50, 50, -1, -1, -1, -1))
+
+
     }
 
+    @Ignore
+    @Test
+    public void test1() {
 
-    public static void main(String[] args) {
+        double[] input = new double[20]
+        input[0] = (1.0135518)
+        input[1] =(-0.7113242 as Double)
+        input[2] =(-0.3906069 as Double)
+        input[3] =(1.565203)
+        input[4] =(0.0439317)
+        input[5] =(-1.1656093 as Double)
+        input[6] =(1.0701692)
+        input[7] =(1.0825379)
+        input[8] =(-1.2239744 as Double)
+        input[9] =(-0.0321446 as Double)
+        input[10] =(1.1815997)
+        input[11] =(-1.4969448 as Double)
+        input[12] =(-0.7455299 as Double)
+        input[13] =(1.0973884)
+        input[14] =(-0.2188716 as Double)
+        input[15] =(-1.0719573 as Double)
+        input[16] =(0.9922009)
+        input[17] =(0.4374216)
+        input[18] =(-1.6880219 as Double)
+        input[19] =(0.2609807 as Double)
 
-        def components = [0]
-        List<Double> input = new ArrayList<Double>();
-        input.add(1.0135518)
-        input.add(-0.7113242 as Double)
-        input.add(-0.3906069 as Double)
-        input.add(1.565203)
-        input.add(0.0439317)
-        input.add(-1.1656093 as Double)
-        input.add(1.0701692)
-        input.add(1.0825379)
-        input.add(-1.2239744 as Double)
-        input.add(-0.0321446 as Double)
-        input.add(1.1815997)
-        input.add(-1.4969448 as Double)
-        input.add(-0.7455299 as Double)
-        input.add(1.0973884)
-        input.add(-0.2188716 as Double)
-        input.add(-1.0719573 as Double)
-        input.add(0.9922009)
-        input.add(0.4374216)
-        input.add(-1.6880219 as Double)
-        input.add(0.2609807 as Double)
-
-        SSAAnalysis analysis = new SSAAnalysis(input, 4)
-
-        List<Double> components1 = analysis.getEigenComponents(components);
-
-        println "components1 = $components1"
+        List<SSAItem> analyze = SSAStudy.analyze(input, 4)
+        println "===> " + SSAStudy.getColumn (analyze.get(0).reconstructed, 0)
 
     }
 
     @Test
-    public void testSSAIndicators() throws IOException, ParseException {
+    public void test2() {
+
+        TimeSeries returns = stock.buildReturnSeries(null, null)
+
+        println "returns.getTimeplotSeries() = " + returns.getTimeplotSeries()
+
+        List<SSAItem> analyze = SSAStudy.analyze(returns.convertToArray(), 50)
+        println "===> " + SSAStudy.getColumn (analyze.get(0).reconstructed, 0)
 
 
-        process "MMM"
-        process "AA"
-        process "AXP"
-        process "T"
-        process "BAC"
-        process "BA"
-        process "CAT"
-        process "CVX"
-        process "KO"
-        process "CSCO"
-        process "DIS"
-        process "DD"
-        process "XOM"
-        process "GE"
-        process "HPQ"
-        process "HD"
-        process "IBM"
-        process "INTC"
-        process "JNJ"
-        process "JPM"
-        process "KFT"
-        process "MCD"
-        process "MRK"
-        process "MSFT"
-        process "PFE"
-        process "PG"
-        process "TRV"
-        process "UTX"
-        process "VZ"
-        process "WMT"
-        process "BUD"
-        process "UNH"
-
-    }
-
-    private void process(String ticker) {
-        Date da = DateUtils.Date("11/1/2009");
-        Date a = DateUtils.today();
-
-        stock = YahooUtils.downloadYahooData(ticker, "", da, a);
-
-        closes = stock.getSeries(FinConstants.CLOSE);
-//        stock.indicators.put("SMA-" + 50, new SMAIndicator(closes, "SMA-" + 50, 50, -1, -1, -1, -1))
-
-        String dir = "/home/antonio/timeplot/" + stock.name + "/"
-
-        FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
-        FileUtils.writeStringToFile(new File(dir + "stock.raw"), closes.getNoDateSeries())
-
-        SSAStudy.study(stock, 50);
-        StockUtils.printTimeplotIndicatorOnFile(dir + "/", stock)
-
-        copyAllHtml(dir)
-    }
-
-    void copyAllHtml(String s) {
-
-
-        List<File> files = getHtmlFiles()
-
-        for (int i = 0; i < files.size(); i++) {
-            File o = files.get(i);
-
-
-        }
-
+//        double[] input = new double[20]
+//        input[0] = 10
+//        input[1] = 12
+//        input[2] = 11
+//        input[3] = 14
+//        input[4] = 15
+//        input[5] = 16
+//        input[6] = 15
+//        input[7] = 11
+//        input[8] = 11
+//        input[9] = 10
+//        input[10] = 9
+//        input[11] = 8
+//        input[12] = 13
+//        input[13] = 14
+//        input[14] = 15
+//        input[15] = 16
+//        input[16] = 15
+//        input[17] = 16
+//        input[18] = 17
+//        input[19] = 18
+//
+//        List<SSAItem> analyze = SSAStudy.analyze(input, 4)
+//        println "===> " + SSAStudy.getColumn (analyze.get(0).reconstructed, 0)
 
     }
-
-    private List<File> getHtmlFiles() {
-        List<File> list = Arrays.asList(new File(dir).listFiles(new FilenameFilter() {
-            @Override
-            public boolean accept(File dir, String name) {
-                return name.endsWith(".html");
-            }
-        }));
-        return list;
-    }
-
 
 }

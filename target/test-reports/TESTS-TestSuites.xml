@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites />
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="antonio-ThinkPad-SL500" id="0" name="SSATest" package="com.netnumeri.server.finance.ta" tests="2" time="6.668" timestamp="2014-01-22T16:43:21">
+      <properties />
+
+      <testcase classname="com.netnumeri.server.finance.ta.SSATest" name="test1" time="2.34" />
+
+      <testcase classname="com.netnumeri.server.finance.ta.SSATest" name="test2" time="4.325" />
+
+      <system-out><![CDATA[--Output from test1--
+--Output from test2--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from test1--
+--Output from test2--
+]]></system-err>
+
+  </testsuite>
+</testsuites>
