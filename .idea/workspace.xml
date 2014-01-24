@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/IndicatorsTest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/IndicatorsTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooUtils.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooUtils.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -242,10 +235,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SSAStudy.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SSAStudy.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="70" selection-start="5580" selection-end="5581" vertical-scroll-proportion="0.0" vertical-offset="2538" max-vertical-offset="3210">
+            <state line="188" column="42" selection-start="5297" selection-end="5297" vertical-scroll-proportion="0.23994039" vertical-offset="2659" max-vertical-offset="3450">
               <folding />
             </state>
           </provider>
@@ -278,10 +271,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SSATest.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SSATest.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="45" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.2846498" vertical-offset="934" max-vertical-offset="1605">
+            <state line="96" column="38" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.0" vertical-offset="934" max-vertical-offset="1605">
               <folding />
             </state>
           </provider>
@@ -368,8 +361,8 @@
         <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooUtils.groovy" />
         <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/IndicatorsTest.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy" />
         <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy" />
       </list>
     </option>
   </component>
@@ -1111,7 +1104,7 @@
       <workItem from="1390407407412" duration="2617000" />
       <workItem from="1390466582192" duration="301000" />
       <workItem from="1390467646385" duration="19297000" />
-      <workItem from="1390549235163" duration="3604000" />
+      <workItem from="1390549235163" duration="4983000" />
     </task>
     <task id="LOCAL-00001" summary="added indicators in tables">
       <created>1378071164332</created>
@@ -1517,11 +1510,15 @@
       <created>1390409384349</created>
       <updated>1390409384350</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="trading systems&#10;">
+      <created>1390555977877</created>
+      <updated>1390555977877</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="441178000" />
+    <option name="totallyTimeSpent" value="442557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="-8" width="1618" height="892" extended-state="0" />
@@ -1879,16 +1876,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy">
+    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="70" selection-start="5580" selection-end="5581" vertical-scroll-proportion="0.0" vertical-offset="2970" max-vertical-offset="3210">
+        <state line="96" column="38" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.0" vertical-offset="934" max-vertical-offset="1605">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="45" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.2846498" vertical-offset="934" max-vertical-offset="1605">
+        <state line="188" column="42" selection-start="5297" selection-end="5297" vertical-scroll-proportion="0.23994039" vertical-offset="2659" max-vertical-offset="3450">
           <folding />
         </state>
       </provider>

@@ -104,7 +104,7 @@ class SSAStudy {
 
             double[] pc = getColumn(PC, x)
             if (debug) {
-                println "eigenvector order "  + x
+                println "eigenvector order " + x
                 println pc
             }
 
@@ -204,5 +204,21 @@ class SSAStudy {
         }
         return ret
     }
+
+    static double[] reconstructedGroup(List<SSAItem> analyze, Set<Integer> numbers) {
+        int size = analyze.size()
+        double[] ret = null
+        for (int i = 0; i < size; i++) {
+            if (numbers.contains(i)) {
+                double[] column = getColumn(analyze.get(i).reconstructed, 0)
+                if (ret == null) ret = new double[column.length];
+                for (int j = 0; j < column.length; j++) {
+                    ret[j] = ret[j] + column[j]
+                }
+            }
+        }
+        return ret
+    }
+
 
 }
