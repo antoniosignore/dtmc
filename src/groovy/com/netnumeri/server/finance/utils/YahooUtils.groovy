@@ -168,7 +168,6 @@ public class YahooUtils {
         double volume = 0;
         Stack lines = new Stack();
         String s3 = null;
-        System.out.println("url = " + url);
         InputStream is = NetUtils.openURL(url);
         if (is == null) {
             throw new RuntimeException("cannot newInstance InputStream");
@@ -192,7 +191,7 @@ public class YahooUtils {
 
             s3 = (String) lines.pop();
 
-            System.out.println("s3 = " + s3);
+//            System.out.println("s3 = " + s3);
 
             StringTokenizer stringtokenizer = new StringTokenizer(s3, ",");
             String token = stringtokenizer.nextToken();

@@ -65,7 +65,7 @@ public class TimeSeries implements Serializable {
         return getNumberOfNotNullData(0);
     }
 
-    // Return number of non-empty data entries for Row
+    // Return number of non-empty data entries for row
     public int getNumberOfNotNullData(int Row) {
         return matrix.size(Row);
     }
@@ -870,16 +870,16 @@ public class TimeSeries implements Serializable {
 
     // Normalize data inside a window.
     // Note that data outside the window remain untouched!
-    public void normalize(int Row, Date firstCalendarDate, Date lastCalendarDate) {
+    public void normalize(int row, Date firstCalendarDate, Date lastCalendarDate) {
         checkParams(row, firstCalendarDate, lastCalendarDate)
 
-        double Mean = getMean(Row, firstCalendarDate, lastCalendarDate);
-        double StandardDeviation = getStandardDeviation(Row, firstCalendarDate, lastCalendarDate);
+        double Mean = getMean(row, firstCalendarDate, lastCalendarDate);
+        double StandardDeviation = getStandardDeviation(row, firstCalendarDate, lastCalendarDate);
 
         Set<Date> dates1 = getDates(0, firstCalendarDate, lastCalendarDate)
         for (Iterator<Date> iterator = dates1.iterator(); iterator.hasNext();) {
             Date date = iterator.next();
-            matrix.put(Row, date, (matrix.get(Row, date) - Mean) / StandardDeviation);
+            matrix.put(row, date, (matrix.get(row, date) - Mean) / StandardDeviation);
         }
     }
 
@@ -891,7 +891,7 @@ public class TimeSeries implements Serializable {
         linearMapping(lower, upper, 0, firstCalendarDate, lastCalendarDate);
     }
 
-    // Perform linear mapping for Row data inside a window.
+    // Perform linear mapping for row data inside a window.
     public void linearMapping(double Lower, double Upper, int Row, Date firstCalendarDate, Date lastCalendarDate) {
         double Alpha = (Upper - Lower) / (getMax(Row, firstCalendarDate, lastCalendarDate) - getMin(Row, firstCalendarDate, lastCalendarDate));
         double Beta = -1 * Alpha * getMin(Row, firstCalendarDate, lastCalendarDate) + Lower;

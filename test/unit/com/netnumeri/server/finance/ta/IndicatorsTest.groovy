@@ -28,7 +28,7 @@ public class IndicatorsTest extends TestCase {
 
         stock = YahooUtils.downloadYahooData("AAPL", "" ,da, a);
 
-        closes = stock.getCloseSeries();
+        closes = stock.buildCloseSeries();
 //        stock.indicators.put("SMA-" + 50, new SMAIndicator(closes, "SMA-" + 50, 50, -1, -1, -1, -1))
 
         FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
@@ -142,7 +142,6 @@ public class IndicatorsTest extends TestCase {
     }
 
 
-    @Ignore
     @Test
     public void testEndDate() throws IOException, ParseException {
 
@@ -150,7 +149,7 @@ public class IndicatorsTest extends TestCase {
         Date a = DateUtils.Date("11/1/2010");
 
         Instrument stock = YahooUtils.downloadYahooData("AAPL", "", da, a);
-        TimeSeries closes = stock.getCloseSeries();
+        TimeSeries closes = stock.buildCloseSeries();
         FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
 
         Indicator sma12 = new SMAIndicator(closes, "SMA-" + 12, 12);

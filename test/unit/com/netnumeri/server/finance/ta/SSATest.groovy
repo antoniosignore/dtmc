@@ -20,10 +20,6 @@ public class SSATest extends TestCase {
     @Test
     public void setUp() throws IOException, ParseException {
 
-        Date da = DateUtils.Date("11/1/2011");
-        Date a = DateUtils.today();
-
-        stock = YahooUtils.downloadYahooData("AAPL", "", da, a)
 
 //        closes = stock.getCloseSeries()
 //        stock.indicators.put("SMA-" + 50, new SMAIndicator(closes, "SMA-" + 50, 50, -1, -1, -1, -1))
@@ -31,7 +27,6 @@ public class SSATest extends TestCase {
 
     }
 
-    @Ignore
     @Test
     public void test1() {
 
@@ -57,46 +52,50 @@ public class SSATest extends TestCase {
         input[18] =(-1.6880219 as Double)
         input[19] =(0.2609807 as Double)
 
-        List<SSAItem> analyze = SSAStudy.analyze(input, 4)
-        println "===> " + SSAStudy.getColumn (analyze.get(0).reconstructed, 0)
+        SSAStudy ssa = new SSAStudy(input)
+        List<SSAItem> analyze = ssa.analyze(4)
+
+//        List<SSAItem> analyze = SSAStudy.analyze(4)
+
+        for (int i = 0; i < analyze.size(); i++) {
+            SSAItem item = analyze.get(i);
+            println "Item: + " + item + "===> " + ssa.getColumn (item.reconstructed, 0)
+
+        }
+
+        double[] total = ssa.reconstructedAll(analyze)
+        println "total ===> " + total
 
     }
 
     @Test
     public void test2() {
 
-        TimeSeries returns = stock.buildReturnSeries(null, null)
+        Date da = DateUtils.Date("11/1/2012");
+        Date a = DateUtils.today();
 
-        println "returns.getTimeplotSeries() = " + returns.getTimeplotSeries()
+        stock = YahooUtils.downloadYahooData("AAPL", "", da, a)
 
-        List<SSAItem> analyze = SSAStudy.analyze(returns.convertToArray(), 50)
-        println "===> " + SSAStudy.getColumn (analyze.get(0).reconstructed, 0)
+        TimeSeries closeSeries = stock.buildCloseSeries()
+        closeSeries.normalize()
 
+        double[] arrayOfDoubles = closeSeries.convertToArray()
 
-//        double[] input = new double[20]
-//        input[0] = 10
-//        input[1] = 12
-//        input[2] = 11
-//        input[3] = 14
-//        input[4] = 15
-//        input[5] = 16
-//        input[6] = 15
-//        input[7] = 11
-//        input[8] = 11
-//        input[9] = 10
-//        input[10] = 9
-//        input[11] = 8
-//        input[12] = 13
-//        input[13] = 14
-//        input[14] = 15
-//        input[15] = 16
-//        input[16] = 15
-//        input[17] = 16
-//        input[18] = 17
-//        input[19] = 18
-//
-//        List<SSAItem> analyze = SSAStudy.analyze(input, 4)
-//        println "===> " + SSAStudy.getColumn (analyze.get(0).reconstructed, 0)
+//        TimeSeries returns = stock.buildReturnSeries(null, null)
+
+//        double[] arrayOfDoubles = returns.convertToArray()
+        println "returns ===> " + arrayOfDoubles
+
+        SSAStudy ssa = new SSAStudy(arrayOfDoubles)
+        List<SSAItem> items = ssa.analyze(4)
+
+        println "ssa.eigenvalueList = $ssa.eigenvalueList"
+
+        double[] column = ssa.getColumn(items.get(0).reconstructed, 0)
+        println "column = $column"
+
+        double[] fullRebuilt = ssa.reconstructedAll(items)
+        println "fullRebuilt ===> " + fullRebuilt
 
     }
 
