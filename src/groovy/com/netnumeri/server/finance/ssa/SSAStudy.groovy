@@ -205,7 +205,7 @@ class SSAStudy {
         return ret
     }
 
-    static double[] reconstructedGroup(List<SSAItem> analyze, Set<Integer> numbers) {
+    static double[] reconstructedGroup(List<SSAItem> analyze, List<Integer> numbers) {
         int size = analyze.size()
         double[] ret = null
         for (int i = 0; i < size; i++) {

@@ -47,6 +47,10 @@ class SsaController {
         stockInstance.indicators.put("normalized", new NormalizedSeriesIndicator(closeSeries, "Normalized"))
         stockInstance.indicators.put("trend", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components))
 
+        List<Integer> components01 = [0,1]
+
+        stockInstance.indicators.put("comp01", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components01))
+
         [
                 startDate: da,
                 endDate: a,

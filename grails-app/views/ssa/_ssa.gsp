@@ -2,7 +2,7 @@
 
 <script class="code" language="javascript" type="text/javascript">
     $(document).ready(function () {
-        var plot2 = $.jqplot('chart2', [normalized, trend], {
+        var plot2 = $.jqplot('chart2', [normalized, trend, comp01], {
             seriesDefaults: {yaxis: 'yaxis'},
             axes: {
                 xaxis: {
@@ -22,6 +22,10 @@
                 {
                     lineWidth:1, showMarker: false,
                     showLine:true
+                },
+                {
+                    lineWidth:1, showMarker: false,
+                    showLine:true
                 }
             ],
             highlighter: {
@@ -29,13 +33,19 @@
             },
             cursor: {
                 show: true
+            },
+            grid:{
+                borderColor:'transparent',
+                shadow:false,
+                drawBorder:false
             }
         });
     });
 
     normalized = ${stockInstance.indicators.get("normalized").jqPlot}
     trend= ${stockInstance.indicators.get("trend").jqPlot}
+    comp01= ${stockInstance.indicators.get("comp01").jqPlot}
 
 </script>
 
-<div id="chart2" style="height:300px; width:100%;"></div>
+<div id="chart2" style="height:600px; width:100%;"></div>

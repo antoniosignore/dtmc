@@ -56,6 +56,11 @@
             },
             cursor: {
                 show: true
+            },
+            grid:{
+                borderColor:'transparent',
+                shadow:false,
+                drawBorder:false
             }
         });
     });
