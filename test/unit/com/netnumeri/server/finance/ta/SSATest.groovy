@@ -78,19 +78,15 @@ public class SSATest extends TestCase {
 
         TimeSeries closeSeries = stock.buildCloseSeries()
         closeSeries.normalize()
-
         double[] arrayOfDoubles = closeSeries.convertToArray()
 
 //        TimeSeries returns = stock.buildReturnSeries(null, null)
-
 //        double[] arrayOfDoubles = returns.convertToArray()
         println "returns ===> " + arrayOfDoubles
 
         SSAStudy ssa = new SSAStudy(arrayOfDoubles)
-        List<SSAItem> items = ssa.analyze(4)
-
+        List<SSAItem> items = ssa.analyze(50)
         println "ssa.eigenvalueList = $ssa.eigenvalueList"
-
         double[] column = ssa.getColumn(items.get(0).reconstructed, 0)
         println "column = $column"
 

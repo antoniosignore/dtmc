@@ -2,7 +2,7 @@
 
 <script class="code" language="javascript" type="text/javascript">
     $(document).ready(function () {
-        var plot2 = $.jqplot('chart2', [ohlc, buysignals, sellsignals, lower, upper], {
+        var plot2 = $.jqplot('chart2', [ohlc, buysignals, sellsignals/*, lower, upper*/], {
             seriesDefaults: {yaxis: 'yaxis'},
             axes: {
                 xaxis: {
@@ -39,7 +39,8 @@
                 {
                     showLine:false,
                     markerOptions: { size: 10, style:"filledCircle",color: 'red' }
-                },
+                }
+/*                ,
                 {
                     lineWidth:1, showMarker: false,
                     showLine:true
@@ -48,6 +49,7 @@
                     lineWidth:1, showMarker: false,
                     showLine:true
                 }
+                */
             ],
             highlighter: {
                 show: true
@@ -61,8 +63,8 @@
     ohlc = ${StockUtils.getCandleStickPlot(stockInstance)}
     buysignals = ${StockUtils.getBuySignals(strategyInstance)}
     sellsignals = ${StockUtils.getSellSignals(strategyInstance)}
-    lower= ${stockInstance.indicators.get("lower").jqPlot}
-    upper= ${stockInstance.indicators.get("upper").jqPlot}
+    %{--lower= ${stockInstance.indicators.get("lower").jqPlot}--}%
+    %{--upper= ${stockInstance.indicators.get("upper").jqPlot}--}%
 
 </script>
 

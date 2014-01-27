@@ -7,8 +7,12 @@ public class SSAComponentsIndicator extends Indicator {
 
     public SSAComponentsIndicator(TimeSeries series, String name, Integer window, List<Integer> components) {
         super (series, name)
-        List<SSAItem> itemList = SSAStudy.analyze(series.convertToArray(), window)
-        copyBackwords(SSAStudy.getColumn (itemList.get(0).reconstructed, 0));
+
+        series.normalize()
+        double[] arrayOfDoubles = series.convertToArray()
+        SSAStudy ssa = new SSAStudy(arrayOfDoubles)
+        List<SSAItem> items = ssa.analyze(window)
+        copyBackwords(ssa.getColumn(items.get(0).reconstructed, 0));
     }
 
 }

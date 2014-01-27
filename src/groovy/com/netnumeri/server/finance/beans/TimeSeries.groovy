@@ -1101,7 +1101,6 @@ public class TimeSeries implements Serializable {
         return null;
     }
 
-
     public String getJqPlot() {
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         DecimalFormat df = new DecimalFormat("#.####");
@@ -1130,7 +1129,6 @@ public class TimeSeries implements Serializable {
         }
         return null;
     }
-
 
     public String getNoDateSeries() {
         DecimalFormat df = new DecimalFormat("#.####");
