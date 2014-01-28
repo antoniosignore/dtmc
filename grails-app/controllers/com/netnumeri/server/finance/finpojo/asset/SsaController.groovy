@@ -33,13 +33,13 @@ class SsaController {
             return
         }
 
-        Date da = DateUtils.Date("8/19/2011");
-        Date a = DateUtils.Date("8/19/2012");
+        Date da = DateUtils.Date("11/1/2012");
+        Date a = DateUtils.Date("8/16/2013");
 
 //        Date a = DateUtils.today();
 
         // last year
-        StockUtils.refreshDaily(stockInstance, from , to);
+        StockUtils.refreshDaily(stockInstance, da, a);
 
         TimeSeries closeSeries = stockInstance.buildCloseSeries()
         closeSeries.normalize()

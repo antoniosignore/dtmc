@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/ssa/_ssa.gsp" afterPath="$PROJECT_DIR$/grails-app/views/ssa/_ssa.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -269,7 +267,7 @@
       <file leaf-file-name="SsaController.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="44" selection-start="1388" selection-end="1388" vertical-scroll-proportion="0.8088235" vertical-offset="310" max-vertical-offset="1050">
+            <state line="27" column="83" selection-start="971" selection-end="971" vertical-scroll-proportion="0.27941176" vertical-offset="310" max-vertical-offset="1050">
               <folding />
             </state>
           </provider>
@@ -1121,7 +1119,7 @@
       <workItem from="1390549235163" duration="5957000" />
       <workItem from="1390724811000" duration="8130000" />
       <workItem from="1390811531071" duration="10770000" />
-      <workItem from="1390896089943" duration="3189000" />
+      <workItem from="1390896089943" duration="4807000" />
     </task>
     <task id="LOCAL-00001" summary="added indicators in tables">
       <created>1378071164332</created>
@@ -1547,11 +1545,15 @@
       <created>1390836898363</created>
       <updated>1390836898363</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="trading systems&#10;">
+      <created>1390909062317</created>
+      <updated>1390909062317</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="465620000" />
+    <option name="totallyTimeSpent" value="467238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="31" y="-4" width="1618" height="892" extended-state="0" />
@@ -1579,6 +1581,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.67265195" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32561132" sideWeight="0.6747312" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48480663" sideWeight="0.4996633" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24949427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -1592,7 +1595,6 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44198895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48480663" sideWeight="0.4996633" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1943,7 +1945,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="44" selection-start="1388" selection-end="1388" vertical-scroll-proportion="0.8088235" vertical-offset="310" max-vertical-offset="1050">
+        <state line="27" column="83" selection-start="971" selection-end="971" vertical-scroll-proportion="0.27941176" vertical-offset="310" max-vertical-offset="1050">
           <folding />
         </state>
       </provider>
