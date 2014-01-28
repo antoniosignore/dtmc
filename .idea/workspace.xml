@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSASignal.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSASignal.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -264,7 +262,7 @@
       <file leaf-file-name="SSASignal.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSASignal.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="97" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.52380955" vertical-offset="492" max-vertical-offset="1020">
+            <state line="41" column="55" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.32539684" vertical-offset="492" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
@@ -1107,7 +1105,7 @@
       <workItem from="1390549235163" duration="5957000" />
       <workItem from="1390724811000" duration="8130000" />
       <workItem from="1390811531071" duration="10770000" />
-      <workItem from="1390896089943" duration="12548000" />
+      <workItem from="1390896089943" duration="13020000" />
     </task>
     <task id="LOCAL-00001" summary="added indicators in tables">
       <created>1378071164332</created>
@@ -1549,11 +1547,15 @@
       <created>1390922535872</created>
       <updated>1390922535872</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="trading systems&#10;">
+      <created>1390925081626</created>
+      <updated>1390925081626</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="474979000" />
+    <option name="totallyTimeSpent" value="475451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-8" width="1620" height="893" extended-state="6" />
@@ -1959,7 +1961,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSASignal.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="97" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.52380955" vertical-offset="492" max-vertical-offset="1020">
+        <state line="41" column="55" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.32539684" vertical-offset="492" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
