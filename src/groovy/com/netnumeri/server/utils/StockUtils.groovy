@@ -39,6 +39,10 @@ class StockUtils {
         YahooUtils.refreshDailyData(stock, DateUtils.todayOneYearAgo(), DateUtils.today());
     }
 
+    public static void refreshDaily(Stock stock, Date from, Date to) {
+        YahooUtils.refreshDailyData(stock, from, to);
+    }
+
     public static void refreshChain(Stock stock) {
         stock.chain = YahooOptions.loadOptionChain(stock.name)
     }
