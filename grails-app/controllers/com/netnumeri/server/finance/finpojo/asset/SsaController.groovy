@@ -34,9 +34,7 @@ class SsaController {
         }
 
         Date da = DateUtils.Date("11/1/2012");
-        Date a = DateUtils.Date("8/16/2013");
-
-//        Date a = DateUtils.today();
+        Date a = DateUtils.Date("10/31/2013");
 
         // last year
         StockUtils.refreshDaily(stockInstance, da, a);
@@ -50,10 +48,10 @@ class SsaController {
         stockInstance.indicators.put("trend", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components))
 
         List<Integer> components1 = [1]
-        stockInstance.indicators.put("comp1", new SSAComponentsIndicator(closeSeries, "SSA-1", 50, components1))
+        stockInstance.indicators.put("comp1", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components1))
 
         List<Integer> components01 = [0,1]
-        stockInstance.indicators.put("comp01", new SSAComponentsIndicator(closeSeries, "SSA-01", 50, components01))
+        stockInstance.indicators.put("comp01", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components01))
 
         [
                 startDate: da,
