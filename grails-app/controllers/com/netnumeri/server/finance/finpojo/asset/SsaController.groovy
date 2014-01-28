@@ -1,18 +1,11 @@
 package com.netnumeri.server.finance.finpojo.asset
 
-import com.netnumeri.server.enums.IndicatorEnum
-import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.indicator.UserIndicators
-import com.netnumeri.server.finance.ssa.SSAItem
-import com.netnumeri.server.finance.ssa.SSAStudy
-import com.netnumeri.server.finance.strategy.SMACrossoverSignal
+import com.netnumeri.server.finance.strategy.SSASignal
 import com.netnumeri.server.finance.strategy.Strategy
 import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.DateUtils
-import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
-import org.springframework.dao.DataIntegrityViolationException
 
 class SsaController {
 
@@ -34,7 +27,7 @@ class SsaController {
         }
 
         Date da = DateUtils.Date("11/1/2012");
-        Date a = DateUtils.Date("10/31/2013");
+        Date a = DateUtils.today();
 
         // last year
         StockUtils.refreshDaily(stockInstance, da, a);
@@ -53,10 +46,14 @@ class SsaController {
         List<Integer> components01 = [0,1]
         stockInstance.indicators.put("comp01", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components01))
 
+        Strategy strategy = new SSASignal("test", stockInstance, da, a);
+        strategy.run();
+
         [
                 startDate: da,
                 endDate: a,
-                stockInstance: stockInstance
+                stockInstance: stockInstance,
+                strategyInstance: strategy
         ]
     }
 }

@@ -37,6 +37,8 @@
         </tbody>
     </table>
 
+    <g:render template="candlestick"/>
+
     <g:render template="ssa"/>
 
 </section>

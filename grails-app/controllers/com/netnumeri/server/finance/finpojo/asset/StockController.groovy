@@ -1,22 +1,15 @@
 package com.netnumeri.server.finance.finpojo.asset
 
 import com.netnumeri.server.enums.IndicatorEnum
-import com.netnumeri.server.enums.PortfolioEnum
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.data.TransactionSeries
-import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.indicator.UserIndicators
-import com.netnumeri.server.finance.strategy.BackTest
-import com.netnumeri.server.finance.strategy.SMACrossover
 import com.netnumeri.server.finance.strategy.SMACrossoverSignal
-import com.netnumeri.server.finance.strategy.Signal
 import com.netnumeri.server.finance.strategy.Strategy
 import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
-import dtmc.PortfolioService
 import org.springframework.dao.DataIntegrityViolationException
 
 class StockController {
