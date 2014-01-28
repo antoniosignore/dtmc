@@ -11,6 +11,8 @@ public class SSASignal extends Strategy {
 
     Instrument asset
 
+    TradeEnum lastTrade
+
     public SSASignal(String name, Stock asset, Date firstDate, Date lastDate) {
         super(name, asset, firstDate, lastDate, 0);
         this.asset = asset
@@ -37,16 +39,21 @@ public class SSASignal extends Strategy {
         if (previousDate == null || prevPreviousDate == null)
             return
 
+        Double todaySSA0 = trend.getData(date)
+        Double yesterdaySSA0 = trend.getData(previousDate)
+
         Double todaySSA1 = comp1.getData(date)
         Double yesterdaySSA1 = comp1.getData(previousDate)
         Double twoDaysBeforeSSA1 = comp1.getData(prevPreviousDate)
 
-        if (twoDaysBeforeSSA1 <  yesterdaySSA1 && yesterdaySSA1 > todaySSA1){
+        if ((twoDaysBeforeSSA1 <  yesterdaySSA1 && yesterdaySSA1 > todaySSA1) && (yesterdaySSA0 > todaySSA0)){
             signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
+            lastTrade = TradeEnum.SELL
         }
 
-        if (twoDaysBeforeSSA1 >  yesterdaySSA1 && yesterdaySSA1 < todaySSA1){
+        if ((twoDaysBeforeSSA1 >  yesterdaySSA1 && yesterdaySSA1 < todaySSA1) && (yesterdaySSA0 < todaySSA0)){
             signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
+            lastTrade = TradeEnum.BUY
         }
     }
 }
