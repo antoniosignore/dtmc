@@ -46,15 +46,83 @@ public class SSASignal extends Strategy {
         Double yesterdaySSA1 = comp1.getData(previousDate)
         Double twoDaysBeforeSSA1 = comp1.getData(prevPreviousDate)
 
-        if ((twoDaysBeforeSSA1 <  yesterdaySSA1 && yesterdaySSA1 > todaySSA1) && (yesterdaySSA0 > todaySSA0)){
-            signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
-            lastTrade = TradeEnum.SELL
+        boolean isATop = twoDaysBeforeSSA1 <  yesterdaySSA1 && yesterdaySSA1 > todaySSA1
+        boolean isALow = twoDaysBeforeSSA1 >  yesterdaySSA1 && yesterdaySSA1 < todaySSA1
+        boolean inATrade = (lastTrade == null)
+        boolean trendingDown = ((yesterdaySSA0 > todaySSA0))
+
+        if (isATop){
+//            if (!inATrade)  {
+//                if (trendingDown){
+                    signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
+//                    lastTrade = TradeEnum.SELL
+//                }
+//            }
+//            else {
+//                if (lastTrade == TradeEnum.BUY){
+//                    signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
+//                    lastTrade = null
+//                }
+//            }
+        }
+        else
+
+        if (isALow){
+//            if (!inATrade)  {
+//                if (!trendingDown){
+                    signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
+//                    lastTrade = TradeEnum.BUY
+//                }
+//            }
+//            else {
+//                if (lastTrade == TradeEnum.SELL){
+//                    signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
+//                    lastTrade = null
+//                }
+//            }
         }
 
-        if ((twoDaysBeforeSSA1 >  yesterdaySSA1 && yesterdaySSA1 < todaySSA1) && (yesterdaySSA0 < todaySSA0)){
-            signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
-            lastTrade = TradeEnum.BUY
+         /*
+            boolean takeit = false
+            if (lastTrade == null)
+                takeit = true
+
+            else if (lastTrade == TradeEnum.BUY) {
+                signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
+                lastTrade = null
+                return
+            }
+
+            else if (yesterdaySSA0 > todaySSA0)
+                takeit = true
+
+            if (takeit){
+                signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
+                lastTrade = TradeEnum.SELL
+            }
+
         }
+        if (isALow){
+            boolean takeit = false
+
+            if (lastTrade == null)
+                takeit = true
+
+            else if (lastTrade == TradeEnum.SELL)  {
+                signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
+                lastTrade = null
+                return
+            }
+
+            else if (yesterdaySSA0 > todaySSA0)
+                takeit = true
+
+            if (takeit){
+                signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
+                lastTrade = TradeEnum.BUY
+            }
+        }
+           */
     }
 }
 

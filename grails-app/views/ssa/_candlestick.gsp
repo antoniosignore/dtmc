@@ -34,7 +34,7 @@
                 },
                 {
                     showLine:false,
-                    markerOptions: { size: 10, style:"filledCircle",color: 'blue' }
+                    markerOptions: { size: 10, style:"diamonds",color: 'blue' }
                 },
                 {
                     showLine:false,

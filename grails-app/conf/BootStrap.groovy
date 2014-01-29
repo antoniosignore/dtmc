@@ -15,7 +15,30 @@ class BootStrap {
     def portfolioService
 
     def init = { servletContext ->
+
+        createTickers()
+
         createData()
+    }
+
+    def createTickers() {
+
+        if (Stock.getAll() == null || Stock.getAll().size() == 0) {
+        String str="";
+        InputStream is = this.class.classLoader.getResourceAsStream('companylist.csv')
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        if (is!=null) {
+            while ((str = reader.readLine()) != null) {
+                String [] splits = str.split(";")
+                println "splits 0 " + splits[0]
+                if (splits[0] == null || splits[0].length() ==0)
+                    break;
+                Stock stock = new Stock(splits[0], splits[1]);
+                stock.save(failOnError: true, insert: true, flush: true)
+            }
+        }
+        is.close();
+     }
     }
 
     def destroy = {
@@ -66,7 +89,6 @@ class BootStrap {
 
             // portfolioService.buy(portfolio, stock, 100);
             portfolio.save(failOnError: true, insert: true, flush: true);
-
 
             if (UserIndicators.getAll() == null || UserIndicators.getAll().size() == 0) {
 
