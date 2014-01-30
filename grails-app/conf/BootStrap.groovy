@@ -16,7 +16,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
-        createTickers()
+        //  createTickers()
 
         createData()
     }
@@ -24,21 +24,21 @@ class BootStrap {
     def createTickers() {
 
         if (Stock.getAll() == null || Stock.getAll().size() == 0) {
-        String str="";
-        InputStream is = this.class.classLoader.getResourceAsStream('companylist.csv')
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-        if (is!=null) {
-            while ((str = reader.readLine()) != null) {
-                String [] splits = str.split(";")
-                println "splits 0 " + splits[0]
-                if (splits[0] == null || splits[0].length() ==0)
-                    break;
-                Stock stock = new Stock(splits[0], splits[1]);
-                stock.save(failOnError: true, insert: true, flush: true)
+            String str = "";
+            InputStream is = this.class.classLoader.getResourceAsStream('companylist.csv')
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+            if (is != null) {
+                while ((str = reader.readLine()) != null) {
+                    String[] splits = str.split(";")
+                    println "splits 0 " + splits[0]
+                    if (splits[0] == null || splits[0].length() == 0)
+                        break;
+                    Stock stock = new Stock(splits[0], splits[1]);
+                    stock.save(failOnError: true, insert: true, flush: true)
+                }
             }
+            is.close();
         }
-        is.close();
-     }
     }
 
     def destroy = {

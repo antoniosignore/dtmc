@@ -66,6 +66,18 @@ public class DateUtils {
         return cal.getTime();
     }
 
+    public static Date dateNYearsAgo(Date date, int numberOfYearsBefore) {
+        GregorianCalendar cal = new GregorianCalendar();
+        cal.setTime(date)
+        cal.set(Calendar.YEAR, cal.get(Calendar.YEAR) - numberOfYearsBefore);
+        cal.set(Calendar.HOUR, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        cal.set(Calendar.AM_PM, Calendar.AM);
+        return cal.getTime();
+    }
+
     public static long diffDays(Date lowerDate, Date upDate) {
         long milliseconds1 = cleanse(lowerDate).getTime();
         long milliseconds2 = cleanse(upDate).getTime();

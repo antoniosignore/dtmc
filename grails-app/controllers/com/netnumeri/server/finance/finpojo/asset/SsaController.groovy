@@ -18,6 +18,7 @@ class SsaController {
     def show() {
 
         println "params.id = $params.id"
+        println "params.range = $params.range"
 
         def stockInstance = Stock.get(params.id)
         if (!stockInstance) {
@@ -47,7 +48,7 @@ class SsaController {
         stockInstance.indicators.put("comp01", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components01))
 
         Strategy strategy = new SSASignal("test", stockInstance, da, a);
-        strategy.run();
+//        strategy.run();
 
         [
                 startDate: da,

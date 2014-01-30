@@ -37,9 +37,30 @@
         </tbody>
     </table>
 
-    <g:render template="candlestick"/>
 
-    <g:render template="ssa"/>
+    <div class="updateStatusForm">
+
+        <g:formRemote url="[controller: 'ssa', action: 'show']" update="messages" name="updateStatusForm"
+                      onSuccess="document.updateStatusForm.message.value='';">
+
+            <g:textArea name="message" value=""/><br/>
+
+            <div class="control-group required">
+                <label for="range" class="control-label"><g:message
+                        code="campaigns.range.label"
+                        default="Dates range"/><span class="required-indicator">*</span></label>
+                <g:render template="datetimepicker"/>
+            </div>
+
+            <g:submitButton name="go"/>
+        </g:formRemote>
+    </div>
+
+
+    <div id="messages">
+        <g:render template="candlestick"/>
+        <g:render template="ssa"/>
+    </div>
 
 </section>
 

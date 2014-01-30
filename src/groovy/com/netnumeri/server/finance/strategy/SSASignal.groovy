@@ -1,24 +1,44 @@
 package com.netnumeri.server.finance.strategy
 
 import com.netnumeri.server.finance.beans.FinConstants
+import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.ta.Indicator
+import com.netnumeri.server.finance.ta.NormalizedSeriesIndicator
+import com.netnumeri.server.finance.ta.SSAComponentsIndicator
 import com.netnumeri.server.finance.utils.DateUtils
+import com.netnumeri.server.utils.StockUtils
 
 public class SSASignal extends Strategy {
 
     Instrument asset
-
     TradeEnum lastTrade
+    Date da
+    Date a
 
     public SSASignal(String name, Stock asset, Date firstDate, Date lastDate) {
         super(name, asset, firstDate, lastDate, 0);
         this.asset = asset
+        this.da = firstDate
+        this.a = lastDate
     }
 
-    public void evaluateInstrumentOnDate(Date date, Instrument asset) {
+    public void evaluateInstrumentOnDate(Date date, Instrument stockInstance) {
+
+        StockUtils.refreshDaily(stockInstance as Stock, da, a);
+
+        TimeSeries closeSeries = stockInstance.buildCloseSeries()
+        closeSeries.normalize()
+
+        stockInstance.indicators.put("normalized", new NormalizedSeriesIndicator(closeSeries, "Normalized"))
+
+        List<Integer> components = [0]
+        stockInstance.indicators.put("trend", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components))
+
+        List<Integer> components1 = [1]
+        stockInstance.indicators.put("comp1", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components1))
 
         Indicator trend = asset.indicators.get("trend");
         Indicator comp1 = asset.indicators.get("comp1");

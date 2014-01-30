@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="">
+    <list default="true" id="4c943155-af16-4b50-9094-bcc520af5923" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/ssa/_datetimepicker.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/DateUtils.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/DateUtils.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSASignal.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSASignal.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/ssa/_candlestick.gsp" afterPath="$PROJECT_DIR$/grails-app/views/ssa/_candlestick.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/antonio.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/antonio.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/trade/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/trade/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/ssa/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/ssa/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -19,9 +23,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dtmc$Grails_dtmc.coverage" NAME="Grails:dtmc Coverage Results" MODIFIED="1382040363851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -29,7 +30,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -65,129 +66,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="jar://$USER_HOME$/.ideaLibSources/hibernate-core-3.6.10.Final-sources.jar!/org/hibernate/engine/ForeignKeys.java" line="242" class="org.hibernate.engine.ForeignKeys" package="org.hibernate.engine">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/PortfolioController.groovy" line="24" class="com.netnumeri.server.finance.finpojo.PortfolioController" package="com.netnumeri.server.finance.finpojo">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy" line="98" class="dtmc.PortfolioService" package="dtmc">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSAPredictionTest.groovy" line="47" class="com.netnumeri.server.finance.ta.SSAPredictionTest" package="com.netnumeri.server.finance.ta">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" line="83" class="com.netnumeri.server.finance.finpojo.asset.StockController" package="com.netnumeri.server.finance.finpojo.asset">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy" line="54" class="com.netnumeri.server.finance.finpojo.asset.StockTests" package="com.netnumeri.server.finance.finpojo.asset">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy" line="89" class="com.netnumeri.server.finance.ta.SSATest" package="com.netnumeri.server.finance.ta">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy" line="82" class="com.netnumeri.server.finance.ta.SSATest" package="com.netnumeri.server.finance.ta">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -197,39 +75,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_candlestick.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp">
+      <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="28" selection-start="1948" selection-end="1948" vertical-scroll-proportion="-7.1875" vertical-offset="270" max-vertical-offset="1230">
+            <state line="40" column="92" selection-start="1489" selection-end="1489" vertical-scroll-proportion="-2.375" vertical-offset="486" max-vertical-offset="1125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_candlestick.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/_candlestick.gsp">
+      <file leaf-file-name="StockController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="45" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1230">
-              <folding>
-                <marker date="1391007943925" expanded="true" signature="1175:1592" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericTimeSeries.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/GenericTimeSeries.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1485">
+            <state line="14" column="6" selection-start="648" selection-end="648" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="5145">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SsaController.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SsaController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="30" selection-start="375" selection-end="375" vertical-scroll-proportion="0.18072289" vertical-offset="90" max-vertical-offset="975">
+            <state line="15" column="56" selection-start="524" selection-end="524" vertical-scroll-proportion="-7.9583335" vertical-offset="34" max-vertical-offset="990">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Strategy.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Strategy.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="86" selection-start="1463" selection-end="1463" vertical-scroll-proportion="0.0" vertical-offset="393" max-vertical-offset="1065">
               <folding />
             </state>
           </provider>
@@ -238,58 +114,332 @@
       <file leaf-file-name="SSASignal.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSASignal.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="33" selection-start="2966" selection-end="2966" vertical-scroll-proportion="0.0" vertical-offset="934" max-vertical-offset="2040">
+            <state line="18" column="74" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="2340">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <file leaf-file-name="_datetimepicker.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/_datetimepicker.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="33" selection-start="1155" selection-end="1155" vertical-scroll-proportion="0.0" vertical-offset="381" max-vertical-offset="3630">
+            <state line="10" column="41" selection-start="331" selection-end="331" vertical-scroll-proportion="0.26833633" vertical-offset="0" max-vertical-offset="24510">
+              <folding>
+                <marker date="1377633262000" expanded="true" signature="5552:28677" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="5579:5683" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="5613:5673" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="5707:5826" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="5741:5816" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="5849:5860" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="5884:5918" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="5942:6652" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="6679:6777" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="6801:6868" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="6895:7000" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="7030:7274" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="7298:7383" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="7410:7602" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="7629:7713" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="7737:7829" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="7853:7952" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="7976:8319" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="8140:8309" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="8346:8585" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="8374:8444" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="8609:9847" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="8634:9837" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="9877:11726" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="9934:11673" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="11750:12158" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="12182:12524" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="12548:12910" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="12624:12880" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="12728:12800" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="12934:13272" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="12992:13238" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="13092:13174" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="13296:13536" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="13572:13636" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="13667:14088" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="14119:14279" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="14304:14555" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="14583:14807" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="14636:14797" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="14832:14939" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="14877:14929" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="14967:15076" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="15019:15066" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="15831:16024" placeholder="[...]" />
+                <marker date="1377633262000" expanded="true" signature="16300:18345" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="16316:16363" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="16383:16446" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="16467:16525" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="16542:16584" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="16603:16650" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="16667:16708" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="16727:16790" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="16810:16875" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="16896:16956" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="16973:17015" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17032:17077" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17095:17149" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17169:17217" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17238:17286" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17303:17388" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17405:17490" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17507:17550" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17567:17621" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17638:17683" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17700:17745" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17762:17821" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17839:17904" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17923:17979" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="17996:18141" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="18159:18285" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="18302:18344" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="18510:21621" placeholder="{&quot;_ordinal&quot;: &quot;%d&quot;...}" />
+                <marker date="1377633262000" expanded="true" signature="18529:18653" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="18785:18839" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="18943:19002" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="19030:19421" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="19156:19411" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="19528:19582" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="19670:19729" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="19806:19863" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="20016:20305" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="20212:20261" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="20336:20409" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="20609:20718" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="20976:21110" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="21140:21289" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="21313:21374" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="21415:21447" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="21474:21506" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="21527:21595" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="21646:21714" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="21743:21824" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="21848:21889" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="21920:22159" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="22222:22376" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="22404:22493" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="22521:22566" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="22596:22641" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="22664:27569" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="22684:22722" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="22745:22783" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="22803:22860" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="22884:22962" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="22984:23022" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="23044:23125" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="23148:23290" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="23313:23524" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="23543:23596" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="23617:23670" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="23693:23800" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="23823:23961" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="23989:24128" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="24155:24746" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="24770:24862" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="24886:24934" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="24958:25235" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="25261:25370" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="25391:25503" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="25523:25664" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="25688:26247" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="25750:26184" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="26269:26363" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="26390:26513" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="26541:26664" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="26690:26815" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="26835:26911" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="26938:27017" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="27043:27197" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="27221:27330" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="27351:27468" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="27489:27568" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="27795:28176" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="27815:27864" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="27887:27981" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="28006:28158" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="28299:28480" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="28322:28479" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="28638:28670" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="28696:29032" placeholder="/** @version: 1.2 ...*/" />
+                <marker date="1377633262000" expanded="true" signature="29051:65209" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="29116:41765" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="29967:30348" placeholder="{&quot;applyLabel&quot;: 'Apply'...}" />
+                <marker date="1377633262000" expanded="true" signature="30385:30400" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="30635:30809" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="30669:30793" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="30815:30898" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="30969:31478" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="31026:31223" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="31096:31203" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="31265:31342" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="31385:31464" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="32896:37556" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="34175:35704" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="34231:35333" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="34397:34568" placeholder="//..." />
+                <marker date="1377633262000" expanded="true" signature="34854:35062" placeholder="//..." />
+                <marker date="1377633262000" expanded="true" signature="35186:35251" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="35425:35506" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="35930:36379" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="36000:36361" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="36183:36339" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="36549:36636" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="36700:36785" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="36849:36932" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="36997:37080" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="37142:37219" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="37289:37384" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="37452:37541" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="37592:37731" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="37871:37934" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="37977:38289" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="38378:38479" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="38774:39378" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="38836:39364" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="39029:39176" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="39231:39346" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="39525:39700" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="39736:39903" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="41804:64887" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="41886:41938" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="41977:42728" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="42498:42600" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="42606:42714" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="42774:43418" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="43453:43558" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="43591:45211" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="43744:43962" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="44005:44599" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="44046:44345" placeholder="{&quot;left&quot;: 'auto'...}" />
+                <marker date="1377633262000" expanded="true" signature="44406:44581" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="44451:44557" placeholder="{&quot;right&quot;: 'auto'...}" />
+                <marker date="1377633262000" expanded="true" signature="44605:45197" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="44646:44897" placeholder="{&quot;right&quot;: 'auto'...}" />
+                <marker date="1377633262000" expanded="true" signature="45004:45179" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="45049:45155" placeholder="{&quot;left&quot;: 'auto'...}" />
+                <marker date="1377633262000" expanded="true" signature="45245:45707" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="45339:45439" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="45741:46059" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="46099:46579" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="46208:46266" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="46272:46565" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="46619:47840" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="46728:46841" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="46847:47826" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="47037:47168" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="47879:48214" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="47983:48068" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="48074:48160" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="48253:48578" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="48357:48437" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="48443:48524" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="48617:49213" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="48875:49034" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="49040:49198" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="49252:51204" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="49509:49954" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="49692:49936" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="49840:49914" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="49960:50416" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="50146:50398" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="50300:50376" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="50551:50714" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="50752:50954" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="51244:51460" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="51501:51720" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="51760:52197" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="51927:52032" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="52038:52142" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="52238:52675" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="52406:52511" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="52517:52621" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="52715:53916" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="53143:53311" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="53341:53603" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="53609:53860" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="53960:55886" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="54872:55760" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="54915:55231" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="55037:55209" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="55237:55717" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="55523:55695" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="55959:57306" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="56461:56518" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="57053:57257" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="57102:57189" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="57376:58684" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="57619:57995" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="57723:57977" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="58370:58582" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="58763:64877" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="59151:59265" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="59271:59331" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="59486:59592" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="59744:59859" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="59865:59925" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="60235:60312" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="60471:62468" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="60739:62413" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="61025:61106" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="61190:61664" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="61353:61441" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="61552:61638" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="61750:62152" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="61878:61966" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="62040:62126" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="62614:64834" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="62908:63194" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="63251:63571" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="63301:63432" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="63438:63549" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="63755:64203" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="63929:64062" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="64068:64181" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="64295:64778" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="64411:64558" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="64564:64711" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="64944:65201" placeholder="{...}" />
+                <marker date="1377633262000" expanded="true" signature="64980:65164" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_form.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="companylist.csv" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/companylist.csv">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="_form.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_DemoPage/_form.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6034" column="23" selection-start="730703" selection-end="730703" vertical-scroll-proportion="-5.428571" vertical-offset="90358" max-vertical-offset="90990">
+            <state line="115" column="8" selection-start="6151" selection-end="6151" vertical-scroll-proportion="-8.75" vertical-offset="1305" max-vertical-offset="2640">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSource.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
+      <file leaf-file-name="_form.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/trade/_form.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="38" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="870">
+            <state line="50" column="11" selection-start="1787" selection-end="2164" vertical-scroll-proportion="-10.9375" vertical-offset="225" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="companylist-1.csv" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/companylist-1.csv">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="_ssa.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/_ssa.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3282" column="0" selection-start="77" selection-end="386231" vertical-scroll-proportion="-9.892858" vertical-offset="48953" max-vertical-offset="49320">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeSeries.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="32" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="17685">
+            <state line="21" column="35" selection-start="906" selection-end="906" vertical-scroll-proportion="1.0625" vertical-offset="366" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
@@ -305,90 +455,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitLogSettings">
-    <option name="myDateState">
-      <MyDateState />
-    </option>
-  </component>
-  <component name="GrailsProjectView">
-    <option name="autoScrollFromSource" value="true" />
-    <option name="autoScrollToSource" value="true" />
-    <option name="hideEmptyMiddlePackages" value="false" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application.properties" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Transaction.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/PortfolioController.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SSAStrategyTest.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioItem.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioEntry.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Portfolio.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/services/dtmc/PortfolioService.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Strategy.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/client/VolatilityClient.java" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Volatility.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/BackTest.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossover.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/strategy/SMACrossoverTest.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/show.gsp" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Signal.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossoverSignal.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_content.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" />
-        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSAPredictionTest.groovy" />
-        <option value="$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAEigenTriple.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAData.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SpectrumAnalysis.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAItem.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSA.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooUtils.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/IndicatorsTest.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/Ssa.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/NormalizedSeriesIndicator.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SSAComponentsIndicator.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/ssa/_ssa.gsp" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSACrossoverSignal.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/ssa/show.gsp" />
-        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/ssa/_candlestick.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/trade/_form.gsp" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSASignal.groovy" />
-        <option value="$PROJECT_DIR$/web-app/tickers.txt" />
-        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/companylist.csv" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState />
-  </component>
-  <component name="Osmorc">
-    <option name="libraryBundlificationRules">
-      <list>
-        <LibraryBundlificationRule>
-          <option name="lastModified" value="1377011194611" />
-        </LibraryBundlificationRule>
+        <option value="$PROJECT_DIR$/grails-app/views/ssa/show.gsp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-10" />
-    <option name="y" value="-8" />
-    <option name="width" value="1620" />
-    <option name="height" value="893" />
+    <option name="x" value="103" />
+    <option name="y" value="30" />
+    <option name="width" value="1469" />
+    <option name="height" value="841" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -404,219 +485,18 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages ProjectPane="false" />
+      <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource ProjectPane="true" />
-      <autoscrollFromSource ProjectPane="true" />
+      <autoscrollToSource />
+      <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netnumeri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netnumeri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finpojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netnumeri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finpojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asset" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
@@ -625,155 +505,25 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="144" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="162" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="165" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1055" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="144" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="162" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="165" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1055" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="FullScreen" value="false" />
-    <property name="LayoutCode.rearrangeEntriesGroovy" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
-    <property name="LayoutCode.rearrangeEntriesGSP" value="false" />
-    <property name="SearchEverywhereHistory" value="" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../netnumeri" />
-  </component>
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <PyConsoleSettings />
-    </option>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../grailstwitter" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.netnumeri.server.finance.strategy" />
-      <recent name="com.netnumeri.server.finance.ta" />
-      <recent name="com.netnumeri.server.finance.finpojo.asset" />
-      <recent name="com.netnumeri.server.finance.finpojo" />
-      <recent name="com.dtmc.club" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/grails-app/views/ssa" />
-      <recent name="$PROJECT_DIR$/grails-app/views/stock" />
-      <recent name="$PROJECT_DIR$/grails-app/controllers" />
-      <recent name="$PROJECT_DIR$/src/templates" />
-      <recent name="$PROJECT_DIR$/web-app/js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/grails-app/conf" />
-      <recent name="$PROJECT_DIR$/grails-app/views/ssa" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.netnumeri.server" />
     </key>
   </component>
   <component name="RunManager" selected="Grails.Grails:dtmc">
-    <configuration default="false" name="test1()" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true" temporary="true">
-      <module name="dtmc" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.ta.SSA.test1 -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="GrailsMavenDebuggerRunner">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="GrailsMavenDebuggerRunner" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test2()" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true" temporary="true">
-      <module name="dtmc" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.ta.SSA.test2 -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="GrailsMavenDebuggerRunner">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="GrailsMavenDebuggerRunner" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test3()" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true" temporary="true">
-      <module name="dtmc" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.ta.SSA.test3 -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="testSSAIndicators()" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true" temporary="true">
-      <module name="dtmc" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.ta.Indicators.testSSAIndicators -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="GrailsMavenDebuggerRunner">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="GrailsMavenDebuggerRunner" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="testEndDate()" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true" temporary="true">
-      <module name="dtmc" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: com.netnumeri.server.finance.ta.Indicators.testEndDate -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
       <module name="" />
-      <setting name="path" value="" />
       <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
@@ -782,105 +532,12 @@
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dtmc" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dtmc" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dtmc" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -911,24 +568,32 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
       <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dtmc" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -952,225 +617,21 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browserFamily" value="FIREFOX" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dtmc" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dtmc" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browserFamily" value="FIREFOX" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dtmc" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Grails:dtmc" type="GrailsRunConfigurationType" factoryName="Grails">
+    <configuration default="false" name="Grails:dtmc" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
       <module name="dtmc" />
       <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app --stacktrace --verbose" />
-      <setting name="depsClasspath" value="true" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="false" />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="GrailsMavenDebuggerRunner">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="GrailsMavenDebuggerRunner" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="6">
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Grails.Grails:dtmc" />
-      <item index="1" class="java.lang.String" itemvalue="Grails.test1()" />
-      <item index="2" class="java.lang.String" itemvalue="Grails.test2()" />
-      <item index="3" class="java.lang.String" itemvalue="Grails.test3()" />
-      <item index="4" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
-      <item index="5" class="java.lang.String" itemvalue="Grails.testEndDate()" />
     </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Grails.test2()" />
-        <item index="1" class="java.lang.String" itemvalue="Grails.test1()" />
-        <item index="2" class="java.lang.String" itemvalue="Grails.test3()" />
-        <item index="3" class="java.lang.String" itemvalue="Grails.testEndDate()" />
-        <item index="4" class="java.lang.String" itemvalue="Grails.testSSAIndicators()" />
-      </list>
-    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -1196,624 +657,52 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2a185fc2-8462-4bec-8b08-6534cfe541d3" name="Default" comment="" />
-      <created>1377538576359</created>
-      <updated>1377538576359</updated>
-      <workItem from="1382036779498" duration="526000" />
-      <workItem from="1382037668822" duration="8736000" />
-      <workItem from="1382091639188" duration="686000" />
-      <workItem from="1382117930866" duration="576000" />
-      <workItem from="1382201548085" duration="1212000" />
-      <workItem from="1382336783316" duration="367000" />
-      <workItem from="1383422092287" duration="1321000" />
-      <workItem from="1383553714823" duration="584000" />
-      <workItem from="1383576055162" duration="1273000" />
-      <workItem from="1383636677375" duration="1893000" />
-      <workItem from="1383687848882" duration="40000" />
-      <workItem from="1383905931692" duration="4897000" />
-      <workItem from="1384117580480" duration="1479000" />
-      <workItem from="1384155777128" duration="47000" />
-      <workItem from="1384334730569" duration="12034000" />
-      <workItem from="1384414672422" duration="6171000" />
-      <workItem from="1384437172685" duration="1167000" />
-      <workItem from="1384504158672" duration="6831000" />
-      <workItem from="1384512480838" duration="2765000" />
-      <workItem from="1384525147241" duration="4511000" />
-      <workItem from="1384683341743" duration="9766000" />
-      <workItem from="1384769599643" duration="7654000" />
-      <workItem from="1384787830157" duration="589000" />
-      <workItem from="1384852562758" duration="790000" />
-      <workItem from="1385067016664" duration="2050000" />
-      <workItem from="1385109975462" duration="2215000" />
-      <workItem from="1385319389779" duration="1962000" />
-      <workItem from="1385372578063" duration="920000" />
-      <workItem from="1385459612384" duration="10256000" />
-      <workItem from="1385550227776" duration="1603000" />
-      <workItem from="1385644269738" duration="152000" />
-      <workItem from="1385670464904" duration="72000" />
-      <workItem from="1385675222077" duration="171000" />
-      <workItem from="1385715433080" duration="969000" />
-      <workItem from="1385724573667" duration="5676000" />
-      <workItem from="1385737387758" duration="636000" />
-      <workItem from="1385809443854" duration="6446000" />
-      <workItem from="1385889601387" duration="6134000" />
-      <workItem from="1385969857299" duration="528000" />
-      <workItem from="1385970983854" duration="7800000" />
-      <workItem from="1385988355646" duration="2548000" />
-      <workItem from="1386154958931" duration="1533000" />
-      <workItem from="1386157953801" duration="1472000" />
-      <workItem from="1386240806700" duration="2752000" />
-      <workItem from="1386245154892" duration="1214000" />
-      <workItem from="1386250368363" duration="1385000" />
-      <workItem from="1386252920727" duration="312000" />
-      <workItem from="1386258210792" duration="51000" />
-      <workItem from="1386262671955" duration="18000" />
-      <workItem from="1386576680527" duration="308000" />
-      <workItem from="1386587520815" duration="1397000" />
-      <workItem from="1386589187217" duration="1143000" />
-      <workItem from="1386592922533" duration="2892000" />
-      <workItem from="1386602180538" duration="822000" />
-      <workItem from="1386603349293" duration="107000" />
-      <workItem from="1386603682901" duration="374000" />
-      <workItem from="1386608914953" duration="35000" />
-      <workItem from="1386661242447" duration="2026000" />
-      <workItem from="1386671906249" duration="165000" />
-      <workItem from="1386674367908" duration="870000" />
-      <workItem from="1386680065858" duration="1750000" />
-      <workItem from="1386681851648" duration="226000" />
-      <workItem from="1386682085949" duration="112000" />
-      <workItem from="1386682256564" duration="340000" />
-      <workItem from="1386683119665" duration="280000" />
-      <workItem from="1386685431816" duration="1960000" />
-      <workItem from="1386755523601" duration="2333000" />
-      <workItem from="1386757997326" duration="10224000" />
-      <workItem from="1386833327547" duration="18477000" />
-      <workItem from="1386879970531" duration="3559000" />
-      <workItem from="1386920641355" duration="6143000" />
-      <workItem from="1387180994107" duration="3942000" />
-      <workItem from="1387275723700" duration="9869000" />
-      <workItem from="1387351872195" duration="2228000" />
-      <workItem from="1387354327716" duration="16385000" />
-      <workItem from="1387539305936" duration="8220000" />
-      <workItem from="1387717230219" duration="9308000" />
-      <workItem from="1387789870462" duration="6310000" />
-      <workItem from="1387875088931" duration="2690000" />
-      <workItem from="1387992584375" duration="468000" />
-      <workItem from="1388059301360" duration="10088000" />
-      <workItem from="1388145318369" duration="4677000" />
-      <workItem from="1388442762336" duration="1335000" />
-      <workItem from="1388477729965" duration="8064000" />
-      <workItem from="1388576851296" duration="4581000" />
-      <workItem from="1388699809966" duration="1665000" />
-      <workItem from="1388776313630" duration="8154000" />
-      <workItem from="1388913067993" duration="980000" />
-      <workItem from="1388941367546" duration="3395000" />
-      <workItem from="1389002991305" duration="7887000" />
-      <workItem from="1389102564936" duration="2040000" />
-      <workItem from="1389174282592" duration="9390000" />
-      <workItem from="1389186935386" duration="3903000" />
-      <workItem from="1389258204455" duration="3513000" />
-      <workItem from="1389343403901" duration="598000" />
-      <workItem from="1389523937051" duration="4030000" />
-      <workItem from="1389530365400" duration="10783000" />
-      <workItem from="1389598085540" duration="1835000" />
-      <workItem from="1389602431949" duration="10489000" />
-      <workItem from="1389618418950" duration="5480000" />
-      <workItem from="1389638647527" duration="11973000" />
-      <workItem from="1389686274408" duration="6411000" />
-      <workItem from="1389817595652" duration="3015000" />
-      <workItem from="1389851522034" duration="826000" />
-      <workItem from="1389859681421" duration="637000" />
-      <workItem from="1389867210569" duration="14603000" />
-      <workItem from="1389952677802" duration="8740000" />
-      <workItem from="1390277877829" duration="2252000" />
-      <workItem from="1390291841482" duration="4391000" />
-      <workItem from="1390383054926" duration="9871000" />
-      <workItem from="1390407407412" duration="2617000" />
-      <workItem from="1390466582192" duration="301000" />
-      <workItem from="1390467646385" duration="19297000" />
-      <workItem from="1390549235163" duration="5957000" />
-      <workItem from="1390724811000" duration="8130000" />
-      <workItem from="1390811531071" duration="10770000" />
-      <workItem from="1390896089943" duration="13042000" />
-      <workItem from="1391002300381" duration="6906000" />
-      <workItem from="1391019515115" duration="7913000" />
+      <changelist id="4c943155-af16-4b50-9094-bcc520af5923" name="Default" comment="" />
+      <created>1391075661736</created>
+      <updated>1391075661736</updated>
+      <workItem from="1391075661194" duration="6359000" />
     </task>
-    <task id="LOCAL-00001" summary="added indicators in tables">
-      <created>1378071164332</created>
-      <updated>1378071164332</updated>
-    </task>
-    <task id="LOCAL-00002" summary="added indicators in tables">
-      <created>1378241536876</created>
-      <updated>1378241536876</updated>
-    </task>
-    <task id="LOCAL-00003" summary="added indicators in tables">
-      <created>1378241734400</created>
-      <updated>1378241734400</updated>
-    </task>
-    <task id="LOCAL-00004" summary="added indicators in tables">
-      <created>1378502953718</created>
-      <updated>1378502953718</updated>
-    </task>
-    <task id="LOCAL-00005" summary="added indicators in tables">
-      <created>1378590640803</created>
-      <updated>1378590640803</updated>
-    </task>
-    <task id="LOCAL-00006" summary="added indicators in tables">
-      <created>1378591577964</created>
-      <updated>1378591577964</updated>
-    </task>
-    <task id="LOCAL-00007" summary="added indicators in tables">
-      <created>1378671654779</created>
-      <updated>1378671654779</updated>
-    </task>
-    <task id="LOCAL-00008" summary="added indicators in tables">
-      <created>1378721065740</created>
-      <updated>1378721065740</updated>
-    </task>
-    <task id="LOCAL-00009" summary="added indicators in tables">
-      <created>1378728562470</created>
-      <updated>1378728562470</updated>
-    </task>
-    <task id="LOCAL-00010" summary="added indicators in tables">
-      <created>1378795800511</created>
-      <updated>1378795800511</updated>
-    </task>
-    <task id="LOCAL-00011" summary="added indicators in tables">
-      <created>1379155372047</created>
-      <updated>1379155372047</updated>
-    </task>
-    <task id="LOCAL-00012" summary="added indicators in tables">
-      <created>1379181410867</created>
-      <updated>1379181410867</updated>
-    </task>
-    <task id="LOCAL-00013" summary="added indicators in tables">
-      <created>1379234105090</created>
-      <updated>1379234105090</updated>
-    </task>
-    <task id="LOCAL-00014" summary="added indicators in tables">
-      <created>1379274931591</created>
-      <updated>1379274931592</updated>
-    </task>
-    <task id="LOCAL-00015" summary="added indicators in tables">
-      <created>1379534397274</created>
-      <updated>1379534397274</updated>
-    </task>
-    <task id="LOCAL-00016" summary="added indicators in tables">
-      <created>1379534416785</created>
-      <updated>1379534416785</updated>
-    </task>
-    <task id="LOCAL-00017" summary="added indicators in tables">
-      <created>1379799029015</created>
-      <updated>1379799029015</updated>
-    </task>
-    <task id="LOCAL-00018" summary="added indicators in tables">
-      <created>1379961699075</created>
-      <updated>1379961699075</updated>
-    </task>
-    <task id="LOCAL-00019" summary="added indicators in tables">
-      <created>1380007637144</created>
-      <updated>1380007637144</updated>
-    </task>
-    <task id="LOCAL-00020" summary="added indicators in tables">
-      <created>1380057511615</created>
-      <updated>1380057511615</updated>
-    </task>
-    <task id="LOCAL-00021" summary="added indicators in tables">
-      <created>1380356163786</created>
-      <updated>1380356163786</updated>
-    </task>
-    <task id="LOCAL-00022" summary="added indicators in tables">
-      <created>1380356171359</created>
-      <updated>1380356171359</updated>
-    </task>
-    <task id="LOCAL-00023" summary="added indicators in tables">
-      <created>1380829449226</created>
-      <updated>1380829449226</updated>
-    </task>
-    <task id="LOCAL-00024" summary="added indicators in tables">
-      <created>1380829510650</created>
-      <updated>1380829510650</updated>
-    </task>
-    <task id="LOCAL-00025" summary="user properties&#10;">
-      <created>1380830164105</created>
-      <updated>1380830164105</updated>
-    </task>
-    <task id="LOCAL-00026" summary="user properties&#10;">
-      <created>1380832097679</created>
-      <updated>1380832097679</updated>
-    </task>
-    <task id="LOCAL-00027" summary="user properties&#10;">
-      <created>1380835671188</created>
-      <updated>1380835671188</updated>
-    </task>
-    <task id="LOCAL-00028" summary="user properties&#10;">
-      <created>1380836989909</created>
-      <updated>1380836989909</updated>
-    </task>
-    <task id="LOCAL-00029" summary="user properties&#10;">
-      <created>1380884623279</created>
-      <updated>1380884623279</updated>
-    </task>
-    <task id="LOCAL-00030" summary="user properties&#10;">
-      <created>1380912357932</created>
-      <updated>1380912357932</updated>
-    </task>
-    <task id="LOCAL-00031" summary="user properties&#10;">
-      <created>1380922953207</created>
-      <updated>1380922953207</updated>
-    </task>
-    <task id="LOCAL-00032" summary="user properties&#10;">
-      <created>1382040359289</created>
-      <updated>1382040359289</updated>
-    </task>
-    <task id="LOCAL-00033" summary="user properties&#10;">
-      <created>1382043951949</created>
-      <updated>1382043951949</updated>
-    </task>
-    <task id="LOCAL-00034" summary="user properties&#10;">
-      <created>1383909669553</created>
-      <updated>1383909669553</updated>
-    </task>
-    <task id="LOCAL-00035" summary="added metro">
-      <created>1384335440364</created>
-      <updated>1384335440364</updated>
-    </task>
-    <task id="LOCAL-00036" summary="added metro&#10;">
-      <created>1384335975613</created>
-      <updated>1384335975613</updated>
-    </task>
-    <task id="LOCAL-00037" summary="added metro&#10;">
-      <created>1384511887025</created>
-      <updated>1384511887025</updated>
-    </task>
-    <task id="LOCAL-00038" summary="added metro&#10;">
-      <created>1384532672473</created>
-      <updated>1384532672473</updated>
-    </task>
-    <task id="LOCAL-00039" summary="added metro&#10;">
-      <created>1384725278232</created>
-      <updated>1384725278232</updated>
-    </task>
-    <task id="LOCAL-00040" summary="added metro&#10;">
-      <created>1385068985530</created>
-      <updated>1385068985530</updated>
-    </task>
-    <task id="LOCAL-00041" summary="added metro&#10;">
-      <created>1385327920732</created>
-      <updated>1385327920732</updated>
-    </task>
-    <task id="LOCAL-00042" summary="added metro&#10;">
-      <created>1385466742099</created>
-      <updated>1385466742099</updated>
-    </task>
-    <task id="LOCAL-00043" summary="added metro&#10;">
-      <created>1385471751941</created>
-      <updated>1385471751941</updated>
-    </task>
-    <task id="LOCAL-00044" summary="added metro&#10;">
-      <created>1385474901866</created>
-      <updated>1385474901866</updated>
-    </task>
-    <task id="LOCAL-00045" summary="added metro&#10;">
-      <created>1385550893549</created>
-      <updated>1385550893549</updated>
-    </task>
-    <task id="LOCAL-00046" summary="added metro&#10;">
-      <created>1385561783046</created>
-      <updated>1385561783046</updated>
-    </task>
-    <task id="LOCAL-00047" summary="added metro&#10;">
-      <created>1385735599124</created>
-      <updated>1385735599124</updated>
-    </task>
-    <task id="LOCAL-00048" summary="added metro&#10;">
-      <created>1385847733677</created>
-      <updated>1385847733677</updated>
-    </task>
-    <task id="LOCAL-00049" summary="added metro&#10;">
-      <created>1385925564386</created>
-      <updated>1385925564386</updated>
-    </task>
-    <task id="LOCAL-00050" summary="refactoring indicators&#10;">
-      <created>1385971348221</created>
-      <updated>1385971348221</updated>
-    </task>
-    <task id="LOCAL-00051" summary="refactoring indicators&#10;">
-      <created>1385973465077</created>
-      <updated>1385973465077</updated>
-    </task>
-    <task id="LOCAL-00052" summary="refactoring indicators&#10;">
-      <created>1385974213510</created>
-      <updated>1385974213511</updated>
-    </task>
-    <task id="LOCAL-00053" summary="refactoring indicators&#10;">
-      <created>1385975808534</created>
-      <updated>1385975808534</updated>
-    </task>
-    <task id="LOCAL-00054" summary="refactoring indicators&#10;">
-      <created>1386241667078</created>
-      <updated>1386241667078</updated>
-    </task>
-    <task id="LOCAL-00055" summary="refactoring indicators&#10;">
-      <created>1386593696397</created>
-      <updated>1386593696397</updated>
-    </task>
-    <task id="LOCAL-00056" summary="cleanup&#10;">
-      <created>1386758733241</created>
-      <updated>1386758733241</updated>
-    </task>
-    <task id="LOCAL-00057" summary="cleanup&#10;">
-      <created>1386758741318</created>
-      <updated>1386758741318</updated>
-    </task>
-    <task id="LOCAL-00058" summary="cleanup&#10;">
-      <created>1386761852228</created>
-      <updated>1386761852228</updated>
-    </task>
-    <task id="LOCAL-00059" summary="cleanup&#10;">
-      <created>1386770845044</created>
-      <updated>1386770845044</updated>
-    </task>
-    <task id="LOCAL-00060" summary="cleanup&#10;">
-      <created>1386777542422</created>
-      <updated>1386777542422</updated>
-    </task>
-    <task id="LOCAL-00061" summary="cleanup&#10;">
-      <created>1386777559010</created>
-      <updated>1386777559010</updated>
-    </task>
-    <task id="LOCAL-00062" summary="cleanup&#10;">
-      <created>1386777816533</created>
-      <updated>1386777816533</updated>
-    </task>
-    <task id="LOCAL-00063" summary="cleanup&#10;">
-      <created>1386838818316</created>
-      <updated>1386838818316</updated>
-    </task>
-    <task id="LOCAL-00064" summary="cleanup&#10;">
-      <created>1386847982125</created>
-      <updated>1386847982125</updated>
-    </task>
-    <task id="LOCAL-00065" summary="cleanup&#10;">
-      <created>1386881915085</created>
-      <updated>1386881915085</updated>
-    </task>
-    <task id="LOCAL-00066" summary="cleanup&#10;">
-      <created>1386882463107</created>
-      <updated>1386882463108</updated>
-    </task>
-    <task id="LOCAL-00067" summary="cleanup&#10;">
-      <created>1386882940303</created>
-      <updated>1386882940304</updated>
-    </task>
-    <task id="LOCAL-00068" summary="cleanup&#10;">
-      <created>1386882957949</created>
-      <updated>1386882957949</updated>
-    </task>
-    <task id="LOCAL-00069" summary="cleanup&#10;">
-      <created>1386943443269</created>
-      <updated>1386943443270</updated>
-    </task>
-    <task id="LOCAL-00070" summary="cleanup&#10;">
-      <created>1387182666189</created>
-      <updated>1387182666189</updated>
-    </task>
-    <task id="LOCAL-00071" summary="cleanup&#10;">
-      <created>1387185523742</created>
-      <updated>1387185523742</updated>
-    </task>
-    <task id="LOCAL-00072" summary="cleanup&#10;">
-      <created>1387289581328</created>
-      <updated>1387289581328</updated>
-    </task>
-    <task id="LOCAL-00073" summary="cleanup&#10;">
-      <created>1387289605873</created>
-      <updated>1387289605873</updated>
-    </task>
-    <task id="LOCAL-00074" summary="cleanup&#10;">
-      <created>1387289614162</created>
-      <updated>1387289614162</updated>
-    </task>
-    <task id="LOCAL-00075" summary="testing drag and drop&#10;">
-      <created>1387356241880</created>
-      <updated>1387356241880</updated>
-    </task>
-    <task id="LOCAL-00076" summary="testing drag and drop&#10;">
-      <created>1387360362435</created>
-      <updated>1387360362436</updated>
-    </task>
-    <task id="LOCAL-00077" summary="testing drag and drop&#10;">
-      <created>1387364065785</created>
-      <updated>1387364065785</updated>
-    </task>
-    <task id="LOCAL-00078" summary="testing drag and drop&#10;">
-      <created>1387364522858</created>
-      <updated>1387364522859</updated>
-    </task>
-    <task id="LOCAL-00079" summary="testing drag and drop&#10;">
-      <created>1387365648413</created>
-      <updated>1387365648413</updated>
-    </task>
-    <task id="LOCAL-00080" summary="testing drag and drop&#10;">
-      <created>1387369706889</created>
-      <updated>1387369706890</updated>
-    </task>
-    <task id="LOCAL-00081" summary="testing drag and drop&#10;">
-      <created>1387372697173</created>
-      <updated>1387372697173</updated>
-    </task>
-    <task id="LOCAL-00082" summary="trading systems">
-      <created>1387545914747</created>
-      <updated>1387545914747</updated>
-    </task>
-    <task id="LOCAL-00083" summary="trading systems&#10;">
-      <created>1387721991954</created>
-      <updated>1387721991954</updated>
-    </task>
-    <task id="LOCAL-00084" summary="trading systems&#10;">
-      <created>1387727427530</created>
-      <updated>1387727427530</updated>
-    </task>
-    <task id="LOCAL-00085" summary="trading systems&#10;">
-      <created>1387877923736</created>
-      <updated>1387877923736</updated>
-    </task>
-    <task id="LOCAL-00086" summary="trading systems&#10;">
-      <created>1387993068930</created>
-      <updated>1387993068931</updated>
-    </task>
-    <task id="LOCAL-00087" summary="trading systems&#10;">
-      <created>1388095511861</created>
-      <updated>1388095511861</updated>
-    </task>
-    <task id="LOCAL-00088" summary="trading systems&#10;">
-      <created>1388175241019</created>
-      <updated>1388175241019</updated>
-    </task>
-    <task id="LOCAL-00089" summary="trading systems&#10;">
-      <created>1388701171910</created>
-      <updated>1388701171911</updated>
-    </task>
-    <task id="LOCAL-00090" summary="trading systems&#10;">
-      <created>1388785389193</created>
-      <updated>1388785389193</updated>
-    </task>
-    <task id="LOCAL-00091" summary="trading systems&#10;">
-      <created>1388786483358</created>
-      <updated>1388786483358</updated>
-    </task>
-    <task id="LOCAL-00092" summary="trading systems&#10;">
-      <created>1388943453750</created>
-      <updated>1388943453751</updated>
-    </task>
-    <task id="LOCAL-00093" summary="trading systems&#10;">
-      <created>1389007969624</created>
-      <updated>1389007969624</updated>
-    </task>
-    <task id="LOCAL-00094" summary="trading systems&#10;">
-      <created>1389181384165</created>
-      <updated>1389181384165</updated>
-    </task>
-    <task id="LOCAL-00095" summary="trading systems&#10;">
-      <created>1389564517226</created>
-      <updated>1389564517226</updated>
-    </task>
-    <task id="LOCAL-00096" summary="trading systems&#10;">
-      <created>1389615387993</created>
-      <updated>1389615387993</updated>
-    </task>
-    <task id="LOCAL-00097" summary="trading systems&#10;">
-      <created>1389878402116</created>
-      <updated>1389878402116</updated>
-    </task>
-    <task id="LOCAL-00098" summary="trading systems&#10;">
-      <created>1389885995487</created>
-      <updated>1389885995487</updated>
-    </task>
-    <task id="LOCAL-00099" summary="trading systems&#10;">
-      <created>1389965224758</created>
-      <updated>1389965224759</updated>
-    </task>
-    <task id="LOCAL-00100" summary="trading systems&#10;">
-      <created>1389967053055</created>
-      <updated>1389967053055</updated>
-    </task>
-    <task id="LOCAL-00101" summary="trading systems&#10;">
-      <created>1390409384349</created>
-      <updated>1390409384350</updated>
-    </task>
-    <task id="LOCAL-00102" summary="trading systems&#10;">
-      <created>1390555977877</created>
-      <updated>1390555977877</updated>
-    </task>
-    <task id="LOCAL-00103" summary="trading systems&#10;">
-      <created>1390558268669</created>
-      <updated>1390558268669</updated>
-    </task>
-    <task id="LOCAL-00104" summary="trading systems&#10;">
-      <created>1390820495868</created>
-      <updated>1390820495868</updated>
-    </task>
-    <task id="LOCAL-00105" summary="trading systems&#10;">
-      <created>1390830692888</created>
-      <updated>1390830692889</updated>
-    </task>
-    <task id="LOCAL-00106" summary="trading systems&#10;">
-      <created>1390836898363</created>
-      <updated>1390836898363</updated>
-    </task>
-    <task id="LOCAL-00107" summary="trading systems&#10;">
-      <created>1390909062317</created>
-      <updated>1390909062317</updated>
-    </task>
-    <task id="LOCAL-00108" summary="trading systems&#10;">
-      <created>1390912928309</created>
-      <updated>1390912928309</updated>
-    </task>
-    <task id="LOCAL-00109" summary="trading systems&#10;">
-      <created>1390919088212</created>
-      <updated>1390919088212</updated>
-    </task>
-    <task id="LOCAL-00110" summary="trading systems&#10;">
-      <created>1390922535872</created>
-      <updated>1390922535872</updated>
-    </task>
-    <task id="LOCAL-00111" summary="trading systems&#10;">
-      <created>1390925081626</created>
-      <updated>1390925081626</updated>
-    </task>
-    <task id="LOCAL-00112" summary="trading systems&#10;">
-      <created>1390925554557</created>
-      <updated>1390925554557</updated>
-    </task>
-    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="490292000" />
+    <option name="totallyTimeSpent" value="6359000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="-8" width="1620" height="893" extended-state="6" />
+    <frame x="103" y="30" width="1469" height="841" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" x="-7" y="-8" width="1337" height="705" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6524138" sideWeight="0.5744108" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.4257576" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14736165" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6353591" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6951724" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31169665" sideWeight="0.6300268" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43663913" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.67265195" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5742424" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24949427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.68499255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22491103" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952252" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44198895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48480663" sideWeight="0.4996633" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1825,360 +714,375 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added indicators in tables" />
-    <MESSAGE value="user properties&#10;" />
-    <MESSAGE value="added metro" />
-    <MESSAGE value="added metro&#10;" />
-    <MESSAGE value="refactoring indicators&#10;" />
-    <MESSAGE value="cleanup&#10;" />
-    <MESSAGE value="testing drag and drop&#10;" />
-    <MESSAGE value="trading systems" />
-    <MESSAGE value="trading systems&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="trading systems&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_header.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="33" selection-start="315" selection-end="315" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="330" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/css/jquery.jqplot.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="23" selection-start="2906" selection-end="2906" vertical-scroll-proportion="-21.04" vertical-offset="1259" max-vertical-offset="3975" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/IndicatorEnum.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/TradeControllerSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2280" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAMath.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="49" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2085" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration/com/netnumeri/server/finance/finpojo/asset/StockTests.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="36" selection-start="1682" selection-end="1682" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../dtmcCentral/dtmcCentral.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="64" selection-start="425" selection-end="425" vertical-scroll-proportion="0.26825634" vertical-offset="0" max-vertical-offset="671" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="73" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.46646795" vertical-offset="407" max-vertical-offset="9750" />
-      </provider>
-    </entry>
-    <entry file="jar://$M2_REPO$/gov/nist/math/jama/1.0.2/jama-1.0.2.jar!/Jama/Matrix.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="16" selection-start="4330" selection-end="4330" vertical-scroll-proportion="0.0" vertical-offset="1480" max-vertical-offset="2115" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/jama-1.0.2-sources.jar!/Jama/Matrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="912" column="15" selection-start="23362" selection-end="23362" vertical-scroll-proportion="0.33228347" vertical-offset="13379" max-vertical-offset="15675" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/jama-1.0.2-sources.jar!/Jama/EigenvalueDecomposition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="914" column="17" selection-start="25994" selection-end="25994" vertical-scroll-proportion="-0.57894737" vertical-offset="13897" max-vertical-offset="14355" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SMAIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="30" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAItem.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="11" selection-start="121" selection-end="121" vertical-scroll-proportion="0.13412817" vertical-offset="0" max-vertical-offset="671">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/Daily.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="18" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.3323398" vertical-offset="962" max-vertical-offset="2265" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/tools/grails-2.3.1/lib/junit/junit/jars/junit-4.11.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="37" selection-start="836" selection-end="836" vertical-scroll-proportion="0.2974359" vertical-offset="81" max-vertical-offset="825" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/NetUtils.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="55" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="1215">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/IndicatorsTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="66" selection-start="3943" selection-end="3943" vertical-scroll-proportion="0.0" vertical-offset="1233" max-vertical-offset="3075" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SSASeriesPredictionIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="73" selection-start="234" selection-end="234" vertical-scroll-proportion="0.15625" vertical-offset="0" max-vertical-offset="672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSAPredictionTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="58" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0" vertical-offset="438" max-vertical-offset="1245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/list.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="16" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/dtmc/PortfolioListController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="5" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="300" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/dtmc/PageController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="315" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/VanillaTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="63" selection-start="2231" selection-end="2927" vertical-scroll-proportion="0.0" vertical-offset="859" max-vertical-offset="1545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="14" selection-start="360" selection-end="360" vertical-scroll-proportion="0.33925685" vertical-offset="0" max-vertical-offset="630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/Indicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="42" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAStudy.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="102" selection-start="5697" selection-end="5697" vertical-scroll-proportion="0.0" vertical-offset="2946" max-vertical-offset="3450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_indicator.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="30" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="393" selection-end="393" vertical-scroll-proportion="-2.1875" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/DateUtils.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="24" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="30" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="4320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooUtils.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="0" selection-start="5802" selection-end="5802" vertical-scroll-proportion="0.0" vertical-offset="1791" max-vertical-offset="13680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Strategy.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="15" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="1065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossover.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SMACrossoverSignal.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="43" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="840">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ta/SSAComponentsIndicator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="59" selection-start="1313" selection-end="1365" vertical-scroll-proportion="0.34653464" vertical-offset="465" max-vertical-offset="12630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="247" column="29" selection-start="10468" selection-end="10468" vertical-scroll-proportion="-9.375" vertical-offset="3480" max-vertical-offset="5145">
+        <state line="25" column="52" selection-start="772" selection-end="772" vertical-scroll-proportion="-4.0625" vertical-offset="180" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="34" selection-start="1490" selection-end="1529" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="885">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="4.6875" vertical-offset="225" max-vertical-offset="885">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/show.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="28" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="810">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="696">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_DemoPage/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="8" selection-start="6151" selection-end="6151" vertical-scroll-proportion="-8.75" vertical-offset="1305" max-vertical-offset="2640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/trade/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="11" selection-start="1787" selection-end="2164" vertical-scroll-proportion="-10.9375" vertical-offset="225" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="6" selection-start="648" selection-end="648" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="5145">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/_ssa.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="31" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="990">
+        <state line="21" column="35" selection-start="906" selection-end="906" vertical-scroll-proportion="1.0625" vertical-offset="366" max-vertical-offset="990">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/GenericTimeSeries.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="1485">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/TimeSeries.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="32" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="17685">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_candlestick.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="28" selection-start="1948" selection-end="1948" vertical-scroll-proportion="-7.1875" vertical-offset="270" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/_candlestick.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="45" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1230">
-          <folding>
-            <marker date="1391007943925" expanded="true" signature="1175:1592" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSASignal.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="33" selection-start="2966" selection-end="2966" vertical-scroll-proportion="0.0" vertical-offset="934" max-vertical-offset="2040">
+        <state line="18" column="74" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="2340">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/companylist-1.csv">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/Strategy.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3282" column="0" selection-start="77" selection-end="386231" vertical-scroll-proportion="-9.892858" vertical-offset="48953" max-vertical-offset="49320">
+        <state line="46" column="86" selection-start="1463" selection-end="1463" vertical-scroll-proportion="0.0" vertical-offset="393" max-vertical-offset="1065">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="38" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/companylist.csv">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6034" column="23" selection-start="730703" selection-end="730703" vertical-scroll-proportion="-5.428571" vertical-offset="90358" max-vertical-offset="90990">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="33" selection-start="1155" selection-end="1155" vertical-scroll-proportion="0.0" vertical-offset="381" max-vertical-offset="3630">
+        <state line="40" column="92" selection-start="1489" selection-end="1489" vertical-scroll-proportion="-2.375" vertical-offset="486" max-vertical-offset="1125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="375" selection-end="375" vertical-scroll-proportion="0.18072289" vertical-offset="90" max-vertical-offset="975">
+        <state line="15" column="56" selection-start="524" selection-end="524" vertical-scroll-proportion="-7.9583335" vertical-offset="34" max-vertical-offset="990">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/_datetimepicker.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="41" selection-start="331" selection-end="331" vertical-scroll-proportion="0.26833633" vertical-offset="0" max-vertical-offset="24510">
+          <folding>
+            <marker date="1377633262000" expanded="true" signature="5552:28677" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="5579:5683" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="5613:5673" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="5707:5826" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="5741:5816" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="5849:5860" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="5884:5918" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="5942:6652" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="6679:6777" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="6801:6868" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="6895:7000" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="7030:7274" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="7298:7383" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="7410:7602" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="7629:7713" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="7737:7829" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="7853:7952" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="7976:8319" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="8140:8309" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="8346:8585" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="8374:8444" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="8609:9847" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="8634:9837" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="9877:11726" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="9934:11673" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="11750:12158" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="12182:12524" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="12548:12910" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="12624:12880" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="12728:12800" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="12934:13272" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="12992:13238" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="13092:13174" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="13296:13536" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="13572:13636" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="13667:14088" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="14119:14279" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="14304:14555" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="14583:14807" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="14636:14797" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="14832:14939" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="14877:14929" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="14967:15076" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="15019:15066" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="15831:16024" placeholder="[...]" />
+            <marker date="1377633262000" expanded="true" signature="16300:18345" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="16316:16363" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="16383:16446" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="16467:16525" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="16542:16584" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="16603:16650" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="16667:16708" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="16727:16790" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="16810:16875" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="16896:16956" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="16973:17015" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17032:17077" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17095:17149" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17169:17217" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17238:17286" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17303:17388" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17405:17490" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17507:17550" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17567:17621" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17638:17683" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17700:17745" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17762:17821" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17839:17904" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17923:17979" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="17996:18141" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="18159:18285" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="18302:18344" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="18510:21621" placeholder="{&quot;_ordinal&quot;: &quot;%d&quot;...}" />
+            <marker date="1377633262000" expanded="true" signature="18529:18653" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="18785:18839" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="18943:19002" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="19030:19421" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="19156:19411" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="19528:19582" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="19670:19729" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="19806:19863" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="20016:20305" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="20212:20261" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="20336:20409" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="20609:20718" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="20976:21110" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="21140:21289" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="21313:21374" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="21415:21447" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="21474:21506" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="21527:21595" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="21646:21714" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="21743:21824" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="21848:21889" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="21920:22159" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="22222:22376" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="22404:22493" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="22521:22566" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="22596:22641" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="22664:27569" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="22684:22722" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="22745:22783" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="22803:22860" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="22884:22962" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="22984:23022" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="23044:23125" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="23148:23290" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="23313:23524" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="23543:23596" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="23617:23670" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="23693:23800" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="23823:23961" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="23989:24128" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="24155:24746" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="24770:24862" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="24886:24934" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="24958:25235" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="25261:25370" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="25391:25503" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="25523:25664" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="25688:26247" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="25750:26184" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="26269:26363" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="26390:26513" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="26541:26664" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="26690:26815" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="26835:26911" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="26938:27017" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="27043:27197" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="27221:27330" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="27351:27468" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="27489:27568" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="27795:28176" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="27815:27864" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="27887:27981" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="28006:28158" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="28299:28480" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="28322:28479" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="28638:28670" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="28696:29032" placeholder="/** @version: 1.2 ...*/" />
+            <marker date="1377633262000" expanded="true" signature="29051:65209" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="29116:41765" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="29967:30348" placeholder="{&quot;applyLabel&quot;: 'Apply'...}" />
+            <marker date="1377633262000" expanded="true" signature="30385:30400" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="30635:30809" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="30669:30793" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="30815:30898" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="30969:31478" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="31026:31223" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="31096:31203" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="31265:31342" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="31385:31464" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="32896:37556" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="34175:35704" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="34231:35333" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="34397:34568" placeholder="//..." />
+            <marker date="1377633262000" expanded="true" signature="34854:35062" placeholder="//..." />
+            <marker date="1377633262000" expanded="true" signature="35186:35251" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="35425:35506" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="35930:36379" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="36000:36361" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="36183:36339" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="36549:36636" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="36700:36785" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="36849:36932" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="36997:37080" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="37142:37219" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="37289:37384" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="37452:37541" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="37592:37731" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="37871:37934" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="37977:38289" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="38378:38479" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="38774:39378" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="38836:39364" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="39029:39176" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="39231:39346" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="39525:39700" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="39736:39903" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="41804:64887" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="41886:41938" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="41977:42728" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="42498:42600" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="42606:42714" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="42774:43418" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="43453:43558" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="43591:45211" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="43744:43962" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="44005:44599" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="44046:44345" placeholder="{&quot;left&quot;: 'auto'...}" />
+            <marker date="1377633262000" expanded="true" signature="44406:44581" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="44451:44557" placeholder="{&quot;right&quot;: 'auto'...}" />
+            <marker date="1377633262000" expanded="true" signature="44605:45197" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="44646:44897" placeholder="{&quot;right&quot;: 'auto'...}" />
+            <marker date="1377633262000" expanded="true" signature="45004:45179" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="45049:45155" placeholder="{&quot;left&quot;: 'auto'...}" />
+            <marker date="1377633262000" expanded="true" signature="45245:45707" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="45339:45439" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="45741:46059" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="46099:46579" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="46208:46266" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="46272:46565" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="46619:47840" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="46728:46841" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="46847:47826" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="47037:47168" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="47879:48214" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="47983:48068" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="48074:48160" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="48253:48578" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="48357:48437" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="48443:48524" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="48617:49213" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="48875:49034" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="49040:49198" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="49252:51204" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="49509:49954" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="49692:49936" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="49840:49914" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="49960:50416" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="50146:50398" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="50300:50376" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="50551:50714" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="50752:50954" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="51244:51460" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="51501:51720" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="51760:52197" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="51927:52032" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="52038:52142" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="52238:52675" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="52406:52511" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="52517:52621" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="52715:53916" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="53143:53311" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="53341:53603" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="53609:53860" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="53960:55886" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="54872:55760" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="54915:55231" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="55037:55209" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="55237:55717" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="55523:55695" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="55959:57306" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="56461:56518" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="57053:57257" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="57102:57189" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="57376:58684" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="57619:57995" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="57723:57977" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="58370:58582" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="58763:64877" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="59151:59265" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="59271:59331" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="59486:59592" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="59744:59859" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="59865:59925" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="60235:60312" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="60471:62468" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="60739:62413" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="61025:61106" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="61190:61664" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="61353:61441" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="61552:61638" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="61750:62152" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="61878:61966" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="62040:62126" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="62614:64834" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="62908:63194" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="63251:63571" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="63301:63432" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="63438:63549" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="63755:64203" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="63929:64062" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="64068:64181" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="64295:64778" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="64411:64558" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="64564:64711" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="64944:65201" placeholder="{...}" />
+            <marker date="1377633262000" expanded="true" signature="64980:65164" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2191,7 +1095,6 @@
             <GrailsSettings>
               <option name="buildConfigCrc" value="-53832317" />
               <option name="pluginDependenciesCrc" value="-849843153" />
-              <option name="fixedGrailsVersion" value="2.3.1" />
               <option name="properties">
                 <map>
                   <entry key="grails.global.plugins.dir" value="$USER_HOME$/.grails/2.3.1/global-plugins" />
@@ -2210,93 +1113,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>GrailsWeb (dtmc)|Web</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>grails-2.3.1</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.6</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>GrailsWeb|dtmc</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
 

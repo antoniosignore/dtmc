@@ -47,6 +47,7 @@
 		<g:message code="trade.transactionDate.label" default="Transaction Date" />
 		
 	</label>
-	<g:datePicker name="transactionDate" precision="day"  value="${tradeInstance?.transactionDate}" default="none" noSelection="['': '']" />
+    <g:datePicker name="transactionDate" precision="day" value="${tradeInstance?.transactionDate}" default="none"
+                  noSelection="['': '']"/>
 </div>
 
