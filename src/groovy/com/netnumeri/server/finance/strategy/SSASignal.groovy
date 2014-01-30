@@ -15,17 +15,17 @@ public class SSASignal extends Strategy {
 
     Instrument asset
     TradeEnum lastTrade
-    Date da
-    Date a
 
     public SSASignal(String name, Stock asset, Date firstDate, Date lastDate) {
         super(name, asset, firstDate, lastDate, 0);
         this.asset = asset
         this.da = firstDate
-        this.a = lastDate
     }
 
     public void evaluateInstrumentOnDate(Date date, Instrument stockInstance) {
+
+        Date da = DateUtils.dateNYearsAgo(date, 1);
+        Date a = date
 
         StockUtils.refreshDaily(stockInstance as Stock, da, a);
 

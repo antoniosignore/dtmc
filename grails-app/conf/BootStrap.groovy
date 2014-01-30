@@ -5,10 +5,14 @@ import com.dtmc.club.SecUser
 import com.dtmc.club.SecUserSecRole
 import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.enums.PortfolioEnum
+import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.indicator.UserIndicators
+import com.netnumeri.server.finance.ta.NormalizedSeriesIndicator
+import com.netnumeri.server.finance.ta.SSAComponentsIndicator
 import com.netnumeri.server.finance.utils.DateUtils
+import com.netnumeri.server.utils.StockUtils
 
 class BootStrap {
 
@@ -81,9 +85,6 @@ class BootStrap {
 
             println "portfolio.id = $portfolio.id"
 
-            Date da = DateUtils.Date("1/1/2007");
-            Date a = DateUtils.today();
-
             Stock aapl = new Stock("AAPL", "Apple Computers");
             aapl.save(failOnError: true, insert: true, flush: true)
 
@@ -92,7 +93,16 @@ class BootStrap {
 
             if (UserIndicators.getAll() == null || UserIndicators.getAll().size() == 0) {
 
-                UserIndicators userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma 10", integer1: 10);
+                UserIndicators userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.Normalized, name: "normalized");
+                userIndicators.save(flush: true, failOnError: true)
+
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumFirstComponent, name: "ssa0", integer1: 50);
+                userIndicators.save(flush: true, failOnError: true)
+
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumSecondComponent, name: "ssa1", integer1: 50);
+                userIndicators.save(flush: true, failOnError: true)
+
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma 10", integer1: 10);
                 userIndicators.save(flush: true, failOnError: true)
 
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma 50", integer1: 50);
@@ -101,11 +111,6 @@ class BootStrap {
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.WeightedMovingAverage, name: "wma 50", integer1: 50);
                 userIndicators.save(flush: true, failOnError: true)
 
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumFirstComponent, name: "ssa0", integer1: 50);
-                userIndicators.save(flush: true, failOnError: true)
-
-//                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumSecondComponent, name: "ssa1", integer1: 50);
-//                userIndicators.save(flush: true, failOnError: true)
 //
 //                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumFirstSecondComponent, name: "ssa01", integer1: 50);
 //                userIndicators.save(flush: true, failOnError: true)

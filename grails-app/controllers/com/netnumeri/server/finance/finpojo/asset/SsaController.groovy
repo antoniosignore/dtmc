@@ -9,7 +9,7 @@ import com.netnumeri.server.utils.StockUtils
 
 class SsaController {
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    static allowedMethods = [show: "GET", update: "POST", delete: "POST"]
 
     def index() {
         redirect(action: "show", params: params)
@@ -28,6 +28,7 @@ class SsaController {
         }
 
         Date da = DateUtils.Date("11/1/2012");
+//        Date a = DateUtils.Date("12/23/2013");
         Date a = DateUtils.today();
 
         // last year
@@ -35,7 +36,6 @@ class SsaController {
 
         TimeSeries closeSeries = stockInstance.buildCloseSeries()
         closeSeries.normalize()
-
         stockInstance.indicators.put("normalized", new NormalizedSeriesIndicator(closeSeries, "Normalized"))
 
         List<Integer> components = [0]
@@ -48,7 +48,7 @@ class SsaController {
         stockInstance.indicators.put("comp01", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components01))
 
         Strategy strategy = new SSASignal("test", stockInstance, da, a);
-//        strategy.run();
+        strategy.run();
 
         [
                 startDate: da,

@@ -5,6 +5,7 @@ enum IndicatorEnum {
     SimpleMovingAverage("Simple Moving Average"),
     WeightedMovingAverage("Weighted Moving Average"),
     SingularSpectrumFirstComponent("Singular Spectrum First Component"),
+    Normalized("Normalized"),
     SingularSpectrumSecondComponent("Singular Spectrum Second Component"),
     SingularSpectrumFirstSecondComponent("Singular Spectrum First Second Component"),
     SingularSpectrumPrediction("Singular Spectrum Prediction"),

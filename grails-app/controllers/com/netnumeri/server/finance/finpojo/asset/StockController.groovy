@@ -95,6 +95,10 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.SingularSpectrumPrediction) {
 
+            } else if (ui.type == IndicatorEnum.Normalized) {
+
+                ui.indicator = new NormalizedSeriesIndicator(closes, "SSA-01");
+
             } else if (ui.type == IndicatorEnum.UpperBollingerBand) {
 
                 ui.indicator = new BollingerBandUpIndicator(closes, "BB-Upper", ui.integer1, ui.double1);

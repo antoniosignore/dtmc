@@ -93,6 +93,7 @@ public class SSATest extends TestCase {
         double[] fullRebuilt = ssa.reconstructedAll(items)
         println "fullRebuilt ===> " + fullRebuilt
 
+
     }
 
 }
