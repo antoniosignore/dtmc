@@ -6,7 +6,7 @@ class DtmcTagLib {
     def indicators = { attrs ->
         def indicators = attrs.indicators
         indicators.eachWithIndex { indicator, counter ->
-            out << g.render(template: '/stock/indicator', model: [indicator: indicator, indicatorCounter: counter])
+            out << g.render(template: '/common/indicator', model: [indicator: indicator, indicatorCounter: counter])
         }
     }
 

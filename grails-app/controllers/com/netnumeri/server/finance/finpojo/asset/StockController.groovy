@@ -12,6 +12,8 @@ import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
 import org.springframework.dao.DataIntegrityViolationException
 
+import java.text.SimpleDateFormat
+
 class StockController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -42,7 +44,13 @@ class StockController {
     }
 
     def show() {
-        def stockInstance = Stock.get(params.id)
+
+
+        println "params.id = $params.id"
+        println "params.range = $params.range"
+        println "params.ajax = $params.ajax"
+
+        def stockInstance = Stock.get(params.id as Integer)
         if (!stockInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'stock.label', default: 'Stock'), params.id])
             redirect(action: "list")
@@ -51,6 +59,15 @@ class StockController {
 
         Date da = DateUtils.Date("11/1/2012");
         Date a = DateUtils.today();
+        String str = params.range
+        if (str != null) {
+            SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm aa")
+            String[] split = str.split("-")
+            String startDateString = split[0].trim()
+            String endDateString = split[1].trim()
+            da = format.parse(startDateString)
+            a = format.parse(endDateString)
+        }
 
         // last year
         StockUtils.refreshDaily(stockInstance);
@@ -88,7 +105,12 @@ class StockController {
                 List<Integer> components = [1]
                 ui.indicator = new SSAComponentsIndicator(closes, "SSA-1", ui.integer1, components);
 
-            } else if (ui.type == IndicatorEnum.SingularSpectrumFirstSecondComponent) {
+            } else if (ui.type == IndicatorEnum.SingularSpectrumSecondComponent) {
+
+                List<Integer> components = [2]
+                ui.indicator = new SSAComponentsIndicator(closes, "SSA-2", ui.integer1, components);
+
+            } else if (ui.type == IndicatorEnum.SingularSpectrumThirdComponent) {
 
                 List<Integer> components = [0, 1]
                 ui.indicator = new SSAComponentsIndicator(closes, "SSA-01", ui.integer1, components);
@@ -253,7 +275,7 @@ class StockController {
         stockInstance.indicators.put("upper", new SMAIndicator(closes, "SMA-" + 50, 50))
         stockInstance.indicators.put("lower", new SMAIndicator(closes, "SMA-" + 10, 10))
         Strategy strategy = new SMACrossoverSignal("test", stockInstance, da, a);
-        strategy.run();
+//        strategy.run();
 
         [
                 startDate: da,

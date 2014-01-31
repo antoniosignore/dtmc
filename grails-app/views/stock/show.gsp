@@ -37,9 +37,22 @@
         </tbody>
     </table>
 
-    <g:render template="snapshot"/>
-    <g:render template="candlestick"/>
+    <div class="updateDatesForm">
+        <g:formRemote url="[controller: 'stock', action: 'show']" update="messages" name="updateDatesForm">
+            <div class="control-group required">
+                <label for="range" class="control-label"><g:message
+                        code="dates.range.label"
+                        default="Dates range"/></label>
+                <g:render template="/common/datetimepicker"/>
+            </div>
 
+            <g:hiddenField name="id" value="${stockInstance.id}"/>
+            <g:hiddenField name="ayax" value="true"/>
+            <g:submitButton name="Refresh"/>
+        </g:formRemote>
+    </div>
+
+    <g:render template="/common/charts"/>
 
 </section>
 

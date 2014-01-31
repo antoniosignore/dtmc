@@ -18,7 +18,8 @@
             ]
         });
     });
-    data_${indicatorCounter} = ${indicator.indicator.getJqPlot()}
+    data_${indicatorCounter} =
+    ${indicator.indicator.getJqPlot()}
 </script>
 
 <div class="item" id='chart_${indicatorCounter}' style='height:200px; width:100%;'></div>

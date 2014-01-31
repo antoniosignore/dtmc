@@ -2,7 +2,7 @@
 
 <script class="code" language="javascript" type="text/javascript">
     $(document).ready(function () {
-        var plot2 = $.jqplot('chart2', [ohlc, buysignals, sellsignals/*, lower, upper*/], {
+        var plot2 = $.jqplot('chart', [ohlc, buysignals, sellsignals/*, lower, upper*/], {
             seriesDefaults: {yaxis: 'yaxis'},
             axes: {
                 xaxis: {
@@ -20,7 +20,7 @@
                     rendererOptions: { candleStick: true },
                     highlighter: {
                         showMarker: false,
-                        pointLabels:{ show:true, location:'s', ypadding:3 },
+                        pointLabels: { show: true, location: 's', ypadding: 3 },
                         tooltipAxes: 'xy',
                         yvalues: 4,
                         formatString: '<table class="jqplot-highlighter"> \
@@ -33,23 +33,23 @@
                     }
                 },
                 {
-                    showLine:false,
-                    markerOptions: { size: 10, style:"filledCircle",color: 'blue' }
+                    showLine: false,
+                    markerOptions: { size: 10, style: "diamonds", color: 'blue' }
                 },
                 {
-                    showLine:false,
-                    markerOptions: { size: 10, style:"filledCircle",color: 'red' }
+                    showLine: false,
+                    markerOptions: { size: 10, style: "filledCircle", color: 'red' }
                 }
-/*                ,
-                {
-                    lineWidth:1, showMarker: false,
-                    showLine:true
-                },
-                {
-                    lineWidth:1, showMarker: false,
-                    showLine:true
-                }
-                */
+                /*                ,
+                 {
+                 lineWidth:1, showMarker: false,
+                 showLine:true
+                 },
+                 {
+                 lineWidth:1, showMarker: false,
+                 showLine:true
+                 }
+                 */
             ],
             highlighter: {
                 show: true
@@ -57,20 +57,21 @@
             cursor: {
                 show: true
             },
-            grid:{
-                borderColor:'transparent',
-                shadow:false,
-                drawBorder:false
+            grid: {
+                borderColor: 'transparent',
+                shadow: false,
+                drawBorder: false
             }
         });
     });
 
     ohlc = ${StockUtils.getCandleStickPlot(stockInstance)}
-    buysignals = ${StockUtils.getBuySignals(strategyInstance)}
-    sellsignals = ${StockUtils.getSellSignals(strategyInstance)}
+            buysignals = ${StockUtils.getBuySignals(strategyInstance)}
+                    sellsignals =
+    ${StockUtils.getSellSignals(strategyInstance)}
     %{--lower= ${stockInstance.indicators.get("lower").jqPlot}--}%
     %{--upper= ${stockInstance.indicators.get("upper").jqPlot}--}%
 
 </script>
 
-<div id="chart2" style="height:300px; width:100%;"></div>
+<div id="chart" style="height:300px; width:100%;"></div>
