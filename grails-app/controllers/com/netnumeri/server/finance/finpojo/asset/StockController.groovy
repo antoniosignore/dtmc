@@ -45,7 +45,6 @@ class StockController {
 
     def show() {
 
-
         println "params.id = $params.id"
         println "params.range = $params.range"
         println "params.ajax = $params.ajax"
@@ -61,7 +60,7 @@ class StockController {
         Date a = DateUtils.today();
         String str = params.range
         if (str != null) {
-            SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm aa")
+            SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy")
             String[] split = str.split("-")
             String startDateString = split[0].trim()
             String endDateString = split[1].trim()
@@ -70,7 +69,7 @@ class StockController {
         }
 
         // last year
-        StockUtils.refreshDaily(stockInstance);
+        StockUtils.refreshDaily(stockInstance, da, a);
 
         // todo - add user
         List<UserIndicators> list = UserIndicators.list()

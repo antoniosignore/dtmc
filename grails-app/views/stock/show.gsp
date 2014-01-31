@@ -43,7 +43,7 @@
                 <label for="range" class="control-label"><g:message
                         code="dates.range.label"
                         default="Dates range"/></label>
-                <g:render template="/common/datetimepicker"/>
+                <g:render template="/common/datepicker"/>
             </div>
 
             <g:hiddenField name="id" value="${stockInstance.id}"/>
