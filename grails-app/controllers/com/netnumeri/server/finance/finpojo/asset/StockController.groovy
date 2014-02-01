@@ -48,6 +48,8 @@ class StockController {
         println "params.id = $params.id"
         println "params.range = $params.range"
         println "params.ajax = $params.ajax"
+        println "params.to = $params.to"
+        println "params.from = $params.from"
 
         def stockInstance = Stock.get(params.id as Integer)
         if (!stockInstance) {
@@ -274,7 +276,7 @@ class StockController {
         stockInstance.indicators.put("upper", new SMAIndicator(closes, "SMA-" + 50, 50))
         stockInstance.indicators.put("lower", new SMAIndicator(closes, "SMA-" + 10, 10))
         Strategy strategy = new SMACrossoverSignal("test", stockInstance, da, a);
-//        strategy.run();
+//      strategy.run();
 
         [
                 startDate: da,
