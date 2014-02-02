@@ -30,12 +30,12 @@ class StockUtils {
     }
 
     public static void refreshData(Stock stock) {
-        refreshDaily(stock)
+        lastYear(stock)
         refreshChain(stock)
         stock.snapshot = YahooUtils.getCompanySnapshot(stock.name);
     }
 
-    public static void refreshDaily(Stock stock) {
+    public static void lastYear(Stock stock) {
         YahooUtils.refreshDailyData(stock, DateUtils.todayOneYearAgo(), DateUtils.today());
     }
 

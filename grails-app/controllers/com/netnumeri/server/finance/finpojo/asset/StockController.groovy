@@ -46,8 +46,6 @@ class StockController {
     def show() {
 
         println "params.id = $params.id"
-        println "params.range = $params.range"
-        println "params.ajax = $params.ajax"
         println "params.to = $params.to"
         println "params.from = $params.from"
 
@@ -58,19 +56,15 @@ class StockController {
             return
         }
 
-        Date da = DateUtils.Date("11/1/2012");
-        Date a = DateUtils.today();
-        String str = params.range
-        if (str != null) {
-            SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy")
-            String[] split = str.split("-")
-            String startDateString = split[0].trim()
-            String endDateString = split[1].trim()
-            da = format.parse(startDateString)
-            a = format.parse(endDateString)
+        Date da = DateUtils.todayOneYearAgo()
+        Date a = DateUtils.today()
+
+        if (params.from != null) {
+            SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy")
+            da = format.parse(params.from)
+            a = format.parse(params.to)
         }
 
-        // last year
         StockUtils.refreshDaily(stockInstance, da, a);
 
         // todo - add user
@@ -278,14 +272,16 @@ class StockController {
         Strategy strategy = new SMACrossoverSignal("test", stockInstance, da, a);
 //      strategy.run();
 
-        [
-                startDate: da,
-                endDate: a,
-                stockInstance: stockInstance,
-                strategyInstance: strategy,
-                indicators: list
-        ]
-
+/*
+ if (isAjax) {
+            render(view: "_panel", model: [isAjax: true, history: history, deviceFamily: DeviceFamilies.list()]);
+        } else
+            render(view: "publish", model: [history: history, deviceFamily: DeviceFamilies.list()]);
+ */
+        if (request.xhr)
+            render(view: "_stock", model: [startDate: da, endDate: a, stockInstance: stockInstance, strategyInstance: strategy, indicators: list])
+        else
+            render(view: "show", model: [startDate: da, endDate: a, stockInstance: stockInstance, strategyInstance: strategy, indicators: list])
     }
 
     def edit() {

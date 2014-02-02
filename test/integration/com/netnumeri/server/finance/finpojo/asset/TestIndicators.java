@@ -24,7 +24,7 @@ public class TestIndicators {
         Instrument stockInstance = YahooUtils.downloadYahooData("AAPL", "desc", da, a);
 
         // last year
-//        StockUtils.refreshDaily(stockInstance);
+//        StockUtils.lastYear(stockInstance);
 
         TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
 
