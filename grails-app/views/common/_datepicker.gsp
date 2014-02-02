@@ -1,4 +1,4 @@
-<r:external uri="/css/datepicker.js"/>
+<r:external uri="/css/datepicker.css"/>
 <r:external uri="/js/bootstrap-datepicker.js"/>
 
 <div class="well">
