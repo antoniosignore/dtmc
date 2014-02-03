@@ -9,7 +9,6 @@ import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.PortfolioEntry
 import com.netnumeri.server.finance.finpojo.Transaction
-import com.netnumeri.server.finance.ssa.SSAAnalysis
 import com.netnumeri.server.finance.ssa.SSAMath
 import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.StringTemplate
@@ -307,49 +306,49 @@ public class SSAStrategy extends Strategy {
     @Override
     public void evaluateInstrumentOnDate(Date date, Instrument stock) {
 
-        if (i++ < WINDOW) return;
-
-        String dir = "/home/antonio/timeplot/ssa/" + new SimpleDateFormat("yyyyMMdd").format(date) + "/"
-        TimeSeries closes = stock.getCloseSeries(stock.getFirstDate(), date)
-
-        SSAAnalysis analysis = new SSAAnalysis(closes.convertToList(), WINDOW)
-
-//        stock.indicators.put("SMA-" + 256, new SMAIndicator(closes, "SMA-" + 256, 256))
-
-        def components = [0]
-        Indicator ssa0 = new SSAComponentsIndicator(closes, "SSA-0", analysis, components);
-        stock.indicators.put(ssa0.name, ssa0)
-
-        components = [1]
-        Indicator ssa1 = new SSAComponentsIndicator(closes, "SSA-1", analysis, components);
-        stock.indicators.put(ssa1.name, ssa1)
-
-//        components = [0,1]
-//        Indicator ssa01 = new SSAComponentsIndicator(closes,"SSAStrategy-01", analysis, components);
-//        stock.indicators.put(ssa01.name, ssa01)
-
-        components = [2]
-        Indicator ssa2 = new SSAComponentsIndicator(closes, "SSA-2", analysis, components);
-        stock.indicators.put(ssa2.name, ssa2)
-
-        components = [3]
-        Indicator ssa3 = new SSAComponentsIndicator(closes, "SSA-3", analysis, components);
-        stock.indicators.put(ssa3.name, ssa3)
-
-        components = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-        Indicator ssa05 = new SSAComponentsIndicator(closes, "SSA-05", analysis, components);
-        stock.indicators.put(ssa05.name, ssa05)
-
-        Indicator ssa1Predict = new SSASeriesPredictionIndicator(closes, "SSA-0-predict", WINDOW, 3, components, 10);
-        stock.indicators.put(ssa1Predict.name, ssa1Predict)
-
-        StockUtils.printTimeplotIndicatorOnFile(dir, stock)
-
-        SimpleDateFormat timeplotFormat = new SimpleDateFormat("yyyy-MM-dd")
-
-        String html = getHtml(timeplotFormat.format(date), dir)
-
-        FileUtils.writeStringToFile(new File(dir + "/ssa.html"), html)
+//        if (i++ < WINDOW) return;
+//
+//        String dir = "/home/antonio/timeplot/ssa/" + new SimpleDateFormat("yyyyMMdd").format(date) + "/"
+//        TimeSeries closes = stock.getCloseSeries(stock.getFirstDate(), date)
+//
+//        SSAAnalysis analysis = new SSAAnalysis(closes.convertToList(), WINDOW)
+//
+////        stock.indicators.put("SMA-" + 256, new SMAIndicator(closes, "SMA-" + 256, 256))
+//
+//        def components = [0]
+//        Indicator ssa0 = new SSAComponentsIndicator(closes, "SSA-0", analysis, components);
+//        stock.indicators.put(ssa0.name, ssa0)
+//
+//        components = [1]
+//        Indicator ssa1 = new SSAComponentsIndicator(closes, "SSA-1", analysis, components);
+//        stock.indicators.put(ssa1.name, ssa1)
+//
+////        components = [0,1]
+////        Indicator ssa01 = new SSAComponentsIndicator(closes,"SSAStrategy-01", analysis, components);
+////        stock.indicators.put(ssa01.name, ssa01)
+//
+//        components = [2]
+//        Indicator ssa2 = new SSAComponentsIndicator(closes, "SSA-2", analysis, components);
+//        stock.indicators.put(ssa2.name, ssa2)
+//
+//        components = [3]
+//        Indicator ssa3 = new SSAComponentsIndicator(closes, "SSA-3", analysis, components);
+//        stock.indicators.put(ssa3.name, ssa3)
+//
+//        components = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+//        Indicator ssa05 = new SSAComponentsIndicator(closes, "SSA-05", analysis, components);
+//        stock.indicators.put(ssa05.name, ssa05)
+//
+//        Indicator ssa1Predict = new SSASeriesPredictionIndicator(closes, "SSA-0-predict", WINDOW, 3, components, 10);
+//        stock.indicators.put(ssa1Predict.name, ssa1Predict)
+//
+//        StockUtils.printTimeplotIndicatorOnFile(dir, stock)
+//
+//        SimpleDateFormat timeplotFormat = new SimpleDateFormat("yyyy-MM-dd")
+//
+//        String html = getHtml(timeplotFormat.format(date), dir)
+//
+//        FileUtils.writeStringToFile(new File(dir + "/ssa.html"), html)
 
     }
 

@@ -67,7 +67,6 @@ grails.project.dependency.resolution = {
 
         runtime ":raphael:2.0.1"
 
-
         compile ':mail:1.0.1', {
             excludes 'spring-test'
         }
@@ -77,7 +76,7 @@ grails.project.dependency.resolution = {
 
         compile ':cache:1.0.1'
 
-        compile ":scaffolding:2.0.1"
+        compile ":scaffolding:1.0.0"
 
 //        compile ":spring-security-core:2.0-RC2"
 

@@ -56,16 +56,16 @@ public class SSAMath {
 
     private static double forecastSingleComponent(List<Double> augmented, int component, int window) {
 
-        SSAAnalysis an = new SSAAnalysis(augmented, window)
-        List<Double> singleComponentSeries = an.getEigenComponent(component);
-        double lastPrediction = singleComponentSeries.get(singleComponentSeries.size() - 1);
-        while (true) {
-            double prediction = singleComponentSeries.get(singleComponentSeries.size() - 1);
-            if (Math.abs(prediction - lastPrediction) < epsilon) {
-                return prediction
-            }
-            lastPrediction = prediction;
-        }
+//        SSAAnalysis an = new SSAAnalysis(augmented, window)
+//        List<Double> singleComponentSeries = an.getEigenComponent(component);
+//        double lastPrediction = singleComponentSeries.get(singleComponentSeries.size() - 1);
+//        while (true) {
+//            double prediction = singleComponentSeries.get(singleComponentSeries.size() - 1);
+//            if (Math.abs(prediction - lastPrediction) < epsilon) {
+//                return prediction
+//            }
+//            lastPrediction = prediction;
+//        }
     }
 
     private static List<Double> getAugmentedByMovingAverage(double[] array, int order) {
@@ -91,43 +91,43 @@ public class SSAMath {
         return getAugmentedByMovingAverage(ar, order)
     }
 
-    public static double[] computeForecast(int numberOfDaysInTheFuture, int window, List<Integer> components,
-                                           SSAAnalysis analysis) throws NRError {
-        long start = System.currentTimeMillis();
-
-        double[] serie = analysis.getEigenComponents(components);
-
-        double[] predictedSerie = Util.vector(1, numberOfDaysInTheFuture);
-        double[] augmentedSerie = Util.augmentByMovingAverage(serie);
-        double lastPrediction;
-        for (int i = 1; i <= numberOfDaysInTheFuture; i++) {
-            println "SSAMath.computeForecast no : " + i
-
-            lastPrediction = Util.getLastValue(augmentedSerie);
-            while (true) {
-                println "SSAMath.computeForecast"
-                SSAAnalysis eserie = new SSAAnalysis(StockUtils.toList(augmentedSerie), window);
-                double prediction = 0
-                for (int j = 0; j < components.size(); j++) {
-                    Integer o = components.get(j);
-                    double[] s1 = eserie.getEigenComponent(o);
-                    prediction = prediction + Util.getLastValue(s1)
-                }
-                Util.setLastValue(augmentedSerie, prediction);
-
-                println "Math.abs(prediction - lastPrediction = " + (prediction - lastPrediction)
-
-                if (Math.abs(prediction - lastPrediction) < epsilon) {
-                    predictedSerie[i] = prediction;
-                    break;
-                }
-                lastPrediction = prediction;
-            }
-            augmentedSerie = Util.augmentByMovingAverage(augmentedSerie);
-        }
-        long end = System.currentTimeMillis();
-        Util.debug("DURATA = " + (end - start) / 1000);
-        return predictedSerie;
-    }
+//    public static double[] computeForecast(int numberOfDaysInTheFuture, int window, List<Integer> components,
+//                                           SSAAnalysis analysis) throws NRError {
+//        long start = System.currentTimeMillis();
+//
+//        double[] serie = analysis.getEigenComponents(components);
+//
+//        double[] predictedSerie = Util.vector(1, numberOfDaysInTheFuture);
+//        double[] augmentedSerie = Util.augmentByMovingAverage(serie);
+//        double lastPrediction;
+//        for (int i = 1; i <= numberOfDaysInTheFuture; i++) {
+//            println "SSAMath.computeForecast no : " + i
+//
+//            lastPrediction = Util.getLastValue(augmentedSerie);
+//            while (true) {
+//                println "SSAMath.computeForecast"
+//                SSAAnalysis eserie = new SSAAnalysis(StockUtils.toList(augmentedSerie), window);
+//                double prediction = 0
+//                for (int j = 0; j < components.size(); j++) {
+//                    Integer o = components.get(j);
+//                    double[] s1 = eserie.getEigenComponent(o);
+//                    prediction = prediction + Util.getLastValue(s1)
+//                }
+//                Util.setLastValue(augmentedSerie, prediction);
+//
+//                println "Math.abs(prediction - lastPrediction = " + (prediction - lastPrediction)
+//
+//                if (Math.abs(prediction - lastPrediction) < epsilon) {
+//                    predictedSerie[i] = prediction;
+//                    break;
+//                }
+//                lastPrediction = prediction;
+//            }
+//            augmentedSerie = Util.augmentByMovingAverage(augmentedSerie);
+//        }
+//        long end = System.currentTimeMillis();
+//        Util.debug("DURATA = " + (end - start) / 1000);
+//        return predictedSerie;
+//    }
 
 }

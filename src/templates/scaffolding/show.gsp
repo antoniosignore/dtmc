@@ -14,7 +14,7 @@
 
 <section id="show-${domainClass.propertyName}" class="first">
 
-    <table class="table table-striped table-bordered table-condensed table-hover">
+    <table class="table">
         <tbody>
         <% excludedProps = Event.allEvents.toList() << 'id' << 'version'
         allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'

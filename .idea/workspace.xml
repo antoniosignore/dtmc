@@ -2,6 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c943155-af16-4b50-9094-bcc520af5923" name="Default" comment="trading systems&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/templates/scaffolding/Test.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/templates/scaffolding/list.gsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/trade/_form.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/trade/create.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/trade/edit.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/trade/index.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/trade/show.gsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/templates/scaffolding/AsyncController.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/templates/scaffolding/AsyncSpec.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/templates/scaffolding/Controller.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/templates/scaffolding/Spec.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/templates/scaffolding/index.gsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAMath.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAMath.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/_form.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/create.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" afterPath="$PROJECT_DIR$/dtmc-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/renderEditor.template" afterPath="$PROJECT_DIR$/src/templates/scaffolding/renderEditor.template" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/scaffolding/show.gsp" afterPath="$PROJECT_DIR$/src/templates/scaffolding/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -58,7 +79,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" line="63" class="com.netnumeri.server.finance.finpojo.asset.StockController" package="com.netnumeri.server.finance.finpojo.asset">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -84,102 +105,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_stock.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_stock.gsp">
+      <file leaf-file-name="BuildConfig.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="-0.0" vertical-offset="15" max-vertical-offset="105">
+            <state line="56" column="62" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.0" vertical-offset="679" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockUtils.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy">
+      <file leaf-file-name="SSAMath.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAMath.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="26" selection-start="1481" selection-end="1481" vertical-scroll-proportion="0.0" vertical-offset="488" max-vertical-offset="4320">
+            <state line="125" column="41" selection-start="5054" selection-end="5054" vertical-scroll-proportion="0.0" vertical-offset="1660" max-vertical-offset="2085">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="YahooUtils.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/utils/YahooUtils.groovy">
+      <file leaf-file-name="SSAStrategy.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="24" selection-start="3074" selection-end="3074" vertical-scroll-proportion="0.0" vertical-offset="1212" max-vertical-offset="13680">
+            <state line="452" column="39" selection-start="20970" selection-end="20970" vertical-scroll-proportion="0.0" vertical-offset="6595" max-vertical-offset="9735">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Instrument.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Instrument.groovy">
+      <file leaf-file-name="TradeController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/TradeController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="36" selection-start="291" selection-end="291" vertical-scroll-proportion="5.625" vertical-offset="315" max-vertical-offset="1710">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transaction.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Transaction.groovy">
           <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="324" column="0" selection-start="10409" selection-end="10409" vertical-scroll-proportion="-1.25" vertical-offset="4795" max-vertical-offset="12630">
+            <state line="11" column="51" selection-start="352" selection-end="352" vertical-scroll-proportion="0.26612905" vertical-offset="0" max-vertical-offset="1635">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Asset.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Asset.groovy">
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="TransactionController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/TransactionController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="40" selection-start="245" selection-end="245" vertical-scroll-proportion="-3.1730769" vertical-offset="0" max-vertical-offset="360">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_candlestick.gsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/common/_candlestick.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="115" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.31437126" vertical-offset="900" max-vertical-offset="1245">
-              <folding>
-                <marker date="1391176177834" expanded="true" signature="1179:1596" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stock.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/asset/Stock.groovy">
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="570">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericTimeSeries.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/GenericTimeSeries.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="37" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1485">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_charts.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/common/_charts.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="115" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="135">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_datepicker.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/common/_datepicker.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="95" selection-start="461" selection-end="471" vertical-scroll-proportion="-2.8125" vertical-offset="0" max-vertical-offset="300">
+            <state line="11" column="15" selection-start="290" selection-end="290" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1620">
               <folding />
             </state>
           </provider>
@@ -216,8 +193,13 @@
         <option value="$PROJECT_DIR$/grails-app/views/stock/_stock.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/common/_charts.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/stock/show.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/utils/StockUtils.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAMath.groovy" />
+        <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy" />
+        <option value="$PROJECT_DIR$/src/templates/scaffolding/Spec.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/TransactionController.groovy" />
       </list>
     </option>
   </component>
@@ -275,6 +257,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/templates" />
       <recent name="$PROJECT_DIR$/grails-app/views/common" />
       <recent name="$PROJECT_DIR$/grails-app/views/ssa" />
     </key>
@@ -695,7 +678,10 @@
       <workItem from="1391161501369" duration="7445000" />
       <workItem from="1391199405508" duration="2549000" />
       <workItem from="1391250723438" duration="10104000" />
-      <workItem from="1391343154746" duration="9353000" />
+      <workItem from="1391343154746" duration="9370000" />
+      <workItem from="1391411995592" duration="4469000" />
+      <workItem from="1391455597150" duration="2269000" />
+      <workItem from="1391458215101" duration="173000" />
     </task>
     <task id="LOCAL-00001" summary="trading systems&#10;">
       <created>1391084425095</created>
@@ -737,14 +723,18 @@
       <created>1391353974888</created>
       <updated>1391353974888</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="trading systems&#10;">
+      <created>1391377284594</created>
+      <updated>1391377284594</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42777000" />
+    <option name="totallyTimeSpent" value="49705000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-8" width="1618" height="892" extended-state="0" />
+    <frame x="-9" y="-8" width="1618" height="892" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -756,6 +746,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32827586" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -766,19 +757,18 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48895028" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39917126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39917126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25225225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48895028" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -804,82 +794,32 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="37" selection-start="2439" selection-end="2439" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5205">
+        <state line="56" column="62" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.0" vertical-offset="679" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/common/_candlestick.gsp">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAMath.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
+        <state line="125" column="41" selection-start="5054" selection-end="5054" vertical-scroll-proportion="0.0" vertical-offset="1660" max-vertical-offset="2085">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/show.gsp">
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="28" selection-start="2203" selection-end="2203" vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="1125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="97" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="271" max-vertical-offset="1200">
+        <state line="452" column="39" selection-start="20970" selection-end="20970" vertical-scroll-proportion="0.0" vertical-offset="6595" max-vertical-offset="9735">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/stock/show.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/TradeController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="51" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="885">
+        <state line="29" column="55" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/taglib/com/netnumeri/server/finance/indicator/DtmcTagLib.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/common/_indicator.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="67" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/common/_snapshot.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/_ssa.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="35" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="990">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="105" selection-start="3716" selection-end="3716" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="3705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/trade/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="6" selection-start="1787" selection-end="2184" vertical-scroll-proportion="-0.0" vertical-offset="765" max-vertical-offset="885" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/ta/SSATest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2036" selection-end="2036" vertical-scroll-proportion="0.0" vertical-offset="873" max-vertical-offset="1590" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSASignal.groovy">
@@ -910,9 +850,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/ssa/_ssa.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="35" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="990">
-          <folding />
-        </state>
+        <state line="21" column="35" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="990" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/taglib/com/netnumeri/server/finance/indicator/DtmcTagLib.groovy">
@@ -955,58 +893,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/common/_indicator.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="67" selection-start="843" selection-end="843" vertical-scroll-proportion="0.625" vertical-offset="0" max-vertical-offset="624">
-          <folding />
-        </state>
+        <state line="26" column="67" selection-start="843" selection-end="843" vertical-scroll-proportion="0.625" vertical-offset="0" max-vertical-offset="624" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="696">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="696" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_user.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="52" selection-start="772" selection-end="772" vertical-scroll-proportion="-1.8958334" vertical-offset="284" max-vertical-offset="660">
-          <folding />
-        </state>
+        <state line="25" column="52" selection-start="772" selection-end="772" vertical-scroll-proportion="-1.8958334" vertical-offset="284" max-vertical-offset="660" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/list.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/web-forms2.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="455" column="16" selection-start="10262" selection-end="10262" vertical-scroll-proportion="0.3323398" vertical-offset="6602" max-vertical-offset="12210">
-          <folding />
-        </state>
+        <state line="455" column="16" selection-start="10262" selection-end="10262" vertical-scroll-proportion="0.3323398" vertical-offset="6602" max-vertical-offset="12210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-app/js/bootstrap-datepicker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7185">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7185" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="19" selection-start="4259" selection-end="4259" vertical-scroll-proportion="0.0" vertical-offset="1294" max-vertical-offset="2760">
-          <folding />
-        </state>
+        <state line="106" column="19" selection-start="4259" selection-end="4259" vertical-scroll-proportion="0.0" vertical-offset="1294" max-vertical-offset="2760" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.grails/2.3.1/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/grails-app/taglib/kickstart/BootstrapTagLib.groovy">
@@ -1018,9 +940,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/_DemoPage/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="59" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2640">
-          <folding />
-        </state>
+        <state line="0" column="59" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2640" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.grails/2.3.1/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/grails-app/domain/kickstartwithbootstrapgrailsplugin/_DemoPage.groovy">
@@ -1028,296 +948,12 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="51" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="1545">
-          <folding />
-        </state>
+        <state line="41" column="51" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="1545" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/common/_datetimepicker.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1595" column="45" selection-start="65134" selection-end="65134" vertical-scroll-proportion="0.0" vertical-offset="23925" max-vertical-offset="24510">
-          <folding>
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{&quot;_ordinal&quot;: &quot;%d&quot;...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="/** @version: 1.2 ...*/" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{&quot;applyLabel&quot;: 'Apply'...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{&quot;left&quot;: 'auto'...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{&quot;right&quot;: 'auto'...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{&quot;right&quot;: 'auto'...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{&quot;left&quot;: 'auto'...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1391199600745" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
+        <state line="1595" column="45" selection-start="65134" selection-end="65134" vertical-scroll-proportion="0.0" vertical-offset="23925" max-vertical-offset="24510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-app/css/datepicker.css">
@@ -1327,51 +963,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="521" selection-end="521" vertical-scroll-proportion="-3.6458333" vertical-offset="65" max-vertical-offset="735">
-          <folding />
-        </state>
+        <state line="16" column="35" selection-start="521" selection-end="521" vertical-scroll-proportion="-3.6458333" vertical-offset="65" max-vertical-offset="735" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/common/_snapshot.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/common/_charts.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="115" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="135">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="115" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="135" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/_stock.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="-0.0" vertical-offset="15" max-vertical-offset="105">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="-0.0" vertical-offset="15" max-vertical-offset="105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/stock/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="50" selection-start="1865" selection-end="1865" vertical-scroll-proportion="-7.3541665" vertical-offset="307" max-vertical-offset="1065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/common/_datepicker.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="95" selection-start="461" selection-end="471" vertical-scroll-proportion="-2.8125" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
+        <state line="44" column="50" selection-start="1865" selection-end="1865" vertical-scroll-proportion="-7.3541665" vertical-offset="307" max-vertical-offset="1065" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/tools/jdk1.7.0_03/src.zip!/java/util/TreeMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="27" selection-start="11666" selection-end="11666" vertical-scroll-proportion="0.64941174" vertical-offset="3879" max-vertical-offset="36315">
-          <folding />
-        </state>
+        <state line="300" column="27" selection-start="11666" selection-end="11666" vertical-scroll-proportion="0.64941174" vertical-offset="3879" max-vertical-offset="36315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/beans/GenericTimeSeries.groovy">
@@ -1410,14 +1027,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="324" column="0" selection-start="10409" selection-end="10409" vertical-scroll-proportion="-1.25" vertical-offset="4795" max-vertical-offset="12630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="22" selection-start="2476" selection-end="2476" vertical-scroll-proportion="118.958336" vertical-offset="3950" max-vertical-offset="5490">
+        <state line="324" column="0" selection-start="10409" selection-end="10409" vertical-scroll-proportion="0.0" vertical-offset="4860" max-vertical-offset="12630">
           <folding />
         </state>
       </provider>
@@ -1427,17 +1037,82 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="245" selection-end="245" vertical-scroll-proportion="-3.1730769" vertical-offset="0" max-vertical-offset="360">
+        <state line="11" column="40" selection-start="245" selection-end="245" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="360">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/common/_datepicker.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="95" selection-start="461" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="300" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/common/_candlestick.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="115" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.31437126" vertical-offset="900" max-vertical-offset="1245">
-          <folding>
-            <marker date="1391176177834" expanded="true" signature="1179:1596" placeholder="..." />
-          </folding>
+        <state line="53" column="12" selection-start="2274" selection-end="2274" vertical-scroll-proportion="0.31410256" vertical-offset="599" max-vertical-offset="1245" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/StockController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="275" column="26" selection-start="11537" selection-end="11537" vertical-scroll-proportion="0.06944445" vertical-offset="4080" max-vertical-offset="5400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="27" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="62" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.0" vertical-offset="679" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/ssa/SSAMath.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="41" selection-start="5054" selection-end="5054" vertical-scroll-proportion="0.0" vertical-offset="1660" max-vertical-offset="2085">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/scaffolding/edit.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="29" selection-start="314" selection-end="314" vertical-scroll-proportion="0.17883755" vertical-offset="0" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/groovy/com/netnumeri/server/finance/strategy/SSAStrategy.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="452" column="39" selection-start="20970" selection-end="20970" vertical-scroll-proportion="0.0" vertical-offset="6595" max-vertical-offset="9735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/TransactionController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="15" selection-start="290" selection-end="290" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/TradeController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="36" selection-start="291" selection-end="291" vertical-scroll-proportion="5.625" vertical-offset="315" max-vertical-offset="1710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/Transaction.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="51" selection-start="352" selection-end="352" vertical-scroll-proportion="0.26612905" vertical-offset="0" max-vertical-offset="1635">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1448,8 +1123,8 @@
         <entry key="dtmc">
           <value>
             <GrailsSettings>
-              <option name="buildConfigCrc" value="-53832317" />
-              <option name="pluginDependenciesCrc" value="-849843153" />
+              <option name="buildConfigCrc" value="1514327781" />
+              <option name="pluginDependenciesCrc" value="-1807039795" />
               <option name="properties">
                 <map>
                   <entry key="grails.global.plugins.dir" value="$USER_HOME$/.grails/2.3.1/global-plugins" />

@@ -272,12 +272,6 @@ class StockController {
         Strategy strategy = new SMACrossoverSignal("test", stockInstance, da, a);
 //      strategy.run();
 
-/*
- if (isAjax) {
-            render(view: "_panel", model: [isAjax: true, history: history, deviceFamily: DeviceFamilies.list()]);
-        } else
-            render(view: "publish", model: [history: history, deviceFamily: DeviceFamilies.list()]);
- */
         if (request.xhr)
             render(view: "_stock", model: [startDate: da, endDate: a, stockInstance: stockInstance, strategyInstance: strategy, indicators: list])
         else
