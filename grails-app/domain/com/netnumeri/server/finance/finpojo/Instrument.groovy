@@ -722,6 +722,10 @@ class Instrument extends Persistable implements Serializable {
         if (DateUtils.isLess(firstDate, firstDailyDate)) firstDate = firstDailyDate;
         if (DateUtils.isGreater(lastDate, lastDailyDate)) lastDate = lastDailyDate;
         double value;
+
+        println "firstDate = $firstDate"
+        println "lastDate = $lastDate"
+
         for (Date date = firstDate;
         DateUtils.isLessEqual(date, lastDate);
         date = DateUtils.addDays(date, 1)) {
