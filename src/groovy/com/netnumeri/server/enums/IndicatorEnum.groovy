@@ -9,6 +9,7 @@ enum IndicatorEnum {
     SingularSpectrumThirdComponent("Singular Spectrum Third Component"),
     SingularSpectrumSecondComponent("Singular Spectrum Second Component"),
     SingularSpectrumFirstSecondComponent("Singular Spectrum First Second Component"),
+    SingularSpectrumSecondThirdComponent("Singular Spectrum Second third Component"),
     SingularSpectrumPrediction("Singular Spectrum Prediction"),
     PriceChannelUpper("Price Channel Upper"),
     PriceChannelLower("Price Channel Lower"),

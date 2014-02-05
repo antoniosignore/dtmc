@@ -110,6 +110,11 @@ class StockController {
                 List<Integer> components = [0, 1]
                 ui.indicator = new SSAComponentsIndicator(closes, "SSA-01", ui.integer1, components);
 
+            } else if (ui.type == IndicatorEnum.SingularSpectrumSecondThirdComponent) {
+
+                List<Integer> components = [1, 2]
+                ui.indicator = new SSAComponentsIndicator(closes, "SSA-12", ui.integer1, components);
+
             } else if (ui.type == IndicatorEnum.SingularSpectrumPrediction) {
 
             } else if (ui.type == IndicatorEnum.Normalized) {

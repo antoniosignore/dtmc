@@ -1,4 +1,4 @@
-<%@ page import="com.netnumeri.server.finance.indicator.UserIndicators" %>
+<%@ page import="com.netnumeri.server.enums.IndicatorEnum; com.netnumeri.server.finance.indicator.UserIndicators" %>
 
 
 
@@ -118,8 +118,8 @@
             default="Type"/></label>
 
     <div class="controls">
-        <g:select name="type" from="${com.netnumeri.server.enums.IndicatorEnum?.values()}"
-                  keys="${com.netnumeri.server.enums.IndicatorEnum.values()*.name()}"
+        <g:select name="type" from="${IndicatorEnum?.values()}"
+                  keys="${IndicatorEnum.values()*.name()}"
                   value="${userIndicatorsInstance?.type?.name()}" noSelection="['': '']"/>
         <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'type', 'error')}</span>
     </div>
