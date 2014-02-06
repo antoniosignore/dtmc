@@ -26,9 +26,11 @@ public class SSASignal extends Strategy {
         Date da = DateUtils.dateNYearsAgo(date, 1);
         Date a = date
 
-        StockUtils.refreshDaily(asset as Stock, da, a);
+        Stock stock = new Stock(asset.name, "clone");
 
-        TimeSeries closeSeries = asset.buildCloseSeries()
+        StockUtils.refreshDaily(stock as Stock, da, a);
+
+        TimeSeries closeSeries = stock.buildCloseSeries()
         closeSeries.normalize()
 
 //        stockInstance.indicators.put("normalized", new NormalizedSeriesIndicator(closeSeries, "Normalized"))
@@ -36,7 +38,7 @@ public class SSASignal extends Strategy {
         List<Integer> components = [0]
         Indicator trend = new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components)
 
-        List<Integer> components1 = [1, 2]
+        List<Integer> components1 = [1]
         Indicator comp1 = new SSAComponentsIndicator(closeSeries, "SSA-12", 50, components1)
 
 //        Indicator trend = asset.indicators.get("trend");
