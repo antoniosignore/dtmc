@@ -22,7 +22,7 @@ public abstract class Strategy {
     def final Date firstDate;
     def final Date lastDate;
 
-    abstract public void evaluateInstrumentOnDate(Date date, Instrument asset);
+    abstract public void evaluateInstrumentOnDate(Date date);
 
     public Strategy(String name, Instrument asset, Date firstDate, Date lastDate, double wealth) {
 
@@ -48,16 +48,16 @@ public abstract class Strategy {
 
     public void run() {
 
-        Date day = asset.firstDailyDate()
+        Date day = firstDate
         println "day = $day"
 
-        Date lastDay = asset.lastDailyDate()
+        Date lastDay = lastDate
         println "lastDay = $lastDay"
 
         while (DateUtils.isLessEqual(day, lastDay)) {
             if (asset.isDataAvailable(day)) {
                 println "evaluate day = $day"
-                evaluateInstrumentOnDate(day, asset);
+                evaluateInstrumentOnDate(day);
             }
             day = DateUtils.nextDay(day);
         }

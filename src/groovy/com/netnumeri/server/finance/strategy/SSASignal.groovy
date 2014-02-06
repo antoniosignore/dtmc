@@ -19,30 +19,30 @@ public class SSASignal extends Strategy {
     public SSASignal(String name, Stock asset, Date firstDate, Date lastDate) {
         super(name, asset, firstDate, lastDate, 0);
         this.asset = asset
-        this.da = firstDate
     }
 
-    public void evaluateInstrumentOnDate(Date date, Instrument stockInstance) {
+    public void evaluateInstrumentOnDate(Date date) {
 
         Date da = DateUtils.dateNYearsAgo(date, 1);
         Date a = date
 
-        StockUtils.refreshDaily(stockInstance as Stock, da, a);
+        StockUtils.refreshDaily(asset as Stock, da, a);
 
-        TimeSeries closeSeries = stockInstance.buildCloseSeries()
+        TimeSeries closeSeries = asset.buildCloseSeries()
         closeSeries.normalize()
 
-        stockInstance.indicators.put("normalized", new NormalizedSeriesIndicator(closeSeries, "Normalized"))
+//        stockInstance.indicators.put("normalized", new NormalizedSeriesIndicator(closeSeries, "Normalized"))
 
         List<Integer> components = [0]
-        stockInstance.indicators.put("trend", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components))
+        Indicator trend = new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components)
 
-        List<Integer> components1 = [1]
-        stockInstance.indicators.put("comp1", new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components1))
+        List<Integer> components1 = [1, 2]
+        Indicator comp1 = new SSAComponentsIndicator(closeSeries, "SSA-12", 50, components1)
 
-        Indicator trend = asset.indicators.get("trend");
-        Indicator comp1 = asset.indicators.get("comp1");
-
+//        Indicator trend = asset.indicators.get("trend");
+//        Indicator comp1 = asset.indicators.get("comp1");
+//        Indicator comp1 = asset.indicators.get("comp12");
+//
         if (!(DateUtils.isGreater(date, trend.firstDate) && DateUtils.isGreater(date, comp1.firstDate)))
             return
 

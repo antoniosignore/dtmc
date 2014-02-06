@@ -166,6 +166,9 @@ public class YahooUtils {
         double low = 0;
         double close = 0;
         double volume = 0;
+
+        instrument.dailyarray.clear()
+
         Stack lines = new Stack();
         String s3 = null;
         InputStream is = NetUtils.openURL(url);

@@ -37,18 +37,18 @@
         </tbody>
     </table>
 
-    <div class="updateDatesForm">
-        <g:formRemote url="[controller: 'ssa', action: 'show']" update="messages" name="updateStatusForm">
-            <div class="control-group required">
-                <label for="range" class="control-label"><g:message
-                        code="campaigns.range.label"
-                        default="Dates range"/></label>
-                <g:render template="datetimepicker"/>
-            </div>
+    %{--<div class="updateDatesForm">--}%
+    %{--<g:formRemote url="[controller: 'ssa', action: 'show']" update="messages" name="updateStatusForm">--}%
+    %{--<div class="control-group required">--}%
+    %{--<label for="range" class="control-label"><g:message--}%
+    %{--code="campaigns.range.label"--}%
+    %{--default="Dates range"/></label>--}%
+    %{--<g:render template="datetimepicker"/>--}%
+    %{--</div>--}%
 
-            <g:submitButton name="Refresh"/>
-        </g:formRemote>
-    </div>
+    %{--<g:submitButton name="Refresh"/>--}%
+    %{--</g:formRemote>--}%
+    %{--</div>--}%
 
     <div id="messages">
         <g:render template="/common/candlestick"/>

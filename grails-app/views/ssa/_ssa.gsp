@@ -53,7 +53,8 @@
     normalized = ${stockInstance.indicators.get("normalized").jqPlot}
     trend= ${stockInstance.indicators.get("trend").jqPlot}
     comp01= ${stockInstance.indicators.get("comp01").jqPlot}
-    comp1= ${stockInstance.indicators.get("comp1").jqPlot}
+            comp1 =
+    ${stockInstance.indicators.get("comp12").jqPlot}
 
 </script>
 
