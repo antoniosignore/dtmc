@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
 <section id="show-stock" class="first">
 
     <table class="table table-striped table-bordered table-condensed table-hover">
@@ -36,27 +35,7 @@
         </tbody>
     </table>
 
-    <div class="updateDatesForm">
-        <g:formRemote url="[controller: 'stock', action: 'show']" update="charts" name="updateDatesForm">
-            <div class="control-group required">
-                <label for="range" class="control-label"><g:message
-                        code="dates.range.label"
-                        default="Dates range"/></label>
-                <g:render template="/common/datepicker"/>
-            </div>
-
-            <g:hiddenField name="id" value="${stockInstance.id}"/>
-            <g:submitButton name="Refresh"/>
-        </g:formRemote>
-    </div>
-
-    <div id="charts">
-        <g:render template="/common/charts"/>
-        <div id="container" class="js-masonry"
-             data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
-            <dtmc:indicators indicators="${indicators}"/>
-        </div>
-    </div>
+    <g:render template="/common/charts"/>
 
 </section>
 </body>

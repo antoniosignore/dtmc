@@ -20,3 +20,4 @@
     </div>
 </div>
 
+<g:render template="/common/datepicker"/>
