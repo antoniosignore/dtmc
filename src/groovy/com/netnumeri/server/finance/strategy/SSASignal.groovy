@@ -11,10 +11,13 @@ import com.netnumeri.server.finance.ta.SSAComponentsIndicator
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.utils.StockUtils
 
+import java.text.SimpleDateFormat
+
 public class SSASignal extends Strategy {
 
     Instrument asset
     TradeEnum lastTrade
+    List<Stock> list = new ArrayList<Stock>()
 
     public SSASignal(String name, Stock asset, Date firstDate, Date lastDate) {
         super(name, asset, firstDate, lastDate, 0);
@@ -26,24 +29,22 @@ public class SSASignal extends Strategy {
         Date da = DateUtils.dateNYearsAgo(date, 1);
         Date a = date
 
-        Stock stock = new Stock(asset.name, "clone");
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd")
+
+        Stock stock = new Stock(asset.name, format.format(date));
 
         StockUtils.refreshDaily(stock as Stock, da, a);
 
         TimeSeries closeSeries = stock.buildCloseSeries()
         closeSeries.normalize()
 
-//        stockInstance.indicators.put("normalized", new NormalizedSeriesIndicator(closeSeries, "Normalized"))
+        Indicator normalized = new NormalizedSeriesIndicator(closeSeries, "SSA-01");
+        Indicator trend = new SSAComponentsIndicator(closeSeries, "SSA-0", 50, [0])
+        Indicator comp1 = new SSAComponentsIndicator(closeSeries, "SSA-12", 50, [1])
 
-        List<Integer> components = [0]
-        Indicator trend = new SSAComponentsIndicator(closeSeries, "SSA-0", 50, components)
-
-        List<Integer> components1 = [1]
-        Indicator comp1 = new SSAComponentsIndicator(closeSeries, "SSA-12", 50, components1)
-
-//        Indicator trend = asset.indicators.get("trend");
-//        Indicator comp1 = asset.indicators.get("comp1");
-//        Indicator comp1 = asset.indicators.get("comp12");
+        stock.indicators.put("normalized", normalized)
+        stock.indicators.put("trend", trend)
+        stock.indicators.put("comp1", comp1)
 //
         if (!(DateUtils.isGreater(date, trend.firstDate) && DateUtils.isGreater(date, comp1.firstDate)))
             return
@@ -73,78 +74,11 @@ public class SSASignal extends Strategy {
         boolean inATrade = (lastTrade == null)
         boolean trendingDown = ((yesterdaySSA0 > todaySSA0))
 
-        if (isATop){
-//            if (!inATrade)  {
-//                if (trendingDown){
-                    signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
-//                    lastTrade = TradeEnum.SELL
-//                }
-//            }
-//            else {
-//                if (lastTrade == TradeEnum.BUY){
-//                    signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
-//                    lastTrade = null
-//                }
-//            }
-        }
-        else
+        if (isATop) signals.add(new Signal(date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
+        if (isALow) signals.add(new Signal(date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
 
-        if (isALow){
-//            if (!inATrade)  {
-//                if (!trendingDown){
-                    signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
-//                    lastTrade = TradeEnum.BUY
-//                }
-//            }
-//            else {
-//                if (lastTrade == TradeEnum.SELL){
-//                    signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
-//                    lastTrade = null
-//                }
-//            }
-        }
+        list.add(stock)
 
-         /*
-            boolean takeit = false
-            if (lastTrade == null)
-                takeit = true
-
-            else if (lastTrade == TradeEnum.BUY) {
-                signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
-                lastTrade = null
-                return
-            }
-
-            else if (yesterdaySSA0 > todaySSA0)
-                takeit = true
-
-            if (takeit){
-                signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
-                lastTrade = TradeEnum.SELL
-            }
-
-        }
-        if (isALow){
-            boolean takeit = false
-
-            if (lastTrade == null)
-                takeit = true
-
-            else if (lastTrade == TradeEnum.SELL)  {
-                signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
-                lastTrade = null
-                return
-            }
-
-            else if (yesterdaySSA0 > todaySSA0)
-                takeit = true
-
-            if (takeit){
-                signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
-                lastTrade = TradeEnum.BUY
-            }
-        }
-           */
     }
 }
 
