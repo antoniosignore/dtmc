@@ -65,7 +65,7 @@
         });
     });
 
-    ohlc = ${StockUtils.getCandleStickPlot(stockInstance)}
+    ohlc = ${StockUtils.getCandleStickPlot(strategyInstance.asset)}
             buysignals = ${StockUtils.getBuySignals(strategyInstance)}
                     sellsignals =
     ${StockUtils.getSellSignals(strategyInstance)}

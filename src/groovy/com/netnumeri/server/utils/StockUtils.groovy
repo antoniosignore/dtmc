@@ -162,6 +162,11 @@ class StockUtils {
 
     }
 
+    static String lastDate(Stock stock) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd")
+        return sdf.format(stock.lastDate())
+    }
+
     static String getCandleStickPlot(Stock stock) {
         GenericTimeSeries<Daily> dailyarray = stock.dailyarray;
         Date startDate = dailyarray.getFirstDate()
@@ -217,8 +222,8 @@ class StockUtils {
         return sb.toString()
     }
 
-    public String getTimeSeriesPlot(Indicator series) {
-            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+    public static String getTimeSeriesPlot(Indicator series) {
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
             DecimalFormat df = new DecimalFormat("#.####");
             List<DailyGSON> ds = new ArrayList<DailyGSON>();
             try {

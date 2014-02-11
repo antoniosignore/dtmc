@@ -1,8 +1,10 @@
 <%@ page import="com.netnumeri.server.finance.ta.Indicator; com.netnumeri.server.utils.StockUtils" %>
 
+${StockUtils.lastDate(stockInstance)}
+
 <script class="code" language="javascript" type="text/javascript">
     $(document).ready(function () {
-        var plot2 = $.jqplot('chart2', [normalized, trend, comp01, comp1], {
+        var plot2 = $.jqplot('chart2-${StockUtils.lastDate(stockInstance)}', [normalized${StockUtils.lastDate(stockInstance)}, trend${StockUtils.lastDate(stockInstance)}, comp01${StockUtils.lastDate(stockInstance)}, comp1${StockUtils.lastDate(stockInstance)}], {
             seriesDefaults: {yaxis: 'yaxis'},
             axes: {
                 xaxis: {
@@ -50,12 +52,12 @@
         });
     });
 
-    normalized = ${stockInstance.indicators.get("normalized").jqPlot}
-    trend= ${stockInstance.indicators.get("trend").jqPlot}
-    comp01= ${stockInstance.indicators.get("comp01").jqPlot}
-            comp1 =
+    normalized${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("normalized").jqPlot}
+            trend${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("trend").jqPlot}
+                    comp1${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("comp01").jqPlot}
+                            comp2${StockUtils.lastDate(stockInstance)} =
     ${stockInstance.indicators.get("comp12").jqPlot}
 
 </script>
 
-<div id="chart2" style="height:600px; width:100%;"></div>
+<div id="chart2-${StockUtils.lastDate(stockInstance)}" style="height:600px; width:100%;"></div>

@@ -45,6 +45,8 @@ public class SSASignal extends Strategy {
         stock.indicators.put("normalized", normalized)
         stock.indicators.put("trend", trend)
         stock.indicators.put("comp1", comp1)
+
+        stock.lastDate()
 //
         if (!(DateUtils.isGreater(date, trend.firstDate) && DateUtils.isGreater(date, comp1.firstDate)))
             return
