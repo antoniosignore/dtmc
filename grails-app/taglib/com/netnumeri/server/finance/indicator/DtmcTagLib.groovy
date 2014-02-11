@@ -10,6 +10,13 @@ class DtmcTagLib {
         }
     }
 
+    def stocks = { attrs ->
+        def stockList = attrs.list
+        stockList.eachWithIndex { stock, counter ->
+            out << g.render(template: '/ssa/ssa', model: [stockInstance: stock, indicatorCounter: counter])
+        }
+    }
+
     def users = { attrs ->
         def indicators = attrs.users
         users.eachWithIndex { user, counter ->

@@ -1,5 +1,7 @@
 <%@ page import="com.netnumeri.server.finance.ta.Indicator; com.netnumeri.server.utils.StockUtils" %>
 
+<hr/>
+
 ${StockUtils.lastDate(stockInstance)}
 
 <script class="code" language="javascript" type="text/javascript">
@@ -16,7 +18,6 @@ ${StockUtils.lastDate(stockInstance)}
                 },
                 y3axis:{min:-1, max:+1}
             },
-            // To make a candle stick chart, set the "candleStick" option to true.
             series: [
                 {
                     lineWidth:1, showMarker: false,

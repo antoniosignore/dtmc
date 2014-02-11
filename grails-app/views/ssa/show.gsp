@@ -21,39 +21,21 @@
 <body>
 
 <section id="show-stock" class="first">
-
     <table class="table table-striped table-bordered table-condensed table-hover">
         <tbody>
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="stock.name.label" default="Name"/></td>
-            <td valign="top" class="value">${fieldValue(bean: stockInstance, field: "name")}</td>
-        </tr>
-
-        <tr class="prop">
             <td valign="top" class="name"><g:message code="stock.description.label" default="Description"/></td>
             <td valign="top" class="value">${fieldValue(bean: stockInstance, field: "description")}</td>
-
         </tr>
         </tbody>
     </table>
-
-    %{--<div class="updateDatesForm">--}%
-    %{--<g:formRemote url="[controller: 'ssa', action: 'show']" update="messages" name="updateStatusForm">--}%
-    %{--<div class="control-group required">--}%
-    %{--<label for="range" class="control-label"><g:message--}%
-    %{--code="campaigns.range.label"--}%
-    %{--default="Dates range"/></label>--}%
-    %{--<g:render template="datetimepicker"/>--}%
-    %{--</div>--}%
-
-    %{--<g:submitButton name="Refresh"/>--}%
-    %{--</g:formRemote>--}%
-    %{--</div>--}%
 
     <div id="messages">
         <g:render template="/common/candlestick"/>
         <g:render template="ssa"/>
     </div>
+
+    <dtmc:stocks list="${strategyInstance.stocksList}"/>
 
 </section>
 

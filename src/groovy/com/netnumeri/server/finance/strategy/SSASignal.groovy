@@ -17,7 +17,7 @@ public class SSASignal extends Strategy {
 
     Instrument asset
     TradeEnum lastTrade
-    List<Stock> list = new ArrayList<Stock>()
+    List<Stock> stocksList = new ArrayList<Stock>()
 
     public SSASignal(String name, Stock asset, Date firstDate, Date lastDate) {
         super(name, asset, firstDate, lastDate, 0);
@@ -79,7 +79,7 @@ public class SSASignal extends Strategy {
         if (isATop) signals.add(new Signal(date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
         if (isALow) signals.add(new Signal(date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
 
-        list.add(stock)
+        stocksList.add(stock)
 
     }
 }
