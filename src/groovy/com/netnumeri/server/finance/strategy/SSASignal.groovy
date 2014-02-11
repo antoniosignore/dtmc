@@ -40,14 +40,12 @@ public class SSASignal extends Strategy {
 
         Indicator normalized = new NormalizedSeriesIndicator(closeSeries, "SSA-01");
         Indicator trend = new SSAComponentsIndicator(closeSeries, "SSA-0", 50, [0])
-        Indicator comp1 = new SSAComponentsIndicator(closeSeries, "SSA-12", 50, [1])
+        Indicator comp1 = new SSAComponentsIndicator(closeSeries, "SSA-1", 50, [1])
 
         stock.indicators.put("normalized", normalized)
         stock.indicators.put("trend", trend)
         stock.indicators.put("comp1", comp1)
 
-        stock.lastDate()
-//
         if (!(DateUtils.isGreater(date, trend.firstDate) && DateUtils.isGreater(date, comp1.firstDate)))
             return
 
