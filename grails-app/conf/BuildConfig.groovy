@@ -39,6 +39,7 @@ grails.project.dependency.resolution = {
         mavenRepo "http://repository.jboss.com/maven2/"
         mavenRepo "http://maven.springframework.org/milestone/"
         mavenRepo 'http://repo.spring.io/milestone'
+        mavenRepo 'http://xuggle.googlecode.com/svn/trunk/repo/share/java/'
 
     }
 
@@ -47,10 +48,30 @@ grails.project.dependency.resolution = {
 
         build "gov.nist.math:jama:1.0.2"
 
+        build "xuggle:xuggle-xuggler:5.4"
+
         runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
 
     }
 
+    /*
+    <repository>
+   <id>xuggle repo</id>
+   <url>http://xuggle.googlecode.com/svn/trunk/repo/share/java/</url>
+  </repository>
+  ...
+ </repositories>
+ ...
+ <dependencies>
+  ...
+  <dependency>
+   <groupId>xuggle</groupId>
+   <artifactId>xuggle-xuggler</artifactId>
+   <version>5.2</version>
+  </dependency>
+  ...
+ </dependencies>
+     */
     plugins {
 
         runtime ":hibernate:3.6.10.2"
