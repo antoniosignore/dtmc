@@ -52,6 +52,7 @@ grails.project.dependency.resolution = {
 
         runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
 
+        compile 'jfree:jfreechart:1.0.13'
     }
 
     /*
