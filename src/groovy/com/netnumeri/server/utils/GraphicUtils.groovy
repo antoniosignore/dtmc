@@ -522,51 +522,51 @@ public class GraphicUtils {
         return getXYGraph(name, axis, copiedserie, w, h, weight, false, isLogScale);
     }
 
-    public static void addDateMarker(FinGraph graph, Transaction transaction) {
-        XYPlot plot = graph.getXYPlot();
-        Date d = transaction.transactionDate
-        Day day = new Day(d.getDate(), d.getMonth() + 1, d.getYear());
-        double millis = day.getFirstMillisecond();
-        CircleDrawer cd = null;
-        XYAnnotation note = null;
-        int type = transaction.getAction();
-        XYPointerAnnotation pointer = null;
-        if (type == 8) {
-            cd = new CircleDrawer(Color.blue, new BasicStroke(1.0F), null);
-            note = new XYDrawableAnnotation(millis, transaction.getPrice(), 11D, 11D, cd);
-            pointer = new XYPointerAnnotation(d.toString(), millis, transaction.getPrice(), 1.5707963267948966D);
-            pointer.setTextAnchor(TextAnchor.HALF_ASCENT_CENTER);
-            pointer.setPaint(Color.blue);
-        } else if (type == 9) {
-            cd = new CircleDrawer(Color.blue, new BasicStroke(1.0F), null);
-            note = new XYDrawableAnnotation(millis, transaction.getPrice(), 11D, 11D, cd);
-            pointer = new XYPointerAnnotation(d.toString(), millis, transaction.getPrice(), 1.5707963267948966D);
-            pointer.setTextAnchor(TextAnchor.HALF_ASCENT_CENTER);
-            pointer.setPaint(Color.blue);
-        } else if (type == 6) {
-            cd = new CircleDrawer(Color.red, new BasicStroke(1.0F), null);
-            note = new XYDrawableAnnotation(millis, transaction.getPrice(), 11D, 11D, cd);
-            pointer = new XYPointerAnnotation(d.toString(), millis, transaction.getPrice(), 4.7123889803846897D);
-            pointer.setTextAnchor(TextAnchor.HALF_ASCENT_CENTER);
-            pointer.setPaint(Color.red);
-        } else if (type == 5) {
-            cd = new CircleDrawer(Color.red, new BasicStroke(1.0F), null);
-            note = new XYDrawableAnnotation(millis, transaction.getPrice(), 11D, 11D, cd);
-            pointer = new XYPointerAnnotation(d.toString(), millis, transaction.getPrice(), 4.7123889803846897D);
-            pointer.setTextAnchor(TextAnchor.HALF_ASCENT_CENTER);
-            pointer.setPaint(Color.red);
-        }
-        plot.addAnnotation(note);
-        if (!$assertionsDisabled && pointer == null) {
-            throw new AssertionError();
-        } else {
-            pointer.setBaseRadius(35D);
-            pointer.setTipRadius(10D);
-            pointer.setFont(new Font("Comic Sans MS", 1, 9));
-            plot.addAnnotation(pointer);
-            return;
-        }
-    }
+//    public static void addDateMarker(FinGraph graph, Transaction transaction) {
+//        XYPlot plot = graph.getXYPlot();
+//        Date d = transaction.transactionDate
+//        Day day = new Day(d.getDate(), d.getMonth() + 1, d.getYear());
+//        double millis = day.getFirstMillisecond();
+//        CircleDrawer cd = null;
+//        XYAnnotation note = null;
+//        int type = transaction.getAction();
+//        XYPointerAnnotation pointer = null;
+//        if (type == 8) {
+//            cd = new CircleDrawer(Color.blue, new BasicStroke(1.0F), null);
+//            note = new XYDrawableAnnotation(millis, transaction.getPrice(), 11D, 11D, cd);
+//            pointer = new XYPointerAnnotation(d.toString(), millis, transaction.getPrice(), 1.5707963267948966D);
+//            pointer.setTextAnchor(TextAnchor.HALF_ASCENT_CENTER);
+//            pointer.setPaint(Color.blue);
+//        } else if (type == 9) {
+//            cd = new CircleDrawer(Color.blue, new BasicStroke(1.0F), null);
+//            note = new XYDrawableAnnotation(millis, transaction.getPrice(), 11D, 11D, cd);
+//            pointer = new XYPointerAnnotation(d.toString(), millis, transaction.getPrice(), 1.5707963267948966D);
+//            pointer.setTextAnchor(TextAnchor.HALF_ASCENT_CENTER);
+//            pointer.setPaint(Color.blue);
+//        } else if (type == 6) {
+//            cd = new CircleDrawer(Color.red, new BasicStroke(1.0F), null);
+//            note = new XYDrawableAnnotation(millis, transaction.getPrice(), 11D, 11D, cd);
+//            pointer = new XYPointerAnnotation(d.toString(), millis, transaction.getPrice(), 4.7123889803846897D);
+//            pointer.setTextAnchor(TextAnchor.HALF_ASCENT_CENTER);
+//            pointer.setPaint(Color.red);
+//        } else if (type == 5) {
+//            cd = new CircleDrawer(Color.red, new BasicStroke(1.0F), null);
+//            note = new XYDrawableAnnotation(millis, transaction.getPrice(), 11D, 11D, cd);
+//            pointer = new XYPointerAnnotation(d.toString(), millis, transaction.getPrice(), 4.7123889803846897D);
+//            pointer.setTextAnchor(TextAnchor.HALF_ASCENT_CENTER);
+//            pointer.setPaint(Color.red);
+//        }
+//        plot.addAnnotation(note);
+//        if (!$assertionsDisabled && pointer == null) {
+//            throw new AssertionError();
+//        } else {
+//            pointer.setBaseRadius(35D);
+//            pointer.setTipRadius(10D);
+//            pointer.setFont(new Font("Comic Sans MS", 1, 9));
+//            plot.addAnnotation(pointer);
+//            return;
+//        }
+//    }
 
     public static void addDateMarker(FinGraph graph, Date date, int type, double value) {
         System.out.println("GraphicsUtils.addDateMarker");
@@ -604,15 +604,11 @@ public class GraphicUtils {
             pointer.setPaint(Color.red);
         }
         plot.addAnnotation(note);
-        if (!$assertionsDisabled && pointer == null) {
-            throw new AssertionError();
-        } else {
-            pointer.setBaseRadius(35D);
-            pointer.setTipRadius(10D);
-            pointer.setFont(new Font("Comic Sans MS", 1, 9));
-            plot.addAnnotation(pointer);
-            return;
-        }
+        pointer.setBaseRadius(35D);
+        pointer.setTipRadius(10D);
+        pointer.setFont(new Font("Comic Sans MS", 1, 9));
+        plot.addAnnotation(pointer);
+        return;
     }
 
     public static void addDateMarker(FinGraph graph, double x, double y, String label) {
@@ -625,18 +621,10 @@ public class GraphicUtils {
         pointer.setTextAnchor(TextAnchor.HALF_ASCENT_CENTER);
         pointer.setPaint(Color.blue);
         plot.addAnnotation(pointer);
-        if (!$assertionsDisabled && pointer == null) {
-            throw new AssertionError();
-        } else {
-            pointer.setBaseRadius(35D);
-            pointer.setTipRadius(10D);
-            pointer.setFont(new Font("Comic Sans MS", 1, 9));
-            plot.addAnnotation(pointer);
-            return;
-        }
+        pointer.setBaseRadius(35D);
+        pointer.setTipRadius(10D);
+        pointer.setFont(new Font("Comic Sans MS", 1, 9));
+        plot.addAnnotation(pointer);
     }
-
-    static
-    final boolean $assertionsDisabled = !com / dtmc / server / analytics / util / GraphicsUtils.desiredAssertionStatus();
 
 }

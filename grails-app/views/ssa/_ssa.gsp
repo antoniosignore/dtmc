@@ -1,23 +1,24 @@
 <%@ page import="com.netnumeri.server.finance.ta.Indicator; com.netnumeri.server.utils.StockUtils" %>
 
-<hr/>
-
-${StockUtils.lastDate(stockInstance)}
-
 <script class="code" language="javascript" type="text/javascript">
     $(document).ready(function () {
-        var plot2 = $.jqplot('chart2-${StockUtils.lastDate(stockInstance)}', [normalized${StockUtils.lastDate(stockInstance)}, trend${StockUtils.lastDate(stockInstance)}, comp1${StockUtils.lastDate(stockInstance)}], {
-            seriesDefaults: {yaxis: 'yaxis'},
-            axes: {
-                xaxis: {
+        var plot2 = $.jqplot('chart2-${StockUtils.lastDate(stockInstance)}',
+                [normalized${StockUtils.lastDate(stockInstance)},
+                    trend${StockUtils.lastDate(stockInstance)},
+                    comp1${StockUtils.lastDate(stockInstance)}], {
+                    seriesDefaults: {yaxis: 'yaxis'},
+                    title: {
+                        text: '${StockUtils.lastDate(stockInstance)}',
+                        show: true
+                    }, axes: {
+                        xaxis: {
                     renderer: $.jqplot.DateAxisRenderer,
                     tickOptions: {formatString: '%b %e'}
                 },
                 yaxis: {
-                    tickOptions: {formatString: '%d'}
-                },
-                y3axis:{min:-1, max:+1}
-            },
+                    tickOptions: {formatString: '%#.5f'}
+                }
+                    },
             series: [
                 {
                     lineWidth:1, showMarker: false,
@@ -57,9 +58,20 @@ ${StockUtils.lastDate(stockInstance)}
             trend${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("trend").jqPlot}
                     comp1${StockUtils.lastDate(stockInstance)} =
     ${stockInstance.indicators.get("comp1").jqPlot}
-    %{--comp2${StockUtils.lastDate(stockInstance)} =--}%
-    %{--${stockInstance.indicators.get("comp12").jqPlot}--}%
 
 </script>
 
-<div id="chart2-${StockUtils.lastDate(stockInstance)}" style="height:600px; width:100%;"></div>
+<div class="item" id="chart2-${StockUtils.lastDate(stockInstance)}" style="height:300px; width:100%;"></div>
+
+%{--<table>--}%
+%{--<tr>--}%
+%{--<td>--}%
+%{--${StockUtils.lastDate(stockInstance)}--}%
+%{--</td>--}%
+%{--</tr>--}%
+%{--<tr>--}%
+%{--<td>--}%
+%{--<div id="chart2-${StockUtils.lastDate(stockInstance)}" style="height:300px; width:50%;"></div>--}%
+%{--</td>--}%
+%{--</tr>--}%
+%{--</table>--}%

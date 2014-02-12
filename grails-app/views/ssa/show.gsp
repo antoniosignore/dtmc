@@ -7,6 +7,8 @@
     <meta name="layout" content="kickstart"/>
     <g:set var="entityName" value="${message(code: 'stock.label', default: 'Stock')}"/>
     <title><g:message code="default.show.label" args="[entityName]"/></title>
+    <g:set var="layout_nomainmenu" value="${true}" scope="request"/>
+    <g:set var="layout_nosecondarymenu" value="${true}" scope="request"/>
 
     %{--<r:external uri="/css/metro-bootstrap.css"/>--}%
 
@@ -24,7 +26,7 @@
     <table class="table table-striped table-bordered table-condensed table-hover">
         <tbody>
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="stock.description.label" default="Description"/></td>
+            <td valign="top" class="name">${fieldValue(bean: stockInstance, field: "name")}</td>
             <td valign="top" class="value">${fieldValue(bean: stockInstance, field: "description")}</td>
         </tr>
         </tbody>
@@ -32,10 +34,11 @@
 
     <div id="messages">
         <g:render template="/common/candlestick"/>
-        <g:render template="ssa"/>
     </div>
 
+    %{--<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item" }'>--}%
     <dtmc:stocks list="${strategyInstance.stocksList}"/>
+    %{--</div>--}%
 
 </section>
 

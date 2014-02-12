@@ -300,5 +300,18 @@ class StockUtils {
         return d1;
     }
 
+    static String last5values(Indicator indicator) {
 
+        Date date = indicator.getLastDate()
+        Date date_1 = indicator.getPrevDate(date)
+        Date date_2 = indicator.getPrevDate(date_1)
+        Date date_3 = indicator.getPrevDate(date_2)
+        Date date_4 = indicator.getPrevDate(date_3)
+
+        return indicator.getData(date) + " " +
+                indicator.getData(date_1) + " " +
+                indicator.getData(date_2) + " " +
+                indicator.getData(date_3) + " " +
+                indicator.getData(date_4)
+    }
 }
