@@ -51,6 +51,7 @@ public class SSAMath {
     }
 
     private static double forecastSingleComponent(double[] augmented, int component, int window) {
+
         SSAStudy ssa = new SSAStudy(augmented)
         List<SSAItem> items = ssa.analyze(window)
         List<Integer> components = new ArrayList<>()

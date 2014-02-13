@@ -22,6 +22,11 @@ public class SSASeriesPredictionIndicator extends Indicator {
 
         assert (seriesAsArray.length + 1) == augmented.length
 
+        Indicator ssa0 = new SSAComponentsIndicator(augmented, "SSA-0", window, [0]);
+        Indicator ssa1 = new SSAComponentsIndicator(augmented, "SSA-1", window, [0]);
+        Indicator ssa2 = new SSAComponentsIndicator(augmented, "SSA-2", window, [0]);
+
+
         for (int i = 0; i < noFuture; i++) {
             double[] componentsForecastValues = new double[components.size()]
 
