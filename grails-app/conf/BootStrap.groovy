@@ -108,6 +108,9 @@ class BootStrap {
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumSecondThirdComponent, name: "ssa23", integer1: 50);
                 userIndicators.save(flush: true, failOnError: true)
 
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumPrediction, name: "ssa predict", integer1: 50);
+                userIndicators.save(flush: true, failOnError: true)
+
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma 10", integer1: 10);
                 userIndicators.save(flush: true, failOnError: true)
 

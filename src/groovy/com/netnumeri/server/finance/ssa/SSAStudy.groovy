@@ -159,25 +159,25 @@ class SSAStudy {
         }
     }
 
-    static Matrix getRowMatrix(Matrix from, int column) {
-        Matrix res = new Matrix(1, from.getColumnDimension())
-        for (int index = 0; index < res.getColumnDimension(); index++) {
-            res.set(0, index, from.get(column, index))
-        }
-        return res
-    }
+//    static Matrix getRowMatrix(Matrix from, int column) {
+//        Matrix res = new Matrix(1, from.getColumnDimension())
+//        for (int index = 0; index < res.getColumnDimension(); index++) {
+//            res.set(0, index, from.get(column, index))
+//        }
+//        return res
+//    }
+//
+//    static Matrix getColumnMatrix(Matrix from, int column) {
+//        Matrix res = new Matrix(from.getRowDimension(), 1)
+//        for (int index = 0; index < res.getRowDimension(); index++) {
+//            res.set(index, 0, from.get(index, column))
+//        }
+//        return res
+//    }
 
-    static Matrix getColumnMatrix(Matrix from, int column) {
-        Matrix res = new Matrix(from.getRowDimension(), 1)
-        for (int index = 0; index < res.getRowDimension(); index++) {
-            res.set(index, 0, from.get(index, column))
-        }
-        return res
-    }
-
-    static double[] reconstructed(List<SSAItem> analyze, int i) {
-        return getColumn(analyze.get(i).reconstructed, 0)
-    }
+//    static double[] reconstructed(List<SSAItem> analyze, int i) {
+//        return getColumn(analyze.get(i).reconstructed, 0)
+//    }
 
     static double[] reconstructedAll(List<SSAItem> analyze) {
         int size = analyze.size()
@@ -192,18 +192,18 @@ class SSAStudy {
         return ret
     }
 
-    static double[] reconstructedN(List<SSAItem> analyze, int N) {
-        int size = analyze.size()
-        double[] ret
-        for (int i = 0; i < N; i++) {
-            double[] column = getColumn(analyze.get(i).reconstructed, 0)
-            if (ret == null) ret = new double[column.length];
-            for (int j = 0; j < column.length; j++) {
-                ret[j] = ret[j] + column[j]
-            }
-        }
-        return ret
-    }
+//    static double[] reconstructedN(List<SSAItem> analyze, int N) {
+//        int size = analyze.size()
+//        double[] ret
+//        for (int i = 0; i < N; i++) {
+//            double[] column = getColumn(analyze.get(i).reconstructed, 0)
+//            if (ret == null) ret = new double[column.length];
+//            for (int j = 0; j < column.length; j++) {
+//                ret[j] = ret[j] + column[j]
+//            }
+//        }
+//        return ret
+//    }
 
     static double[] reconstructedGroup(List<SSAItem> analyze, List<Integer> numbers) {
         int size = analyze.size()

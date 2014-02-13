@@ -7,15 +7,30 @@ public class SSASeriesPredictionIndicator extends Indicator {
 
     List<Integer> components
 
-    public SSASeriesPredictionIndicator(TimeSeries series,
+    public SSASeriesPredictionIndicator(TimeSeries timeseries,
                                         String name,
                                         int window,
                                         int order,
                                         List<Integer> components,
                                         Integer noFuture) {
-        setName(name);
-        this.series = series;
-        double[] prediction = SSAMath.computeSeriesForecast(series, noFuture, window, order, components)
+        super(timeseries, name)
+        series.normalize()
+
+        double[] prediction = new double[noFuture];
+        double[] seriesAsArray = series.convertToArray();
+        double[] augmented = SSAMath.getAugmentedByMovingAverage(seriesAsArray, order)
+
+        assert (seriesAsArray.length + 1) == augmented.length
+
+        for (int i = 0; i < noFuture; i++) {
+            double[] componentsForecastValues = new double[components.size()]
+
+        }
+
+//        double[] prediction = computeSeriesForecast(series, noFuture, window, order, components)
+//
+//        println "\n\n\n\n\n*********************prediction = $prediction"
+
         copyInTheFuture(prediction)
     }
 

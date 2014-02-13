@@ -118,6 +118,9 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.SingularSpectrumPrediction) {
 
+                List<Integer> components = [0, 1, 2]
+                ui.indicator = new SSASeriesPredictionIndicator(closes, "SSA-12", ui.integer1, 10, components, 10);
+
             } else if (ui.type == IndicatorEnum.Normalized) {
 
                 ui.indicator = new NormalizedSeriesIndicator(closes, "SSA-01");

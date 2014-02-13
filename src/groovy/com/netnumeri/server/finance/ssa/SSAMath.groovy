@@ -2,9 +2,9 @@ package com.netnumeri.server.finance.ssa
 
 import com.netnumeri.server.finance.beans.NRError
 import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.ta.Indicator
 import com.netnumeri.server.finance.ta.MovingAverage
-import com.netnumeri.server.finance.utils.Util
-import com.netnumeri.server.utils.StockUtils
+import com.netnumeri.server.finance.ta.SSAComponentsIndicator
 
 public class SSAMath {
 
@@ -17,17 +17,14 @@ public class SSAMath {
                                                  List<Integer> components) throws NRError {
 
         double[] predictedSerie = new double[numberOfDaysInTheFuture];
-
         double[] seriesAsArray = series.convertToArray();
-
-        List<Double> augmented = getAugmentedByMovingAverage(seriesAsArray, order)
-
-        double[] componentsForecastValues = new double[components.size()]
 
         for (int i = 0; i < numberOfDaysInTheFuture; i++) {
 
-            println "SSAMath.computeForecast no : " + i
+            double[] augmented = getAugmentedByMovingAverage(seriesAsArray, order)
+            double[] componentsForecastValues = new double[components.size()]
 
+            println "SSAMath.computeForecast no : " + i
             for (int j = 0; j < components.size(); j++) {
                 Integer component = components.get(j);
                 double componentForecast = forecastSingleComponent(augmented, component, window)
@@ -35,11 +32,10 @@ public class SSAMath {
             }
 
             double lastPrediction = arraySum(componentsForecastValues);
+            println "lastPrediction = $lastPrediction"
+
             predictedSerie[i] = lastPrediction
-
-            augmented.remove(augmented.size() - 1)
-            augmented.add(lastPrediction)
-
+            augmented[augmented.size() - 1] = lastPrediction
             augmented = getAugmentedByMovingAverage(augmented, order)
         }
         return predictedSerie;
@@ -54,29 +50,40 @@ public class SSAMath {
         return sum;
     }
 
-    private static double forecastSingleComponent(List<Double> augmented, int component, int window) {
-
-//        SSAAnalysis an = new SSAAnalysis(augmented, window)
-//        List<Double> singleComponentSeries = an.getEigenComponent(component);
-//        double lastPrediction = singleComponentSeries.get(singleComponentSeries.size() - 1);
-//        while (true) {
-//            double prediction = singleComponentSeries.get(singleComponentSeries.size() - 1);
-//            if (Math.abs(prediction - lastPrediction) < epsilon) {
-//                return prediction
-//            }
-//            lastPrediction = prediction;
-//        }
+    private static double forecastSingleComponent(double[] augmented, int component, int window) {
+        SSAStudy ssa = new SSAStudy(augmented)
+        List<SSAItem> items = ssa.analyze(window)
+        List<Integer> components = new ArrayList<>()
+        components.add(component)
+        double[] singleComponentSeries = ssa.reconstructedGroup(items, components)
+        double lastPrediction = singleComponentSeries[singleComponentSeries.size() - 1];
+        while (true) {
+            double prediction = singleComponentSeries[singleComponentSeries.size() - 1];
+            if (Math.abs(prediction - lastPrediction) < epsilon) {
+                return prediction
+            }
+            lastPrediction = prediction;
+        }
     }
 
-    private static List<Double> getAugmentedByMovingAverage(double[] array, int order) {
+//    private static List<Double> getAugmentedByMovingAverage(double[] array, int order) {
+//        double[] average = MovingAverage.simpleMovingAverage(array, order)
+//        double movingAverage = average[average.length - 1];
+//        List<Double> augmented = new ArrayList<Double>();
+//        for (int i = 0; i < array.length; i++) {
+//            double val = array[i];
+//            augmented.add(val)
+//        }
+//        augmented.add(movingAverage);
+//        return augmented
+//    }
+
+    private static double[] getAugmentedByMovingAverage(double[] array, int order) {
         double[] average = MovingAverage.simpleMovingAverage(array, order)
-        double movingAverage = average[average.length - 1];
-        List<Double> augmented = new ArrayList<Double>();
-        for (int i = 0; i < array.length; i++) {
-            double val = array[i];
-            augmented.add(val)
-        }
-        augmented.add(movingAverage);
+        double[] augmented = new double[array.length + 1];
+
+        println "average[average.length-1] = " + average[average.length - 1]
+        augmented[array.length] = average[average.length - 1]
         return augmented
     }
 

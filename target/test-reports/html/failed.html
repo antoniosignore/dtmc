@@ -16,11 +16,11 @@
             - Failed tests</h1>
 
         <p class="intro">
-            Executed
-            2
-            tests
+            A single test executed
 
-            without a single error or failure!
+            with
+            one error
+            .
         </p>
     </div>
     <div class="grid_2 omega">
@@ -45,6 +45,56 @@
         </nav>
     </div>
     <div class="clear"></div>
+    <div class="testsuite error">
+        <div class="header">
+            <h2>SSAPredictionTest</h2>
+
+            <h3>
+                A single test executed
+
+                with
+                one error
+                .
+            </h3>
+        </div>
+        <div class="testcase clearfix error grid_8 alpha omega" data-name="testSSAPrediction">
+            <div class="grid_3 alpha">
+                <p>
+                    <span class="icon error"></span><b class="testname message error">testSSAPrediction</b>
+                </p>
+
+                <p class="summary">Executed in 3.755 seconds.</p>
+            </div>
+            <div class="grid_5 omega outputinfo">
+                <div class="details">
+                    <p>
+                        <b class="message">Illegal row number: 0 CloseSeries</b>
+                    </p>
+<pre>java.lang.IllegalArgumentException: Illegal row number: 0 CloseSeries
+	at com.netnumeri.server.finance.beans.TimeSeries.checkParams(TimeSeries.groovy:479)
+	at com.netnumeri.server.finance.beans.TimeSeries.normalize(TimeSeries.groovy:874)
+	at com.netnumeri.server.finance.beans.TimeSeries.normalize(TimeSeries.groovy:864)
+	at com.netnumeri.server.finance.ta.SSAComponentsIndicator.&lt;init&gt;(SSAComponentsIndicator.groovy:11)
+	at com.netnumeri.server.finance.ta.SSAPredictionTest.testSSAPrediction(SSAPredictionTest.groovy:42)
+</pre>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clearfix output footer">
+            <div class="sysout">
+                <h2>Standard output</h2>
+<pre class="stdout">--Output from testSSAPrediction--
+</pre>
+            </div>
+            <div class="syserr">
+                <h2>System error</h2>
+<pre class="syserr">--Output from testSSAPrediction--
+</pre>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
     <div class="clear"></div>
 </div>
 <!--

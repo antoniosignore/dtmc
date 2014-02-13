@@ -7,7 +7,8 @@
                     trend${StockUtils.lastDate(stockInstance)},
                     comp1${StockUtils.lastDate(stockInstance)},
                     comp12${StockUtils.lastDate(stockInstance)},
-                    bbdiff${StockUtils.lastDate(stockInstance)}], {
+                    bbdiff${StockUtils.lastDate(stockInstance)},
+                    predict${StockUtils.lastDate(stockInstance)}], {
                     seriesDefaults: {yaxis: 'yaxis'},
                     title: {
                         text: '${StockUtils.dateTitle(stockInstance)}',
@@ -36,6 +37,10 @@
                             showLine: true
                         },
                         {
+                            lineWidth: 1, showMarker: false,
+                            showLine: true
+                        },
+                        {
                             lineWidth: 1,
                             color: 'blue',
                             showMarker: false,
@@ -43,7 +48,7 @@
                         ,
                         {
                             lineWidth: 1,
-                            color: 'blue',
+                            color: 'yellow',
                             showMarker: false,
                             showLine: true}
                     ],
@@ -68,6 +73,7 @@
     %{--bbl${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("bbl").jqPlot};--}%
     %{--bbu${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("bbu").jqPlot};--}%
     bbdiff${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("bbdiff").jqPlot};
+    predict${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("predict").jqPlot};
 
 
 </script>

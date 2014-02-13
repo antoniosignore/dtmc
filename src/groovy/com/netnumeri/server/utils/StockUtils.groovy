@@ -183,6 +183,11 @@ class StockUtils {
         return sdf.format(stock.lastDate())
     }
 
+    static String dateTitle(Stock stock) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyy")
+        return sdf.format(stock.lastDate())
+    }
+
     static String getCandleStickPlot(Stock stock) {
         GenericTimeSeries<Daily> dailyarray = stock.dailyarray;
         Date startDate = dailyarray.getFirstDate()

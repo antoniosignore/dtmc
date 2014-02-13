@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="antonio-ThinkPad-SL500" id="0" name="SSATest" package="com.netnumeri.server.finance.ta" tests="2" time="2.814" timestamp="2014-01-26T18:51:29">
-      <properties />
+    <testsuite errors="1" failures="0" hostname="antonio-ThinkPad-SL500" id="0" name="SSAPredictionTest"
+               package="com.netnumeri.server.finance.ta" tests="1" time="3.757" timestamp="2014-02-13T10:37:34">
+        <properties/>
 
-      <testcase classname="com.netnumeri.server.finance.ta.SSATest" name="test1" time="0.126" />
+        <testcase classname="com.netnumeri.server.finance.ta.SSAPredictionTest" name="testSSAPrediction" time="3.755">
+            <error message="Illegal row number: 0 CloseSeries" type="java.lang.IllegalArgumentException">
+                java.lang.IllegalArgumentException: Illegal row number: 0 CloseSeries
+                at com.netnumeri.server.finance.beans.TimeSeries.checkParams(TimeSeries.groovy:479)
+                at com.netnumeri.server.finance.beans.TimeSeries.normalize(TimeSeries.groovy:874)
+                at com.netnumeri.server.finance.beans.TimeSeries.normalize(TimeSeries.groovy:864)
+                at com.netnumeri.server.finance.ta.SSAComponentsIndicator.&lt;init&gt;(SSAComponentsIndicator.groovy:11)
+                at com.netnumeri.server.finance.ta.SSAPredictionTest.testSSAPrediction(SSAPredictionTest.groovy:42)
+            </error>
 
-      <testcase classname="com.netnumeri.server.finance.ta.SSATest" name="test2" time="2.685" />
+        </testcase>
 
-      <system-out><![CDATA[--Output from test1--
---Output from test2--
+        <system-out><![CDATA[--Output from testSSAPrediction--
 ]]></system-out>
 
-      <system-err><![CDATA[--Output from test1--
---Output from test2--
+        <system-err><![CDATA[--Output from testSSAPrediction--
 ]]></system-err>
 
-  </testsuite>
+    </testsuite>
 </testsuites>

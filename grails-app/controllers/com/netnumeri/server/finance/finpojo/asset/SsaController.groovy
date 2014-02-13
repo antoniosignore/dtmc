@@ -1,5 +1,6 @@
 package com.netnumeri.server.finance.finpojo.asset
 
+import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.strategy.SSASignal
 import com.netnumeri.server.finance.strategy.Strategy
@@ -19,17 +20,9 @@ class SsaController {
 
     def show() {
 
-        Date da = DateUtils.Date("11/6/2013");
+        Date da = DateUtils.Date("1/12/2013");
         Date a = DateUtils.today();
-//        String str = params.range
-//        if (str != null) {
-//            SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm aa")
-//            String[] split = str.split("-")
-//            String startDateString = split[0].trim()
-//            String endDateString = split[1].trim()
-//            da = format.parse(startDateString)
-//            a = format.parse(endDateString)
-//        }
+
 
         def stockInstance = Stock.get(params.id as Long)
         if (!stockInstance) {

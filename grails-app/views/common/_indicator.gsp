@@ -6,7 +6,9 @@
             },
             title: '${indicator.name}',
             axes: {xaxis: {renderer: $.jqplot.DateAxisRenderer},
-                yaxis: {yaxis: 'y2axis'}
+                yaxis: {
+                    tickOptions: {formatString: '%#.5f'},
+                    yaxis: 'y2axis'}
             },
             grid: {
                 borderColor: 'transparent',

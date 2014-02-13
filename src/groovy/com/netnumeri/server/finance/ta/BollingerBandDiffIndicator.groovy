@@ -2,22 +2,19 @@ package com.netnumeri.server.finance.ta
 
 import com.netnumeri.server.finance.beans.TimeSeries
 
-public class BollingerBandUpIndicator extends Indicator {
+public class BollingerBandDiffIndicator extends Indicator {
 
     int length
     double deviation
 
-    public BollingerBandUpIndicator(TimeSeries series, String name, Integer length, double deviation) {
-
+    public BollingerBandDiffIndicator(TimeSeries series, String name, Integer param1, double deviation) {
         super(series, name);
-        this.length = length;
+        length = param1;
         this.deviation = deviation;
         build();
-
     }
 
     public void build() {
-
         Date date = series.getFirstDate()
         int index = 0;
         while (index < getFirstIndicatorIndex()) {
@@ -26,14 +23,33 @@ public class BollingerBandUpIndicator extends Indicator {
         }
 
         while (date != null) {
-
             if (!series.isEmpty(date)) {
-
-                add(date, calculate(series, date, length, deviation));
+                add(date, calculate(series, date, length, deviation) - calculateLower(series, date, length, deviation));
             }
             date = series.getNextDate(date)
         }
+    }
 
+    public static double calculateLower(TimeSeries qh, Date date, int length, double deviations) {
+
+        int lastBar = qh.matrix.getIndex(date);
+
+        double squareSum = 0;
+        double sum = 0;
+
+        int firstBar = lastBar - length + 1;
+
+        for (int bar = firstBar; bar <= lastBar; bar++) {
+            double barClose = qh.matrix.getValue(bar);
+            sum += barClose;
+            squareSum += barClose * barClose;
+        }
+
+        double stDev = length * squareSum - sum * sum;
+        stDev /= length * (length - 1);
+        stDev = Math.sqrt(stDev);
+
+        return sum / length - deviations * stDev;
     }
 
     public static double calculate(TimeSeries qh, Date date, int length, double deviations) {
@@ -55,7 +71,6 @@ public class BollingerBandUpIndicator extends Indicator {
 
         return sum / length + deviations * stDev;
     }
-
 
     public int getFirstIndicatorIndex() {
 
