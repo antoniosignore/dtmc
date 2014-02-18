@@ -47,13 +47,8 @@ public abstract class Strategy {
     }
 
     public void run() {
-
         Date day = firstDate
-        println "day = $day"
-
         Date lastDay = lastDate
-        println "lastDay = $lastDay"
-
         while (DateUtils.isLessEqual(day, lastDay)) {
             if (asset.isDataAvailable(day)) {
                 println "evaluate day = $day"

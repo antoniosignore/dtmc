@@ -5,6 +5,8 @@ import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.asset.Stock
+import com.netnumeri.server.finance.ssa.Histogram
+import com.netnumeri.server.finance.ssa.HistogramStat
 import com.netnumeri.server.finance.ta.BollingerBandDiffIndicator
 import com.netnumeri.server.finance.ta.BollingerBandLowerIndicator
 import com.netnumeri.server.finance.ta.BollingerBandUpIndicator
@@ -23,10 +25,12 @@ public class SSASignal extends Strategy {
     Instrument asset
     TradeEnum lastTrade
     List<Stock> stocksList = new ArrayList<Stock>()
+    Histogram histogram
 
     public SSASignal(String name, Stock asset, Date firstDate, Date lastDate) {
         super(name, asset, firstDate, lastDate, 0);
         this.asset = asset
+        histogram = new HistogramStat(50, -100, 100);
     }
 
     public void evaluateInstrumentOnDate(Date date) {
@@ -50,7 +54,7 @@ public class SSASignal extends Strategy {
 //        Indicator bbu = new BollingerBandUpIndicator(closeSeries, "BB-Upper", 10, 2)
 //        Indicator bbl =new BollingerBandLowerIndicator(closeSeries, "BB-Lower", 10, 2)
         Indicator bbdiff = new BollingerBandDiffIndicator(closeSeries, "BB-Diff", 10, 2)
-        Indicator ssa1Predict = new SSASeriesPredictionIndicator(closeSeries, "SSA-0-predict", WINDOW, 3, [0, 1, 2], 10);
+//        Indicator ssa1Predict = new SSASeriesPredictionIndicator(closeSeries, "SSA-0-predict", WINDOW, 3, [0, 1, 2], 10);
 
 
         stock.indicators.put("normalized", normalized)
@@ -60,7 +64,7 @@ public class SSASignal extends Strategy {
 //        stock.indicators.put("bbl", bbl)
 //        stock.indicators.put("bbu", bbu)
         stock.indicators.put("bbdiff", bbdiff)
-        stock.indicators.put("predict", ssa1Predict)
+//        stock.indicators.put("predict", ssa1Predict)
 
         if (!(DateUtils.isGreater(date, trend.firstDate) && DateUtils.isGreater(date, comp1.firstDate)))
             return

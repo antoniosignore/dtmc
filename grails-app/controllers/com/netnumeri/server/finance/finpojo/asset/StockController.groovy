@@ -344,17 +344,17 @@ class StockController {
         }
     }
 
-    def quotes() {
-        Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.YEAR, -1);
-
-        String s = null;
-        try {
-            s = YahooUtils.proxyYahooData("IBM", cal.getTime(), new Date());
-        } catch (Exception e) {
-        }
-
-        render s
-    }
+//    def quotes() {
+//        Calendar cal = Calendar.getInstance();
+//        cal.add(Calendar.YEAR, -1);
+//
+//        String s = null;
+//        try {
+//            s = YahooUtils.proxyYahooData("IBM", cal.getTime(), new Date());
+//        } catch (Exception e) {
+//        }
+//
+//        render s
+//    }
 
 }

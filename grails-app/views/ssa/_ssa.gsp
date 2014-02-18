@@ -7,8 +7,7 @@
                     trend${StockUtils.lastDate(stockInstance)},
                     comp1${StockUtils.lastDate(stockInstance)},
                     comp12${StockUtils.lastDate(stockInstance)},
-                    bbdiff${StockUtils.lastDate(stockInstance)},
-                    predict${StockUtils.lastDate(stockInstance)}], {
+                    bbdiff${StockUtils.lastDate(stockInstance)}], {
                     seriesDefaults: {yaxis: 'yaxis'},
                     title: {
                         text: '${StockUtils.dateTitle(stockInstance)}',
@@ -73,24 +72,9 @@
     %{--bbl${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("bbl").jqPlot};--}%
     %{--bbu${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("bbu").jqPlot};--}%
     bbdiff${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("bbdiff").jqPlot};
-    predict${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("predict").jqPlot};
+    %{--predict${StockUtils.lastDate(stockInstance)} = ${stockInstance.indicators.get("predict").jqPlot};--}%
 
 
 </script>
 
 <div class="item" id="chart2-${StockUtils.lastDate(stockInstance)}" style="height:600px; width:100%;"></div>
-
-
-
-%{--<table>--}%
-%{--<tr>--}%
-%{--<td>--}%
-%{--${StockUtils.lastDate(stockInstance)}--}%
-%{--</td>--}%
-%{--</tr>--}%
-%{--<tr>--}%
-%{--<td>--}%
-%{--<div id="chart2-${StockUtils.lastDate(stockInstance)}" style="height:300px; width:50%;"></div>--}%
-%{--</td>--}%
-%{--</tr>--}%
-%{--</table>--}%

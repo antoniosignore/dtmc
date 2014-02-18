@@ -4,6 +4,8 @@ import com.dtmc.gson.DailyGSON
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.netnumeri.server.finance.math.NumericalRecipes
+import com.netnumeri.server.finance.ssa.Histogram
+import com.netnumeri.server.finance.strategy.Signal
 import com.netnumeri.server.finance.utils.DateUtils
 
 import java.text.DecimalFormat
@@ -1167,8 +1169,62 @@ public class TimeSeries implements Serializable {
     }
 
     double getValue(int i) {
-
         return matrix.getValue(i)
+    }
 
+    Histogram histogram() {
+        return histogram(0, getFirstDate(), getLastDate());
+    }
+
+    /*
+    double[] f = {1, 2, 3, 4, 5, 6, 5, 4, 7, 8, 9, 3, 1, 4, 6, 8, 9, 7, 4, 1};
+List<Integer> ext = new ArrayList<Integer> ();
+for (int i = 0; i<f.length-2; i++) {
+  if ((f[i+1]-f[i])*(f[i+2]-f[i+1]) <= 0) { // changed sign?
+    ext.add(i+1);
+  }
+}
+     */
+
+    public Histogram histogram(int row, Date firstCalendarDate, Date lastCalendarDate) {
+        checkParams(row, firstCalendarDate, lastCalendarDate)
+
+        Histogram histogram = new Histogram(20, 100, 100)
+        double distanza = 0;
+        boolean foundFirst = false;
+
+        Set<Date> dates1 = getDates(0, firstCalendarDate, lastCalendarDate)
+
+        Date previousDate
+        Date prevPreviousDate
+
+        for (Iterator<Date> iterator = dates1.iterator(); iterator.hasNext();) {
+            Date date = iterator.next();
+
+            try {
+                previousDate = this.getPrevDate(date)
+                prevPreviousDate = this.getPrevDate(previousDate)
+            } catch (Throwable th) {
+                return
+            }
+
+            if (previousDate == null || prevPreviousDate == null)
+                continue
+
+            Double today = this.getData(date)
+            Double yesterday = this.getData(previousDate)
+            Double twoDaysBefore = this.getData(prevPreviousDate)
+
+            boolean isATop = twoDaysBefore < yesterday && yesterday > today
+            boolean isALow = twoDaysBefore > yesterday && yesterday < today
+
+            if (isATop || isALow) {
+                if (foundFirst) histogram.add(distanza)
+                foundFirst = true
+                distanza = 0
+            } else
+                distanza = distanza + 1;
+        }
+        return histogram
     }
 }

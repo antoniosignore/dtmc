@@ -19,11 +19,11 @@ public class SSAMath {
         double[] predictedSerie = new double[numberOfDaysInTheFuture];
         double[] seriesAsArray = series.convertToArray();
 
+        double[] augmented = getAugmentedByMovingAverage(seriesAsArray, order)
+
         for (int i = 0; i < numberOfDaysInTheFuture; i++) {
 
-            double[] augmented = getAugmentedByMovingAverage(seriesAsArray, order)
             double[] componentsForecastValues = new double[components.size()]
-
             println "SSAMath.computeForecast no : " + i
             for (int j = 0; j < components.size(); j++) {
                 Integer component = components.get(j);

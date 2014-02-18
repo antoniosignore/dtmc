@@ -84,8 +84,7 @@ log4j = {
     }
 
     debug 'org.codehaus.groovy.grails.orm.hibernate',
-            'org.hibernate.SQL',
-            'org.codehaus.groovy.grails.web.mapping'
+            'org.hibernate.SQL'
 
     error 'org.codehaus.groovy.grails.web.servlet',        // controllers
             'org.codehaus.groovy.grails.web.pages',          // GSP
