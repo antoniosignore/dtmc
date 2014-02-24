@@ -20,7 +20,7 @@ public class SMACrossoverSignal extends Strategy {
         this.asset = asset
     }
 
-    public void evaluateInstrumentOnDate(Date date, Instrument asset) {
+    public void evaluateInstrumentOnDate(Date date) {
 
         Indicator lower = asset.indicators.get("lower");
         Indicator upper = asset.indicators.get("upper");

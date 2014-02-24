@@ -66,10 +66,34 @@ public class DateUtils {
         return cal.getTime();
     }
 
+    public static Date todayThreeMonthsAgo() {
+        GregorianCalendar cal = new GregorianCalendar();
+        cal.setTime(new Date())
+        cal.set(Calendar.MONTH, cal.get(Calendar.MONTH) - 3);
+        cal.set(Calendar.HOUR, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        cal.set(Calendar.AM_PM, Calendar.AM);
+        return cal.getTime();
+    }
+
     public static Date dateNYearsAgo(Date date, int numberOfYearsBefore) {
         GregorianCalendar cal = new GregorianCalendar();
         cal.setTime(date)
         cal.set(Calendar.YEAR, cal.get(Calendar.YEAR) - numberOfYearsBefore);
+        cal.set(Calendar.HOUR, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        cal.set(Calendar.AM_PM, Calendar.AM);
+        return cal.getTime();
+    }
+
+    public static Date dateNMonthsAgo(Date date, int numberOfMonthsBefore) {
+        GregorianCalendar cal = new GregorianCalendar();
+        cal.setTime(date)
+        cal.set(Calendar.MONTH, cal.get(Calendar.MONTH) - numberOfMonthsBefore);
         cal.set(Calendar.HOUR, 0);
         cal.set(Calendar.MINUTE, 0);
         cal.set(Calendar.SECOND, 0);

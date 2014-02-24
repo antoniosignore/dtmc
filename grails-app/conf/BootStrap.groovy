@@ -5,14 +5,9 @@ import com.dtmc.club.SecUser
 import com.dtmc.club.SecUserSecRole
 import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.enums.PortfolioEnum
-import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.indicator.UserIndicators
-import com.netnumeri.server.finance.ta.NormalizedSeriesIndicator
-import com.netnumeri.server.finance.ta.SSAComponentsIndicator
-import com.netnumeri.server.finance.utils.DateUtils
-import com.netnumeri.server.utils.StockUtils
 
 class BootStrap {
 
@@ -20,7 +15,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
-        //  createTickers()
+        //createTickers()
 
         createData()
     }

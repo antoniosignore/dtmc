@@ -56,7 +56,7 @@ class StockController {
             return
         }
 
-        Date da = DateUtils.todayOneYearAgo()
+        Date da = DateUtils.todayThreeMonthsAgo()
         Date a = DateUtils.today()
 
         if (params.from != null) {

@@ -19,17 +19,12 @@
 </head>
 
 <body>
-<section id="show-stock" class="first">
 
+<section id="show-stock" class="first">
     <table class="table table-striped table-bordered table-condensed table-hover">
         <tbody>
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="stock.name.label" default="Name"/></td>
             <td valign="top" class="value">${fieldValue(bean: stockInstance, field: "name")}</td>
-        </tr>
-
-        <tr class="prop">
-            <td valign="top" class="name"><g:message code="stock.description.label" default="Description"/></td>
             <td valign="top" class="value">${fieldValue(bean: stockInstance, field: "description")}</td>
         </tr>
         </tbody>

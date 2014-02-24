@@ -35,7 +35,7 @@ public class SSASignal extends Strategy {
 
     public void evaluateInstrumentOnDate(Date date) {
 
-        Date da = DateUtils.dateNYearsAgo(date, 1);
+        Date da = DateUtils.dateNMonthsAgo(date, 3);
         Date a = date
 
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd")
