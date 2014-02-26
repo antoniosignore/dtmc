@@ -17,7 +17,7 @@
             series: [
                 {
                     renderer: $.jqplot.OHLCRenderer,
-                    rendererOptions: { candleStick: true },
+                    rendererOptions: { candleStick: true, upBodyColor: 'black', downBodyColor: 'black', fillUpBody: false, fillDownBody: true},
                     highlighter: {
                         showMarker: false,
                         pointLabels: { show: true, location: 's', ypadding: 3 },

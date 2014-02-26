@@ -48,11 +48,11 @@ grails.project.dependency.resolution = {
 
         build "gov.nist.math:jama:1.0.2"
 
-        build "xuggle:xuggle-xuggler:5.4"
+        //  build "xuggle:xuggle-xuggler:5.4"
 
         runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
 
-        compile 'jfree:jfreechart:1.0.13'
+//        compile 'jfree:jfreechart:1.0.13'
     }
 
     /*
