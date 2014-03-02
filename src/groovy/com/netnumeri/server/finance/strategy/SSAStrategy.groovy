@@ -13,10 +13,6 @@ import com.netnumeri.server.finance.ssa.SSAMath
 import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.StringTemplate
 import com.netnumeri.server.finance.utils.Util
-import com.netnumeri.server.utils.StockUtils
-import org.apache.commons.io.FileUtils
-
-import java.text.SimpleDateFormat
 
 public class SSAStrategy extends Strategy {
 
@@ -641,4 +637,8 @@ public class SSAStrategy extends Strategy {
 
     }
 
+    @Override
+    void evaluateInstrumentOnDate(Date date) {
+
+    }
 }

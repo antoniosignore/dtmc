@@ -22,7 +22,8 @@
                         upBodyColor: 'black',
                         downBodyColor: 'black',
                         fillUpBody: false,
-                        fillDownBody: true},
+                        fillDownBody: true
+                    },
                     highlighter: {
                         showMarker: false,
                         pointLabels: { show: true, location: 's', ypadding: 3 },
@@ -78,5 +79,6 @@
     %{--upper= ${stockInstance.indicators.get("upper").jqPlot}--}%
 
 </script>
+
 
 <div id="chart" style="height:300px; width:100%;"></div>
