@@ -14,11 +14,6 @@
     <link rel="shortcut icon" href="${resource(plugin: 'kickstart-with-bootstrap', dir: 'images', file: 'favicon.ico')}"
           type="image/x-icon"/>
 
-    <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon.png">
-    <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-72x72.png" sizes="72x72">
-    <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-114x114.png" sizes="114x114">
-
-
     <%-- Manual switch for the skin can be found in /view/_menu/_config.gsp --%>
     <r:require modules="jquery"/>
     <r:require modules="bootstrap"/>
@@ -47,9 +42,30 @@
 
     <r:layoutResources/>
     <g:layoutHead/>
+
+    <r:external uri="/css/style-sortable.css"/>
+
+    <r:external uri="/js/alert.js"/>
+
+    <r:external uri="/js/maxlength/bootstrap-maxlength.min.js"/>
+
+    <r:external uri="/js/select2/select2.min.js"/>
+    <r:external uri="/js/select2/select2.css"/>
+    <r:external uri="/js/select2/select2-bootstrap.css"/>
+
+    <r:external uri="/js/bootstrap-checkbox/js/bootstrap-checkbox.js"/>
+    <r:external uri="/js/bootstrap-checkbox/css/bootstrap-checkbox.css"/>
+
+    <r:external uri="/css/image-picker.css"/>
+    <r:external uri="/js/image-picker.min.js"/>
+    <r:external uri="/css/ssp.css"/>
+
+    <r:external uri="/js/html5.js"/>
+
 </head>
 
-<body>
+<body data-grid-framework="bo" data-grid-color="#00CCDD" data-grid-opacity="0.5" data-grid-zindex="10"
+      data-grid-nbcols="16">
 
 <g:render template="/_menu/navbar"/>
 

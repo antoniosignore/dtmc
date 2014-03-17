@@ -279,7 +279,7 @@ class StockController {
         stockInstance.indicators.put("upper", new SMAIndicator(closes, "SMA-" + 50, 50))
         stockInstance.indicators.put("lower", new SMAIndicator(closes, "SMA-" + 10, 10))
         Strategy strategy = new SMACrossoverSignal("test", stockInstance, da, a);
-//      strategy.run();
+        // strategy.run();
 
         render(view: "show", model: [startDate: da, endDate: a, stockInstance: stockInstance, strategyInstance: strategy, indicators: list])
     }

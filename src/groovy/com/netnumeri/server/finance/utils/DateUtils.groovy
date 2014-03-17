@@ -117,7 +117,7 @@ public class DateUtils {
         if (date2 == null) {
             return date1;
         }
-        if (DateUtils.isGreater(date1, date2)) {
+        if (isGreater(date1, date2)) {
             return date1;
         } else {
             return date2;
@@ -131,7 +131,7 @@ public class DateUtils {
         if (date2 == null) {
             return date1;
         }
-        if (DateUtils.isLess(date1, date2)) {
+        if (isLess(date1, date2)) {
             return date1;
         } else {
             return date2;

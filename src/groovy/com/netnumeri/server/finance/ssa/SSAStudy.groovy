@@ -220,5 +220,4 @@ class SSAStudy {
         return ret
     }
 
-
 }

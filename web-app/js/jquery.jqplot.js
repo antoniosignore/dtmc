@@ -4909,13 +4909,13 @@
         };
         // prop: smooth
         // True to draw a smoothed (interpolated) line through the data points
-        // with automatically computed number of smoothing1 points.
-        // Set to an integer number > 2 to specify number of smoothing1 points
+        // with automatically computed number of smoothing points.
+        // Set to an integer number > 2 to specify number of smoothing points
         // to use between each data point.
-        this.renderer.smooth = false;  // true or a number > 2 for smoothing1.
+        this.renderer.smooth = false;  // true or a number > 2 for smoothing.
         this.renderer.tension = null; // null to auto compute or a number typically > 6.  Fewer points requires higher tension.
         // prop: constrainSmoothing
-        // True to use a more accurate smoothing1 algorithm that will
+        // True to use a more accurate smoothing algorithm that will
         // not overshoot any data points.  False to allow overshoot but
         // produce a smoother looking line.
         this.renderer.constrainSmoothing = true;
@@ -5015,7 +5015,7 @@
         }
 
 
-        // smoothing1 is not compatible with stacked lines, disable
+        // smoothing is not compatible with stacked lines, disable
         if (this._stack) {
             this.renderer.smooth = false;
         }
@@ -5416,7 +5416,7 @@
 
     ///////
     // computeHermiteSmoothedData
-    // A hermite spline smoothing1 of the plot data.
+    // A hermite spline smoothing of the plot data.
     // This implementation is derived from the one posted
     // by krypin on the jqplot-users mailing list:
     //
@@ -5577,7 +5577,7 @@
             }
         }
 
-        // don't do smoothing1 or bands on broken lines.
+        // don't do smoothing or bands on broken lines.
         if (hasNull) {
             this.renderer.smooth = false;
             if (this._type === 'line') {
@@ -5664,7 +5664,7 @@
             }
         }
 
-        // don't do smoothing1 or bands on broken lines.
+        // don't do smoothing or bands on broken lines.
         if (hasNull) {
             this.renderer.smooth = false;
             if (this._type === 'line') {
