@@ -1,8 +1,7 @@
 import com.dtmc.club.Club
 import com.dtmc.club.Member
-import com.dtmc.club.SecRole
-import com.dtmc.club.SecUser
-import com.dtmc.club.SecUserSecRole
+import com.dtmc.security.SecRole
+import com.dtmc.security.SecUserSecRole
 import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.enums.PortfolioEnum
 import com.netnumeri.server.finance.finpojo.Portfolio
@@ -75,7 +74,7 @@ class BootStrap {
             Portfolio portfolio = new Portfolio("SMA crossing", "desc", 10000)
             portfolio.portfolioType = PortfolioEnum.Main
             portfolio.user = adminUser
-            portfolio.club = club
+//            portfolio.club = club
             portfolio.save(failOnError: true, insert: true, flush: true)
 
             println "portfolio.id = $portfolio.id"

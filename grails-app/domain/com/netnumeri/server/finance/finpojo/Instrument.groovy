@@ -9,7 +9,8 @@ import com.netnumeri.server.finance.utils.DateUtils
 
 class Instrument extends Persistable implements Serializable {
 
-    static mapping = { tablePerHierarchy false
+    static mapping = {
+        tablePerHierarchy false
     }
 
     static transients = [
@@ -412,15 +413,14 @@ class Instrument extends Persistable implements Serializable {
     public TimeSeries buildReturnSeries(Date firstDate, Date lastDate) {
         double fLastPrice = 0;
         boolean isFirst = true;
-        for (Date treeKey : dailyarray.treeMap.keySet())  {
+        for (Date treeKey : dailyarray.treeMap.keySet()) {
             Daily daily = dailyarray.treeMap.get(treeKey)
 
             if (isFirst) {
-                fLastPrice =  daily.closeprice
+                fLastPrice = daily.closeprice
                 returnSeries.add(treeKey, 0);
                 isFirst = false
-            }
-            else{
+            } else {
                 returnSeries.add(treeKey, (daily.closeprice - fLastPrice) / fLastPrice);
                 fLastPrice = daily.closeprice;
             }
@@ -431,15 +431,14 @@ class Instrument extends Persistable implements Serializable {
     public TimeSeries logReturnSeries() {
         double fLastPrice = 0;
         boolean isFirst = true;
-        for (Date treeKey : dailyarray.treeMap.keySet())  {
+        for (Date treeKey : dailyarray.treeMap.keySet()) {
             Daily daily = dailyarray.treeMap.get(treeKey)
 
             if (isFirst) {
-                fLastPrice =  daily.closeprice
+                fLastPrice = daily.closeprice
                 logReturnSeries.add(treeKey, 0);
                 isFirst = false
-            }
-            else{
+            } else {
                 logReturnSeries.add(treeKey, Math.log((daily.closeprice - fLastPrice) / fLastPrice));
                 fLastPrice = daily.closeprice;
             }
@@ -452,15 +451,14 @@ class Instrument extends Persistable implements Serializable {
 
         double value = 0;
         boolean isFirst = true;
-        for (Date treeKey : dailyarray.treeMap.keySet())  {
+        for (Date treeKey : dailyarray.treeMap.keySet()) {
             Daily daily = dailyarray.treeMap.get(treeKey)
 
             if (isFirst) {
-                value =  daily.volume
+                value = daily.volume
                 volumeReturnSeries.add(treeKey, 0);
                 isFirst = false
-            }
-            else{
+            } else {
                 volumeReturnSeries.add(treeKey, ((daily.volume - value) / value));
                 value = daily.volume;
             }
@@ -472,16 +470,15 @@ class Instrument extends Persistable implements Serializable {
 
         double value = 0;
         boolean isFirst = true;
-        for (Date treeKey : dailyarray.treeMap.keySet())  {
+        for (Date treeKey : dailyarray.treeMap.keySet()) {
             Daily daily = dailyarray.treeMap.get(treeKey)
 
             if (isFirst) {
-                value =  daily.volume
+                value = daily.volume
                 volumeLogReturnSeries.add(treeKey, 0);
                 isFirst = false
-            }
-            else{
-                volumeLogReturnSeries.add(treeKey,Math.log ((daily.volume - value) / value));
+            } else {
+                volumeLogReturnSeries.add(treeKey, Math.log((daily.volume - value) / value));
                 value = daily.volume;
             }
         }
@@ -727,8 +724,8 @@ class Instrument extends Persistable implements Serializable {
         println "lastDate = $lastDate"
 
         for (Date date = firstDate;
-        DateUtils.isLessEqual(date, lastDate);
-        date = DateUtils.addDays(date, 1)) {
+             DateUtils.isLessEqual(date, lastDate);
+             date = DateUtils.addDays(date, 1)) {
             Daily daily = daily(date);
             if ((daily != null) && daily.valid()) {
                 value = daily.price(What);

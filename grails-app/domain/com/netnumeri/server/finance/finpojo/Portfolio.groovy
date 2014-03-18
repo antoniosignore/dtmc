@@ -1,25 +1,15 @@
 package com.netnumeri.server.finance.finpojo
 
 import Jama.Matrix
-import com.dtmc.club.Member
 import com.netnumeri.server.enums.PortfolioEnum
 import com.netnumeri.server.finance.finpojo.asset.Asset
 
 class Portfolio extends Asset implements Serializable {
 
-    static constraints = {
-    }
-
-    static belongsTo = [user: Member]
-
     static hasMany = [items: PortfolioEntry, transactions: Transaction]
 
-//    List<PortfolioItem> items = new ArrayList<PortfolioItem>()
-//    List<Transaction> transactions = new ArrayList<Transaction>()
-
     static mapping = {
-        id generator: 'hilo',
-                params: [table: 'hi_value', column: 'next_value', max_lo: 100]
+        id generator: 'hilo', params: [table: 'hi_value', column: 'next_value', max_lo: 100]
 
         transactions cascade: 'all-delete-orphan'
         items cascade: 'all-delete-orphan'

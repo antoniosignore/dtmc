@@ -1,6 +1,6 @@
 package com.dtmc.club
 
-class ImageNode {
+class ImageNode implements Serializable {
 
     byte[] photo
     byte[] photoThumbnail

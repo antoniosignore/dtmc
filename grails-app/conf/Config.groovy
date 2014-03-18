@@ -154,11 +154,25 @@ grails {
 }
 remove this line */
 
+grails.plugin.springsecurity.securityConfigType = 'InterceptUrlMap'
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.dtmc.security.SecUser'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.dtmc.security.SecUserSecRole'
+grails.plugin.springsecurity.authority.className = 'com.dtmc.security.SecRole'
+grails.plugin.springsecurity.password.algorithm = 'SHA-512'
+grails.plugin.springsecurity.interceptUrlMap = [
+//        '/stock/index':     ['ROLE_USER, ROLE_ADMIN, IS_AUTHENTICATED_FULLY'],
+//        '/stock/**':        ['ROLE_ADMIN'],
+//        '/portfolio/**':    ['ROLE_ADMIN'],
+        '/js/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/css/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/images/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/login/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/logout/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
+]
 
-// Added by the Spring Security Core plugin:
-//grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.dtmc.club.Member'
-//grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.dtmc.club.SecUserSecRole'
-//grails.plugin.springsecurity.authority.className = 'com.dtmc.club.SecRole'
+// Added by the Spring Security Core plugin:     grails.plugin.springsecurity
+
 //grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 //	'/':                              ['permitAll'],
 //	'/index':                         ['permitAll'],
@@ -168,5 +182,4 @@ remove this line */
 //	'/**/images/**':                  ['permitAll'],
 //	'/**/favicon.ico':                ['permitAll']
 //]
-//
 

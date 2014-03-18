@@ -1,16 +1,15 @@
 package com.netnumeri.server.finance.finpojo
 
-import com.dtmc.club.Club
 import com.dtmc.club.Member
 
-//import com.dtmc.security.UserBean
+class Persistable implements Serializable {
 
-class Persistable {
+    static mapping = {
+        tablePerHierarchy false
+    }
 
-    static mapping = { tablePerHierarchy false }
+    static belongsTo = [user: Member]
 
-    Member user
-    Club club
     String name
 
     Date dateCreated

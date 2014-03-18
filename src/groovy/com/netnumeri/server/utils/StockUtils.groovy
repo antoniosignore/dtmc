@@ -1,20 +1,21 @@
 package com.netnumeri.server.utils
 
-import com.xuggle.mediatool.demos.Balls
-import com.xuggle.mediatool.demos.MovingBalls
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import com.xuggle.mediatool.demos.Balls
+//import com.xuggle.mediatool.demos.MovingBalls
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 import java.awt.image.BufferedImage;
 
-import com.xuggle.mediatool.IMediaViewer;
-import com.xuggle.mediatool.IMediaWriter;
-import com.xuggle.mediatool.ToolFactory;
-import com.xuggle.xuggler.IAudioSamples;
+//import com.xuggle.mediatool.IMediaViewer;
+//import com.xuggle.mediatool.IMediaWriter;
+//import com.xuggle.mediatool.ToolFactory;
+//import com.xuggle.xuggler.IAudioSamples;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
-import static com.xuggle.xuggler.Global.DEFAULT_TIME_UNIT;
+
+//import static com.xuggle.xuggler.Global.DEFAULT_TIME_UNIT;
 
 import com.dtmc.gson.DailyGSON
 import com.google.gson.Gson

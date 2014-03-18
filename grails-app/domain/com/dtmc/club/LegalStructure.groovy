@@ -1,6 +1,6 @@
 package com.dtmc.club
 
-class LegalStructure {
+class LegalStructure implements Serializable {
 
     static constraints = {
     }

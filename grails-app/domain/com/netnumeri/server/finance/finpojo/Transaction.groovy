@@ -97,7 +97,7 @@ public class Transaction implements Serializable {
         return sb.toString();
     }
 
-    public double getValue() {
+    public double value() {
         return amount * price;
     }
 }

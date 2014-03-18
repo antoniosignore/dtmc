@@ -1,10 +1,11 @@
 package com.dtmc.club
 
+import com.dtmc.security.SecUser
 import com.netnumeri.server.enums.MemberGoalEnum
 import com.netnumeri.server.enums.MemberTypeEnum
 import com.netnumeri.server.finance.indicator.UserIndicators
 
-class Member extends SecUser{
+class Member extends SecUser implements Serializable {
 
     static belongsTo = [club: Club]
 

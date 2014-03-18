@@ -2,9 +2,7 @@ package com.dtmc.club
 
 import com.netnumeri.server.enums.RiskEnum
 
-//import com.dtmc.security.UserBean
-
-class Club {
+class Club implements Serializable {
 
     String name
 

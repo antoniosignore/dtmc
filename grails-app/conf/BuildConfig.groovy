@@ -52,7 +52,7 @@ grails.project.dependency.resolution = {
 
         runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
 
-//        compile 'jfree:jfreechart:1.0.13'
+        compile 'jfree:jfreechart:1.0.13'
     }
 
     /*
@@ -100,7 +100,7 @@ grails.project.dependency.resolution = {
 
         compile ":scaffolding:1.0.0"
 
-//        compile ":spring-security-core:2.0-RC2"
+        compile ":spring-security-core:2.0-RC2"
 
     }
 }

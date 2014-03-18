@@ -1,6 +1,6 @@
 package com.dtmc.club
 
-class Banker {
+class Banker implements Serializable {
 
     static constraints = {
     }

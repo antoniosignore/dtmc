@@ -1,6 +1,6 @@
 package com.dtmc.club
 
-class Broker {
+class Broker implements Serializable {
 
     static constraints = {
     }

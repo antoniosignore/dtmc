@@ -24,7 +24,7 @@ public class SMACrossover extends Strategy {
         this.asset = asset
     }
 
-    public void evaluateInstrumentOnDate(Date date, Instrument asset) {
+    public void evaluateInstrumentOnDate(Date date) {
 
         println "evaluateInstrumentOnDate date = $date"
 
@@ -38,7 +38,7 @@ public class SMACrossover extends Strategy {
         Indicator upper = asset.indicators.get("upper");
         println "upper = $upper.name"
 
-        if (! (DateUtils.isGreater(date, lower.firstDate) && DateUtils.isGreater(date, upper.firstDate)))
+        if (!(DateUtils.isGreater(date, lower.firstDate) && DateUtils.isGreater(date, upper.firstDate)))
             return
 
         double todayLower = lower.getData(date)

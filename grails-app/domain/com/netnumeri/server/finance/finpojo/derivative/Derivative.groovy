@@ -1,11 +1,13 @@
 package com.netnumeri.server.finance.finpojo.derivative;
 
-
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.utils.DateUtils
 
 public abstract class Derivative extends Instrument implements Serializable {
-    public static final boolean debug = true;
+
+    static mapping = {
+        tablePerHierarchy false
+    }
 
     public abstract Instrument underlying();
 
