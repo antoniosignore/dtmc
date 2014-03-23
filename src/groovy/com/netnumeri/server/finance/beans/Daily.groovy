@@ -7,7 +7,6 @@ class Daily implements Serializable {
 
     private Instrument instrument;
 
-    int arrayindex;
     Date dailydate = null;
     int volume = 0;
     double high = 0;
@@ -38,7 +37,6 @@ class Daily implements Serializable {
      * Daily data normal constructor
      */
     public Daily(Daily daily) {
-        this.arrayindex = daily.arrayindex;
         this.dailydate = daily.dailydate;
         this.high = daily.high;
         this.low = daily.low;
@@ -50,16 +48,15 @@ class Daily implements Serializable {
     }
 
     public Daily(Instrument instrument,
-                 int arrayindex,
                  Date d,
                  double high,
                  double low,
                  double open,
                  double close,
-                 int volume, int oint,
+                 int volume,
+                 int oint,
                  FinConstants state) {
         this.instrument = instrument;
-        this.arrayindex = arrayindex;
         this.dailydate = d;
         this.high = high;
         this.low = low;
@@ -111,7 +108,6 @@ class Daily implements Serializable {
         if (daily == null) {
             throw new IllegalArgumentException("Daily: set() " + "Argument is null");
         }
-        arrayindex = daily.arrayindex;
         dailydate = daily.dailydate;
         volume = daily.volume;
         high = daily.high;
@@ -123,7 +119,6 @@ class Daily implements Serializable {
 
     public Object clone() {
         Daily q = new Daily();
-        q.arrayindex = this.arrayindex;
         q.volume = this.volume;
         q.high = this.high;
         q.low = this.low;

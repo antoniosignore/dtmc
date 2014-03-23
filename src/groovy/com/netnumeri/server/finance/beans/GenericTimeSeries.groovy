@@ -1,93 +1,82 @@
 package com.netnumeri.server.finance.beans
 
-class GenericTimeSeries<T> implements Serializable {
+class GenericTimeSeries<T> extends TreeMap<Date, T> {
 
-    TreeMap<Date, T> treeMap = new TreeMap<Date, T>(new DateComparator());
+//    TreeMap<Date, T> treeMap = new TreeMap<Date, T>(new DateComparator());
 
     @SuppressWarnings("unchecked")
     public GenericTimeSeries() {
-    }
-
-    public void put(Date date, T obj) {
-        treeMap.put(date, obj)
-    }
-
-    public T get(Date date) {
-        treeMap.get(date)
-    }
-
-    public boolean isEmpty() {
-        return treeMap.isEmpty()
+        super(new DateComparator())
     }
 
     public T getFirstValue() {
-        def key = treeMap.firstKey();
-        return treeMap.get(key);
+        def key = firstKey();
+        return get(key);
     }
 
     public Date getNextDate(Date date) {
-        return treeMap.higherKey(date);
+        return higherKey(date);
     }
 
     public Date getPrevDate(Date date) {
-        return treeMap.lowerKey(date);
+        return lowerKey(date);
     }
 
     public T getNextValue(Date date) {
-        Map.Entry<Date, T> entry = treeMap.higherEntry(date)
+        Map.Entry<Date, T> entry = higherEntry(date)
         if (entry != null) return entry.value
         return null
     }
 
     public T getPrevValue(Date date) {
-        Map.Entry<Date, T> entry = treeMap.lowerEntry(date)
+        Map.Entry<Date, T> entry = lowerEntry(date)
         if (entry != null) return entry.value
         return null
     }
 
     public T getLastValue() {
-        def key = treeMap.lastKey();
-        return treeMap.get(key);
+        def key = lastKey();
+        return get(key);
     }
 
     public Date getFirstDate() {
-        return treeMap.firstKey();
+        return firstKey();
     }
 
     public Date getLastDate() {
-        return treeMap.lastKey();
+        return lastKey();
     }
 
     public TreeMap<Date, T> map() {
-        return treeMap
+        return this
     }
 
     int noElements(Date firstCalendarDate, Date lastCalendarDate) {
-        return treeMap.subMap(firstCalendarDate, true, lastCalendarDate, true).size();
-    }
-
-    public void clear() {
-        treeMap.clear()
+        return subMap(firstCalendarDate, true, lastCalendarDate, true).size();
     }
 
     public Date getDateByIndex(int i) {
-        Object[] array = treeMap.keySet().toArray()
+        Object[] array = keySet().toArray()
         return array[i] as Date
     }
 
     public T getValueByIndex(int i) {
-        Object[] array = treeMap.values().toArray()
+        Object[] array = values().toArray()
         return array[i] as T
     }
 
     public int getIndex(Date date) {
-        return treeMap.headMap(date).size();
+        return headMap(date).size();
     }
-
 }
 
-class DateComparator implements Comparator<Date>, Serializable {
+class DateComparator implements Comparator<Date> {
+    @Override
     public int compare(Date date1, Date date2) {
-        return date1.compareTo(date2);
+
+        println "date1 = $date1"
+        println "date2 = $date2"
+        return date2.compareTo(date1);
     }
+
 }

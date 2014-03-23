@@ -42,7 +42,7 @@ class BootStrap {
     def destroy = {
     }
 
-    private void createData() {
+    private static void createData() {
 
         if (Club.getAll() == null || Club.getAll().size() == 0) {
 

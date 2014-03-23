@@ -73,7 +73,7 @@ class GenericMatrix<T> implements Serializable {
 
         for (int i = 0; i < listOfTimeSeries.size(); i++) {
             GenericTimeSeries<T> series = listOfTimeSeries.get(i);
-            TreeMap<Date, T> map = series.treeMap;
+            TreeMap<Date, T> map = series;
             Set<T> keys = map.keySet();
             Iterator<Integer> iterator = keys.iterator();
             while (iterator.hasNext()) {

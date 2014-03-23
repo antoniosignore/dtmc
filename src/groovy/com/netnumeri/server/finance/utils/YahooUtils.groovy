@@ -160,6 +160,9 @@ public class YahooUtils {
      * @param url
      */
     public static void downloadData(Instrument instrument, String url) throws IOException, ParseException {
+
+        println "url = $url"
+
         String date = null;
         double open = 0;
         double high = 0;
@@ -167,7 +170,7 @@ public class YahooUtils {
         double close = 0;
         double volume = 0;
 
-        instrument.dailyarray.clear()
+//        instrument.dailyarray.clear()
 
         Stack lines = new Stack();
         String s3 = null;
@@ -194,7 +197,7 @@ public class YahooUtils {
 
             s3 = (String) lines.pop();
 
-//            System.out.println("s3 = " + s3);
+            System.out.println("s3 = " + s3);
 
             StringTokenizer stringtokenizer = new StringTokenizer(s3, ",");
             String token = stringtokenizer.nextToken();
@@ -223,7 +226,12 @@ public class YahooUtils {
             d1 = d / 4;
             double vol = Double.parseDouble(stringtokenizer.nextToken());
             volume = vol;
-            instrument.addDaily(i++, DateUtils.toYahoo(date), high, low, open, close, (int) volume, 0, FinConstants.VALID);
+
+            Date yahoo = DateUtils.toYahoo(date)
+
+            println "yahoo = $yahoo"
+
+            instrument.addDaily(yahoo, high, low, open, close, (int) volume, 0, FinConstants.VALID);
         }
         NetUtils.closeURL(is);
     }

@@ -28,7 +28,7 @@ public class SMACrossoverTest {
 
         Instrument stock = YahooUtils.downloadYahooData("AAPL", "Apple Computers", da, a);
 
-        TimeSeries closes = stock.getSeries(FinConstants.CLOSE);
+        TimeSeries closes = stock.series(FinConstants.CLOSE);
         //FileUtils.writeStringToFile(new File(dir + "stock.txt"), closes.getTimeplotSeries())
 
         stock.indicators.put("upper", new SMAIndicator(closes, "SMA-" + 50, 50))

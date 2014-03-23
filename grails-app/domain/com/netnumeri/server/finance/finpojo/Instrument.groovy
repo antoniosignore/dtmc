@@ -196,16 +196,16 @@ class Instrument extends Persistable implements Serializable {
         isVolatilityFixed = isTempVolatilityFixed;
     }
 
-    public void addDaily(int index, Daily daily) {
-        add(this, index, daily.dailydate,
+    public void addDaily(Daily daily) {
+        add(this, daily.dailydate,
                 daily.getHigh(), daily.getLow(), daily.getOpenprice(), daily.getCloseprice(), daily.getVolume(),
                 daily.getOpenInterest(), FinConstants.VALID);
         setLowerRangeDate(DateUtils.min(daily.dailydate, getLowerRangeDate()));
         setUpperRangeDate(DateUtils.max(daily.dailydate, getUpperRangeDate()));
     }
 
-    public void addDaily(int index, Date date, double high, double low, double open, double close, int volume, int openInterest, FinConstants option) {
-        add(this, index, date, high, low, open, close, volume, openInterest, option);
+    public void addDaily(Date date, double high, double low, double open, double close, int volume, int openInterest, FinConstants option) {
+        add(this, date, high, low, open, close, volume, openInterest, option);
         setLowerRangeDate(DateUtils.min(date, getLowerRangeDate()));
         setUpperRangeDate(DateUtils.max(date, getUpperRangeDate()));
     }
@@ -322,29 +322,36 @@ class Instrument extends Persistable implements Serializable {
         return priceSeries;
     }
 
-    public TimeSeries getSeries(FinConstants what) {
-        return getSeries(what, null, null);
+    public TimeSeries series(FinConstants what) {
+        return series(what, null, null);
     }
 
-    public TimeSeries getSeries(FinConstants what, Date firstD, Date lastD) {
+    public TimeSeries series(FinConstants what, Date firstD, Date lastD) {
         if (firstD == null) {
             firstD = firstDate();
         }
         if (lastD == null) {
             lastD = lastDate();
         }
-        switch (what) {
-            case FinConstants.HIGH:
-                return highSeries(firstD, lastD);
-            case FinConstants.LOW:
-                return lowSeries(firstD, lastD);
-            case FinConstants.OPEN:
-                return openSeries(firstD, lastD);
-            case FinConstants.CLOSE:
-                return closeSeries(firstD, lastD);
-            case FinConstants.VOLUME:
-                return volumeSeries(firstD, lastD);
-        }
+
+        println "firstD = $firstD"
+        println "lastD = $lastD"
+
+        println "what = $what"
+
+        if (what == FinConstants.HIGH)
+            return highSeries(firstD, lastD);
+        else if (what == FinConstants.LOW)
+            return lowSeries(firstD, lastD);
+        else if (what == FinConstants.LOW)
+            return lowSeries(firstD, lastD);
+        else if (what == FinConstants.OPEN)
+            return openSeries(firstD, lastD);
+        else if (what == FinConstants.CLOSE)
+            return closeSeries(firstD, lastD);
+        else if (what == FinConstants.VOLUME)
+            return volumeSeries(firstD, lastD);
+
         return null;
     }
 
@@ -413,8 +420,8 @@ class Instrument extends Persistable implements Serializable {
     public TimeSeries buildReturnSeries(Date firstDate, Date lastDate) {
         double fLastPrice = 0;
         boolean isFirst = true;
-        for (Date treeKey : dailyarray.treeMap.keySet()) {
-            Daily daily = dailyarray.treeMap.get(treeKey)
+        for (Date treeKey : dailyarray.keySet()) {
+            Daily daily = dailyarray.get(treeKey)
 
             if (isFirst) {
                 fLastPrice = daily.closeprice
@@ -431,8 +438,8 @@ class Instrument extends Persistable implements Serializable {
     public TimeSeries logReturnSeries() {
         double fLastPrice = 0;
         boolean isFirst = true;
-        for (Date treeKey : dailyarray.treeMap.keySet()) {
-            Daily daily = dailyarray.treeMap.get(treeKey)
+        for (Date treeKey : dailyarray.keySet()) {
+            Daily daily = dailyarray.get(treeKey)
 
             if (isFirst) {
                 fLastPrice = daily.closeprice
@@ -451,8 +458,8 @@ class Instrument extends Persistable implements Serializable {
 
         double value = 0;
         boolean isFirst = true;
-        for (Date treeKey : dailyarray.treeMap.keySet()) {
-            Daily daily = dailyarray.treeMap.get(treeKey)
+        for (Date treeKey : dailyarray.keySet()) {
+            Daily daily = dailyarray.get(treeKey)
 
             if (isFirst) {
                 value = daily.volume
@@ -470,8 +477,8 @@ class Instrument extends Persistable implements Serializable {
 
         double value = 0;
         boolean isFirst = true;
-        for (Date treeKey : dailyarray.treeMap.keySet()) {
-            Daily daily = dailyarray.treeMap.get(treeKey)
+        for (Date treeKey : dailyarray.keySet()) {
+            Daily daily = dailyarray.get(treeKey)
 
             if (isFirst) {
                 value = daily.volume
@@ -794,18 +801,20 @@ class Instrument extends Persistable implements Serializable {
             return false;
         }
         if (date == null) {
-            return dailyarray.treeMap.size() != 0;
+            return dailyarray.size() != 0;
         }
         return dataAvailable(date);
     }
 
     public int length() {
-        return dailyarray.treeMap.size();
+        return dailyarray.size();
     }
 
     public Date firstDailyDate() {
-        if (dailyarray == null || dailyarray.isEmpty())
+        if (dailyarray == null || dailyarray.isEmpty()) {
+            println "dailyarray IS NULL"
             return null
+        }
         Daily daily = (Daily) dailyarray.getFirstValue();
         if (daily != null)
             return daily.getDailydate();
@@ -822,7 +831,6 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public void add(Instrument instrument,
-                    int index,
                     Date date,
                     double high,
                     double low,
@@ -831,7 +839,7 @@ class Instrument extends Persistable implements Serializable {
                     int volume,
                     int openInterest,
                     FinConstants option) {
-        Daily daily = new Daily(instrument, index, date, high, low, open, close, volume, openInterest, option);
+        Daily daily = new Daily(instrument, date, high, low, open, close, volume, openInterest, option);
         add(daily);
     }
 }

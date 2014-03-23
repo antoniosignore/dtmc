@@ -22,7 +22,7 @@ public class TransactionSeries implements Serializable {
     }
 
     public int getNTransactions() {
-        return transactionArray.treeMap.size();
+        return transactionArray.size();
     }
 
     public Transaction getTransaction(Date date) {

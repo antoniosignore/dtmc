@@ -71,7 +71,7 @@ class StockController {
         // todo - add user
         List<UserIndicators> list = UserIndicators.list()
 
-        TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE, da, a);
+        TimeSeries closes = stockInstance.series(FinConstants.CLOSE, da, a);
 
         for (int i = 0; i < list.size(); i++) {
             UserIndicators ui = list.get(i);

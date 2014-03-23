@@ -36,7 +36,8 @@ public class DateUtils {
             Date parse = yyyyMMddHHmmss.parse(date);
             yyyyMMddHHmmss.setTimeZone(new SimpleTimeZone(SimpleTimeZone.UTC_TIME, "UTC"));
             Date date1 = DateUtils.Date(yyyyMMddHHmmss2.format(parse));
-            return cleanse(date1);
+            Date date2 = cleanse(date1)
+            return date2;
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
