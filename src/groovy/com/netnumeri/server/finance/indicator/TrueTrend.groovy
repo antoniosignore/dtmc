@@ -9,7 +9,7 @@ import com.netnumeri.server.finance.beans.TimeSeries;
 public class TrueTrend {
 
     public static double calculate(TimeSeries qh, Date date, int periodLength) {
-        int lastBar = qh.matrix.getIndex(date);
+        int lastBar = qh.matrix.index(date);
 
         int firstBar = lastBar - periodLength + 1;
 

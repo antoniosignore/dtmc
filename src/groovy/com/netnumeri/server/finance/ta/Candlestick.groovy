@@ -44,55 +44,77 @@ public class Candlestick {
             return Pattern.Evening_Doji_Star;
 
         } else if (isEvening_Star(stock, date)) {
-            return Pattern.Evening_Star; // Evening Star Candlestick  A bearish reversal pattern that continues an uptrend with a long white body day followed by a gapped up small body day, then a down close with the close below the midpoint of the first day.
+            return Pattern.Evening_Star;
+            // Evening Star Candlestick  A bearish reversal pattern that continues an uptrend with a long white body day followed by a gapped up small body day, then a down close with the close below the midpoint of the first day.
 
         } else if (isFalling_Three_Methods(stock, date)) {
             return Pattern.Falling_Three_Methods;
 
         } else if (isGravestone_Doji(stock, date)) {
-            return Pattern.Gravestone_Doji; // Gravestone Doji Candlestick  A doji line that develops when the Doji is at, or very near, the low of the day.
+            return Pattern.Gravestone_Doji;
+            // Gravestone Doji Candlestick  A doji line that develops when the Doji is at, or very near, the low of the day.
         } else if (isHammer(stock, date)) {
-            return Pattern.Hammer; // Hammer Candlestick  Hammer candlesticks form when a security moves significantly lower after the open, but rallies to close well above the intraday low. The resulting candlestick looks like a square lollipop with a long stick. If this candlestick forms during an advance, then it is called a Hanging Man.
+            return Pattern.Hammer;
+            // Hammer Candlestick  Hammer candlesticks form when a security moves significantly lower after the open, but rallies to close well above the intraday low. The resulting candlestick looks like a square lollipop with a long stick. If this candlestick forms during an advance, then it is called a Hanging Man.
         } else if (isHanging_Man(stock, date)) {
-            return Pattern.Hanging_Man; // Hanging Man Candlestick  Hanging Man candlesticks form when a security moves significantly lower after the open, but rallies to close well above the intraday low. The resulting candlestick looks like a square lollipop with a long stick. If this candlestick forms during a decline, then it is called a Hammer.
+            return Pattern.Hanging_Man;
+            // Hanging Man Candlestick  Hanging Man candlesticks form when a security moves significantly lower after the open, but rallies to close well above the intraday low. The resulting candlestick looks like a square lollipop with a long stick. If this candlestick forms during a decline, then it is called a Hammer.
         } else if (isHarami(stock, date)) {
             return Pattern.Harami;
         } else if (isHarami_Cross(stock, date)) {
-            return Pattern.Harami_Cross; // Harami Cross Candlestick  A two day pattern similar to the Harami. The difference is that the last day is a Doji.
+            return Pattern.Harami_Cross;
+            // Harami Cross Candlestick  A two day pattern similar to the Harami. The difference is that the last day is a Doji.
         } else if (isInverted_Hammer(stock, date)) {
-            return Pattern.Inverted_Hammer; // Inverted Hammer Candlestick  A one day bullish reversal pattern. In a downtrend, the open is lower, then it trades higher, but closes near its open, therefore looking like an inverted lollipop.
+            return Pattern.Inverted_Hammer;
+            // Inverted Hammer Candlestick  A one day bullish reversal pattern. In a downtrend, the open is lower, then it trades higher, but closes near its open, therefore looking like an inverted lollipop.
         } else if (isLong_Day(stock, date)) {
-            return Pattern.Long_Day; // Long Date Candlestick  A long day represents a large price move from open to close, where the length of the candle body is long.
+            return Pattern.Long_Day;
+            // Long Date Candlestick  A long day represents a large price move from open to close, where the length of the candle body is long.
         } else if (isLong_Legged_Doji(stock, date)) {
-            return Pattern.Long_Legged_Doji; // Long-legged Doji Candlestick  This candlestick has long upper and lower shadows with the Doji in the middle of the day's trading range, clearly reflecting the indecision of traders.
+            return Pattern.Long_Legged_Doji;
+            // Long-legged Doji Candlestick  This candlestick has long upper and lower shadows with the Doji in the middle of the day's trading range, clearly reflecting the indecision of traders.
         } else if (isLong_Shadows(stock, date)) {
-            return Pattern.Long_Shadows; // Long Shadows Long Shadows Candlestick  Candlesticks with a long upper shadow and short lower shadow indicate that buyers dominated during the session and bid prices higher. Conversely, candlesticks with long lower shadows and short upper shadows indicate that sellers dominated during the session and drove prices lower.
+            return Pattern.Long_Shadows;
+            // Long Shadows Long Shadows Candlestick  Candlesticks with a long upper shadow and short lower shadow indicate that buyers dominated during the session and bid prices higher. Conversely, candlesticks with long lower shadows and short upper shadows indicate that sellers dominated during the session and drove prices lower.
         } else if (isMarubozo(stock, date)) {
-            return Pattern.Marubozo; // Marubozu Candlestick  A candlestick with no shadow extending from the body at either the open, the close or at both. The name means close-cropped or close-cut in Japanese, though other interpretations refer to it as Bald or Shaven Head.
+            return Pattern.Marubozo;
+            // Marubozu Candlestick  A candlestick with no shadow extending from the body at either the open, the close or at both. The name means close-cropped or close-cut in Japanese, though other interpretations refer to it as Bald or Shaven Head.
         } else if (isMorning_Doji_Star(stock, date)) {
-            return Pattern.Morning_Doji_Star; // Morning Doji Star Candlestick  A three day bullish reversal pattern that is very similar to the Morning Star. The first day is in a downtrend with a long black body. The next day opens lower with a Doji that has a small trading range. The last day closes above the midpoint of the first day.
+            return Pattern.Morning_Doji_Star;
+            // Morning Doji Star Candlestick  A three day bullish reversal pattern that is very similar to the Morning Star. The first day is in a downtrend with a long black body. The next day opens lower with a Doji that has a small trading range. The last day closes above the midpoint of the first day.
         } else if (isMorning_Star(stock, date)) {
-            return Pattern.Morning_Star; // Morning Star Candlestick  A three day bullish reversal pattern consisting of three candlesticks - a long-bodied black candle extending the current downtrend, a short middle candle that gapped down on the open, and a long-bodied white candle that gapped up on the open and closed above the midpoint of the body of the first day.
+            return Pattern.Morning_Star;
+            // Morning Star Candlestick  A three day bullish reversal pattern consisting of three candlesticks - a long-bodied black candle extending the current downtrend, a short middle candle that gapped down on the open, and a long-bodied white candle that gapped up on the open and closed above the midpoint of the body of the first day.
         } else if (isPiercing_Line(stock, date)) {
-            return Pattern.Piercing_Line; // Piercing Line Candlestick  A bullish two day reversal pattern. The first day, in a downtrend, is a long black day. The next day opens at a new low, then closes above the midpoint of the body of the first day.
+            return Pattern.Piercing_Line;
+            // Piercing Line Candlestick  A bullish two day reversal pattern. The first day, in a downtrend, is a long black day. The next day opens at a new low, then closes above the midpoint of the body of the first day.
         } else if (isRising_Three_Methods(stock, date)) {
-            return Pattern.Rising_Three_Methods; // Rising Three Methods Candlestick  A bullish continuation pattern in which a long white body is followed by three small body days, each fully contained within the range of the high and low of the first day. The fifth day closes at a new high.
+            return Pattern.Rising_Three_Methods;
+            // Rising Three Methods Candlestick  A bullish continuation pattern in which a long white body is followed by three small body days, each fully contained within the range of the high and low of the first day. The fifth day closes at a new high.
         } else if (isShooting_Star(stock, date)) {
-            return Pattern.Shooting_Star; // Shooting Star Candlestick  A single day pattern that can appear in an uptrend. It opens higher, trades much higher, then closes near its open. It looks just like the Inverted Hammer except that it is bearish.
+            return Pattern.Shooting_Star;
+            // Shooting Star Candlestick  A single day pattern that can appear in an uptrend. It opens higher, trades much higher, then closes near its open. It looks just like the Inverted Hammer except that it is bearish.
         } else if (isShort_Day(stock, date)) {
-            return Pattern.Short_Day; // Short Date Candlestick  A short day represents a small price move from open to close, where the length of the candle body is short.
+            return Pattern.Short_Day;
+            // Short Date Candlestick  A short day represents a small price move from open to close, where the length of the candle body is short.
         } else if (isSpinning_Top(stock, date)) {
-            return Pattern.Spinning_Top; // Spinning Tops Candlestick  Candlestick lines that have small bodies with upper and lower shadows that exceed the length of the body. Spinning tops signal indecision.
+            return Pattern.Spinning_Top;
+            // Spinning Tops Candlestick  Candlestick lines that have small bodies with upper and lower shadows that exceed the length of the body. Spinning tops signal indecision.
         } else if (isStars(stock, date)) {
-            return Pattern.Stars; // Stars Candlestick  A candlestick that gaps away from the previous candlestick is said to be in star position. Depending on the previous candlestick, the star position candlestick gaps up or down and appears isolated from previous price action.
+            return Pattern.Stars;
+            // Stars Candlestick  A candlestick that gaps away from the previous candlestick is said to be in star position. Depending on the previous candlestick, the star position candlestick gaps up or down and appears isolated from previous price action.
         } else if (isStick_Sandwich(stock, date)) {
-            return Pattern.Stick_Sandwich; // Stick Sandwich Candlestick  A bullish reversal pattern with two black bodies surrounding a white body. The closing prices of the two black bodies must be equal. A support prices is apparent and the opportunity for prices to reverse is quite good.
+            return Pattern.Stick_Sandwich;
+            // Stick Sandwich Candlestick  A bullish reversal pattern with two black bodies surrounding a white body. The closing prices of the two black bodies must be equal. A support prices is apparent and the opportunity for prices to reverse is quite good.
         } else if (isThree_Black_Crows(stock, date)) {
-            return Pattern.Three_Black_Crows; // Three Black Crows Candlestick  A bearish reversal pattern consisting of three consecutive long black bodies where each day closes at or near its low and opens within the body of the previous day.
+            return Pattern.Three_Black_Crows;
+            // Three Black Crows Candlestick  A bearish reversal pattern consisting of three consecutive long black bodies where each day closes at or near its low and opens within the body of the previous day.
         } else if (isThree_White_Soldiers(stock, date)) {
-            return Pattern.Three_White_Soldiers; // Three White Soldiers Candlestick  A bullish reversal pattern consisting of three consecutive long white bodies. Each should open within the previous body and the close should be near the high of the day.
+            return Pattern.Three_White_Soldiers;
+            // Three White Soldiers Candlestick  A bullish reversal pattern consisting of three consecutive long white bodies. Each should open within the previous body and the close should be near the high of the day.
         } else if (isUpside_Gap_Two_Crows(stock, date)) {
-            return Pattern.Upside_Gap_Two_Crows; // Upside Gap Two Crows Candlestick  A three day bearish pattern that only happens in an uptrend. The first day is a long white body followed by a gapped open with the small black body remaining gapped above the first day. The third day is also a black day whose body is larger than the second day and engulfs it. The close of the last day is still above the first long white day.
+            return Pattern.Upside_Gap_Two_Crows;
+            // Upside Gap Two Crows Candlestick  A three day bearish pattern that only happens in an uptrend. The first day is a long white body followed by a gapped open with the small black body remaining gapped above the first day. The third day is also a black day whose body is larger than the second day and engulfs it. The close of the last day is still above the first long white day.
         }
         return Pattern.NONE;
     }
@@ -103,7 +125,7 @@ public class Candlestick {
     // The third day is also a black day whose body is larger than the second day and engulfs it.
     // The close of the last day is still above the first long white day.
     public static boolean isUpside_Gap_Two_Crows(Stock stock, Date date) {
-        int i = stock.getIndex(date);
+        int i = stock.index(date);
         Daily daily = stock.getDaily(i);
         Daily yesterdayDaily = stock.getDaily(i - 1);
         Daily dayBeforeYesterdayDaily = stock.getDaily(i - 2);
@@ -182,7 +204,7 @@ public class Candlestick {
     // bodies where each day closes at or near its low and opens within the body
     // of the previous day.
     public static boolean isThree_Black_Crows(Stock stock, Date date) {
-        int i = stock.getIndex(date);
+        int i = stock.index(date);
         Daily daily = stock.getDaily(i);
         Daily yesterdayDaily = stock.getDaily(i - 1);
         Daily dayBeforeYesterdayDaily = stock.getDaily(i - 2);
@@ -207,7 +229,7 @@ public class Candlestick {
     // The closing prices of the two black bodies must be equal.
     // A support prices is apparent and the opportunity for prices to reverse is quite good.
     public static boolean isStick_Sandwich(Stock stock, Date date) {
-        int i = stock.getIndex(date);
+        int i = stock.index(date);
         Daily daily = stock.getDaily(i);
         Daily yesterdayDaily = stock.getDaily(i - 1);
         Daily dayBeforeYesterdayDaily = stock.getDaily(i - 2);
@@ -222,7 +244,7 @@ public class Candlestick {
     //  Short Date: Short Date Candlestick
     //  A short day represents a small price move from open to close, where the length of the candle body is short.
     public static boolean isShort_Day(Stock stock, Date date) {
-        int i = stock.getIndex(date);
+        int i = stock.index(date);
         Daily daily = stock.getDaily(i);
         if (!closeNextToOpen(daily)) return false;
         return true;
@@ -680,7 +702,7 @@ public class Candlestick {
         }
 
         public Days invoke() {
-            int i = stock.getIndex(date);
+            int i = stock.index(date);
             daily = stock.getDaily(i);
             try {
                 yesterdayDaily = stock.getDaily(i - 1);

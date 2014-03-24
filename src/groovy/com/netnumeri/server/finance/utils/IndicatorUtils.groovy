@@ -22,7 +22,7 @@ class IndicatorUtils {
 
         while (dateIndex != null && counter < order) {
             movingAverage += series.getData(dateIndex);
-            dateIndex = series.getPrevDate(dateIndex);
+            dateIndex = series.prevDate(dateIndex);
             counter++;
         }
         return movingAverage / counter;
@@ -82,7 +82,7 @@ class IndicatorUtils {
         }
         while (date != null && Count < order) {
             SMV += (SMA - series.getData(date)) * (SMA - series.getData(date));
-            date = series.getPrevDate(date)
+            date = series.prevDate(date)
             Count++;
         }
         return SMV / (Count - 1);
@@ -172,7 +172,7 @@ class IndicatorUtils {
         }
 
         while (date != null && Count < order) {
-            date = series.getPrevDate(date)
+            date = series.prevDate(date)
             Count++;
         }
 
@@ -195,7 +195,7 @@ class IndicatorUtils {
             ROC = series.getData(index);
         }
         while (index != null && Count < order) {
-            index = series.getPrevDate(index);
+            index = series.prevDate(index);
             Count++;
         }
         if (index == -1) {
@@ -225,7 +225,7 @@ class IndicatorUtils {
             }
             D += Math.abs(series.getData(date) - media);
             Count++;
-            date = series.getPrevDate(date)
+            date = series.prevDate(date)
         }
         D /= Count;
         return (P - media) / (0.015 * D);
@@ -243,7 +243,7 @@ class IndicatorUtils {
         int count = 0;
         double curr = 0.0;
         while (date != null && count < order) {
-            date = series.getPrevDate(date);
+            date = series.prevDate(date);
             curr = series.getData(date);
             if (curr > previous) {
                 up += curr - previous;

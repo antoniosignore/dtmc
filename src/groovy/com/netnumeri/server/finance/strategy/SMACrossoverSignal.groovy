@@ -25,23 +25,22 @@ public class SMACrossoverSignal extends Strategy {
         Indicator lower = asset.indicators.get("lower");
         Indicator upper = asset.indicators.get("upper");
 
-        if (!(DateUtils.isGreater(date, lower.firstDate) && DateUtils.isGreater(date, upper.firstDate)))
+        if (!(DateUtils.isGreater(date, lower.firstDate()) && DateUtils.isGreater(date, upper.firstDate())))
             return
 
         double todayLower = lower.getData(date)
-        Date previousDate = lower.getPrevDate(date)
+        Date previousDate = lower.prevDate(date)
 
         double yesterdayLower = lower.getData(previousDate)
 
         double todayUpper = upper.getData(date)
-        Date ud = lower.getPrevDate(date)
+        Date ud = lower.prevDate(date)
         double yesterdayUpper = upper.getData(ud)
 
-        if (todayUpper < todayLower && yesterdayUpper > yesterdayLower){
-            signals.add(new Signal (date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
-        }
-        else if (todayUpper > todayLower && yesterdayUpper < yesterdayLower) {
-            signals.add(new Signal (date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
+        if (todayUpper < todayLower && yesterdayUpper > yesterdayLower) {
+            signals.add(new Signal(date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
+        } else if (todayUpper > todayLower && yesterdayUpper < yesterdayLower) {
+            signals.add(new Signal(date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
         }
     }
 }

@@ -5,7 +5,6 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.netnumeri.server.finance.math.NumericalRecipes
 import com.netnumeri.server.finance.ssa.Histogram
-import com.netnumeri.server.finance.strategy.Signal
 import com.netnumeri.server.finance.utils.DateUtils
 
 import java.text.DecimalFormat
@@ -58,7 +57,6 @@ public class TimeSeries implements Serializable {
         return isEmpty(date, 0);
     }
 
-    // Check if time xyseries data present for datetime
     public boolean isEmpty(Date date, int row) {
         return matrix.isEmpty(row, date);
     }
@@ -108,8 +106,8 @@ public class TimeSeries implements Serializable {
     }
 
     public void set(TimeSeries series, Date firstDate, Date lastDate, int fromRow, int toRow) {
-        firstDate = DateUtils.max(firstDate, series.getFirstDate());
-        lastDate = DateUtils.min(lastDate, series.getLastDate());
+        firstDate = DateUtils.max(firstDate, series.firstDate());
+        lastDate = DateUtils.min(lastDate, series.lastDate());
 
         Set<Date> dates1 = getDates(fromRow, firstDate, lastDate)
         for (Iterator<Date> iterator = dates1.iterator(); iterator.hasNext();) {
@@ -118,28 +116,28 @@ public class TimeSeries implements Serializable {
         }
     }
 
-    Date getFirstDate() {
-        return matrix.getFirstDate(0)
+    Date firstDate() {
+        return firstDate(0)
     }
 
-    Date getFirstDate(int row) {
-        return matrix.getFirstDate(row)
+    Date firstDate(int row) {
+        return matrix.firstDate(row)
     }
 
-    Date getNextDate(Date date) {
-        return matrix.getNextDate(0, date)
+    Date nextDate(Date date) {
+        return matrix.nextDate(0, date)
     }
 
-    Date getPrevDate(Date date) {
-        return matrix.getPrevDate(0, date)
+    Date prevDate(Date date) {
+        return matrix.prevDate(0, date)
     }
 
-    Date getLastDate() {
-        return matrix.getLastDate(0)
+    Date lastDate() {
+        return lastDate(0)
     }
 
-    Date getLastDate(int row) {
-        return matrix.getLastDate(row)
+    Date lastDate(int row) {
+        return matrix.lastDate(row)
     }
 
     public void add(Date date, double data) {
@@ -150,19 +148,19 @@ public class TimeSeries implements Serializable {
         matrix.put(row, date, value);
     }
 
-    public double getTimeSeries() {
-        return getTimeSeries(0, getFirstDate(0), getLastDate(0));
+    public double timeSeries() {
+        return timeSeries(firstDate(0), lastDate(0), 0);
     }
 
-    public TimeSeries getTimeSeries(Date first, Date last) {
-        return getTimeSeries(first, last, 0);
+    public TimeSeries timeSeries(Date first, Date last) {
+        return timeSeries(first, last, 0);
     }
 
     // Return subseries from first to last
-    public TimeSeries getTimeSeries(Date first, Date last, int row) {
+    public TimeSeries timeSeries(Date first, Date last, int row) {
         if (!matrix.isValidRow(row)) throw new IllegalArgumentException("Illegal row number: " + row + " " + getName());
         TimeSeries timeseries = new TimeSeries();
-        if (last == null) last = getLastDate();
+        if (last == null) last = lastDate();
 
         Set<Date> dates1 = getDates(row, first, last)
         for (Iterator<Date> iterator = dates1.iterator(); iterator.hasNext();) {
@@ -172,13 +170,8 @@ public class TimeSeries implements Serializable {
         return timeseries;
     }
 
-    // Return accumulated xyseries
-    // This function is usefult when you e.g.
-    // have a xyseries of Util.debug returns and need
-    // to calculate accumulated Util.debug return for
-    // each day
     public TimeSeries getAccumulatedSeries() {
-        return getAccumulatedSeries(0, getFirstDate(0), getLastDate(0));
+        return getAccumulatedSeries(0, firstDate(0), lastDate(0));
     }
 
     public TimeSeries getAccumulatedSeries(int row, Date firstCalendarDate, Date lastCalendarDate) {
@@ -198,7 +191,7 @@ public class TimeSeries implements Serializable {
     }
 
     public TimeSeries getDiffSeries(TimeSeries Series) {
-        return getDiffSeries(Series, 0, getFirstDate(0), getLastDate(0));
+        return getDiffSeries(Series, 0, firstDate(0), lastDate(0));
     }
 
     public TimeSeries getDiffSeries(TimeSeries Series, int row, Date firstCalendarDate, Date lastCalendarDate) {
@@ -206,8 +199,8 @@ public class TimeSeries implements Serializable {
         checkParams(row, firstCalendarDate, lastCalendarDate)
 
         TimeSeries diffSeries = new TimeSeries();
-        firstCalendarDate = DateUtils.max(getFirstDate(), Series.getFirstDate());
-        lastCalendarDate = DateUtils.min(getLastDate(), Series.getLastDate());
+        firstCalendarDate = DateUtils.max(firstDate(), Series.firstDate());
+        lastCalendarDate = DateUtils.min(lastDate(), Series.lastDate());
 
         Set<Date> dates1 = getDates(row, firstCalendarDate, lastCalendarDate)
         for (Iterator<Date> iterator = dates1.iterator(); iterator.hasNext();) {
@@ -218,7 +211,7 @@ public class TimeSeries implements Serializable {
     }
 
     public TimeSeries getShiftedSeries() {
-        return getShiftedSeries(1, getFirstDate(0), getLastDate(0));
+        return getShiftedSeries(1, firstDate(0), lastDate(0));
     }
 
     public TimeSeries getShiftedSeries(Date firstCalendarDate, Date lastCalendarDate) {
@@ -228,8 +221,8 @@ public class TimeSeries implements Serializable {
     public TimeSeries getShiftedSeries(int Lag, Date firstCalendarDate, Date lastCalendarDate) {
         TimeSeries shiftedSeries = new TimeSeries();
 
-//        Date firstCalendarDate = getFirstDate();
-//        Date lastCalendarDate = getLastDate();
+//        Date firstCalendarDate = firstDate();
+//        Date lastCalendarDate = lastDate();
 //
 //        if (from != null) firstCalendarDate = from;
 //        if (to != null) lastCalendarDate = to;
@@ -248,8 +241,8 @@ public class TimeSeries implements Serializable {
     }
 
     public double getFirstData(int row) {
-        checkParams(row, getFirstDate())
-        return matrix.get(row, getFirstDate());
+        checkParams(row, firstDate())
+        return matrix.get(row, firstDate());
     }
 
     public double getLastValidData() {
@@ -257,7 +250,7 @@ public class TimeSeries implements Serializable {
     }
 
     public double getLastValidData(int row) {
-        return matrix.getLastValidData(row);
+        return matrix.lastValidData(row);
     }
 
     public double getLastData() {
@@ -266,11 +259,11 @@ public class TimeSeries implements Serializable {
 
     public double getLastData(int row) {
         if (!matrix.isValidRow(row)) throw new IllegalArgumentException("Illegal row number: " + row + " " + getName());
-        return matrix.getLastValidData(row);
+        return matrix.lastValidData(row);
     }
 
     public double getMin() {
-        return getMin(0, getFirstDate(0), getLastDate(0));
+        return getMin(0, firstDate(0), lastDate(0));
     }
 
     public double getMin(Date firstCalendarDate, Date lastCalendarDate) {
@@ -291,7 +284,7 @@ public class TimeSeries implements Serializable {
     }
 
     public double getMax() {
-        return getMax(0, getFirstDate(0), getLastDate(0));
+        return getMax(0, firstDate(0), lastDate(0));
     }
 
     public double getMax(Date firstCalendarDate, Date lastCalendarDate) {
@@ -313,7 +306,7 @@ public class TimeSeries implements Serializable {
 
     // Return number of zero data entries in row
     public double getNZero() {
-        return getNZero(0, getFirstDate(0), getLastDate(0));
+        return getNZero(0, firstDate(0), lastDate(0));
     }
 
     public int getNZero(int row, Date firstCalendarDate, Date lastCalendarDate) {
@@ -332,7 +325,7 @@ public class TimeSeries implements Serializable {
      * Return number of non zero data entries
      */
     public double getNNonZero() {
-        return getNNonZero(0, getFirstDate(0), getLastDate(0));
+        return getNNonZero(0, firstDate(0), lastDate(0));
     }
 
     public int getNNonZero(Date firstCalendarDate, Date lastCalendarDate) {
@@ -363,7 +356,7 @@ public class TimeSeries implements Serializable {
 
     // Return number of positive (sign) data entries in row
     public double getNPositive() {
-        return getNPositive(0, getFirstDate(0), getLastDate(0));
+        return getNPositive(0, firstDate(0), lastDate(0));
     }
 
     public int getNPositive(int row, Date firstCalendarDate, Date lastCalendarDate) {
@@ -381,7 +374,7 @@ public class TimeSeries implements Serializable {
 
     // Return number of negative (sign) data entries in row
     public int getNNegative() {
-        return getNNegative(0, getFirstDate(0), getLastDate(0));
+        return getNNegative(0, firstDate(0), lastDate(0));
     }
 
     public int getNNegative(Date firstCalendarDate, Date lastCalendarDate) {
@@ -405,7 +398,7 @@ public class TimeSeries implements Serializable {
     }
 
     public double getMean() {
-        return getMean(0, getFirstDate(0), getLastDate(0));
+        return getMean(0, firstDate(0), lastDate(0));
     }
 
     public double getMean(Date firstCalendarDate, Date lastCalendarDate) {
@@ -429,7 +422,7 @@ public class TimeSeries implements Serializable {
     }
 
     public double getVariance() {
-        return getVariance(0, getFirstDate(0), getLastDate(0));
+        return getVariance(0, firstDate(0), lastDate(0));
     }
 
     public double getVariance(Date firstCalendarDate, Date lastCalendarDate) {
@@ -502,7 +495,7 @@ public class TimeSeries implements Serializable {
     }
 
     public double getStandardDeviation() {
-        return getStandardDeviation(0, getFirstDate(0), getLastDate(0));
+        return getStandardDeviation(0, firstDate(0), lastDate(0));
     }
 
     public double getStandardDeviation(Date firstCalendarDate, Date lastCalendarDate) {
@@ -518,7 +511,7 @@ public class TimeSeries implements Serializable {
     }
 
     public double getStandardError() {
-        return getStandardError(0, getFirstDate(0), getLastDate(0));
+        return getStandardError(0, firstDate(0), lastDate(0));
     }
 
     public double getStandardError(Date firstCalendarDate, Date lastCalendarDate) {
@@ -553,7 +546,7 @@ public class TimeSeries implements Serializable {
 
 
     public double getMomentum(int row) {
-        return getMomentum(0, row, getFirstDate(0), getLastDate(0));
+        return getMomentum(0, row, firstDate(0), lastDate(0));
     }
 
     public double getMomentum(int row, Date firstCalendarDate, Date lastCalendarDate) {
@@ -610,7 +603,7 @@ public class TimeSeries implements Serializable {
 
 
     public double getAsimmetry() {
-        return getAsimmetry(getFirstDate(0), getLastDate(0));
+        return getAsimmetry(firstDate(0), lastDate(0));
     }
 
     public double getAsimmetry(Date firstCalendarDate, Date lastCalendarDate) {
@@ -634,7 +627,7 @@ public class TimeSeries implements Serializable {
 
 
     public double getExcess() {
-        return getExcess(getFirstDate(0), getLastDate(0));
+        return getExcess(firstDate(0), lastDate(0));
     }
 
     public double getExcess(Date firstCalendarDate, Date lastCalendarDate) {
@@ -770,7 +763,7 @@ public class TimeSeries implements Serializable {
 //    }
 
     public TimeSeries getReturnSeries() {
-        return getReturnSeries(1, getFirstDate(0), getLastDate(0));
+        return getReturnSeries(1, firstDate(0), lastDate(0));
     }
 
     public TimeSeries getReturnSeries(Date firstCalendarDate, Date lastCalendarDate) {
@@ -795,7 +788,7 @@ public class TimeSeries implements Serializable {
     }
 
     public TimeSeries getLogReturnSeries() {
-        return getLogReturnSeries(1, getFirstDate(0), getLastDate(0));
+        return getLogReturnSeries(1, firstDate(0), lastDate(0));
     }
 
     public TimeSeries getLogReturnSeries(Date firstCalendarDate, Date lastCalendarDate) {
@@ -821,7 +814,7 @@ public class TimeSeries implements Serializable {
 
 
     public int getNCrossings() {
-        return getNCrossings(1, getFirstDate(0), getLastDate(0));
+        return getNCrossings(1, firstDate(0), lastDate(0));
     }
 
     public int getNCrossings(Date firstCalendarDate, Date lastCalendarDate) {
@@ -863,7 +856,7 @@ public class TimeSeries implements Serializable {
     }
 
     public void normalize() {
-        normalize(0, getFirstDate(0), getLastDate(0));
+        normalize(0, firstDate(0), lastDate(0));
     }
 
     public void normalize(Date firstCalendarDate, Date lastCalendarDate) {
@@ -886,7 +879,7 @@ public class TimeSeries implements Serializable {
     }
 
     public void linearMapping(double lower, double upper) {
-        linearMapping(lower, upper, getFirstDate(0), getLastDate(0));
+        linearMapping(lower, upper, firstDate(0), lastDate(0));
     }
 
     public void linearMapping(double lower, double upper, Date firstCalendarDate, Date lastCalendarDate) {
@@ -1009,7 +1002,7 @@ public class TimeSeries implements Serializable {
     }
 
     public double[] convertToArray() {
-        return convertToArray(0, getFirstDate(), getLastDate());
+        return convertToArray(0, firstDate(), lastDate());
     }
 
     public double[] convertToArray(int row, Date firstCalendarDate, Date lastCalendarDate) {
@@ -1030,7 +1023,7 @@ public class TimeSeries implements Serializable {
 
 
     public List<Double> convertToList() {
-        return convertToList(0, getFirstDate(), getLastDate());
+        return convertToList(0, firstDate(), lastDate());
     }
 
     public List<Double> convertToList(int row, Date firstCalendarDate, Date lastCalendarDate) {
@@ -1055,8 +1048,8 @@ public class TimeSeries implements Serializable {
         DecimalFormat df = new DecimalFormat("#.####");
         try {
             StringBuffer sb = new StringBuffer();
-            Date d = firstDate;
-            while (DateUtils.isLessEqual(d, lastDate)) {
+            Date d = firstDate();
+            while (DateUtils.isLessEqual(d, lastDate())) {
                 Double v = this.getData(d);
                 if (v == null) {
                     d = DateUtils.addDays(d, 1)
@@ -1084,8 +1077,8 @@ public class TimeSeries implements Serializable {
         DecimalFormat df = new DecimalFormat("#.####");
         List<DailyGSON> ds = new ArrayList<DailyGSON>();
         try {
-            Date d = firstDate;
-            while (DateUtils.isLessEqual(d, lastDate)) {
+            Date d = firstDate();
+            while (DateUtils.isLessEqual(d, lastDate())) {
                 Double v = this.getData(d);
                 if (v == null) {
                     d = DateUtils.addDays(d, 1)
@@ -1108,16 +1101,16 @@ public class TimeSeries implements Serializable {
         DecimalFormat df = new DecimalFormat("#.####");
         List<DailyGSON> ds = new ArrayList<DailyGSON>();
         try {
-            Date d = firstDate;
+            Date d = firstDate();
             StringBuffer sb = new StringBuffer("[");
-            while (DateUtils.isLessEqual(d, lastDate)) {
+            while (DateUtils.isLessEqual(d, lastDate())) {
                 Double v = this.getData(d);
                 if (v == null) {
                     d = DateUtils.addDays(d, 1)
                     continue
                 };
                 ds.add(buildDaily(sdf.format(d), df.format(v)));
-                if (d.getTime() == lastDate.getTime())
+                if (d.getTime() == lastDate().getTime())
                     sb.append("['" + sdf.format(d) + "'," + v + "]\n")
                 else
                     sb.append("['" + sdf.format(d) + "'," + v + "],\n")
@@ -1136,8 +1129,8 @@ public class TimeSeries implements Serializable {
         DecimalFormat df = new DecimalFormat("#.####");
         try {
             StringBuffer sb = new StringBuffer();
-            Date d = firstDate;
-            while (DateUtils.isLessEqual(d, lastDate)) {
+            Date d = firstDate();
+            while (DateUtils.isLessEqual(d, lastDate())) {
                 Double v = this.getData(d);
                 if (v == null) {
                     d = DateUtils.addDays(d, 1)
@@ -1162,18 +1155,18 @@ public class TimeSeries implements Serializable {
 
     public Integer getSize() {
         try {
-            return matrix.noElements(0, getFirstDate(), getLastDate());
+            return matrix.noElements(0, firstDate(), lastDate());
         } catch (Throwable ex) {
             return 0;
         }
     }
 
     double getValue(int i) {
-        return matrix.getValue(i)
+        return matrix.value(i)
     }
 
     Histogram histogram() {
-        return histogram(0, getFirstDate(), getLastDate());
+        return histogram(0, firstDate(), lastDate());
     }
 
     /*
@@ -1202,8 +1195,8 @@ for (int i = 0; i<f.length-2; i++) {
             Date date = iterator.next();
 
             try {
-                previousDate = this.getPrevDate(date)
-                prevPreviousDate = this.getPrevDate(previousDate)
+                previousDate = this.prevDate(date)
+                prevPreviousDate = this.prevDate(previousDate)
             } catch (Throwable th) {
                 return
             }

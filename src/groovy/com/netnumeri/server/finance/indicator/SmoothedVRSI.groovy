@@ -12,7 +12,7 @@ public class SmoothedVRSI {
         double multiplier;
         multiplier = 2 / (smoothingPeriod + 1);
 
-        int lastBar = opens.matrix.getIndex(date);
+        int lastBar = opens.matrix.index(date);
         int firstBar = lastBar - lookBackPeriod + 1;
 
         double gains = 0, losses = 0;

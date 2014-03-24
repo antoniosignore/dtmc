@@ -8,12 +8,12 @@ import com.netnumeri.server.finance.beans.TimeSeries;
 public class LeastSquaresValue {
 
     public static double calculate(TimeSeries qh, Date date, int period) {
-        int lastBar = qh.matrix.getIndex(date);
+        int lastBar = qh.matrix.index(date);
         int firstBar = lastBar - period + 1;
 
         double sumX = 0, sumY = 0, sumXY = 0, sumXX = 0;
         for (int bar = firstBar; bar <= lastBar; bar++) {
-            double y = qh.matrix.getValue(bar);
+            double y = qh.matrix.value(bar);
             sumX += bar;
             sumY += y;
             sumXY += bar * y;

@@ -2,8 +2,6 @@ package com.netnumeri.server.finance.beans
 
 class GenericTimeSeries<T> extends TreeMap<Date, T> {
 
-//    TreeMap<Date, T> treeMap = new TreeMap<Date, T>(new DateComparator());
-
     @SuppressWarnings("unchecked")
     public GenericTimeSeries() {
         super(new DateComparator())
@@ -73,10 +71,7 @@ class GenericTimeSeries<T> extends TreeMap<Date, T> {
 class DateComparator implements Comparator<Date> {
     @Override
     public int compare(Date date1, Date date2) {
-
-        println "date1 = $date1"
-        println "date2 = $date2"
-        return date2.compareTo(date1);
+        return date1.compareTo(date2);
     }
 
 }

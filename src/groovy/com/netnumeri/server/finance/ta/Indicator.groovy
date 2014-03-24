@@ -31,25 +31,25 @@ public abstract class Indicator extends TimeSeries {
     }
 
     protected void copyBackwords(double[] ad) {
-        Date date = series.getLastDate();
+        Date date = series.lastDate();
         for (int i = 0; i < ad.length; i++) {
             double value = ad[ad.length - i - 1];
             add(date, value);
-            date = series.getPrevDate(date);
+            date = series.prevDate(date);
         }
     }
 
     protected void copyBackwords(List<Double> ad) {
-        Date date = series.getLastDate();
+        Date date = series.lastDate();
         for (int i = 0; i < ad.size(); i++) {
             double value = ad.get(ad.size() - i - 1)
             add(date, value)
-            date = series.getPrevDate(date)
+            date = series.prevDate(date)
         }
     }
 
     protected void copyInTheFuture(double[] ad) {
-        Date date = series.getLastDate();
+        Date date = series.lastDate();
         for (int i = 0; i < ad.length; i++) {
             double value = ad[i];
             date = DateUtils.addDays(date, 1);

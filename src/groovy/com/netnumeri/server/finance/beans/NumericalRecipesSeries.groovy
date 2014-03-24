@@ -49,7 +49,7 @@ public class NumericalRecipesSeries {
         return getValue(data.length - 1);
     }
 
-//    public Date getLastDate() {
+//    public Date lastDate() {
 //        return getDate(data.length - 1);
 //    }
 

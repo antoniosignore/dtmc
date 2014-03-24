@@ -36,10 +36,10 @@ public class TimeSeriesTest extends GroovyTestCase {
 
         assertEquals(2, stock.getNDaily());
 
-        System.out.println("stock.getFirstDate() = " + stock.getFirstDate());
-        System.out.println("stock.getLastDate() = " + stock.getLastDate());
+        System.out.println("stock.firstDate() = " + stock.firstDate());
+        System.out.println("stock.lastDate() = " + stock.lastDate());
 
-        assertEquals(1, DateUtils.diffDays(stock.getFirstDate(), stock.getLastDate()));
+        assertEquals(1, DateUtils.diffDays(stock.firstDate(), stock.lastDate()));
 
         TimeSeries closeSeries = stock.getCloseSeries();
 
@@ -51,13 +51,13 @@ public class TimeSeriesTest extends GroovyTestCase {
         Stock stock = TestUtils.buildStockONELine("SSRI");
         assertEquals(1, stock.getNDaily());
         TimeSeries closeSeries = stock.getCloseSeries();
-        System.out.println("stock.getFirstDate() = " + stock.getFirstDate());
-        System.out.println("stock.getLastDate() = " + stock.getLastDate());
-        assertEquals(0, DateUtils.diffDays(stock.getFirstDate(), stock.getLastDate()));
+        System.out.println("stock.firstDate() = " + stock.firstDate());
+        System.out.println("stock.lastDate() = " + stock.lastDate());
+        assertEquals(0, DateUtils.diffDays(stock.firstDate(), stock.lastDate()));
         assertEquals(1, closeSeries.getNData());
         assertEquals(stock.getNDaily(), closeSeries.getNData());
-//        assertEquals(stock.getFirstDate().toString(), buildCloseSeries.getFirstDate().toString());
-//        System.out.println("buildCloseSeries = " + buildCloseSeries.getLastDate());
+//        assertEquals(stock.firstDate().toString(), buildCloseSeries.firstDate().toString());
+//        System.out.println("buildCloseSeries = " + buildCloseSeries.lastDate());
     }
 
 
@@ -82,7 +82,7 @@ public class TimeSeriesTest extends GroovyTestCase {
 
 
     public void testGetLastIndex() throws Exception {
-        System.out.println("timeSeries.getFirstDate() = " + timeSeries.getFirstDate());
+        System.out.println("timeSeries.firstDate() = " + timeSeries.firstDate());
         System.out.println("timeSeries.getLastData() = " + timeSeries.getLastData());
         assertEquals(321, timeSeries.getNData());
     }
@@ -109,8 +109,8 @@ public class TimeSeriesTest extends GroovyTestCase {
 
 
     public void testGetNextDate() throws Exception {
-        Date firstDate = timeSeries.getFirstDate();
-        assertTrue(DateUtils.isEqual(timeSeries.getFirstDate(), DateUtils.Date("1/2/2008")));
+        Date firstDate = timeSeries.firstDate();
+        assertTrue(DateUtils.isEqual(timeSeries.firstDate(), DateUtils.Date("1/2/2008")));
     }
 
 }

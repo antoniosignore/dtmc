@@ -357,7 +357,7 @@ class PortfolioService {
         } else {
             price = YahooUtils.getLastTradedValue(asset.name)
         }
-        return price * entryByName (portfolio, asset.name).amount;
+        return price * entryByName(portfolio, asset.name).amount;
     }
 
 
@@ -526,7 +526,7 @@ class PortfolioService {
                 if (daily != null) {
                     value += daily.closeprice * amount;
                 } else {
-                    System.out.println("getValue. Out of data range");
+                    System.out.println("value. Out of data range");
                     return 0;
                 }
             }
@@ -553,7 +553,7 @@ class PortfolioService {
         if (price == 0) {
             return 1;
         }
-        Date previousDate = getInstrument(portfolio, 0).getPrevDate(date);
+        Date previousDate = getInstrument(portfolio, 0).prevDate(date);
         if (previousDate == null) {
             return 1;
         } else {
@@ -755,7 +755,7 @@ class PortfolioService {
 
         int i1 = 0
         int i2 = 0
-        portfolio.items.each { it1->
+        portfolio.items.each { it1 ->
             portfolio.items.each { it2 ->
                 portfolio.covarianceMatrix.set(i1, i2, it1.instrument.getCovariance(it2.instrument, FinConstants.LOGRETURN));
                 portfolio.covarianceMatrix.set(i2, i1, portfolio.covarianceMatrix.get(i1, i2));
@@ -780,7 +780,7 @@ class PortfolioService {
 
         int i1 = 0
         int i2 = 0
-        portfolio.items.each { it1->
+        portfolio.items.each { it1 ->
             portfolio.items.each { it2 ->
                 portfolio.correlationMatrix.set(i1, i2, portfolio.covarianceMatrix.get(i1, i2) /
                         (it1.instrument.getStandardDeviation(FinConstants.LOGRETURN) *

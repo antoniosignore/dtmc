@@ -12,10 +12,10 @@ public class MOMIndicator extends Indicator {
         super(series, name);
         order = param1;
 
-        Date date = series.getFirstDate()
+        Date date = series.firstDate()
         int index = 0;
         while (index < getFirstIndicatorIndex()) {
-            date = series.getNextDate(date);
+            date = series.nextDate(date);
             index++;
         }
 
@@ -26,7 +26,7 @@ public class MOMIndicator extends Indicator {
                 add(date, IndicatorUtils.MOM(series, date, order));
 
             }
-            date = series.getNextDate(date)
+            date = series.nextDate(date)
         }
 
     }

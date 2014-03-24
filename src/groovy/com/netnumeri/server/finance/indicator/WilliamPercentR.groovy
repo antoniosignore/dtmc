@@ -15,7 +15,7 @@ public class WilliamPercentR {
                                    TimeSeries lows,
                                    TimeSeries volumes, Date date, int periodLength) {
 
-        int lastBar = opens.matrix.getIndex(date);
+        int lastBar = opens.matrix.index(date);
 
         double lastMax = highs.getValue(lastBar);
         double lastMin = lows.getValue(lastBar);

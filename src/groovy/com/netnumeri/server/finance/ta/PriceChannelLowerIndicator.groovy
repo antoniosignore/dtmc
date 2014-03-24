@@ -13,10 +13,10 @@ public class PriceChannelLowerIndicator extends Indicator {
         this.order = order;
         this.k = k;
 
-        Date date = series.getFirstDate()
+        Date date = series.firstDate()
         int index = 0;
         while (index < getFirstIndicatorIndex()) {
-            date = series.getNextDate(date);
+            date = series.nextDate(date);
             index++;
         }
 
@@ -24,7 +24,7 @@ public class PriceChannelLowerIndicator extends Indicator {
             if (!series.isEmpty(date)) {
                 add(date, IndicatorUtils.PCL(series, date, order, k));
             }
-            date = series.getNextDate(date)
+            date = series.nextDate(date)
         }
     }
 

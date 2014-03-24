@@ -13,10 +13,10 @@ public class BollingerBandMiddleIndicator extends Indicator {
         length = param1;
         this.deviation = deviation;
 
-        Date date = series.getFirstDate()
+        Date date = series.firstDate()
         int index = 0;
         while (index < getFirstIndicatorIndex()) {
-            date = series.getNextDate(date);
+            date = series.nextDate(date);
             index++;
         }
 
@@ -26,19 +26,19 @@ public class BollingerBandMiddleIndicator extends Indicator {
 
                 add(date, calculate(series, date, length));
             }
-            date = series.getNextDate(date)
+            date = series.nextDate(date)
         }
 
     }
 
     public static double calculate(TimeSeries qh, Date date, int length) {
 
-        int lastBar = qh.matrix.getIndex(date);
+        int lastBar = qh.matrix.index(date);
 
         int firstBar = lastBar - length + 1;
         double sum = 0;
         for (int bar = firstBar; bar <= lastBar; bar++) {
-            sum += qh.matrix.getValue(bar);
+            sum += qh.matrix.value(bar);
         }
 
         return sum / length;

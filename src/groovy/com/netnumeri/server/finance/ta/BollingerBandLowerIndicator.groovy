@@ -15,10 +15,10 @@ public class BollingerBandLowerIndicator extends Indicator {
     }
 
     public void build() {
-        Date date = series.getFirstDate()
+        Date date = series.firstDate()
         int index = 0;
         while (index < getFirstIndicatorIndex()) {
-            date = series.getNextDate(date);
+            date = series.nextDate(date);
             index++;
         }
 
@@ -26,13 +26,13 @@ public class BollingerBandLowerIndicator extends Indicator {
             if (!series.isEmpty(date)) {
                 add(date, calculate(series, date, length, deviation));
             }
-            date = series.getNextDate(date)
+            date = series.nextDate(date)
         }
     }
 
     public static double calculate(TimeSeries qh, Date date, int length, double deviations) {
 
-        int lastBar = qh.matrix.getIndex(date);
+        int lastBar = qh.matrix.index(date);
 
         double squareSum = 0;
         double sum = 0;
@@ -40,7 +40,7 @@ public class BollingerBandLowerIndicator extends Indicator {
         int firstBar = lastBar - length + 1;
 
         for (int bar = firstBar; bar <= lastBar; bar++) {
-            double barClose = qh.matrix.getValue(bar);
+            double barClose = qh.matrix.value(bar);
             sum += barClose;
             squareSum += barClose * barClose;
         }

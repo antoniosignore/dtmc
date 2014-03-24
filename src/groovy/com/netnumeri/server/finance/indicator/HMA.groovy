@@ -37,7 +37,7 @@ public class HMA {
         // to speed up computation
         double[] values = new double[arraysize];
         for (int i = 0; i < values.length; i++) {
-            values[i] = closes.matrix.getValue(size - arraysize + i);
+            values[i] = closes.matrix.value(size - arraysize + i);
         }
 
         double[] wmavalues = new double[sqrlen];

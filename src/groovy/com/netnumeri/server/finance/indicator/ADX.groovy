@@ -33,7 +33,7 @@ public class ADX {
         adx = new double[periodLength];
 
         // int periodStart = qh.size() - periodLength;
-        int periodEnd = closes.matrix.getIndex(date);
+        int periodEnd = closes.matrix.index(date);
         double high = highs.getLastData()
         double low = lows.getLastData()
         // double close = qh.getLastPriceBar().getClose();

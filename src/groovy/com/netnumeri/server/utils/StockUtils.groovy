@@ -4,17 +4,10 @@ package com.netnumeri.server.utils
 //import com.xuggle.mediatool.demos.MovingBalls
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
-
-import java.awt.image.BufferedImage;
-
 //import com.xuggle.mediatool.IMediaViewer;
 //import com.xuggle.mediatool.IMediaWriter;
 //import com.xuggle.mediatool.ToolFactory;
 //import com.xuggle.xuggler.IAudioSamples;
-
-import static java.util.concurrent.TimeUnit.SECONDS;
-import static java.util.concurrent.TimeUnit.MILLISECONDS;
-
 //import static com.xuggle.xuggler.Global.DEFAULT_TIME_UNIT;
 
 import com.dtmc.gson.DailyGSON
@@ -249,16 +242,16 @@ class StockUtils {
         DecimalFormat df = new DecimalFormat("#.####");
         List<DailyGSON> ds = new ArrayList<DailyGSON>();
         try {
-            Date d = series.firstDate;
+            Date d = series.firstDate();
             StringBuffer sb = new StringBuffer("[");
-            while (DateUtils.isLessEqual(d, series.lastDate)) {
+            while (DateUtils.isLessEqual(d, series.lastDate())) {
                 Double v = series.getData(d);
                 if (v == null) {
                     d = DateUtils.addDays(d, 1)
                     continue
                 };
                 ds.add(buildDaily(sdf.format(d), df.format(v)));
-                if (d.getTime() == series.lastDate.getTime())
+                if (d.getTime() == series.lastDate().getTime())
                     sb.append("['" + sdf.format(d) + "'," + v + "]\n")
                 else
                     sb.append("['" + sdf.format(d) + "'," + v + "],\n")
@@ -308,11 +301,11 @@ class StockUtils {
 
     static String last5values(Indicator indicator) {
 
-        Date date = indicator.getLastDate()
-        Date date_1 = indicator.getPrevDate(date)
-        Date date_2 = indicator.getPrevDate(date_1)
-        Date date_3 = indicator.getPrevDate(date_2)
-        Date date_4 = indicator.getPrevDate(date_3)
+        Date date = indicator.lastDate()
+        Date date_1 = indicator.prevDate(date)
+        Date date_2 = indicator.prevDate(date_1)
+        Date date_3 = indicator.prevDate(date_2)
+        Date date_4 = indicator.prevDate(date_3)
 
         return indicator.getData(date) + " " +
                 indicator.getData(date_1) + " " +

@@ -6,13 +6,13 @@ public class MACDTrigger {
 
     public static double calculate(TimeSeries qh, Date date, int triggerLength, double multiplier) {
 
-        int lastBar = qh.matrix.getIndex(date);
+        int lastBar = qh.matrix.index(date);
         multiplier = 2 / (triggerLength + 1);
         int firstBar = lastBar - 2 * triggerLength;
 
-        double trigger = qh.matrix.getValue(firstBar);
+        double trigger = qh.matrix.value(firstBar);
         for (int bar = firstBar + 1; bar <= lastBar; bar++) {
-            double macd = qh.matrix.getValue(bar);
+            double macd = qh.matrix.value(bar);
             trigger += (macd - trigger) * multiplier;
         }
 

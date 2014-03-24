@@ -343,8 +343,6 @@ class Instrument extends Persistable implements Serializable {
             return highSeries(firstD, lastD);
         else if (what == FinConstants.LOW)
             return lowSeries(firstD, lastD);
-        else if (what == FinConstants.LOW)
-            return lowSeries(firstD, lastD);
         else if (what == FinConstants.OPEN)
             return openSeries(firstD, lastD);
         else if (what == FinConstants.CLOSE)
@@ -730,9 +728,7 @@ class Instrument extends Persistable implements Serializable {
         println "firstDate = $firstDate"
         println "lastDate = $lastDate"
 
-        for (Date date = firstDate;
-             DateUtils.isLessEqual(date, lastDate);
-             date = DateUtils.addDays(date, 1)) {
+        for (Date date = firstDate; DateUtils.isLessEqual(date, lastDate); date = DateUtils.addDays(date, 1)) {
             Daily daily = daily(date);
             if ((daily != null) && daily.valid()) {
                 value = daily.price(What);
@@ -812,7 +808,6 @@ class Instrument extends Persistable implements Serializable {
 
     public Date firstDailyDate() {
         if (dailyarray == null || dailyarray.isEmpty()) {
-            println "dailyarray IS NULL"
             return null
         }
         Daily daily = (Daily) dailyarray.getFirstValue();

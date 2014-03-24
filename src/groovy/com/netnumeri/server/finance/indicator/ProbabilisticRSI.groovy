@@ -7,7 +7,7 @@ public class ProbabilisticRSI {
 
     public static double calculate(TimeSeries closes, Date date, int periodLength) {
 
-        int lastBar = closes.matrix.getIndex(date);
+        int lastBar = closes.matrix.index(date);
         int firstBar = lastBar - periodLength + 1;
 
         double gains = 0, losses = 0;

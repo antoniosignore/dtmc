@@ -7,7 +7,7 @@ public class PeriodLow {
 
     public static double calculate(TimeSeries lows, Date date, int periodLength) {
 
-        int periodEnd = lows.matrix.getIndex(date);
+        int periodEnd = lows.matrix.index(date);
         int periodStart = lows.size() - periodLength;
 
         double low = lows.getValue(periodStart)

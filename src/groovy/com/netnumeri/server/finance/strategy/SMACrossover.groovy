@@ -38,17 +38,17 @@ public class SMACrossover extends Strategy {
         Indicator upper = asset.indicators.get("upper");
         println "upper = $upper.name"
 
-        if (!(DateUtils.isGreater(date, lower.firstDate) && DateUtils.isGreater(date, upper.firstDate)))
+        if (!(DateUtils.isGreater(date, lower.firstDate()) && DateUtils.isGreater(date, upper.firstDate())))
             return
 
         double todayLower = lower.getData(date)
-        Date previousDate = lower.getPrevDate(date)
+        Date previousDate = lower.prevDate(date)
         println "d = $previousDate"
 
         double yesterdayLower = lower.getData(previousDate)
 
         double todayUpper = upper.getData(date)
-        Date ud = lower.getPrevDate(date)
+        Date ud = lower.prevDate(date)
         double yesterdayUpper = upper.getData(ud)
 
         if (todayUpper < todayLower && yesterdayUpper > yesterdayLower)

@@ -24,7 +24,7 @@ public class CandlestickUtils {
     }
 
     public double Close(int candle) {
-        return closes.matrix.getValue(candle)
+        return closes.matrix.value(candle)
     }
 
     // Retorna a dimensao do corpo do candle
@@ -306,7 +306,7 @@ public class CandlestickUtils {
     }
 
     public long Date(int candle) {
-        return opens.matrix.getDateByIndex(candle).getTime()
+        return opens.matrix.dateByIndex(candle).getTime()
     }
 
     public double Volume(int candle) {

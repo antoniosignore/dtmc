@@ -17,10 +17,10 @@ public class SimpleMovingVarianceIndicator extends Indicator {
 
     public void build() {
 
-        Date date = series.getFirstDate()
+        Date date = series.firstDate()
         int index = 0;
         while (index < getFirstIndicatorIndex()) {
-            date = series.getNextDate(date);
+            date = series.nextDate(date);
             index++;
         }
 
@@ -31,7 +31,7 @@ public class SimpleMovingVarianceIndicator extends Indicator {
                 add(date, IndicatorUtils.SMV(series, date, order));
 
             }
-            date = series.getNextDate(date)
+            date = series.nextDate(date)
         }
 
     }

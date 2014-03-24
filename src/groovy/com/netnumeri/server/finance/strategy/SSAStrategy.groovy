@@ -62,7 +62,7 @@ public class SSAStrategy extends Strategy {
         Indicator sma1g = new SMAIndicator(closes, "SMA-" + sma3, sma3);
 
         Util.debug("serie.getSize() = " + serie.length);
-        Util.debug("serie.getValue() = " + serie[serie.length - 1]);
+        Util.debug("serie.value() = " + serie[serie.length - 1]);
 
         Util.debug("closes.getFirstData() = " + closes.getFirstData());
         Util.debug("closes.getLastData() = " + closes.getLastData());
@@ -77,7 +77,7 @@ public class SSAStrategy extends Strategy {
 //        Indicator wma1g = new Indicator(closes, "EMA-" + sma256, sma256, -1, -1, -1, -1);
 //        Indicator bbup = new Indicator(closes, "BBU", sma10, 2, -1, -1, -1);
 //        Indicator bbdw = new Indicator(closes, "BBL", sma10, 2, -1, -1, -1);
-//        Util.debug("bbup = " + bbup.getLastValidData());
+//        Util.debug("bbup = " + bbup.lastValidData());
 //
 //        Indicator pcup = new Indicator(closes, "PCU", sma10, -1, -1, -1, -1);
 //        Indicator pcdw = new Indicator(closes, "PCL", sma10, -1, -1, -1, -1);
@@ -305,7 +305,7 @@ public class SSAStrategy extends Strategy {
 //        if (i++ < WINDOW) return;
 //
 //        String dir = "/home/antonio/timeplot/ssa/" + new SimpleDateFormat("yyyyMMdd").format(date) + "/"
-//        TimeSeries closes = stock.getCloseSeries(stock.getFirstDate(), date)
+//        TimeSeries closes = stock.getCloseSeries(stock.firstDate(), date)
 //
 //        SSAAnalysis analysis = new SSAAnalysis(closes.convertToList(), WINDOW)
 //

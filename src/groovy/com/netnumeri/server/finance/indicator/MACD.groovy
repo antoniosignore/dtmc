@@ -17,11 +17,11 @@ public class MACD {
 
     public static double calculate(TimeSeries qh, Date date, int length) {
         double multiplier = 2 / (length + 1);
-        int lastBar = qh.matrix.getIndex(date);
+        int lastBar = qh.matrix.index(date);
         int firstBar = lastBar - 2 * length + 1;
-        double ema = qh.matrix.getValue(firstBar)
+        double ema = qh.matrix.value(firstBar)
         for (int bar = firstBar; bar <= lastBar; bar++) {
-            double barClose = qh.matrix.getValue(bar)
+            double barClose = qh.matrix.value(bar)
             ema += (barClose - ema) * multiplier;
         }
         return ema;

@@ -416,7 +416,7 @@ public class BackTest implements Serializable {
 
     public double getPnL(Date date) {
         if (!isTested) test();
-        Date lastDate = PnLSeries.getLastDate();
+        Date lastDate = PnLSeries.lastDate();
         if (date == null || lastDate == null) return 0;
         if (DateUtils.isGreater(date, lastDate)) return PnLSeries.getData(lastDate);
         else return PnLSeries.getData(date);
@@ -467,8 +467,8 @@ public class BackTest implements Serializable {
 
     public Date getPnLMinDate() {
         if (!isTested) test();
-        Date firstDate = PnLSeries.getFirstDate();
-        Date lastDate = PnLSeries.getLastDate();
+        Date firstDate = PnLSeries.firstDate();
+        Date lastDate = PnLSeries.lastDate();
         double Min = PnLSeries.getData(firstDate);
         Date minDate = firstDate;
 
@@ -491,8 +491,8 @@ public class BackTest implements Serializable {
 
     public Date getPnLMaxDate() {
         if (!isTested) test();
-        Date firstDate = PnLSeries.getFirstDate();
-        Date lastDate = PnLSeries.getLastDate();
+        Date firstDate = PnLSeries.firstDate();
+        Date lastDate = PnLSeries.lastDate();
         double Max = PnLSeries.getData(firstDate);
         Date maxDate = firstDate;
         if (firstDate != null) {
@@ -522,7 +522,7 @@ public class BackTest implements Serializable {
     public double getWealth(Date date) {
         if (!isTested) test();
         Date lastDate;
-        lastDate = wealthSeries.getLastDate();
+        lastDate = wealthSeries.lastDate();
         if (date == null || lastDate == null) return 0;
         if (DateUtils.isGreater(date, lastDate)) return wealthSeries.getData(lastDate);
         else return wealthSeries.getData(date);
@@ -565,8 +565,8 @@ public class BackTest implements Serializable {
 
     public Date getWealthMinDate() {
         if (!isTested) test();
-        Date firstDate = wealthSeries.getFirstDate();
-        Date lastDate = wealthSeries.getLastDate();
+        Date firstDate = wealthSeries.firstDate();
+        Date lastDate = wealthSeries.lastDate();
         double Min = wealthSeries.getData(firstDate);
         Date minDate = firstDate;
 
@@ -587,8 +587,8 @@ public class BackTest implements Serializable {
 
     public Date getWealthMaxDate() {
         if (!isTested) test();
-        Date firstDate = wealthSeries.getFirstDate();
-        Date lastDate = wealthSeries.getLastDate();
+        Date firstDate = wealthSeries.firstDate();
+        Date lastDate = wealthSeries.lastDate();
         double Max = wealthSeries.getData(firstDate);
         Date maxDate = firstDate;
         if (firstDate != null) {
@@ -639,8 +639,8 @@ public class BackTest implements Serializable {
 
     public Date getCostMinDate() {
         if (!isTested) test();
-        Date firstDate = costSeries.getFirstDate();
-        Date lastDate = costSeries.getLastDate();
+        Date firstDate = costSeries.firstDate();
+        Date lastDate = costSeries.lastDate();
         double Min = costSeries.getData(firstDate);
         Date minDate = firstDate;
         if (firstDate != null) {
@@ -660,8 +660,8 @@ public class BackTest implements Serializable {
 
     public Date getCostMaxDate() {
         if (!isTested) test();
-        Date firstDate = costSeries.getFirstDate();
-        Date lastDate = costSeries.getLastDate();
+        Date firstDate = costSeries.firstDate();
+        Date lastDate = costSeries.lastDate();
         double Max = costSeries.getData(firstDate);
         Date maxDate = firstDate;
         if (firstDate != null) {
@@ -838,8 +838,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionTotal.getSize() > 0) {
-            Date firstDate = tradeDistributionTotal.getFirstDate();
-            Date lastDate = tradeDistributionTotal.getLastDate();
+            Date firstDate = tradeDistributionTotal.firstDate();
+            Date lastDate = tradeDistributionTotal.lastDate();
             double Max = tradeDistributionTotal.getData(firstDate);
             Date maxDate = firstDate;
             if (firstDate != null) {
@@ -862,8 +862,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionLong.getSize() > 0) {
-            Date firstDate = tradeDistributionLong.getFirstDate();
-            Date lastDate = tradeDistributionLong.getLastDate();
+            Date firstDate = tradeDistributionLong.firstDate();
+            Date lastDate = tradeDistributionLong.lastDate();
 
             double Max = tradeDistributionLong.getData(firstDate);
             Date maxDate = firstDate;
@@ -887,8 +887,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionShort.getSize() > 0) {
-            Date firstDate = tradeDistributionShort.getFirstDate();
-            Date lastDate = tradeDistributionShort.getLastDate();
+            Date firstDate = tradeDistributionShort.firstDate();
+            Date lastDate = tradeDistributionShort.lastDate();
 
             double Max = tradeDistributionShort.getData(firstDate);
             Date maxDate = firstDate;
@@ -912,8 +912,8 @@ public class BackTest implements Serializable {
     public Date getTradeMaxLossDateTotal() {
         if (!isTested) test();
         if (tradeDistributionTotal.getSize() > 0) {
-            Date firstDate = tradeDistributionTotal.getFirstDate();
-            Date lastDate = tradeDistributionTotal.getLastDate();
+            Date firstDate = tradeDistributionTotal.firstDate();
+            Date lastDate = tradeDistributionTotal.lastDate();
             double Min = tradeDistributionTotal.getData(firstDate);
             Date minDate = firstDate;
             if (firstDate != null) {
@@ -936,8 +936,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionLong.getSize() > 0) {
-            Date firstDate = tradeDistributionLong.getFirstDate();
-            Date lastDate = tradeDistributionLong.getLastDate();
+            Date firstDate = tradeDistributionLong.firstDate();
+            Date lastDate = tradeDistributionLong.lastDate();
 
             double Min = tradeDistributionLong.getData(firstDate);
             Date minimumDate = firstDate;
@@ -961,8 +961,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionShort.getSize() > 0) {
-            Date firstDate = tradeDistributionShort.getFirstDate();
-            Date lastDate = tradeDistributionShort.getLastDate();
+            Date firstDate = tradeDistributionShort.firstDate();
+            Date lastDate = tradeDistributionShort.lastDate();
             double Min = tradeDistributionShort.getData(firstDate);
             Date minimumDate = firstDate;
             if (firstDate != null) {
@@ -987,8 +987,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionTotal.getSize() > 0) {
-            Date firstDate = tradeDistributionTotal.getFirstDate();
-            Date lastDate = tradeDistributionTotal.getLastDate();
+            Date firstDate = tradeDistributionTotal.firstDate();
+            Date lastDate = tradeDistributionTotal.lastDate();
             if (firstDate != null) {
                 Date dd = firstDate;
                 Date end = lastDate;
@@ -1011,8 +1011,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionLong.getSize() > 0) {
-            Date firstDate = tradeDistributionLong.getFirstDate();
-            Date lastDate = tradeDistributionLong.getLastDate();
+            Date firstDate = tradeDistributionLong.firstDate();
+            Date lastDate = tradeDistributionLong.lastDate();
             Date dd = firstDate;
             Date end = lastDate;
             for (; DateUtils.isLessEqual(dd, end); dd = DateUtils.nextDay(dd)) {
@@ -1033,8 +1033,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionShort.getSize() > 0) {
-            Date firstDate = tradeDistributionShort.getFirstDate();
-            Date lastDate = tradeDistributionShort.getLastDate();
+            Date firstDate = tradeDistributionShort.firstDate();
+            Date lastDate = tradeDistributionShort.lastDate();
 
             if (firstDate != null) {
                 Date dd = firstDate;
@@ -1058,8 +1058,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionTotal.getSize() > 0) {
-            Date firstDate = tradeDistributionTotal.getFirstDate();
-            Date lastDate = tradeDistributionTotal.getLastDate();
+            Date firstDate = tradeDistributionTotal.firstDate();
+            Date lastDate = tradeDistributionTotal.lastDate();
 
             if (firstDate != null) {
                 Date dd = firstDate;
@@ -1083,8 +1083,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionLong.getSize() > 0) {
-            Date firstDate = tradeDistributionLong.getFirstDate();
-            Date lastDate = tradeDistributionLong.getLastDate();
+            Date firstDate = tradeDistributionLong.firstDate();
+            Date lastDate = tradeDistributionLong.lastDate();
             if (firstDate != null) {
                 Date dd = firstDate;
                 Date end = lastDate;
@@ -1108,8 +1108,8 @@ public class BackTest implements Serializable {
         if (!isTested) test();
 
         if (tradeDistributionShort.getSize() > 0) {
-            Date firstDate = tradeDistributionShort.getFirstDate();
-            Date lastDate = tradeDistributionShort.getLastDate();
+            Date firstDate = tradeDistributionShort.firstDate();
+            Date lastDate = tradeDistributionShort.lastDate();
 
             if (firstDate != null) {
                 Date dd = firstDate;

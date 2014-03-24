@@ -11,10 +11,10 @@ public class CommodityChannelIndicator extends Indicator {
         super(series, name);
         this.order = order;
 
-        Date date = series.getFirstDate()
+        Date date = series.firstDate()
         int index = 0;
         while (index < getFirstIndicatorIndex()) {
-            date = series.getNextDate(date);
+            date = series.nextDate(date);
             index++;
         }
 
@@ -22,7 +22,7 @@ public class CommodityChannelIndicator extends Indicator {
             if (!series.isEmpty(date)) {
                 add(date, IndicatorUtils.CCI(series, date, order));
             }
-            date = series.getNextDate(date)
+            date = series.nextDate(date)
         }
     }
 

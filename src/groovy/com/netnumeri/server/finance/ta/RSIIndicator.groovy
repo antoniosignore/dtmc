@@ -11,10 +11,10 @@ public class RSIIndicator extends Indicator {
         super(series, name);
         this.periodLength = periodLength;
 
-        Date date = series.getFirstDate()
+        Date date = series.firstDate()
         int index = 0;
         while (index < getFirstIndicatorIndex()) {
-            date = series.getNextDate(date);
+            date = series.nextDate(date);
             index++;
         }
 
@@ -24,21 +24,21 @@ public class RSIIndicator extends Indicator {
 
                 add(date, calculate(series, date, periodLength))
             }
-            date = series.getNextDate(date)
+            date = series.nextDate(date)
         }
 
     }
 
     public static double calculate(TimeSeries qh, Date date, int periodLength) {
 
-        int lastBar = qh.matrix.getIndex(date);
+        int lastBar = qh.matrix.index(date);
         int firstBar = lastBar - periodLength + 1;
 
         double gains = 0, losses = 0;
 
         for (int bar = firstBar + 1; bar <= lastBar; bar++) {
 
-            double change = qh.matrix.getValue(bar) - qh.matrix.getValue(bar - 1);
+            double change = qh.matrix.value(bar) - qh.matrix.value(bar - 1);
             gains += Math.max(0, change);
             losses += Math.max(0, -change);
         }

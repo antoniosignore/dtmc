@@ -9,7 +9,7 @@ public class VolumeRSI {
                                    TimeSeries highs,
                                    TimeSeries lows,
                                    TimeSeries volumes, Date date, int periodLength) {
-        int lastBar = opens.matrix.getIndex(date);
+        int lastBar = opens.matrix.index(date);
         int firstBar = lastBar - periodLength + 1;
 
         double gains = 0, losses = 0;

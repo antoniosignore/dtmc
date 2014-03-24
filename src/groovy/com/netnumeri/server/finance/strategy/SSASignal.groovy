@@ -8,12 +8,9 @@ import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.ssa.Histogram
 import com.netnumeri.server.finance.ssa.HistogramStat
 import com.netnumeri.server.finance.ta.BollingerBandDiffIndicator
-import com.netnumeri.server.finance.ta.BollingerBandLowerIndicator
-import com.netnumeri.server.finance.ta.BollingerBandUpIndicator
 import com.netnumeri.server.finance.ta.Indicator
 import com.netnumeri.server.finance.ta.NormalizedSeriesIndicator
 import com.netnumeri.server.finance.ta.SSAComponentsIndicator
-import com.netnumeri.server.finance.ta.SSASeriesPredictionIndicator
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.utils.StockUtils
 
@@ -66,15 +63,15 @@ public class SSASignal extends Strategy {
         stock.indicators.put("bbdiff", bbdiff)
 //        stock.indicators.put("predict", ssa1Predict)
 
-        if (!(DateUtils.isGreater(date, trend.firstDate) && DateUtils.isGreater(date, comp1.firstDate)))
+        if (!(DateUtils.isGreater(date, trend.firstDate()) && DateUtils.isGreater(date, comp1.firstDate())))
             return
 
         Date previousDate
         Date prevPreviousDate
 
         try {
-            previousDate = comp1.getPrevDate(date)
-            prevPreviousDate = comp1.getPrevDate(previousDate)
+            previousDate = comp1.prevDate(date)
+            prevPreviousDate = comp1.prevDate(previousDate)
         } catch (Throwable th) {
             return
         }

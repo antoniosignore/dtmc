@@ -12,10 +12,10 @@ public class ForceIndex {
 
     public static double calculate(TimeSeries closes, TimeSeries volumes, Date date) {
 
-        int lastBar = closes.matrix.getIndex(date);
-        double previousBar = closes.matrix.getValue(lastBar - 1);
+        int lastBar = closes.matrix.index(date);
+        double previousBar = closes.matrix.value(lastBar - 1);
 
-        double value = volumes.matrix.getValue(lastBar) * (closes.matrix.getValue(lastBar) - previousBar);
+        double value = volumes.matrix.value(lastBar) * (closes.matrix.value(lastBar) - previousBar);
         return value;
     }
 }

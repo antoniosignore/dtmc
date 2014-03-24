@@ -15,7 +15,7 @@ public class Stochastic {
                                    TimeSeries highs,
                                    TimeSeries lows,
                                    TimeSeries volumes, Date date, int periodLength) {
-        int endBar = opens.matrix.getIndex(date);
+        int endBar = opens.matrix.index(date);
         int startBar = endBar - periodLength;
         double max = 0;
         double min = lows.getValue(startBar)

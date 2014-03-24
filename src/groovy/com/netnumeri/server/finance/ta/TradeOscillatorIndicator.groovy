@@ -16,10 +16,10 @@ public class TradeOscillatorIndicator extends Indicator {
     }
 
     public void build() {
-        Date date = series.getFirstDate()
+        Date date = series.firstDate()
         int index = 0;
         while (index < getFirstIndicatorIndex()) {
-            date = series.getNextDate(date);
+            date = series.nextDate(date);
             index++;
         }
 
@@ -28,7 +28,7 @@ public class TradeOscillatorIndicator extends Indicator {
                 add(date, IndicatorUtils.TO(series, date, smoothing, smoothing2));
 
             }
-            date = series.getNextDate(date)
+            date = series.nextDate(date)
         }
     }
 

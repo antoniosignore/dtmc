@@ -31,7 +31,7 @@ class GenericMatrixTest extends GroovyTestCase {
 
     void testGet() {
 
-        Date date = matrix.getFirstDate(0);
+        Date date = matrix.firstDate(0);
         Double daily = matrix.get(0, date);
         assertEquals(39.5, daily);
 
@@ -46,7 +46,7 @@ class GenericMatrixTest extends GroovyTestCase {
 
     void testGetLastValidData() {
 
-        assertEquals(16.11, matrix.getLastValidData(0));
+        assertEquals(16.11, matrix.lastValidData(0));
 
     }
 
@@ -73,17 +73,17 @@ class GenericMatrixTest extends GroovyTestCase {
     }
 
     void testGetFirstDate() {
-        assertEquals("Wed Jan 02 00:00:00 CET 2008", matrix.getFirstDate(0).toString());
-        assertEquals("Thu Apr 09 00:00:00 CEST 2009", matrix.getLastDate(0).toString());
+        assertEquals("Wed Jan 02 00:00:00 CET 2008", matrix.firstDate(0).toString());
+        assertEquals("Thu Apr 09 00:00:00 CEST 2009", matrix.lastDate(0).toString());
 
         assertEquals(321, matrix.noElements(0));
 
-        Date first = matrix.getFirstDate(0);
-        Date next = matrix.getNextDate(0, first)
+        Date first = matrix.firstDate(0);
+        Date next = matrix.nextDate(0, first)
         assertEquals("Thu Jan 03 00:00:00 CET 2008", next.toString());
 
-        Date last = matrix.getLastDate(0);
-        Date prev = matrix.getPrevDate(0, last)
+        Date last = matrix.lastDate(0);
+        Date prev = matrix.prevDate(0, last)
         assertEquals("Wed Apr 08 00:00:00 CEST 2009", prev.toString());
 
     }

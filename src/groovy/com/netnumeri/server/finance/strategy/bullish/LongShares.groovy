@@ -17,7 +17,7 @@ class LongShares implements OptionStrategy {
 
         Date date = DateUtils.today();
 
-        Transaction transaction = new Transaction(instrument, TradeEnum.BUY, 100, instrument.getPrice(instrument.getLastDate()), date);
+        Transaction transaction = new Transaction(instrument, TradeEnum.BUY, 100, instrument.getPrice(instrument.lastDate()), date);
         Bet bet = new Bet();
         bet.transactions.add(transaction)
         bet.name = "Long Shares"

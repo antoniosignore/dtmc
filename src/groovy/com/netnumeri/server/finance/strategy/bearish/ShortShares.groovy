@@ -15,7 +15,7 @@ class ShortShares implements OptionStrategy {
     List<Bet> analyze(Forecast forecast, Stock instrument) {
         List<Bet> bets = new ArrayList<Bet>()
         Date date = DateUtils.today();
-        Transaction transaction = new Transaction(instrument, FinConstants.SHORT, 100, instrument.getPrice(instrument.getLastDate()), date);
+        Transaction transaction = new Transaction(instrument, FinConstants.SHORT, 100, instrument.getPrice(instrument.lastDate()), date);
         Bet bet = new Bet();
         bet.transactions.add(transaction)
         bet.name = "Short Shares"

@@ -51,7 +51,7 @@ class DtmcFilters {
 //                        if (bool) {
 //
 //                            boolean passed = false;
-//                            for (String allowedRole : entry.getValue()) {
+//                            for (String allowedRole : entry.value()) {
 //                                if (userRole.equals(allowedRole)) {
 //                                    passed = Boolean.TRUE
 //                                    break;
