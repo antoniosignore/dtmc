@@ -139,7 +139,7 @@ class StockController {
 
             } else if (ui.type == IndicatorEnum.Momentum) {
 
-                ui.indicator = new MomentumPctPeriodIndicator(closes, "Momentum", ui.integer1)
+//                ui.indicator = new MomentumPctPeriodIndicator(closes, "Momentum", ui.integer1)
 
             } else if (ui.type == IndicatorEnum.MACD) {
 
