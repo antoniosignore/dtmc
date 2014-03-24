@@ -62,19 +62,19 @@ public class TransactionSeries implements Serializable {
     }
 
     public Transaction getFirstTransaction() {
-        return transactionArray.getFirstValue()
+        return transactionArray.firstValue()
     }
 
     public Transaction getLastTransaction() {
-        return transactionArray.getLastValue()
+        return transactionArray.lastValue()
     }
 
     public Date getFirstDate() {
-        return transactionArray.getFirstDate()
+        return transactionArray.firstDate()
     }
 
     public Date getLastDate() {
-        return transactionArray.getLastDate()
+        return transactionArray.lastDate()
     }
 
     // Return a "pair" of i-th transactions
@@ -84,7 +84,7 @@ public class TransactionSeries implements Serializable {
     public Transaction getPair(Date date, TradeEnum action) {
 
         if (action == TradeEnum.BUY) {
-            Transaction transaction = transactionArray.getNextValue(date)
+            Transaction transaction = transactionArray.nextValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.SELL)
@@ -94,7 +94,7 @@ public class TransactionSeries implements Serializable {
         }
 
         if (action == TradeEnum.SELL) {
-            Transaction transaction = transactionArray.getPrevValue(date)
+            Transaction transaction = transactionArray.prevValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.BUY)
@@ -104,7 +104,7 @@ public class TransactionSeries implements Serializable {
         }
 
         if (action == TradeEnum.SELLSHORT) {
-            Transaction transaction = transactionArray.getNextValue(date)
+            Transaction transaction = transactionArray.nextValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.BUYSHORT)
@@ -114,7 +114,7 @@ public class TransactionSeries implements Serializable {
         }
 
         if (action == TradeEnum.SELLSHORT) {
-            Transaction transaction = transactionArray.getPrevValue(date)
+            Transaction transaction = transactionArray.prevValue(date)
             if (transaction == null)
                 return null
             else if (transaction.tradeAction == TradeEnum.BUYSHORT)

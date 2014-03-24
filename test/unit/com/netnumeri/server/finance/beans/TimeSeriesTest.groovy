@@ -31,7 +31,7 @@ public class TimeSeriesTest extends GroovyTestCase {
 
 
 
-        Daily value = dailyarray.getFirstValue()
+        Daily value = dailyarray.firstValue()
 
 
         assertEquals(2, stock.getNDaily());

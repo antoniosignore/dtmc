@@ -184,8 +184,8 @@ class StockUtils {
 
     static String getCandleStickPlot(Stock stock) {
         GenericTimeSeries<Daily> dailyarray = stock.dailyarray;
-        Date startDate = dailyarray.getFirstDate()
-        Date last = dailyarray.getLastDate()
+        Date startDate = dailyarray.firstDate()
+        Date last = dailyarray.lastDate()
         Date dateIndex = startDate
 
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
@@ -196,7 +196,7 @@ class StockUtils {
                 sb.append("['" + sdf.format(dateIndex) + "'," + daily.openprice + "," + daily.high + "," + daily.low + "," + daily.closeprice + "]\n")
             else
                 sb.append("['" + sdf.format(dateIndex) + "'," + daily.openprice + "," + daily.high + "," + daily.low + "," + daily.closeprice + "],\n")
-            dateIndex = dailyarray.getNextDate(dateIndex)
+            dateIndex = dailyarray.nextDate(dateIndex)
         }
         sb.append("];\n")
         return sb.toString()

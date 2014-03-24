@@ -26,7 +26,7 @@ public class TestIndicators {
         // last year
 //        StockUtils.lastYear(stockInstance);
 
-        TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
+        TimeSeries closes = stockInstance.series(FinConstants.CLOSE);
 
         int smoothing = 10;
         int smoothing1 = 10;
@@ -40,10 +40,11 @@ public class TestIndicators {
         double deviation = 10;
 
 
+        new SMAIndicator(closes, "Simple Moving Average", smoothing1);
+
         MomentumPctPeriodIndicator momentum = new MomentumPctPeriodIndicator(closes, "Momentum", period);
 
 
-        new SMAIndicator(closes, "Simple Moving Average", smoothing1);
         new WMAIndicator(closes, "Weighted Moving Average", smoothing1);
 
         new PriceChannelUpIndicator(closes, "PC-Upper", indicatorOrder, k);

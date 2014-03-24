@@ -55,7 +55,7 @@ class GenericMatrix<T> implements Serializable {
 
     public T lastValidData(int row) {
         def get = listOfTimeSeries.get(row);
-        return get.lastValue;
+        return get.lastValue();
     }
 
     public boolean isValidRow(int row) {
@@ -65,7 +65,7 @@ class GenericMatrix<T> implements Serializable {
 
     public int size(int row) {
         def get = listOfTimeSeries.get(row);
-        return get.treeMap.size();
+        return get.size();
     }
 
     public GenericMatrix<T> cloneIt() {
@@ -87,7 +87,8 @@ class GenericMatrix<T> implements Serializable {
     public Date firstDate(int row) {
         try {
             GenericTimeSeries<T> gst = listOfTimeSeries.get(row);
-            return gst.firstDate;
+            Date date = gst.firstDate()
+            return date;
         } catch (Throwable rx) {
             return null;
         }
@@ -96,7 +97,7 @@ class GenericMatrix<T> implements Serializable {
     public Date nextDate(int row, Date date) {
         try {
             GenericTimeSeries<T> gst = listOfTimeSeries.get(row);
-            return gst.getNextDate(date);
+            return gst.nextDate(date);
         } catch (Throwable rx) {
             return null;
         }
@@ -105,7 +106,7 @@ class GenericMatrix<T> implements Serializable {
     public Date prevDate(int row, Date date) {
         try {
             GenericTimeSeries<T> gst = listOfTimeSeries.get(row);
-            return gst.getPrevDate(date);
+            return gst.prevDate(date);
         } catch (Throwable rx) {
             return null;
         }
@@ -114,7 +115,7 @@ class GenericMatrix<T> implements Serializable {
     public Date lastDate(int row) {
         try {
             GenericTimeSeries<T> gst = listOfTimeSeries.get(row);
-            return gst.lastDate;
+            return gst.lastDate();
         } catch (Throwable rx) {
             return null;
         }
@@ -141,17 +142,17 @@ class GenericMatrix<T> implements Serializable {
 
     public Date dateByIndex(int i) {
         GenericTimeSeries<T> gst = listOfTimeSeries.get(0);
-        return gst.getDateByIndex(i)
+        return gst.dateByIndex(i)
     }
 
     public T value(int i) {
         GenericTimeSeries<T> gst = listOfTimeSeries.get(0);
-        return gst.getValueByIndex(i)
+        return gst.valueByIndex(i)
     }
 
     public int index(Date date) {
         GenericTimeSeries<T> gst = listOfTimeSeries.get(0);
-        return gst.getIndex(date)
+        return gst.index(date)
     }
 
 

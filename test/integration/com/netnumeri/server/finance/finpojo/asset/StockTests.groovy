@@ -34,7 +34,7 @@ class StockTests {
         // last year
         StockUtils.lastYear(stockInstance);
 
-        TimeSeries closes = stockInstance.getSeries(FinConstants.CLOSE);
+        TimeSeries closes = stockInstance.series(FinConstants.CLOSE);
 
         int smoothing = 10;
         int smoothing1 = 10;

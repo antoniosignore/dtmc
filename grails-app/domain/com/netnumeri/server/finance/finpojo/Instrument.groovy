@@ -333,12 +333,6 @@ class Instrument extends Persistable implements Serializable {
         if (lastD == null) {
             lastD = lastDate();
         }
-
-        println "firstD = $firstD"
-        println "lastD = $lastD"
-
-        println "what = $what"
-
         if (what == FinConstants.HIGH)
             return highSeries(firstD, lastD);
         else if (what == FinConstants.LOW)
@@ -349,10 +343,8 @@ class Instrument extends Persistable implements Serializable {
             return closeSeries(firstD, lastD);
         else if (what == FinConstants.VOLUME)
             return volumeSeries(firstD, lastD);
-
         return null;
     }
-
 
     public TimeSeries highSeries() {
         return highSeries(null, null);
@@ -635,11 +627,11 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public Date prevDate(Date date) {
-        return dailyarray.getPrevDate(date);
+        return dailyarray.prevDate(date);
     }
 
     public Date nextDate(Date date) {
-        return dailyarray.getNextDate(date);
+        return dailyarray.nextDate(date);
     }
 
     public Daily prevDaily(Date date) {
@@ -810,7 +802,7 @@ class Instrument extends Persistable implements Serializable {
         if (dailyarray == null || dailyarray.isEmpty()) {
             return null
         }
-        Daily daily = (Daily) dailyarray.getFirstValue();
+        Daily daily = (Daily) dailyarray.firstValue();
         if (daily != null)
             return daily.getDailydate();
         else
@@ -818,7 +810,7 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public Date lastDailyDate() {
-        return dailyarray.getLastDate();
+        return dailyarray.lastDate();
     }
 
     public void add(Daily daily) {

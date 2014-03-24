@@ -7,41 +7,41 @@ class GenericTimeSeries<T> extends TreeMap<Date, T> {
         super(new DateComparator())
     }
 
-    public T getFirstValue() {
+    public T firstValue() {
         def key = firstKey();
         return get(key);
     }
 
-    public Date getNextDate(Date date) {
+    public Date nextDate(Date date) {
         return higherKey(date);
     }
 
-    public Date getPrevDate(Date date) {
+    public Date prevDate(Date date) {
         return lowerKey(date);
     }
 
-    public T getNextValue(Date date) {
+    public T nextValue(Date date) {
         Map.Entry<Date, T> entry = higherEntry(date)
         if (entry != null) return entry.value
         return null
     }
 
-    public T getPrevValue(Date date) {
+    public T prevValue(Date date) {
         Map.Entry<Date, T> entry = lowerEntry(date)
         if (entry != null) return entry.value
         return null
     }
 
-    public T getLastValue() {
+    public T lastValue() {
         def key = lastKey();
         return get(key);
     }
 
-    public Date getFirstDate() {
+    public Date firstDate() {
         return firstKey();
     }
 
-    public Date getLastDate() {
+    public Date lastDate() {
         return lastKey();
     }
 
@@ -53,17 +53,17 @@ class GenericTimeSeries<T> extends TreeMap<Date, T> {
         return subMap(firstCalendarDate, true, lastCalendarDate, true).size();
     }
 
-    public Date getDateByIndex(int i) {
+    public Date dateByIndex(int i) {
         Object[] array = keySet().toArray()
         return array[i] as Date
     }
 
-    public T getValueByIndex(int i) {
+    public T valueByIndex(int i) {
         Object[] array = values().toArray()
         return array[i] as T
     }
 
-    public int getIndex(Date date) {
+    public int index(Date date) {
         return headMap(date).size();
     }
 }

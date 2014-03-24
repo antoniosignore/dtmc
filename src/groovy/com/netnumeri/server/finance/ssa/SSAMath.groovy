@@ -111,7 +111,7 @@ public class SSAMath {
 //        for (int i = 1; i <= numberOfDaysInTheFuture; i++) {
 //            println "SSAMath.computeForecast no : " + i
 //
-//            lastPrediction = Util.getLastValue(augmentedSerie);
+//            lastPrediction = Util.lastValue(augmentedSerie);
 //            while (true) {
 //                println "SSAMath.computeForecast"
 //                SSAAnalysis eserie = new SSAAnalysis(StockUtils.toList(augmentedSerie), window);
@@ -119,7 +119,7 @@ public class SSAMath {
 //                for (int j = 0; j < components.size(); j++) {
 //                    Integer o = components.get(j);
 //                    double[] s1 = eserie.getEigenComponent(o);
-//                    prediction = prediction + Util.getLastValue(s1)
+//                    prediction = prediction + Util.lastValue(s1)
 //                }
 //                Util.setLastValue(augmentedSerie, prediction);
 //
