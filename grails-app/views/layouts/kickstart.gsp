@@ -64,7 +64,10 @@
 
 </head>
 
-<body data-grid-framework="bo" data-grid-color="#00CCDD" data-grid-opacity="0.5" data-grid-zindex="10"
+
+<body data-grid-framework="bo"
+      data-grid-color="#00CCDD"
+      data-grid-opacity="0.5" data-grid-zindex="10"
       data-grid-nbcols="16">
 
 <g:render template="/_menu/navbar"/>
@@ -77,15 +80,21 @@
     <g:render template="/layouts/header"/>
 </g:else>
 
-
 <div class="container-fluid">
     <div class="row-fluid">
-        %{--<g:render template="/layouts/leftbar"/>--}%
+        <g:render template="/layouts/leftbar"/>
         <g:render template="/layouts/content"/>
         %{--<g:render template="/layouts/rightbar"/>--}%
     </div>
 
 </div>
+
+<g:if test="${pageProperty(name: 'page.footer')}">
+    <g:pageProperty name="page.footer"/>
+</g:if>
+<g:else>
+    <g:render template="/layouts/footer"/>
+</g:else>
 
 <!-- Enable to insert additional components (e.g., modals, javascript, etc.) by any individual page -->
 <g:if test="${pageProperty(name: 'page.include.bottom')}">
