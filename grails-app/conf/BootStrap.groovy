@@ -177,7 +177,7 @@ class BootStrap {
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.kFastStochasticPeriod, name: "K Fast Stochastic", integer1: 14);
                 userIndicators.save(flush: true, failOnError: true)
 
-                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.dStochastic, name: "D Stochastic Indicator", method: 1, integer1: 14, smoothing1: 10);
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.dStochastic, name: "D Stochastic Indicator", integer1: 1, integer2: 14, integer3: 10);
                 userIndicators.save(flush: true, failOnError: true)
 
                 userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.DStochasticSmoothed, name: "D Stochastic Smoothed", integer1: 10, smoothing1: 14);
