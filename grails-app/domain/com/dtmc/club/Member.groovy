@@ -33,6 +33,9 @@ class Member extends SecUser implements Serializable {
 
     ImageNode small
 
+    Date dateCreated
+    Date lastUpdated
+
     static hasMany = [indicators: UserIndicators]
 
     static constraints = {

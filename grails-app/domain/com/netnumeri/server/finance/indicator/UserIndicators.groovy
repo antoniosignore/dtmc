@@ -23,6 +23,9 @@ public class UserIndicators implements Serializable {
     Double double1
     Double double2
 
+    Date dateCreated
+    Date lastUpdated
+
     @Override
     public String toString() {
         return "UserIndicators{" +
