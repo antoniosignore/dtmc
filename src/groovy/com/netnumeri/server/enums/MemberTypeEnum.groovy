@@ -2,7 +2,14 @@ package com.netnumeri.server.enums
 
 public enum MemberTypeEnum {
 
-    Chairperson,Treasurer,Secretary,AssistantChairperson,AssistantTreasurer,ResearcherAnalyst, Trader, Auditor
+    Chairperson,
+    Treasurer,
+    Secretary,
+    AssistantChairperson,
+    AssistantTreasurer,
+    ResearcherAnalyst,
+    Trader,
+    Auditor
 
     /*
     Chairperson - chairs club meetings, co-ordinates the other club members and ensures that each club member has their
@@ -31,7 +38,6 @@ Auditor - checks the accuracy of the investment club's accounts on an annual bas
 The auditor will ensure that the investment club accounts provide a true and accurate reflection of all the transactions,
 subscriptions and investments.
      */
-
 
 
 }

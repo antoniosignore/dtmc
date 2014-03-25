@@ -1,14 +1,20 @@
 package dtmc
 
+import com.dtmc.club.Member
+
 class DtmcFilters {
+
+
+    def springSecurityService
+
 
     def filters = {
         all(controller: '*', action: '*') {
             before = {
 
                 before = {
-                    println "Controller: ${controllerName}"
-                    println "Action    : ${actionName}"
+//                    println "Controller: ${controllerName}"
+//                    println "Action    : ${actionName}"
                 }
 
             }
@@ -18,10 +24,16 @@ class DtmcFilters {
                     model = [:]
                 }
 
-//                    model.activeOpco = opcoStatus.currentOpco
-//                    model.username = opcoStatus.username
-//                    model.opcos = opcoStatus.opcos
-//                    model.roles = opcoStatus.roles
+                Member currentLoggedInUser = springSecurityService.getCurrentUser();
+
+                if (currentLoggedInUser != null)
+                    println "currentLoggedInUser.username = $currentLoggedInUser.username"
+
+                model.user = currentLoggedInUser
+                model.username = currentLoggedInUser.username
+                model.userid = currentLoggedInUser.id
+                model.email = currentLoggedInUser.email
+                model.user_type = currentLoggedInUser.memberType.toString()
 
             }
             afterView = { Exception e ->

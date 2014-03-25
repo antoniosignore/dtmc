@@ -49,10 +49,13 @@ class Member extends SecUser implements Serializable {
         facebook(size: 5..200, blank: true)
         linkedin(size: 5..200, blank: true)
         timezone(nullable: true)
-
     }
 
     static mapping = {
     }
 
+    @Override
+    public String toString() {
+        return username
+    }
 }

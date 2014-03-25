@@ -1,3 +1,4 @@
+<%@ page import="com.dtmc.club.Member" %>
 <html>
 
 <head>
@@ -6,6 +7,8 @@
 </head>
 
 <body>
+
+Welcome to DTMC
 
 </body>
 

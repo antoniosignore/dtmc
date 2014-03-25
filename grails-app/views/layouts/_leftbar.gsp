@@ -1,4 +1,5 @@
 <div class="span2">
+
     <div class="well sidebar-nav" style="padding: 8px 0;">
         <ul class="nav nav-list ">
 
@@ -16,9 +17,6 @@
                 <g:link controller="userIndicators" action="">User Indicators</g:link>
             </li>
 
-            <li class="${'strategy'.equals(params.controller) ? 'active' : ''}">
-                <g:link controller="SMACrossover" action="">SMA Strategy</g:link>
-            </li>
         </ul>
     </div>
 </div>

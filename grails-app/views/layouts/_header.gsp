@@ -1,7 +1,6 @@
-
-<div class="container-fluid">
-    <div class="row clearfix">
-        %{--<div class="col-md-12 column">--}%
+<header id="Header">
+    <div class="container-fluid">
+        <div class="col-md-10 column">
             <ul class="nav nav-pills">
                 <li class="${'portfolio'.equals(params.controller) ? 'active' : ''}">
                     <a href="/dtmc/portfolio">Portfolio</a>
@@ -10,7 +9,7 @@
                     <a href="/dtmc/stock">Stock</a>
                 </li>
             </ul>
-        %{--</div>--}%
+        </div>
     </div>
-</div>
+</header>
 

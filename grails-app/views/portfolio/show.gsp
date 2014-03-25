@@ -1,4 +1,3 @@
-
 <%@ page import="com.netnumeri.server.finance.finpojo.Portfolio" %>
 <!doctype html>
 <html>
@@ -14,113 +13,112 @@
 
 <section id="show-portfolio" class="first">
 
-    <table class="table table-striped table-bordered table-condensed table-hover">
+    <table class="table">
         <tbody>
-        
-        <tr class="prop">
-            <td valign="top" class="name"><g:message code="portfolio.club.label"
-                                                     default="Club"/></td>
-            
-            <td valign="top" class="value"><g:link controller="club" action="show"
-                                                   id="${portfolioInstance?.club?.id}">${portfolioInstance?.club?.name?.encodeAsHTML()}</g:link></td>
-            
-        </tr>
-        
+
         <tr class="prop">
             <td valign="top" class="name"><g:message code="portfolio.dateCreated.label"
                                                      default="Date Created"/></td>
-            
+
             <td valign="top" class="value"><g:formatDate date="${portfolioInstance?.dateCreated}"/></td>
-            
+
         </tr>
-        
+
         <tr class="prop">
             <td valign="top" class="name"><g:message code="portfolio.description.label"
                                                      default="Description"/></td>
-            
+
             <td valign="top" class="value">${fieldValue(bean: portfolioInstance, field: "description")}</td>
-            
+
         </tr>
-        
+
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="portfolio.firstDailyDate.label"
-                                                     default="First Daily Date"/></td>
-            
-            <td valign="top" class="value"><g:formatDate date="${portfolioInstance?.firstDailyDate}"/></td>
-            
+            <td valign="top" class="name"><g:message code="portfolio.firstDate.label"
+                                                     default="First Date"/></td>
+
+            <td valign="top" class="value"><g:formatDate date="${portfolioInstance?.firstDate}"/></td>
+
         </tr>
-        
+
         <tr class="prop">
             <td valign="top" class="name"><g:message code="portfolio.items.label"
                                                      default="Items"/></td>
-            
+
             <td valign="top" style="text-align: left;" class="value">
                 <ul>
                     <g:each in="${portfolioInstance.items}" var="i">
-                        <li><g:link controller="portfolioItem" action="show"
+                        <li><g:link controller="portfolioEntry" action="show"
                                     id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
                     </g:each>
                 </ul>
             </td>
-            
+
         </tr>
-        
+
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="portfolio.lastDailyDate.label"
-                                                     default="Last Daily Date"/></td>
-            
-            <td valign="top" class="value"><g:formatDate date="${portfolioInstance?.lastDailyDate}"/></td>
-            
+            <td valign="top" class="name"><g:message code="portfolio.lastDate.label"
+                                                     default="Last Date"/></td>
+
+            <td valign="top" class="value"><g:formatDate date="${portfolioInstance?.lastDate}"/></td>
+
         </tr>
-        
+
         <tr class="prop">
             <td valign="top" class="name"><g:message code="portfolio.lastUpdated.label"
                                                      default="Last Updated"/></td>
-            
+
             <td valign="top" class="value"><g:formatDate date="${portfolioInstance?.lastUpdated}"/></td>
-            
+
         </tr>
-        
+
         <tr class="prop">
             <td valign="top" class="name"><g:message code="portfolio.name.label"
                                                      default="Name"/></td>
-            
+
             <td valign="top" class="value">${fieldValue(bean: portfolioInstance, field: "name")}</td>
-            
+
         </tr>
-        
+
+        <tr class="prop">
+            <td valign="top" class="name"><g:message code="portfolio.portfolioType.label"
+                                                     default="Portfolio Type"/></td>
+
+            <td valign="top" class="value">${portfolioInstance?.portfolioType?.encodeAsHTML()}</td>
+
+        </tr>
+
         <tr class="prop">
             <td valign="top" class="name"><g:message code="portfolio.transactions.label"
                                                      default="Transactions"/></td>
-            
+
             <td valign="top" style="text-align: left;" class="value">
                 <ul>
                     <g:each in="${portfolioInstance.transactions}" var="t">
-                        <li><g:link controller="trade" action="show"
+                        <li><g:link controller="transaction" action="show"
                                     id="${t.id}">${t?.encodeAsHTML()}</g:link></li>
                     </g:each>
                 </ul>
             </td>
-            
+
         </tr>
-        
+
         <tr class="prop">
             <td valign="top" class="name"><g:message code="portfolio.user.label"
                                                      default="User"/></td>
-            
+
             <td valign="top" class="value"><g:link controller="member" action="show"
-                                                   id="${portfolioInstance?.user?.id}">${portfolioInstance?.user?.username?.encodeAsHTML()}</g:link></td>
-            
+                                                   id="${portfolioInstance?.user?.id}">${portfolioInstance?.user?.encodeAsHTML()}</g:link></td>
+
         </tr>
-        
+
         <tr class="prop">
             <td valign="top" class="name"><g:message code="portfolio.wealth.label"
                                                      default="Wealth"/></td>
-            
+
             <td valign="top" class="value">${fieldValue(bean: portfolioInstance, field: "wealth")}</td>
-            
+
         </tr>
-        
+
         </tbody>
     </table>
 </section>

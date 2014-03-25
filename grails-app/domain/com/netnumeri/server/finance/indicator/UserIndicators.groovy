@@ -18,7 +18,7 @@ public class UserIndicators implements Serializable {
     Integer integer2
     Integer integer3
 
-    String components
+    String str1
 
     Double double1
     Double double2
@@ -30,7 +30,7 @@ public class UserIndicators implements Serializable {
                 ", name='" + name + '\'' +
                 ", indicator=" + indicator +
                 ", version=" + version +
-                ", user=" + user +
+                ", user=" + user.toString() +
                 '}';
     }
 }
