@@ -2,26 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c943155-af16-4b50-9094-bcc520af5923" name="Default" comment="user management">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/LegalStructureController.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/com/dtmc/club/LegalStructureControllerTests.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/PortfolioEntryController.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioEntryControllerTests.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/legalStructure/_form.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/portfolioEntry/_form.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/legalStructure/create.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/portfolioEntry/create.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/legalStructure/edit.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/portfolioEntry/edit.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/legalStructure/list.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/portfolioEntry/list.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/legalStructure/show.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/portfolioEntry/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioEntry.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioEntry.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atlassian-ide-plugin.xml" afterPath="$PROJECT_DIR$/atlassian-ide-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/banker/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/banker/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/banker/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/banker/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/banker/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/banker/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/banker/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/banker/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -269,21 +249,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BrokerController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/BrokerController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="16" selection-start="430" selection-end="430" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1620">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="atlassian-ide-plugin.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/atlassian-ide-plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="23" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+            <state line="4" column="23" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
               <folding>
-                <marker date="1395768620934" expanded="true" signature="79:104" placeholder="..." />
+                <marker date="1395768812830" expanded="true" signature="79:104" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -328,7 +299,7 @@
       <file leaf-file-name="PortfolioEntry.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioEntry.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="18" selection-start="879" selection-end="879" vertical-scroll-proportion="-5.1923075" vertical-offset="225" max-vertical-offset="900">
+            <state line="33" column="18" selection-start="879" selection-end="879" vertical-scroll-proportion="-0.0" vertical-offset="495" max-vertical-offset="900">
               <folding>
                 <marker date="1395768620830" expanded="true" signature="46:167" placeholder="..." />
               </folding>
@@ -348,10 +319,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PortfolioEntryController.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PortfolioEntryController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/PortfolioEntryController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="42" selection-start="579" selection-end="579" vertical-scroll-proportion="0.7160804" vertical-offset="0" max-vertical-offset="1620">
+            <state line="19" column="5" selection-start="579" selection-end="579" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1620">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="35" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.35545024" vertical-offset="0" max-vertical-offset="30270">
               <folding />
             </state>
           </provider>
@@ -1172,7 +1152,7 @@
       <workItem from="1395666591056" duration="3271000" />
       <workItem from="1395681897699" duration="6323000" />
       <workItem from="1395732605819" duration="15953000" />
-      <workItem from="1395759867797" duration="7669000" />
+      <workItem from="1395759867797" duration="7693000" />
     </task>
     <task id="LOCAL-00001" summary="trading systems&#10;">
       <created>1391084425095</created>
@@ -1390,11 +1370,15 @@
       <created>1395768563055</created>
       <updated>1395768563055</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="user management">
+      <created>1395768821852</created>
+      <updated>1395768821852</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242503000" />
+    <option name="totallyTimeSpent" value="242527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-8" width="1618" height="892" extended-state="6" />
@@ -1485,13 +1469,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/asset/SsaController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="57" selection-start="600" selection-end="600" vertical-scroll-proportion="-8.5" vertical-offset="51" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="58" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="750">
@@ -1823,7 +1800,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="23" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
           <folding>
-            <marker date="1395768620934" expanded="true" signature="79:104" placeholder="..." />
+            <marker date="1395768812830" expanded="true" signature="79:104" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1880,7 +1857,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/finpojo/PortfolioEntry.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="18" selection-start="879" selection-end="879" vertical-scroll-proportion="-5.1923075" vertical-offset="225" max-vertical-offset="900">
+        <state line="33" column="18" selection-start="879" selection-end="879" vertical-scroll-proportion="-0.0" vertical-offset="495" max-vertical-offset="900">
           <folding>
             <marker date="1395768620830" expanded="true" signature="46:167" placeholder="..." />
           </folding>
@@ -1899,7 +1876,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/PortfolioEntryController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="42" selection-start="579" selection-end="579" vertical-scroll-proportion="0.7160804" vertical-offset="0" max-vertical-offset="1620">
+        <state line="19" column="5" selection-start="579" selection-end="579" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="35" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.35545024" vertical-offset="0" max-vertical-offset="30270">
           <folding />
         </state>
       </provider>
