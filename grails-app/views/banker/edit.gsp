@@ -1,27 +1,27 @@
-<%@ page import="com.dtmc.club.Club" %>
+<%@ page import="com.dtmc.club.Banker" %>
 <!doctype html>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'club.label', default: 'Club')}"/>
+    <g:set var="entityName" value="${message(code: 'banker.label', default: 'Banker')}"/>
     <title><g:message code="default.edit.label" args="[entityName]"/></title>
 </head>
 
 <body>
 
-<section id="edit-club" class="first">
+<section id="edit-banker" class="first">
 
-    <g:hasErrors bean="${clubInstance}">
+    <g:hasErrors bean="${bankerInstance}">
         <div class="alert alert-error">
-            <g:renderErrors bean="${clubInstance}" as="list"/>
+            <g:renderErrors bean="${bankerInstance}" as="list"/>
         </div>
     </g:hasErrors>
 
-    <g:form method="post" class="form-horizontal" enctype="multipart/form-data">
-        <g:hiddenField name="id" value="${clubInstance?.id}"/>
-        <g:hiddenField name="version" value="${clubInstance?.version}"/>
+    <g:form method="post" class="form-horizontal">
+        <g:hiddenField name="id" value="${bankerInstance?.id}"/>
+        <g:hiddenField name="version" value="${bankerInstance?.version}"/>
         <fieldset class="form">
             <g:render template="form"/>
         </fieldset>

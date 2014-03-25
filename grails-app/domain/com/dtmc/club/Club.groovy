@@ -14,8 +14,6 @@ class Club implements Serializable {
 
     static hasMany = [members: Member]
 
-    LegalStructure legalStructure
-
     Double monthlySubscription
     Double joiningFee
 
@@ -24,6 +22,7 @@ class Club implements Serializable {
 
     Banker banker
     Broker broker
+    LegalStructure legalStructure
 
     byte[] agreement
 
