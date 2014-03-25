@@ -15,7 +15,7 @@
                 </a>
             </li>
             <li class="">
-                <a href="http://wordpress.com/signup/">
+                <a href="http://antoniosignore.wordpress.com/">
                     <i class="icon-align-justify"></i>
                     <i><g:message code="default.blog.label"/></i>
                 </a>
