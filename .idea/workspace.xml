@@ -2,37 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c943155-af16-4b50-9094-bcc520af5923" name="Default" comment="user management">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/BankerController.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/com/dtmc/club/BankerControllerTests.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/BrokerController.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/com/dtmc/club/BrokerControllerTests.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/ClubController.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/com/dtmc/club/ClubControllerTests.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/MemberController.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/com/dtmc/club/MemberControllerTests.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/controllers/dtmc/SiteinfoController.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/dtmc/SiteinfoControllerSpec.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/banker/_form.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/member/_form.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/atlassian-ide-plugin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/banker/create.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/member/create.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/banker/edit.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/member/edit.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/banker/list.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/member/list.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/portfolio/list.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/banker/show.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/member/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Banker.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Banker.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Broker.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Broker.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/LegalStructure.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/LegalStructure.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/club/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/club/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/club/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/club/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/club/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/club/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/club/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/club/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/club/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/club/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dtmc.iws" />
@@ -280,15 +249,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_info.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_info.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="108" selection-start="568" selection-end="568" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HomeController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.grails/2.3.1/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/grails-app/controllers/HomeController.groovy">
           <provider selected="true" editor-type-id="text-editor">
@@ -301,7 +261,7 @@
       <file leaf-file-name="Club.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="55" selection-start="233" selection-end="233" vertical-scroll-proportion="-4.0384617" vertical-offset="0" max-vertical-offset="615">
+            <state line="14" column="55" selection-start="233" selection-end="233" vertical-scroll-proportion="-0.0" vertical-offset="210" max-vertical-offset="615">
               <folding />
             </state>
           </provider>
@@ -313,7 +273,7 @@
       <file leaf-file-name="LegalStructure.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/LegalStructure.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="50" selection-start="114" selection-end="114" vertical-scroll-proportion="-1.7307693" vertical-offset="0" max-vertical-offset="225">
+            <state line="6" column="50" selection-start="114" selection-end="114" vertical-scroll-proportion="-0.0" vertical-offset="90" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
@@ -322,10 +282,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BrokerController.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BrokerController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/BrokerController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="16" selection-start="430" selection-end="430" vertical-scroll-proportion="0.60453403" vertical-offset="0" max-vertical-offset="1620">
+            <state line="16" column="16" selection-start="430" selection-end="430" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1620">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="atlassian-ide-plugin.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/atlassian-ide-plugin.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="34" selection-start="136" selection-end="136" vertical-scroll-proportion="0.13793103" vertical-offset="0" max-vertical-offset="435">
               <folding />
             </state>
           </provider>
@@ -355,7 +324,7 @@
       <file leaf-file-name="Banker.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Banker.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="21" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.1538461" vertical-offset="0" max-vertical-offset="225">
+            <state line="4" column="21" selection-start="78" selection-end="78" vertical-scroll-proportion="-0.0" vertical-offset="60" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
@@ -504,86 +473,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtmc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="club" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1256,7 +1145,7 @@
       <workItem from="1395666591056" duration="3271000" />
       <workItem from="1395681897699" duration="6323000" />
       <workItem from="1395732605819" duration="15953000" />
-      <workItem from="1395759867797" duration="7360000" />
+      <workItem from="1395759867797" duration="7413000" />
     </task>
     <task id="LOCAL-00001" summary="trading systems&#10;">
       <created>1391084425095</created>
@@ -1462,18 +1351,22 @@
       <created>1395767943822</created>
       <updated>1395767943822</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="user management">
+      <created>1395768517819</created>
+      <updated>1395768517820</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242194000" />
+    <option name="totallyTimeSpent" value="242247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-8" width="1618" height="892" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32734805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32596686" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1557,13 +1450,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/home/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="-2.8125" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/security/SecUser.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="66" selection-start="124" selection-end="124" vertical-scroll-proportion="-1.7307693" vertical-offset="0" max-vertical-offset="720">
@@ -1906,7 +1792,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="55" selection-start="233" selection-end="233" vertical-scroll-proportion="-4.0384617" vertical-offset="0" max-vertical-offset="615">
+        <state line="14" column="55" selection-start="233" selection-end="233" vertical-scroll-proportion="-0.0" vertical-offset="210" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
@@ -1933,7 +1819,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Banker.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="21" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.1538461" vertical-offset="0" max-vertical-offset="225">
+        <state line="4" column="21" selection-start="78" selection-end="78" vertical-scroll-proportion="-0.0" vertical-offset="60" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
@@ -1943,7 +1829,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/dtmc/club/LegalStructure.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="114" selection-end="114" vertical-scroll-proportion="-1.7307693" vertical-offset="0" max-vertical-offset="225">
+        <state line="6" column="50" selection-start="114" selection-end="114" vertical-scroll-proportion="-0.0" vertical-offset="90" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
@@ -1953,7 +1839,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/BrokerController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="430" selection-end="430" vertical-scroll-proportion="0.60453403" vertical-offset="0" max-vertical-offset="1620">
+        <state line="16" column="16" selection-start="430" selection-end="430" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atlassian-ide-plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="34" selection-start="136" selection-end="136" vertical-scroll-proportion="0.13793103" vertical-offset="0" max-vertical-offset="435">
           <folding />
         </state>
       </provider>
