@@ -1,6 +1,5 @@
 package com.netnumeri.server.finance.finpojo
 
-import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.finpojo.derivative.Derivative
 
