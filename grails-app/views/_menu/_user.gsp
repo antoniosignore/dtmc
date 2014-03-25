@@ -39,8 +39,7 @@
             <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="#">
                 <!-- TODO: Only show menu items based on permissions (e.g., Guest has no account page) -->
                 <i class="icon-user icon-large icon-white"></i>
-                ${username}
-                %{--${username}--}%
+                ${user?.username}
             </a>
             <ul class="dropdown-menu" role="menu">
 

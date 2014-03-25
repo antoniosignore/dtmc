@@ -10,8 +10,8 @@
 
             <%-- Note: Links to pages without controller are redirected in conf/UrlMappings.groovy --%>
             <li class="">
-            <a href="${createLink(uri: '/about')}">
-                <i class="icon-info-sign"></i>
+                <a href="${createLink(uri: '/about')}">
+                    <i class="icon-info-sign"></i>
                     <g:message code="default.about.label"/>
                 </a>
             </li>
