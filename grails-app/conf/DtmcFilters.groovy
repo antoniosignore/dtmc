@@ -9,10 +9,8 @@ class DtmcFilters {
         all(controller: '*', action: '*') {
             before = {
 
-                before = {
-                    println "Controller: ${controllerName}"
-                    println "Action    : ${actionName}"
-                }
+                println "Controller: ${controllerName}"
+                println "Action    : ${actionName}"
 
             }
             after = { Map model ->
@@ -20,8 +18,10 @@ class DtmcFilters {
                 if (!model) model = [:]
 
                 def grailsuser = springSecurityService.principal
-                if (grailsuser != null)
+                if (grailsuser != null) {
                     model.user = Member.get(grailsuser.id)
+                    println "model.user = " + model.user.username
+                }
 
             }
             afterView = { Exception e ->

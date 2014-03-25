@@ -39,15 +39,15 @@
             <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="#">
                 <!-- TODO: Only show menu items based on permissions (e.g., Guest has no account page) -->
                 <i class="icon-user icon-large icon-white"></i>
-                ${user?.username}
+                ${user}
             </a>
             <ul class="dropdown-menu" role="menu">
 
                 <li class="">
                     <a href="${createLink(uri: '/member/show')}">
                         <i class="icon-user"></i>
-                    <g:message code="user.show.label"/>
-                </a></li>
+                        <g:message code="user.show.label"/>
+                    </a></li>
 
                 <li class=""><a href="${createLink(uri: '/member/edit')}">
                     <i class="icon-cogs"></i>

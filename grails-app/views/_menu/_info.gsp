@@ -8,9 +8,8 @@
 
         <ul class="dropdown-menu">
 
-            <%-- Note: Links to pages without controller are redirected in conf/UrlMappings.groovy --%>
             <li class="">
-                <a href="${createLink(uri: '/about')}">
+                <a href="${createLink(uri: '/siteinfo/about')}">
                     <i class="icon-info-sign"></i>
                     <g:message code="default.about.label"/>
                 </a>
@@ -22,15 +21,15 @@
                 </a>
             </li>
             <li class="">
-                <a href="${createLink(uri: '/contact')}">
+                <a href="${createLink(uri: '/siteinfo/contact')}">
                     <i class="icon-envelope"></i>
                     <g:message code="default.contact.label"/>
                 </a>
             </li>
 
             <li class="divider"></li>
-            <li class=""><a href="${createLink(uri: '/imprint')}">Imprint</a></li>
-            <li class=""><a href="${createLink(uri: '/terms')}"><i>Terms of Use</i></a></li>
+            <li class=""><a href="${createLink(uri: '/siteinfo/imprint')}">Imprint</a></li>
+            <li class=""><a href="${createLink(uri: '/siteinfo/terms')}"><i>Terms of Use</i></a></li>
         </ul>
     </li>
 </ul>

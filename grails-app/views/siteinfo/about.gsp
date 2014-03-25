@@ -1,8 +1,13 @@
+<!doctype html>
 <html>
-
 <head>
-    <title><g:message code="default.about.title" args="[meta(name: 'app.name')]"/></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="layout" content="kickstart"/>
+    <g:set var="entityName" value="${message(code: 'stock.label', default: 'Stock')}"/>
+    <title><g:message code="default.list.label" args="[entityName]"/></title>
+
+    <g:set var="layout_nomainmenu" value="${true}" scope="request"/>
+    <g:set var="layout_nosecondarymenu" value="${true}" scope="request"/>
 </head>
 
 <body>
