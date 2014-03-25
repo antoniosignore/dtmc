@@ -10,7 +10,7 @@
 
             <%-- Note: Links to pages without controller are redirected in conf/UrlMappings.groovy --%>
             <li class="">
-            <a href="${createLink(uri: '/siteinfo/about')}">
+            <a href="${createLink(uri: '/about')}">
                 <i class="icon-info-sign"></i>
                     <g:message code="default.about.label"/>
                 </a>
@@ -28,9 +28,9 @@
                 </a>
             </li>
 
-            <%--			<li class="divider"></li>--%>
-            <%--			<li class=""><a href="${createLink(uri: '/imprint')}">Imprint</a></li>--%>
-            <%--			<li class=""><a href="${createLink(uri: '/terms')}"><i>Terms of Use</i></a></li>--%>
+            <li class="divider"></li>
+            <li class=""><a href="${createLink(uri: '/imprint')}">Imprint</a></li>
+            <li class=""><a href="${createLink(uri: '/terms')}"><i>Terms of Use</i></a></li>
         </ul>
     </li>
 </ul>

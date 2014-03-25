@@ -5,13 +5,12 @@ class UrlMappings {
         /*
          * Pages without controller
          */
-//        "/about"(view: "/siteinfo/about")
-//        "/blog"(view: "/siteinfo/blog")
-//        "/systeminfo"(view: "/siteinfo/systeminfo")
-//        "/contact"(view: "/siteinfo/contact")
-//        "/terms"(view: "/siteinfo/terms")
-//        "/imprint"(view: "/siteinfo/imprint")
-//        "/nextSteps"(view: "/home/nextSteps")
+        "/about"(view: "/siteinfo/about")
+        "/blog"(view: "/siteinfo/blog")
+        "/systeminfo"(view: "/siteinfo/systeminfo")
+        "/contact"(view: "/siteinfo/contact")
+        "/terms"(view: "/siteinfo/terms")
+        "/imprint"(view: "/siteinfo/imprint")
 
         /*
          * Pages with controller

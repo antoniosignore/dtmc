@@ -1,45 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c943155-af16-4b50-9094-bcc520af5923" name="Default" comment="added histogram on tops and lows">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/PortfolioController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/com/netnumeri/server/finance/finpojo/PortfolioItemController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/dtmc/PageController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/dtmc/PortfolioListController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/index.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolio/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolioItem/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolioItem/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolioItem/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolioItem/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolioItem/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolioList/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolioList/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolioList/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolioList/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/portfolioList/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/dtmc/DtmcFiltersSpec.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/dtmc/PortfolioServiceTests.groovy" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/dtmc/DtmcFilters.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/dtmc/DtmcFilters.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Member.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Member.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/MemberTypeEnum.groovy" afterPath="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/MemberTypeEnum.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/com/netnumeri/server/finance/finpojo/PortfolioControllerTests.groovy" />
+    <list default="true" id="4c943155-af16-4b50-9094-bcc520af5923" name="Default" comment="user management">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/siteinfo/imprint.gsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/siteinfo/terms.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_header.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_info.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_info.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/_leftbar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/_leftbar.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/_menu/_user.gsp" afterPath="$PROJECT_DIR$/grails-app/views/_menu/_user.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/antonio.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/antonio.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login/auth.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login/auth.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/kickstart.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -288,31 +255,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_navbar.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="79" selection-start="2003" selection-end="2003" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1035">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserIndicators.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/com/netnumeri/server/finance/indicator/UserIndicators.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="91" selection-start="228" selection-end="228" vertical-scroll-proportion="-2.0192308" vertical-offset="0" max-vertical-offset="630">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_user.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_user.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="39" selection-start="2968" selection-end="2968" vertical-scroll-proportion="-6.1666665" vertical-offset="589" max-vertical-offset="1200">
+            <state line="40" column="86" selection-start="2224" selection-end="2224" vertical-scroll-proportion="-1.7916666" vertical-offset="514" max-vertical-offset="1215">
               <folding />
             </state>
           </provider>
@@ -321,16 +267,34 @@
       <file leaf-file-name="_info.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_info.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="24" selection-start="430" selection-end="430" vertical-scroll-proportion="-3.4375" vertical-offset="0" max-vertical-offset="630">
+            <state line="30" column="70" selection-start="1145" selection-end="1145" vertical-scroll-proportion="-9.25" vertical-offset="6" max-vertical-offset="630">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SiteinfoController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/dtmc/SiteinfoController.groovy">
+      <file leaf-file-name="_navbar.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="8" selection-start="50" selection-end="50" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="285">
+            <state line="38" column="79" selection-start="2003" selection-end="2003" vertical-scroll-proportion="-4.0416665" vertical-offset="376" max-vertical-offset="1035">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_submenubar.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="13" selection-start="1129" selection-end="1129" vertical-scroll-proportion="-6.8541665" vertical-offset="16" max-vertical-offset="675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_menubar.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
               <folding />
             </state>
           </provider>
@@ -345,28 +309,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MemberController.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/MemberController.groovy">
+      <file leaf-file-name="_admin.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_admin.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="21" selection-start="219" selection-end="219" vertical-scroll-proportion="0.61085975" vertical-offset="0" max-vertical-offset="1950">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="65" selection-start="6860" selection-end="6860" vertical-scroll-proportion="0.0" vertical-offset="2101" max-vertical-offset="2775">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/siteinfo/contact.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="44" selection-start="138" selection-end="138" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="885">
+            <state line="3" column="67" selection-start="161" selection-end="161" vertical-scroll-proportion="-0.9375" vertical-offset="0" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -375,7 +321,25 @@
       <file leaf-file-name="UrlMappings.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="77" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+            <state line="13" column="30" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imprint.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/siteinfo/imprint.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="terms.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/siteinfo/terms.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624">
               <folding />
             </state>
           </provider>
@@ -398,8 +362,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/security/SecUser.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/security/SecRole.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Banker.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Broker.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/dtmc/club/Club.groovy" />
@@ -445,10 +407,12 @@
         <option value="$PROJECT_DIR$/src/groovy/com/netnumeri/server/enums/MemberTypeEnum.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/MemberController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
-        <option value="$PROJECT_DIR$/grails-app/views/_menu/_user.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/_menu/_info.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/dtmc/SiteinfoController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/_menu/_user.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/_menu/_info.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/siteinfo/imprint.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/siteinfo/terms.gsp" />
       </list>
     </option>
   </component>
@@ -1147,7 +1111,7 @@
       <workItem from="1395645828197" duration="370000" />
       <workItem from="1395666591056" duration="3271000" />
       <workItem from="1395681897699" duration="6323000" />
-      <workItem from="1395732605819" duration="14318000" />
+      <workItem from="1395732605819" duration="14694000" />
     </task>
     <task id="LOCAL-00001" summary="trading systems&#10;">
       <created>1391084425095</created>
@@ -1329,11 +1293,15 @@
       <created>1395688290085</created>
       <updated>1395688290085</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="user management">
+      <created>1395757939564</created>
+      <updated>1395757939564</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233199000" />
+    <option name="totallyTimeSpent" value="233575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-8" width="1620" height="893" extended-state="6" />
@@ -1354,7 +1322,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37258688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5710345" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5710345" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1364,6 +1332,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5069061" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3714653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1373,7 +1342,6 @@
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1393,7 +1361,8 @@
     </option>
     <MESSAGE value="trading systems&#10;" />
     <MESSAGE value="added histogram on tops and lows" />
-    <option name="LAST_COMMIT_MESSAGE" value="added histogram on tops and lows" />
+    <MESSAGE value="user management" />
+    <option name="LAST_COMMIT_MESSAGE" value="user management" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1423,42 +1392,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.grails/2.3.1/projects/dtmc/plugins/kickstart-with-bootstrap-0.9.6/grails-app/views/layouts/kickstart.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="48" selection-start="1633" selection-end="1633" vertical-scroll-proportion="-11.25" vertical-offset="360" max-vertical-offset="1110" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="675">
-          <folding>
-            <marker date="1375564520568" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1375564520568" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1375564520568" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1375564520568" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1375564520568" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1375564520568" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1375564520568" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1375564520568" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1375564520568" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_content.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="60" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.grails/2.3.1/projects/dtmc/plugins/spring-security-core-2.0-RC2/grails-app/controllers/grails/plugin/springsecurity/LoginController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="6" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-9.291667" vertical-offset="17" max-vertical-offset="2115">
@@ -1553,8 +1486,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="75" selection-start="159" selection-end="159" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1215">
           <folding>
-            <marker date="1395745367826" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395745367826" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395757931010" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395757931010" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1712,13 +1645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_admin.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="67" selection-start="161" selection-end="161" vertical-scroll-proportion="0.12362637" vertical-offset="0" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_header.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="50" selection-start="516" selection-end="516" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="330">
@@ -1757,13 +1683,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="79" selection-start="2003" selection-end="2003" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="168" column="65" selection-start="6860" selection-end="6860" vertical-scroll-proportion="0.0" vertical-offset="2101" max-vertical-offset="2775">
@@ -1788,34 +1707,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/siteinfo/about.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="51" selection-start="403" selection-end="403" vertical-scroll-proportion="-5.3125" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="77" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_info.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="430" selection-end="430" vertical-scroll-proportion="-3.4375" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_user.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="39" selection-start="2968" selection-end="2968" vertical-scroll-proportion="-6.1666665" vertical-offset="589" max-vertical-offset="1200">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/dtmc/SiteinfoController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="8" selection-start="50" selection-end="50" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="285">
@@ -1825,7 +1716,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/dtmc/club/MemberController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="219" selection-end="219" vertical-scroll-proportion="0.61085975" vertical-offset="0" max-vertical-offset="1950">
+        <state line="2" column="48" selection-start="71" selection-end="71" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="1950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/siteinfo/about.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="51" selection-start="403" selection-end="403" vertical-scroll-proportion="-5.3125" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_navbar.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="79" selection-start="2003" selection-end="2003" vertical-scroll-proportion="-4.0416665" vertical-offset="376" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_menubar.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_submenubar.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="1129" selection-end="1129" vertical-scroll-proportion="-6.8541665" vertical-offset="16" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_user.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="86" selection-start="2224" selection-end="2224" vertical-scroll-proportion="-1.7916666" vertical-offset="514" max-vertical-offset="1215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_admin.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="67" selection-start="161" selection-end="161" vertical-scroll-proportion="-0.9375" vertical-offset="0" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/_menu/_info.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="70" selection-start="1145" selection-end="1145" vertical-scroll-proportion="-9.25" vertical-offset="6" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="30" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/siteinfo/imprint.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/siteinfo/terms.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672">
           <folding />
         </state>
       </provider>
