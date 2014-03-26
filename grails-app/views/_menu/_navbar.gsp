@@ -1,4 +1,4 @@
-<div id="Navbar" class="navbar navbar-fixed-top navbar-inverse">
+<div id="Navbar" class="navbar navbar-fixed-top navbar-header">
 
     <div class="navbar-inner">
 
@@ -45,6 +45,7 @@
                 <div class="pull-left">
                     <%--Left-side entries--%>
                     <g:render template="/_menu/admin"/>
+                    <g:render template="/_menu/dtmcmenu"/>
                     %{--<g:render template="/_menu/search"/>--}%
                 </div>
 

@@ -5,7 +5,13 @@
                 show: true
             },
             title: '${indicator.name}',
-            axes: {xaxis: {renderer: $.jqplot.DateAxisRenderer},
+            axes: {
+                xaxis: {
+                    renderer: $.jqplot.DateAxisRenderer,
+                    tickOptions: {
+                        formatString: '%d-%b-%y'
+                    }
+                },
                 yaxis: {
                     tickOptions: {formatString: '%#.5f'},
                     yaxis: 'y2axis'}
@@ -24,5 +30,5 @@
     ${indicator.indicator.getJqPlot()}
 </script>
 
-<div class="item" id='chart_${indicatorCounter}' style='height:200px; width:300px;'></div>
+<div class="item" id='chart_${indicatorCounter}' style='height:150px; width:300px;'></div>
 
