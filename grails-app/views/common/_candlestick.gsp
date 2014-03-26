@@ -74,9 +74,9 @@
     ohlc = ${StockUtils.getCandleStickPlot(strategyInstance.asset)}
             buysignals = ${StockUtils.getBuySignals(strategyInstance)}
                     sellsignals =
-    ${StockUtils.getSellSignals(strategyInstance)}
-    %{--lower= ${stockInstance.indicators.get("lower").jqPlot}--}%
-    %{--upper= ${stockInstance.indicators.get("upper").jqPlot}--}%
+                            ${StockUtils.getSellSignals(strategyInstance)}
+                            %{--lower= ${stockInstance.indicators.get("lower").jqPlot}--}%
+                            %{--upper= ${stockInstance.indicators.get("upper").jqPlot}--}%
 
                             $(window).resize(function () {
                                 plot2.replot({ resetAxes: true });

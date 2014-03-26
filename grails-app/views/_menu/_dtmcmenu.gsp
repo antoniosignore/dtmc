@@ -1,4 +1,4 @@
-<ul class="nav nav-pills ">
+<ul class="nav">
 
     <li class="${'portfolio'.equals(params.controller) ? 'active' : ''}">
         <g:link controller="portfolio" action="">Portfolio</g:link>

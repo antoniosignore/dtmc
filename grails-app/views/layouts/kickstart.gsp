@@ -67,7 +67,7 @@
     <g:render template="/layouts/header"/>
 </g:else>
 
-<div class="container-fluid">
+<div class="container">
     <div class="row-fluid">
         <g:render template="/layouts/leftbar"/>
         <g:render template="/layouts/content"/>
@@ -107,15 +107,15 @@
     filter: none;
     border: none;
     box-shadow: none;
+    font-size: 20px;
+    background-color: #e0e0e0;
 
-    background-color: navajowhite;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .navbar .nav > li > a {
-    color: #fff;
+    color: white;
     text-shadow: none;
 }
 
@@ -123,8 +123,12 @@
     color: #666;
 }
 
+.footer {
+    background-color: #e0e0e0;
+}
+
 .navbar .nav .active > a {
-    color: #666;
+    color: navy;
     background: none;
 }
 
@@ -136,7 +140,57 @@
     border-left: 1px solid #1c2022;
     border-right: 1px solid #3e4a4e;
 }
-</style>
 
+/* Override some defaults */
+html, body {
+    padding-top: 30px; /* 40px to make the container go all the way to the bottom of the topbar */
+}
+
+.container > footer p {
+    text-align: center; /* center align it with the container */
+}
+
+.container {
+    /*width: 820px; *//* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+}
+
+/* The white background content wrapper */
+/*.content {*/
+/*background-color: #fff;*/
+/*padding: 10px;*/
+/*margin: 0 -20px; *//* negative indent the amount of the padding to maintain the grid system */
+/*-webkit-border-radius: 0 0 6px 6px;*/
+/*-moz-border-radius: 0 0 6px 6px;*/
+/*border-radius: 0 0 6px 6px;*/
+/*-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);*/
+/*-moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);*/
+/*box-shadow: 0 1px 2px rgba(0,0,0,.15);*/
+/*}*/
+
+/* Page header tweaks */
+.page-header {
+    background-color: #f5f5f5;
+    padding: 20px 20px 10px;
+    margin: -20px -20px 20px;
+}
+
+/* Styles you shouldn't keep as they are for displaying this base example only */
+.content .span10 .span12,
+.content .span4 {
+    min-height: 500px;
+}
+
+/* Give a quick and non-cross-browser friendly divider */
+.content .span4 {
+    margin-left: 0;
+    padding-left: 19px;
+    border-left: 1px solid #eee;
+}
+
+.topbar .btn {
+    border: 0;
+}
+
+</style>
 </html>
 

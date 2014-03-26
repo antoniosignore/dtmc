@@ -8,8 +8,6 @@ class DtmcFilters {
         all(controller: '*', action: '*') {
             before = {
 
-                println "Controller: ${controllerName}"
-                println "Action    : ${actionName}"
 
             }
             after = { Map model ->
