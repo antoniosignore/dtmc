@@ -78,6 +78,10 @@
     %{--lower= ${stockInstance.indicators.get("lower").jqPlot}--}%
     %{--upper= ${stockInstance.indicators.get("upper").jqPlot}--}%
 
+                            $(window).resize(function () {
+                                plot2.replot({ resetAxes: true });
+                            });
 </script>
 
-<div id="chart" style="height:300px; width:100%;"></div>
+<div id="chart" style="height:150px; width:100%;"></div>
+

@@ -28,15 +28,6 @@
 
     <%-- For Javascript see end of body --%>
 
-    %{--<style type="text/css">--}%
-    %{--.item {--}%
-    %{--width: 25%;--}%
-    %{--}--}%
-
-    %{--.item.w2 {--}%
-    %{--width: 50%;--}%
-    %{--}--}%
-    %{--</style>--}%
 
     <r:external uri="/js/masonry.pkgd.min.js"/>
 
@@ -103,6 +94,49 @@
 
 <r:layoutResources/>
 </body>
+
+<style type="text/css">
+.btn {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.navbar-inner {
+    background: none;
+    filter: none;
+    border: none;
+    box-shadow: none;
+
+    background-color: navajowhite;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar .nav > li > a {
+    color: #fff;
+    text-shadow: none;
+}
+
+.navbar .nav > li > a:hover {
+    color: #666;
+}
+
+.navbar .nav .active > a {
+    color: #666;
+    background: none;
+}
+
+.navbar .nav .active > a:hover {
+    background: none;
+}
+
+.navbar .divider-vertical {
+    border-left: 1px solid #1c2022;
+    border-right: 1px solid #3e4a4e;
+}
+</style>
 
 </html>
 
