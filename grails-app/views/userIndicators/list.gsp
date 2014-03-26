@@ -12,15 +12,27 @@
 
 <section id="list-userIndicators" class="first">
 
-    <table class="table table-striped table-bordered table-condensed table-hover">
+    <table class="table table-bordered">
         <thead>
         <tr>
 
-            <g:sortableColumn property="name" title="${message(code: 'userIndicators.name.label', default: 'Name')}"/>
+            <g:sortableColumn property="dateCreated"
+                              title="${message(code: 'userIndicators.name.label', default: 'Name')}"/>
 
-            <th><g:message code="userIndicators.indicator.label" default="Indicator"/></th>
+            <g:sortableColumn property="double1"
+                              title="${message(code: 'userIndicators.double1.label', default: 'Double1')}"/>
 
-            <th><g:message code="userIndicators.user.label" default="User"/></th>
+            <g:sortableColumn property="double2"
+                              title="${message(code: 'userIndicators.double2.label', default: 'Double2')}"/>
+
+            <g:sortableColumn property="integer1"
+                              title="${message(code: 'userIndicators.integer1.label', default: 'Integer1')}"/>
+
+            <g:sortableColumn property="integer2"
+                              title="${message(code: 'userIndicators.integer2.label', default: 'Integer2')}"/>
+
+            <g:sortableColumn property="integer3"
+                              title="${message(code: 'userIndicators.integer3.label', default: 'Integer3')}"/>
 
         </tr>
         </thead>
@@ -31,9 +43,15 @@
                 <td><g:link action="show"
                             id="${userIndicatorsInstance.id}">${fieldValue(bean: userIndicatorsInstance, field: "name")}</g:link></td>
 
-                <td>${fieldValue(bean: userIndicatorsInstance, field: "indicator.code")}</td>
+                <td>${fieldValue(bean: userIndicatorsInstance, field: "double1")}</td>
 
-                <td>${fieldValue(bean: userIndicatorsInstance, field: "user.username")}</td>
+                <td>${fieldValue(bean: userIndicatorsInstance, field: "double2")}</td>
+
+                <td>${fieldValue(bean: userIndicatorsInstance, field: "integer1")}</td>
+
+                <td>${fieldValue(bean: userIndicatorsInstance, field: "integer2")}</td>
+
+                <td>${fieldValue(bean: userIndicatorsInstance, field: "integer3")}</td>
 
             </tr>
         </g:each>

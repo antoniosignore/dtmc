@@ -4,7 +4,7 @@ class Broker implements Serializable {
 
     String name
 
-    static belongsTo = [club: Club]
+    Club club
 
     Date dateCreated
     Date lastUpdated

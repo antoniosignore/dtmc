@@ -105,18 +105,18 @@ class BootStrap {
 //                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumPrediction, name: "ssa predict", integer1: 50);
 //                userIndicators.save(flush: true, failOnError: true)
 
-//                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma 10", integer1: 10);
-//                userIndicators.save(flush: true, failOnError: true)
-//
-//                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma 50", integer1: 50);
-//                userIndicators.save(flush: true, failOnError: true)
-//
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma 10", integer1: 10);
+                userIndicators.save(flush: true, failOnError: true)
+
+                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SimpleMovingAverage, name: "sma 50", integer1: 50);
+                userIndicators.save(flush: true, failOnError: true)
+
 //                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.WeightedMovingAverage, name: "wma 50", integer1: 50);
 //                userIndicators.save(flush: true, failOnError: true)
 //
 //                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.SingularSpectrumFirstSecondComponent, name: "ssa01", integer1: 50);
 //                userIndicators.save(flush: true, failOnError: true)
-//
+
 //                userIndicators = new UserIndicators(user: adminUser, type: IndicatorEnum.PriceChannelUpper, name: "PC Upper", integer1: 10, double2: 50);
 //                userIndicators.save(flush: true, failOnError: true)
 //

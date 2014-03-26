@@ -37,7 +37,7 @@ public class Transaction implements Serializable {
         this.price = price;
         this.cost = cost;
     }
-//
+
 //    public Trade(Instrument instrument, TradeEnum tradeAction, int amount, double price, Date d, int t, Double cost) {
 //        if (d == null) throw new IllegalArgumentException("d cannot be null");
 //        if (cost == null) throw new IllegalArgumentException("cost cannot be null");

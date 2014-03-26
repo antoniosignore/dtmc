@@ -2,7 +2,6 @@ import com.dtmc.club.Member
 
 class DtmcFilters {
 
-
     def springSecurityService
     def filters = {
 

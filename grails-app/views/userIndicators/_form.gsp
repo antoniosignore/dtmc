@@ -1,48 +1,59 @@
-<%@ page import="com.netnumeri.server.enums.IndicatorEnum; com.netnumeri.server.finance.indicator.UserIndicators" %>
+<%@ page import="com.netnumeri.server.finance.indicator.UserIndicators" %>
 
 
 
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'deviation', 'error')} ">
-    <label for="deviation" class="control-label"><g:message
-            code="userIndicators.deviation.label"
-            default="Deviation"/></label>
+<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'double1', 'error')} ">
+    <label for="double1" class="control-label"><g:message
+            code="userIndicators.double1.label"
+            default="Double1"/></label>
 
     <div class="controls">
-        <g:field type="number" name="deviation" step="any" value="${userIndicatorsInstance.deviation}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'deviation', 'error')}</span>
+        <g:field type="number" name="double1" step="any" value="${userIndicatorsInstance.double1}"/>
+        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'double1', 'error')}</span>
     </div>
 </div>
 
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'k', 'error')} ">
-    <label for="k" class="control-label"><g:message
-            code="userIndicators.k.label"
-            default="K"/></label>
+<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'double2', 'error')} ">
+    <label for="double2" class="control-label"><g:message
+            code="userIndicators.double2.label"
+            default="Double2"/></label>
 
     <div class="controls">
-        <g:field type="number" name="k" step="any" value="${userIndicatorsInstance.k}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'k', 'error')}</span>
+        <g:field type="number" name="double2" step="any" value="${userIndicatorsInstance.double2}"/>
+        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'double2', 'error')}</span>
     </div>
 </div>
 
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'length', 'error')} ">
-    <label for="length" class="control-label"><g:message
-            code="userIndicators.length.label"
-            default="Length"/></label>
+<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'integer1', 'error')} ">
+    <label for="integer1" class="control-label"><g:message
+            code="userIndicators.integer1.label"
+            default="Integer1"/></label>
 
     <div class="controls">
-        <g:field type="number" name="length" value="${userIndicatorsInstance.length}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'length', 'error')}</span>
+        <g:field type="number" name="integer1" value="${userIndicatorsInstance.integer1}"/>
+        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'integer1', 'error')}</span>
     </div>
 </div>
 
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'method', 'error')} ">
-    <label for="method" class="control-label"><g:message
-            code="userIndicators.method.label"
-            default="Method"/></label>
+<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'integer2', 'error')} ">
+    <label for="integer2" class="control-label"><g:message
+            code="userIndicators.integer2.label"
+            default="Integer2"/></label>
 
     <div class="controls">
-        <g:field type="number" name="method" value="${userIndicatorsInstance.method}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'method', 'error')}</span>
+        <g:field type="number" name="integer2" value="${userIndicatorsInstance.integer2}"/>
+        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'integer2', 'error')}</span>
+    </div>
+</div>
+
+<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'integer3', 'error')} ">
+    <label for="integer3" class="control-label"><g:message
+            code="userIndicators.integer3.label"
+            default="Integer3"/></label>
+
+    <div class="controls">
+        <g:field type="number" name="integer3" value="${userIndicatorsInstance.integer3}"/>
+        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'integer3', 'error')}</span>
     </div>
 </div>
 
@@ -57,58 +68,14 @@
     </div>
 </div>
 
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'indicatorOrder', 'error')} ">
-    <label for="indicatorOrder" class="control-label"><g:message
-            code="userIndicators.indicatorOrder.label"
-            default="Order"/></label>
+<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'str1', 'error')} ">
+    <label for="str1" class="control-label"><g:message
+            code="userIndicators.str1.label"
+            default="Str1"/></label>
 
     <div class="controls">
-        <g:field type="number" name="order" value="${userIndicatorsInstance.indicatorOrder}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'indicatorOrder', 'error')}</span>
-    </div>
-</div>
-
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'period', 'error')} ">
-    <label for="period" class="control-label"><g:message
-            code="userIndicators.period.label"
-            default="Period"/></label>
-
-    <div class="controls">
-        <g:field type="number" name="period" value="${userIndicatorsInstance.period}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'period', 'error')}</span>
-    </div>
-</div>
-
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'integer1', 'error')} ">
-    <label for="smoothing1" class="control-label"><g:message
-            code="userIndicators.smoothing1.label"
-            default="Smoothing1"/></label>
-
-    <div class="controls">
-        <g:field type="number" name="smoothing1" value="${userIndicatorsInstance.smoothing1}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'integer1', 'error')}</span>
-    </div>
-</div>
-
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'integer2', 'error')} ">
-    <label for="smoothing2" class="control-label"><g:message
-            code="userIndicators.smoothing2.label"
-            default="Smoothing2"/></label>
-
-    <div class="controls">
-        <g:field type="number" name="smoothing2" value="${userIndicatorsInstance.smoothing2}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'integer2', 'error')}</span>
-    </div>
-</div>
-
-<div class="control-group fieldcontain ${hasErrors(bean: userIndicatorsInstance, field: 'integer3', 'error')} ">
-    <label for="smoothing3" class="control-label"><g:message
-            code="userIndicators.smoothing3.label"
-            default="Smoothing3"/></label>
-
-    <div class="controls">
-        <g:field type="number" name="smoothing3" value="${userIndicatorsInstance.smoothing3}"/>
-        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'integer3', 'error')}</span>
+        <g:textField name="str1" value="${userIndicatorsInstance?.str1}"/>
+        <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'str1', 'error')}</span>
     </div>
 </div>
 
@@ -118,8 +85,8 @@
             default="Type"/></label>
 
     <div class="controls">
-        <g:select name="type" from="${IndicatorEnum?.values()}"
-                  keys="${IndicatorEnum.values()*.name()}"
+        <g:select name="type" from="${com.netnumeri.server.enums.IndicatorEnum?.values()}"
+                  keys="${com.netnumeri.server.enums.IndicatorEnum.values()*.name()}"
                   value="${userIndicatorsInstance?.type?.name()}" noSelection="['': '']"/>
         <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'type', 'error')}</span>
     </div>
@@ -131,7 +98,7 @@
             default="User"/></label>
 
     <div class="controls">
-        <g:select id="user" name="user.id" from="${com.dtmc.security.UserBean.list()}" optionKey="id"
+        <g:select id="user" name="user.id" from="${com.dtmc.club.Member.list()}" optionKey="id"
                   value="${userIndicatorsInstance?.user?.id}" class="many-to-one" noSelection="['null': '']"/>
         <span class="help-inline">${hasErrors(bean: userIndicatorsInstance, field: 'user', 'error')}</span>
     </div>

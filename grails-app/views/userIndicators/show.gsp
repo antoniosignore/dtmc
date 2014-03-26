@@ -13,38 +13,62 @@
 
 <section id="show-userIndicators" class="first">
 
-    <table class="table table-striped table-bordered table-condensed table-hover">
+    <table class="table">
         <tbody>
 
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.deviation.label"
-                                                     default="Deviation"/></td>
+            <td valign="top" class="name"><g:message code="userIndicators.dateCreated.label"
+                                                     default="Date Created"/></td>
+
+            <td valign="top" class="value"><g:formatDate date="${userIndicatorsInstance?.dateCreated}"/></td>
+
+        </tr>
+
+        <tr class="prop">
+            <td valign="top" class="name"><g:message code="userIndicators.double1.label"
+                                                     default="Double1"/></td>
 
             <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "double1")}</td>
 
         </tr>
 
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.k.label"
-                                                     default="K"/></td>
+            <td valign="top" class="name"><g:message code="userIndicators.double2.label"
+                                                     default="Double2"/></td>
 
             <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "double2")}</td>
 
         </tr>
 
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.length.label"
-                                                     default="Length"/></td>
+            <td valign="top" class="name"><g:message code="userIndicators.integer1.label"
+                                                     default="Integer1"/></td>
 
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "length")}</td>
+            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "integer1")}</td>
 
         </tr>
 
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.method.label"
-                                                     default="Method"/></td>
+            <td valign="top" class="name"><g:message code="userIndicators.integer2.label"
+                                                     default="Integer2"/></td>
 
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "method")}</td>
+            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "integer2")}</td>
+
+        </tr>
+
+        <tr class="prop">
+            <td valign="top" class="name"><g:message code="userIndicators.integer3.label"
+                                                     default="Integer3"/></td>
+
+            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "integer3")}</td>
+
+        </tr>
+
+        <tr class="prop">
+            <td valign="top" class="name"><g:message code="userIndicators.lastUpdated.label"
+                                                     default="Last Updated"/></td>
+
+            <td valign="top" class="value"><g:formatDate date="${userIndicatorsInstance?.lastUpdated}"/></td>
 
         </tr>
 
@@ -57,42 +81,10 @@
         </tr>
 
         <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.indicatorOrder.label"
-                                                     default="Order"/></td>
+            <td valign="top" class="name"><g:message code="userIndicators.str1.label"
+                                                     default="Str1"/></td>
 
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "indicatorOrder")}</td>
-
-        </tr>
-
-        <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.period.label"
-                                                     default="Period"/></td>
-
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "period")}</td>
-
-        </tr>
-
-        <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.smoothing1.label"
-                                                     default="Smoothing1"/></td>
-
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "integer1")}</td>
-
-        </tr>
-
-        <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.smoothing2.label"
-                                                     default="Smoothing2"/></td>
-
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "integer2")}</td>
-
-        </tr>
-
-        <tr class="prop">
-            <td valign="top" class="name"><g:message code="userIndicators.smoothing3.label"
-                                                     default="Smoothing3"/></td>
-
-            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "integer3")}</td>
+            <td valign="top" class="value">${fieldValue(bean: userIndicatorsInstance, field: "str1")}</td>
 
         </tr>
 
@@ -108,7 +100,7 @@
             <td valign="top" class="name"><g:message code="userIndicators.user.label"
                                                      default="User"/></td>
 
-            <td valign="top" class="value"><g:link controller="userBean" action="show"
+            <td valign="top" class="value"><g:link controller="member" action="show"
                                                    id="${userIndicatorsInstance?.user?.id}">${userIndicatorsInstance?.user?.encodeAsHTML()}</g:link></td>
 
         </tr>

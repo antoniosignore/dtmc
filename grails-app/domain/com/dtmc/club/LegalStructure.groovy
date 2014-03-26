@@ -7,7 +7,8 @@ class LegalStructure implements Serializable {
     Date dateCreated
     Date lastUpdated
 
-    static belongsTo = [club: Club]
+    Club club
+
 
     static constraints = {
     }
