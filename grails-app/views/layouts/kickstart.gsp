@@ -120,7 +120,9 @@
 }
 
 .navbar .nav > li > a:hover {
-    color: #666;
+    color: black;
+    border-bottom-color: yellow;
+    border-bottom-style: solid;
 }
 
 .footer {
@@ -128,7 +130,7 @@
 }
 
 .navbar .nav .active > a {
-    color: navy;
+    color: black;
     background: none;
 }
 
@@ -168,28 +170,15 @@ html, body {
 /*}*/
 
 /* Page header tweaks */
-.page-header {
-    background-color: #f5f5f5;
-    padding: 20px 20px 10px;
-    margin: -20px -20px 20px;
-}
-
-/* Styles you shouldn't keep as they are for displaying this base example only */
-.content .span10 .span12,
-.content .span4 {
-    min-height: 500px;
-}
-
-/* Give a quick and non-cross-browser friendly divider */
-.content .span4 {
-    margin-left: 0;
-    padding-left: 19px;
-    border-left: 1px solid #eee;
-}
 
 .topbar .btn {
     border: 0;
 }
+
+/*.active{*/
+/*border-bottom-color: yellow;*/
+/*border-bottom-style:solid;*/
+/*}*/
 
 </style>
 </html>

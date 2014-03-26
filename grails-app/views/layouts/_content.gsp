@@ -15,7 +15,7 @@
 
     <br/>
     <g:if test="${!layout_nosecondarymenu}">
-        <div class="row-fluid">
+        <div class="row">
             %{--<div class="span12">--}%
                 <g:render template="/_menu/submenubar"/>
             %{--</div>--}%
