@@ -20,9 +20,7 @@ class Club implements Serializable {
     Date dateCreated
     Date lastUpdated
 
-    Banker banker
-    Broker broker
-    LegalStructure legalStructure
+    static hasOne = [banker: Banker, broker: Broker, legalStructure: LegalStructure]
 
     byte[] agreement
 
@@ -32,4 +30,8 @@ class Club implements Serializable {
     static constraints = {
     }
 
+    @Override
+    public String toString() {
+        return name
+    }
 }

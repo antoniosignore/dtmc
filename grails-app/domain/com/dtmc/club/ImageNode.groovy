@@ -17,7 +17,7 @@ class ImageNode implements Serializable {
     String filename
     static transients = ["filename"]
 
-    static belongsTo = [club: Club]
+    static belongsTo = [member: Member]
 
     static mapping = {
         id generator: 'sequence', params: [sequence: 'seq_images_id']

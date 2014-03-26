@@ -165,7 +165,7 @@
                                              default="Club"/></td>
 
     <td valign="top" class="value"><g:link controller="club" action="show"
-                                           id="${memberInstance?.club?.id}">${memberInstance?.club?.encodeAsHTML()}</g:link></td>
+                                           id="${memberInstance?.club?.id}">${memberInstance?.club?.toString()}</g:link></td>
 
 </tr>
 
