@@ -1,6 +1,6 @@
 <!-- Main menu in one row (e.g., controller entry points -->
 
-<div class="span10">
+<div class="span12">
 
 <!-- print system messages (infos, warnings, etc) - not validation errors -->
 
