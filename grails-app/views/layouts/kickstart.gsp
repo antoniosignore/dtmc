@@ -64,10 +64,7 @@
 
 </head>
 
-<body data-grid-framework="bo"
-      data-grid-color="#00CCDD"
-      data-grid-opacity="0.5" data-grid-zindex="10"
-      data-grid-nbcols="16">
+<body>
 
 <g:render template="/_menu/navbar"/>
 
