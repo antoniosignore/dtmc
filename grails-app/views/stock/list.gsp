@@ -48,7 +48,7 @@
     </table>
 
     <div class="pagination">
-        <bs:paginate total="${stockInstanceTotal}"/>
+        <dtmc:paginate total="${stockInstanceTotal}"/>
     </div>
 </section>
 

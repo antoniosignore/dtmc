@@ -96,89 +96,62 @@
 </body>
 
 <style type="text/css">
-.btn {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-}
 
-.navbar-inner {
-    background: none;
-    filter: none;
-    border: none;
-    box-shadow: none;
-    font-size: 20px;
-    background-color: #e0e0e0;
 
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+%{--.navbar-inner {--}%
+%{--background: none;--}%
+%{--filter: none;--}%
+%{--border: none;--}%
+%{--box-shadow: none;--}%
+%{--font-size: 20px;--}%
+%{--background-color: #e0e0e0;--}%
 
-.navbar .nav > li > a {
-    color: white;
-    text-shadow: none;
-}
+%{--padding-top: 5px;--}%
+%{--padding-bottom: 5px;--}%
+%{--}--}%
 
-.navbar .nav > li > a:hover {
-    color: black;
-    border-bottom-color: yellow;
-    border-bottom-style: solid;
-}
+%{--.navbar .nav > li > a {--}%
+%{--color: white;--}%
+%{--text-shadow: none;--}%
+%{--}--}%
 
-.footer {
-    background-color: #e0e0e0;
-}
+%{--.navbar .nav > li > a:hover {--}%
+%{--color: black;--}%
+%{--border-bottom-color: yellow;--}%
+%{--border-bottom-style: solid;--}%
+%{--}--}%
 
-.navbar .nav .active > a {
-    color: black;
-    background: none;
-}
+%{--.footer {--}%
+%{--background-color: #e0e0e0;--}%
+%{--}--}%
 
-.navbar .nav .active > a:hover {
-    background: none;
-}
+%{--.navbar .nav .active > a {--}%
+%{--color: black;--}%
+%{--background: none;--}%
+%{--}--}%
 
-.navbar .divider-vertical {
-    border-left: 1px solid #1c2022;
-    border-right: 1px solid #3e4a4e;
-}
+%{--.navbar .nav .active > a:hover {--}%
+%{--background: none;--}%
+%{--}--}%
+
+%{--.navbar .divider-vertical {--}%
+%{--border-left: 1px solid #1c2022;--}%
+%{--border-right: 1px solid #3e4a4e;--}%
+%{--}--}%
 
 /* Override some defaults */
 html, body {
-    padding-top: 30px; /* 40px to make the container go all the way to the bottom of the topbar */
+    padding-top: 20px; /* 40px to make the container go all the way to the bottom of the topbar */
 }
 
-.container > footer p {
-    text-align: center; /* center align it with the container */
+%{--.container > footer p {--}%
+%{--text-align: center; /* center align it with the container */--}%
+%{--}--}%
+
+.active {
+    border-bottom-color: yellow;
+    border-bottom-style: solid;
 }
-
-.container {
-    /*width: 820px; *//* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
-}
-
-/* The white background content wrapper */
-/*.content {*/
-/*background-color: #fff;*/
-/*padding: 10px;*/
-/*margin: 0 -20px; *//* negative indent the amount of the padding to maintain the grid system */
-/*-webkit-border-radius: 0 0 6px 6px;*/
-/*-moz-border-radius: 0 0 6px 6px;*/
-/*border-radius: 0 0 6px 6px;*/
-/*-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);*/
-/*-moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);*/
-/*box-shadow: 0 1px 2px rgba(0,0,0,.15);*/
-/*}*/
-
-/* Page header tweaks */
-
-.topbar .btn {
-    border: 0;
-}
-
-/*.active{*/
-/*border-bottom-color: yellow;*/
-/*border-bottom-style:solid;*/
-/*}*/
 
 </style>
 </html>

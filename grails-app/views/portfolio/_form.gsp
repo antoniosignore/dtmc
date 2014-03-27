@@ -1,4 +1,4 @@
-<%@ page import="com.netnumeri.server.finance.finpojo.Portfolio" %>
+<%@ page import="com.netnumeri.server.enums.PortfolioTypeEnum; com.netnumeri.server.finance.finpojo.Portfolio" %>
 
 
 
@@ -75,8 +75,8 @@
             default="Portfolio Type"/></label>
 
     <div class="controls">
-        <g:select name="portfolioType" from="${com.netnumeri.server.enums.PortfolioEnum?.values()}"
-                  keys="${com.netnumeri.server.enums.PortfolioEnum.values()*.name()}"
+        <g:select name="portfolioType" from="${PortfolioTypeEnum?.values()}"
+                  keys="${PortfolioTypeEnum.values()*.name()}"
                   value="${portfolioInstance?.portfolioType?.name()}" noSelection="['': '']"/>
         <span class="help-inline">${hasErrors(bean: portfolioInstance, field: 'portfolioType', 'error')}</span>
     </div>

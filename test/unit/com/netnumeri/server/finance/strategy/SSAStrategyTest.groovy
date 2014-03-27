@@ -2,9 +2,9 @@ package com.netnumeri.server.finance.strategy
 
 import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
+import com.netnumeri.server.finance.trading.Strategy
 import com.netnumeri.server.finance.finpojo.Transaction
 import com.netnumeri.server.finance.ta.TradeListEntry
 import com.netnumeri.server.finance.utils.DateUtils
@@ -50,7 +50,7 @@ public class SSAStrategyTest {
 
         FileUtils.writeStringToFile(new File(dir + "/table.html"), trader.toXMLString())
 
-       // TransactionSeries transactions = strategy.transactionSeries;
+        // TransactionSeries transactions = strategy.transactionSeries;
         GenericTimeSeries<Transaction> array = transactions.transactionArray
 
         List<TradeListEntry> list = trader.getTradeList();

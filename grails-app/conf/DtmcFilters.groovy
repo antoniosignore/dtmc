@@ -8,17 +8,9 @@ class DtmcFilters {
         all(controller: '*', action: '*') {
             before = {
 
-
             }
+
             after = { Map model ->
-
-                if (!model) model = [:]
-
-                def grailsuser = springSecurityService.principal
-                if (grailsuser != null) {
-                    model.user = Member.get(grailsuser.id)
-                    println "model.user = " + model.user.username
-                }
 
             }
             afterView = { Exception e ->

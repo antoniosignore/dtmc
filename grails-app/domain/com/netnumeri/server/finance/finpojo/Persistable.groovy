@@ -15,10 +15,4 @@ class Persistable implements Serializable {
     Date dateCreated
     Date lastUpdated
 
-//    SecUser author
-//    transient jmsService
-//    transient afterInsert = {
-//        jmsService.send 'grailstwitter.status', author.username
-//    }
-
 }

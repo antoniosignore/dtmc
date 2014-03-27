@@ -4,6 +4,8 @@ import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.finpojo.Instrument
+import com.netnumeri.server.finance.trading.Signal
+import com.netnumeri.server.finance.trading.Strategy
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.ssa.Histogram
 import com.netnumeri.server.finance.ssa.HistogramStat
@@ -91,7 +93,7 @@ public class SSASignal extends Strategy {
         boolean inATrade = (lastTrade == null)
         boolean trendingDown = ((yesterdaySSA0 > todaySSA0))
 
-        if (isATop) signals.add(new Signal(date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
+        if (isATop) this.signals.add(new Signal(date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
         if (isALow) signals.add(new Signal(date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
 
         stocksList.add(stock)

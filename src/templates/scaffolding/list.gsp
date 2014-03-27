@@ -12,7 +12,6 @@
 <body>
 
 <section id="list-${domainClass.propertyName}" class="first">
-
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -40,9 +39,8 @@
             <tr class="\${(i % 2) == 0 ? 'odd' : 'even'}">
                 <% props.eachWithIndex { p, i ->
                     if (i == 0) { %>
-                <td><g:link action="show"
-                            id="\${${propertyName}.id}">\${fieldValue(bean: ${propertyName}, field: "${
-                            p.name}")}</g:link></td>
+                <td><g:link action="show" id="\${${propertyName}.id}">\${fieldValue(bean: ${propertyName}, field: "${
+                        p.name}")}</g:link></td>
                 <% } else if (i < 6) {
                     if (p.type == Boolean.class || p.type == boolean.class) { %>
                 <td><g:formatBoolean boolean="\${${propertyName}.${p.name}}"/></td>
@@ -60,10 +58,8 @@
     </table>
 
     <div class="pagination">
-        <bs:paginate total="\${${propertyName}Total}"/>
+        <dtmc:paginate total="\${${propertyName}Total}"/>
     </div>
 </section>
-
 </body>
-
 </html>

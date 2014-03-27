@@ -9,50 +9,30 @@
 </head>
 
 <body>
-
 <section id="list-member" class="first">
 
     <table class="table table-bordered">
         <thead>
         <tr>
-
             <g:sortableColumn property="username"
                               title="${message(code: 'member.username.label', default: 'Username')}"/>
-
-            <g:sortableColumn property="password"
-                              title="${message(code: 'member.password.label', default: 'Password')}"/>
-
             <g:sortableColumn property="firstname"
                               title="${message(code: 'member.firstname.label', default: 'Firstname')}"/>
-
             <g:sortableColumn property="lastname"
                               title="${message(code: 'member.lastname.label', default: 'Lastname')}"/>
-
-            <g:sortableColumn property="email"
-                              title="${message(code: 'member.email.label', default: 'Email')}"/>
-
-            <g:sortableColumn property="phone"
-                              title="${message(code: 'member.phone.label', default: 'Phone')}"/>
-
+            <g:sortableColumn property="email" title="${message(code: 'member.email.label', default: 'Email')}"/>
+            <g:sortableColumn property="phone" title="${message(code: 'member.phone.label', default: 'Phone')}"/>
         </tr>
         </thead>
         <tbody>
         <g:each in="${memberInstanceList}" status="i" var="memberInstance">
             <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-
                 <td><g:link action="show"
                             id="${memberInstance.id}">${fieldValue(bean: memberInstance, field: "username")}</g:link></td>
-
-                <td>${fieldValue(bean: memberInstance, field: "password")}</td>
-
                 <td>${fieldValue(bean: memberInstance, field: "firstname")}</td>
-
                 <td>${fieldValue(bean: memberInstance, field: "lastname")}</td>
-
                 <td>${fieldValue(bean: memberInstance, field: "email")}</td>
-
                 <td>${fieldValue(bean: memberInstance, field: "phone")}</td>
-
             </tr>
         </g:each>
         </tbody>
@@ -62,7 +42,5 @@
         <bs:paginate total="${memberInstanceTotal}"/>
     </div>
 </section>
-
 </body>
-
 </html>

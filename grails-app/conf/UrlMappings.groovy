@@ -1,6 +1,12 @@
 class UrlMappings {
 
     static mappings = {
+//
+//        "/login/auth"{
+//            controller = 'welcome'
+//            action = { 'index' }
+//            view = { 'index' }
+//        }
 
         /*
          * Pages without controller

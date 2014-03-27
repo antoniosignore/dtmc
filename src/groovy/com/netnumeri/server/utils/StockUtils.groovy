@@ -18,8 +18,8 @@ import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.finpojo.asset.Stock
-import com.netnumeri.server.finance.strategy.Signal
-import com.netnumeri.server.finance.strategy.Strategy
+import com.netnumeri.server.finance.trading.Signal
+import com.netnumeri.server.finance.trading.Strategy
 import com.netnumeri.server.finance.ta.Indicator
 import com.netnumeri.server.finance.ta.TradeInfo
 import com.netnumeri.server.finance.ta.TradeListEntry

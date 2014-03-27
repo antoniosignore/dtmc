@@ -1,16 +1,13 @@
 package com.netnumeri.server.finance.strategy
 
 import com.netnumeri.server.finance.beans.FinConstants
-import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.trading.Signal
+import com.netnumeri.server.finance.trading.Strategy
 import com.netnumeri.server.finance.ta.SMAIndicator
-import com.netnumeri.server.finance.ta.TradeListEntry
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
-import com.netnumeri.server.utils.StockUtils
-import org.apache.commons.io.FileUtils
 import org.junit.Test
 
 import java.text.ParseException

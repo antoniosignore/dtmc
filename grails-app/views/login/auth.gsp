@@ -1,12 +1,13 @@
 <!doctype html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
+    %{--<meta name="layout" content="kickstart"/>--}%
 
 </head>
 
 <body>
 
+PIPPO
 <sec:ifNotLoggedIn>
 
     <section id="login" class="first">
