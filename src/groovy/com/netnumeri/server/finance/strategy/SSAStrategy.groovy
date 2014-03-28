@@ -8,8 +8,7 @@ import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.PortfolioEntry
-import com.netnumeri.server.finance.trading.Strategy
-import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.ssa.SSAMath
 import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.StringTemplate
@@ -267,7 +266,7 @@ public class SSAStrategy extends Strategy {
     @Override
     public void evaluatePortfolioOnDate(Date date, Map signals) {
 
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
+        if (date == null) throw new IllegalArgumentException("date cannot be null");
 
         for (int i = 0; i < getPortfolio().nentries(); i++) {
             Instrument instrument = getPortfolio().getInstrument(i);
@@ -285,7 +284,7 @@ public class SSAStrategy extends Strategy {
                         int signal = getLastValidSignal(derivative1, derivative2);
 
                         if (signal == TradeEnum.BUY) {
-                            Transaction transaction = new Transaction(instrument, TradeEnum.BUY, amount, instrument.close(date), date);
+                            Trade transaction = new Trade(instrument, TradeEnum.BUY, amount, instrument.close(date), date);
                             add(transaction);
                             foundABUY = true;
                         }

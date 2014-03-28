@@ -4,7 +4,6 @@ import com.dtmc.graphics.*
 import com.dtmc.graphics.FinGraph
 import com.dtmc.graphics.TimeSerieGraph
 import com.dtmc.graphics.XYGraph
-import com.netnumeri.server.finance.finpojo.Transaction
 import com.netnumeri.server.finance.utils.Util
 
 import java.awt.BasicStroke;
@@ -35,8 +34,7 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.StandardXYItemRenderer;
 import org.jfree.chart.renderer.xy.XYItemRenderer;
-import org.jfree.chart.title.TextTitle;
-import org.jfree.data.time.Day;
+import org.jfree.chart.title.TextTitle
 import org.jfree.data.time.TimeSeries;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
@@ -524,7 +522,7 @@ public class GraphicUtils {
 
 //    public static void addDateMarker(FinGraph graph, Transaction transaction) {
 //        XYPlot plot = graph.getXYPlot();
-//        Date d = transaction.transactionDate
+//        Date d = transaction.date
 //        Day day = new Day(d.getDate(), d.getMonth() + 1, d.getYear());
 //        double millis = day.getFirstMillisecond();
 //        CircleDrawer cd = null;

@@ -434,10 +434,10 @@ public class DateUtils {
     public static boolean isLessEqual(Date d1, Date d) {
 
         if (d1 == null)
-            throw new IllegalArgumentException("The transactionDate must not be null")
+            throw new IllegalArgumentException("The date must not be null")
 
         if (d == null)
-            throw new IllegalArgumentException("The transactionDate must not be null")
+            throw new IllegalArgumentException("The date must not be null")
 
         if (d1.compareTo(d) <= 0) return true;
         return false;
@@ -449,7 +449,7 @@ public class DateUtils {
     }
 
     private static Date add(Date date, int calendarField, int amount) {
-        if (date == null) throw new IllegalArgumentException("The transactionDate must not be null")
+        if (date == null) throw new IllegalArgumentException("The date must not be null")
         Calendar c = Calendar.getInstance();
         c.setTime(date);
         c.add(calendarField, amount);

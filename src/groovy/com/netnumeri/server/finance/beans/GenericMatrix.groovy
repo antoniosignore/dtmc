@@ -48,9 +48,9 @@ class GenericMatrix<T> implements Serializable {
         return true;
     }
 
-//    public int index ( Date transactionDate) {
+//    public int index ( Date date) {
 //        def get = listOfTimeSeries.get(0);
-//        return get.index(transactionDate);
+//        return get.index(date);
 //    }
 
     public T lastValidData(int row) {

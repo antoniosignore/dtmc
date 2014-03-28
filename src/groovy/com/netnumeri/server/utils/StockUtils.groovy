@@ -18,8 +18,8 @@ import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.finpojo.asset.Stock
+import com.netnumeri.server.finance.strategy.Strategy
 import com.netnumeri.server.finance.trading.Signal
-import com.netnumeri.server.finance.trading.Strategy
 import com.netnumeri.server.finance.ta.Indicator
 import com.netnumeri.server.finance.ta.TradeInfo
 import com.netnumeri.server.finance.ta.TradeListEntry
@@ -101,9 +101,9 @@ class StockUtils {
 //        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd")
 //        Set<Date> set = transactions.map().keySet()
 //        for (Iterator it = set.iterator(); it.hasNext();) {
-//            Date transactionDate = (Date) it.next();
-//            Trade transaction = transactions.treeMap.get(transactionDate)
-//            sb.append("<event start=\"" + sdf.format(transaction.transactionDate) + "\" title=\"" + transaction.action.toString() + "\"/>\n");
+//            Date date = (Date) it.next();
+//            Trade transaction = transactions.treeMap.get(date)
+//            sb.append("<event start=\"" + sdf.format(transaction.date) + "\" title=\"" + transaction.action.toString() + "\"/>\n");
 //        }
 //        sb.append("</data>")
 //        FileUtils.writeStringToFile(new File(dir + filename), sb.toString())

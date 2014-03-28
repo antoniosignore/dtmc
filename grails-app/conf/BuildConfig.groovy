@@ -55,24 +55,6 @@ grails.project.dependency.resolution = {
         compile 'jfree:jfreechart:1.0.13'
     }
 
-    /*
-    <repository>
-   <id>xuggle repo</id>
-   <url>http://xuggle.googlecode.com/svn/trunk/repo/share/java/</url>
-  </repository>
-  ...
- </repositories>
- ...
- <dependencies>
-  ...
-  <dependency>
-   <groupId>xuggle</groupId>
-   <artifactId>xuggle-xuggler</artifactId>
-   <version>5.2</version>
-  </dependency>
-  ...
- </dependencies>
-     */
     plugins {
 
         runtime ":hibernate:3.6.10.2"
@@ -101,6 +83,7 @@ grails.project.dependency.resolution = {
         compile ":scaffolding:1.0.0"
 
         compile ":spring-security-core:2.0-RC2"
+        compile ":quartz:1.0.1"
 
     }
 }

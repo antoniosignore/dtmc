@@ -2,7 +2,7 @@ package com.netnumeri.server.finance.finpojo.asset
 
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.strategy.SSASignal
-import com.netnumeri.server.finance.trading.Strategy
+import com.netnumeri.server.finance.strategy.Strategy
 import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.utils.StockUtils
@@ -48,7 +48,7 @@ class SsaController {
         stockInstance.indicators.put("comp12", new SSAComponentsIndicator(closeSeries, "SSA-12", 50, components12))
 
         Strategy strategy = new SSASignal("test", stockInstance, da, a);
-        strategy.run();
+//        strategy.run();
 
         [
                 startDate: da,

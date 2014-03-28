@@ -10216,7 +10216,7 @@
      * <pre class="code">
      * var formattedDate = jsDate.strftime('Feb 8, 2006 8:48:32', '%Y-%m-%d %H:%M:%S');
      * </pre>
-     * @param {String | Number | Array | jsDate&nbsp;Object | Date&nbsp;Object} date A parsable date string, JavaScript time stamp, Array of form [year, month, day, hours, minutes, seconds, milliseconds], jsDate Object or Date object.
+     * @param {String | Number | Array | jsDate&nbsp;Object | Date&nbsp;Object} tradeDate A parsable date string, JavaScript time stamp, Array of form [year, month, day, hours, minutes, seconds, milliseconds], jsDate Object or Date object.
      * @param {String} formatString String with embedded date formatting codes.
      * See: {@link jsDate.formats}.
      * @param {String} syntax Optional syntax to use [default perl].

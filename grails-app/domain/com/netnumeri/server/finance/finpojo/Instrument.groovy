@@ -211,14 +211,14 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public boolean isDataAvailable(Date date) {
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
+        if (date == null) throw new IllegalArgumentException("date cannot be null");
         return dataAvailable(date);
     }
 
 
     public Daily getDaily(Date date) {
         if (date == null) {
-            throw new IllegalArgumentException("transactionDate cannot be null");
+            throw new IllegalArgumentException("date cannot be null");
         }
         return daily(date);
     }
@@ -228,7 +228,7 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public double getPrice(Date date) {
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
+        if (date == null) throw new IllegalArgumentException("date cannot be null");
         return getPrice(date, FinConstants.TYPICALPRICE);
     }
 
@@ -236,7 +236,7 @@ class Instrument extends Persistable implements Serializable {
      *  Option TYPICALPRICE, MEDIANPRICE , WEIGHTEDPRICE ,AVERAGEPRICE, LOGAVERAGEPRICE;
      */
     public double getPrice(Date date, FinConstants Option) {
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
+        if (date == null) throw new IllegalArgumentException("date cannot be null");
         return value(date, Option);
     }
 
@@ -245,17 +245,17 @@ class Instrument extends Persistable implements Serializable {
     }
 
     public double getReturn(Date date) {
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
+        if (date == null) throw new IllegalArgumentException("date cannot be null");
         return re(date);
     }
 
     public double getLogReturn(Date date) {
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
+        if (date == null) throw new IllegalArgumentException("date cannot be null");
         return logReturn(date);
     }
 
     public int getVolume(Date date) {
-        if (date == null) throw new IllegalArgumentException("transactionDate cannot be null");
+        if (date == null) throw new IllegalArgumentException("date cannot be null");
         return dailyarray.get(date).volume;
     }
 

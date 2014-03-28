@@ -1,18 +1,5 @@
 package com.dtmc.graphics;
 
-import java.awt.Color;
-
-import com.netnumeri.server.finance.data.TransactionSeries;
-import com.netnumeri.server.finance.finpojo.Transaction;
-import com.netnumeri.server.utils.GraphicUtils;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.axis.SegmentedTimeline;
-import org.jfree.data.time.Day;
-import org.jfree.data.time.TimeSeries;
-import org.jfree.data.time.TimeSeriesCollection;
-import org.jfree.data.xy.XYSeries;
-import org.jfree.data.xy.XYSeriesCollection;
-
 public class TimeSeriesUtils {
 
     public TimeSeriesUtils() {

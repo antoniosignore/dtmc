@@ -1,10 +1,10 @@
 package com.netnumeri.server.finance.strategy
 
-import com.netnumeri.server.enums.PortfolioEnum
+import com.netnumeri.server.enums.PortfolioTypeEnum
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
-import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.utils.DateUtils
 import dtmc.PortfolioService
 
@@ -27,7 +27,7 @@ public abstract class Strategy {
     public Strategy(String name, Instrument asset, Date firstDate, Date lastDate, double wealth) {
 
         portfolio = new Portfolio(name, "Strategy Portfolio", wealth);
-        portfolio.portfolioType = PortfolioEnum.Strategy
+        portfolio.portfolioType = PortfolioTypeEnum.Strategy
 
         this.asset = asset
         this.wealth = wealth;
@@ -38,7 +38,7 @@ public abstract class Strategy {
         this.lastDate = lastDate
     }
 
-    public void add(Transaction transaction) {
+    public void add(Trade transaction) {
         portfolioService.add(portfolio, transaction);
     }
 

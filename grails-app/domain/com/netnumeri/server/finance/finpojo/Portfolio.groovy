@@ -1,17 +1,17 @@
 package com.netnumeri.server.finance.finpojo
 
 import Jama.Matrix
-import com.netnumeri.server.enums.PortfolioEnum
+import com.netnumeri.server.enums.PortfolioTypeEnum
 import com.netnumeri.server.finance.finpojo.asset.Asset
 
 class Portfolio extends Asset implements Serializable {
 
-    static hasMany = [items: PortfolioEntry, transactions: Transaction]
+    static hasMany = [items: PortfolioEntry, trades: Trade]
 
     static mapping = {
         id generator: 'hilo', params: [table: 'hi_value', column: 'next_value', max_lo: 100]
 
-        transactions cascade: 'all-delete-orphan'
+        trades cascade: 'all-delete-orphan'
         items cascade: 'all-delete-orphan'
     }
 
@@ -30,15 +30,15 @@ class Portfolio extends Asset implements Serializable {
     Matrix correlationMatrix
     Date firstDate;
     Date lastDate;
-    PortfolioEnum portfolioType
+    PortfolioTypeEnum portfolioType
 
     Portfolio(String name, String description) {
-        setName(name);
+        this.name = name
         this.description = description
     }
 
     Portfolio(String name, String description, double wealth) {
-        setName(name);
+        this.name = name
         this.wealth = wealth;
         this.description = description
     }
@@ -57,12 +57,12 @@ class Portfolio extends Asset implements Serializable {
     Portfolio clone() {
         Portfolio p = new Portfolio(getName(), "clone");
 
-        items.each{item ->
+        items.each { item ->
             p.addToItems(item)
         }
 
-        transactions.each{transaction ->
-            p.addToTransactions(transaction)
+        trades.each { transaction ->
+            p.addToTrades(transaction)
         }
 
         p.assetsToHold = assetsToHold;

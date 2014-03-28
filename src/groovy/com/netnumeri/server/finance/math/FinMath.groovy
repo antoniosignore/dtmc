@@ -749,11 +749,11 @@ public class FinMath {
         return (double) j;
     }
 
-    /*  public static String convertToString(Date transactionDate)
+    /*  public static String convertToString(Date date)
         {
-            int day = transactionDate.day();
-            int j = transactionDate.month();
-            int year = transactionDate.year();
+            int day = date.day();
+            int j = date.month();
+            int year = date.year();
             String s = "";
             switch (j)
             {

@@ -3,7 +3,7 @@ import com.dtmc.club.Member
 import com.dtmc.security.SecRole
 import com.dtmc.security.SecUserSecRole
 import com.netnumeri.server.enums.IndicatorEnum
-import com.netnumeri.server.enums.PortfolioEnum
+import com.netnumeri.server.enums.PortfolioTypeEnum
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.indicator.UserIndicators
@@ -72,15 +72,14 @@ class BootStrap {
             assert SecUserSecRole.count() == 3
 
             Portfolio portfolio = new Portfolio("SMA crossing", "desc", 10000)
-            portfolio.portfolioType = PortfolioEnum.Main
+            portfolio.portfolioType = PortfolioTypeEnum.Main
             portfolio.user = adminUser
-//            portfolio.club = club
             portfolio.save(failOnError: true, insert: true, flush: true)
 
             println "portfolio.id = $portfolio.id"
 
             Stock aapl = new Stock("AAPL", "Apple Computers");
-            aapl.save(failOnError: true, insert: true, flush: true)
+            aapl.save(flush: true)
 
             // portfolioService.buy(portfolio, stock, 100);
             portfolio.save(failOnError: true, insert: true, flush: true);

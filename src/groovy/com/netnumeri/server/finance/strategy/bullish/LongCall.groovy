@@ -3,7 +3,7 @@ package com.netnumeri.server.finance.strategy.bullish
 import com.netnumeri.server.entity.OptionType
 import com.netnumeri.server.finance.finpojo.Bet
 import com.netnumeri.server.finance.finpojo.Forecast
-import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 import com.netnumeri.server.finance.strategy.ForecastType
@@ -20,7 +20,7 @@ class LongCall implements OptionStrategy {
 
         for (int i = 0; i < options.size(); i++) {
             Vanilla option = options.get(i);
-            Transaction transaction = convertOptionToTransaction(option, instrument);
+            Trade transaction = convertOptionToTransaction(option, instrument);
             Bet bet = new Bet();
             bet.name = "LongCall"
             bet.description = "Long Call"
@@ -30,8 +30,8 @@ class LongCall implements OptionStrategy {
         return bets
     }
 
-    Transaction convertOptionToTransaction(Vanilla option, Stock instrument) {
-        return new Transaction(option, TradeEnum.BUY, 100, new Date());
+    Trade convertOptionToTransaction(Vanilla option, Stock instrument) {
+        return new Trade(option, TradeEnum.BUY, 100, new Date());
     }
 
     @Override

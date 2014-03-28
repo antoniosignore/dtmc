@@ -11,7 +11,6 @@
 <body>
 
 <section id="list-portfolio" class="first">
-
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -19,21 +18,20 @@
             <g:sortableColumn property="name"
                               title="${message(code: 'portfolio.name.label', default: 'Name')}"/>
 
-            <g:sortableColumn property="description"
-                              title="${message(code: 'portfolio.description.label', default: 'Description')}"/>
+            <g:sortableColumn property="dailyarray"
+                              title="${message(code: 'portfolio.dailyarray.label', default: 'Dailyarray')}"/>
 
             <g:sortableColumn property="dateCreated"
                               title="${message(code: 'portfolio.dateCreated.label', default: 'Date Created')}"/>
 
+            <g:sortableColumn property="description"
+                              title="${message(code: 'portfolio.description.label', default: 'Description')}"/>
+
             <g:sortableColumn property="firstDate"
                               title="${message(code: 'portfolio.firstDate.label', default: 'First Date')}"/>
 
-            <g:sortableColumn property="lastDate"
-                              title="${message(code: 'portfolio.lastDate.label', default: 'Last Date')}"/>
-
-            <g:sortableColumn property="lastUpdated"
-                              title="${message(code: 'portfolio.lastUpdated.label', default: 'Last Updated')}"/>
-
+            <g:sortableColumn property="highSeries"
+                              title="${message(code: 'portfolio.highSeries.label', default: 'High Series')}"/>
 
         </tr>
         </thead>
@@ -44,16 +42,15 @@
                 <td><g:link action="show"
                             id="${portfolioInstance.id}">${fieldValue(bean: portfolioInstance, field: "name")}</g:link></td>
 
-                <td>${fieldValue(bean: portfolioInstance, field: "description")}</td>
+                <td>${fieldValue(bean: portfolioInstance, field: "dailyarray")}</td>
 
-                <td><g:link action="show"
-                            id="${portfolioInstance.id}">${fieldValue(bean: portfolioInstance, field: "dateCreated")}</g:link></td>
+                <td><g:formatDate date="${portfolioInstance.dateCreated}"/></td>
+
+                <td>${fieldValue(bean: portfolioInstance, field: "description")}</td>
 
                 <td><g:formatDate date="${portfolioInstance.firstDate}"/></td>
 
-                <td><g:formatDate date="${portfolioInstance.lastDate}"/></td>
-
-                <td><g:formatDate date="${portfolioInstance.lastUpdated}"/></td>
+                <td>${fieldValue(bean: portfolioInstance, field: "highSeries")}</td>
 
             </tr>
         </g:each>
@@ -61,10 +58,8 @@
     </table>
 
     <div class="pagination">
-        <bs:paginate total="${portfolioInstanceTotal}"/>
+        <dtmc:paginate total="${portfolioInstanceTotal}"/>
     </div>
 </section>
-
 </body>
-
 </html>

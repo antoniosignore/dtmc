@@ -92,14 +92,10 @@ log4j = {
 
 grails.config.defaults.locations = [KickstartResources]
 
-//grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
-
-// Pessimistic Lockdown
-
 grails.gorm.default.constraints = {
     '*'(nullable: true)
 }
-//
+
 //grails.plugin.springsecurity.interceptUrlMap = [
 //        '/secure/**': ['ROLE_ADMIN'],
 ////        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],

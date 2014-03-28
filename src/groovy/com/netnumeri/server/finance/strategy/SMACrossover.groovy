@@ -2,8 +2,9 @@ package com.netnumeri.server.finance.strategy
 
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.trading.Strategy
-import com.netnumeri.server.finance.finpojo.Transaction
+
+//import com.netnumeri.server.finance.trading.Strategy
+import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.ta.Indicator
 import com.netnumeri.server.finance.utils.DateUtils
@@ -60,14 +61,14 @@ public class SMACrossover extends Strategy {
 
         if (signal == TradeEnum.SELL) {
             if (foundABUY) {
-                System.out.println("SELL on transactionDate: " + date.toGMTString());
-                Transaction transaction = new Transaction(asset, TradeEnum.SELL, amount, asset.close(date), date);
+                System.out.println("SELL on date: " + date.toGMTString());
+                Trade transaction = new Trade(asset, TradeEnum.SELL, amount, asset.close(date), date);
                 add(transaction);
                 foundABUY = false;
             }
         } else if (signal == TradeEnum.BUY) {
-            System.out.println("BUY on transactionDate: " + date.toGMTString());
-            Transaction transaction = new Transaction(asset, TradeEnum.BUY, amount, asset.close(date), date);
+            System.out.println("BUY on date: " + date.toGMTString());
+            Trade transaction = new Trade(asset, TradeEnum.BUY, amount, asset.close(date), date);
             add(transaction);
             foundABUY = true;
         }

@@ -4,7 +4,7 @@ import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TradeEnum
 
-public class Transaction implements Serializable {
+public class Trade implements Serializable {
 
     TradeEnum tradeAction;
 
@@ -13,14 +13,15 @@ public class Transaction implements Serializable {
     Integer amount = 0;
     Double price = 0.0;
     Double cost = 0;
-    Date transactionDate;
+    Date tradeDate;
+    String comment
 
-    public Transaction() {
+    public Trade() {
     }
 
-    public Transaction(Instrument instrument, TradeEnum tradeAction, int amount, double price, Date transactionDate) {
-        if (transactionDate == null) throw new IllegalArgumentException("transactionDate cannot be null");
-        this.transactionDate = transactionDate;
+    public Trade(Instrument instrument, TradeEnum tradeAction, int amount, double price, Date tradeDate) {
+        if (tradeDate == null) throw new IllegalArgumentException("date cannot be null");
+        this.tradeDate = tradeDate;
         this.instrument = instrument;
         this.tradeAction = tradeAction;
         this.amount = amount;
@@ -28,10 +29,10 @@ public class Transaction implements Serializable {
         this.cost = 0
     }
 
-    public Transaction(Instrument instrument, TradeEnum tradeAction, int amount, double price, Date transactionDate, Double cost) {
-        if (transactionDate == null) throw new IllegalArgumentException("transactionDate cannot be null");
+    public Trade(Instrument instrument, TradeEnum tradeAction, int amount, double price, Date tradeDate, Double cost) {
+        if (tradeDate == null) throw new IllegalArgumentException("date cannot be null");
         this.instrument = instrument;
-        this.transactionDate = transactionDate;
+        this.tradeDate = tradeDate;
         this.tradeAction = tradeAction;
         this.amount = amount;
         this.price = price;
@@ -41,7 +42,7 @@ public class Transaction implements Serializable {
 //    public Trade(Instrument instrument, TradeEnum tradeAction, int amount, double price, Date d, int t, Double cost) {
 //        if (d == null) throw new IllegalArgumentException("d cannot be null");
 //        if (cost == null) throw new IllegalArgumentException("cost cannot be null");
-//        this.transactionDate = d;
+//        this.date = d;
 //        this.instrument = instrument;
 //        this.tradeAction = tradeAction;
 //        this.amount = amount;
@@ -49,40 +50,40 @@ public class Transaction implements Serializable {
 //        this.cost = cost;
    // }
 
-    public Transaction(Instrument instrument,
+    public Trade(Instrument instrument,
                  TradeEnum tradeAction,
                  int amount,
-                 Date transactionDate) {
-        if (transactionDate == null) throw new IllegalArgumentException("transactionDate cannot be null");
+                 Date tradeDate) {
+        if (tradeDate == null) throw new IllegalArgumentException("date cannot be null");
         if (instrument == null) throw new IllegalArgumentException("instrument cannot be null");
         this.instrument = instrument;
 
-        Daily daily = instrument.getDaily(transactionDate);
+        Daily daily = instrument.getDaily(tradeDate);
         if (daily != null && daily.valid()) {
             this.price = daily.price(FinConstants.CLOSE);
         } else {
-            System.out.println("Trade. No valid daily data available for " + instrument.getName() + " " + transactionDate.toString());
+            System.out.println("Trade. No valid daily data available for " + instrument.getName() + " " + tradeDate.toString());
             this.price = 0;
         }
-        this.transactionDate = transactionDate;
+        this.tradeDate = tradeDate;
         this.tradeAction = tradeAction;
         this.amount = amount;
         this.price = 0;
         this.cost = 0
     }
 
-    public Transaction(Instrument instrument, TradeEnum tradeAction, int amount, Date transactionDate, Double cost, FinConstants Option) {
-        if (transactionDate == null) throw new IllegalArgumentException("transactionDate cannot be null");
+    public Trade(Instrument instrument, TradeEnum tradeAction, int amount, Date tradeDate, Double cost, FinConstants Option) {
+        if (tradeDate == null) throw new IllegalArgumentException("date cannot be null");
         if (cost == null) throw new IllegalArgumentException("cost cannot be null");
         this.instrument = instrument;
-        Daily daily = instrument.getDaily(transactionDate);
+        Daily daily = instrument.getDaily(tradeDate);
         if (daily.valid()) {
             this.price = daily.price(Option);
         } else {
-            System.out.println("Trade. No valid daily data available for " + instrument.getName() + " " + transactionDate.toString());
+            System.out.println("Trade. No valid daily data available for " + instrument.getName() + " " + tradeDate.toString());
             this.price = 0;
         }
-        this.transactionDate = transactionDate;
+        this.tradeDate = tradeDate;
         this.tradeAction = tradeAction;
         this.amount = amount;
         this.cost = cost;
@@ -90,7 +91,7 @@ public class Transaction implements Serializable {
 
     public String print() {
         StringBuffer sb = new StringBuffer();
-        sb.append(getTransactionDate().toString() + ": " + tradeAction.value);
+        sb.append(getTradeDate().toString() + ": " + tradeAction.value);
         sb.append(" # " + amount);
         sb.append(" of " + instrument.getName());
         sb.append(" @ " + price);

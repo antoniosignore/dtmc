@@ -4,6 +4,7 @@ import com.dtmc.security.SecUser
 import com.netnumeri.server.enums.MemberGoalEnum
 import com.netnumeri.server.enums.MemberTypeEnum
 import com.netnumeri.server.finance.indicator.UserIndicators
+import com.netnumeri.server.finance.trading.StrategyCatalog
 
 class Member extends SecUser implements Serializable {
 
@@ -38,7 +39,7 @@ class Member extends SecUser implements Serializable {
 
     static hasOne = [settings: Settings]
 
-    static hasMany = [indicators: UserIndicators]
+    static hasMany = [indicators: UserIndicators, strategies: StrategyCatalog]
 
     static constraints = {
 

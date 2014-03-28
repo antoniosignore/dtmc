@@ -4,9 +4,7 @@ import com.dtmc.club.Member
 
 class Persistable implements Serializable {
 
-    static mapping = {
-        tablePerHierarchy false
-    }
+    static mapping = { tablePerHierarchy false }
 
     static belongsTo = [user: Member]
 

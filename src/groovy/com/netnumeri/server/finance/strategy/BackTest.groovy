@@ -6,8 +6,7 @@ import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
-import com.netnumeri.server.finance.trading.Strategy
-import com.netnumeri.server.finance.finpojo.Transaction
+import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.finpojo.asset.Asset
 import com.netnumeri.server.finance.ta.TradeInfo
 import com.netnumeri.server.finance.ta.TradeListEntry
@@ -77,7 +76,7 @@ public class BackTest implements Serializable {
     double openPositionLong;// amount of long open position
     double openPositionShort;// amount of short open position
     double maxIntradayDrawDown;     // max intraday drawdown total
-    Date maxIntradayDrawDownDate; // max intraday drawdown transactionDate
+    Date maxIntradayDrawDownDate; // max intraday drawdown date
     double wealth;
 
     int firstEntry;
@@ -215,8 +214,8 @@ public class BackTest implements Serializable {
         double maxWealth = initialWealth;
         double aktDrawDown = 0;
 
-        Transaction transaction;
-        Transaction transactionPair;
+        Trade transaction;
+        Trade transactionPair;
 
         if (firstDate == null) firstDate = portfolio.getFirstDate();
         if (lastDate == null) lastDate = portfolio.getLastDate();
@@ -227,7 +226,7 @@ public class BackTest implements Serializable {
 
         while (DateUtils.isLessEqual(date, last)) {
 
-            println "transactionDate = $date"
+            println "date = $date"
 
             transactionPair = null;
             cost = 0;
@@ -236,10 +235,10 @@ public class BackTest implements Serializable {
 
             if (transaction != null) {
 
-                Date transactionDate = transaction.transactionDate;
+                Date transactionDate = transaction.tradeDate;
 
-                println "transactionDate = $date"
-                println "transactionDate = $transactionDate"
+                println "date = $date"
+                println "date = $transactionDate"
                 println "transaction = $transaction.tradeAction"
 
                 if (transaction.getTradeAction() == TradeEnum.BUY) {
@@ -365,8 +364,8 @@ public class BackTest implements Serializable {
         return 0;
     }
 
-    public void addToTradeList(Transaction transaction,
-                               Transaction transactionPair,
+    public void addToTradeList(Trade transaction,
+                               Trade transactionPair,
                                double WealthDiff,
                                FinConstants transactionType) {
         Instrument instrument;
@@ -384,9 +383,9 @@ public class BackTest implements Serializable {
             ((TradeListEntry) tradeList.get(entryNumbers - 1)).numberOfTrades++;
             ((TradeListEntry) tradeList.get(entryNumbers - 1)).tradeResult += WealthDiff;
             entryPrice = transactionPair.getPrice();
-            entryDate = transactionPair.getTransactionDate();
+            entryDate = transactionPair.getTradeDate();
             close = transaction.getPrice();
-            closeDate = transaction.getTransactionDate();
+            closeDate = transaction.getTradeDate();
 
             if (transactionType == FinConstants.LONG)
                 TradeResult = close - entryPrice;

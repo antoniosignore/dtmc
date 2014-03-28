@@ -743,7 +743,7 @@ public class YahooUtils {
         return y + month + day;
     }
 
-    /* toMilliseconds Yahoo transactionDate in StockEval chart transactionDate
+    /* toMilliseconds Yahoo date in StockEval chart date
     */
 
     public static String parseYahooDate(String s) {

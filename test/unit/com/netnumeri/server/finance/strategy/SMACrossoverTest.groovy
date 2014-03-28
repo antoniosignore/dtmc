@@ -4,8 +4,8 @@ import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.trading.Signal
-import com.netnumeri.server.finance.trading.Strategy
 import com.netnumeri.server.finance.ta.SMAIndicator
+import com.netnumeri.server.finance.trading.StrategyCatalog
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.finance.utils.YahooUtils
 import org.junit.Test
@@ -30,7 +30,7 @@ public class SMACrossoverTest {
 
         stock.indicators.put("upper", new SMAIndicator(closes, "SMA-" + 50, 50))
         stock.indicators.put("lower", new SMAIndicator(closes, "SMA-" + 10, 10))
-        Strategy strategy = new SMACrossoverSignal("test", stock, da, a);
+        StrategyCatalog strategy = new SMACrossoverSignal("test", stock, da, a);
         strategy.run();
         def signals = strategy.signals
         strategy.signals.each {
