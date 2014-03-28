@@ -1,4 +1,4 @@
-< %= packageName ? " package  $ { packageName } \n\n " : '' % >
+< %= packageName % >
 
 
 import grails.test.mixin.Mock

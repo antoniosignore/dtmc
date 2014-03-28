@@ -37,7 +37,6 @@ class Member extends SecUser implements Serializable {
     Date dateCreated
     Date lastUpdated
 
-    static hasOne = [settings: Settings]
 
     static hasMany = [indicators: UserIndicators, strategies: StrategyCatalog]
 
