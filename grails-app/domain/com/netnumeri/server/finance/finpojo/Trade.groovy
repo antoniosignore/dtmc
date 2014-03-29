@@ -1,6 +1,5 @@
 package com.netnumeri.server.finance.finpojo
 
-import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TradeEnum
 
@@ -14,7 +13,7 @@ public class Trade implements Serializable {
     Double price = 0.0;
     Double cost = 0;
     Date tradeDate;
-    String comment
+    String blog
 
     public Trade() {
     }

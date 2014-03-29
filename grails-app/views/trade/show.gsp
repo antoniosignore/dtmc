@@ -28,7 +28,7 @@
             <td valign="top" class="name"><g:message code="trade.comment.label"
                                                      default="Comment"/></td>
 
-            <td valign="top" class="value">${fieldValue(bean: tradeInstance, field: "comment")}</td>
+            <td valign="top" class="value">${fieldValue(bean: tradeInstance, field: "blog")}</td>
 
         </tr>
 

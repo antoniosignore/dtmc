@@ -31,7 +31,7 @@ public class FormatUtils {
 
     public static void setTable(Hashtable table, String stringa) {
         StringTokenizer stringtokenizer =
-            new StringTokenizer(stringa, ",", false);
+                new StringTokenizer(stringa, ",", false);
         String token = null;
         while (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -46,8 +46,6 @@ public class FormatUtils {
         switch (option) {
             case FinConstants.VALID:
                 return "VALID";
-            case FinConstants.NOTAVAILABLE:
-                return "N/A";
             case FinConstants.INTERPOLATED:
                 return "INTERPOLATED";
         }

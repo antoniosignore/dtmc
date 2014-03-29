@@ -1,19 +1,17 @@
-package com.netnumeri.server.finance.beans;
+package com.netnumeri.server.finance.finpojo
 
-
-import com.netnumeri.server.finance.finpojo.Instrument
+import com.netnumeri.server.finance.beans.FinConstants
 
 class Daily implements Serializable {
 
-    private Instrument instrument;
+    static belongsTo = [instrument: Instrument]
 
-    Date dailydate = null;
+    Date dailydate;
     int volume = 0;
     double high = 0;
     double low = 0;
     double openprice = 0;
     double closeprice = 0;
-    FinConstants state = FinConstants.NOTAVAILABLE;
 
     double bid = 0;
     double ask = 0;
@@ -22,15 +20,6 @@ class Daily implements Serializable {
     int openInterest;
 
     public Daily() {
-        this.state = FinConstants.VALID;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     /**
@@ -43,7 +32,6 @@ class Daily implements Serializable {
         this.openprice = daily.openprice;
         this.closeprice = daily.closeprice;
         this.volume = daily.volume;
-        this.state = daily.state;
         this.instrument = daily.instrument;
     }
 
@@ -54,8 +42,7 @@ class Daily implements Serializable {
                  double open,
                  double close,
                  int volume,
-                 int oint,
-                 FinConstants state) {
+                 int oint) {
         this.instrument = instrument;
         this.dailydate = d;
         this.high = high;
@@ -64,14 +51,6 @@ class Daily implements Serializable {
         this.closeprice = close;
         this.volume = volume;
         openInterest = oint;
-        this.state = state;
-    }
-
-    public boolean valid() {
-        if (state == FinConstants.VALID)
-            return true;
-        else
-            return false;
     }
 
     public double price() {
@@ -104,37 +83,4 @@ class Daily implements Serializable {
         return 0;
     }
 
-    public void set(Daily daily) {
-        if (daily == null) {
-            throw new IllegalArgumentException("Daily: set() " + "Argument is null");
-        }
-        dailydate = daily.dailydate;
-        volume = daily.volume;
-        high = daily.high;
-        low = daily.low;
-        openprice = daily.openprice;
-        closeprice = daily.closeprice;
-        state = daily.state;
-    }
-
-    public Object clone() {
-        Daily q = new Daily();
-        q.volume = this.volume;
-        q.high = this.high;
-        q.low = this.low;
-        q.openprice = this.openprice;
-        q.closeprice = this.closeprice;
-        q.openInterest = this.openInterest;
-        q.state = this.state;
-        q.dailydate = (Date) dailydate.clone();
-        return q;
-    }
-
-    public Instrument getInstrument() {
-        return this.instrument;
-    }
-
-    public void setInstrument(Instrument instrument) {
-        this.instrument = instrument;
-    }
 }

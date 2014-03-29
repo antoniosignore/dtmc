@@ -1,8 +1,8 @@
 package com.netnumeri.server.finance.utils
 
-import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.finpojo.Daily
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.sun.org.apache.bcel.internal.generic.RETURN
 
@@ -93,9 +93,6 @@ class IndicatorUtils {
         double MOM = 0;
         int Count = 0;
         Daily daily = instrument.getDaily(date);
-        if (daily.state == FinConstants.NOTAVAILABLE) {
-            return 0;
-        } else {
             switch (option) {
                 case FinConstants.HIGH:
                     MOM = daily.high;
@@ -119,7 +116,6 @@ class IndicatorUtils {
                     MOM = instrument.re(date);
                     break;
             }
-        }
         while (daily != null != -1 && Count < order) {
             daily = instrument.getPrevDaily(date);
             Count++;

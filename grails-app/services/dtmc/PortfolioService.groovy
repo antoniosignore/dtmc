@@ -1,11 +1,11 @@
 package dtmc
 
 import Jama.Matrix
-import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
+import com.netnumeri.server.finance.finpojo.Daily
 import com.netnumeri.server.finance.finpojo.Instrument
 import com.netnumeri.server.finance.finpojo.Portfolio
 import com.netnumeri.server.finance.finpojo.PortfolioEntry
@@ -520,7 +520,7 @@ class PortfolioService {
             instrument = it.instrument
             if (instrument instanceof Asset) {
                 daily = instrument.getDaily(date);
-                if (daily == null || !daily.valid()) {
+                if (daily == null) {
                     daily = instrument.getPrevDaily(date);
                 }
                 if (daily != null) {

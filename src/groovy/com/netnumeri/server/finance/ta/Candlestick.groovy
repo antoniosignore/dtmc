@@ -1,6 +1,6 @@
 package com.netnumeri.server.finance.ta
 
-import com.netnumeri.server.finance.beans.Daily
+import com.netnumeri.server.finance.finpojo.Daily
 import com.netnumeri.server.finance.finpojo.asset.Stock
 
 public class Candlestick {

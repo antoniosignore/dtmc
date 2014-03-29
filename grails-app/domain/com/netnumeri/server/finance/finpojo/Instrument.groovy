@@ -1,6 +1,5 @@
 package com.netnumeri.server.finance.finpojo
 
-import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
@@ -55,7 +54,9 @@ class Instrument extends Persistable implements Serializable {
     TimeSeries volumeSeries = null;
     TimeSeries volumeReturnSeries = null;
     TimeSeries volumeLogReturnSeries = null;
-    GenericTimeSeries<Daily> dailyarray = new GenericTimeSeries<Daily>();
+
+    static hasMany = [dailyArray: Daily]
+    GenericTimeSeries<Daily> dailyarray;
 
     Double lastQuote;
     double marketSpotShift = 1.0;
@@ -620,11 +621,11 @@ class Instrument extends Persistable implements Serializable {
         return dailyarray.get(date);
     }
 
-    public boolean dataAvailable(Date date) {
-        Daily daily = dailyarray.get(date);
-        if (daily == null) return false;
-        return daily.state != FinConstants.NOTAVAILABLE;
-    }
+//    public boolean dataAvailable(Date date) {
+//        Daily daily = dailyarray.get(date);
+//        if (daily == null) return false;
+//        return daily.state != FinConstants.NOTAVAILABLE;
+//    }
 
     public Date prevDate(Date date) {
         return dailyarray.prevDate(date);

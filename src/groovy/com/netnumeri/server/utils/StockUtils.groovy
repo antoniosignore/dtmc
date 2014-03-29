@@ -13,10 +13,10 @@ package com.netnumeri.server.utils
 import com.dtmc.gson.DailyGSON
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.netnumeri.server.finance.beans.Daily
 import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
+import com.netnumeri.server.finance.finpojo.Daily
 import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.strategy.Strategy
 import com.netnumeri.server.finance.trading.Signal
