@@ -1,7 +1,7 @@
 package com.netnumeri.server.finance.math
 
-import Jama.Matrix
 import com.netnumeri.server.finance.beans.FinConstants
+import com.netnumeri.server.finance.matrix.Matrix
 
 public class FinRecipes extends FinMath {
 

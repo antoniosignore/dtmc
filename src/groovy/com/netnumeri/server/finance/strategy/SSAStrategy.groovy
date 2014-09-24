@@ -1,14 +1,14 @@
 package com.netnumeri.server.finance.strategy
 
+import com.dtmc.finance.finpojo.Entry
+import com.dtmc.finance.finpojo.Instrument
+import com.dtmc.finance.finpojo.Portfolio
+import com.dtmc.finance.finpojo.Trade
 import com.netnumeri.server.finance.beans.NRError
 import com.netnumeri.server.finance.beans.NumericalRecipesSeries
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
-import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.finpojo.Portfolio
-import com.netnumeri.server.finance.finpojo.PortfolioEntry
-import com.netnumeri.server.finance.finpojo.Trade
 import com.netnumeri.server.finance.ssa.SSAMath
 import com.netnumeri.server.finance.ta.*
 import com.netnumeri.server.finance.utils.StringTemplate
@@ -214,13 +214,13 @@ public class SSAStrategy extends Strategy {
 
     public void execute(Map parametersMap) {
         try {
-            List<PortfolioEntry> portfolioItems = getPortfolio().getItems();
+            List<Entry> portfolioItems = getPortfolio().getItems();
 
             getPortfolio().getItems().each {
 
                 init();
 
-                PortfolioEntry portfolioItem = it
+                Entry portfolioItem = it
                 Instrument instrument = portfolioItem.getInstrument();
 
                 TimeSeries logserie = instrument.buildlogAverageSeries();
@@ -263,7 +263,6 @@ public class SSAStrategy extends Strategy {
         }
     }
 
-    @Override
     public void evaluatePortfolioOnDate(Date date, Map signals) {
 
         if (date == null) throw new IllegalArgumentException("date cannot be null");
@@ -299,7 +298,6 @@ public class SSAStrategy extends Strategy {
     public static final int WINDOW = 100
     public static final int i = 0
 
-    @Override
     public void evaluateInstrumentOnDate(Date date, Instrument stock) {
 
 //        if (i++ < WINDOW) return;

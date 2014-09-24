@@ -1,19 +1,15 @@
 package dtmc
 
-import Jama.Matrix
+import com.dtmc.finance.finpojo.*
+import com.dtmc.finance.finpojo.asset.Asset
+import com.dtmc.finance.finpojo.derivative.Derivative
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
 import com.netnumeri.server.finance.data.TransactionSeries
-import com.netnumeri.server.finance.finpojo.Daily
-import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.finpojo.Portfolio
-import com.netnumeri.server.finance.finpojo.PortfolioEntry
-import com.netnumeri.server.finance.finpojo.Trade
-import com.netnumeri.server.finance.finpojo.asset.Asset
-import com.netnumeri.server.finance.finpojo.derivative.Derivative
+import com.netnumeri.server.finance.matrix.Matrix
 import com.netnumeri.server.finance.utils.DateUtils
-import com.netnumeri.server.finance.utils.YahooUtils
+
 
 class PortfolioService {
 
@@ -67,7 +63,7 @@ class PortfolioService {
         return portfolio.lastDate;
     }
 
-    public void add(Portfolio portfolio, PortfolioEntry item) {
+    public void add(Portfolio portfolio, Entry item) {
 
         if (entry(portfolio, item.instrument) != null) {
             System.out.println("addEntry. Instrument: " + item.instrument.name + " already exists in portfolio " + portfolio.getName());
@@ -87,70 +83,70 @@ class PortfolioService {
     }
 
     public void add(Portfolio portfolio, Instrument instrument, int Amount) {
-        PortfolioEntry item = new PortfolioEntry(instrument, Amount, portfolio);
+        Entry item = new Entry(instrument, Amount, portfolio);
 
         add(portfolio, item);
     }
 
     public void add(Portfolio portfolio, Trade transaction) {
 
-        if (trades == null) throw new IllegalArgumentException("trades cannot be null");
+        if (transaction == null) throw new IllegalArgumentException("trades cannot be null");
 
-        if (portfolio.id) transaction.save(flush: true)
+        if (transaction.portfolio.id) transaction.save(flush: true)
 
         Instrument instrument = transaction.instrument;
-        PortfolioEntry entry = entry(portfolio, instrument);
+        Entry entry = entry(transaction.portfolio, instrument);
 
         if (entry == null) {
-            entry = new PortfolioEntry(instrument, portfolio);
-            if (transaction.getTradeAction() == TradeEnum.BUY) {
-                entry.setAmount(transaction.getAmount());
-            } else if (transaction.getTradeAction() == TradeEnum.SELL) {
-                System.out.println("addTransaction. No long position on sell for " + transaction.instrument.name + " in " + portfolio.getName());
+            entry = new Entry(instrument, transaction.portfolio);
+            if (transaction.tradeAction == TradeEnum.BUY) {
+                entry.setAmount(transaction.amount);
+            } else if (transaction.tradeAction == TradeEnum.SELL) {
+                System.out.println("addTransaction. No long position on sell for " + transaction.instrument.name + " in " + transaction.portfolio.getName());
                 return;
-            } else if (transaction.getTradeAction() == TradeEnum.SELLSHORT) {
-                entry.setAmount(-transaction.getAmount());
-            } else if (transaction.getTradeAction() == TradeEnum.BUYSHORT) {
-                System.out.println("addTransaction. No short position on buy short for " + transaction.instrument.name + " in " + portfolio.getName());
+            } else if (transaction.tradeAction == TradeEnum.SELLSHORT) {
+                entry.setAmount(-transaction.amount);
+            } else if (transaction.tradeAction == TradeEnum.BUYSHORT) {
+                System.out.println("addTransaction. No short position on buy short for " + transaction.instrument.name + " in " + transaction.portfolio.getName());
                 return;
             }
-            portfolio.addToTransactions(transaction);
-            add(portfolio, entry);
+            transaction.portfolio.addToTrades(transaction);
+            add(transaction.portfolio, entry);
         } else {
             int amount = 0;
             if (transaction.tradeAction == TradeEnum.BUY) {
-                if (entry.getAmount() < 0) {
-                    System.out.println("addTransaction. Short position on buy for " + transaction.instrument.name + " in " + portfolio.getName());
+                if (entry.amount < 0) {
+                    System.out.println("addTransaction. Short position on buy for " + transaction.instrument.name + " in " + transaction.portfolio.getName());
                     return;
                 }
-                amount = entry.getAmount() + transaction.getAmount();
+                amount = entry.amount + transaction.amount;
             } else if (transaction.tradeAction == TradeEnum.SELL) {
-                amount = entry.getAmount() - transaction.getAmount();
+                amount = entry.amount - transaction.amount;
                 if (amount < 0) {
-                    System.out.println("addTransaction. Sell amount larger than long position for" + transaction.instrument.name + " in " + portfolio.getName());
+                    System.out.println("addTransaction. Sell amount larger than long position for" + transaction.instrument.name + " in " + transaction.portfolio.getName());
                     return;
                 }
             } else if (transaction.tradeAction == TradeEnum.SELLSHORT) {
-                if (entry.getAmount() > 0) {
-                    System.out.println("addTransaction. Long position in instrument on sell short: " + portfolio.getName());
+                if (entry.amount > 0) {
+                    System.out.println("addTransaction. Long position in instrument on sell short: " + transaction.portfolio.getName());
                     return;
                 }
-                amount = entry.getAmount() - transaction.getAmount();
+                amount = entry.amount - transaction.amount;
             } else if (transaction.tradeAction == TradeEnum.BUYSHORT) {
-                if (entry.getAmount() > 0) {
+                if (entry.amount > 0) {
                     System.out.println("addTransaction. Long position on buy short for " + transaction.instrument.name + " in " + portfolio.getName());
                     return;
                 }
-                amount = entry.getAmount() + transaction.getAmount();
+                amount = entry.amount + transaction.amount;
                 if (amount > 0) {
-                    System.out.println("addTransaction. Buy short amount larger than short position: " + portfolio.getName());
+                    System.out.println("addTransaction. Buy short amount larger than short position: " + transaction.portfolio.getName());
                     return;
                 }
             }
-            portfolio.addToTransactions(transaction);
+            transaction.portfolio.addToTrades(transaction);
 
             if (amount == 0) {
-                remove(portfolio, instrument);
+                remove(transaction.portfolio, instrument);
             } else {
                 entry.setAmount(amount);
             }
@@ -168,9 +164,9 @@ class PortfolioService {
 
     // Return pointer to portfolio entry holding instrument
     // Return null if there is no such entry in portfolio
-    public PortfolioEntry entry(Portfolio portfolio, Instrument instrument) {
+    public Entry entry(Portfolio portfolio, Instrument instrument) {
         if (instrument == null) throw new IllegalArgumentException("instrument cannot be null");
-        PortfolioEntry entry;
+        Entry entry;
         if (portfolio.items != null)
 
             portfolio.items.each {
@@ -183,19 +179,21 @@ class PortfolioService {
         return null;
     }
 
-    public PortfolioEntry entryByName(Portfolio portfolio, String name) {
-        PortfolioEntry entry;
-
+    public Entry entryByName(Portfolio portfolio, String name) {
+        Entry entry;
         portfolio.items.each {
             entry = it
-            if (entry.getInstrument().getName().compareToIgnoreCase(name) >= 0) {
+
+            println "entry.instrument.name = $entry.instrument.name"
+            println "name = $name"
+
+            if (entry.instrument.name.equalsIgnoreCase(name)) {
+
+                println "returning = " + entry.instrument.name
+
                 return entry;
             }
         }
-
-//        for (int i = 0; i < portfolio.items.size(); i++) {
-//            entry = item(portfolio, i);
-//        }
         return null;
     }
 
@@ -209,15 +207,15 @@ class PortfolioService {
         if (portfolio.items == null || portfolio.items.isEmpty())
             throw new RuntimeException("no instruments to invest money into");
 
-        portfolio.items.each {
-            Instrument asset = it.instrument
+        portfolio.items.eachWithIndex { item, count ->
+            Instrument asset = item.instrument
             double price = 0;
             if (asset.isDataAvailable(date)) {
                 price = asset.getLast();
             } else {
                 price = YahooUtils.getLastTradedValue(asset.name)
             }
-            setAmount(portfolio, i, (int) (getItemAmount(it) + wealth * getWeight(portfolio, i) / price));
+            setAmount(portfolio, count, (int) (getItemAmount(item) + wealth * getWeight(portfolio, item) / price));
         }
     }
 
@@ -273,7 +271,7 @@ class PortfolioService {
     // Sell everything - todo
     public Trade sell(Portfolio portfolio, Instrument instrument, Date date) {
         int amount;
-        PortfolioEntry entry = entry(portfolio, instrument)
+        Entry entry = entry(portfolio, instrument)
         if (entry != null) {
             amount = entry.amount
         } else {
@@ -289,7 +287,7 @@ class PortfolioService {
     public void remove(Portfolio portfolio, Instrument instrument) {
 
         portfolio.items.each {
-            PortfolioEntry entry = it
+            Entry entry = it
             if (entry.instrument == null) throw new RuntimeException("entry cannot have null name");
             if (entry.instrument.id == instrument.id) {
                 portfolio.items.remove(entry);
@@ -301,7 +299,7 @@ class PortfolioService {
     // Return weight of this instrument in the portfolio
     // Return 0 if instrument is not in the portfolio
     public double getWeight(Portfolio portfolio, Instrument instrument) {
-        PortfolioEntry entry = entry(portfolio, instrument);
+        Entry entry = entry(portfolio, instrument);
         if (entry != null) {
             return entry.amount;
         } else {
@@ -313,7 +311,7 @@ class PortfolioService {
     // Return 0 if instrument is not in the portfolio
 
     public FinConstants position(Portfolio portfolio, Instrument instrument) {
-        PortfolioEntry entry = entry(portfolio, instrument);
+        Entry entry = entry(portfolio, instrument);
         if (entry != null) {
             return entry.position()
         } else {
@@ -324,9 +322,9 @@ class PortfolioService {
     // Return amount of this instrument in the portfolio
     // Return 0 if instrument is not in the portfolio
     public int amount(Portfolio portfolio, Instrument instrument) {
-        PortfolioEntry entry = entry(portfolio, instrument);
+        Entry entry = entry(portfolio, instrument);
         if (entry != null) {
-            return entry.getAmount();
+            return entry.amount;
         } else {
             return 0;
         }
@@ -350,23 +348,29 @@ class PortfolioService {
 
     // Return wealth for i-th asset in portfolio
     public double wealth(Portfolio portfolio, Instrument asset, Date date) {
-//        Instrument asset = getInstrument(portfolio, i);
         double price = 0;
         if (asset.isDataAvailable(date)) {
             price = asset.premium();
         } else {
             price = YahooUtils.getLastTradedValue(asset.name)
         }
-        return price * entryByName(portfolio, asset.name).amount;
+
+        println "asset.name = $asset.name"
+
+        Entry portfolioEntry = entryByName(portfolio, asset.name)
+
+        println "************** portfolioEntry.amount = " + portfolioEntry.amount
+
+        return price * portfolioEntry.amount;
     }
 
 
-    public double getWealth(Portfolio portfolio) {
-        return getWealth(portfolio, null);
+    public double wealth(Portfolio portfolio) {
+        return wealth(portfolio, null);
     }
 
     // Return wealth of portfolio
-    public double getWealth(Portfolio portfolio, Date date) {
+    public double wealth(Portfolio portfolio, Date date) {
         double Wealth = 0;
 
         portfolio.items.each {
@@ -473,6 +477,10 @@ class PortfolioService {
         return m2m(portfolio, date);
     }
 
+    public double price(Portfolio portfolio) {
+        return m2m(portfolio, new Date());
+    }
+
     // Return portfolio premium If we consider a portfolio as one
     // financial instrument, its premium is equal to its value
     public double premium(Portfolio portfolio) {
@@ -526,8 +534,7 @@ class PortfolioService {
                 if (daily != null) {
                     value += daily.closeprice * amount;
                 } else {
-                    System.out.println("value. Out of data range");
-                    return 0;
+                    throw new IllegalArgumentException("date " + date.toString() + "not valid");
                 }
             }
             if (instrument instanceof Derivative) {
@@ -647,11 +654,11 @@ class PortfolioService {
         portfolio.assetsToHold = NHoldAsset;
     }
 
-    public void setInstrument(Portfolio portfolio, PortfolioEntry entry, Instrument instrument) {
+    public void setInstrument(Portfolio portfolio, Entry entry, Instrument instrument) {
         entry.setInstrument(instrument);
     }
 
-    public void setAmount(Portfolio portfolio, PortfolioEntry entry, int amount) {
+    public void setAmount(Portfolio portfolio, Entry entry, int amount) {
         entry.setAmount(amount);
     }
 
@@ -730,7 +737,6 @@ class PortfolioService {
     public double getTreynorIndex(Portfolio portfolio, Portfolio index, double rate) {
         return (annualExpectedReturn(portfolio) - rate) / getBeta(portfolio, index);
     }
-
 
     public double getDelta(Portfolio portfolio) {
         portfolio.items.each {
@@ -834,7 +840,7 @@ class PortfolioService {
 //        return item(portfolio, i).position();
 //    }
 //
-    public int getItemAmount(PortfolioEntry item) {
+    public int getItemAmount(Entry item) {
         return item.amount;
     }
 //
@@ -846,7 +852,7 @@ class PortfolioService {
         return portfolio.covarianceMatrix.get(Row, Col);
     }
 
-    public List<PortfolioEntry> getInstruments(Portfolio portfolio) {
+    public List<Entry> getInstruments(Portfolio portfolio) {
         return portfolio.items;
     }
 
@@ -855,7 +861,7 @@ class PortfolioService {
         Matrix ret = null;
         List entries = getInstruments(portfolio);
         for (int i = 0; i < entries.size(); i++) {
-            PortfolioEntry item = (PortfolioEntry) entries.get(i);
+            Entry item = (Entry) entries.get(i);
             Instrument instrument = item.getInstrument();
             double[] series = instrument.logReturnSeries().convertToArray();
             if (ret == null) {
@@ -874,7 +880,7 @@ class PortfolioService {
         Matrix ret = null;
         List entries = getInstruments(portfolio);
         for (int i = 0; i < entries.size(); i++) {
-            PortfolioEntry item = (PortfolioEntry) entries.get(i);
+            Entry item = (Entry) entries.get(i);
             Instrument instrument = item.getInstrument();
             double[] serie = instrument.returnSeries().convertToArray();
             if (ret == null) {

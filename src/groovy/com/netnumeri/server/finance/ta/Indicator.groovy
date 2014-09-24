@@ -2,7 +2,8 @@ package com.netnumeri.server.finance.ta
 
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.finpojo.Instrument
+import com.dtmc.finance.finpojo.Instrument
+
 import com.netnumeri.server.finance.utils.DateUtils
 
 public abstract class Indicator extends TimeSeries {
@@ -26,7 +27,7 @@ public abstract class Indicator extends TimeSeries {
 
     public Indicator(Instrument instrument, String name) {
         super(name);
-        series = instrument.closeSeries
+        series = instrument.closeSeries()
         this.instrument = instrument;
     }
 

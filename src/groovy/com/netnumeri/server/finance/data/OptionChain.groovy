@@ -1,8 +1,8 @@
-package com.netnumeri.server.finance.data;
+package com.netnumeri.server.finance.data
 
+import com.dtmc.finance.finpojo.asset.Stock
+import com.dtmc.finance.finpojo.derivative.equity.Vanilla;
 
-import com.netnumeri.server.finance.finpojo.asset.Stock
-import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 
 public class OptionChain {
     private Vector options;

@@ -1,11 +1,11 @@
 package com.netnumeri.server.finance.strategy.bearish
 
-import com.netnumeri.server.entity.OptionType
-import com.netnumeri.server.finance.finpojo.Bet
-import com.netnumeri.server.finance.finpojo.Forecast
-import com.netnumeri.server.finance.finpojo.Trade
-import com.netnumeri.server.finance.finpojo.asset.Stock
-import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
+import com.dtmc.finance.finpojo.Trade
+import com.dtmc.finance.finpojo.asset.Stock
+import com.dtmc.finance.finpojo.derivative.equity.Vanilla
+import com.netnumeri.server.enums.OptionType
+import com.dtmc.finance.finpojo.Bet
+import com.dtmc.finance.finpojo.Forecast
 import com.netnumeri.server.finance.strategy.ForecastType
 import com.netnumeri.server.finance.strategy.OptionStrategy
 import com.netnumeri.server.finance.strategy.StrategyHelper
@@ -23,7 +23,7 @@ class LongPut implements OptionStrategy {
             Trade transaction = convertOptionToTransaction(option);
             Bet bet = new Bet();
             bet.name = "Long Put"
-            bet.transactions.add(transaction)
+            bet.addToTrades(transaction)
             bets.add(bet)
         }
         return bets

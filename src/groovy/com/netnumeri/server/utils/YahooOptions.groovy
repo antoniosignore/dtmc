@@ -1,16 +1,13 @@
-package com.netnumeri.server.utils;
+package com.netnumeri.server.utils
 
-
-import com.netnumeri.server.entity.OptionType
-import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
+import com.dtmc.finance.finpojo.derivative.equity.Vanilla;
+import com.netnumeri.server.enums.OptionType
 import com.netnumeri.server.finance.utils.NetUtils
 import com.netnumeri.server.finance.utils.YahooInstantSnapshot
 import com.netnumeri.server.finance.utils.YahooUtils
 import org.dom4j.DocumentHelper
 import org.dom4j.Element
 import org.dom4j.XPath
-
-import static com.netnumeri.server.utils.YahooOptions.getOptionsDocuments
 
 public class YahooOptions {
 

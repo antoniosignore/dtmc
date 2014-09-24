@@ -1,7 +1,7 @@
 package com.netnumeri.server.finance.ta
 
 import com.netnumeri.server.finance.beans.FinConstants
-import com.netnumeri.server.finance.finpojo.Instrument
+import com.dtmc.finance.finpojo.Instrument
 
 public class TradeInfo {
     double tradeOpen;

@@ -1,6 +1,6 @@
 package com.netnumeri.server.finance.ssa
 
-import Jama.Matrix
+import com.netnumeri.server.finance.matrix.Matrix
 
 class SSAItem {
     Matrix reconstructionMatrix

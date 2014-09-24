@@ -5,7 +5,6 @@ import com.netnumeri.server.finance.beans.TimeSeries;
 import com.netnumeri.server.finance.indicator.utils.CandlestickUtils;
 
 
-
 public class BearishDarkCloudCover {
 
 

@@ -1,17 +1,12 @@
 package com.dtmc.club
 
-import com.dtmc.security.SecUser
-import com.netnumeri.server.enums.MemberGoalEnum
-import com.netnumeri.server.enums.MemberTypeEnum
-import com.netnumeri.server.finance.indicator.UserIndicators
-import com.netnumeri.server.finance.trading.StrategyCatalog
+import arrested.ArrestedUser
+import com.dtmc.indicator.UserIndicators
+import com.dtmc.trading.StrategyCatalog
 
-class Member extends SecUser implements Serializable {
+class Member extends ArrestedUser implements Serializable {
 
     static belongsTo = [club: Club]
-
-    MemberTypeEnum memberType
-    MemberGoalEnum memberGoal
 
     String firstname
     String lastname
@@ -27,32 +22,25 @@ class Member extends SecUser implements Serializable {
     String twitter
     String facebook
     String linkedin
-
     String timezone
 
-    Integer hoursWeeklyDedicated
-
-    ImageNode small
-
-    Date dateCreated
-    Date lastUpdated
-
-
-    static hasMany = [indicators: UserIndicators, strategies: StrategyCatalog]
+    static hasMany = [followers: Member, indicators: UserIndicators, strategies: StrategyCatalog]
 
     static constraints = {
-
-        firstname(size: 1..30, blank: true)
-        lastname(size: 1..30, blank: true)
-        email(email: true, blank: true)
-        phone(size: 6..15, blank: true)
-        mobile(size: 6..15, blank: true)
-        city(size: 1..20, blank: true)
-        state(size: 1..20, blank: true)
-        country(size: 1..20, blank: true)
-        twitter(size: 5..200, blank: true)
-        facebook(size: 5..200, blank: true)
-        linkedin(size: 5..200, blank: true)
+        firstname(size: 1..30, blank: true, nullable: true)
+        lastname(size: 1..30, blank: true, nullable: true)
+        email(email: true, nullable: true)
+        address1(email: true, blank: true, nullable: true)
+        address2(email: true, blank: true, nullable: true)
+        phone(size: 6..15, blank: true, nullable: true)
+        mobile(size: 6..15, blank: true, nullable: true)
+        city(size: 1..20, blank: true, nullable: true)
+        state(size: 1..20, blank: true, nullable: true)
+        country(size: 1..20, blank: true, nullable: true)
+        twitter(size: 5..200, blank: true, nullable: true)
+        facebook(size: 5..200, blank: true, nullable: true)
+        linkedin(size: 5..200, blank: true, nullable: true)
+        company(size: 5..200, blank: true, nullable: true)
         timezone(nullable: true)
     }
 

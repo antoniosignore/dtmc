@@ -1,64 +1,87 @@
-<%@ page import="com.netnumeri.server.finance.trading.Signal" %>
-<!doctype html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'signal.label', default: 'Signal')}"/>
-    <title><g:message code="default.list.label" args="[entityName]"/></title>
-</head>
+<div data-ng-controller="SignalCtrl">
+    <h1>Signal List</h1>
 
-<body>
-
-<section id="list-signal" class="first">
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-
-            <g:sortableColumn property="dateCreated"
-                              title="${message(code: 'signal.dateCreated.label', default: 'Date Created')}"/>
-
-            <g:sortableColumn property="day"
-                              title="${message(code: 'signal.day.label', default: 'Day')}"/>
-
-            <g:sortableColumn property="direction"
-                              title="${message(code: 'signal.direction.label', default: 'Direction')}"/>
-
-            <g:sortableColumn property="lastUpdated"
-                              title="${message(code: 'signal.lastUpdated.label', default: 'Last Updated')}"/>
-
-            <g:sortableColumn property="name"
-                              title="${message(code: 'signal.name.label', default: 'Name')}"/>
-
-            <th><g:message code="signal.user.label" default="User"/></th>
-
-        </tr>
-        </thead>
-        <tbody>
-        <g:each in="${signalInstanceList}" status="i" var="signalInstance">
-            <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-
-                <td><g:link action="show"
-                            id="${signalInstance.id}">${fieldValue(bean: signalInstance, field: "dateCreated")}</g:link></td>
-
-                <td><g:formatDate date="${signalInstance.day}"/></td>
-
-                <td>${fieldValue(bean: signalInstance, field: "direction")}</td>
-
-                <td><g:formatDate date="${signalInstance.lastUpdated}"/></td>
-
-                <td>${fieldValue(bean: signalInstance, field: "name")}</td>
-
-                <td>${fieldValue(bean: signalInstance, field: "user")}</td>
-
-            </tr>
-        </g:each>
-        </tbody>
-    </table>
-
-    <div class="pagination">
-        <dtmc:paginate total="${signalInstanceTotal}"/>
+    <div data-ng-show="errors.showErrors" class="red">
+        <div ng-repeat="error in errors.errorMessages">
+            <strong></strong> <span ng-bind="error"></span>
+        </div>
     </div>
-</section>
-</body>
-</html>
+
+
+    <div>
+        <p></p>
+        <a class="btn btn-primary btn-primary" data-ng-click="newSignal()"><span
+                class="glyphicon glyphicon-plus"></span><g:message code="default.new.label" args="['signal']"
+                                                                   default="New signal"/></a>
+
+        <p></p>
+    </div>
+
+    <div>
+        <div>
+            <div>
+
+                <button ng-click="tableParams.reload()" class="btn btn-default">Reload</button>
+                <button ng-click="tableParams.sorting({})" class="btn btn-default">Clear sorting</button>
+
+                <div loading-container="tableParams.settings().$loading">
+                    <table class="table" ng-table="tableParams" show-filter="true">
+                        <tr data-ng-repeat="instance in signals" data-ng-click="editSignal(instance)">
+
+                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
+                                data-title="'dateCreated'">
+
+                                {{instance.dateCreated}}
+                            </td>
+
+
+                            <td data-sortable="'day'" data-title="'day'">
+
+                                {{instance.day}}
+                            </td>
+
+
+                            <td data-sortable="'direction'" data-title="'direction'">
+
+                                {{instance.direction}}
+                            </td>
+
+
+                            <td data-sortable="'instrument'" data-title="'instrument'">
+
+                                {{instance.instrument}}
+                            </td>
+
+
+                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
+
+                                {{instance.lastUpdated}}
+                            </td>
+
+
+                            <td data-sortable="'name'" data-title="'name'">
+
+                                {{instance.name}}
+                            </td>
+
+
+                            <td data-sortable="'strategyExecution'" data-title="'strategyExecution'">
+
+                                {{instance.strategyExecution}}
+                            </td>
+
+
+                            <td data-sortable="'value'" data-title="'value'">
+
+                                {{instance.value}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

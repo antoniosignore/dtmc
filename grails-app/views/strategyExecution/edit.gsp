@@ -1,43 +1,98 @@
-<%@ page import="com.netnumeri.server.finance.trading.StrategyExecution" %>
-<!doctype html>
-<html>
+<div data-ng-show="errors.showErrors" class="red">
+    <div ng-repeat="error in errors.errorMessages">
+        <strong></strong> <span ng-bind="error"></span>
+    </div>
+</div>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'strategyExecution.label', default: 'StrategyExecution')}"/>
-    <title><g:message code="default.edit.label" args="[entityName]"/></title>
-</head>
 
-<body>
+<div class="container" data-ng-controller="StrategyExecutionCtrl">
+    <div class="small-12 columns">
+        <div class="panel panel-default">
+            <div class="panel-body">
 
-<section id="edit-strategyExecution" class="first">
+                <h5 class="text-center">StrategyExecution Edit</h5>
 
-    <g:hasErrors bean="${strategyExecutionInstance}">
-        <div class="alert alert-error">
-            <g:renderErrors bean="${strategyExecutionInstance}" as="list"/>
+
+                <form name="strategyExecutionForm" novalidate>
+
+                    <div>
+                        <p></p>
+                        <a class="btn btn-primary btn-primary" data-ng-click="newStrategyExecution()"><span
+                                class="glyphicon glyphicon-plus"></span><g:message code="default.new.label"
+                                                                                   args="['strategyExecution', 'BB']"
+                                                                                   default="New strategyExecution"/></a>
+                        <a class="btn btn-primary btn-primary"
+                           onclick="window.location.href = '#/strategyExecution/list'"
+                           title="${message(code: 'default.list.label', args: ['StrategyExecution'], default: 'List')}"><span
+                                class="glyphicon glyphicon-align-justify"></span>    <g:message
+                                code="default.list.label" args="['StrategyExecution']" default="List"/></a>
+                        <a class="btn btn-primary btn-success" data-ng-hide="strategyExecution.id"
+                           ng-disabled="strategyExecutionForm.$invalid"
+                           title="${message(code: 'default.save.label', args: ['StrategyExecution'], default: 'Save')}"
+                           ng-enabled="!strategyExecutionForm.$invalid"
+                           data-ng-click="manualSaveStrategyExecution()"><span
+                                class="glyphicon glyphicon-floppy-disk"></span> <g:message code="default.save.label"
+                                                                                           args="['StrategyExecution']"
+                                                                                           default="Save"/></a>
+                        <a class="btn btn-primary btn-success" data-ng-show="strategyExecution.id"
+                           ng-disabled="strategyExecutionForm.$invalid"
+                           title="${message(code: 'default.update.label', args: ['StrategyExecution'], default: 'Update')}"
+                           ng-enabled="!strategyExecutionForm.$invalid"
+                           data-ng-click="manualSaveStrategyExecution()"><span
+                                class="glyphicon glyphicon-floppy-disk"></span> <g:message code="default.update.label"
+                                                                                           args="['StrategyExecution']"
+                                                                                           default="Update"/></a>
+                        <a class="btn btn-primary btn-danger" data-ng-show="strategyExecution.id"
+                           title="${message(code: 'default.delete.label', args: ['StrategyExecution'], default: 'Delete')}"
+                           data-ng-click="confirmDeleteStrategyExecution()"><span
+                                class="glyphicon glyphicon-trash"></span> <g:message code="default.delete.label"
+                                                                                     args="['StrategyExecution']"
+                                                                                     default="Delete"/></a>
+
+                    </p>
+                    </div>
+
+                    <div>
+
+                        <div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="dateCreated">
+                                    dateCreated
+                                </label>
+                                <input type="date" name="dateCreated" precision="null"
+                                       data-ng-model='strategyExecution.dateCreated'/>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="lastUpdated">
+                                    lastUpdated
+                                </label>
+                                <input type="date" name="lastUpdated" precision="null"
+                                       data-ng-model='strategyExecution.lastUpdated'/>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="name">
+                                    name
+                                </label>
+
+                                <div class="input-group"><input type="text" class="form-control" name="name"
+                                                                required="required"
+                                                                data-ng-model='strategyExecution.name'/>
+
+                                    <div class="error"
+                                         ng-show="strategyExecutionForm.name.$dirty && strategyExecutionForm.name.$invalid">
+                                        <small class="error"
+                                               ng-show="!strategyExecutionForm.name.$pristine && strategyExecutionForm.name.$invalid"><g:message
+                                                code="default.invalid.label" args="['name']"
+                                                default=" Invalid name : "/></small></div></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </g:hasErrors>
-
-    <g:form method="post" class="form-horizontal">
-        <g:hiddenField name="id" value="${strategyExecutionInstance?.id}"/>
-        <g:hiddenField name="version" value="${strategyExecutionInstance?.version}"/>
-        <fieldset class="form">
-            <g:render template="form"/>
-        </fieldset>
-
-        <div class="form-actions">
-            <g:actionSubmit class="btn btn-primary" action="update"
-                            value="${message(code: 'default.button.update.label', default: 'Update')}"/>
-            <g:actionSubmit class="btn btn-danger" action="delete"
-                            value="${message(code: 'default.button.delete.label', default: 'Delete')}"
-                            onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
-            <button class="btn" type="reset"><g:message code="default.button.reset.label" default="Reset"/></button>
-        </div>
-    </g:form>
-
-</section>
-
-</body>
-
-</html>
+    </div>
+</div>

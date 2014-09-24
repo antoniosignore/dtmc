@@ -1,11 +1,9 @@
 package com.netnumeri.server.finance.strategy
 
+import com.dtmc.finance.finpojo.Instrument
+import com.dtmc.finance.finpojo.Trade
+import com.dtmc.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.beans.TradeEnum
-import com.netnumeri.server.finance.finpojo.Instrument
-
-//import com.netnumeri.server.finance.trading.Strategy
-import com.netnumeri.server.finance.finpojo.Trade
-import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.ta.Indicator
 import com.netnumeri.server.finance.utils.DateUtils
 

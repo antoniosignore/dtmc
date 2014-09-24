@@ -1,65 +1,93 @@
-<%@ page import="com.netnumeri.server.finance.finpojo.Portfolio" %>
-<!doctype html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'portfolio.label', default: 'Portfolio')}"/>
-    <title><g:message code="default.list.label" args="[entityName]"/></title>
-</head>
+<div data-ng-controller="PortfolioCtrl">
+    <h1>Portfolio List</h1>
 
-<body>
-
-<section id="list-portfolio" class="first">
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-
-            <g:sortableColumn property="name"
-                              title="${message(code: 'portfolio.name.label', default: 'Name')}"/>
-
-            <g:sortableColumn property="dailyarray"
-                              title="${message(code: 'portfolio.dailyarray.label', default: 'Dailyarray')}"/>
-
-            <g:sortableColumn property="dateCreated"
-                              title="${message(code: 'portfolio.dateCreated.label', default: 'Date Created')}"/>
-
-            <g:sortableColumn property="description"
-                              title="${message(code: 'portfolio.description.label', default: 'Description')}"/>
-
-            <g:sortableColumn property="firstDate"
-                              title="${message(code: 'portfolio.firstDate.label', default: 'First Date')}"/>
-
-            <g:sortableColumn property="highSeries"
-                              title="${message(code: 'portfolio.highSeries.label', default: 'High Series')}"/>
-
-        </tr>
-        </thead>
-        <tbody>
-        <g:each in="${portfolioInstanceList}" status="i" var="portfolioInstance">
-            <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-
-                <td><g:link action="show"
-                            id="${portfolioInstance.id}">${fieldValue(bean: portfolioInstance, field: "name")}</g:link></td>
-
-                <td>${fieldValue(bean: portfolioInstance, field: "dailyarray")}</td>
-
-                <td><g:formatDate date="${portfolioInstance.dateCreated}"/></td>
-
-                <td>${fieldValue(bean: portfolioInstance, field: "description")}</td>
-
-                <td><g:formatDate date="${portfolioInstance.firstDate}"/></td>
-
-                <td>${fieldValue(bean: portfolioInstance, field: "highSeries")}</td>
-
-            </tr>
-        </g:each>
-        </tbody>
-    </table>
-
-    <div class="pagination">
-        <dtmc:paginate total="${portfolioInstanceTotal}"/>
+    <div data-ng-show="errors.showErrors" class="red">
+        <div ng-repeat="error in errors.errorMessages">
+            <strong></strong> <span ng-bind="error"></span>
+        </div>
     </div>
-</section>
-</body>
-</html>
+
+
+    <div>
+        <p></p>
+        <a class="btn btn-primary btn-primary" data-ng-click="newPortfolio()"><span
+                class="glyphicon glyphicon-plus"></span><g:message code="default.new.label" args="['portfolio']"
+                                                                   default="New portfolio"/></a>
+
+        <p></p>
+    </div>
+
+    <div>
+        <div>
+            <div>
+
+                <button ng-click="tableParams.reload()" class="btn btn-default">Reload</button>
+                <button ng-click="tableParams.sorting({})" class="btn btn-default">Clear sorting</button>
+
+                <div loading-container="tableParams.settings().$loading">
+                    <table class="table" ng-table="tableParams" show-filter="true">
+                        <tr data-ng-repeat="instance in portfolios" data-ng-click="editPortfolio(instance)">
+
+                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
+                                data-title="'dateCreated'">
+
+                                {{instance.dateCreated}}
+                            </td>
+
+
+                            <td data-sortable="'description'" data-title="'description'">
+
+                                {{instance.description}}
+                            </td>
+
+
+                            <td data-sortable="'firstDate'" data-title="'firstDate'">
+
+                                {{instance.firstDate}}
+                            </td>
+
+
+                            <td data-sortable="'lastDate'" data-title="'lastDate'">
+
+                                {{instance.lastDate}}
+                            </td>
+
+
+                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
+
+                                {{instance.lastUpdated}}
+                            </td>
+
+
+                            <td data-sortable="'name'" data-title="'name'">
+
+                                {{instance.name}}
+                            </td>
+
+
+                            <td data-sortable="'portfolioType'" data-title="'portfolioType'">
+
+                                {{instance.portfolioType}}
+                            </td>
+
+
+                            <td data-sortable="'user'" data-title="'user'">
+
+                                {{instance.user}}
+                            </td>
+
+
+                            <td data-sortable="'wealth'" data-title="'wealth'">
+
+                                {{instance.wealth}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

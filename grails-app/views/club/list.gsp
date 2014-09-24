@@ -1,66 +1,86 @@
-<%@ page import="com.dtmc.club.Club" %>
-<!doctype html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'club.label', default: 'Club')}"/>
-    <title><g:message code="default.list.label" args="[entityName]"/></title>
-</head>
+<div data-ng-controller="ClubCtrl">
+    <h1>Club List</h1>
 
-<body>
-
-<section id="list-club" class="first">
-
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-
-            <g:sortableColumn property="agreement"
-                              title="${message(code: 'club.agreement.label', default: 'Agreement')}"/>
-
-            <th><g:message code="club.banker.label" default="Banker"/></th>
-
-            <th><g:message code="club.broker.label" default="Broker"/></th>
-
-            <g:sortableColumn property="dateCreated"
-                              title="${message(code: 'club.dateCreated.label', default: 'Date Created')}"/>
-
-            <g:sortableColumn property="inauguralMeeting"
-                              title="${message(code: 'club.inauguralMeeting.label', default: 'Inaugural Meeting')}"/>
-
-            <g:sortableColumn property="joiningFee"
-                              title="${message(code: 'club.joiningFee.label', default: 'Joining Fee')}"/>
-
-        </tr>
-        </thead>
-        <tbody>
-        <g:each in="${clubInstanceList}" status="i" var="clubInstance">
-            <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-
-                <td><g:link action="show"
-                            id="${clubInstance.id}">${fieldValue(bean: clubInstance, field: "agreement")}</g:link></td>
-
-                <td>${fieldValue(bean: clubInstance, field: "banker")}</td>
-
-                <td>${fieldValue(bean: clubInstance, field: "broker")}</td>
-
-                <td><g:formatDate date="${clubInstance.dateCreated}"/></td>
-
-                <td><g:formatDate date="${clubInstance.inauguralMeeting}"/></td>
-
-                <td>${fieldValue(bean: clubInstance, field: "joiningFee")}</td>
-
-            </tr>
-        </g:each>
-        </tbody>
-    </table>
-
-    <div class="pagination">
-        <bs:paginate total="${clubInstanceTotal}"/>
+    <div data-ng-show="errors.showErrors" class="red">
+        <div ng-repeat="error in errors.errorMessages">
+            <strong></strong> <span ng-bind="error"></span>
+        </div>
     </div>
-</section>
 
-</body>
 
-</html>
+    <div>
+        <p></p>
+        <a class="btn btn-primary btn-primary" data-ng-click="newClub()"><span
+                class="glyphicon glyphicon-plus"></span><g:message code="default.new.label" args="['club']"
+                                                                   default="New club"/></a>
+
+        <p></p>
+    </div>
+
+    <div>
+        <div>
+            <div>
+
+                <button ng-click="tableParams.reload()" class="btn btn-default">Reload</button>
+                <button ng-click="tableParams.sorting({})" class="btn btn-default">Clear sorting</button>
+
+                <div loading-container="tableParams.settings().$loading">
+                    <table class="table" ng-table="tableParams" show-filter="true">
+                        <tr data-ng-repeat="instance in clubs" data-ng-click="editClub(instance)">
+
+                            <td data-sortable="'agreement'" filter="{'agreement':'text'}" data-title="'agreement'">
+
+                                {{instance.agreement}}
+                            </td>
+
+
+                            <td data-sortable="'dateCreated'" data-title="'dateCreated'">
+
+                                {{instance.dateCreated}}
+                            </td>
+
+
+                            <td data-sortable="'inauguralMeeting'" data-title="'inauguralMeeting'">
+
+                                {{instance.inauguralMeeting}}
+                            </td>
+
+
+                            <td data-sortable="'joiningFee'" data-title="'joiningFee'">
+
+                                {{instance.joiningFee}}
+                            </td>
+
+
+                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
+
+                                {{instance.lastUpdated}}
+                            </td>
+
+
+                            <td data-sortable="'monthlySubscription'" data-title="'monthlySubscription'">
+
+                                {{instance.monthlySubscription}}
+                            </td>
+
+
+                            <td data-sortable="'name'" data-title="'name'">
+
+                                {{instance.name}}
+                            </td>
+
+
+                            <td data-sortable="'yearsTimeSpan'" data-title="'yearsTimeSpan'">
+
+                                {{instance.yearsTimeSpan}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

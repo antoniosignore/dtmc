@@ -1,11 +1,9 @@
 package com.netnumeri.server.finance.utils
 
+import com.dtmc.finance.finpojo.Daily
+import com.dtmc.finance.finpojo.Instrument
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
-import com.netnumeri.server.finance.finpojo.Daily
-import com.netnumeri.server.finance.finpojo.Instrument
-import com.sun.org.apache.bcel.internal.generic.RETURN
-
 
 class IndicatorUtils {
 
@@ -34,7 +32,7 @@ class IndicatorUtils {
         double SMA = SMA(instrument, date, order, option);
         double SMV = 0;
         int Count = 0;
-        Daily daily = instrument.getDaily(date);
+        Daily daily = instrument.daily(date);
         while (daily != null && Count < order) {
             switch (option) {
                 case FinConstants.HIGH:
@@ -92,8 +90,8 @@ class IndicatorUtils {
         if (instrument == null) throw new IllegalArgumentException("instrument cannot be null");
         double MOM = 0;
         int Count = 0;
-        Daily daily = instrument.getDaily(date);
-            switch (option) {
+        Daily daily = instrument.daily(date);
+        switch (option) {
                 case FinConstants.HIGH:
                     MOM = daily.high;
                     break;
@@ -112,8 +110,8 @@ class IndicatorUtils {
                 case FinConstants.VOLUME:
                     MOM = daily.volume;
                     break;
-                case RETURN:
-                    MOM = instrument.re(date);
+            case FinConstants.RETURN:
+                MOM = instrument.re(date);
                     break;
             }
         while (daily != null != -1 && Count < order) {

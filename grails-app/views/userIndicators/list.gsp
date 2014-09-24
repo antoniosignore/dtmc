@@ -1,68 +1,105 @@
-<%@ page import="com.netnumeri.server.finance.indicator.UserIndicators" %>
-<!doctype html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'userIndicators.label', default: 'UserIndicators')}"/>
-    <title><g:message code="default.list.label" args="[entityName]"/></title>
-</head>
+<div data-ng-controller="UserIndicatorsCtrl">
+    <h1>UserIndicators List</h1>
 
-<body>
-
-<section id="list-userIndicators" class="first">
-
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-
-            <g:sortableColumn property="dateCreated"
-                              title="${message(code: 'userIndicators.name.label', default: 'Name')}"/>
-
-            <g:sortableColumn property="double1"
-                              title="${message(code: 'userIndicators.double1.label', default: 'Double1')}"/>
-
-            <g:sortableColumn property="double2"
-                              title="${message(code: 'userIndicators.double2.label', default: 'Double2')}"/>
-
-            <g:sortableColumn property="integer1"
-                              title="${message(code: 'userIndicators.integer1.label', default: 'Integer1')}"/>
-
-            <g:sortableColumn property="integer2"
-                              title="${message(code: 'userIndicators.integer2.label', default: 'Integer2')}"/>
-
-            <g:sortableColumn property="integer3"
-                              title="${message(code: 'userIndicators.integer3.label', default: 'Integer3')}"/>
-
-        </tr>
-        </thead>
-        <tbody>
-        <g:each in="${userIndicatorsInstanceList}" status="i" var="userIndicatorsInstance">
-            <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-
-                <td><g:link action="show"
-                            id="${userIndicatorsInstance.id}">${fieldValue(bean: userIndicatorsInstance, field: "name")}</g:link></td>
-
-                <td>${fieldValue(bean: userIndicatorsInstance, field: "double1")}</td>
-
-                <td>${fieldValue(bean: userIndicatorsInstance, field: "double2")}</td>
-
-                <td>${fieldValue(bean: userIndicatorsInstance, field: "integer1")}</td>
-
-                <td>${fieldValue(bean: userIndicatorsInstance, field: "integer2")}</td>
-
-                <td>${fieldValue(bean: userIndicatorsInstance, field: "integer3")}</td>
-
-            </tr>
-        </g:each>
-        </tbody>
-    </table>
-
-    <div class="pagination">
-        <bs:paginate total="${userIndicatorsInstanceTotal}"/>
+    <div data-ng-show="errors.showErrors" class="red">
+        <div ng-repeat="error in errors.errorMessages">
+            <strong></strong> <span ng-bind="error"></span>
+        </div>
     </div>
-</section>
 
-</body>
 
-</html>
+    <div>
+        <p></p>
+        <a class="btn btn-primary btn-primary" data-ng-click="newUserIndicators()"><span
+                class="glyphicon glyphicon-plus"></span><g:message code="default.new.label" args="['userIndicators']"
+                                                                   default="New userIndicators"/></a>
+
+        <p></p>
+    </div>
+
+    <div>
+        <div>
+            <div>
+
+                <button ng-click="tableParams.reload()" class="btn btn-default">Reload</button>
+                <button ng-click="tableParams.sorting({})" class="btn btn-default">Clear sorting</button>
+
+                <div loading-container="tableParams.settings().$loading">
+                    <table class="table" ng-table="tableParams" show-filter="true">
+                        <tr data-ng-repeat="instance in userIndicatorss" data-ng-click="editUserIndicators(instance)">
+
+                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
+                                data-title="'dateCreated'">
+
+                                {{instance.dateCreated}}
+                            </td>
+
+
+                            <td data-sortable="'double1'" data-title="'double1'">
+
+                                {{instance.double1}}
+                            </td>
+
+
+                            <td data-sortable="'double2'" data-title="'double2'">
+
+                                {{instance.double2}}
+                            </td>
+
+
+                            <td data-sortable="'integer1'" data-title="'integer1'">
+
+                                {{instance.integer1}}
+                            </td>
+
+
+                            <td data-sortable="'integer2'" data-title="'integer2'">
+
+                                {{instance.integer2}}
+                            </td>
+
+
+                            <td data-sortable="'integer3'" data-title="'integer3'">
+
+                                {{instance.integer3}}
+                            </td>
+
+
+                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
+
+                                {{instance.lastUpdated}}
+                            </td>
+
+
+                            <td data-sortable="'name'" data-title="'name'">
+
+                                {{instance.name}}
+                            </td>
+
+
+                            <td data-sortable="'str1'" data-title="'str1'">
+
+                                {{instance.str1}}
+                            </td>
+
+
+                            <td data-sortable="'type'" data-title="'type'">
+
+                                {{instance.type}}
+                            </td>
+
+
+                            <td data-sortable="'user'" data-title="'user'">
+
+                                {{instance.user}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

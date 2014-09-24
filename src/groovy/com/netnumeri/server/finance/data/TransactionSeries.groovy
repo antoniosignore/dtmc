@@ -1,10 +1,10 @@
 package com.netnumeri.server.finance.data
 
+import com.dtmc.finance.finpojo.Instrument
+import com.dtmc.finance.finpojo.Trade
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
-import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.finpojo.Trade
 
 public class TransactionSeries implements Serializable {
 

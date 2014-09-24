@@ -1,7 +1,6 @@
 package com.netnumeri.server.finance.indicator;
 
 
-
 public class IndicatorValue {
     private final long date;
     private final double value;

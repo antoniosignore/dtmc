@@ -1,102 +1,173 @@
 package com.dtmc.club
 
-import org.springframework.dao.DataIntegrityViolationException
+import grails.converters.JSON
+import grails.converters.XML
+import arrested.ArrestedController
+import java.text.SimpleDateFormat
 
-class ClubController {
+class ClubController extends ArrestedController {
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    def grailsApplication
 
-    def index() {
-        redirect(action: "list", params: params)
+    static allowedMethods = [show: "GET", list: "GET", save: "POST", update: "PUT", delete: "DELETE"]
+
+    def listing() {
+        withFormat {
+            html {
+                render(view: "list")
+            }
+        }
     }
 
-    def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [clubInstanceList: Club.list(params), clubInstanceTotal: Club.count()]
+    def edit() {}
+
+    def show(Long id) {
+        if (id) {
+            Club instance = Club.get(id)
+            if (instance) {
+                withFormat {
+                    xml {
+                        render instance as XML
+                    }
+                    json {
+                        render instance as JSON
+                    }
+                }
+            } else {
+                renderNotFound(id, "${message(code: 'default.Club.notfound.label', default: 'Club not found')}")
+
+            }
+        } else {
+            renderMissingParam("${message(code: 'default.id.missing.label', default: 'id missing')}")
+        }
     }
 
-    def create() {
-        [clubInstance: new Club(params)]
+    def list() {
+        def instances = Club.list()
+        withFormat {
+            xml {
+                render instances as XML
+            }
+            json {
+                render instances as JSON
+            }
+        }
     }
 
     def save() {
-        def clubInstance = new Club(params)
-        if (!clubInstance.save(flush: true)) {
-            render(view: "create", model: [clubInstance: clubInstance])
-            return
-        }
+        if (request.JSON.instance) {
+            def data = request.JSON.instance
+            Club instance = new Club()
 
-        flash.message = message(code: 'default.created.message', args: [message(code: 'club.label', default: 'Club'), clubInstance.id])
-        redirect(action: "show", id: clubInstance.id)
-    }
+            if (data.agreement) instance.agreement = data.agreement
 
-    def show(Long id) {
-        def clubInstance = Club.get(id)
-        if (!clubInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'club.label', default: 'Club'), id])
-            redirect(action: "list")
-            return
-        }
 
-        [clubInstance: clubInstance]
-    }
 
-    def edit(Long id) {
-        def clubInstance = Club.get(id)
-        if (!clubInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'club.label', default: 'Club'), id])
-            redirect(action: "list")
-            return
-        }
+            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
-        [clubInstance: clubInstance]
-    }
 
-    def update(Long id, Long version) {
-        def clubInstance = Club.get(id)
-        if (!clubInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'club.label', default: 'Club'), id])
-            redirect(action: "list")
-            return
-        }
 
-        if (version != null) {
-            if (clubInstance.version > version) {
-                clubInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                        [message(code: 'club.label', default: 'Club')] as Object[],
-                        "Another user has updated this Club while you were editing")
-                render(view: "edit", model: [clubInstance: clubInstance])
-                return
+            if (data.inauguralMeeting) instance.inauguralMeeting = setDate(data.inauguralMeeting)
+
+
+
+            if (data.joiningFee) instance.joiningFee = data.joiningFee
+
+
+
+            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+
+
+
+            if (data.monthlySubscription) instance.monthlySubscription = data.monthlySubscription
+
+
+
+            if (data.name) instance.name = data.name
+
+
+
+            if (data.yearsTimeSpan) instance.yearsTimeSpan = data.yearsTimeSpan
+
+
+
+            if (instance.save(flush: true)) {
+                withFormat {
+                    xml {
+                        response.status = 200
+                        render instance as XML
+                    }
+                    json {
+                        response.status = 200
+                        render instance as JSON
+                    }
+                }
+            } else {
+                render409orEdit(instance)
             }
+        } else {
+            renderMissingParam("${message(code: 'default.Club.missing.label', default: 'Club missing')}")
         }
+    }
 
-        clubInstance.properties = params
+    def update() {
+        if (params.instance) {
+            def data = JSON.parse(params.instance)
+            Club instance = Club.get(data.id as Long)
+            if (instance) {
+                if (data.agreement) instance.agreement = data.agreement
 
-        if (!clubInstance.save(flush: true)) {
-            render(view: "edit", model: [clubInstance: clubInstance])
-            return
+                if (data.dateCreated) instance.dateCreated = data.dateCreated
+
+                if (data.inauguralMeeting) instance.inauguralMeeting = data.inauguralMeeting
+
+                if (data.joiningFee) instance.joiningFee = data.joiningFee
+
+                if (data.lastUpdated) instance.lastUpdated = data.lastUpdated
+
+                if (data.monthlySubscription) instance.monthlySubscription = data.monthlySubscription
+
+                if (data.name) instance.name = data.name
+
+                if (data.yearsTimeSpan) instance.yearsTimeSpan = data.yearsTimeSpan
+                if (instance.save(flush: true)) {
+                    withFormat {
+                        xml {
+                            response.status = 200
+                            render instance as XML
+                        }
+                        json {
+                            response.status = 200
+                            render instance as JSON
+                        }
+                    }
+                } else {
+                    render409orEdit(instance)
+                }
+            } else {
+                renderNotFound(data.id, "${message(code: 'default.Club.notfound.label', default: 'Club not found')}")
+            }
+        } else {
+            renderMissingParam("${message(code: 'default.Club.missing.label', default: 'Club missing')}")
         }
-
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'club.label', default: 'Club'), clubInstance.id])
-        redirect(action: "show", id: clubInstance.id)
     }
 
     def delete(Long id) {
-        def clubInstance = Club.get(id)
-        if (!clubInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'club.label', default: 'Club'), id])
-            redirect(action: "list")
-            return
+        if (id) {
+            Club instance = Club.get(id)
+            if (instance) {
+                instance.delete(flush: true)
+                renderSuccess(id, "${message(code: 'default.Club.deleted.label', default: 'Club deleted')}")
+            } else {
+                renderNotFound(id, "${message(code: 'default.Club.notfound.label', default: 'Club not found')}")
+            }
+        } else {
+            renderMissingParam("${message(code: 'default.id.missing.label', default: 'id missing')}")
         }
+    }
 
-        try {
-            clubInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'club.label', default: 'Club'), id])
-            redirect(action: "list")
-        }
-        catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'club.label', default: 'Club'), id])
-            redirect(action: "show", id: id)
-        }
+    private setDate(String d) {
+        String dFormat = grailsApplication?.config.arrested.dateFormat ?: 'dd/MM/yyyy'
+        return (new SimpleDateFormat(dFormat)).parse(d)
     }
 }

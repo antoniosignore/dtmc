@@ -1,58 +1,58 @@
-<%@ page import="com.netnumeri.server.finance.trading.StrategyExecution" %>
-<!doctype html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'strategyExecution.label', default: 'StrategyExecution')}"/>
-    <title><g:message code="default.list.label" args="[entityName]"/></title>
-</head>
+<div data-ng-controller="StrategyExecutionCtrl">
+    <h1>StrategyExecution List</h1>
 
-<body>
-
-<section id="list-strategyExecution" class="first">
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-
-            <g:sortableColumn property="dateCreated"
-                              title="${message(code: 'strategyExecution.dateCreated.label', default: 'Date Created')}"/>
-
-            <th><g:message code="strategyExecution.instrument.label" default="Instrument"/></th>
-
-            <g:sortableColumn property="lastUpdated"
-                              title="${message(code: 'strategyExecution.lastUpdated.label', default: 'Last Updated')}"/>
-
-            <g:sortableColumn property="name"
-                              title="${message(code: 'strategyExecution.name.label', default: 'Name')}"/>
-
-            <th><g:message code="strategyExecution.user.label" default="User"/></th>
-
-        </tr>
-        </thead>
-        <tbody>
-        <g:each in="${strategyExecutionInstanceList}" status="i" var="strategyExecutionInstance">
-            <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-
-                <td><g:link action="show"
-                            id="${strategyExecutionInstance.id}">${fieldValue(bean: strategyExecutionInstance, field: "dateCreated")}</g:link></td>
-
-                <td>${fieldValue(bean: strategyExecutionInstance, field: "instrument")}</td>
-
-                <td><g:formatDate date="${strategyExecutionInstance.lastUpdated}"/></td>
-
-                <td>${fieldValue(bean: strategyExecutionInstance, field: "name")}</td>
-
-                <td>${fieldValue(bean: strategyExecutionInstance, field: "user")}</td>
-
-            </tr>
-        </g:each>
-        </tbody>
-    </table>
-
-    <div class="pagination">
-        <dtmc:paginate total="${strategyExecutionInstanceTotal}"/>
+    <div data-ng-show="errors.showErrors" class="red">
+        <div ng-repeat="error in errors.errorMessages">
+            <strong></strong> <span ng-bind="error"></span>
+        </div>
     </div>
-</section>
-</body>
-</html>
+
+
+    <div>
+        <p></p>
+        <a class="btn btn-primary btn-primary" data-ng-click="newStrategyExecution()"><span
+                class="glyphicon glyphicon-plus"></span><g:message code="default.new.label" args="['strategyExecution']"
+                                                                   default="New strategyExecution"/></a>
+
+        <p></p>
+    </div>
+
+    <div>
+        <div>
+            <div>
+
+                <button ng-click="tableParams.reload()" class="btn btn-default">Reload</button>
+                <button ng-click="tableParams.sorting({})" class="btn btn-default">Clear sorting</button>
+
+                <div loading-container="tableParams.settings().$loading">
+                    <table class="table" ng-table="tableParams" show-filter="true">
+                        <tr data-ng-repeat="instance in strategyExecutions"
+                            data-ng-click="editStrategyExecution(instance)">
+
+                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
+                                data-title="'dateCreated'">
+
+                                {{instance.dateCreated}}
+                            </td>
+
+
+                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
+
+                                {{instance.lastUpdated}}
+                            </td>
+
+
+                            <td data-sortable="'name'" data-title="'name'">
+
+                                {{instance.name}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,7 +1,7 @@
 package com.netnumeri.server.finance.ssa
 
-import Jama.EigenvalueDecomposition
-import Jama.Matrix
+import com.netnumeri.server.finance.matrix.*
+
 
 class SSAStudy {
 

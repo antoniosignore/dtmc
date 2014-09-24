@@ -1,6 +1,6 @@
 package com.netnumeri.server.finance.ta
 
-import com.netnumeri.server.finance.finpojo.Instrument
+import com.dtmc.finance.finpojo.Instrument
 
 public class TradeListEntry {
 

@@ -1,25 +1,15 @@
 package com.netnumeri.server.utils
 
-//import com.xuggle.mediatool.demos.Balls
-//import com.xuggle.mediatool.demos.MovingBalls
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
-//import com.xuggle.mediatool.IMediaViewer;
-//import com.xuggle.mediatool.IMediaWriter;
-//import com.xuggle.mediatool.ToolFactory;
-//import com.xuggle.xuggler.IAudioSamples;
-//import static com.xuggle.xuggler.Global.DEFAULT_TIME_UNIT;
-
+import com.dtmc.finance.finpojo.Daily
+import com.dtmc.finance.finpojo.asset.*
 import com.dtmc.gson.DailyGSON
+import com.dtmc.trading.Signal
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
-import com.netnumeri.server.finance.finpojo.Daily
-import com.netnumeri.server.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.strategy.Strategy
-import com.netnumeri.server.finance.trading.Signal
 import com.netnumeri.server.finance.ta.Indicator
 import com.netnumeri.server.finance.ta.TradeInfo
 import com.netnumeri.server.finance.ta.TradeListEntry
@@ -169,7 +159,6 @@ class StockUtils {
         }
         sb.append("]")
         FileUtils.writeStringToFile(new File(name + ".txt"), sb.toString())
-
     }
 
     static String lastDate(Stock stock) {
@@ -182,7 +171,7 @@ class StockUtils {
         return sdf.format(stock.lastDate())
     }
 
-    static String getCandleStickPlot(Stock stock) {
+    static String candleStickPlot(Stock stock) {
         GenericTimeSeries<Daily> dailyarray = stock.dailyarray;
         Date startDate = dailyarray.firstDate()
         Date last = dailyarray.lastDate()

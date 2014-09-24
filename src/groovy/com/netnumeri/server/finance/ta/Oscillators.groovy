@@ -42,7 +42,8 @@ public class Oscillators implements Serializable {
         }
     }
 
-    public static double[] moneyFlowIndexOverPeriod(double[] high, double[] low, double[] close, double[] volume, int period) {
+    public
+    static double[] moneyFlowIndexOverPeriod(double[] high, double[] low, double[] close, double[] volume, int period) {
         if (high.length != low.length || low.length != volume.length || volume.length != close.length) {
             throw new IllegalArgumentException("The length of the high, low, close, and volume series must be the same.");
         }
@@ -70,6 +71,7 @@ public class Oscillators implements Serializable {
         if (closePrice < 0.0D) {
             throw new IllegalArgumentException("The closing price of an asset must have been positive.");
         }
+
         if (priceNDaysAgo < 0.0D) {
             throw new IllegalArgumentException("The price n days ago of an asset must have been positive.");
         } else {

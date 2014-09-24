@@ -1,34 +1,27 @@
 package com.dtmc.club
 
-import com.netnumeri.server.enums.RiskEnum
 
 class Club implements Serializable {
 
-    String name
-
-    Integer yearsTimeSpan
-
-    Date inauguralMeeting
-
-    RiskEnum risk
-
     static hasMany = [members: Member]
 
+    String name
+    Integer yearsTimeSpan
+    Date inauguralMeeting
     Double monthlySubscription
     Double joiningFee
-
     Date dateCreated
     Date lastUpdated
-
-    static hasOne = [banker: Banker, broker: Broker, legalStructure: LegalStructure]
-
     byte[] agreement
 
-    static mapping = {
+    static constraints = {
+        agreement blank: true, nullable: true
+        inauguralMeeting blank: true, nullable: true
+        joiningFee blank: true, nullable: true
+        monthlySubscription blank: true, nullable: true
+        yearsTimeSpan blank: true, nullable: true
     }
 
-    static constraints = {
-    }
 
     @Override
     public String toString() {

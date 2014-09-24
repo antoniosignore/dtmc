@@ -1,43 +1,102 @@
-<%@ page import="com.netnumeri.server.finance.trading.StrategySubscription" %>
-<!doctype html>
-<html>
+<div data-ng-show="errors.showErrors" class="red">
+    <div ng-repeat="error in errors.errorMessages">
+        <strong></strong> <span ng-bind="error"></span>
+    </div>
+</div>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'strategySubscription.label', default: 'StrategySubscription')}"/>
-    <title><g:message code="default.edit.label" args="[entityName]"/></title>
-</head>
 
-<body>
+<div class="container" data-ng-controller="StrategySubscriptionCtrl">
+    <div class="small-12 columns">
+        <div class="panel panel-default">
+            <div class="panel-body">
 
-<section id="edit-strategySubscription" class="first">
+                <h5 class="text-center">StrategySubscription Edit</h5>
 
-    <g:hasErrors bean="${strategySubscriptionInstance}">
-        <div class="alert alert-error">
-            <g:renderErrors bean="${strategySubscriptionInstance}" as="list"/>
+
+                <form name="strategySubscriptionForm" novalidate>
+
+                    <div>
+                        <p></p>
+                        <a class="btn btn-primary btn-primary" data-ng-click="newStrategySubscription()"><span
+                                class="glyphicon glyphicon-plus"></span><g:message code="default.new.label"
+                                                                                   args="['strategySubscription', 'BB']"
+                                                                                   default="New strategySubscription"/>
+                        </a>
+                        <a class="btn btn-primary btn-primary"
+                           onclick="window.location.href = '#/strategySubscription/list'"
+                           title="${message(code: 'default.list.label', args: ['StrategySubscription'], default: 'List')}"><span
+                                class="glyphicon glyphicon-align-justify"></span>    <g:message
+                                code="default.list.label" args="['StrategySubscription']" default="List"/></a>
+                        <a class="btn btn-primary btn-success" data-ng-hide="strategySubscription.id"
+                           ng-disabled="strategySubscriptionForm.$invalid"
+                           title="${message(code: 'default.save.label', args: ['StrategySubscription'], default: 'Save')}"
+                           ng-enabled="!strategySubscriptionForm.$invalid"
+                           data-ng-click="manualSaveStrategySubscription()"><span
+                                class="glyphicon glyphicon-floppy-disk"></span> <g:message code="default.save.label"
+                                                                                           args="['StrategySubscription']"
+                                                                                           default="Save"/></a>
+                        <a class="btn btn-primary btn-success" data-ng-show="strategySubscription.id"
+                           ng-disabled="strategySubscriptionForm.$invalid"
+                           title="${message(code: 'default.update.label', args: ['StrategySubscription'], default: 'Update')}"
+                           ng-enabled="!strategySubscriptionForm.$invalid"
+                           data-ng-click="manualSaveStrategySubscription()"><span
+                                class="glyphicon glyphicon-floppy-disk"></span> <g:message code="default.update.label"
+                                                                                           args="['StrategySubscription']"
+                                                                                           default="Update"/></a>
+                        <a class="btn btn-primary btn-danger" data-ng-show="strategySubscription.id"
+                           title="${message(code: 'default.delete.label', args: ['StrategySubscription'], default: 'Delete')}"
+                           data-ng-click="confirmDeleteStrategySubscription()"><span
+                                class="glyphicon glyphicon-trash"></span> <g:message code="default.delete.label"
+                                                                                     args="['StrategySubscription']"
+                                                                                     default="Delete"/></a>
+
+                    </p>
+                    </div>
+
+                    <div>
+
+                        <div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="dateCreated">
+                                    dateCreated
+                                </label>
+                                <input type="date" name="dateCreated" precision="null"
+                                       data-ng-model='strategySubscription.dateCreated'/>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="lastUpdated">
+                                    lastUpdated
+                                </label>
+                                <input type="date" name="lastUpdated" precision="null"
+                                       data-ng-model='strategySubscription.lastUpdated'/>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="strategy">
+                                    strategy
+                                </label>
+                                <select id="strategy" name="strategy.id" data-ng-model='strategySubscription.strategy'
+                                        data-ng-controller="StrategyCatalogCtrl" data-ng-init="getAllStrategyCatalog()"
+                                        ng-options="c.id for c in strategycatalogs track by c.id" required=""
+                                        class="many-to-one"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="user">
+                                    user
+                                </label>
+                                <select id="user" name="user.id" data-ng-model='strategySubscription.user'
+                                        data-ng-controller="MemberCtrl" data-ng-init="getAllMember()"
+                                        ng-options="c.id for c in members track by c.id" required=""
+                                        class="many-to-one"/>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </g:hasErrors>
-
-    <g:form method="post" class="form-horizontal">
-        <g:hiddenField name="id" value="${strategySubscriptionInstance?.id}"/>
-        <g:hiddenField name="version" value="${strategySubscriptionInstance?.version}"/>
-        <fieldset class="form">
-            <g:render template="form"/>
-        </fieldset>
-
-        <div class="form-actions">
-            <g:actionSubmit class="btn btn-primary" action="update"
-                            value="${message(code: 'default.button.update.label', default: 'Update')}"/>
-            <g:actionSubmit class="btn btn-danger" action="delete"
-                            value="${message(code: 'default.button.delete.label', default: 'Delete')}"
-                            onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
-            <button class="btn" type="reset"><g:message code="default.button.reset.label" default="Reset"/></button>
-        </div>
-    </g:form>
-
-</section>
-
-</body>
-
-</html>
+    </div>
+</div>

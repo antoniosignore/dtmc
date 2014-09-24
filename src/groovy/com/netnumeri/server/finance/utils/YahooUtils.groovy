@@ -1,10 +1,8 @@
-package com.netnumeri.server.finance.utils;
+package com.netnumeri.server.finance.utils
 
-
-import com.netnumeri.server.finance.beans.FinConstants
-import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.finpojo.asset.Asset
-import com.netnumeri.server.finance.finpojo.asset.Stock
+import com.dtmc.finance.finpojo.Instrument
+import com.dtmc.finance.finpojo.asset.Asset
+import com.dtmc.finance.finpojo.asset.Stock;
 
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -230,8 +228,7 @@ public class YahooUtils {
             Date yahoo = DateUtils.toYahoo(date)
 
             println "yahoo = $yahoo"
-
-            instrument.addDaily(yahoo, high, low, open, close, (int) volume, 0, FinConstants.VALID);
+            instrument.addDaily(yahoo, high, low, open, close, (int) volume, 0);
         }
         NetUtils.closeURL(is);
     }

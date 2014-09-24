@@ -1,53 +1,65 @@
-<%@ page import="com.netnumeri.server.finance.trading.StrategySubscription" %>
-<!doctype html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'strategySubscription.label', default: 'StrategySubscription')}"/>
-    <title><g:message code="default.list.label" args="[entityName]"/></title>
-</head>
+<div data-ng-controller="StrategySubscriptionCtrl">
+    <h1>StrategySubscription List</h1>
 
-<body>
-
-<section id="list-strategySubscription" class="first">
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-
-            <g:sortableColumn property="dateCreated"
-                              title="${message(code: 'strategySubscription.dateCreated.label', default: 'Date Created')}"/>
-
-            <g:sortableColumn property="lastUpdated"
-                              title="${message(code: 'strategySubscription.lastUpdated.label', default: 'Last Updated')}"/>
-
-            <th><g:message code="strategySubscription.strategy.label" default="Strategy"/></th>
-
-            <th><g:message code="strategySubscription.user.label" default="User"/></th>
-
-        </tr>
-        </thead>
-        <tbody>
-        <g:each in="${strategySubscriptionInstanceList}" status="i" var="strategySubscriptionInstance">
-            <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-
-                <td><g:link action="show"
-                            id="${strategySubscriptionInstance.id}">${fieldValue(bean: strategySubscriptionInstance, field: "dateCreated")}</g:link></td>
-
-                <td><g:formatDate date="${strategySubscriptionInstance.lastUpdated}"/></td>
-
-                <td>${fieldValue(bean: strategySubscriptionInstance, field: "strategy")}</td>
-
-                <td>${fieldValue(bean: strategySubscriptionInstance, field: "user")}</td>
-
-            </tr>
-        </g:each>
-        </tbody>
-    </table>
-
-    <div class="pagination">
-        <dtmc:paginate total="${strategySubscriptionInstanceTotal}"/>
+    <div data-ng-show="errors.showErrors" class="red">
+        <div ng-repeat="error in errors.errorMessages">
+            <strong></strong> <span ng-bind="error"></span>
+        </div>
     </div>
-</section>
-</body>
-</html>
+
+
+    <div>
+        <p></p>
+        <a class="btn btn-primary btn-primary" data-ng-click="newStrategySubscription()"><span
+                class="glyphicon glyphicon-plus"></span><g:message code="default.new.label"
+                                                                   args="['strategySubscription']"
+                                                                   default="New strategySubscription"/></a>
+
+        <p></p>
+    </div>
+
+    <div>
+        <div>
+            <div>
+
+                <button ng-click="tableParams.reload()" class="btn btn-default">Reload</button>
+                <button ng-click="tableParams.sorting({})" class="btn btn-default">Clear sorting</button>
+
+                <div loading-container="tableParams.settings().$loading">
+                    <table class="table" ng-table="tableParams" show-filter="true">
+                        <tr data-ng-repeat="instance in strategySubscriptions"
+                            data-ng-click="editStrategySubscription(instance)">
+
+                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
+                                data-title="'dateCreated'">
+
+                                {{instance.dateCreated}}
+                            </td>
+
+
+                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
+
+                                {{instance.lastUpdated}}
+                            </td>
+
+
+                            <td data-sortable="'strategy'" data-title="'strategy'">
+
+                                {{instance.strategy}}
+                            </td>
+
+
+                            <td data-sortable="'user'" data-title="'user'">
+
+                                {{instance.user}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

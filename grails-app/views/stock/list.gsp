@@ -1,57 +1,63 @@
-<%@ page import="com.netnumeri.server.finance.finpojo.asset.Stock" %>
-<!doctype html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'stock.label', default: 'Stock')}"/>
-    <title><g:message code="default.list.label" args="[entityName]"/></title>
-</head>
+<div data-ng-controller="StockCtrl">
+    <h1>Stock List</h1>
 
-<body>
-
-<section id="list-stock" class="first">
-
-    <table class="table table-striped table-bordered table-condensed table-hover">
-        <thead>
-        <tr>
-
-            <g:sortableColumn property="name" title="${message(code: 'stock.name.label', default: 'Name')}"/>
-
-            <g:sortableColumn property="description"
-                              title="${message(code: 'stock.description.label', default: 'Description')}"/>
-
-            <g:sortableColumn property="dateCreated"
-                              title="${message(code: 'stock.dateCreated.label', default: 'Date Created')}"/>
-
-            <g:sortableColumn property="lastUpdated"
-                              title="${message(code: 'stock.lastUpdated.label', default: 'Last Updated')}"/>
-
-        </tr>
-        </thead>
-        <tbody>
-        <g:each in="${stockInstanceList}" status="i" var="stockInstance">
-            <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-
-                <td><g:link action="show"
-                            id="${stockInstance.id}">${fieldValue(bean: stockInstance, field: "name")}</g:link></td>
-
-                <td>${fieldValue(bean: stockInstance, field: "description")}</td>
-
-                <td>${fieldValue(bean: stockInstance, field: "dateCreated")}</td>
-
-                <td>${fieldValue(bean: stockInstance, field: "lastUpdated")}</td>
-
-            </tr>
-        </g:each>
-        </tbody>
-    </table>
-
-    <div class="pagination">
-        <dtmc:paginate total="${stockInstanceTotal}"/>
+    <div data-ng-show="errors.showErrors" class="red">
+        <div ng-repeat="error in errors.errorMessages">
+            <strong></strong> <span ng-bind="error"></span>
+        </div>
     </div>
-</section>
 
-</body>
 
-</html>
+    <div>
+        <p></p>
+        <a class="btn btn-primary btn-primary" data-ng-click="newStock()"><span
+                class="glyphicon glyphicon-plus"></span><g:message code="default.new.label" args="['stock']"
+                                                                   default="New stock"/></a>
+
+        <p></p>
+    </div>
+
+    <div>
+        <div>
+            <div>
+
+                <button ng-click="tableParams.reload()" class="btn btn-default">Reload</button>
+                <button ng-click="tableParams.sorting({})" class="btn btn-default">Clear sorting</button>
+
+                <div loading-container="tableParams.settings().$loading">
+                    <table class="table" ng-table="tableParams" show-filter="true">
+                        <tr data-ng-repeat="instance in stocks" data-ng-click="editStock(instance)">
+
+                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
+                                data-title="'dateCreated'">
+
+                                {{instance.dateCreated}}
+                            </td>
+
+
+                            <td data-sortable="'description'" data-title="'description'">
+
+                                {{instance.description}}
+                            </td>
+
+
+                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
+
+                                {{instance.lastUpdated}}
+                            </td>
+
+
+                            <td data-sortable="'name'" data-title="'name'">
+
+                                {{instance.name}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

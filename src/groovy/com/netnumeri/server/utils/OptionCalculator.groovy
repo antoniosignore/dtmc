@@ -1,10 +1,9 @@
-package com.netnumeri.server.utils;
+package com.netnumeri.server.utils
 
-
-import com.netnumeri.server.entity.OptionType
+import com.dtmc.finance.finpojo.Instrument
+import com.dtmc.finance.finpojo.derivative.equity.Vanilla;
+import com.netnumeri.server.enums.OptionType
 import com.netnumeri.server.finance.beans.FinConstants
-import com.netnumeri.server.finance.finpojo.Instrument
-import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
 import com.netnumeri.server.finance.math.FinMath
 import com.netnumeri.server.finance.math.FinRecipes
 
@@ -303,9 +302,7 @@ public class OptionCalculator {
         return -1;
     }
 
-    public double modelPrice(int model,
-                             double price,
-                             double days) {
+    public double modelPrice(int model, double price, double days) {
         if (model == FinConstants.BlackScholes) {
             return blackScholesPrice(price, days);
         }

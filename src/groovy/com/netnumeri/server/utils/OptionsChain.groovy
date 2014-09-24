@@ -1,6 +1,7 @@
 package com.netnumeri.server.utils
 
-import com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla
+import com.dtmc.finance.finpojo.derivative.equity.Vanilla
+
 
 public class OptionsChain implements Serializable {
 

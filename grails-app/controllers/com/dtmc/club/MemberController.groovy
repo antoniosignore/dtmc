@@ -1,122 +1,249 @@
 package com.dtmc.club
 
-import org.springframework.dao.DataIntegrityViolationException
+import grails.converters.JSON
+import grails.converters.XML
+import arrested.ArrestedController
+import java.text.SimpleDateFormat
 
-class MemberController {
+class MemberController extends ArrestedController {
 
-    def springSecurityService
+    def grailsApplication
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    static allowedMethods = [show: "GET", list: "GET", save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index() {
-        redirect(action: "list", params: params)
+    def listing() {
+        withFormat {
+            html {
+                render(view: "list")
+            }
+        }
     }
 
-    def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [memberInstanceList: Member.list(params), memberInstanceTotal: Member.count()]
+    def edit() {}
+
+    def show(Long id) {
+        if (id) {
+            Member instance = Member.get(id)
+            if (instance) {
+                withFormat {
+                    xml {
+                        render instance as XML
+                    }
+                    json {
+                        render instance as JSON
+                    }
+                }
+            } else {
+                renderNotFound(id, "${message(code: 'default.Member.notfound.label', default: 'Member not found')}")
+
+            }
+        } else {
+            renderMissingParam("${message(code: 'default.id.missing.label', default: 'id missing')}")
+        }
     }
 
-    def create() {
-        [memberInstance: new Member(params)]
+    def list() {
+        def instances = Member.list()
+        withFormat {
+            xml {
+                render instances as XML
+            }
+            json {
+                render instances as JSON
+            }
+        }
     }
 
     def save() {
-        def memberInstance = new Member(params)
-        if (!memberInstance.save(flush: true)) {
-            render(view: "create", model: [memberInstance: memberInstance])
-            return
-        }
+        if (request.JSON.instance) {
+            def data = request.JSON.instance
+            Member instance = new Member()
 
-        flash.message = message(code: 'default.created.message', args: [message(code: 'member.label', default: 'Member'), memberInstance.id])
-        redirect(action: "show", id: memberInstance.id)
-    }
+            if (data.address1) instance.address1 = data.address1
 
-    def show(Long id) {
 
-        def memberInstance
-        if (!id) {
-            def grailsuser = springSecurityService.principal
-            memberInstance = Member.get(grailsuser.id)
 
-        } else {
-            memberInstance = Member.get(id)
-        }
+            if (data.address2) instance.address2 = data.address2
 
-        if (!memberInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'member.label', default: 'Member'), id])
-            redirect(action: "list")
-            return
-        }
 
-        [memberInstance: memberInstance]
-    }
 
-    def edit(Long id) {
+            if (data.city) instance.city = data.city
 
-        def memberInstance
-        if (!id) {
-            def grailsuser = springSecurityService.principal
-            memberInstance = Member.get(grailsuser.id)
 
-        } else {
-            memberInstance = Member.get(id)
-        }
+            if (data.club) instance.club = com.dtmc.club.Club.get(data.club.id as Long)
 
-        if (!memberInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'member.label', default: 'Member'), id])
-            redirect(action: "list")
-            return
-        }
 
-        [memberInstance: memberInstance]
-    }
+            if (data.company) instance.company = data.company
 
-    def update(Long id, Long version) {
-        def memberInstance = Member.get(id)
-        if (!memberInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'member.label', default: 'Member'), id])
-            redirect(action: "list")
-            return
-        }
 
-        if (version != null) {
-            if (memberInstance.version > version) {
-                memberInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                        [message(code: 'member.label', default: 'Member')] as Object[],
-                        "Another user has updated this Member while you were editing")
-                render(view: "edit", model: [memberInstance: memberInstance])
-                return
+
+            if (data.country) instance.country = data.country
+
+
+
+            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+
+
+
+            if (data.email) instance.email = data.email
+
+
+
+            if (data.facebook) instance.facebook = data.facebook
+
+
+
+            if (data.firstname) instance.firstname = data.firstname
+
+
+
+            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+
+
+
+            if (data.lastname) instance.lastname = data.lastname
+
+
+
+            if (data.linkedin) instance.linkedin = data.linkedin
+
+
+
+            if (data.mobile) instance.mobile = data.mobile
+
+
+
+            if (data.passwordHash) instance.passwordHash = data.passwordHash
+
+
+
+            if (data.phone) instance.phone = data.phone
+
+
+
+            if (data.state) instance.state = data.state
+
+
+
+            if (data.timezone) instance.timezone = data.timezone
+
+
+
+            if (data.token) instance.token = data.token
+
+
+
+            if (data.twitter) instance.twitter = data.twitter
+
+
+
+            if (data.username) instance.username = data.username
+
+
+
+            if (instance.save(flush: true)) {
+                withFormat {
+                    xml {
+                        response.status = 200
+                        render instance as XML
+                    }
+                    json {
+                        response.status = 200
+                        render instance as JSON
+                    }
+                }
+            } else {
+                render409orEdit(instance)
             }
+        } else {
+            renderMissingParam("${message(code: 'default.Member.missing.label', default: 'Member missing')}")
         }
+    }
 
-        memberInstance.properties = params
+    def update() {
+        if (params.instance) {
+            def data = JSON.parse(params.instance)
+            Member instance = Member.get(data.id as Long)
+            if (instance) {
+                if (data.address1) instance.address1 = data.address1
 
-        if (!memberInstance.save(flush: true)) {
-            render(view: "edit", model: [memberInstance: memberInstance])
-            return
+                if (data.address2) instance.address2 = data.address2
+
+                if (data.city) instance.city = data.city
+
+                if (data.club) instance.club = com.dtmc.club.Club.get(data.club.id as Long)
+
+                if (data.company) instance.company = data.company
+
+                if (data.country) instance.country = data.country
+
+                if (data.dateCreated) instance.dateCreated = data.dateCreated
+
+                if (data.email) instance.email = data.email
+
+                if (data.facebook) instance.facebook = data.facebook
+
+                if (data.firstname) instance.firstname = data.firstname
+
+                if (data.lastUpdated) instance.lastUpdated = data.lastUpdated
+
+                if (data.lastname) instance.lastname = data.lastname
+
+                if (data.linkedin) instance.linkedin = data.linkedin
+
+                if (data.mobile) instance.mobile = data.mobile
+
+                if (data.passwordHash) instance.passwordHash = data.passwordHash
+
+                if (data.phone) instance.phone = data.phone
+
+                if (data.state) instance.state = data.state
+
+                if (data.timezone) instance.timezone = data.timezone
+
+                if (data.token) instance.token = data.token
+
+                if (data.twitter) instance.twitter = data.twitter
+
+                if (data.username) instance.username = data.username
+                if (instance.save(flush: true)) {
+                    withFormat {
+                        xml {
+                            response.status = 200
+                            render instance as XML
+                        }
+                        json {
+                            response.status = 200
+                            render instance as JSON
+                        }
+                    }
+                } else {
+                    render409orEdit(instance)
+                }
+            } else {
+                renderNotFound(data.id, "${message(code: 'default.Member.notfound.label', default: 'Member not found')}")
+            }
+        } else {
+            renderMissingParam("${message(code: 'default.Member.missing.label', default: 'Member missing')}")
         }
-
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'member.label', default: 'Member'), memberInstance.id])
-        redirect(action: "show", id: memberInstance.id)
     }
 
     def delete(Long id) {
-        def memberInstance = Member.get(id)
-        if (!memberInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'member.label', default: 'Member'), id])
-            redirect(action: "list")
-            return
+        if (id) {
+            Member instance = Member.get(id)
+            if (instance) {
+                instance.delete(flush: true)
+                renderSuccess(id, "${message(code: 'default.Member.deleted.label', default: 'Member deleted')}")
+            } else {
+                renderNotFound(id, "${message(code: 'default.Member.notfound.label', default: 'Member not found')}")
+            }
+        } else {
+            renderMissingParam("${message(code: 'default.id.missing.label', default: 'id missing')}")
         }
+    }
 
-        try {
-            memberInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'member.label', default: 'Member'), id])
-            redirect(action: "list")
-        }
-        catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'member.label', default: 'Member'), id])
-            redirect(action: "show", id: id)
-        }
+    private setDate(String d) {
+        String dFormat = grailsApplication?.config.arrested.dateFormat ?: 'dd/MM/yyyy'
+        return (new SimpleDateFormat(dFormat)).parse(d)
     }
 }

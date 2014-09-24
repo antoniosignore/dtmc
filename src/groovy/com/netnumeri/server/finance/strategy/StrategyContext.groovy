@@ -1,12 +1,11 @@
 package com.netnumeri.server.finance.strategy;
 
-import com.netnumeri.server.finance.finpojo.Bet
-import com.netnumeri.server.finance.finpojo.Forecast
+import com.dtmc.finance.finpojo.Bet
+import com.dtmc.finance.finpojo.Forecast
 import com.netnumeri.server.finance.strategy.bearish.*
 
 import com.netnumeri.server.finance.strategy.bullish.LongCall
 import com.netnumeri.server.finance.strategy.bullish.LongShares
-
 
 public class StrategyContext {
 
@@ -19,12 +18,9 @@ public class StrategyContext {
 
         strategy.add(new ShortShares())
         strategy.add(new LongPut())
-
-
     }
 
     public static List<Bet> evaluateStrategy(Forecast forecast) {
-
 
         ForecastType type = ForecastType.neutral
         if (forecast.percent > 0.05) type = ForecastType.bullish

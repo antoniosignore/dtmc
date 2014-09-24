@@ -1,58 +1,116 @@
-<%@ page import="com.netnumeri.server.finance.finpojo.derivative.equity.Vanilla" %>
-<!doctype html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="kickstart"/>
-    <g:set var="entityName" value="${message(code: 'vanilla.label', default: 'Vanilla')}"/>
-    <title><g:message code="default.list.label" args="[entityName]"/></title>
-</head>
+<div data-ng-controller="VanillaCtrl">
+    <h1>Vanilla List</h1>
 
-<body>
-
-<section id="list-vanilla" class="first">
-
-    <table class="table table-striped table-bordered table-condensed table-hover">
-        <thead>
-        <tr>
-
-            <g:sortableColumn property="dateCreated"
-                              title="${message(code: 'vanilla.dateCreated.label', default: 'Date Created')}"/>
-
-            <g:sortableColumn property="interestRate"
-                              title="${message(code: 'vanilla.interestRate.label', default: 'Interest Rate')}"/>
-
-            <g:sortableColumn property="lastUpdated"
-                              title="${message(code: 'vanilla.lastUpdated.label', default: 'Last Updated')}"/>
-
-            <g:sortableColumn property="name"
-                              title="${message(code: 'vanilla.name.label', default: 'Name')}"/>
-
-        </tr>
-        </thead>
-        <tbody>
-        <g:each in="${vanillaInstanceList}" status="i" var="vanillaInstance">
-            <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-
-                <td><g:link action="show"
-                            id="${vanillaInstance.id}">${fieldValue(bean: vanillaInstance, field: "dateCreated")}</g:link></td>
-
-                <td>${fieldValue(bean: vanillaInstance, field: "interestRate")}</td>
-
-                <td><g:formatDate date="${vanillaInstance.lastUpdated}"/></td>
-
-                <td>${fieldValue(bean: vanillaInstance, field: "name")}</td>
-
-            </tr>
-        </g:each>
-        </tbody>
-    </table>
-
-    <div class="pagination">
-        <bs:paginate total="${vanillaInstanceTotal}"/>
+    <div data-ng-show="errors.showErrors" class="red">
+        <div ng-repeat="error in errors.errorMessages">
+            <strong></strong> <span ng-bind="error"></span>
+        </div>
     </div>
-</section>
 
-</body>
 
-</html>
+    <div>
+        <p></p>
+        <a class="btn btn-primary btn-primary" data-ng-click="newVanilla()"><span
+                class="glyphicon glyphicon-plus"></span><g:message code="default.new.label" args="['vanilla']"
+                                                                   default="New vanilla"/></a>
+
+        <p></p>
+    </div>
+
+    <div>
+        <div>
+            <div>
+
+                <button ng-click="tableParams.reload()" class="btn btn-default">Reload</button>
+                <button ng-click="tableParams.sorting({})" class="btn btn-default">Clear sorting</button>
+
+                <div loading-container="tableParams.settings().$loading">
+                    <table class="table" ng-table="tableParams" show-filter="true">
+                        <tr data-ng-repeat="instance in vanillas" data-ng-click="editVanilla(instance)">
+
+                            <td data-sortable="'change'" filter="{'change':'text'}" data-title="'change'">
+
+                                {{instance.change}}
+                            </td>
+
+
+                            <td data-sortable="'contractSize'" data-title="'contractSize'">
+
+                                {{instance.contractSize}}
+                            </td>
+
+
+                            <td data-sortable="'dateCreated'" data-title="'dateCreated'">
+
+                                {{instance.dateCreated}}
+                            </td>
+
+
+                            <td data-sortable="'dividend'" data-title="'dividend'">
+
+                                {{instance.dividend}}
+                            </td>
+
+
+                            <td data-sortable="'expiration'" data-title="'expiration'">
+
+                                {{instance.expiration}}
+                            </td>
+
+
+                            <td data-sortable="'interestRate'" data-title="'interestRate'">
+
+                                {{instance.interestRate}}
+                            </td>
+
+
+                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
+
+                                {{instance.lastUpdated}}
+                            </td>
+
+
+                            <td data-sortable="'name'" data-title="'name'">
+
+                                {{instance.name}}
+                            </td>
+
+
+                            <td data-sortable="'openInterest'" data-title="'openInterest'">
+
+                                {{instance.openInterest}}
+                            </td>
+
+
+                            <td data-sortable="'premium'" data-title="'premium'">
+
+                                {{instance.premium}}
+                            </td>
+
+
+                            <td data-sortable="'strike'" data-title="'strike'">
+
+                                {{instance.strike}}
+                            </td>
+
+
+                            <td data-sortable="'type'" data-title="'type'">
+
+                                {{instance.type}}
+                            </td>
+
+
+                            <td data-sortable="'underlying'" data-title="'underlying'">
+
+                                {{instance.underlying}}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
