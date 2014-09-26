@@ -17,7 +17,7 @@
 import org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationContextAware
 
-/**
+ /**
  * @author Sergey Nebolsin (nebolsin@prophotos.ru)
  * @author Finn Herpich (finn.herpich <at> marfinn-software <dot> de)
  */
@@ -53,7 +53,7 @@ class JQueryTagLib implements ApplicationContextAware {
      * Adds the jQuery().ready function to the code
      *
      * @param attrs No use
-     * @param body The javascript code to execute
+     * @param body  The javascript code to execute
      */
     def jquery = { attrs, body ->
         out << '<script type="text/javascript">jQuery(function(){'
@@ -76,9 +76,7 @@ class JQueryTagLib implements ApplicationContextAware {
         if (!attrs.speed) attrs.speed = 'normal'
 
         // out
-        out << /jQuery("#${attrs['sourceId']}").${attrs['event']}(function(){jQuery("#${attrs['targetId']}").toggle("${
-            attrs['speed']
-        }"); return false; });/
+        out << /jQuery("#${attrs['sourceId']}").${attrs['event']}(function(){jQuery("#${attrs['targetId']}").toggle("${attrs['speed']}"); return false; });/
     }
 
     /**
@@ -104,8 +102,6 @@ class JQueryTagLib implements ApplicationContextAware {
 
     def toggleelement = { attrs ->
         log.info('toggleelement is deprecated, please use toggle instead')
-        out << /jQuery("#${attrs['linkId']}").${attrs['event']}(function(){ jQuery("#${attrs['elementId']}").toggle("${
-            attrs['speed']
-        }"); return false; });/
+        out << /jQuery("#${attrs['linkId']}").${attrs['event']}(function(){ jQuery("#${attrs['elementId']}").toggle("${attrs['speed']}"); return false; });/
     }
 }
