@@ -3,14 +3,46 @@ import com.dtmc.club.Club
 import com.dtmc.club.Member
 import com.dtmc.finance.finpojo.Portfolio
 import com.dtmc.finance.finpojo.asset.Stock
-import com.dtmc.indicator.UserIndicators
-import com.netnumeri.server.enums.IndicatorEnum
 import com.netnumeri.server.enums.PortfolioTypeEnum
+import grails.converters.JSON
 import org.apache.shiro.crypto.hash.Sha256Hash
 
 class BootStrap {
 
     def init = { servletContext ->
+
+        JSON.registerObjectMarshaller(Club) { Club club ->
+            return [
+                    id                 : club.id,
+                    yearsTimeSpan      : club.yearsTimeSpan,
+                    inauguralMeeting   : club.inauguralMeeting,
+                    monthlySubscription: club.monthlySubscription,
+                    joiningFee         : club.joiningFee,
+                    dateCreated        : club.dateCreated,
+                    lastUpdated        : club.lastUpdated
+            ]
+        }
+
+        JSON.registerObjectMarshaller(Member) { Member member ->
+            return [
+                    id       : member.id,
+                    firstname: member.firstname,
+                    lastname : member.lastname,
+                    address1 : member.address1,
+                    address2 : member.address2,
+                    city     : member.city,
+                    state    : member.state,
+                    country  : member.country,
+                    company  : member.company,
+                    email    : member.email,
+                    phone    : member.phone,
+                    mobile   : member.mobile,
+                    twitter  : member.twitter,
+                    facebook : member.facebook,
+                    linkedin : member.linkedin,
+                    timezone : member.timezone
+            ]
+        }
 
         Member adminUser
         ArrestedToken token
