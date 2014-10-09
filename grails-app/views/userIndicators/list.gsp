@@ -1,3 +1,4 @@
+
 <div data-ng-controller="UserIndicatorsCtrl">
     <h1>UserIndicators List</h1>
 
@@ -28,12 +29,12 @@
                     <table class="table" ng-table="tableParams" show-filter="true">
                         <tr data-ng-repeat="instance in userIndicatorss" data-ng-click="editUserIndicators(instance)">
 
-                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
-                                data-title="'dateCreated'">
-
-                                {{instance.dateCreated}}
-                            </td>
-
+                            %{--<td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"--}%
+                                %{--data-title="'dateCreated'">--}%
+%{----}%
+                                %{--{{instance.dateCreated}}--}%
+                            %{--</td>--}%
+%{----}%
 
                             <td data-sortable="'double1'" data-title="'double1'">
 
@@ -65,10 +66,10 @@
                             </td>
 
 
-                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
-
-                                {{instance.lastUpdated}}
-                            </td>
+                            %{--<td data-sortable="'lastUpdated'" data-title="'lastUpdated'">--}%
+%{----}%
+                                %{--{{instance.lastUpdated}}--}%
+                            %{--</td>--}%
 
 
                             <td data-sortable="'name'" data-title="'name'">
@@ -101,5 +102,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>

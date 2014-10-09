@@ -64,10 +64,10 @@
                             </td>
 
 
-                            <td data-sortable="'dateCreated'" data-title="'dateCreated'">
-
-                                {{instance.dateCreated}}
-                            </td>
+                            %{--<td data-sortable="'dateCreated'" data-title="'dateCreated'">--}%
+%{----}%
+                                %{--{{instance.dateCreated}}--}%
+                            %{--</td>--}%
 
 
                             <td data-sortable="'email'" data-title="'email'">
@@ -88,10 +88,10 @@
                             </td>
 
 
-                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
-
-                                {{instance.lastUpdated}}
-                            </td>
+                            %{--<td data-sortable="'lastUpdated'" data-title="'lastUpdated'">--}%
+%{----}%
+                                %{--{{instance.lastUpdated}}--}%
+                            %{--</td>--}%
 
 
                             <td data-sortable="'lastname'" data-title="'lastname'">

@@ -11,17 +11,17 @@ class BootStrap {
 
     def init = { servletContext ->
 
-        JSON.registerObjectMarshaller(Club) { Club club ->
-            return [
-                    id                 : club.id,
-                    yearsTimeSpan      : club.yearsTimeSpan,
-                    inauguralMeeting   : club.inauguralMeeting,
-                    monthlySubscription: club.monthlySubscription,
-                    joiningFee         : club.joiningFee,
-                    dateCreated        : club.dateCreated,
-                    lastUpdated        : club.lastUpdated
-            ]
-        }
+//        JSON.registerObjectMarshaller(Club) { Club club ->
+//            return [
+//                    id                 : club.id,
+//                    yearsTimeSpan      : club.yearsTimeSpan,
+//                    inauguralMeeting   : club.inauguralMeeting,
+//                    monthlySubscription: club.monthlySubscription,
+//                    joiningFee         : club.joiningFee,
+//                    dateCreated        : club.dateCreated,
+//                    lastUpdated        : club.lastUpdated
+//            ]
+//        }
 
         JSON.registerObjectMarshaller(Member) { Member member ->
             return [

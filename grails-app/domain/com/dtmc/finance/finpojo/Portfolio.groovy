@@ -27,16 +27,16 @@ class Portfolio extends Asset implements Serializable {
         lastDate blank: true, nullable: true
     }
 
-    Entry portfolioItemByName(String name) {
-        Entry item = null;
-        if (items != null)
-            items.each {
-                Entry portfolioItem = it
-                if (portfolioItem.instrument.name.equalsIgnoreCase(name))
-                    item = portfolioItem;
-            }
-        return item;
-    }
+//    Entry portfolioItemByName(String name) {
+//        Entry item = null;
+//        if (items != null)
+//            items.each {
+//                Entry portfolioItem = it
+//                if (portfolioItem.instrument.name.equalsIgnoreCase(name))
+//                    item = portfolioItem;
+//            }
+//        return item;
+//    }
 
 
 }

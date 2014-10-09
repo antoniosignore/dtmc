@@ -1,4 +1,5 @@
 'use strict';
+
 function PortfolioCtrl(DAO, $rootScope, $scope, $filter, ngTableParams) {
     if ($rootScope.appConfig) {
         if (!$rootScope.appConfig.token != '') {

@@ -58,13 +58,13 @@
                                 <input type="file" id="agreement" data-ng-model='club.agreement' name="agreement"/>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="dateCreated">
-                                    dateCreated
-                                </label>
-                                <input type="date" name="dateCreated" precision="null"
-                                       data-ng-model='club.dateCreated'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="dateCreated">--}%
+                                    %{--dateCreated--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="dateCreated" precision="null"--}%
+                                       %{--data-ng-model='club.dateCreated'/>--}%
+                            %{--</div>--}%
 
                             <div class="form-group">
                                 <label class="control-label" for="inauguralMeeting">
@@ -93,13 +93,13 @@
                                                 default=" Invalid joiningFee "/></small></div></div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="lastUpdated">
-                                    lastUpdated
-                                </label>
-                                <input type="date" name="lastUpdated" precision="null"
-                                       data-ng-model='club.lastUpdated'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="lastUpdated">--}%
+                                    %{--lastUpdated--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="lastUpdated" precision="null"--}%
+                                       %{--data-ng-model='club.lastUpdated'/>--}%
+                            %{--</div>--}%
 
                             <div class="form-group">
                                 <label class="control-label" for="monthlySubscription">

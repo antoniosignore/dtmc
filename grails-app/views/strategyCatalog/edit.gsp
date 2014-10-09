@@ -53,21 +53,21 @@
 
                         <div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="dateCreated">
-                                    dateCreated
-                                </label>
-                                <input type="date" name="dateCreated" precision="null"
-                                       data-ng-model='strategyCatalog.dateCreated'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="dateCreated">--}%
+                                    %{--dateCreated--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="dateCreated" precision="null"--}%
+                                       %{--data-ng-model='strategyCatalog.dateCreated'/>--}%
+                            %{--</div>--}%
 
-                            <div class="form-group">
-                                <label class="control-label" for="lastUpdated">
-                                    lastUpdated
-                                </label>
-                                <input type="date" name="lastUpdated" precision="null"
-                                       data-ng-model='strategyCatalog.lastUpdated'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="lastUpdated">--}%
+                                    %{--lastUpdated--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="lastUpdated" precision="null"--}%
+                                       %{--data-ng-model='strategyCatalog.lastUpdated'/>--}%
+                            %{--</div>--}%
 
                             <div class="form-group">
                                 <label class="control-label" for="name">

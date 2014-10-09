@@ -92,13 +92,13 @@
                                                 default=" Invalid contractSize "/></small></div></div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="dateCreated">
-                                    dateCreated
-                                </label>
-                                <input type="date" name="dateCreated" precision="null"
-                                       data-ng-model='vanilla.dateCreated'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="dateCreated">--}%
+                                    %{--dateCreated--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="dateCreated" precision="null"--}%
+                                       %{--data-ng-model='vanilla.dateCreated'/>--}%
+                            %{--</div>--}%
 
                             <div class="form-group">
                                 <label class="control-label" for="dividend">
@@ -147,13 +147,13 @@
                                                 default=" Invalid interestRate "/></small></div></div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="lastUpdated">
-                                    lastUpdated
-                                </label>
-                                <input type="date" name="lastUpdated" precision="null"
-                                       data-ng-model='vanilla.lastUpdated'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="lastUpdated">--}%
+                                    %{--lastUpdated--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="lastUpdated" precision="null"--}%
+                                       %{--data-ng-model='vanilla.lastUpdated'/>--}%
+                            %{--</div>--}%
 
                             <div class="form-group">
                                 <label class="control-label" for="name">

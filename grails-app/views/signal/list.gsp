@@ -28,11 +28,11 @@
                     <table class="table" ng-table="tableParams" show-filter="true">
                         <tr data-ng-repeat="instance in signals" data-ng-click="editSignal(instance)">
 
-                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
-                                data-title="'dateCreated'">
-
-                                {{instance.dateCreated}}
-                            </td>
+                            %{--<td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"--}%
+                                %{--data-title="'dateCreated'">--}%
+%{----}%
+                                %{--{{instance.dateCreated}}--}%
+                            %{--</td>--}%
 
 
                             <td data-sortable="'day'" data-title="'day'">
@@ -53,10 +53,10 @@
                             </td>
 
 
-                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
-
-                                {{instance.lastUpdated}}
-                            </td>
+                            %{--<td data-sortable="'lastUpdated'" data-title="'lastUpdated'">--}%
+%{----}%
+                                %{--{{instance.lastUpdated}}--}%
+                            %{--</td>--}%
 
 
                             <td data-sortable="'name'" data-title="'name'">

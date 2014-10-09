@@ -59,7 +59,6 @@ grails {
     }
 }
 
-
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
@@ -117,5 +116,5 @@ log4j.main = {
             'com'
 }
 
-arrested.dateFormat = 'yyyy-MM-dd'
+arrested.dateFormat='yyyy-MM-dd'
 

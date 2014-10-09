@@ -1,5 +1,6 @@
 package com.dtmc.finance.finpojo
 
+import com.dtmc.club.Member
 import grails.converters.JSON
 import grails.converters.XML
 import arrested.ArrestedController
@@ -60,38 +61,14 @@ class PortfolioController extends ArrestedController {
             Portfolio instance = new Portfolio()
 
             if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
-
-
-
             if (data.description) instance.description = data.description
-
-
-
             if (data.firstDate) instance.firstDate = setDate(data.firstDate)
-
-
-
             if (data.lastDate) instance.lastDate = setDate(data.lastDate)
-
-
-
             if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
-
-
-
             if (data.name) instance.name = data.name
-
-
-
             if (data.portfolioType) instance.portfolioType = data.portfolioType
-
-
-            if (data.user) instance.user = com.dtmc.club.Member.get(data.user.id as Long)
-
-
+            if (data.user) instance.user = Member.get(data.user.id as Long)
             if (data.wealth) instance.wealth = data.wealth
-
-
 
             if (instance.save(flush: true)) {
                 withFormat {
@@ -118,20 +95,13 @@ class PortfolioController extends ArrestedController {
             Portfolio instance = Portfolio.get(data.id as Long)
             if (instance) {
                 if (data.dateCreated) instance.dateCreated = data.dateCreated
-
                 if (data.description) instance.description = data.description
-
                 if (data.firstDate) instance.firstDate = data.firstDate
-
                 if (data.lastDate) instance.lastDate = data.lastDate
-
                 if (data.lastUpdated) instance.lastUpdated = data.lastUpdated
-
                 if (data.name) instance.name = data.name
-
                 if (data.portfolioType) instance.portfolioType = data.portfolioType
-
-                if (data.user) instance.user = com.dtmc.club.Member.get(data.user.id as Long)
+                if (data.user) instance.user = Member.get(data.user.id as Long)
 
                 if (data.wealth) instance.wealth = data.wealth
                 if (instance.save(flush: true)) {

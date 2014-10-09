@@ -53,13 +53,13 @@
 
                         <div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="dateCreated">
-                                    dateCreated
-                                </label>
-                                <input type="date" name="dateCreated" precision="null"
-                                       data-ng-model='portfolio.dateCreated'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="dateCreated">--}%
+                                    %{--dateCreated--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="dateCreated" precision="null"--}%
+                                       %{--data-ng-model='portfolio.dateCreated'/>--}%
+                            %{--</div>--}%
 
                             <div class="form-group">
                                 <label class="control-label" for="description">
@@ -93,13 +93,13 @@
                                 <input type="date" name="lastDate" precision="null" data-ng-model='portfolio.lastDate'/>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="lastUpdated">
-                                    lastUpdated
-                                </label>
-                                <input type="date" name="lastUpdated" precision="null"
-                                       data-ng-model='portfolio.lastUpdated'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="lastUpdated">--}%
+                                    %{--lastUpdated--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="lastUpdated" precision="null"--}%
+                                       %{--data-ng-model='portfolio.lastUpdated'/>--}%
+                            %{--</div>--}%
 
                             <div class="form-group">
                                 <label class="control-label" for="name">

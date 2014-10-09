@@ -29,17 +29,17 @@
                         <tr data-ng-repeat="instance in strategyExecutions"
                             data-ng-click="editStrategyExecution(instance)">
 
-                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
-                                data-title="'dateCreated'">
-
-                                {{instance.dateCreated}}
-                            </td>
-
-
-                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
-
-                                {{instance.lastUpdated}}
-                            </td>
+                            %{--<td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"--}%
+                                %{--data-title="'dateCreated'">--}%
+%{----}%
+                                %{--{{instance.dateCreated}}--}%
+                            %{--</td>--}%
+%{----}%
+%{----}%
+                            %{--<td data-sortable="'lastUpdated'" data-title="'lastUpdated'">--}%
+%{----}%
+                                %{--{{instance.lastUpdated}}--}%
+                            %{--</td>--}%
 
 
                             <td data-sortable="'name'" data-title="'name'">

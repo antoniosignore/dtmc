@@ -28,17 +28,17 @@
                     <table class="table" ng-table="tableParams" show-filter="true">
                         <tr data-ng-repeat="instance in strategyCatalogs" data-ng-click="editStrategyCatalog(instance)">
 
-                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
-                                data-title="'dateCreated'">
-
-                                {{instance.dateCreated}}
-                            </td>
-
-
-                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
-
-                                {{instance.lastUpdated}}
-                            </td>
+                            %{--<td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"--}%
+                                %{--data-title="'dateCreated'">--}%
+%{----}%
+                                %{--{{instance.dateCreated}}--}%
+                            %{--</td>--}%
+%{----}%
+%{----}%
+                            %{--<td data-sortable="'lastUpdated'" data-title="'lastUpdated'">--}%
+%{----}%
+                                %{--{{instance.lastUpdated}}--}%
+                            %{--</td>--}%
 
 
                             <td data-sortable="'name'" data-title="'name'">

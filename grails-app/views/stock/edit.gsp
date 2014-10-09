@@ -51,13 +51,13 @@
 
                         <div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="dateCreated">
-                                    dateCreated
-                                </label>
-                                <input type="date" name="dateCreated" precision="null"
-                                       data-ng-model='stock.dateCreated'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="dateCreated">--}%
+                                    %{--dateCreated--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="dateCreated" precision="null"--}%
+                                       %{--data-ng-model='stock.dateCreated'/>--}%
+                            %{--</div>--}%
 
                             <div class="form-group">
                                 <label class="control-label" for="description">
@@ -75,13 +75,13 @@
                                                 default=" Invalid description : "/></small></div></div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="lastUpdated">
-                                    lastUpdated
-                                </label>
-                                <input type="date" name="lastUpdated" precision="null"
-                                       data-ng-model='stock.lastUpdated'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="lastUpdated">--}%
+                                    %{--lastUpdated--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="lastUpdated" precision="null"--}%
+                                       %{--data-ng-model='stock.lastUpdated'/>--}%
+                            %{--</div>--}%
 
                             <div class="form-group">
                                 <label class="control-label" for="name">

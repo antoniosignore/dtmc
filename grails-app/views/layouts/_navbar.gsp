@@ -16,9 +16,9 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse" role="navigation">
             <ul class="nav navbar-nav">
+
                 <li class="controller">
                     <div id="h2Header"><g:message code="default.title" args="[meta(name: 'app.name')]"/></div>
-
                     <div id="underHeader"><a class="fa  fa-clock-o icon-color" data-ng-controller="ClockCtrl"
                                              data-ng-init="showClock()">
                         {{clock.now}}
@@ -28,6 +28,7 @@
 
                 <g:set var="lang"
                        value="${session.'org.springframework.web.servlet.i18n.SessionLocaleResolver.LOCALE' ?: org.springframework.web.servlet.support.RequestContextUtils.getLocale(request).toString().substring(0, 2)}"/>
+
                 <li class="dropdown controller">
                     <a class="dropdown-toggle" role="button" data-ng-controller="DashboardCtrl" data-toggle="dropdown"
                        data-target="#" data-ng-init="dashboard()">
@@ -44,6 +45,7 @@
                     </ul>
                 </li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown controller">
                     <a class="dropdown-toggle" role="button" data-toggle="dropdown">
@@ -68,6 +70,7 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="controller">
                     <a data-ng-controller='UserCtrl' data-ng-click='logout()'
                        title="${message(code: 'security.signoff.label', default: 'Log out')}">
@@ -75,6 +78,7 @@
                                                                                      default="Sign Off"/>
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>

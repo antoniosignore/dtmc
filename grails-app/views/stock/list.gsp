@@ -7,15 +7,17 @@
         </div>
     </div>
 
-
     <div>
         <p></p>
         <a class="btn btn-primary btn-primary" data-ng-click="newStock()"><span
                 class="glyphicon glyphicon-plus"></span><g:message code="default.new.label" args="['stock']"
                                                                    default="New stock"/></a>
-
         <p></p>
     </div>
+
+    ------->{{user.username}}<--------------<br/>
+    ------->Portfolio name: {{portfolio.name}}<-------------<br/>
+    ------->Stock name: {{stock.name}}<-------------<br/>
 
     <div>
         <div>
@@ -28,30 +30,9 @@
                     <table class="table" ng-table="tableParams" show-filter="true">
                         <tr data-ng-repeat="instance in stocks" data-ng-click="editStock(instance)">
 
-                            <td data-sortable="'dateCreated'" filter="{'dateCreated':'text'}"
-                                data-title="'dateCreated'">
+                            <td data-sortable="'description'" data-title="'description'">{{instance.description}}</td>
 
-                                {{instance.dateCreated}}
-                            </td>
-
-
-                            <td data-sortable="'description'" data-title="'description'">
-
-                                {{instance.description}}
-                            </td>
-
-
-                            <td data-sortable="'lastUpdated'" data-title="'lastUpdated'">
-
-                                {{instance.lastUpdated}}
-                            </td>
-
-
-                            <td data-sortable="'name'" data-title="'name'">
-
-                                {{instance.name}}
-                            </td>
-
+                            <td data-sortable="'name'" data-title="'name'">{{instance.name}}</td>
                         </tr>
                     </table>
                 </div>

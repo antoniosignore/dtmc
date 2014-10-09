@@ -1,6 +1,5 @@
 package com.dtmc.club
 
-
 class Club implements Serializable {
 
     static hasMany = [members: Member]
@@ -22,6 +21,9 @@ class Club implements Serializable {
         yearsTimeSpan blank: true, nullable: true
     }
 
+    static mapping = {
+        members lazy: 'join'
+    }
 
     @Override
     public String toString() {
