@@ -59,11 +59,11 @@ class BetController extends ArrestedController {
             def data = request.JSON.instance
             Bet instance = new Bet()
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
 
 
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
 
 
 

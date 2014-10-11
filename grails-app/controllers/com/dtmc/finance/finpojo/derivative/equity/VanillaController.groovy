@@ -67,7 +67,7 @@ class VanillaController extends ArrestedController {
 
 
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
 
 
@@ -83,7 +83,7 @@ class VanillaController extends ArrestedController {
 
 
 
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
 
 
 

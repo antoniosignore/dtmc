@@ -59,11 +59,11 @@ class InstrumentController extends ArrestedController {
             def data = request.JSON.instance
             Instrument instance = new Instrument()
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
 
 
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
 
 
 

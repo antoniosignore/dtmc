@@ -1,6 +1,7 @@
 package com.dtmc.finance.finpojo
 
 import com.dtmc.club.Member
+import com.netnumeri.server.enums.PortfolioTypeEnum
 import grails.converters.JSON
 import grails.converters.XML
 import arrested.ArrestedController
@@ -60,13 +61,9 @@ class PortfolioController extends ArrestedController {
             def data = request.JSON.instance
             Portfolio instance = new Portfolio()
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
             if (data.description) instance.description = data.description
-            if (data.firstDate) instance.firstDate = setDate(data.firstDate)
-            if (data.lastDate) instance.lastDate = setDate(data.lastDate)
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
             if (data.name) instance.name = data.name
-            if (data.portfolioType) instance.portfolioType = data.portfolioType
+            if (data.portfolioType) instance.portfolioType = PortfolioTypeEnum.valueOfName(data.portfolioType.get("name"))
             if (data.user) instance.user = Member.get(data.user.id as Long)
             if (data.wealth) instance.wealth = data.wealth
 
@@ -94,13 +91,10 @@ class PortfolioController extends ArrestedController {
             def data = JSON.parse(params.instance)
             Portfolio instance = Portfolio.get(data.id as Long)
             if (instance) {
-                if (data.dateCreated) instance.dateCreated = data.dateCreated
                 if (data.description) instance.description = data.description
-                if (data.firstDate) instance.firstDate = data.firstDate
-                if (data.lastDate) instance.lastDate = data.lastDate
-                if (data.lastUpdated) instance.lastUpdated = data.lastUpdated
                 if (data.name) instance.name = data.name
-                if (data.portfolioType) instance.portfolioType = data.portfolioType
+
+                if (data.portfolioType) instance.portfolioType = PortfolioTypeEnum.valueOfName(data.portfolioType.get("name"))
                 if (data.user) instance.user = Member.get(data.user.id as Long)
 
                 if (data.wealth) instance.wealth = data.wealth
@@ -141,7 +135,8 @@ class PortfolioController extends ArrestedController {
     }
 
     private setDate(String d) {
-        String dFormat = grailsApplication?.config.arrested.dateFormat ?: 'dd/MM/yyyy'
+
+        String dFormat = 'yyyy-MM-dd'
         return (new SimpleDateFormat(dFormat)).parse(d)
     }
 }

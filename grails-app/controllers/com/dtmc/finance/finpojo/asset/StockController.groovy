@@ -59,7 +59,7 @@ class StockController extends ArrestedController {
             def data = request.JSON.instance
             Stock instance = new Stock()
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
 
 
@@ -67,7 +67,7 @@ class StockController extends ArrestedController {
 
 
 
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
 
 
 

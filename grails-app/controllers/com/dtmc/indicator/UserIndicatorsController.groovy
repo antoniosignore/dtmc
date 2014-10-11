@@ -59,7 +59,7 @@ class UserIndicatorsController extends ArrestedController {
             def data = request.JSON.instance
             UserIndicators instance = new UserIndicators()
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
 
 
@@ -83,7 +83,7 @@ class UserIndicatorsController extends ArrestedController {
 
 
 
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
 
 
 

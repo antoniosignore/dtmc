@@ -59,11 +59,11 @@ class StrategyCatalogController extends ArrestedController {
             def data = request.JSON.instance
             StrategyCatalog instance = new StrategyCatalog()
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
 
 
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
 
 
 

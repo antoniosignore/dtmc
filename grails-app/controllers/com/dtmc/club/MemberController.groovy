@@ -81,7 +81,7 @@ class MemberController extends ArrestedController {
 
 
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
 
 
@@ -97,7 +97,7 @@ class MemberController extends ArrestedController {
 
 
 
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
 
 
 
@@ -241,6 +241,13 @@ class MemberController extends ArrestedController {
             renderMissingParam("${message(code: 'default.id.missing.label', default: 'id missing')}")
         }
     }
+
+    /*
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        String date = sdf.format(new Date());
+        System.out.println(date);
+        Date d = sdf.parse(date);
+     */
 
     private setDate(String d) {
         String dFormat = grailsApplication?.config.arrested.dateFormat ?: 'dd/MM/yyyy'

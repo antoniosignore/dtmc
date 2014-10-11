@@ -61,11 +61,11 @@ class ForecastController extends ArrestedController {
             if (data.bet) instance.bet = com.dtmc.finance.finpojo.Bet.get(data.bet.id as Long)
 
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
 
 
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
 
 
 

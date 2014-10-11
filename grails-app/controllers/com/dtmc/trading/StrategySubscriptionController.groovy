@@ -59,11 +59,11 @@ class StrategySubscriptionController extends ArrestedController {
             def data = request.JSON.instance
             StrategySubscription instance = new StrategySubscription()
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
 
 
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
 
 
             if (data.strategy) instance.strategy = com.dtmc.trading.StrategyCatalog.get(data.strategy.id as Long)

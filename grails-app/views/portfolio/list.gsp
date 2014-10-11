@@ -32,13 +32,13 @@
                                 {{instance.description}}
                             </td>
 
-                            <td data-sortable="'firstDate'" data-title="'firstDate'">
-                                {{instance.firstDate}}
-                            </td>
+                            %{--<td data-sortable="'firstDate'" data-title="'firstDate'">--}%
+                                %{--{{instance.firstDate}}--}%
+                            %{--</td>--}%
 
-                            <td data-sortable="'lastDate'" data-title="'lastDate'">
-                                {{instance.lastDate}}
-                            </td>
+                            %{--<td data-sortable="'lastDate'" data-title="'lastDate'">--}%
+                                %{--{{instance.lastDate}}--}%
+                            %{--</td>--}%
 
                             <td data-sortable="'name'" data-title="'name'">
                                 {{instance.name}}

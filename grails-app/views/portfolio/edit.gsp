@@ -78,20 +78,20 @@
                                                 default=" Invalid description : "/></small></div></div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="firstDate">
-                                    firstDate
-                                </label>
-                                <input type="date" name="firstDate" precision="null"
-                                       data-ng-model='portfolio.firstDate'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="firstDate">--}%
+                                    %{--firstDate--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="firstDate" precision="null"--}%
+                                       %{--data-ng-model='portfolio.firstDate'/>--}%
+                            %{--</div>--}%
 
-                            <div class="form-group">
-                                <label class="control-label" for="lastDate">
-                                    lastDate
-                                </label>
-                                <input type="date" name="lastDate" precision="null" data-ng-model='portfolio.lastDate'/>
-                            </div>
+                            %{--<div class="form-group">--}%
+                                %{--<label class="control-label" for="lastDate">--}%
+                                    %{--lastDate--}%
+                                %{--</label>--}%
+                                %{--<input type="date" name="lastDate" precision="null" data-ng-model='portfolio.lastDate'/>--}%
+                            %{--</div>--}%
 
                             %{--<div class="form-group">--}%
                                 %{--<label class="control-label" for="lastUpdated">--}%

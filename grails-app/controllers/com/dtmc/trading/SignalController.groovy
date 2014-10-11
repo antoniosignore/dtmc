@@ -59,7 +59,7 @@ class SignalController extends ArrestedController {
             def data = request.JSON.instance
             Signal instance = new Signal()
 
-            if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
+            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
 
 
 
@@ -75,7 +75,7 @@ class SignalController extends ArrestedController {
 
 
 
-            if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
+            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
 
 
 
