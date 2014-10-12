@@ -1,5 +1,9 @@
 package com.dtmc.finance.finpojo.asset
 
+import com.netnumeri.server.finance.beans.FinConstants
+import com.netnumeri.server.finance.beans.TimeSeries
+import com.netnumeri.server.finance.utils.DateUtils
+import com.netnumeri.server.utils.StockUtils
 import grails.converters.JSON
 import grails.converters.XML
 import arrested.ArrestedController
@@ -8,6 +12,7 @@ import java.text.SimpleDateFormat
 class StockController extends ArrestedController {
 
     def grailsApplication
+    def dailyService
 
     static allowedMethods = [show: "GET", list: "GET", save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -35,6 +40,15 @@ class StockController extends ArrestedController {
 
         if (id) {
             Stock instance = Stock.get(id)
+
+            Date da = DateUtils.todayThreeMonthsAgo()
+            Date a = DateUtils.today()
+            StockUtils.refreshDaily(instance, da, a);
+
+//            dailyService.refreshStock(instance, da, a)
+//            List<UserIndicators> list = UserIndicators.list()
+//            TimeSeries closes = instance.series(FinConstants.CLOSE, da, a);
+
             if (instance) {
                 withFormat {
                     xml {
