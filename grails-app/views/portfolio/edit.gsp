@@ -12,11 +12,9 @@
 
                 <h5 class="text-center">Portfolio Edit</h5>
 
-
                 <form name="portfolioForm" novalidate>
 
                     <div>
-                        <p></p>
                         <a class="btn btn-primary btn-primary" data-ng-click="newPortfolio()"><span
                                 class="glyphicon glyphicon-plus"></span><g:message code="default.new.label"
                                                                                    args="['portfolio', 'BB']"
@@ -46,7 +44,6 @@
                                                                                      args="['Portfolio']"
                                                                                      default="Delete"/></a>
 
-                    </p>
                     </div>
 
                     <div>

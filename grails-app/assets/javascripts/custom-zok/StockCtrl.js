@@ -1,10 +1,11 @@
 'use strict';
 function StockCtrl(DAO, $rootScope, $scope, $filter, ngTableParams) {
-    if ($rootScope.appConfig) {
-        if (!$rootScope.appConfig.token != '') {
-            window.location.href = "#/login"
-        }
-    }
+
+//    if ($rootScope.appConfig) {
+//        if (!$rootScope.appConfig.token != '') {
+//            window.location.href = "#/login"
+//        }
+//    }
 
     $rootScope.flags = {save: false};
     $rootScope.errors = {loadingSite: false, showErrors: false, showServerError: false, errorMessages: []};
@@ -156,4 +157,24 @@ function StockCtrl(DAO, $rootScope, $scope, $filter, ngTableParams) {
                 $rootScope.loadingSite = false;
             });
     }
+
+    $rootScope.showStock = function (stock) {
+
+        $rootScope.errors.errorMessages = [];
+        DAO.get({appName: $rootScope.appConfig.appName, token: $rootScope.appConfig.token, instance: $rootScope.stock, id: stock.id, controller: 'stock', action: 'show'},
+            $rootScope.loadingSite = true,
+            function (result) {
+                $rootScope.stock = result;
+                $rootScope.flags.save = true;
+                $rootScope.loadingSite = false;
+                window.location.href = "#/stock/show"
+            },
+            function (error) {
+                $rootScope.errors.showErrors = true;
+                $rootScope.errors.showServerError = true;
+                $rootScope.errors.errorMessages.push('Error: ' + error.status + ' ' + error.data);
+                $rootScope.loadingSite = false;
+            });
+    }
+
 }

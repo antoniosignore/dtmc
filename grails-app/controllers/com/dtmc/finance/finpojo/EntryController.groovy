@@ -60,12 +60,8 @@ class EntryController extends ArrestedController {
             Entry instance = new Entry()
 
             if (data.amount) instance.amount = data.amount
-
-
-            if (data.instrument) instance.instrument = com.dtmc.finance.finpojo.Instrument.get(data.instrument.id as Long)
-
-            if (data.portfolio) instance.portfolio = com.dtmc.finance.finpojo.Portfolio.get(data.portfolio.id as Long)
-
+            if (data.instrument) instance.instrument = Instrument.get(data.instrument.id as Long)
+            if (data.portfolio) instance.portfolio = Portfolio.get(data.portfolio.id as Long)
 
             if (instance.save(flush: true)) {
                 withFormat {
@@ -93,9 +89,9 @@ class EntryController extends ArrestedController {
             if (instance) {
                 if (data.amount) instance.amount = data.amount
 
-                if (data.instrument) instance.instrument = com.dtmc.finance.finpojo.Instrument.get(data.instrument.id as Long)
+                if (data.instrument) instance.instrument = Instrument.get(data.instrument.id as Long)
 
-                if (data.portfolio) instance.portfolio = com.dtmc.finance.finpojo.Portfolio.get(data.portfolio.id as Long)
+                if (data.portfolio) instance.portfolio = Portfolio.get(data.portfolio.id as Long)
                 if (instance.save(flush: true)) {
                     withFormat {
                         xml {

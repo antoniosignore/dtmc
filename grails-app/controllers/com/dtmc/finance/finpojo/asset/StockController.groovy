@@ -19,9 +19,20 @@ class StockController extends ArrestedController {
         }
     }
 
+    def showing() {
+        withFormat {
+            html {
+                render(view: "show")
+            }
+        }
+    }
     def edit() {}
 
     def show(Long id) {
+
+        println "****************** show"
+        println "id = $id"
+
         if (id) {
             Stock instance = Stock.get(id)
             if (instance) {
@@ -59,21 +70,8 @@ class StockController extends ArrestedController {
             def data = request.JSON.instance
             Stock instance = new Stock()
 
-            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
-
-
-
-            if (data.description) instance.description = data.description
-
-
-
-            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
-
-
-
             if (data.name) instance.name = data.name
-
-
+            if (data.description) instance.description = data.description
 
             if (instance.save(flush: true)) {
                 withFormat {
@@ -99,13 +97,10 @@ class StockController extends ArrestedController {
             def data = JSON.parse(params.instance)
             Stock instance = Stock.get(data.id as Long)
             if (instance) {
-                if (data.dateCreated) instance.dateCreated = data.dateCreated
-
-                if (data.description) instance.description = data.description
-
-                if (data.lastUpdated) instance.lastUpdated = data.lastUpdated
 
                 if (data.name) instance.name = data.name
+                if (data.description) instance.description = data.description
+
                 if (instance.save(flush: true)) {
                     withFormat {
                         xml {

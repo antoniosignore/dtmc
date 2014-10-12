@@ -1,4 +1,6 @@
+
 <div data-ng-controller="StockCtrl">
+
     <h1>Stock List</h1>
 
     <div data-ng-show="errors.showErrors" class="red">
@@ -28,11 +30,9 @@
 
                 <div loading-container="tableParams.settings().$loading">
                     <table class="table" ng-table="tableParams" show-filter="true">
-                        <tr data-ng-repeat="instance in stocks" data-ng-click="editStock(instance)">
-
-                            <td data-sortable="'description'" data-title="'description'">{{instance.description}}</td>
-
+                        <tr data-ng-repeat="instance in stocks" data-ng-click="showStock(instance)">
                             <td data-sortable="'name'" data-title="'name'">{{instance.name}}</td>
+                            <td data-sortable="'description'" data-title="'description'">{{instance.description}}</td>
                         </tr>
                     </table>
                 </div>

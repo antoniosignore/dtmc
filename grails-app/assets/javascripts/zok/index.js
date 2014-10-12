@@ -20,6 +20,7 @@ zok.config([
             when('/member', {templateUrl: '/zok/member/listing', controller: 'MemberCtrl'}).
             when('/stock/create', {templateUrl: '/zok/stock/edit', controller: 'StockCtrl'}).
             when('/stock/edit', {templateUrl: '/zok/stock/edit', controller: 'StockCtrl'}).
+            when('/stock/show', {templateUrl: '/zok/stock/showing', controller: 'StockCtrl'}).
             when('/stock/list', {templateUrl: '/zok/stock/listing', controller: 'StockCtrl'}).
             when('/stock', {templateUrl: '/zok/stock/listing', controller: 'StockCtrl'}).
             when('/entry/create', {templateUrl: '/zok/entry/edit', controller: 'EntryCtrl'}).
