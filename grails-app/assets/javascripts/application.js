@@ -1,4 +1,5 @@
 //= require jquery/jquery
+//= require_tree jquery/plugins
 //= require bootstrap/bootstrap
 //= require angular/angular
 //= require angular-route/angular-route
