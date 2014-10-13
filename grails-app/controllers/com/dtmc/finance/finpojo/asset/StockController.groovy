@@ -1,8 +1,7 @@
 package com.dtmc.finance.finpojo.asset
 
-import com.netnumeri.server.finance.beans.FinConstants
-import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.utils.DateUtils
+import com.netnumeri.server.finance.utils.YahooUtils
 import com.netnumeri.server.utils.StockUtils
 import grails.converters.JSON
 import grails.converters.XML
@@ -43,9 +42,11 @@ class StockController extends ArrestedController {
 
             Date da = DateUtils.todayThreeMonthsAgo()
             Date a = DateUtils.today()
-            StockUtils.refreshDaily(instance, da, a);
+//            StockUtils.refreshDaily(instance, da, a);
 
-//            dailyService.refreshStock(instance, da, a)
+            instance.snapshot = YahooUtils.getCompanySnapshot(instance.name);
+
+            dailyService.dailyFromDatabase (instance, da, a)
 //            List<UserIndicators> list = UserIndicators.list()
 //            TimeSeries closes = instance.series(FinConstants.CLOSE, da, a);
 

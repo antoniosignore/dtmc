@@ -59,7 +59,9 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
-        runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
+//        runtime 'com.oracle.jdbc:com.springsource.oracle.jdbc:10.2.0.2'
+
+        runtime 'postgresql:postgresql:9.0-801.jdbc4'
 
         runtime 'io.vertx:vertx-core:2.1.2'
         runtime 'io.vertx:vertx-platform:2.1.2'
@@ -84,6 +86,8 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.11.1"
 
         compile ":arrested:1.33"
+
+        compile ":quartz:1.0.1"
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"

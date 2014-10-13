@@ -13,7 +13,7 @@ class Daily implements Serializable, Comparable {
     Double openprice = 0;
     Double closeprice = 0;
 
-    Integer openInterest;
+    Integer openInterest = 0;
 
     static constraints = {
         dailydate(unique: ['instrument'])

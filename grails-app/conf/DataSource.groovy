@@ -1,24 +1,13 @@
 dataSource {
     //ORACLE
     dbCreate = "create-drop"
-    url = "jdbc:oracle:thin:@127.0.0.1:1521:XE"
+    url = "jdbc:postgresql://127.0.0.1:5432/dtmc"
     pooled = true
-    username = "dtmc"
-    password = "dtmc"
-    driverClassName = "oracle.jdbc.driver.OracleDriver"
-//    dialect = "org.hibernate.dialect.OracleDialect"
-    dialect = org.hibernate.dialect.Oracle10gDialect
+    username = "postgres"
+    password = "nicholas"
 
-    properties {
-        maxActive = -1
-        minEvictableIdleTimeMillis = 1800000
-        timeBetweenEvictionRunsMillis = 1800000
-        numTestsPerEvictionRun = 3
-        testOnBorrow = true
-        testWhileIdle = true
-        testOnReturn = true
-        validationQuery = "SELECT 1 from dual"
-    }
+    driverClassName = "org.postgresql.Driver"
+    dialect = org.hibernate.dialect.PostgresPlusDialect
 }
 
 hibernate {
@@ -36,23 +25,17 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop"
-            username = "dtmc_dev"
-            password = "dtmc_dev"
+            dbCreate = "none"
         }
     }
     test {
         dataSource {
             dbCreate = "create-drop"
-            username = "dtmc_test"
-            password = "dtmc_test"
         }
     }
     production {
         dataSource {
             dbCreate = "none"
-            username = "dtmc"
-            password = "dtmc"
         }
     }
 }

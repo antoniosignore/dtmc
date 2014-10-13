@@ -1,27 +1,45 @@
 import arrested.ArrestedToken
-import com.dtmc.club.Club
 import com.dtmc.club.Member
-import com.dtmc.finance.finpojo.Portfolio
+import com.dtmc.finance.finpojo.Daily
 import com.dtmc.finance.finpojo.asset.Stock
-import com.netnumeri.server.enums.PortfolioTypeEnum
+import com.netnumeri.server.finance.utils.YahooInstantSnapshot
 import grails.converters.JSON
-import org.apache.shiro.crypto.hash.Sha256Hash
 
 class BootStrap {
 
     def init = { servletContext ->
 
-//        JSON.registerObjectMarshaller(Club) { Club club ->
-//            return [
-//                    id                 : club.id,
-//                    yearsTimeSpan      : club.yearsTimeSpan,
-//                    inauguralMeeting   : club.inauguralMeeting,
-//                    monthlySubscription: club.monthlySubscription,
-//                    joiningFee         : club.joiningFee,
-//                    dateCreated        : club.dateCreated,
-//                    lastUpdated        : club.lastUpdated
-//            ]
-//        }
+        JSON.registerObjectMarshaller(Stock) { Stock stock ->
+            return [
+                    id         : stock.id,
+                    name       : stock.name,
+                    description: stock.description,
+                    snapshot   : stock.snapshot,
+                    dailyarray : stock.dailyarray
+            ]
+        }
+
+        JSON.registerObjectMarshaller(YahooInstantSnapshot) { YahooInstantSnapshot snapshot ->
+            return [
+                    symbol         : snapshot.Symbol,
+                    change         : snapshot.change,
+                    PERatio        : snapshot.PERatio,
+                    percentChange  : snapshot.percentChange
+            ]
+        }
+
+        JSON.registerObjectMarshaller(Daily) { Daily daily ->
+            return [
+                    id        : daily.id,
+                    openprice : daily.openprice,
+                    closeprice: daily.closeprice,
+                    high      : daily.high,
+                    low       : daily.low,
+                    dailydate : daily.dailydate,
+                    volume    : daily.volume,
+                    ticker    : daily.instrument.name
+            ]
+        }
 
         JSON.registerObjectMarshaller(Member) { Member member ->
             return [
@@ -47,22 +65,22 @@ class BootStrap {
         Member adminUser
         ArrestedToken token
 
-        Club club = new Club(name: 'ethical').save(flush: true, failOnError: true)
-
-        adminUser = new Member(club: club, username: "admin",
-                passwordHash: new Sha256Hash("admin").toHex(), dateCreated: new Date()).save(flush: true, failOnError: true)
-
-        //Create tokens for users
-        token = new ArrestedToken(token: 'token', valid: true, owner: adminUser.id).save(flush: true)
-        adminUser.setToken(token.id)
-        adminUser.save(flush: true, failOnError: true)
-
-        new Stock("AAPL", "Apple Computers").save(flush: true, failOnError: true)
-        new Stock("IBM", "International Business Machines").save(flush: true, failOnError: true)
-        new Stock("SSRI", "Silver Standard Resources").save(flush: true, failOnError: true)
-
-        Portfolio portfolio = new Portfolio(name: 'mio', description: 'mia descrizione', user: adminUser, portfolioType: PortfolioTypeEnum.Main)
-        portfolio.save(flush: true, failOnError: true)
+//        Club club = new Club(name: 'ethical').save(flush: true, failOnError: true)
+//
+//        adminUser = new Member(club: club, username: "admin",
+//                passwordHash: new Sha256Hash("admin").toHex(), dateCreated: new Date()).save(flush: true, failOnError: true)
+//
+//        //Create tokens for users
+//        token = new ArrestedToken(token: 'token', valid: true, owner: adminUser.id).save(flush: true)
+//        adminUser.setToken(token.id)
+//        adminUser.save(flush: true, failOnError: true)
+//
+//        new Stock("AAPL", "Apple Computers").save(flush: true, failOnError: true)
+//        new Stock("IBM", "International Business Machines").save(flush: true, failOnError: true)
+//        new Stock("SSRI", "Silver Standard Resources").save(flush: true, failOnError: true)
+//
+//        Portfolio portfolio = new Portfolio(name: 'mio', description: 'mia descrizione', user: adminUser, portfolioType: PortfolioTypeEnum.Main)
+//        portfolio.save(flush: true, failOnError: true)
 
 //        Entry entry = new Entry()
 //      portfolioService.buy(portfolio, stock, 100);

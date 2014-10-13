@@ -11,7 +11,7 @@ import grails.transaction.Transactional
 class DailyService {
 
     /*
-    def cacheloader = { key -> loadElement(key) } as CacheLoader def cache = CacheBuilder.newBuilder(). expireAfterWrite(2, TimeUnit.HOURS). maximumSize(1000). build(cacheloader) def get(key) { cache.get(key) }
+     *   def cacheloader = { key -> loadElement(key) } as CacheLoader def cache = CacheBuilder.newBuilder(). expireAfterWrite(2, TimeUnit.HOURS). maximumSize(1000). build(cacheloader) def get(key) { cache.get(key) }
      */
 
     public void updateDailyDatabase() {
@@ -33,6 +33,20 @@ class DailyService {
             StockUtils.refreshDaily(stock, da, a);
         }
     }
+
+//    public void refreshStock (Stock stock, Date da, Date a){
+//
+//        def criteria =  new DetachedCriteria(Daily).build {
+//            eq('instrument.id', stock.getId())
+//        }
+//
+//        List<Daily> slides = criteria.list(sort: "dailydate", order: "asc")
+//        for (int i = 0; i < slides.size(); i++) {
+//            Daily daily = slides.get(i);
+//            stock.dailyarray.put(daily.dailydate, daily)
+//        }
+//
+//    }
 
     public void dailyFromDatabase(Stock stock, Date da, Date a) {
 

@@ -634,6 +634,7 @@ public class YahooUtils {
                 return toSnapshot(line, ",");
             }
         } catch (IOException e) {
+            e.printStackTrace(System.out)
         }
         return null;
     }
