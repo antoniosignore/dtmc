@@ -1,4 +1,5 @@
 'use strict';
+
 function StockCtrl(DAO, $rootScope, $scope, $filter, ngTableParams) {
 
 //    if ($rootScope.appConfig) {
@@ -159,9 +160,8 @@ function StockCtrl(DAO, $rootScope, $scope, $filter, ngTableParams) {
     }
 
     $rootScope.showStock = function (stock) {
-
         $rootScope.errors.errorMessages = [];
-        DAO.get({appName: $rootScope.appConfig.appName, token: $rootScope.appConfig.token, instance: $rootScope.stock, id: stock.id, controller: 'stock', action: 'show'},
+        DAO.get({appName: $rootScope.appConfig.appName, token: $rootScope.appConfig.token, id: stock.id, controller: 'stock', action: 'show'},
             $rootScope.loadingSite = true,
             function (result) {
                 $rootScope.stock = result;

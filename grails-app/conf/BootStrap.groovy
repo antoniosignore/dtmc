@@ -3,6 +3,7 @@ import com.dtmc.club.Member
 import com.dtmc.finance.finpojo.Daily
 import com.dtmc.finance.finpojo.asset.Stock
 import com.netnumeri.server.finance.utils.YahooInstantSnapshot
+import com.netnumeri.server.utils.StockUtils
 import grails.converters.JSON
 
 class BootStrap {
@@ -15,7 +16,7 @@ class BootStrap {
                     name       : stock.name,
                     description: stock.description,
                     snapshot   : stock.snapshot,
-                    dailyarray : stock.dailyarray
+                    ohlc       : StockUtils.candleStickPlot(stock)
             ]
         }
 

@@ -1,14 +1,10 @@
+<%@ page import="com.netnumeri.server.utils.StockUtils" %>
+
 
 <div data-ng-controller="StockCtrl">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-2">
-                <div class="panel panel-default">
-                    <h2>PIPPO</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+    UserId: {{stock.name}}<br/>
+    <candlestick-chart ng-model="name"></candlestick-chart>
+    <div id="chart" style="height:250px; width:100%;"></div>
 </div>
 
 

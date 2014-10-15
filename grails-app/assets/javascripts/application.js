@@ -1,4 +1,5 @@
 //= require jquery/jquery
+//= require_tree jquery
 //= require_tree jquery/plugins
 //= require bootstrap/bootstrap
 //= require angular/angular
@@ -12,7 +13,6 @@
 //= require_tree custom-zok
 //= require_tree views
 //= require_self
-
 
 if (typeof jQuery !== 'undefined') {
     (function ($) {

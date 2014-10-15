@@ -34,6 +34,16 @@ class StockController extends ArrestedController {
 
     def show(Long id) {
 
+        JSON.registerObjectMarshaller(Stock) { Stock stock ->
+            return [
+                    id         : stock.id,
+                    name       : stock.name,
+                    description: stock.description,
+                    snapshot   : stock.snapshot,
+                    ohlc       : StockUtils.candleStickPlot(stock)
+            ]
+        }
+
         println "****************** show"
         println "id = $id"
 
@@ -69,8 +79,17 @@ class StockController extends ArrestedController {
     }
 
     def list() {
+
+        JSON.registerObjectMarshaller(Stock) { Stock stock ->
+            return [
+                    id         : stock.id,
+                    name       : stock.name,
+                    description: stock.description
+            ]
+        }
+
         def instances = Stock.list()
-        withFormat {
+                withFormat {
             xml {
                 render instances as XML
             }
