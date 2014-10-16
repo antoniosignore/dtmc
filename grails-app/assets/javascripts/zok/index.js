@@ -1,5 +1,5 @@
 'use strict';
-var zok = angular.module('zok', ['services', 'ngRoute']);
+var zok = angular.module('zok', ['services', 'ngRoute', 'ui.chart']);
 
 
 zok.config([

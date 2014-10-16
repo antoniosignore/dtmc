@@ -11,22 +11,3 @@ angular.module('services', ['ngResource', 'ngTable', 'arrestedServices']).
         });
     });
 
-//angular.module('zok', ['ui.chart'])
-//    .value('charting', {
-//        pieChartOptions: {
-//            seriesDefaults: {
-//                renderer: jQuery.jqplot.PieRenderer,
-//                rendererOptions: {
-//                    showDataLabels: true
-//                }
-//            },
-//            legend: { show:true, location: 'e' }
-//        }
-//    })
-//    .controller('DemoCtrl', function ($scope, charting) {
-//        $scope.someData = [[
-//            ['Heavy Industry', 12],['Retail', 9], ['Light Industry', 14],
-//            ['Out of home', 16],['Commuting', 7], ['Orientation', 9]
-//        ]];
-//        $scope.myChartOpts = charting.pieChartOptions;
-//    });
