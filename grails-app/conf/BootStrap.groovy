@@ -10,22 +10,21 @@ class BootStrap {
 
     def init = { servletContext ->
 
-        JSON.registerObjectMarshaller(Stock) { Stock stock ->
-            return [
-                    id         : stock.id,
-                    name       : stock.name,
-                    description: stock.description,
-                    snapshot   : stock.snapshot,
-                    ohlc       : StockUtils.candleStickPlot(stock)
-            ]
-        }
-
         JSON.registerObjectMarshaller(YahooInstantSnapshot) { YahooInstantSnapshot snapshot ->
             return [
                     symbol         : snapshot.Symbol,
                     change         : snapshot.change,
                     PERatio        : snapshot.PERatio,
                     percentChange  : snapshot.percentChange
+            ]
+        }
+
+        JSON.registerObjectMarshaller(Stock) { Stock stock ->
+            return [
+                    id         : stock.id,
+                    name       : stock.name,
+                    description: stock.description,
+                    ohlc       : StockUtils.candleStickPlot(stock)
             ]
         }
 

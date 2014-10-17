@@ -6,6 +6,7 @@ zok.config([
     '$routeProvider',
     function ($routeProvider) {
         $routeProvider.
+//            when('/dashboard', {templateUrl: '/zok/top', controller: 'UserCtrl'}).
             when('/dashboard', {templateUrl: '/zok/auth/dashboard', controller: 'UserCtrl'}).
             when('/login', {templateUrl: '/zok/auth/showLogin', controller: 'UserCtrl'}).
             when('/signup', {templateUrl: '/zok/auth/showSignup', controller: 'UserCtrl'}).

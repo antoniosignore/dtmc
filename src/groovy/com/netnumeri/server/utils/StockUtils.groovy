@@ -178,16 +178,16 @@ class StockUtils {
         Date dateIndex = startDate
 
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
-        StringBuffer sb = new StringBuffer("[\n");
+        StringBuffer sb = new StringBuffer("[");
         while (dateIndex != null) {
             Daily daily = dailyarray.get(dateIndex)
             if (dateIndex.getTime() == last.getTime())
-                sb.append("['" + sdf.format(dateIndex) + "'," + daily.openprice + "," + daily.high + "," + daily.low + "," + daily.closeprice + "]\n")
+                sb.append("[\"" + sdf.format(dateIndex) + "\"," + daily.openprice + "," + daily.high + "," + daily.low + "," + daily.closeprice + "]\n")
             else
-                sb.append("['" + sdf.format(dateIndex) + "'," + daily.openprice + "," + daily.high + "," + daily.low + "," + daily.closeprice + "],\n")
+                sb.append("[\"" + sdf.format(dateIndex) + "\"," + daily.openprice + "," + daily.high + "," + daily.low + "," + daily.closeprice + "],\n")
             dateIndex = dailyarray.nextDate(dateIndex)
         }
-        sb.append("];\n")
+        sb.append("]")
         return sb.toString()
     }
 

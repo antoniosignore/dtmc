@@ -13,6 +13,6 @@ $(window).resize(function () {
 
 </script>
 
-<div id="chart" style="height:150px; width:100%;"></div>
+<div id="chart" style="height:400px; width:100%;"></div>
 
 

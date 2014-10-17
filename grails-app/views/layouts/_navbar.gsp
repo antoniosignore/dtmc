@@ -1,3 +1,4 @@
+
 <nav id="Navbar" class="navbar navbar-fixed-top navbar-inverse" role="navigation" data-ng-show="appConfig.token!=''">
     <div class="container-fluid" data-ng-controller="UserCtrl">
         <div class="navbar-header">
