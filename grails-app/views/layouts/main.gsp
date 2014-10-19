@@ -31,7 +31,8 @@
     <g:layoutBody/>
 </div>
 
-<div class="footer" role="contentinfo"></div>
+<g:render template="/layouts/footer"/>
+%{--<div class="footer" role="contentinfo"></div>--}%
 
 </body>
 </html>
