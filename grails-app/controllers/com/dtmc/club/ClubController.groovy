@@ -60,39 +60,12 @@ class ClubController extends ArrestedController {
         if (request.JSON.instance) {
             def data = request.JSON.instance
             Club instance = new Club()
-
             if (data.agreement) instance.agreement = data.agreement
-
-
-
-            // if (data.dateCreated) instance.dateCreated = setDate(data.dateCreated)
-
-
-
             if (data.inauguralMeeting) instance.inauguralMeeting = setDate(data.inauguralMeeting)
-
-
-
             if (data.joiningFee) instance.joiningFee = data.joiningFee
-
-
-
-            // if (data.lastUpdated) instance.lastUpdated = setDate(data.lastUpdated)
-
-
-
             if (data.monthlySubscription) instance.monthlySubscription = data.monthlySubscription
-
-
-
             if (data.name) instance.name = data.name
-
-
-
             if (data.yearsTimeSpan) instance.yearsTimeSpan = data.yearsTimeSpan
-
-
-
             if (instance.save(flush: true)) {
                 withFormat {
                     xml {
@@ -118,19 +91,10 @@ class ClubController extends ArrestedController {
             Club instance = Club.get(data.id as Long)
             if (instance) {
                 if (data.agreement) instance.agreement = data.agreement
-
-                if (data.dateCreated) instance.dateCreated = data.dateCreated
-
                 if (data.inauguralMeeting) instance.inauguralMeeting = data.inauguralMeeting
-
                 if (data.joiningFee) instance.joiningFee = data.joiningFee
-
-                if (data.lastUpdated) instance.lastUpdated = data.lastUpdated
-
                 if (data.monthlySubscription) instance.monthlySubscription = data.monthlySubscription
-
                 if (data.name) instance.name = data.name
-
                 if (data.yearsTimeSpan) instance.yearsTimeSpan = data.yearsTimeSpan
                 if (instance.save(flush: true)) {
                     withFormat {

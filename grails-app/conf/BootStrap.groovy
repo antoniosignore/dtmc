@@ -2,13 +2,11 @@ import arrested.ArrestedToken
 import arrested.ArrestedUser
 import com.dtmc.club.Club
 import com.dtmc.finance.finpojo.Daily
+import com.dtmc.finance.finpojo.Entry
 import com.dtmc.finance.finpojo.Portfolio
 import com.dtmc.finance.finpojo.asset.Stock
-import com.netnumeri.server.enums.PortfolioTypeEnum
 import com.netnumeri.server.finance.utils.YahooInstantSnapshot
-import com.netnumeri.server.utils.StockUtils
 import grails.converters.JSON
-import org.apache.shiro.crypto.hash.Sha256Hash
 
 class BootStrap {
 
@@ -22,10 +20,10 @@ class BootStrap {
 
         JSON.registerObjectMarshaller(YahooInstantSnapshot) { YahooInstantSnapshot snapshot ->
             return [
-                    symbol         : snapshot.Symbol,
-                    change         : snapshot.Change,
-                    PERatio        : snapshot.PERatio,
-                    percentChange  : snapshot.PercentChange
+                    symbol       : snapshot.Symbol,
+                    change       : snapshot.Change,
+                    PERatio      : snapshot.PERatio,
+                    percentChange: snapshot.PercentChange
             ]
         }
 
@@ -53,18 +51,62 @@ class BootStrap {
 
         JSON.createNamedConfig('thin') {
 
-            it.registerObjectMarshaller( ArrestedUser ) { ArrestedUser person ->
+            it.registerObjectMarshaller(ArrestedUser) { ArrestedUser member ->
                 return [
-                        id: person.id,
-                        username: person.username,
+                        id        : member.id,
+                        username  : member.username,
+                        token     : ArrestedToken.get(member.token)?.token,
+                        firstname : member.firstname,
+                        lastname  : member.lastname,
+                        address1  : member.address1,
+                        address2  : member.address2,
+                        city      : member.city,
+                        state     : member.state,
+                        country   : member.country,
+                        company   : member.company,
+                        email     : member.email,
+                        phone     : member.phone,
+                        mobile    : member.mobile,
+                        twitter   : member.twitter,
+                        facebook  : member.facebook,
+                        linkedin  : member.linkedin,
+                        timezone  : member.timezone,
+                        club      : member.club,
+                        portfolios: member.portfolios
                 ]
             }
 
-            it.registerObjectMarshaller( Club ) { Club club ->
+            it.registerObjectMarshaller(Club) { Club club ->
                 return [
-                        id: club.id,
-                        name: club.name,
-                        members: club.members
+                        id     : club.id,
+                        name   : club.name,
+                ]
+            }
+
+            it.registerObjectMarshaller(Portfolio) { Portfolio portfolio ->
+                return [
+                        id    : portfolio.id,
+                        name  : portfolio.name,
+                        items : portfolio.items,
+                        trades: portfolio.trades
+                ]
+            }
+
+            it.registerObjectMarshaller(Entry) { Entry entry ->
+                return [
+                        id    : entry.id,
+                        name  : entry.instrument.name,
+                        amount: entry.amount,
+                        price : entry.price(),
+                        trades: entry.value()
+                ]
+            }
+
+            it.registerObjectMarshaller(Stock) { Stock stock ->
+                return [
+                        id         : stock.id,
+                        name       : stock.name,
+                        description: stock.description
                 ]
             }
 
@@ -81,8 +123,8 @@ class BootStrap {
 //            }
 //        }
 
-//        ArrestedUser adminUser
-//        ArrestedToken token
+        ArrestedUser adminUser
+        ArrestedToken token
 
 //        Club club = new Club(name: 'ethical').save(flush: true, failOnError: true)
 //
@@ -98,12 +140,19 @@ class BootStrap {
 //        new Stock("IBM", "International Business Machines").save(flush: true, failOnError: true)
 //        new Stock("SSRI", "Silver Standard Resources").save(flush: true, failOnError: true)
 //
-//        Portfolio portfolio = new Portfolio(name: 'mio', description: 'mia descrizione', user: adminUser, portfolioType: PortfolioTypeEnum.Main)
+//        Portfolio portfolio = new Portfolio(
+//                name: 'admin portfolio',
+//                description: 'mio portfolio',
+//                user: adminUser,
+//                portfolioType: PortfolioTypeEnum.Main)
 //        portfolio.save(flush: true, failOnError: true)
+//
+//        adminUser.addToPortfolios(portfolio)
+//        adminUser.save(flush: true, failOnError: true)
 
-//        Entry entry = new Entry()
-//      portfolioService.buy(portfolio, stock, 100);
-//      portfolio.save(failOnError: true, insert: true, flush: true);
+//            Entry entry = new Entry()
+//          portfolioService.buy(portfolio, stock, 100);
+//          portfolio.save(failOnError: true, insert: true, flush: true);
 
 //        if (UserIndicators.getAll() == null || UserIndicators.getAll().size() == 0) {
 //

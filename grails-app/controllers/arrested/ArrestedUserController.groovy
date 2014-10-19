@@ -20,7 +20,9 @@ class ArrestedUserController extends ArrestedController {
                             render user.toObject() as XML
                         }
                         json {
-                            render user.toObject() as JSON
+                            JSON.use('thin') {
+                                render user as JSON
+                            }
                         }
                     }
                 } else {
@@ -84,8 +86,9 @@ class ArrestedUserController extends ArrestedController {
                                 render user.toObject() as XML
                             }
                             json {
-                                response.status = 200
-                                render user.toObject() as JSON
+                                JSON.use('thin') {
+                                    render user as JSON
+                                }
                             }
                         }
                     } else {

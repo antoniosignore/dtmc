@@ -57,7 +57,6 @@ class AuthController extends ArrestedController {
         }
     }
 
-
     def dashboard() {
         withFormat {
             html {
@@ -133,7 +132,9 @@ class AuthController extends ArrestedController {
                                 render user.toObject() as XML
                             }
                             json {
-                                render user.toObject() as JSON
+                                JSON.use('thin') {
+                                    render user as JSON
+                                }
                             }
                         }
                     } else {

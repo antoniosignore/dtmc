@@ -1,6 +1,7 @@
 package arrested
 
 import com.dtmc.club.Club
+import com.dtmc.finance.finpojo.Portfolio
 import com.dtmc.indicator.UserIndicators
 import com.dtmc.trading.StrategyCatalog
 
@@ -30,7 +31,7 @@ class ArrestedUser {
     String linkedin
     String timezone
 
-    static hasMany = [followers: ArrestedUser, indicators: UserIndicators, strategies: StrategyCatalog]
+    static hasMany = [portfolios: Portfolio, followers: ArrestedUser, indicators: UserIndicators, strategies: StrategyCatalog]
 
     static constraints = {
         username blank: false, unique: true

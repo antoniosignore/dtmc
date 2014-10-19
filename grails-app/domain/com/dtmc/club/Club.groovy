@@ -1,7 +1,6 @@
 package com.dtmc.club
 
 import arrested.ArrestedUser
-import com.netnumeri.server.utils.StockUtils
 
 class Club implements Serializable {
 

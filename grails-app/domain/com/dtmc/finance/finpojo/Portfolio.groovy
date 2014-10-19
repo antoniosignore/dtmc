@@ -1,7 +1,7 @@
 package com.dtmc.finance.finpojo
 
 import arrested.ArrestedUser
-//
+
 import com.dtmc.finance.finpojo.asset.Asset
 import com.netnumeri.server.enums.PortfolioTypeEnum
 
