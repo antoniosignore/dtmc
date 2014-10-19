@@ -30,7 +30,9 @@ class ClubController extends ArrestedController {
                         render instance as XML
                     }
                     json {
-                        render instance as JSON
+                        JSON.use('thin') {
+                            render instance as JSON
+                        }
                     }
                 }
             } else {

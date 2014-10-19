@@ -54,7 +54,7 @@ class StockController extends ArrestedController {
                         render instance as XML
                     }
                     json {
-                        render instance as JSON
+                        render instance.toObject() as JSON
                     }
                 }
             } else {

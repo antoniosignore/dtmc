@@ -1,11 +1,12 @@
 package com.dtmc.indicator
 
-import com.dtmc.club.Member
+import arrested.ArrestedUser
+
 import com.netnumeri.server.enums.IndicatorEnum
 
 public class UserIndicators implements Serializable {
 
-    static belongsTo = [user: Member]
+    static belongsTo = [user: ArrestedUser]
 
     String name
     IndicatorEnum type

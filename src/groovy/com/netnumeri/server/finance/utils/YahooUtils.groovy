@@ -242,7 +242,7 @@ public class YahooUtils {
             token = stringtokenizer.nextToken();
         }
 
-        snap.setSymbol(token);
+        snap.Symbol= token
 
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -250,7 +250,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setCompanyName(token);
+            snap.CompanyName= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -258,7 +258,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setLastPrice(token);
+            snap.LastPrice= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -266,7 +266,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setLastTradeDate(token);
+            snap.LastTradeDate= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -274,7 +274,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setLastTradeTime(token);
+            snap.LastTradeTime= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -282,7 +282,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setChange(token);
+            snap.Change= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -290,7 +290,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setPercentChange(token);
+            snap.PercentChange= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -298,7 +298,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setVolume(token);
+            snap.Volume= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -306,7 +306,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setAverageDailyVol(token);
+            snap.AverageDailyVol= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -314,7 +314,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setBid(token);
+            snap.Bid= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -322,7 +322,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setAsk(token);
+            snap.Ask= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -330,7 +330,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setPreviousClose(token);
+            snap.PreviousClose= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -338,7 +338,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setTodaysOpen(token);
+            snap.TodaysOpen= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -346,7 +346,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setDaysRange(token);
+            snap.DaysRange= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -354,7 +354,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setYearWeekRange(token);
+            snap.YearWeekRange= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -362,7 +362,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setEarningsperShare(token);
+            snap.EarningsperShare= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -370,7 +370,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setPERatio(token);
+            snap.PERatio= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -378,7 +378,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setDividendPayDate(token);
+            snap.DividendPayDate= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -386,7 +386,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setDividendperShare(token);
+            snap.DividendperShare= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -394,7 +394,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setDividendYield(token);
+            snap.DividendYield= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -403,7 +403,7 @@ public class YahooUtils {
             }
             token = stringtokenizer.nextToken();
 
-            snap.setMarketCapitalization(token);
+            snap.MarketCapitalization= token
         }
         if (stringtokenizer.hasMoreTokens()) {
             token = stringtokenizer.nextToken();
@@ -411,7 +411,7 @@ public class YahooUtils {
                 token = stringtokenizer.nextToken();
             }
 
-            snap.setStockExchange(token);
+            snap.StockExchange= token
         }
         return snap;
     }

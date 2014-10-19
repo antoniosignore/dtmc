@@ -1,12 +1,11 @@
 'use strict';
-var zok = angular.module('zok', ['services', 'ngRoute', 'ui.chart']);
-
+var zok = angular.module('zok', ['services', 'ngRoute']);
 
 zok.config([
     '$routeProvider',
     function ($routeProvider) {
         $routeProvider.
-//            when('/dashboard', {templateUrl: '/zok/top', controller: 'UserCtrl'}).
+            when('/main/show', {templateUrl: '/zok/main/show', controller: 'MainCtrl'}).
             when('/dashboard', {templateUrl: '/zok/auth/dashboard', controller: 'UserCtrl'}).
             when('/login', {templateUrl: '/zok/auth/showLogin', controller: 'UserCtrl'}).
             when('/signup', {templateUrl: '/zok/auth/showSignup', controller: 'UserCtrl'}).
@@ -17,10 +16,6 @@ zok.config([
             when('/club/edit', {templateUrl: '/zok/club/edit', controller: 'ClubCtrl'}).
             when('/club/list', {templateUrl: '/zok/club/listing', controller: 'ClubCtrl'}).
             when('/club', {templateUrl: '/zok/club/listing', controller: 'ClubCtrl'}).
-            when('/member/create', {templateUrl: '/zok/member/edit', controller: 'MemberCtrl'}).
-            when('/member/edit', {templateUrl: '/zok/member/edit', controller: 'MemberCtrl'}).
-            when('/member/list', {templateUrl: '/zok/member/listing', controller: 'MemberCtrl'}).
-            when('/member', {templateUrl: '/zok/member/listing', controller: 'MemberCtrl'}).
             when('/stock/create', {templateUrl: '/zok/stock/edit', controller: 'StockCtrl'}).
             when('/stock/edit', {templateUrl: '/zok/stock/edit', controller: 'StockCtrl'}).
             when('/stock/show', {templateUrl: '/zok/stock/showing', controller: 'StockCtrl'}).

@@ -1,8 +1,11 @@
 package com.dtmc.club
 
+import arrested.ArrestedUser
+import com.netnumeri.server.utils.StockUtils
+
 class Club implements Serializable {
 
-    static hasMany = [members: Member]
+    static hasMany = [members: ArrestedUser]
 
     String name
     Integer yearsTimeSpan
@@ -29,4 +32,12 @@ class Club implements Serializable {
     public String toString() {
         return name
     }
+
+//    def toObject() {
+//        return [
+//                id         : id,
+//                name       : name,
+//                members    : member
+//        ]
+//    }
 }

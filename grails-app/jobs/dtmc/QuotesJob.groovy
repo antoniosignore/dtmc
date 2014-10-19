@@ -10,8 +10,8 @@ class QuotesJob {
 
     def execute() {
 
-      //  println "Execute"
-       // dailyService.updateDailyDatabase()
+//        println "Execute"
+//       dailyService.updateDailyDatabase()
 
     }
 }

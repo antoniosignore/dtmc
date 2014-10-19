@@ -1,32 +1,42 @@
 import arrested.ArrestedToken
-import com.dtmc.club.Member
+import arrested.ArrestedUser
+import com.dtmc.club.Club
 import com.dtmc.finance.finpojo.Daily
+import com.dtmc.finance.finpojo.Portfolio
 import com.dtmc.finance.finpojo.asset.Stock
+import com.netnumeri.server.enums.PortfolioTypeEnum
 import com.netnumeri.server.finance.utils.YahooInstantSnapshot
 import com.netnumeri.server.utils.StockUtils
 import grails.converters.JSON
+import org.apache.shiro.crypto.hash.Sha256Hash
 
 class BootStrap {
 
     def init = { servletContext ->
 
+//        JSON.registerObjectMarshaller(ArrestedUser) { ArrestedUser user ->
+//            return [
+//                    username         : user.username,
+//            ]
+//        }
+
         JSON.registerObjectMarshaller(YahooInstantSnapshot) { YahooInstantSnapshot snapshot ->
             return [
                     symbol         : snapshot.Symbol,
-                    change         : snapshot.change,
+                    change         : snapshot.Change,
                     PERatio        : snapshot.PERatio,
-                    percentChange  : snapshot.percentChange
+                    percentChange  : snapshot.PercentChange
             ]
         }
 
-        JSON.registerObjectMarshaller(Stock) { Stock stock ->
-            return [
-                    id         : stock.id,
-                    name       : stock.name,
-                    description: stock.description,
-                    ohlc       : StockUtils.candleStickPlot(stock)
-            ]
-        }
+//        JSON.registerObjectMarshaller(Stock) { Stock stock ->
+//            return [
+//                    id         : stock.id,
+//                    name       : stock.name,
+//                    description: stock.description,
+//                    ohlc       : StockUtils.candleStickPlot(stock)
+//            ]
+//        }
 
         JSON.registerObjectMarshaller(Daily) { Daily daily ->
             return [
@@ -41,33 +51,42 @@ class BootStrap {
             ]
         }
 
-        JSON.registerObjectMarshaller(Member) { Member member ->
-            return [
-                    id       : member.id,
-                    firstname: member.firstname,
-                    lastname : member.lastname,
-                    address1 : member.address1,
-                    address2 : member.address2,
-                    city     : member.city,
-                    state    : member.state,
-                    country  : member.country,
-                    company  : member.company,
-                    email    : member.email,
-                    phone    : member.phone,
-                    mobile   : member.mobile,
-                    twitter  : member.twitter,
-                    facebook : member.facebook,
-                    linkedin : member.linkedin,
-                    timezone : member.timezone
-            ]
+        JSON.createNamedConfig('thin') {
+
+            it.registerObjectMarshaller( ArrestedUser ) { ArrestedUser person ->
+                return [
+                        id: person.id,
+                        username: person.username,
+                ]
+            }
+
+            it.registerObjectMarshaller( Club ) { Club club ->
+                return [
+                        id: club.id,
+                        name: club.name,
+                        members: club.members
+                ]
+            }
+
+
         }
 
-        Member adminUser
-        ArrestedToken token
+//        JSON.createNamedConfig('full') {
+//            it.registerObjectMarshaller( Person ) { Person person ->
+//                return [
+//                        id: person.id,
+//                        name: person.name,
+//                        age: person.age
+//                ]
+//            }
+//        }
+
+//        ArrestedUser adminUser
+//        ArrestedToken token
 
 //        Club club = new Club(name: 'ethical').save(flush: true, failOnError: true)
 //
-//        adminUser = new Member(club: club, username: "admin",
+//        adminUser = new ArrestedUser(club: club, username: "admin",
 //                passwordHash: new Sha256Hash("admin").toHex(), dateCreated: new Date()).save(flush: true, failOnError: true)
 //
 //        //Create tokens for users

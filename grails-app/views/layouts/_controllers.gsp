@@ -6,11 +6,11 @@
         <g:message code="default.club.label" default="Club"/>
     </a>
 
-    <a ng-class="isSelected('member')? 'btn btn-primary' :'btn btn-default'" ng-click="setSelectedController('member')"
-       onclick='window.location.href = "#/member/list"'
-       title="${message(code: 'default.member.label', default: 'Member')}">
-        <g:message code="default.member.label" default="Member"/>
-    </a>
+    %{--<a ng-class="isSelected('arrestedUser')? 'btn btn-primary' :'btn btn-default'" ng-click="setSelectedController('member')"--}%
+       %{--onclick='window.location.href = "#/member/list"'--}%
+       %{--title="${message(code: 'default.member.label', default: 'Member')}">--}%
+        %{--<g:message code="default.member.label" default="Member"/>--}%
+    %{--</a>--}%
 
     <a ng-class="isSelected('portfolio')? 'btn btn-primary' :'btn btn-default'"
        ng-click="setSelectedController('portfolio')" onclick='window.location.href = "#/portfolio/list"'

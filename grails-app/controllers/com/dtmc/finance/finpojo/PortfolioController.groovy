@@ -1,6 +1,8 @@
 package com.dtmc.finance.finpojo
 
-import com.dtmc.club.Member
+import arrested.ArrestedUser
+
+//
 import com.netnumeri.server.enums.PortfolioTypeEnum
 import grails.converters.JSON
 import grails.converters.XML
@@ -64,7 +66,7 @@ class PortfolioController extends ArrestedController {
             if (data.description) instance.description = data.description
             if (data.name) instance.name = data.name
             if (data.portfolioType) instance.portfolioType = PortfolioTypeEnum.valueOfName(data.portfolioType.get("name"))
-            if (data.user) instance.user = Member.get(data.user.id as Long)
+            if (data.user) instance.user = ArrestedUser.get(data.user.id as Long)
             if (data.wealth) instance.wealth = data.wealth
 
             if (instance.save(flush: true)) {
@@ -95,7 +97,7 @@ class PortfolioController extends ArrestedController {
                 if (data.name) instance.name = data.name
 
                 if (data.portfolioType) instance.portfolioType = PortfolioTypeEnum.valueOfName(data.portfolioType.get("name"))
-                if (data.user) instance.user = Member.get(data.user.id as Long)
+                if (data.user) instance.user = ArrestedUser.get(data.user.id as Long)
 
                 if (data.wealth) instance.wealth = data.wealth
                 if (instance.save(flush: true)) {

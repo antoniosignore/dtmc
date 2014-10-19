@@ -1,5 +1,6 @@
 package com.dtmc.trading
 
+import arrested.ArrestedUser
 import grails.converters.JSON
 import grails.converters.XML
 import arrested.ArrestedController
@@ -68,7 +69,7 @@ class StrategySubscriptionController extends ArrestedController {
 
             if (data.strategy) instance.strategy = com.dtmc.trading.StrategyCatalog.get(data.strategy.id as Long)
 
-            if (data.user) instance.user = com.dtmc.club.Member.get(data.user.id as Long)
+            if (data.user) instance.user = ArrestedUser.get(data.user.id as Long)
 
 
             if (instance.save(flush: true)) {
@@ -101,7 +102,7 @@ class StrategySubscriptionController extends ArrestedController {
 
                 if (data.strategy) instance.strategy = com.dtmc.trading.StrategyCatalog.get(data.strategy.id as Long)
 
-                if (data.user) instance.user = com.dtmc.club.Member.get(data.user.id as Long)
+                if (data.user) instance.user = ArrestedUser.get(data.user.id as Long)
                 if (instance.save(flush: true)) {
                     withFormat {
                         xml {

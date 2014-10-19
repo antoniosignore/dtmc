@@ -1,5 +1,6 @@
 package com.dtmc.indicator
 
+import arrested.ArrestedUser
 import grails.converters.JSON
 import grails.converters.XML
 import arrested.ArrestedController
@@ -98,7 +99,7 @@ class UserIndicatorsController extends ArrestedController {
             if (data.type) instance.type = data.type
 
 
-            if (data.user) instance.user = com.dtmc.club.Member.get(data.user.id as Long)
+            if (data.user) instance.user = ArrestedUser.get(data.user.id as Long)
 
 
             if (instance.save(flush: true)) {
@@ -145,7 +146,7 @@ class UserIndicatorsController extends ArrestedController {
 
                 if (data.type) instance.type = data.type
 
-                if (data.user) instance.user = com.dtmc.club.Member.get(data.user.id as Long)
+                if (data.user) instance.user = ArrestedUser.get(data.user.id as Long)
                 if (instance.save(flush: true)) {
                     withFormat {
                         xml {

@@ -3,8 +3,6 @@ package arrested
 
 import grails.converters.JSON
 import grails.converters.XML
-import arrested.ArrestedController
-import arrested.ArrestedController
 import org.apache.shiro.crypto.hash.Sha256Hash
 
 class ArrestedUserController extends ArrestedController {

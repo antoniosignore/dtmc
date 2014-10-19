@@ -8,7 +8,6 @@
         </div>
     </div>
 
-
     <div>
         <p></p>
         <a class="btn btn-primary btn-primary" data-ng-click="newPortfolio()"><span

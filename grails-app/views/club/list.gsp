@@ -28,45 +28,27 @@
                     <table class="table" ng-table="tableParams" show-filter="true">
                         <tr data-ng-repeat="instance in clubs" data-ng-click="editClub(instance)">
 
-                            <td data-sortable="'agreement'" filter="{'agreement':'text'}" data-title="'agreement'">
+                            <td data-sortable="'name'" data-title="'name'">
 
+                                {{instance.name}}
+                            </td>
+
+                            <td data-sortable="'agreement'" filter="{'agreement':'text'}" data-title="'agreement'">
                                 {{instance.agreement}}
                             </td>
 
-
-                            %{--<td data-sortable="'dateCreated'" data-title="'dateCreated'">--}%
-
-                                %{--{{instance.dateCreated}}--}%
-                            %{--</td>--}%
-
-
                             <td data-sortable="'inauguralMeeting'" data-title="'inauguralMeeting'">
-
                                 {{instance.inauguralMeeting}}
                             </td>
 
 
                             <td data-sortable="'joiningFee'" data-title="'joiningFee'">
-
                                 {{instance.joiningFee}}
                             </td>
-
-
-                            %{--<td data-sortable="'lastUpdated'" data-title="'lastUpdated'">--}%
-%{----}%
-                                %{--{{instance.lastUpdated}}--}%
-                            %{--</td>--}%
-
 
                             <td data-sortable="'monthlySubscription'" data-title="'monthlySubscription'">
 
                                 {{instance.monthlySubscription}}
-                            </td>
-
-
-                            <td data-sortable="'name'" data-title="'name'">
-
-                                {{instance.name}}
                             </td>
 
 
