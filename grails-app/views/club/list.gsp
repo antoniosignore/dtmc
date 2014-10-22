@@ -7,13 +7,11 @@
         </div>
     </div>
 
-
     <div>
         <p></p>
         <a class="btn btn-primary btn-primary" data-ng-click="newClub()"><span
                 class="glyphicon glyphicon-plus"></span><g:message code="default.new.label" args="['club']"
                                                                    default="New club"/></a>
-
         <p></p>
     </div>
 
@@ -29,7 +27,6 @@
                         <tr data-ng-repeat="instance in clubs" data-ng-click="editClub(instance)">
 
                             <td data-sortable="'name'" data-title="'name'">
-
                                 {{instance.name}}
                             </td>
 
@@ -41,19 +38,15 @@
                                 {{instance.inauguralMeeting}}
                             </td>
 
-
                             <td data-sortable="'joiningFee'" data-title="'joiningFee'">
                                 {{instance.joiningFee}}
                             </td>
 
                             <td data-sortable="'monthlySubscription'" data-title="'monthlySubscription'">
-
                                 {{instance.monthlySubscription}}
                             </td>
 
-
                             <td data-sortable="'yearsTimeSpan'" data-title="'yearsTimeSpan'">
-
                                 {{instance.yearsTimeSpan}}
                             </td>
 
