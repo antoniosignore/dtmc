@@ -5,18 +5,14 @@ import com.dtmc.finance.finpojo.Daily
 import com.dtmc.finance.finpojo.Entry
 import com.dtmc.finance.finpojo.Portfolio
 import com.dtmc.finance.finpojo.asset.Stock
+import com.netnumeri.server.enums.PortfolioTypeEnum
 import com.netnumeri.server.finance.utils.YahooInstantSnapshot
 import grails.converters.JSON
+import org.apache.shiro.crypto.hash.Sha256Hash
 
 class BootStrap {
 
     def init = { servletContext ->
-
-//        JSON.registerObjectMarshaller(ArrestedUser) { ArrestedUser user ->
-//            return [
-//                    username         : user.username,
-//            ]
-//        }
 
         JSON.registerObjectMarshaller(YahooInstantSnapshot) { YahooInstantSnapshot snapshot ->
             return [
@@ -26,15 +22,6 @@ class BootStrap {
                     percentChange: snapshot.PercentChange
             ]
         }
-
-//        JSON.registerObjectMarshaller(Stock) { Stock stock ->
-//            return [
-//                    id         : stock.id,
-//                    name       : stock.name,
-//                    description: stock.description,
-//                    ohlc       : StockUtils.candleStickPlot(stock)
-//            ]
-//        }
 
         JSON.registerObjectMarshaller(Daily) { Daily daily ->
             return [
@@ -126,29 +113,29 @@ class BootStrap {
         ArrestedUser adminUser
         ArrestedToken token
 
-//        Club club = new Club(name: 'ethical').save(flush: true, failOnError: true)
-//
-//        adminUser = new ArrestedUser(club: club, username: "admin",
-//                passwordHash: new Sha256Hash("admin").toHex(), dateCreated: new Date()).save(flush: true, failOnError: true)
-//
-//        //Create tokens for users
-//        token = new ArrestedToken(token: 'token', valid: true, owner: adminUser.id).save(flush: true)
-//        adminUser.setToken(token.id)
-//        adminUser.save(flush: true, failOnError: true)
-//
-//        new Stock("AAPL", "Apple Computers").save(flush: true, failOnError: true)
-//        new Stock("IBM", "International Business Machines").save(flush: true, failOnError: true)
-//        new Stock("SSRI", "Silver Standard Resources").save(flush: true, failOnError: true)
-//
-//        Portfolio portfolio = new Portfolio(
-//                name: 'admin portfolio',
-//                description: 'mio portfolio',
-//                user: adminUser,
-//                portfolioType: PortfolioTypeEnum.Main)
-//        portfolio.save(flush: true, failOnError: true)
-//
-//        adminUser.addToPortfolios(portfolio)
-//        adminUser.save(flush: true, failOnError: true)
+        Club club = new Club(name: 'ethical').save(flush: true, failOnError: true)
+
+        adminUser = new ArrestedUser(club: club, username: "admin",
+                passwordHash: new Sha256Hash("admin").toHex(), dateCreated: new Date()).save(flush: true, failOnError: true)
+
+        //Create tokens for users
+        token = new ArrestedToken(token: 'token', valid: true, owner: adminUser.id).save(flush: true)
+        adminUser.setToken(token.id)
+        adminUser.save(flush: true, failOnError: true)
+
+        new Stock("AAPL", "Apple Computers").save(flush: true, failOnError: true)
+        new Stock("IBM", "International Business Machines").save(flush: true, failOnError: true)
+        new Stock("SSRI", "Silver Standard Resources").save(flush: true, failOnError: true)
+
+        Portfolio portfolio = new Portfolio(
+                name: 'admin portfolio',
+                description: 'mio portfolio',
+                user: adminUser,
+                portfolioType: PortfolioTypeEnum.Main)
+        portfolio.save(flush: true, failOnError: true)
+
+        adminUser.addToPortfolios(portfolio)
+        adminUser.save(flush: true, failOnError: true)
 
 //            Entry entry = new Entry()
 //          portfolioService.buy(portfolio, stock, 100);

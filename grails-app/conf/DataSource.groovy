@@ -25,7 +25,7 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "none"
+            dbCreate = "create-drop"
         }
     }
     test {

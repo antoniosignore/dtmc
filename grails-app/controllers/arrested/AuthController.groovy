@@ -127,6 +127,8 @@ class AuthController extends ArrestedController {
                             token.valid = true
                             token.save(flush: true)
                         }
+
+                        println "******************* LOGIN ***************************"
                         withFormat {
                             xml {
                                 render user.toObject() as XML

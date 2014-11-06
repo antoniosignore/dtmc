@@ -16,6 +16,7 @@
         <p></p>
     </div>
     ------->{{user.username}}<--------------<br/>
+    CLUB : ------->{{user.club.name}}<--------------<br/>
     ------->{{portfolio.name}}<-------------<br/>
     <div>
         <div>
