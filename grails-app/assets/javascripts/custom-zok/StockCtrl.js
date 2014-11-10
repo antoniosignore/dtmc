@@ -2,11 +2,13 @@
 
 function StockCtrl(DAO, $rootScope, $scope, $filter, ngTableParams) {
 
-//    if ($rootScope.appConfig) {
-//        if (!$rootScope.appConfig.token != '') {
-//            window.location.href = "#/login"
-//        }
-//    }
+    console.log('Stock controller init called');
+
+    if ($rootScope.appConfig) {
+        if (!$rootScope.appConfig.token != '') {
+            window.location.href = "#/login"
+        }
+    }
 
     $rootScope.flags = {save: false};
     $rootScope.errors = {loadingSite: false, showErrors: false, showServerError: false, errorMessages: []};

@@ -1,6 +1,9 @@
 'use strict';
 
 function PortfolioCtrl(DAO, $rootScope, $scope, $filter, ngTableParams) {
+
+    console.log('portfolio controller init called');
+
     if ($rootScope.appConfig) {
         if (!$rootScope.appConfig.token != '') {
             window.location.href = "#/login"

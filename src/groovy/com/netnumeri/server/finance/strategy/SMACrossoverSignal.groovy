@@ -11,10 +11,6 @@ import com.netnumeri.server.finance.utils.DateUtils
 public class SMACrossoverSignal extends Strategy {
 
     Instrument asset
-    private int sma1 = 0;
-    private int sma2 = 0;
-
-    private boolean foundABUY = false;
 
     public SMACrossoverSignal(String name, Stock asset, Date firstDate, Date lastDate) {
         super(name, asset, firstDate, lastDate, 0);
