@@ -38,13 +38,11 @@ class StockController extends ArrestedController {
         if (id) {
             Stock instance = Stock.get(id)
 
-            Date da = DateUtils.todayThreeMonthsAgo()
-            Date a = DateUtils.today()
-//            StockUtils.refreshDaily(instance, da, a);
+///            StockUtils.refreshDaily(instance, da, a);
 
             instance.snapshot = YahooUtils.getCompanySnapshot(instance.name);
 
-            dailyService.dailyFromDatabase (instance, da, a)
+            dailyService.dailyFromDatabase (instance)
 //            List<UserIndicators> list = UserIndicators.list()
 //            TimeSeries closes = instance.series(FinConstants.CLOSE, da, a);
 

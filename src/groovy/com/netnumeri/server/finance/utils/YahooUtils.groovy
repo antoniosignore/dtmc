@@ -81,9 +81,8 @@ public class YahooUtils {
      */
     public static Stock downloadYahooData(String ticker, String description,
                                           Date from,
-                                          Date to,
-                                          boolean persist) throws IOException, ParseException {
-        return (downloadYahooData(ticker, description, from, to, "d", persist));
+                                          Date to) throws IOException, ParseException {
+        return (downloadYahooData(ticker, description, from, to, "d"));
     }
 
     public static Stock refreshDailyData(Stock stock,
@@ -100,12 +99,11 @@ public class YahooUtils {
                                           int firstmonth,
                                           int firstday,
                                           int firstyear,
-                                          String frequency,boolean persist) throws IOException, ParseException {
+                                          String frequency) throws IOException, ParseException {
         Stock stock = new Stock(ticker, description);
-
         String url = "http://ichart.finance.yahoo.com/table.csv?s=" +
                 ticker.trim() + "&d=" + lastmonth + "&e=" + lastday + "&f=" + lastyear + "&g=" + frequency + "&a=" + firstmonth + "&b=" + firstday + "&c=" + firstyear + "&ignore=.csv";
-        downloadData(stock, url, persist);
+        downloadData(stock, url);
         return stock;
     }
 
@@ -113,8 +111,7 @@ public class YahooUtils {
                                           String description,
                                           Date from,
                                           Date to,
-                                          String frequency,
-                                          boolean persist) throws IOException, ParseException {
+                                          String frequency) throws IOException, ParseException {
         int firstmonth = DateUtils.getMonth(from);
         int firstday = DateUtils.getDay(from);
         int firstyear = DateUtils.getYear(from);
@@ -129,7 +126,7 @@ public class YahooUtils {
         String url = "http://ichart.finance.yahoo.com/table.csv?s=" +
                 ticker.trim() + "&d=" + lastmonth + "&e=" + lastday + "&f=" + lastyear + "&g=" + frequency + "&a=" + firstmonth + "&b=" + firstday + "&c=" + firstyear + "&ignore=.csv";
 
-        downloadData(stock, url, persist);
+        downloadData(stock, url);
         return stock;
     }
 
@@ -160,7 +157,7 @@ public class YahooUtils {
      * @param instrument
      * @param url
      */
-    public static void downloadData(Instrument instrument, String url, boolean persist) throws IOException, ParseException {
+    public static void downloadData(Instrument instrument, String url) throws IOException, ParseException {
 
         println "url = $url"
 
@@ -195,11 +192,7 @@ public class YahooUtils {
         int i = 0;
 
         while (!lines.empty()) {
-
             s3 = (String) lines.pop();
-
-            System.out.println("s3 = " + s3);
-
             StringTokenizer stringtokenizer = new StringTokenizer(s3, ",");
             String token = stringtokenizer.nextToken();
             date = token;
@@ -227,12 +220,12 @@ public class YahooUtils {
             d1 = d / 4;
             double vol = Double.parseDouble(stringtokenizer.nextToken());
             volume = vol;
+
             Date yahoo = DateUtils.toYahoo(date)
-            instrument.addDaily(yahoo, high, low, open, close, (int) volume, 0, persist);
+            instrument.addDaily(yahoo, high, low, open, close, (int) volume, 0);
         }
         NetUtils.closeURL(is);
     }
-
 
     private static YahooInstantSnapshot toSnapshot(String line, String delimiter) {
         YahooInstantSnapshot snap = new YahooInstantSnapshot();
@@ -841,7 +834,7 @@ public class YahooUtils {
         //    http://ichart.finance.yahoo.com/table.csv?s=SSRI&a=07&b=1&c=2007&d=03&e=10&f=2009&g=d&ignore=.csv
         String url = "http://ichart.finance.yahoo.com/table.csv?s=" +
                 ticker.trim() + "&d=" + lastmonth + "&e=" + lastday + "&f=" + lastyear + "&g=" + frequency + "&a=" + firstmonth + "&b=" + firstday + "&c=" + firstyear + "&ignore=.csv";
-        System.out.println("\n\n\n\nurl = " + url);
+//        System.out.println("\n\n\n\nurl = " + url);
 
         return proxyDownloadData(url);
     }
@@ -850,10 +843,9 @@ public class YahooUtils {
      * http://ichart.yahoo.com/table.csv?s=SSRI&d=6&e=2&f=2004&g=d&a=10&b=11&c=2000&ignore=.csv";
      */
     public static String proxyDownloadData(String url) throws IOException, ParseException {
-        System.out.println("YahooUtils.proxyDownloadData");
         Stack lines = new Stack();
         String s3 = null;
-        System.out.println("url = " + url);
+//        System.out.println("url = " + url);
         InputStream is = NetUtils.openURL(url);
         if (is == null) throw new RuntimeException("cannot newInstance InputStream");
         NetUtils.getLineFromURL(is);
@@ -869,7 +861,7 @@ public class YahooUtils {
             String o = (String) lines.pop();
             sb.append(o + "\n");
         }
-        System.out.println("quote.toString() = " + sb.toString());
+//        System.out.println("quote.toString() = " + sb.toString());
         return sb.toString();
     }
 

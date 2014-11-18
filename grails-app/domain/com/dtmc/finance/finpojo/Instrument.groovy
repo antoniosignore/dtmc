@@ -809,18 +809,8 @@ class Instrument extends Persistable implements Serializable {
         if (dailyarray == null || dailyarray.isEmpty()) {
             return null
         }
-        Daily daily = (Daily) dailyarray.lastValue();
-        if (daily != null)
-            return daily.getDailydate();
-        else
-            return null;
-
-//        return dailyarray.lastDate();
+        else return dailyarray.lastDate()
     }
-
-//    public void add(Daily daily) {
-//        dailyarray.put(DateUtils.toKey(daily.dailydate), daily);
-//    }
 
     public void add(Instrument instrument,
                     Date date,

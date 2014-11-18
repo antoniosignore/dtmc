@@ -28,12 +28,10 @@
 
 <div id="Content" class="container">
     <g:render template="/layouts/controllers"/>
-    cccccccccccccccccccccccc
     <g:layoutBody/>
 </div>
 
 <g:render template="/layouts/footer"/>
-%{--<div class="footer" role="contentinfo"></div>--}%
 
 </body>
 </html>
