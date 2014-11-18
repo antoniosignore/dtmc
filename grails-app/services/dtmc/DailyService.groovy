@@ -31,7 +31,7 @@ class DailyService {
 
             if (dailies.size() > 0) da = stock.lastDate()
 
-//            println "da = $da"
+            println "da = $da"
 //            println "DateUtils.today() = " + DateUtils.today()
 //
             if (!DateUtils.isEqual(da, DateUtils.today()))  {

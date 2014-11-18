@@ -26,9 +26,8 @@ class Stock extends Asset implements Serializable {
         return 0;
     }
 
-    static mapping = {
-        dailyarray lazy: false
-        snapshot lazy: false
+    public String toString(){
+        return name
     }
 
     def toObject() {
