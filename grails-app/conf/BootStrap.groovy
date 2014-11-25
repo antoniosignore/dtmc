@@ -124,8 +124,8 @@ class BootStrap {
         adminUser.save(flush: true, failOnError: true)
 
         new Stock("AAPL", "Apple Computers").save(flush: true, failOnError: true)
-        new Stock("IBM", "International Business Machines").save(flush: true, failOnError: true)
-        new Stock("SSRI", "Silver Standard Resources").save(flush: true, failOnError: true)
+//        new Stock("IBM", "International Business Machines").save(flush: true, failOnError: true)
+//        new Stock("SSRI", "Silver Standard Resources").save(flush: true, failOnError: true)
 
         Portfolio portfolio = new Portfolio(
                 name: 'admin portfolio',

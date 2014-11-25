@@ -2,6 +2,7 @@ package dtmc
 
 import com.dtmc.finance.finpojo.Daily
 import com.dtmc.finance.finpojo.asset.Stock
+import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.utils.DateUtils
 import com.netnumeri.server.utils.StockUtils
 import grails.gorm.DetachedCriteria
@@ -25,21 +26,25 @@ class DailyService {
 
             println "stock.name = $stock.name"
 
-            List<Daily> dailies = Daily.findAllByInstrument(stock, [sort: "dailydate", order: "asc"])
+            GenericTimeSeries<Daily> dailies = stock.dailyarray
 
-            println "dailies = $dailies"
+//            List<Daily> dailies = Daily.findAllByInstrument(stock, [sort: "dailydate", order: "asc"])
+            println "numero di dailies ---> " + dailies.size()
 
-            if (dailies.size() > 0) da = stock.lastDate()
+            if (dailies == null || dailies.size() == 0) {
+                da = DateUtils.todayOneYearAgo()
+                StockUtils.refreshDaily(stock, da, a);
+            }else {
+                da = dailies.get(dailies.size() +1).dailydate
+            }
 
-            println "da = $da"
-//            println "DateUtils.today() = " + DateUtils.today()
-//
-            if (!DateUtils.isEqual(da, DateUtils.today()))  {
-                stock.dailyarray.clear()
-                println "refresh: da " + da
-                println "refresh: a " + a
+            println "===========> da.getTime() = " + da.getTime()
+            println "===========> today.getTime() = " + DateUtils.today().getTime()
+
+            if (DateUtils.isLess(da, DateUtils.today()))  {
                 StockUtils.refreshDaily(stock, da, a);
             }
+
         }
     }
 

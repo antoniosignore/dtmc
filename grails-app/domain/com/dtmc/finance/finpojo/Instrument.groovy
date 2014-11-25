@@ -9,14 +9,19 @@ import com.netnumeri.server.finance.utils.DateUtils
 class Instrument extends Persistable implements Serializable {
 
     GenericTimeSeries<Daily> dailyarray = new GenericTimeSeries<Daily>();
+    static hasMany = [dailyarray: Daily]
 
-//    static hasMany = [dailyArray: Daily]
+//    static fetchMode = [dailyarray: 'eager']
 
-    static mapping = {
-        tablePerHierarchy false
-    }
+//    static mapping = {
+//        tablePerHierarchy false
+//        fetch:
+//    }
 
     static transients = [
+//            "dailyarray",
+            "chain",
+            "snapshot",
             "indicators",
             "priceSeries",
             "returnSeries",
@@ -32,7 +37,6 @@ class Instrument extends Persistable implements Serializable {
             "lastQuote",
             "marketSpotShift",
             "marketVolatilityShift",
-            "dailyarray",
             "delta",
             "spot",
             "volatility",
@@ -356,7 +360,6 @@ class Instrument extends Persistable implements Serializable {
         //       highSeriesChanged = false;
         return highSeries;
     }
-
 
     public TimeSeries lowSeries() {
         return lowSeries(null, null);
@@ -821,9 +824,16 @@ class Instrument extends Persistable implements Serializable {
                     int volume,
                     int openInterest) {
         Daily daily = new Daily(instrument, date, high, low, open, close, volume, openInterest);
-        daily.save(flush: true, failOnError: true)
-//        add(daily);
+        try {
+            daily.save(flush: true)
+        } catch (Throwable ex) {
+            log.debug("daily already present.")
+        }
     }
 
-
+//    boolean hasDaily(Date date) {
+//        if (dailyarray.get(date))
+//            return true
+//        return false
+//    }
 }

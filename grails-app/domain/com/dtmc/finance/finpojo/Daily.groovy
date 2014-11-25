@@ -15,6 +15,10 @@ class Daily implements Serializable, Comparable {
 
     Integer openInterest = 0;
 
+    static mapping = {
+        sort "dailydate"
+    }
+
     static constraints = {
         dailydate(unique: ['instrument'])
     }

@@ -38,9 +38,8 @@ class StockController extends ArrestedController {
         if (id) {
             Stock instance = Stock.get(id)
 
-///            StockUtils.refreshDaily(instance, da, a);
-
-            instance.snapshot = YahooUtils.getCompanySnapshot(instance.name);
+//            StockUtils.refreshDaily(instance, da, a);
+//            instance.snapshot = YahooUtils.getCompanySnapshot(instance.name);
 
             dailyService.dailyFromDatabase (instance)
 //            List<UserIndicators> list = UserIndicators.list()

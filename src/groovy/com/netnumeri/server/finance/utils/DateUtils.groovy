@@ -422,7 +422,8 @@ public class DateUtils {
     }
 
     public static boolean isLess(Date d1, Date d) {
-        if (d1.compareTo(d) < 0) return true;
+        if (d1.getTime() < d.getTime())
+            return true;
         return false;
     }
 

@@ -69,11 +69,21 @@ grails.project.dependency.resolution = {
         compile "com.google.guava:guava:13.0"
         runtime 'jaxen:jaxen:1.1.6'
 
+        compile 'org.codehaus.jackson:jackson-core-asl:1.9.9'
+        compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.9'
+        compile 'net.sf.opencsv:opencsv:2.3'
+        compile 'commons-httpclient:commons-httpclient:3.1', {
+            excludes 'commons-codec', 'commons-logging', 'junit'
+        }
     }
 
     plugins {
         // plugins for the build system only
         build ":tomcat:7.0.55"
+
+        build ':release:2.2.1', ':rest-client-builder:1.0.3', {
+            export = false
+        }
 
         // plugins for the compile step
         compile ":scaffolding:2.1.2"
@@ -88,6 +98,7 @@ grails.project.dependency.resolution = {
         compile ":arrested:1.33"
 
         compile ":quartz:1.0.1"
+
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"
