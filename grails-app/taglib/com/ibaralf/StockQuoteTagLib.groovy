@@ -1,6 +1,5 @@
 package com.ibaralf
 
-import com.ibaralf.YahooFinanceYQLService
 
 class StockQuoteTagLib {
 

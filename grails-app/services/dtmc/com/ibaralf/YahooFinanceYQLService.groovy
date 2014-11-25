@@ -20,20 +20,6 @@ import au.com.bytecode.opencsv.CSVReader
  * I make no guarantees whatsoever about future returns using the methods.
  */
 
-/**
- * Yahoo Finance grails plugin.
- * Service class to use to make web services call to Yahoo YQL
- * @author ibarra.alfonso@gmail.com
- * (c) 2013 Ibarra Alfonso
- * This software may be freely redistributed under the terms of the GNU
- * public license version 2.
- * This package is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- *
- * See the "GNU General Public License" for more detail.
- *
- */
 class YahooFinanceYQLService {
 
 	static transactional = false

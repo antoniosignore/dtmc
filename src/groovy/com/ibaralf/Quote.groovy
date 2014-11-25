@@ -5,7 +5,6 @@ import org.codehaus.jackson.annotate.JsonProperty
 
 /**
  * Contains different stock data. Uses jackson @Json annotation.
- * @author ialfonso
  */
 @JsonIgnoreProperties(["Ask"])
 class Quote{
