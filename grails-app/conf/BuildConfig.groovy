@@ -99,6 +99,8 @@ grails.project.dependency.resolution = {
 
         compile ":quartz:1.0.1"
 
+        compile ":richui:0.8"
+
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"
