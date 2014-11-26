@@ -1,64 +1,40 @@
 package dtmc
 
-import com.dtmc.finance.finpojo.Daily
 import com.dtmc.finance.finpojo.asset.Stock
-import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.utils.DateUtils
-import com.netnumeri.server.utils.StockUtils
-import grails.gorm.DetachedCriteria
 import grails.transaction.Transactional
 
 @Transactional
 class DailyService {
 
+    def yahooFinanceYQLService
+
     /*
      *   def cacheloader = { key -> loadElement(key) } as CacheLoader def cache = CacheBuilder.newBuilder(). expireAfterWrite(2, TimeUnit.HOURS). maximumSize(1000). build(cacheloader) def get(key) { cache.get(key) }
      */
 
-    public void updateDailyDatabase() {
+    public void dailyFromYahoo(Stock stock) {
+        Date startDate = new GregorianCalendar(2013, Calendar.NOVEMBER, 1).getTime()
+        Date endDate = DateUtils.today();
+        List quotes = yahooFinanceYQLService.getHistoricalQuotes(stock.name, startDate, endDate)
+        Stack lines = new Stack()
+        for (int i = 0; i < quotes.size(); i++) {
+            String[] quoteString = quotes.get(i);
+            if (quoteString[0] == "Date") continue;
+            lines.push(quoteString);
+        }
 
-        Date da = DateUtils.todayOneYearAgo()
-        Date a = DateUtils.today()
-
-        def all = Stock.findAll()
-
-        all.each { stock ->
-
-            println "stock.name = $stock.name"
-
-            GenericTimeSeries<Daily> dailies = stock.dailyarray
-
-//            List<Daily> dailies = Daily.findAllByInstrument(stock, [sort: "dailydate", order: "asc"])
-            println "numero di dailies ---> " + dailies.size()
-
-            if (dailies == null || dailies.size() == 0) {
-                da = DateUtils.todayOneYearAgo()
-                StockUtils.refreshDaily(stock, da, a);
-            }else {
-                da = dailies.get(dailies.size() +1).dailydate
-            }
-
-            println "===========> da.getTime() = " + da.getTime()
-            println "===========> today.getTime() = " + DateUtils.today().getTime()
-
-            if (DateUtils.isLess(da, DateUtils.today()))  {
-                StockUtils.refreshDaily(stock, da, a);
-            }
-
+        while (!lines.empty()) {
+            String[] s3 = (String[]) lines.pop();
+            String date = s3[0]
+            println "date = $date"
+            double open = Double.parseDouble(s3[1]);
+            double high = Double.parseDouble(s3[2]);
+            double low = Double.parseDouble(s3[3]);
+            double close = Double.parseDouble(s3[4]);
+            double vol = Double.parseDouble(s3[5]);
+            Date yahoo = DateUtils.toYahoo(date)
+            stock.addDaily(yahoo, high, low, open, close, (int) vol, 0);
         }
     }
-
-    public void dailyFromDatabase(Stock stock) {
-
-        def criteria = new DetachedCriteria(Daily).build {
-            eq('instrument.id', stock.getId())
-        }
-
-        List<Daily> slides = criteria.list(sort: "dailydate", order: "asc")
-        for (int i = 0; i < slides.size(); i++) {
-            Daily daily = slides.get(i);
-            stock.dailyarray.put(daily.dailydate, daily)
-        }
-    }
-
 }

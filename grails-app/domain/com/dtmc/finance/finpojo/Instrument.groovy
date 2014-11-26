@@ -9,17 +9,9 @@ import com.netnumeri.server.finance.utils.DateUtils
 class Instrument extends Persistable implements Serializable {
 
     GenericTimeSeries<Daily> dailyarray = new GenericTimeSeries<Daily>();
-    static hasMany = [dailyarray: Daily]
-
-//    static fetchMode = [dailyarray: 'eager']
-
-//    static mapping = {
-//        tablePerHierarchy false
-//        fetch:
-//    }
 
     static transients = [
-//            "dailyarray",
+            "dailyarray",
             "chain",
             "snapshot",
             "indicators",
@@ -824,11 +816,7 @@ class Instrument extends Persistable implements Serializable {
                     int volume,
                     int openInterest) {
         Daily daily = new Daily(instrument, date, high, low, open, close, volume, openInterest);
-        try {
-            daily.save(flush: true)
-        } catch (Throwable ex) {
-            log.debug("daily already present.")
-        }
+        instrument.dailyarray.put(date,daily)
     }
 
 //    boolean hasDaily(Date date) {

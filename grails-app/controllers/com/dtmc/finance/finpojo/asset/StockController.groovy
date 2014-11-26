@@ -12,6 +12,8 @@ class StockController extends ArrestedController {
 
     def grailsApplication
     def dailyService
+    def yahooFinanceYQLService
+
 
     static allowedMethods = [show: "GET", list: "GET", save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -41,9 +43,7 @@ class StockController extends ArrestedController {
 //            StockUtils.refreshDaily(instance, da, a);
 //            instance.snapshot = YahooUtils.getCompanySnapshot(instance.name);
 
-            dailyService.dailyFromDatabase (instance)
-//            List<UserIndicators> list = UserIndicators.list()
-//            TimeSeries closes = instance.series(FinConstants.CLOSE, da, a);
+            dailyService.dailyFromYahoo (instance)
 
             if (instance) {
                 withFormat {

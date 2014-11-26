@@ -328,83 +328,79 @@ public class YahooUtils {
         NetUtils.closeURL(is);
     }
 
-    public static void retrieveFromYahoo(Stock ticker,
-                                        Date from,Date to,
-                                        String frequency) throws IOException, ParseException {
-
-        if (ticker == null) throw new RuntimeException("stock cannot be null")
-
-        int firstmonth = DateUtils.getMonth(from);
-        int firstday = DateUtils.getDay(from);
-        int firstyear = DateUtils.getYear(from);
-
-        int lastmonth = DateUtils.getMonth(to);
-        int lastday = DateUtils.getDay(to);
-        int lastyear = DateUtils.getYear(to);
-
-        String url = "http://ichart.finance.yahoo.com/table.csv?s=" +
-                ticker.getName() + "&d=" + lastmonth + "&e=" + lastday + "&f=" + lastyear + "&g=" + frequency + "&a=" + firstmonth + "&b=" + firstday + "&c=" + firstyear + "&ignore=.csv";
-        println "url = ${url}"
-        String date = null
-        double open = 0
-        double high = 0
-        double low = 0
-        double close = 0
-        double volume = 0
-        Stack lines = new Stack()
-        String s3 = null
-        InputStream is = NetUtils.openURL(url)
-        if (is == null) {
-            throw new RuntimeException("cannot newInstance InputStream");
-        }
-        NetUtils.getLineFromURL(is)
-        s3 = NetUtils.getLineFromURL(is)
-        while (s3 != null) {
-            if (s3 == null) {
-                break;
-            }
-            if (s3.startsWith("<!--")) {
-                break;
-            }
-            lines.push(s3);
-            s3 = NetUtils.getLineFromURL(is);
-        }
-        int i = 0
-        while (!lines.empty()) {
-            s3 = (String) lines.pop();
-            StringTokenizer stringtokenizer = new StringTokenizer(s3, ",");
-            String token = stringtokenizer.nextToken();
-            date = token;
-            double d = 0;
-            double d1 = 0;
-            for (int j = 0; j < 4; j++) {
-                token = stringtokenizer.nextToken();
-                double dumm = Double.parseDouble(token);
-                switch (j) {
-                    case 0:
-                        open = dumm;
-                        break;
-                    case 1:
-                        high = dumm;
-                        break;
-                    case 2:
-                        low = dumm;
-                        break;
-                    case 3:
-                        close = dumm;
-                        break;
-                }
-                d += dumm;
-            }
-            d1 = d / 4;
-            double vol = Double.parseDouble(stringtokenizer.nextToken());
-            volume = vol;
-
-            Date yahoo = DateUtils.toYahoo(date)
-            ticker.addDaily(yahoo, high, low, open, close, (int) volume, 0);
-        }
-        NetUtils.closeURL(is);
-    }
+//    public static void retrieveFromYahoo(Stock ticker,
+//                                        Date from,Date to,
+//                                        String frequency) throws IOException, ParseException {
+//
+//        if (ticker == null) throw new RuntimeException("stock cannot be null")
+//
+//        int firstmonth = DateUtils.getMonth(from);
+//        int firstday = DateUtils.getDay(from);
+//        int firstyear = DateUtils.getYear(from);
+//
+//        int lastmonth = DateUtils.getMonth(to);
+//        int lastday = DateUtils.getDay(to);
+//        int lastyear = DateUtils.getYear(to);
+//
+//        String url = "http://ichart.finance.yahoo.com/table.csv?s=" +
+//                ticker.getName() + "&d=" + lastmonth + "&e=" + lastday + "&f=" + lastyear + "&g=" + frequency + "&a=" + firstmonth + "&b=" + firstday + "&c=" + firstyear + "&ignore=.csv";
+//        println "url = ${url}"
+//        double open = 0
+//        double high = 0
+//        double low = 0
+//        double close = 0
+//        Stack lines = new Stack()
+//        InputStream is = NetUtils.openURL(url)
+//        if (is == null) {
+//            throw new RuntimeException("cannot newInstance InputStream");
+//        }
+//        NetUtils.getLineFromURL(is)
+//        s3 = NetUtils.getLineFromURL(is)
+//        while (s3 != null) {
+//            if (s3 == null) {
+//                break;
+//            }
+//            if (s3.startsWith("<!--")) {
+//                break;
+//            }
+//            lines.push(s3);
+//            s3 = NetUtils.getLineFromURL(is);
+//        }
+//        int i = 0
+//        while (!lines.empty()) {
+//            s3 = (String) lines.pop();
+//            StringTokenizer stringtokenizer = new StringTokenizer(s3, ",");
+//            String token = stringtokenizer.nextToken();
+//            date = token;
+//            double d = 0;
+//            double d1 = 0;
+//            for (int j = 0; j < 4; j++) {
+//                token = stringtokenizer.nextToken();
+//                double dumm = Double.parseDouble(token);
+//                switch (j) {
+//                    case 0:
+//                        open = dumm;
+//                        break;
+//                    case 1:
+//                        high = dumm;
+//                        break;
+//                    case 2:
+//                        low = dumm;
+//                        break;
+//                    case 3:
+//                        close = dumm;
+//                        break;
+//                }
+//                d += dumm;
+//            }
+//            d1 = d / 4;
+//            double vol = Double.parseDouble(stringtokenizer.nextToken());
+//
+//            Date yahoo = DateUtils.toYahoo(date)
+//            ticker.addDaily(yahoo, high, low, open, close, (int) vol, 0);
+//        }
+//        NetUtils.closeURL(is);
+//    }
 
     /**
      * http://ichart.yahoo.com/table.csv?s=SSRI&d=6&e=2&f=2004&g=d&a=10&b=11&c=2000&ignore=.csv";

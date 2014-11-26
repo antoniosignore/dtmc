@@ -13,6 +13,7 @@
 //= require_tree custom-zok
 //= require_tree views
 //= require_self
+//= require_tree timeline
 //= require_tree timeplot
 
 if (typeof jQuery !== 'undefined') {
