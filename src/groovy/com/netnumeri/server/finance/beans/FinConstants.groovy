@@ -41,7 +41,7 @@ public enum FinConstants {
     kFOK,                 // padright or kill
 
     // EInvestOption
-    kInvestOnDate,
+    INVEST_ON_DATE,
     kInvestOnBuy,
 
     // ETickBase

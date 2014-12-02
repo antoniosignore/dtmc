@@ -4,8 +4,6 @@ import com.dtmc.finance.finpojo.Instrument
 import com.dtmc.finance.finpojo.Portfolio
 import com.dtmc.finance.finpojo.Trade
 import com.dtmc.finance.finpojo.asset.Asset
-import com.netnumeri.server.finance.matrix.*
-
 import com.netnumeri.server.finance.beans.FinConstants
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.beans.TradeEnum
@@ -160,7 +158,7 @@ public class BackTest implements Serializable {
     }
 
     public double test() {
-        return test(null, null, FinConstants.kInvestOnDate);
+        return test(null, null, FinConstants.INVEST_ON_DATE);
     }
 
     public double test(Date firstDate, Date lastDate, FinConstants option) {

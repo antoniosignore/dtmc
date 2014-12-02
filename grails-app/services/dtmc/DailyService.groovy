@@ -13,13 +13,13 @@ class DailyService {
      *   def cacheloader = { key -> loadElement(key) } as CacheLoader def cache = CacheBuilder.newBuilder(). expireAfterWrite(2, TimeUnit.HOURS). maximumSize(1000). build(cacheloader) def get(key) { cache.get(key) }
      */
 
-    public void dailyFromYahoo(Stock stock) {
-        Date startDate = new GregorianCalendar(2013, Calendar.NOVEMBER, 1).getTime()
-        Date endDate = DateUtils.today();
+    public void dailyFromYahoo(Stock stock, Date startDate , Date endDate) {
+
+
+
         List quotes = yahooFinanceYQLService.getHistoricalQuotes(stock.name, startDate, endDate)
         Stack lines = new Stack()
-        for (int i = 0; i < quotes.size(); i++) {
-            String[] quoteString = quotes.get(i);
+        for (int i = 0; i < quotes.size(); i++) {            String[] quoteString = quotes.get(i);
             if (quoteString[0] == "Date") continue;
             lines.push(quoteString);
         }

@@ -54,7 +54,6 @@ public class SSASignal extends Strategy {
         Indicator bbdiff = new BollingerBandDiffIndicator(closeSeries, "BB-Diff", 10, 2)
 //        Indicator ssa1Predict = new SSASeriesPredictionIndicator(closeSeries, "SSA-0-predict", WINDOW, 3, [0, 1, 2], 10);
 
-
         stock.indicators.put("normalized", normalized)
         stock.indicators.put("trend", trend)
         stock.indicators.put("comp1", comp1)
@@ -92,8 +91,8 @@ public class SSASignal extends Strategy {
         boolean inATrade = (lastTrade == null)
         boolean trendingDown = ((yesterdaySSA0 > todaySSA0))
 
-        if (isATop) this.signals.add(new Signal(date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
-        if (isALow) signals.add(new Signal(date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
+        if (isATop) signals.add(new Signal(day: date, direction: TradeEnum.SELL, instrument: asset, value: asset.value(date, FinConstants.CLOSE)))
+        if (isALow) signals.add(new Signal(day: date, direction: TradeEnum.BUY, instrument: asset, value: asset.value(date, FinConstants.CLOSE)))
 
         stocksList.add(stock)
 

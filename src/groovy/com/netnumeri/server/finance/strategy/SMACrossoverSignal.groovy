@@ -35,10 +35,11 @@ public class SMACrossoverSignal extends Strategy {
         double yesterdayUpper = upper.getData(ud)
 
         if (todayUpper < todayLower && yesterdayUpper > yesterdayLower) {
-            signals.add(new Signal(date, TradeEnum.BUY, asset, asset.value(date, FinConstants.CLOSE)))
+            signals.add(new Signal(day: date, direction: TradeEnum.BUY, instrument: asset, value: asset.value(date, FinConstants.CLOSE)))
         } else if (todayUpper > todayLower && yesterdayUpper < yesterdayLower) {
-            signals.add(new Signal(date, TradeEnum.SELL, asset, asset.value(date, FinConstants.CLOSE)))
+            signals.add(new Signal(day: date, direction: TradeEnum.SELL, instrument: asset, value: asset.value(date, FinConstants.CLOSE)))
         }
+
     }
 }
 

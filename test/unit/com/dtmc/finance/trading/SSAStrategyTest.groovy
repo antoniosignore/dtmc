@@ -2,8 +2,6 @@ package com.dtmc.finance.trading
 
 import com.dtmc.finance.finpojo.Instrument
 import com.dtmc.finance.finpojo.Portfolio
-import com.dtmc.finance.finpojo.Trade
-import com.netnumeri.server.finance.beans.GenericTimeSeries
 import com.netnumeri.server.finance.beans.TimeSeries
 import com.netnumeri.server.finance.strategy.BackTest
 import com.netnumeri.server.finance.strategy.SSAStrategy
@@ -41,7 +39,7 @@ public class SSAStrategyTest {
         tradeService.add(portfolio, stock);
 
         Strategy strategy = new SSAStrategy("test", portfolio, da, a, 10000);
-        strategy.run();
+        strategy.execute();
 
 //        TransactionSeries series = strategy.transactionSeries
 

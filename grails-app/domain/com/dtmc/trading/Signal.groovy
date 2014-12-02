@@ -8,9 +8,19 @@ class Signal extends Persistable {
 
     Date day
     TradeEnum direction
-    final Instrument instrument
+    Instrument instrument
     Double value
 
     static belongsTo = [instrument: Instrument, strategyExecution: StrategyExecution]
 
+    @Override
+    public String toString() {
+        return "Signal{" +
+                "id=" + id +
+                ", day=" + day +
+                ", direction=" + direction +
+                ", instrument=" + instrument.name +
+                ", value=" + value +
+                '}';
+    }
 }

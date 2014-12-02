@@ -1,15 +1,9 @@
 package com.dtmc.trading
 
-public class StrategyCatalog {
+import com.dtmc.finance.finpojo.Persistable
+
+public class StrategyCatalog extends Persistable {
 
     static hasMany = [subscriptions: StrategySubscription]
-
-    String name
-    Date dateCreated
-    Date lastUpdated
-
-    public StrategyCatalog(String name) {
-        this.name = name
-    }
 
 }

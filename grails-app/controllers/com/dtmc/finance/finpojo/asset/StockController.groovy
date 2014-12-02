@@ -1,8 +1,6 @@
 package com.dtmc.finance.finpojo.asset
 
 import com.netnumeri.server.finance.utils.DateUtils
-import com.netnumeri.server.finance.utils.YahooUtils
-import com.netnumeri.server.utils.StockUtils
 import grails.converters.JSON
 import grails.converters.XML
 import arrested.ArrestedController
@@ -12,8 +10,6 @@ class StockController extends ArrestedController {
 
     def grailsApplication
     def dailyService
-    def yahooFinanceYQLService
-
 
     static allowedMethods = [show: "GET", list: "GET", save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -40,10 +36,9 @@ class StockController extends ArrestedController {
         if (id) {
             Stock instance = Stock.get(id)
 
-//            StockUtils.refreshDaily(instance, da, a);
-//            instance.snapshot = YahooUtils.getCompanySnapshot(instance.name);
-
-            dailyService.dailyFromYahoo (instance)
+            Date startDate = new GregorianCalendar(2011, Calendar.NOVEMBER, 1).getTime()
+            Date endDate = DateUtils.today();
+            dailyService.dailyFromYahoo (instance, startDate, endDate)
 
             if (instance) {
                 withFormat {

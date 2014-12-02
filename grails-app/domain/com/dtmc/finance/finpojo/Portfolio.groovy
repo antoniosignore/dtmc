@@ -16,17 +16,17 @@ class Portfolio extends Asset implements Serializable {
         items cascade: 'all-delete-orphan'
     }
 
-    String description
-
-    Double wealth = 0;
-    Date firstDate;
-    Date lastDate;
     PortfolioTypeEnum portfolioType
+    String description
+    Double wealth = 0;
 
-    static constraints = {
-        firstDate blank: true, nullable: true
-        lastDate blank: true, nullable: true
-    }
+//    Date firstDate;
+//    Date lastDate;
+
+//    static constraints = {
+//        firstDate blank: true, nullable: true
+//        lastDate blank: true, nullable: true
+//    }
 
 //    Entry portfolioItemByName(String name) {
 //        Entry item = null;
